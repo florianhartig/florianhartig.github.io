@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="wrap wrap-narrow">
+  <article class="page">
+    <h1>{{ .Title }}</h1>
+    <div class="prose">
+      {{ .Content }}
+    </div>
+
+    {{ partial "metrics.html" . }}
+
+    {{- /* ByWeight, not ByDate: every entry in a year shares 1 January, so
+           date sorting alone would leave within-year order undefined. The
+           weight comes from each entry's position in the .bib, which preserves
+           the ordering of the source list. */ -}}
+    {{- $pubs := .RegularPages.ByWeight }}
+    {{- $groups := $pubs.GroupByParam "year" "desc" }}
+
+    <nav class="year-nav" aria-label="Jump to year">
+      {{- range $groups }}
+      <a href="#y{{ .Key }}">{{ .Key }}</a>
+      {{- end }}
+    </nav>
+
+    {{- range $groups }}
+    <section class="pub-year">
+      <h2 class="year-heading" id="y{{ .Key }}">{{ .Key }}</h2>
+      <div class="citation-list">
+        {{- range .Pages }}
+        {{ partial "citation.html" . }}
+        {{- end }}
+      </div>
+    </section>
+    {{- end }}
+  </article>
+</div>
+{{ end }}

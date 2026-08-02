@@ -1,0 +1,23 @@
+# Publication statistics, shown on the homepage and above the publication list.
+#
+# These go stale fast, so the template always renders the `as_of` date beside
+# them — a figure is never presented as current when it isn't. Update the
+# numbers and `as_of` together, or set `show: false` to hide the block.
+#
+# `*_approx: true` renders the number with a trailing "+" (e.g. "100+"),
+# matching the ">100 articles" / ">632 co-authors" phrasing of the source.
+show: true
+as_of: "July 2026"
+
+# Google Scholar
+source: "Google Scholar"
+source_url: "https://scholar.google.de/citations?user=AdcDit0AAAAJ"
+citations: 27963
+h_index: 55
+
+# Scopus
+scopus_url: "https://www.scopus.com/authid/detail.uri?authorId=24773326300"
+articles: 100
+articles_approx: true
+coauthors: 632
+coauthors_approx: true

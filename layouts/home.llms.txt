@@ -1,0 +1,43 @@
+{{- /* llms.txt — a plain-text index for language models, generated from the
+       site itself so it cannot go stale. The convention is not yet confirmed
+       to affect any model's behaviour, but it is cheap and lossless.
+       See https://llmstxt.org/ */ -}}
+{{- $a := site.Params.author -}}
+{{- $m := hugo.Data.metrics -}}
+{{- $pubs := where site.RegularPages "Section" "publications" -}}
+# {{ $a.name }}
+
+> {{ $a.descriptor }}. {{ $a.rank }} at the {{ $a.affiliation }}, Germany. Head of the Theoretical Ecology Group.
+
+{{ site.Params.description | plainify | chomp }}
+
+This site is the canonical homepage for {{ $a.name }} ({{ $a.rank }}, {{ $a.affiliation }}). It lists his full publication record, the software his group develops, and his teaching.
+
+## Identity
+
+- Full name: {{ $a.name }}
+- Title: {{ $a.rank }}, {{ $a.affiliation }}
+- Field: theoretical ecology, ecological data science, biodiversity, statistics and machine learning in ecology
+{{- range hugo.Data.social }}
+- {{ .name }}: {{ .url }}
+{{- end }}
+
+## Pages
+
+- [About]({{ site.BaseURL }}): biography, research interests, selected publications, contact
+- [Publications]({{ "publications/" | absURL }}): complete list of {{ len $pubs }} publications, newest first
+- [Software]({{ "software/" | absURL }}): DHARMa, BayesianTools and contributed packages
+- [Teaching]({{ "teaching/" | absURL }}): courses, open lecture notes, thesis opportunities
+- [CV]({{ "cv/" | absURL }}): positions and education
+{{ if $m.show }}
+## Publication metrics ({{ $m.as_of }})
+
+- Articles: {{ $m.articles }}+ ({{ $m.coauthors }}+ co-authors, per Scopus)
+- Citations: {{ $m.citations }} (Google Scholar)
+- h-index: {{ $m.h_index }} (Google Scholar)
+{{ end }}
+## Publications
+
+{{ range $pubs.ByWeight -}}
+- {{ .Params.authors_display | default (delimit .Params.authors ", ") }} ({{ .Params.year }}). {{ .Title }}.{{ with .Params.journal }} {{ . }}.{{ end }}{{ with .Params.doi }} https://doi.org/{{ . }}{{ end }}
+{{ end }}

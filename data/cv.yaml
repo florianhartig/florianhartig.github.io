@@ -1,0 +1,55 @@
+positions:
+  - period: "2026 – now"
+    role: "W3 Professor"
+    where: "University of Regensburg"
+    note: ""
+    roles:
+      - "Head of the Professorship for Theoretical Ecology"
+      - "Interim head of the Chair for Plant Ecology"
+      - "Deputy Dean of Research, Faculty of Biology and Preclinical Medicine"
+      - "Coordinator and head of the examination committee, M.Sc. Ecology, Evolution & Conservation (EEC)"
+  - period: "2016 – 2026"
+    role: "W2 Professor"
+    where: "University of Regensburg"
+    note: ""
+  - period: "2012 – 2016"
+    role: "Lecturer"
+    where: "University of Freiburg"
+    note: "In the group of Prof. Carsten Dormann"
+  - period: "2009 – 2012"
+    role: "Postdoctoral fellow"
+    where: "Helmholtz Centre for Environmental Research (UFZ), Leipzig"
+    note: ""
+
+education:
+  - period: "2006 – 2009"
+    role: "PhD studies, Applied System Science"
+    where: "UFZ Leipzig and University of Osnabrück"
+    note: ""
+  - period: "2004 – 2005"
+    role: "MSc, Theoretical Particle Physics"
+    where: "Department of Theoretical Physics, Uppsala University, Sweden"
+    note: ""
+  - period: "2001 – 2006"
+    role: "Studies in Physics"
+    where: "Free University Berlin, Germany"
+    note: ""
+  - period: "2000 – 2001"
+    role: "Civilian service"
+    where: "Naturschutzzentrum Hessen"
+    note: "Hessian Academy for Environmental Protection"
+
+# Degree-granting institutions, emitted as schema.org `alumniOf`.
+#
+# Deliberately a separate list rather than derived from `education` above:
+# that list is for display and also contains a non-degree entry (civilian
+# service) and labels like "Department of Theoretical Physics, Uppsala
+# University" that read well on the page but are wrong as an institution name
+# in structured data.
+alma_mater:
+  - name: "University of Osnabrück"
+    url: "https://www.uni-osnabrueck.de/"
+  - name: "Uppsala University"
+    url: "https://www.uu.se/"
+  - name: "Free University of Berlin"
+    url: "https://www.fu-berlin.de/"

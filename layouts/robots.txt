@@ -1,0 +1,43 @@
+{{- /* This site exists to be found — by search engines and by AI systems
+       alike. Everything is allowed deliberately. The named AI user-agents are
+       listed explicitly not to restrict them but so that a future edit has to
+       be a conscious decision rather than an accident: the most common way
+       academic sites lose AI visibility is a default rule that blocks these
+       without anyone noticing. */ -}}
+User-agent: *
+Allow: /
+
+# Search-time AI crawlers (these produce citations and links back)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Training crawlers — also allowed. The aim here is for models to know who
+# Florian Hartig is and what he has published.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: {{ "sitemap.xml" | absURL }}

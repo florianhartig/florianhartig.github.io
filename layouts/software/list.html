@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="wrap wrap-narrow">
+  <article class="page">
+    <h1>{{ .Title }}</h1>
+    <div class="prose">
+      {{ .Content }}
+    </div>
+
+    {{- /* Grouped by `category`, but ordered by `weight`. Ranging in weight
+           order and emitting a heading whenever the category changes keeps the
+           groups in the intended sequence — GroupByParam would instead sort
+           the groups alphabetically by key. */ -}}
+    <div class="software-list">
+      {{- $cat := "" }}
+      {{- range .RegularPages.ByWeight }}
+      {{- if ne .Params.category $cat }}
+      {{- $cat = .Params.category }}
+      <h2 class="software-group">{{ $cat }}</h2>
+      {{- end }}
+      <article class="software-item">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{- with .Params.summary }}<p class="software-summary">{{ . }}</p>{{ end }}
+        {{- with .Params.links }}
+        <p class="link-row">
+          {{- range $i, $l := . }}{{ if $i }}<span aria-hidden="true"> · </span>{{ end }}<a href="{{ $l.url }}" rel="noopener">{{ $l.name }}</a>{{ end }}
+        </p>
+        {{- end }}
+      </article>
+      {{- end }}
+    </div>
+  </article>
+</div>
+{{ end }}

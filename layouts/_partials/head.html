@@ -1,0 +1,52 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{{- $title := "" -}}
+{{- if .IsHome -}}
+  {{- $title = printf "%s — %s" site.Title site.Params.author.tagline -}}
+{{- else -}}
+  {{- $title = printf "%s — %s" .Title site.Title -}}
+{{- end -}}
+<title>{{ $title }}</title>
+
+{{- $desc := .Description | default .Summary | default site.Params.description -}}
+{{- $desc = $desc | plainify | htmlUnescape | chomp -}}
+<meta name="description" content="{{ $desc }}">
+<meta name="author" content="{{ site.Params.author.name }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+<meta property="og:type" content="{{ if .IsHome }}profile{{ else }}article{{ end }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+{{- if .IsHome }}
+<meta property="profile:first_name" content="{{ site.Params.author.givenName }}">
+<meta property="profile:last_name" content="{{ site.Params.author.familyName }}">
+{{- end }}
+
+{{- /* Padded to a real 1200x630 card — see _partials/portrait.html — so
+       summary_large_image is honest rather than an invitation to crop. */ -}}
+{{- $img := partial "portrait.html" . }}
+{{- with $img.card }}
+<meta property="og:image" content="{{ .Permalink }}">
+<meta property="og:image:width" content="{{ .Width }}">
+<meta property="og:image:height" content="{{ .Height }}">
+<meta property="og:image:alt" content="Portrait of {{ site.Params.author.name }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ .Permalink }}">
+<meta name="twitter:image:alt" content="Portrait of {{ site.Params.author.name }}">
+{{- else }}
+<meta name="twitter:card" content="summary">
+{{- end }}
+
+{{- with .OutputFormats.Get "rss" }}
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">
+{{- end }}
+
+{{- $css := resources.Get "css/main.css" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+
+{{ partial "schema.html" . }}

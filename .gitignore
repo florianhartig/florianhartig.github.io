@@ -1,0 +1,20 @@
+# Hugo build output and caches
+/public/
+/resources/_gen/
+/.hugo_build.lock
+
+# Claude Code / assistant tooling — local settings and scratch, not project files
+.claude/
+.claudeignore
+CLAUDE.md
+.mcp.json
+
+# Internal working notes for continuing this project across Claude sessions —
+# decisions, rationale, open items. Deliberately not public: this is a public
+# repo (florianhartig.github.io) and this file is written for whoever picks
+# the project back up, not for visitors. See its own header for why this is
+# safe (the folder is Dropbox-synced, so it isn't only-on-this-machine).
+CLAUDE_HANDOFF.md
+
+# macOS
+.DS_Store

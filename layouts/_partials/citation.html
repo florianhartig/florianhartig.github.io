@@ -1,0 +1,24 @@
+{{- /* One publication, rendered as a citation. Used by the publications list and
+       by the selected-publications block on the homepage. */ -}}
+<article class="citation">
+  <h3 class="citation-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p class="citation-authors">{{ .Params.authors_display | default (delimit .Params.authors ", ") }}</p>
+  <p class="citation-meta">
+    {{- with .Params.journal }}<em class="citation-journal">{{ . }}</em>{{ end }}
+    {{- with .Params.volume }}, {{ . }}{{ with $.Params.issue }}({{ . }}){{ end }}{{ else }}{{ with .Params.issue }}, ({{ . }}){{ end }}{{ end }}
+    {{- with .Params.pages }}, {{ . }}{{ end }}
+    {{- with .Params.year }} ({{ . }}){{ end }}
+  </p>
+  {{- with .Params.note }}
+  <p class="citation-note">{{ . }}</p>
+  {{- end }}
+  {{- /* A few entries have no link at all in the source; skip the row entirely
+         for those rather than leaving an empty paragraph. */ -}}
+  {{- $links := slice }}
+  {{- with .Params.doi }}{{ $links = $links | append (printf `<a href="https://doi.org/%s" rel="noopener">doi:%s</a>` . .) }}{{ end }}
+  {{- if and (not .Params.doi) .Params.publisher_url }}{{ $links = $links | append (printf `<a href="%s" rel="noopener">journal</a>` .Params.publisher_url) }}{{ end }}
+  {{- with .Params.preprint }}{{ $links = $links | append (printf `<a href="%s" rel="noopener">preprint</a>` .) }}{{ end }}
+  {{- with $links }}
+  <p class="citation-links">{{ delimit . `<span aria-hidden="true"> · </span>` | safeHTML }}</p>
+  {{- end }}
+</article>

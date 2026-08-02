@@ -1,0 +1,67 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="wrap wrap-narrow hero-inner">
+    {{- $img := partial "portrait.html" . }}
+    {{- with $img.hero }}
+    <img class="hero-portrait" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
+         alt="Portrait of {{ site.Params.author.name }}">
+    {{- end }}
+    <div class="hero-text">
+      <h1 class="hero-name">{{ site.Params.author.name }}</h1>
+      <p class="hero-role">
+        {{ site.Params.author.descriptor }}<br>
+        {{ site.Params.author.rank }},
+        <a href="{{ site.Params.author.profileURL }}" rel="noopener">{{ site.Params.author.affiliation }}</a>
+      </p>
+      {{ partial "socialrow.html" . }}
+    </div>
+  </div>
+</section>
+
+<div class="wrap wrap-narrow">
+  <div class="prose">
+    {{ .Content }}
+  </div>
+
+  {{ partial "metrics.html" . }}
+
+  {{- /* Only entries flagged `featured = {true}` in the .bib, in .bib order.
+         Not simply the most recent papers — this is a curated set. */ -}}
+  {{- $pubs := where site.RegularPages "Section" "publications" }}
+  {{- $selected := where $pubs "Params.featured" true }}
+  {{- with $selected.ByWeight }}
+  <section class="home-section">
+    <h2>Selected publications</h2>
+    <div class="citation-list">
+      {{- range . }}
+      {{ partial "citation.html" . }}
+      {{- end }}
+    </div>
+    <p class="more">
+      <a href="{{ "/publications/" | relURL }}">All {{ len $pubs }} publications →</a>
+    </p>
+  </section>
+  {{- end }}
+
+  {{- $software := where site.RegularPages "Section" "software" }}
+  {{- with $software.ByWeight }}
+  <section class="home-section">
+    <h2>Software</h2>
+    <div class="card-grid">
+      {{- range first 2 . }}
+      <article class="card">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Params.summary }}</p>
+      </article>
+      {{- end }}
+    </div>
+    <p class="more"><a href="{{ "/software/" | relURL }}">All software →</a></p>
+  </section>
+  {{- end }}
+
+  <section class="home-section" id="contact">
+    <h2>Contact</h2>
+    {{ partial "contact.html" . }}
+  </section>
+</div>
+{{ end }}

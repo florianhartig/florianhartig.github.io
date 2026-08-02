@@ -1,0 +1,31 @@
+{{- /* Publication statistics. Shared by the homepage and the publications page
+       so the two can never disagree. Source: data/metrics.yaml. */ -}}
+{{- $m := hugo.Data.metrics -}}
+{{- if $m.show -}}
+<section class="metrics" aria-label="Publication statistics">
+  <dl>
+    <div>
+      <dt>Articles</dt>
+      <dd>{{ lang.FormatNumber 0 $m.articles }}{{ if $m.articles_approx }}+{{ end }}</dd>
+    </div>
+    <div>
+      <dt>Co-authors</dt>
+      <dd>{{ lang.FormatNumber 0 $m.coauthors }}{{ if $m.coauthors_approx }}+{{ end }}</dd>
+    </div>
+    <div>
+      <dt>Citations</dt>
+      <dd>{{ lang.FormatNumber 0 $m.citations }}</dd>
+    </div>
+    <div>
+      <dt>h-index</dt>
+      <dd>{{ $m.h_index }}</dd>
+    </div>
+  </dl>
+  <p class="metrics-note">
+    Citations and h-index per
+    <a href="{{ $m.source_url }}" rel="noopener">{{ $m.source }}</a>,
+    {{ $m.as_of }}. Article and co-author counts per
+    <a href="{{ $m.scopus_url }}" rel="noopener">Scopus</a>.
+  </p>
+</section>
+{{- end -}}

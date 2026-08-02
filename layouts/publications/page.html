@@ -1,0 +1,35 @@
+{{ define "main" }}
+<div class="wrap wrap-narrow">
+  <article class="page publication">
+    <p class="breadcrumb"><a href="{{ "/publications/" | relURL }}">← Publications</a></p>
+    <h1>{{ .Title }}</h1>
+    <p class="citation-authors pub-authors">{{ .Params.authors_display | default (delimit .Params.authors ", ") }}</p>
+    <p class="citation-meta">
+      {{- with .Params.journal }}<em>{{ . }}</em>{{ end }}
+      {{- with .Params.volume }}, {{ . }}{{ with $.Params.issue }}({{ . }}){{ end }}{{ else }}{{ with .Params.issue }}, ({{ . }}){{ end }}{{ end }}
+      {{- with .Params.pages }}, {{ . }}{{ end }}
+      {{- with .Params.year }} ({{ . }}){{ end }}
+    </p>
+
+    <p class="pub-actions">
+      {{- with .Params.doi }}
+      <a class="button" href="https://doi.org/{{ . }}" rel="noopener">View article (DOI)</a>
+      {{- end }}
+      {{- with .Params.publisher_url }}
+      <a class="button{{ if $.Params.doi }} button-quiet{{ end }}" href="{{ . }}" rel="noopener">Publisher page</a>
+      {{- end }}
+      {{- with .Params.preprint }}
+      <a class="button button-quiet" href="{{ . }}" rel="noopener">Preprint</a>
+      {{- end }}
+    </p>
+
+    {{- with .Content }}
+    <div class="prose">{{ . }}</div>
+    {{- end }}
+
+    {{- with .Params.note }}
+    <p class="pub-note">{{ . }}</p>
+    {{- end }}
+  </article>
+</div>
+{{ end }}

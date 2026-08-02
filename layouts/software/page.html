@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="wrap wrap-narrow">
+  <article class="page">
+    <p class="breadcrumb"><a href="{{ "/software/" | relURL }}">← Software</a></p>
+    <h1>{{ .Title }}</h1>
+    {{- with .Params.summary }}<p class="lede">{{ . }}</p>{{ end }}
+    {{- with .Params.links }}
+    <p class="link-row">
+      {{- range $i, $l := . }}{{ if $i }}<span aria-hidden="true"> · </span>{{ end }}<a href="{{ $l.url }}" rel="noopener">{{ $l.name }}</a>{{ end }}
+    </p>
+    {{- end }}
+    <div class="prose">
+      {{ .Content }}
+    </div>
+  </article>
+</div>
+{{ end }}

@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-links">
+      {{- range hugo.Data.social }}
+      <a href="{{ .url }}" rel="me noopener">{{ .name }}</a>
+      {{- end }}
+    </div>
+    <p class="footer-meta">
+      © {{ now.Format "2006" }} {{ site.Params.author.name }}.
+      Built with <a href="https://gohugo.io/" rel="noopener">Hugo</a>.
+    </p>
+  </div>
+</footer>

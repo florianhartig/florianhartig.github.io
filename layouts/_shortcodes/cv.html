@@ -1,0 +1,24 @@
+{{- /* Renders data/cv.yaml. Usage in content: {{< cv section="positions" >}} */ -}}
+{{- $key := .Get "section" | default "positions" -}}
+{{- $entries := index hugo.Data.cv $key -}}
+{{- with $entries }}
+<dl class="timeline">
+  {{- range . }}
+  <div class="timeline-row">
+    <dt class="timeline-period">{{ .period }}</dt>
+    <dd class="timeline-entry">
+      <span class="timeline-role">{{ .role }}</span>
+      <span class="timeline-where">{{ .where }}</span>
+      {{- with .note }}<span class="timeline-note">{{ . }}</span>{{ end }}
+      {{- with .roles }}
+      <ul class="timeline-roles">
+        {{- range . }}
+        <li>{{ . }}</li>
+        {{- end }}
+      </ul>
+      {{- end }}
+    </dd>
+  </div>
+  {{- end }}
+</dl>
+{{- end }}

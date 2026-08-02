@@ -1,0 +1,55 @@
+# Single source of truth for profile links.
+#
+# Used twice: rendered as the link rows on the site, AND emitted as `sameAs` in
+# the JSON-LD Person schema. That pairing is the point — `sameAs` is what lets
+# search engines and AI systems merge these identities into one entity. Because
+# both read this file, they cannot drift apart.
+#
+# Flags:
+#   primary: true   -> shown in the main pill row (otherwise in "also indexed at")
+#   person: false   -> visible link, but NOT emitted in the Person `sameAs`.
+#                      Use for URLs that identify the *group*, not Florian —
+#                      claiming those are "the same as" him would be wrong and
+#                      could make search engines merge the two entities.
+
+- name: "Google Scholar"
+  url: "https://scholar.google.de/citations?user=AdcDit0AAAAJ"
+  primary: true
+- name: "ORCID"
+  url: "https://orcid.org/0000-0002-6255-9059"
+  primary: true
+- name: "GitHub"
+  url: "https://github.com/florianhartig"
+  primary: true
+- name: "Bluesky"
+  url: "https://bsky.app/profile/florianhartig.bsky.social"
+  primary: true
+- name: "LinkedIn"
+  url: "https://www.linkedin.com/in/florian-hartig/"
+  primary: true
+- name: "YouTube"
+  url: "https://www.youtube.com/@prof.dr.florianhartig2357"
+- name: "Scopus"
+  url: "https://www.scopus.com/authid/detail.uri?authorId=24773326300"
+- name: "Web of Science"
+  url: "https://www.webofscience.com/wos/author/record/G-4510-2010"
+- name: "Publons"
+  url: "https://publons.com/researcher/426383/florian-hartig/"
+- name: "ResearchGate"
+  url: "https://www.researchgate.net/profile/Florian-Hartig"
+- name: "Semantic Scholar"
+  url: "https://www.semanticscholar.org/author/Florian-Hartig/144426040"
+- name: "OpenAlex"
+  url: "https://openalex.org/A5002648105"
+- name: "Loop"
+  url: "https://loop.frontiersin.org/people/646740/overview"
+- name: "arXiv"
+  url: "https://arxiv.org/a/hartig_f_1.html"
+- name: "Wikidata"
+  url: "https://www.wikidata.org/wiki/Q56843669"
+- name: "Theoretical Ecology group on YouTube"
+  url: "https://www.youtube.com/channel/UCHbAgGxkGjIN_WYcOkB5EvQ"
+  person: false
+# TODO (pre-publish decision): X/Twitter @florianhartig is still linked from the
+# GitHub profile, but the university page promotes Bluesky and does not mention
+# X. Left out; add it back here if the account is live.

@@ -1,0 +1,21 @@
+{{- /* No e-mail address is displayed anywhere on this site — a standing
+       decision, not a gap. There is deliberately no mailto: branch here and
+       no `email` key in the config: linking the university pages, which
+       carry current contact details for Florian and his secretary, is the
+       intended route. Please do not add one back. */ -}}
+{{- $a := site.Params.address -}}
+{{- $author := site.Params.author -}}
+<address class="contact">
+  <span class="contact-name">{{ $author.name }}</span><br>
+  {{ $a.faculty }}<br>
+  {{ $a.institution }}<br>
+  {{ $a.street }}<br>
+  {{ $a.postalCode }} {{ $a.city }}, {{ $a.country }}
+</address>
+<p>
+  To contact me or my secretary, please see our
+  <a href="{{ $author.teamURL }}" rel="noopener">team page</a>. You can also
+  reach me on
+  <a href="https://bsky.app/profile/florianhartig.bsky.social" rel="me noopener">Bluesky</a>
+  or <a href="https://www.linkedin.com/in/florian-hartig/" rel="me noopener">LinkedIn</a>.
+</p>

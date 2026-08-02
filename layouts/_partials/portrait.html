@@ -1,0 +1,34 @@
+{{- /*
+  Derives every rendition of the portrait from one source file, and returns
+  them as a dict so head.html, schema.html and home.html cannot end up
+  pointing at different images.
+
+  The source is 302x361 — a portrait, and small. Social platforms want a
+  1200x630 landscape card, so rather than let them crop a head shot to a letter
+  box, the portrait is scaled up modestly and padded onto a 1200x630 canvas.
+  Padding rather than cropping is what keeps the whole head in frame; the
+  posterised source tolerates the upscale better than a photograph would
+  because it is mostly flat colour.
+
+  Usage: {{ $img := partial "portrait.html" . }} then .card / .hero / .src
+*/ -}}
+
+{{- $src := resources.Get "images/florian-hartig.jpg" -}}
+{{- $out := dict -}}
+
+{{- with $src -}}
+  {{- /* Hero: 2x the ~150px display size, for high-density screens. */ -}}
+  {{- $hero := .Resize "300x webp q90" -}}
+
+  {{- /* Social card, padded to exactly 1200x630. */ -}}
+  {{- $scaled := .Resize "x580" -}}
+  {{- $padTop := int (math.Floor (div (sub 630 $scaled.Height) 2)) -}}
+  {{- $padBottom := sub (sub 630 $scaled.Height) $padTop -}}
+  {{- $padLeft := int (math.Floor (div (sub 1200 $scaled.Width) 2)) -}}
+  {{- $padRight := sub (sub 1200 $scaled.Width) $padLeft -}}
+  {{- $card := $scaled.Filter (images.Padding $padTop $padRight $padBottom $padLeft "#15171a") -}}
+
+  {{- $out = dict "src" . "hero" $hero "card" $card -}}
+{{- end -}}
+
+{{- return $out -}}

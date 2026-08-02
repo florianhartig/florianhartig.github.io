@@ -1,0 +1,15 @@
+{{- /* Profile links. Same data as the JSON-LD `sameAs` array — see schema.html. */ -}}
+<div class="social">
+  <ul class="social-primary">
+    {{- range where hugo.Data.social "primary" true }}
+    <li><a href="{{ .url }}" rel="me noopener">{{ .name }}</a></li>
+    {{- end }}
+  </ul>
+  {{- $secondary := where hugo.Data.social "primary" "!=" true }}
+  {{- with $secondary }}
+  <p class="social-secondary">
+    <span class="social-secondary-label">Also indexed at</span>
+    {{- range $i, $s := . }}{{ if $i }}<span aria-hidden="true"> · </span>{{ end }}<a href="{{ $s.url }}" rel="me noopener">{{ $s.name }}</a>{{ end }}
+  </p>
+  {{- end }}
+</div>
