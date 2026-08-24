@@ -3,7 +3,7 @@
 title: "A model with many small shifts for estimating species-specific diversification rates"
 date: 2019-01-01
 year: "2019"
-weight: 54
+weight: 55
 slug: "maliet2019model"
 authors:
   - "Odile Maliet"
@@ -14,6 +14,8 @@ journal: "Nature Ecology & Evolution"
 volume: "3"
 issue: "7"
 pages: "1086–1092"
-publisher_url: "https://www.nature.com/articles/s41559-019-0908-0"
+doi: "10.1038/s41559-019-0908-0"
+significance: "Introduces a phylogenetic model that allows diversification rates to shift gradually and independently across many lineages rather than assuming a few large rate jumps — a more realistic null model for how speciation and extinction rates vary across the tree of life."
+description: "Introduces a phylogenetic model that allows diversification rates to shift gradually and independently across many lineages rather than assuming a few…"
 entry_type: "article"
 ---

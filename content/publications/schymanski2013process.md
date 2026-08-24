@@ -3,7 +3,7 @@
 title: "Process, correlation and parameter fitting in species distribution models: a response to Kriticos et al."
 date: 2013-01-01
 year: "2013"
-weight: 95
+weight: 96
 slug: "schymanski2013process"
 authors:
   - "Stanislaus J. Schymanski"
@@ -20,7 +20,15 @@ authors:
 authors_display: "Stanislaus J. Schymanski, Carsten F. Dormann, Juliano Cabral, Isabelle Chuine, Catherine H. Graham, Florian Hartig, Michael Kearney, Xavier Morin, Christine Römermann, Boris Schröder, Alexander Singer"
 journal: "Journal of Biogeography"
 volume: "40"
+issue: "3"
 pages: "612–613"
 doi: "10.1111/jbi.12075"
+abstract: "In a recent article (Dormann et al., 2012, Journal of Biogeography, 39, 2119-2131), we compared different approaches to species distribution modelling and depicted modelling approaches along an axis from purely \"correlative\" to \"forward process-based\" models. In their correspondence, Kriticos et al. challenge this view, claiming that our continuum representation neglects differences among models and does not consider the ability of fitted process-based models to combine the advantages of both process-based and correlative modelling approaches. Here we clarify that the continuum view resulted from recognition of the manifold differences between models. We also reinforce the point that the current trend towards combining different modelling approaches may lead not only to the desired combination of the advantages but also to the accumulation of the disadvantages of those approaches."
+significance: "A response defending an earlier framework for distinguishing process-based from correlative species distribution models against a published critique, clarifying the conceptual distinctions at stake in an ongoing methodological debate."
+description: "A response defending an earlier framework for distinguishing process-based from correlative species distribution models against a published critique…"
 entry_type: "article"
 ---
+
+## Abstract
+
+In a recent article (Dormann et al., 2012, Journal of Biogeography, 39, 2119-2131), we compared different approaches to species distribution modelling and depicted modelling approaches along an axis from purely "correlative" to "forward process-based" models. In their correspondence, Kriticos et al. challenge this view, claiming that our continuum representation neglects differences among models and does not consider the ability of fitted process-based models to combine the advantages of both process-based and correlative modelling approaches. Here we clarify that the continuum view resulted from recognition of the manifold differences between models. We also reinforce the point that the current trend towards combining different modelling approaches may lead not only to the desired combination of the advantages but also to the accumulation of the disadvantages of those approaches.

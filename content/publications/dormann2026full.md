@@ -11,6 +11,9 @@ authors:
   - "Florian Hartig"
 authors_display: "Carsten F. Dormann, Yannek Käber, Florian Hartig"
 journal: "Advances in Ecological Research"
-note: "Accepted / in press."
+pages: "191–212"
+doi: "10.1016/bs.aecr.2026.02.003"
+significance: "Argues that ecological forecasts used for policy decisions should report full uncertainty distributions rather than single ‘best guess’ numbers, since decisions informed by point estimates alone can be systematically misleading."
+description: "Argues that ecological forecasts used for policy decisions should report full uncertainty distributions rather than single ‘best guess’ numbers, since…"
 entry_type: "article"
 ---

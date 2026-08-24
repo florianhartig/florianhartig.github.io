@@ -1,6 +1,6 @@
 ---
 title: "Software"
-description: "Open-source research software from the Theoretical Ecology group: DHARMa, BayesianTools, sjSDM, cito, and contributions to vegetation and forest modelling packages."
+description: "Open-source R packages from the Theoretical Ecology group: DHARMa, BayesianTools, sjSDM, cito and more."
 ---
 
 Our lab is committed to free and open provision of scientific source code and

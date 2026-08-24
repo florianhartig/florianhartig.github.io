@@ -3,6 +3,7 @@ title: "cito"
 weight: 40
 category: "Further packages from the group"
 summary: "Deep neural networks in R with ordinary formula syntax, plus the explainable-AI tools needed to interpret them."
+paper: "amesoder2024cito"
 links:
   - name: "GitHub"
     url: "https://github.com/citoverse/cito"

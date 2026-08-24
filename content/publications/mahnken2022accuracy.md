@@ -3,7 +3,7 @@
 title: "Accuracy, realism and general applicability of European forest models"
 date: 2022-01-01
 year: "2022"
-weight: 20
+weight: 21
 slug: "mahnken2022accuracy"
 authors:
   - "Mats Mahnken"
@@ -20,5 +20,12 @@ volume: "28"
 issue: "23"
 pages: "6921–6943"
 doi: "10.1111/gcb.16384"
+abstract: "Forest models are instrumental for understanding and projecting the impact of climate change on forests. A considerable number of forest models have been developed in the last decades, but few systematic and comprehensive model comparisons have been performed in Europe that combine an evaluation of modelled carbon and water fluxes and forest structure. We evaluate 13 widely used, state-of-the-art, stand-scale forest models against field measurements of forest structure and eddy-covariance data of carbon and water fluxes over multiple decades across an environmental gradient at nine typical European forest stands, testing the models' performance in three dimensions: accuracy of local predictions, realism of environmental responses, and general applicability (proportion of European tree species covered). We find that multiple models are available that excel according to our three dimensions of model performance. For the accuracy of local predictions, variables related to forest structure have lower random and systematic errors than annual carbon and water flux variables, and the multi-model ensemble mean provided overall more realistic daily productivity responses to environmental drivers across all sites than any single individual model. The general applicability of the models is high, as almost all models are currently able to cover Europe's common tree species. We show that forest models complement each other in their response to environmental drivers and that there are several cases in which individual models outperform the model ensemble, providing a point of reference for future model work aimed at predicting climate impacts and supporting climate mitigation and adaptation measures in forests."
+significance: "A large multi-model comparison testing how well a range of widely used European forest models actually perform, providing an evidence base for which models can be trusted to project forest responses to climate change."
+description: "A large multi-model comparison testing how well a range of widely used European forest models actually perform, providing an evidence base for which…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Forest models are instrumental for understanding and projecting the impact of climate change on forests. A considerable number of forest models have been developed in the last decades, but few systematic and comprehensive model comparisons have been performed in Europe that combine an evaluation of modelled carbon and water fluxes and forest structure. We evaluate 13 widely used, state-of-the-art, stand-scale forest models against field measurements of forest structure and eddy-covariance data of carbon and water fluxes over multiple decades across an environmental gradient at nine typical European forest stands, testing the models' performance in three dimensions: accuracy of local predictions, realism of environmental responses, and general applicability (proportion of European tree species covered). We find that multiple models are available that excel according to our three dimensions of model performance. For the accuracy of local predictions, variables related to forest structure have lower random and systematic errors than annual carbon and water flux variables, and the multi-model ensemble mean provided overall more realistic daily productivity responses to environmental drivers across all sites than any single individual model. The general applicability of the models is high, as almost all models are currently able to cover Europe's common tree species. We show that forest models complement each other in their response to environmental drivers and that there are several cases in which individual models outperform the model ensemble, providing a point of reference for future model work aimed at predicting climate impacts and supporting climate mitigation and adaptation measures in forests.

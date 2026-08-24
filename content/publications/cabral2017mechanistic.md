@@ -3,7 +3,7 @@
 title: "Mechanistic models in macroecology and biogeography: state-of-art and prospects"
 date: 2017-01-01
 year: "2017"
-weight: 79
+weight: 80
 slug: "cabral2017mechanistic"
 authors:
   - "Juliano Sarmento Cabral"
@@ -12,7 +12,15 @@ authors:
 authors_display: "Juliano Sarmento Cabral, Luis Valente, Florian Hartig"
 journal: "Ecography"
 volume: "40"
+issue: "2"
 pages: "267–280"
 doi: "10.1111/ecog.02480"
+abstract: "Macroecology and biogeography are concerned with understanding biodiversity patterns across space and time. In the past, the two disciplines have addressed this question mainly with correlative approaches, despite frequent calls for more mechanistic explanations. Recent advances in computational power, theoretical understanding, and statistical tools are, however, currently facilitating the development of more system-oriented, mechanistic models. We review these models, identify different model types and theoretical frameworks, compare their processes and properties, and summarize emergent findings. We show that ecological (physiology, demographics, dispersal, biotic interactions) and evolutionary processes, as well as environmental and human-induced drivers, are increasingly modelled mechanistically, and that new insights into biodiversity dynamics emerge from these models. Yet substantial challenges still lie ahead for this young research field, among which we identify scaling, calibration, validation, and balancing complexity as pressing issues. Future work should aim at developing more flexible and modular models that not only allow different ecological theories to be expressed and contrasted, but which are also built for tight integration with all macroecological data sources."
+significance: "A field-defining review of mechanistic models in macroecology and biogeography, mapping out what has been achieved and what remains to be done in modelling biodiversity patterns from first-principles processes rather than statistical correlation alone."
+description: "A field-defining review of mechanistic models in macroecology and biogeography, mapping out what has been achieved and what remains to be done in…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Macroecology and biogeography are concerned with understanding biodiversity patterns across space and time. In the past, the two disciplines have addressed this question mainly with correlative approaches, despite frequent calls for more mechanistic explanations. Recent advances in computational power, theoretical understanding, and statistical tools are, however, currently facilitating the development of more system-oriented, mechanistic models. We review these models, identify different model types and theoretical frameworks, compare their processes and properties, and summarize emergent findings. We show that ecological (physiology, demographics, dispersal, biotic interactions) and evolutionary processes, as well as environmental and human-induced drivers, are increasingly modelled mechanistically, and that new insights into biodiversity dynamics emerge from these models. Yet substantial challenges still lie ahead for this young research field, among which we identify scaling, calibration, validation, and balancing complexity as pressing issues. Future work should aim at developing more flexible and modular models that not only allow different ecological theories to be expressed and contrasted, but which are also built for tight integration with all macroecological data sources.

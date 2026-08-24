@@ -3,7 +3,7 @@
 title: "Assembly processes inferred from eDNA surveys of a pond metacommunity are consistent with known species ecologies"
 date: 2025-01-01
 year: "2025"
-weight: 6
+weight: 7
 slug: "cai2025assembly"
 authors:
   - "Wang Cai"
@@ -20,5 +20,12 @@ volume: "2025"
 issue: "6"
 pages: "e07461"
 doi: "10.1111/ecog.07461"
+abstract: "Technological advances are enabling ecologists to conduct large-scale and structured community surveys. However, it is unclear how best to extract information from these novel community data. We metabarcoded 48 vertebrate species from their eDNA in 320 ponds across England and applied the 'internal structure' approach, which uses joint species distribution models (JSDMs) to explain compositions as the result of four metacommunity processes: environmental filtering, dispersal, species interactions, and stochasticity. We confirm that environmental filtering plays an important role in community assembly, and find that species' estimated environmental preferences are consistent with known ecologies. We also detect negative biotic covariances between fish and amphibians after controlling for divergent environmental preferences, consistent with predator-prey interactions (likely mediated by predator avoidance behaviour), and we detect high spatial autocorrelation for the palmate newt, consistent with its hypothesised relict distribution. These results are consistent with the recent proposal that applying JSDMs to species distribution patterns can help reveal the relative importance of environmental filtering, dispersal limitation, and biotic interaction processes for individual sites and species."
+significance: "Tests whether environmental DNA (eDNA) surveys — an increasingly popular, non-invasive way to detect species — actually recover ecologically sensible patterns of community assembly, giving confidence for using eDNA data in biodiversity research."
+description: "Tests whether environmental DNA (eDNA) surveys — an increasingly popular, non-invasive way to detect species — actually recover ecologically sensible…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Technological advances are enabling ecologists to conduct large-scale and structured community surveys. However, it is unclear how best to extract information from these novel community data. We metabarcoded 48 vertebrate species from their eDNA in 320 ponds across England and applied the 'internal structure' approach, which uses joint species distribution models (JSDMs) to explain compositions as the result of four metacommunity processes: environmental filtering, dispersal, species interactions, and stochasticity. We confirm that environmental filtering plays an important role in community assembly, and find that species' estimated environmental preferences are consistent with known ecologies. We also detect negative biotic covariances between fish and amphibians after controlling for divergent environmental preferences, consistent with predator-prey interactions (likely mediated by predator avoidance behaviour), and we detect high spatial autocorrelation for the palmate newt, consistent with its hypothesised relict distribution. These results are consistent with the recent proposal that applying JSDMs to species distribution patterns can help reveal the relative importance of environmental filtering, dispersal limitation, and biotic interaction processes for individual sites and species.

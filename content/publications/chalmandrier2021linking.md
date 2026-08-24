@@ -3,21 +3,28 @@
 title: "Linking functional traits and demography to model species-rich communities"
 date: 2021-01-01
 year: "2021"
-weight: 30
+weight: 31
 slug: "chalmandrier2021linking"
 authors:
-  - "Lo\\\"ic Chalmandrier"
+  - "Loïc Chalmandrier"
   - "Florian Hartig"
   - "Daniel C. Laughlin"
   - "Heike Lischke"
   - "Maximilian Pichler"
   - "Daniel B. Stouffer"
-  - "Lo\\\"ic Pellissier"
-authors_display: "Lo\\\"ic Chalmandrier, Florian Hartig, Daniel C. Laughlin, Heike Lischke, Maximilian Pichler, Daniel B. Stouffer, Lo\\\"ic Pellissier"
+  - "Loïc Pellissier"
+authors_display: "Loïc Chalmandrier, Florian Hartig, Daniel C. Laughlin, Heike Lischke, Maximilian Pichler, Daniel B. Stouffer, Loïc Pellissier"
 journal: "Nature Communications"
 volume: "12"
 issue: "1"
-pages: "1–9"
-publisher_url: "https://www.nature.com/articles/s41467-021-22630-1"
+pages: "2724"
+doi: "10.1038/s41467-021-22630-1"
+abstract: "It has long been anticipated that relating functional traits to species demography would be a cornerstone for achieving large-scale predictability of ecological systems. If such a relationship existed, species demography could be modeled only by measuring functional traits, transforming our ability to predict states and dynamics of species-rich communities with process-based community models. Here, we introduce a new method that links empirical functional traits with the demographic parameters of a process-based model by calibrating a transfer function through inverse modeling. As a case study, we parameterize a modified Lotka-Volterra model of a high-diversity mountain grassland with static plant community and functional trait data only. The calibrated trait-demography relationships are amenable to ecological interpretation, and lead to species abundances that fit well to the observed community structure. We conclude that our new method offers a general solution to bridge the divide between trait data and process-based models in species-rich ecosystems."
+significance: "Develops a way to connect species' functional traits to their demographic rates within a single model of a diverse community, aiming to make predictions for hyperdiverse ecosystems tractable without modelling every species individually."
+description: "Develops a way to connect species' functional traits to their demographic rates within a single model of a diverse community, aiming to make predictions…"
 entry_type: "article"
 ---
+
+## Abstract
+
+It has long been anticipated that relating functional traits to species demography would be a cornerstone for achieving large-scale predictability of ecological systems. If such a relationship existed, species demography could be modeled only by measuring functional traits, transforming our ability to predict states and dynamics of species-rich communities with process-based community models. Here, we introduce a new method that links empirical functional traits with the demographic parameters of a process-based model by calibrating a transfer function through inverse modeling. As a case study, we parameterize a modified Lotka-Volterra model of a high-diversity mountain grassland with static plant community and functional trait data only. The calibrated trait-demography relationships are amenable to ecological interpretation, and lead to species abundances that fit well to the observed community structure. We conclude that our new method offers a general solution to bridge the divide between trait data and process-based models in species-rich ecosystems.

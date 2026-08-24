@@ -3,7 +3,7 @@
 title: "Structure and community composition in a tropical forest suggest a change of ecological processes during stand development"
 date: 2017-01-01
 year: "2017"
-weight: 71
+weight: 72
 slug: "chanthorn2017structure"
 authors:
   - "Wirong Chanthorn"
@@ -14,5 +14,7 @@ journal: "Forest Ecology and Management"
 volume: "404"
 pages: "100–107"
 doi: "10.1016/j.foreco.2017.08.001"
+significance: "Shows how the structure and species composition of a tropical forest shifts as a stand develops over time, evidence that different ecological processes dominate at different successional stages."
+description: "Shows how the structure and species composition of a tropical forest shifts as a stand develops over time, evidence that different ecological processes…"
 entry_type: "article"
 ---

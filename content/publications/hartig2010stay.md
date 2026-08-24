@@ -3,7 +3,7 @@
 title: "Stay by thy neighbor? Social organization determines the efficiency of biodiversity markets with spatial incentives"
 date: 2010-01-01
 year: "2010"
-weight: 107
+weight: 108
 slug: "hartig2010stay"
 authors:
   - "Florian Hartig"
@@ -11,7 +11,10 @@ authors:
 authors_display: "Florian Hartig, Martin Drechsler"
 journal: "Ecological Complexity"
 volume: "7"
+issue: "1"
 pages: "91–99"
 doi: "10.1016/j.ecocom.2009.07.001"
+significance: "Shows that how landowners are socially organised affects how efficiently spatially explicit biodiversity markets can allocate conservation incentives, suggesting market design needs to account for social network structure, not just economic incentives."
+description: "Shows that how landowners are socially organised affects how efficiently spatially explicit biodiversity markets can allocate conservation incentives…"
 entry_type: "article"
 ---

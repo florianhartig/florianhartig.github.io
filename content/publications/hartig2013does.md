@@ -3,7 +3,7 @@
 title: "Does “model-free” forecasting really outperform the “true” model?"
 date: 2013-01-01
 year: "2013"
-weight: 93
+weight: 94
 slug: "hartig2013does"
 authors:
   - "Florian Hartig"
@@ -11,7 +11,15 @@ authors:
 authors_display: "Florian Hartig, Carsten F. Dormann"
 journal: "Proceedings of the National Academy of Sciences"
 volume: "110"
+issue: "42"
 pages: "E3975"
-publisher_url: "http://www.pnas.org/content/110/42/E3975"
+doi: "10.1073/pnas.1308603110"
+abstract: "Estimating population models from uncertain observations is an important problem in ecology. Perretti et al. observed that standard Bayesian state-space solutions to this problem may provide biased parameter estimates when the underlying dynamics are chaotic. Consequently, forecasts based on these estimates showed poor predictive accuracy compared with simple \"model-free\" methods, which led Perretti et al. to conclude that model-free forecasting outperforms the correct mechanistic model for simulated and experimental data. However, a simple modification of the statistical methods also suffices to remove the bias and reverse their results."
+significance: "A statistical rebuttal showing that a widely publicised claim, that ‘model-free’ forecasting beats mechanistic population models, rested on a flawed comparison, restoring confidence that properly specified mechanistic models are not actually inferior."
+description: "A statistical rebuttal showing that a widely publicised claim, that ‘model-free’ forecasting beats mechanistic population models, rested on a flawed…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Estimating population models from uncertain observations is an important problem in ecology. Perretti et al. observed that standard Bayesian state-space solutions to this problem may provide biased parameter estimates when the underlying dynamics are chaotic. Consequently, forecasts based on these estimates showed poor predictive accuracy compared with simple "model-free" methods, which led Perretti et al. to conclude that model-free forecasting outperforms the correct mechanistic model for simulated and experimental data. However, a simple modification of the statistical methods also suffices to remove the bias and reverse their results.

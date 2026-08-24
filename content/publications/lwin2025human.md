@@ -3,7 +3,7 @@
 title: "Human and apex predators shape lower trophic levels through top-down control"
 date: 2025-01-01
 year: "2025"
-weight: 3
+weight: 4
 slug: "lwin2025human"
 authors:
   - "Yan Htay Lwin"
@@ -16,5 +16,7 @@ journal: "Biological Conservation"
 volume: "310"
 pages: "111352"
 doi: "10.1016/j.biocon.2025.111352"
+significance: "Examines how humans, alongside natural apex predators, exert top-down control on ecosystems — relevant to understanding how removing or adding predators, including through hunting policy, cascades through food webs."
+description: "Examines how humans, alongside natural apex predators, exert top-down control on ecosystems — relevant to understanding how removing or adding predators…"
 entry_type: "article"
 ---

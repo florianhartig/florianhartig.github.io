@@ -3,7 +3,7 @@
 title: "Correlation and process in species distribution models: bridging a dichotomy"
 date: 2012-01-01
 year: "2012"
-weight: 100
+weight: 101
 slug: "dormann2012correlation"
 authors:
   - "Carsten F. Dormann"
@@ -20,7 +20,15 @@ authors:
 authors_display: "Carsten F. Dormann, Stanislaus J. Schymanski, Juliano Cabral, Isabelle Chuine, Catherine Graham, Florian Hartig, Thomas Hickler, Michael Kearney, Xavier Morin, Christine Römermann, Alexander Singer"
 journal: "Journal of Biogeography"
 volume: "39"
+issue: "12"
 pages: "2119–2131"
 doi: "10.1111/j.1365-2699.2011.02659.x"
+abstract: "Within the field of species distribution modelling an apparent dichotomy exists between process-based and correlative approaches, where the processes are explicit in the former and implicit in the latter. However, these intuitive distinctions can become blurred when comparing species distribution modelling approaches in more detail. In this review article, we contrast the extremes of the correlative-process spectrum of species distribution models with respect to core assumptions, model building and selection strategies, validation, uncertainties, common errors and the questions they are most suited to answer. The extremes of such approaches differ clearly in many aspects, such as model building approaches, parameter estimation strategies and transferability. However, they also share strengths and weaknesses. We show that claims of one approach being intrinsically superior to the other are misguided and that they ignore the process-correlation continuum as well as the domains of questions that each approach is addressing. Nonetheless, the application of process-based approaches to species distribution modelling lags far behind more correlative (process-implicit) methods and more research is required to explore their potential benefits. We close with challenges for future development of process-explicit species distribution models and how they may complement current approaches to study species distributions."
+significance: "Argues that the perceived split between correlative and process-based species distribution models is a false dichotomy, and proposes ways to bridge the two — an influential framing paper for the field."
+description: "Argues that the perceived split between correlative and process-based species distribution models is a false dichotomy, and proposes ways to bridge the…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Within the field of species distribution modelling an apparent dichotomy exists between process-based and correlative approaches, where the processes are explicit in the former and implicit in the latter. However, these intuitive distinctions can become blurred when comparing species distribution modelling approaches in more detail. In this review article, we contrast the extremes of the correlative-process spectrum of species distribution models with respect to core assumptions, model building and selection strategies, validation, uncertainties, common errors and the questions they are most suited to answer. The extremes of such approaches differ clearly in many aspects, such as model building approaches, parameter estimation strategies and transferability. However, they also share strengths and weaknesses. We show that claims of one approach being intrinsically superior to the other are misguided and that they ignore the process-correlation continuum as well as the domains of questions that each approach is addressing. Nonetheless, the application of process-based approaches to species distribution modelling lags far behind more correlative (process-implicit) methods and more research is required to explore their potential benefits. We close with challenges for future development of process-explicit species distribution models and how they may complement current approaches to study species distributions.

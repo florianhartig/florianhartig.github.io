@@ -27,14 +27,14 @@
 - name: "LinkedIn"
   url: "https://www.linkedin.com/in/florian-hartig/"
   primary: true
+- name: "X"
+  url: "https://x.com/florianhartig"
 - name: "YouTube"
   url: "https://www.youtube.com/@prof.dr.florianhartig2357"
 - name: "Scopus"
   url: "https://www.scopus.com/authid/detail.uri?authorId=24773326300"
 - name: "Web of Science"
   url: "https://www.webofscience.com/wos/author/record/G-4510-2010"
-- name: "Publons"
-  url: "https://publons.com/researcher/426383/florian-hartig/"
 - name: "ResearchGate"
   url: "https://www.researchgate.net/profile/Florian-Hartig"
 - name: "Semantic Scholar"
@@ -50,6 +50,3 @@
 - name: "Theoretical Ecology group on YouTube"
   url: "https://www.youtube.com/channel/UCHbAgGxkGjIN_WYcOkB5EvQ"
   person: false
-# TODO (pre-publish decision): X/Twitter @florianhartig is still linked from the
-# GitHub profile, but the university page promotes Bluesky and does not mention
-# X. Left out; add it back here if the account is live.

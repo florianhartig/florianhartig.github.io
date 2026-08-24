@@ -3,7 +3,7 @@
 title: "Bayesian calibration of a growth-dependent tree mortality model to simulate the dynamics of European temperate forests"
 date: 2020-01-01
 year: "2020"
-weight: 48
+weight: 49
 slug: "cailleret2020bayesian"
 authors:
   - "Maxime Cailleret"
@@ -16,6 +16,13 @@ journal: "Ecological Applications"
 volume: "30"
 issue: "1"
 pages: "e02021"
-publisher_url: "https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/eap.2021"
+doi: "10.1002/eap.2021"
+abstract: "Dynamic vegetation models (DVMs) are important tools to understand and predict the functioning and dynamics of terrestrial ecosystems under changing environmental conditions. In these models, uncertainty in the description of demographic processes, in particular tree mortality, is a persistent problem: current mortality formulations lack realism and are insufficiently constrained by empirical evidence. It has been suggested that empirically estimated mortality submodels would enhance DVM performance, but due to the many processes and interactions within a DVM, the claim has rarely been tested. Here, we compare the performance of three alternative growth-dependent tree mortality submodels in the DVM ForClim, using time series of inventory data from 30 ecologically distinct Swiss natural forest reserves collected over 35+ years for calibration and validation. The recalibration resulted in mortality parameters that differed from the direct empirical estimates, particularly for the relationship between tree size and mortality, and the calibrated parameters outperformed the direct estimates, and to a lesser extent the original mortality function, for predicting decadal-scale forest dynamics at both calibration and validation sites. Our results demonstrate that inverse calibration may be useful even when direct empirical estimates of DVM parameters are available, as structural model deficiencies or data problems can result in discrepancies between direct and inverse estimates, underlining the potential for learning more about elusive processes, such as tree mortality or recruitment, through data integration in DVMs."
+significance: "Calibrates a tree-mortality model against real European forest dynamics using Bayesian methods, improving the reliability of forest-model predictions for the process, tree death, that is hardest to model but most consequential for forecasting climate-driven forest carbon loss."
+description: "Calibrates a tree-mortality model against real European forest dynamics using Bayesian methods, improving the reliability of forest-model predictions for…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Dynamic vegetation models (DVMs) are important tools to understand and predict the functioning and dynamics of terrestrial ecosystems under changing environmental conditions. In these models, uncertainty in the description of demographic processes, in particular tree mortality, is a persistent problem: current mortality formulations lack realism and are insufficiently constrained by empirical evidence. It has been suggested that empirically estimated mortality submodels would enhance DVM performance, but due to the many processes and interactions within a DVM, the claim has rarely been tested. Here, we compare the performance of three alternative growth-dependent tree mortality submodels in the DVM ForClim, using time series of inventory data from 30 ecologically distinct Swiss natural forest reserves collected over 35+ years for calibration and validation. The recalibration resulted in mortality parameters that differed from the direct empirical estimates, particularly for the relationship between tree size and mortality, and the calibrated parameters outperformed the direct estimates, and to a lesser extent the original mortality function, for predicting decadal-scale forest dynamics at both calibration and validation sites. Our results demonstrate that inverse calibration may be useful even when direct empirical estimates of DVM parameters are available, as structural model deficiencies or data problems can result in discrepancies between direct and inverse estimates, underlining the potential for learning more about elusive processes, such as tree mortality or recruitment, through data integration in DVMs.

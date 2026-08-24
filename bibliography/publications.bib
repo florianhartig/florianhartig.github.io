@@ -15,6 +15,14 @@
 %                       not complete author lists.
 %   url = {...}         used only where the source gave no DOI. DOIs were never
 %                       constructed by guessing from a publisher URL.
+%   abstract = {...}    optional; becomes the page's meta description AND a
+%                       real "## Abstract" section in the body, sourced
+%                       verbatim from Crossref/Semantic Scholar/OpenAlex.
+%                       Present for most entries; a handful of older or very
+%                       recent papers have no abstract available anywhere.
+%   significance = {...} a short, hand-written "why it matters" note (never
+%                       sourced from an API) rendered under the abstract.
+%                       Present for all entries.
 %
 % Regenerate the site's publication pages after editing:
 %   python3 scripts/bib2content.py
@@ -23,10 +31,15 @@
 
 @article{malchow2026calibration,
   author  = {Malchow, Anne-Kathleen and Hartig, Florian},
-  title   = {Calibration, sensitivity and uncertainty analysis of ecological models --- a review},
+  title   = {Calibration, sensitivity and uncertainty analysis of complex ecological models --- a review},
   journal = {Ecology Letters},
   year    = {2026},
-  note    = {Accepted / in press.}
+  volume  = {29},
+  number  = {4},
+  pages   = {e70375},
+  doi     = {10.1111/ele.70375},
+  abstract = {Ecologists increasingly use complex models to predict and understand ecological systems and their responses to external drivers or anthropogenic pressures. An ongoing challenge in this context is quantifying and reducing uncertainty in model inputs, parameters and structure and understanding their implications for model predictions. Three major methodological fields have emerged in this context: sensitivity analysis, uncertainty analysis and model inversion or calibration. While these three methods are an integral part of any modelling or forecasting process, the corresponding literature is often scattered, and distinct terminology and definitions are used in different methodological and scientific contexts. Here, we review and connect these three fields and discuss best practices for their practical implementation with a focus on complex ecological models. We classify relevant types of uncertainty, discuss the complementary roles of sensitivity and uncertainty analyses, give an overview of available calibration methods and emphasize the importance of effective communication of uncertainty. We conclude that using state-of-the-art methods for understanding model behaviour as well as consistently accounting for all uncertainties is essential for correctly understanding model predictions and thus forms the basis for a responsible use of models in ecological decision making.},
+  significance = {A review paper surveying how ecologists should calibrate process-based models and quantify their uncertainty, bringing together scattered statistical methods into a practical reference for modellers.}
 }
 
 @article{dormann2026full,
@@ -34,7 +47,20 @@
   title   = {Full prediction uncertainty quantification: a plea from science and decision making},
   journal = {Advances in Ecological Research},
   year    = {2026},
-  note    = {Accepted / in press.}
+  pages   = {191--212},
+  doi     = {10.1016/bs.aecr.2026.02.003},
+  significance = {Argues that ecological forecasts used for policy decisions should report full uncertainty distributions rather than single ‘best guess’ numbers, since decisions informed by point estimates alone can be systematically misleading.}
+}
+
+@article{wintermantel2026equivalence,
+  author   = {Wintermantel, Dimitry and Osterman, Julia and Mair, Magdalena M. and Hartig, Florian},
+  title    = {Equivalence testing in pesticide risk assessment --- evaluation and practical guidance for design, analysis and interpretation},
+  journal  = {arXiv},
+  year     = {2026},
+  note     = {Preprint.},
+  preprint = {https://arxiv.org/abs/2607.07543},
+  abstract = {Harmful pesticide effects exceeding specific protection goals (SPG) may go undetected in underpowered experimental designs. Regulatory honeybee field studies have consistently failed to reach the statistical power required under European Food Safety Authority (EFSA) guidance, which may have caused approval of high-risk substances. Therefore, EFSA advised a shift from testing the null hypothesis of 'no effect' to equivalence testing. Under this approach, a pesticide is classified as 'low risk' if the null hypothesis that its effect exceeds the SPG can be rejected. For honeybees, the recommended SPG is a colony size reduction below 10%. Critics have argued that this framework requires excessive site replication to demonstrate pesticide safety and proposed an alternative equivalence test defining treatment effects relative to the lower bound of the 90%-control-group confidence interval. Using simulations mimicking a regulatory honeybee field study, we show that although the two equivalence tests share the same trade-off between false 'low-risk' and false 'high-risk' classifications, only EFSA's original recommendation reliably identifies pesticides with effects greater than the SPG at alpha = 0.2. Our results show that increasing site replication beyond the current practice is unavoidable for a reliable regulatory assessment. However, for pesticides with effect sizes of 5% or less, site requirements remain lower than those implied by the power requirement of the former EFSA guidance. Moreover, covariate adjustment through a model term or balanced colony allocation using anticlustering randomisation can reduce site requirements without losing power and thus save costs.},
+  significance = {Shows that standard significance testing in regulatory pesticide studies can hide real harm to bees when experiments lack statistical power, and gives practical guidance for using equivalence tests instead — directly relevant to how pesticides get approved.}
 }
 
 % ------------------------------------------------------------------ 2025 ----
@@ -46,7 +72,8 @@
   year    = {2025},
   volume  = {310},
   pages   = {111352},
-  doi     = {10.1016/j.biocon.2025.111352}
+  doi     = {10.1016/j.biocon.2025.111352},
+  significance = {Examines how humans, alongside natural apex predators, exert top-down control on ecosystems — relevant to understanding how removing or adding predators, including through hunting policy, cascades through food webs.}
 }
 
 @article{alkemade2025learning,
@@ -56,7 +83,9 @@
   year    = {2025},
   volume  = {53},
   pages   = {100443},
-  doi     = {10.1016/j.fbr.2025.100443}
+  doi     = {10.1016/j.fbr.2025.100443},
+  abstract = {Crop protection against fungal pathogens is essential to prevent crop losses and maintain food security. Current crop protection relies heavily on chemical fungicides. However, rapid evolution of fungicide resistance, the constant appearance of new pathogens, and legislation against chemical pesticides due to concerns regarding their impact on human health and the environment, mean new crop protection strategies are urgently required. One elegant solution is double-stranded RNA-based crop protection, which aims to silence selected genes in the pathogen to reduce crop damage. This technology brings the promise of targeting specific genes, which could be chosen to maximise protection, minimize off-target effects and reduce the risk of resistance evolution. Here we discuss strategies for successful use of this novel technology based on lessons learned from fungicide resistance and recent discoveries in fungal evolution derived from genome-sequencing.},
+  significance = {Draws lessons from how fungal crop pathogens evolve resistance to fungicides to inform the design of RNA-interference-based crop protection, aiming to build resistance-durability into a new generation of pesticides before it becomes a field problem.}
 }
 
 @article{topper2025advancing,
@@ -66,8 +95,10 @@
   year    = {2025},
   volume  = {6},
   number  = {2},
-  pages   = {e70053},
-  doi     = {10.1002/2688-8319.70053}
+  pages    = {e70053},
+  doi      = {10.1002/2688-8319.70053},
+  abstract = {General ecosystem models (GEMs) are process-based simulations of ecosystems functioning worldwide. They represent all essential processes in an ecosystem, going beyond a focus on specific biomes or organismal groups. GEMs are a comparably young development, and currently, there is still only one GEM available: the Madingley model, which was first announced in 2013. GEMs allow studying ecosystem mechanisms that are difficult or impossible to investigate empirically, and to perform simulation experiments to assess impacts of human pressures on ecosystems. As such, GEMs can be seen as the nature equivalent to 'climate models'. As managers and policymakers urgently need good information on nature values and human impacts on them for policy design and decision-making, they have much to gain from GEMs, which allow understanding current and predicting future outcomes of human actions on biodiversity and ecosystem functioning. To increase the applicability of GEMs for informing management and policy, we argue for an acceleration and diversification in model development, and we suggest a range of developments to propel GEMs forward not only towards improved global representativeness but also towards applicability for more landscape-level problems, a scale at which actual decision-making often takes place. In addition, we argue for more accessible implementations and better documentation to increase both the transparency and credibility of GEMs, as well as the user basis applying GEMs.},
+  significance = {Sets an agenda for ‘general ecosystem models’ that mechanistically simulate whole ecosystems worldwide, arguing this kind of integrated modelling is needed to anticipate how ecosystems will respond to human-driven global change.}
 }
 
 @article{cai2025assembly,
@@ -77,8 +108,10 @@
   year    = {2025},
   volume  = {2025},
   number  = {6},
-  pages   = {e07461},
-  doi     = {10.1111/ecog.07461}
+  pages    = {e07461},
+  doi      = {10.1111/ecog.07461},
+  abstract = {Technological advances are enabling ecologists to conduct large-scale and structured community surveys. However, it is unclear how best to extract information from these novel community data. We metabarcoded 48 vertebrate species from their eDNA in 320 ponds across England and applied the 'internal structure' approach, which uses joint species distribution models (JSDMs) to explain compositions as the result of four metacommunity processes: environmental filtering, dispersal, species interactions, and stochasticity. We confirm that environmental filtering plays an important role in community assembly, and find that species' estimated environmental preferences are consistent with known ecologies. We also detect negative biotic covariances between fish and amphibians after controlling for divergent environmental preferences, consistent with predator-prey interactions (likely mediated by predator avoidance behaviour), and we detect high spatial autocorrelation for the palmate newt, consistent with its hypothesised relict distribution. These results are consistent with the recent proposal that applying JSDMs to species distribution patterns can help reveal the relative importance of environmental filtering, dispersal limitation, and biotic interaction processes for individual sites and species.},
+  significance = {Tests whether environmental DNA (eDNA) surveys — an increasingly popular, non-invasive way to detect species — actually recover ecologically sensible patterns of community assembly, giving confidence for using eDNA data in biodiversity research.}
 }
 
 @article{grimm2025using,
@@ -88,7 +121,8 @@
   year    = {2025},
   volume  = {501},
   pages   = {110967},
-  doi     = {10.1016/j.ecolmodel.2024.110967}
+  doi     = {10.1016/j.ecolmodel.2024.110967},
+  significance = {A practical methods paper on making agent-based ecological models reproducible, using the standard ODD documentation protocol together with the NetLogo platform — addressing ecology's persistent replication problem for simulation studies.}
 }
 
 % ------------------------------------------------------------------ 2024 ----
@@ -98,9 +132,13 @@
   title    = {Latitudinal patterns in stabilizing density dependence of forest communities},
   journal  = {Nature},
   year     = {2024},
-  pages    = {1--8},
+  volume   = {627},
+  number   = {8004},
+  pages    = {564--571},
   doi      = {10.1038/s41586-024-07118-4},
-  featured = {true}
+  abstract = {Numerous studies have shown reduced performance in plants surrounded by same-species neighbors, a phenomenon called conspecific negative density dependence (CNDD). This research comprehensively assesses latitudinal CNDD patterns using dynamic mortality data across 23 forest sites. While stabilizing CNDD appeared at nearly all sites, it was not stronger in tropical regions as previously hypothesized. However, in tropical communities, rare and intermediate-abundant species experienced stronger stabilizing CNDD than common species -- a pattern absent in temperate forests. This suggests CNDD more effectively regulates tropical tree population abundances, potentially contributing to greater stabilization and higher local diversity in tropical forests.},
+  featured = {true},
+  significance = {A large global forest-plot analysis testing whether the mechanism that lets rare tree species recover, conspecific negative density dependence, varies systematically with latitude — a long-standing hypothesis for why the tropics are so much more diverse than temperate forests.}
 }
 
 @article{hartig2024novel,
@@ -112,7 +150,9 @@
   number   = {3},
   pages    = {280--293},
   doi      = {10.1016/j.tree.2023.09.017},
-  featured = {true}
+  abstract = {New technologies for monitoring biodiversity such as environmental (e)DNA, passive acoustic monitoring, and optical sensors promise to generate automated spatiotemporal community observations at unprecedented scales and resolutions. Here, we introduce "novel community data" as an umbrella term for these data. We review the emerging field around novel community data, focusing on new ecological questions that could be addressed; the analytical tools available or needed to make best use of these data; and the potential implications of these developments for policy and conservation. We conclude that novel community data offer many opportunities to advance our understanding of fundamental ecological processes, including community assembly, biotic interactions, micro- and macroevolution, and overall ecosystem functioning.},
+  featured = {true},
+  significance = {Maps out what new automated biodiversity-monitoring technologies (eDNA, acoustics, imaging) actually measure and how their statistical properties differ from traditional survey data, steering ecologists away from analysing this new data as if it were old data.}
 }
 
 @article{lamanna2024consequences,
@@ -122,8 +162,10 @@
   year    = {2024},
   volume  = {27},
   number  = {9},
-  pages   = {e14506},
-  doi     = {10.1111/ele.14506}
+  pages    = {e14506},
+  doi      = {10.1111/ele.14506},
+  abstract = {Conspecific density dependence (CDD) in plant populations is widespread, most likely caused by local-scale biotic interactions, and has potentially important implications for biodiversity, community composition, and ecosystem processes. However, progress in this important area of ecology has been hindered by differing viewpoints on CDD across subfields in ecology, lack of synthesis across CDD-related frameworks, and misunderstandings about how empirical measurements of local CDD fit within the context of broader ecological theories on community assembly and diversity maintenance. Here, we propose a conceptual synthesis of local-scale CDD and its causes, including species-specific antagonistic and mutualistic interactions, comparing and clarifying different uses of CDD and related concepts across subfields within ecology. We suggest the use of local stabilizing/destabilizing CDD to refer to the scenario where local conspecific density effects are more negative/positive than heterospecific effects, discuss different mechanisms for each and how they cut across several fields of study, and place local stabilizing/destabilizing CDD within the context of broader ecological theories. The ultimate goal of this synthesis is to provide a conceptual roadmap for researchers studying local CDD and its implications for population and community dynamics.},
+  significance = {Synthesises what conspecific density dependence — the tendency for a plant to fare worse near others of its own species — implies for plant diversity and community dynamics at larger scales, connecting a well-studied local mechanism to landscape-level biodiversity patterns.}
 }
 
 @article{malchow2024fitting,
@@ -131,8 +173,10 @@
   title   = {Fitting individual-based models of spatial population dynamics to long-term monitoring data},
   journal = {Ecological Applications},
   year    = {2024},
-  pages   = {e2966},
-  doi     = {10.1002/eap.2966}
+  pages    = {e2966},
+  doi      = {10.1002/eap.2966},
+  abstract = {Generating spatial predictions of species distribution is a central task for research and policy. Currently, correlative species distribution models (cSDMs) are among the most widely used tools for this purpose. However, a fundamental assumption of cSDMs, that species distributions are in equilibrium with their environment, is rarely fulfilled in real data and limits the applicability of cSDMs for dynamic projections. Process-based, dynamic SDMs (dSDMs) promise to overcome these limitations as they explicitly represent transient dynamics and enhance spatiotemporal transferability, but their parameter estimation can be complex. Here, we test the feasibility of calibrating and validating a dSDM using long-term monitoring data of Swiss red kites (Milvus milvus). This population has shown strong increases in abundance and a progressive range expansion over the last decades, indicating a nonequilibrium situation. We construct an individual-based model using the RangeShiftR modeling platform and use Bayesian inference for model calibration, integrating heterogeneous data sources such as parameter estimates from published literature and observational data from monitoring schemes. Our monitoring data encompass counts of breeding pairs at 267 sites across Switzerland over 22 years. Our model showed very good predictive accuracy of spatial projections and represented well the observed population dynamics over the last two decades; results suggest that reproductive success was a key factor driving the observed range expansion. We demonstrate the practicality of data integration and validation for dSDMs using RangeShiftR, an approach that can improve predictive performance compared to cSDMs and can be adopted for any population with some prior knowledge of demographic and dispersal parameters plus spatiotemporal observations of abundance or presence/absence.},
+  significance = {Develops methods for fitting individual-based population models directly to long-term monitoring data, combining the mechanistic realism of individual-based models with the statistical rigor usually reserved for simpler correlative species distribution models.}
 }
 
 @article{amesoder2024cito,
@@ -140,8 +184,10 @@
   title   = {cito: an R package for training neural networks using torch},
   journal = {Ecography},
   year    = {2024},
-  pages   = {e07143},
-  doi     = {10.1111/ecog.07143}
+  pages    = {e07143},
+  doi      = {10.1111/ecog.07143},
+  abstract = {Deep neural networks (DNN) have become a central method in ecology. To build and train DNNs in deep learning (DL) applications, most users rely on one of the major deep learning frameworks, in particular PyTorch or TensorFlow. Using these frameworks, however, requires substantial experience and time. Here, we present 'cito', a user-friendly R package for DL that allows specifying DNNs in the familiar formula syntax used by many R packages. To fit the models, 'cito' takes advantage of the numerically optimized 'torch' library, including the ability to switch between training models on the CPU or the graphics processing unit (GPU), which allows the efficient training of large DNNs. Moreover, 'cito' includes many user-friendly functions for model plotting and analysis, including explainable AI (xAI) metrics for effect sizes and variable importance. All xAI metrics as well as predictions can optionally be bootstrapped to generate confidence intervals, including p-values. To showcase a typical analysis pipeline using 'cito', with its built-in xAI features, we built a species distribution model of the African elephant. We hope that by providing a user-friendly R framework to specify, deploy and interpret DNNs, 'cito' will make this interesting class of models more accessible to ecological data analysis.},
+  significance = {Introduces cito, an R package that makes it much easier for ecologists to build and train deep neural networks via torch without learning a general-purpose deep-learning framework, lowering the barrier to using deep learning in ecology.}
 }
 
 @article{kaber2024inferring,
@@ -151,8 +197,10 @@
   year    = {2024},
   volume  = {17},
   number  = {7},
-  pages   = {2727--2753},
-  doi     = {10.5194/gmd-17-2727-2024}
+  pages    = {2727--2753},
+  doi      = {10.5194/gmd-17-2727-2024},
+  abstract = {The regeneration niche of trees is governed by many processes and factors that are challenging to determine. Besides a species's geographic distribution, which determines if seeds are available, a myriad of local processes in forest ecosystems (e.g., competition and pathogens) exert influences on tree regeneration. Consequently, the representation of tree regeneration in dynamic forest models is a notoriously complicated process which often involves many subprocesses that are often data deficient. The ForClim forest gap model solved this problem by linking species traits to regeneration properties, but this regeneration module was never validated with large-scale data. Here, we compare this trait-based approach with an inverse calibration approach where we estimate regeneration parameters directly from a large dataset of unmanaged European forests, using Bayesian inference to estimate shade and drought tolerance as well as the temperature requirements for 11 common tree species along with the intensity of regeneration. We find that the parameters determining the species' light niche are similar for the trait-based and calibrated values, but only a more complex model variant that included competition between recruits leads to plausible estimates of the drought niche; the trait-derived temperature niche did not match the estimates from either model variant using inverse calibration. We conclude that the regeneration niche of trees can be recovered from a large forestry dataset in terms of the stand-level parameters light availability and regeneration intensity, while abiotic drivers (temperature and drought) are more elusive. The higher performance of the inversely calibrated models underpins the importance of informing dynamic models by real-world observations.},
+  significance = {Uses a dynamic forest model to infer, from standard inventory data, what conditions actually let tree seedlings establish — the regeneration niche — which is hard to observe directly but crucial for predicting how forests respond to climate change and management.}
 }
 
 @article{wiegrebe2024analyzing,
@@ -162,8 +210,10 @@
   year    = {2024},
   volume  = {15},
   number  = {1},
-  pages   = {10061},
-  doi     = {10.1038/s41467-024-54483-9}
+  pages    = {10061},
+  doi      = {10.1038/s41467-024-54483-9},
+  abstract = {Understanding the genetics of kidney function decline, or trait change in general, is hampered by scarce longitudinal data for GWAS (longGWAS) and uncertainty about how to analyze such data. We use longitudinal UK Biobank data for creatinine-based estimated glomerular filtration rate from 348,275 individuals to search for genetic variants associated with eGFR-decline, both among 595 variants previously associated with eGFR in cross-sectional GWAS and genome-wide. We use seven statistical approaches to analyze the UK Biobank data and simulated data, finding that a linear mixed model is a powerful approach with unbiased effect estimates which is viable for longGWAS. The linear mixed model identifies 13 independent genetic variants associated with eGFR-decline, including 6 novel variants, and links them to age-dependent eGFR-genetics. We demonstrate that age-dependent and age-independent eGFR-genetics exhibit a differential pattern regarding clinical progression traits and kidney-specific gene expression regulation. Overall, our results provide insights into kidney aging and linear mixed model-based longGWAS generally.},
+  significance = {A statistical-methods contribution, outside Hartig's usual ecology work, on how to analyse genome-wide association data for traits that change over time, applied to kidney function decline.}
 }
 
 @article{cabral2024road,
@@ -173,8 +223,10 @@
   year    = {2024},
   volume  = {6},
   number  = {5},
-  pages   = {1716--1741},
-  doi     = {10.1002/pan3.10472}
+  pages    = {1716--1741},
+  doi      = {10.1002/pan3.10472},
+  abstract = {Current approaches to project spatial biodiversity responses to climate change mainly focus on the direct effects of climate on species while regarding land use and land cover as constant or prescribed by global land-use scenarios. However, local land-use decisions are often affected by climate change and biodiversity on top of socioeconomic and policy drivers. To realistically understand and predict climate impacts on biodiversity, it is therefore necessary to integrate both direct and indirect effects (via climate-driven land-use change) of climate change on biodiversity. In this perspective paper, we outline how biodiversity models could be better integrated with regional, climate-driven land-use models, providing a short review of empirical and modelling approaches to land-use and land-cover change (LU) and biodiversity (BD) change at regional scales, with a special emphasis on mechanistic models. We find that LU integration in BD models is more frequent than the other way around and has been achieved at different levels, from overlapping predictions to simultaneously coupled simulations. Important research avenues include concerted efforts in harmonizing spatial and temporal resolution, disentangling direct and indirect effects of climate change on biodiversity, explicitly accounting for bidirectional feedbacks, and ultimately feeding socio-ecological systems back into climate predictions. Recent developments of coupled models show that such integration is achievable and can lead to novel insights into climate-land use-biodiversity relations.},
+  significance = {A roadmap paper arguing that biodiversity forecasts under climate change need to properly account for land-use change too, not just climate alone, and outlining how to combine climate and land-use models to do so.}
 }
 
 % ------------------------------------------------------------------ 2023 ----
@@ -188,7 +240,9 @@
   number   = {4},
   pages    = {994--1016},
   doi      = {10.1111/2041-210X.14061},
-  featured = {true}
+  abstract = {The popularity of machine learning (ML), deep learning (DL) and artificial intelligence (AI) has risen sharply in recent years. Despite this spike in popularity, the inner workings of ML and DL algorithms are often perceived as opaque, and their relationship to classical data analysis tools remains debated. Although it is often assumed that ML and DL excel primarily at making predictions, ML and DL can also be used for analytical tasks traditionally addressed with statistical models. Moreover, most recent discussions and reviews on ML focus mainly on DL, failing to synthesise the wealth of ML algorithms with different advantages and general principles. Here, we provide a comprehensive overview of the field of ML and DL, starting by summarizing its historical developments, existing algorithm families, differences to traditional statistical tools, and universal ML principles. We then discuss why and when ML and DL models excel at prediction tasks and where they could offer alternatives to traditional statistical methods for inference, highlighting current and emerging applications for ecological problems. Finally, we summarize emerging trends such as scientific and causal ML, explainable AI, and responsible AI that may significantly impact ecological data analysis in the future. We conclude that ML and DL are powerful new tools for predictive modelling and data analysis. The superior performance of ML and DL algorithms compared to statistical models can be explained by their higher flexibility and automatic data-dependent complexity optimization. However, their use for causal inference is still disputed as the focus of ML and DL methods on predictions creates challenges for the interpretation of these models. Nevertheless, we expect ML and DL to become an indispensable tool in ecology and evolution, comparable to other traditional statistical tools.},
+  featured = {true},
+  significance = {A widely used tutorial-style review explaining what machine learning and deep learning actually do under the hood, written specifically to help ecologists use these tools appropriately rather than as black boxes.}
 }
 
 @article{malchow2023demography,
@@ -198,7 +252,10 @@
   year    = {2023},
   volume  = {378},
   number  = {1881},
-  doi     = {10.1098/rstb.2022.0194}
+  pages   = {20220194},
+  doi     = {10.1098/rstb.2022.0194},
+  abstract = {Species respond to climate change with range and abundance dynamics. To better explain and predict them, we need a mechanistic understanding of how the underlying demographic processes are shaped by climatic conditions. Here, we aim to infer demography-climate relationships from distribution and abundance data. For this, we developed spatially explicit, process-based models for eight Swiss breeding bird populations, which jointly consider dispersal, population dynamics and the climate-dependence of three demographic processes -- juvenile survival, adult survival and fecundity. The models were calibrated to 267 nationwide abundance time series in a Bayesian framework and showed moderate to excellent goodness-of-fit and discriminatory power. The most influential climatic predictors for population performance were the mean breeding-season temperature and the total winter precipitation. Contemporary climate change benefitted the population trends of typical mountain birds, leading to lower population losses or even slight increases, whereas lowland birds were adversely affected. Our results emphasize that generic process-based models embedded in a robust statistical framework can improve our predictions of range dynamics and may allow disentangling of the underlying processes.},
+  significance = {Argues that predicting how species' ranges shift under climate change requires understanding how environment affects birth, death and movement rates individually, not just where a species currently occurs — a case for mechanistic over purely correlative range models.}
 }
 
 % ------------------------------------------------------------------ 2022 ----
@@ -208,10 +265,13 @@
   title    = {Studying speciation and extinction dynamics from phylogenies: addressing identifiability issues},
   journal  = {Trends in Ecology \& Evolution},
   year     = {2022},
+  volume   = {37},
   number   = {6},
   pages    = {497--506},
   doi      = {10.1016/j.tree.2022.02.004},
-  featured = {true}
+  abstract = {A lot of what we know about past speciation and extinction dynamics is based on statistically fitting birth-death processes to phylogenies of extant species. Despite their wide use, the reliability of these tools is regularly questioned. It was recently demonstrated that vast "congruent" sets of alternative diversification histories cannot be distinguished (i.e., are not identifiable) using extant phylogenies alone, reanimating the debate about the limits of phylogenetic diversification analysis. Here, we summarize what we know about the identifiability of the birth-death process and how identifiability issues can be addressed. We conclude that extant phylogenies, when combined with appropriate prior hypotheses and regularization techniques, can still tell us a lot about past diversification dynamics.},
+  featured = {true},
+  significance = {Highlights a fundamental statistical problem, non-identifiability, in the popular practice of estimating past speciation and extinction rates from present-day species trees alone, cautioning the field against over-interpreting such estimates.}
 }
 
 @article{hartig2022evidence,
@@ -219,7 +279,12 @@
   title   = {The evidence contained in the P-value is context dependent},
   journal = {Trends in Ecology \& Evolution},
   year    = {2022},
-  doi     = {10.1016/j.tree.2022.02.011}
+  volume  = {37},
+  number  = {7},
+  pages   = {569--570},
+  doi     = {10.1016/j.tree.2022.02.011},
+  abstract = {In a recent opinion article, Muff et al. recapitulate well-known objections to the Neyman-Pearson null-hypothesis significance testing (NHST) framework and call for reforming our practices in statistical reporting. We agree with them on several important points: the significance threshold P < 0.05 is only a convention, chosen as a compromise between type I and II error rates; transforming the p-value into a dichotomous statement leads to a loss of information; and p-values should be interpreted together with other statistical indicators, in particular effect sizes and their uncertainty. In our view, a lot of progress in reporting results can already be achieved by keeping these three points in mind. We were surprised and worried, however, by Muff et al.'s suggestion to interpret the p-value as a "gradual notion of evidence": Muff et al. recommend, for example, that a P-value greater than 0.1 should be reported as "little or no evidence" and a P-value of 0.001 as "strong evidence" in favor of the alternative hypothesis H1.},
+  significance = {A methodological commentary in an ongoing debate about statistical significance testing, arguing that how much evidence a p-value provides depends on context, such as study design and prior plausibility, not on the number alone.}
 }
 
 @article{mahnken2022accuracy,
@@ -230,7 +295,9 @@
   volume  = {28},
   number  = {23},
   pages   = {6921--6943},
-  doi     = {10.1111/gcb.16384}
+  doi     = {10.1111/gcb.16384},
+  abstract = {Forest models are instrumental for understanding and projecting the impact of climate change on forests. A considerable number of forest models have been developed in the last decades, but few systematic and comprehensive model comparisons have been performed in Europe that combine an evaluation of modelled carbon and water fluxes and forest structure. We evaluate 13 widely used, state-of-the-art, stand-scale forest models against field measurements of forest structure and eddy-covariance data of carbon and water fluxes over multiple decades across an environmental gradient at nine typical European forest stands, testing the models' performance in three dimensions: accuracy of local predictions, realism of environmental responses, and general applicability (proportion of European tree species covered). We find that multiple models are available that excel according to our three dimensions of model performance. For the accuracy of local predictions, variables related to forest structure have lower random and systematic errors than annual carbon and water flux variables, and the multi-model ensemble mean provided overall more realistic daily productivity responses to environmental drivers across all sites than any single individual model. The general applicability of the models is high, as almost all models are currently able to cover Europe's common tree species. We show that forest models complement each other in their response to environmental drivers and that there are several cases in which individual models outperform the model ensemble, providing a point of reference for future model work aimed at predicting climate impacts and supporting climate mitigation and adaptation measures in forests.},
+  significance = {A large multi-model comparison testing how well a range of widely used European forest models actually perform, providing an evidence base for which models can be trusted to project forest responses to climate change.}
 }
 
 @article{schultz2022climate,
@@ -241,7 +308,9 @@
   volume  = {25},
   number  = {1},
   pages   = {38--51},
-  doi     = {10.1111/ele.13902}
+  doi     = {10.1111/ele.13902},
+  abstract = {Estimates of the percentage of species "committed to extinction" by climate change range from 15% to 37%. The question is whether factors other than climate need to be included in models predicting species' range change. We created demographic range models that include climate vs. climate-plus-competition, evaluating their influence on the geographic distribution of Pinus edulis, a pine endemic to the semiarid southwestern U.S. Analyses of data on 23,426 trees in 1941 forest inventory plots support the inclusion of competition in range models. However, climate and competition together only partially explain this species' distribution. Instead, the evidence suggests that climate affects other range-limiting processes, including landscape-scale, spatial processes such as disturbances and antagonistic biotic interactions. Complex effects of climate on species distributions -- through indirect effects, interactions, and feedbacks -- are likely to cause sudden changes in abundance and distribution that are not predictable from a climate-only perspective.},
+  significance = {Reconciles competing views on how strongly climate alone determines species' distributions, showing dynamic, non-climatic factors also matter — with direct implications for how confidently extinction risk can be predicted from climate variables alone.}
 }
 
 @article{oberpriller2022climate,
@@ -252,7 +321,9 @@
   volume  = {15},
   number  = {16},
   pages   = {6495--6519},
-  url     = {https://gmd.copernicus.org/articles/15/6495/2022/}
+  doi     = {10.5194/gmd-15-6495-2022},
+  abstract = {Understanding uncertainties and sensitivities of projected ecosystem dynamics under environmental change is of immense value for research and climate change policy. Here, we analyze sensitivities (change in model outputs per unit change in inputs) and uncertainties (changes in model outputs scaled to uncertainty in inputs) of vegetation dynamics under climate change, projected by a state-of-the-art dynamic vegetation model (LPJ-GUESS v4.0) across European forests (the species Picea abies, Fagus sylvatica and Pinus sylvestris), considering uncertainties of both model parameters and environmental drivers. We find that projected forest carbon fluxes are most sensitive to photosynthesis-, water-, and mortality-related parameters, while predictive uncertainties are dominantly induced by environmental drivers and parameters related to water and mortality; the importance of environmental drivers for predictive uncertainty increases with increasing temperature. Moreover, most of the interactions of model inputs are between environmental drivers themselves or between parameters and environmental drivers. Our study highlights the importance of environmental drivers not only as contributors to predictive uncertainty in their own right but also as modifiers of sensitivities and thus uncertainties in other ecosystem processes -- reducing uncertainty in mortality-related processes and accounting for environmental influence on processes should therefore be a focus in further model development.},
+  significance = {Systematically quantifies how sensitive carbon-stock forecasts from a major vegetation model are to climate inputs versus internal model parameters, helping identify where uncertainty in forest carbon projections actually comes from.}
 }
 
 @article{henrich2022deer,
@@ -261,8 +332,10 @@
   journal = {Frontiers in Ecology and Evolution},
   year    = {2022},
   volume  = {10},
-  pages   = {458},
-  url     = {https://www.frontiersin.org/articles/10.3389/fevo.2022.881502/full}
+  pages   = {881502},
+  doi     = {10.3389/fevo.2022.881502},
+  abstract = {Density is a key trait of populations and an essential parameter in ecological research, wildlife conservation and management. Several models have been developed to estimate population density based on camera trapping data, including the random encounter model (REM) and camera trap distance sampling (CTDS). Both models need to account for variation in animal behavior that depends, for example, on the species and sex of the animals along with temporally varying environmental factors. We examined whether the density estimates of REM and CTDS can be improved for Europe's most numerous deer species, by adjusting the behavior-related model parameters per species and accounting for differences in movement speeds between sexes, seasons, and years. Our results showed that bias through inadequate consideration of animal behavior was exceeded by the uncertainty of the density estimates, which was mainly influenced by variation in the number of independent observations between camera trap locations. The neglection of seasonal and annual differences in movement speed estimates for REM overestimated densities of red deer in autumn and spring by ca. 14%. In CTDS, density estimates of red deer improved foremost through the consideration of behavioral reactions to the camera traps (avoiding bias of max. 19%), while species-specific delays between photos had a larger effect for roe deer. In general, the applicability of both REM and CTDS would profit profoundly from improvements in their precision along with the reduction in bias achieved by exploiting the available information on animal behavior in the camera trap data.},
+  significance = {Shows that deer behavioural responses to camera traps can bias population density estimates derived from camera-trap data, but that this bias is smaller than the variability from spatial heterogeneity — a caution for a widely used wildlife-monitoring method.}
 }
 
 @article{cameron2022issues,
@@ -273,7 +346,9 @@
   volume  = {13},
   number  = {12},
   pages   = {2757--2770},
-  url     = {https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.14002}
+  doi     = {10.1111/2041-210X.14002},
+  abstract = {Calibrating process-based models using multiple constraints often improves the identifiability of model parameters, helps to avoid several errors compensating each other and produces model predictions that are more consistent with underlying processes. However, using multiple constraints can lead to predictions for some variables getting worse -- particularly common when combining data sources with very different sample sizes, an increasingly common situation, for example when combining manual and automated measurements. Here we use a series of simulated virtual data experiments to demonstrate and disentangle the underlying cause of issues that can occur when calibrating models with multiple unbalanced constraints in combination with systematic errors in models and data, proposing a diagnostic tool to help identify whether a calibration is failing due to these factors, and testing the utility of adding terms representing uncertainty in systematic model/data error. We show that unbalanced data by itself is not the problem -- when fitting simulated data to the "true" model, we can correctly recover model parameters and the true dynamics of latent variables. However, when there are systematic errors in the model or the data, we cannot recover the correct parameters, and the modelled dynamics of the low data volume variables departs significantly from the true values. We show that representing uncertainty in model structural errors and data biases in the calibration can greatly improve the model fit to low-volume data, and improve coverage of uncertainty estimates. We conclude that the underlying issue is not one of sample size or information content per se, despite the popularity of ad hoc approaches that focus on "weighting" datasets to achieve balance -- our results emphasize the importance of considering model structural deficiencies and data systematic biases in the calibration of process-based models.},
+  significance = {Examines a subtle statistical pitfall in calibrating ecological models against several observed datasets at once: unnoticed systematic errors in the model or data can distort the calibration in ways that simply adding more constraints does not fix.}
 }
 
 @article{leibold2022internal,
@@ -283,7 +358,9 @@
   year    = {2022},
   volume  = {2022},
   number  = {1},
-  doi     = {10.1111/oik.08618}
+  doi     = {10.1111/oik.08618},
+  abstract = {Current analyses of metacommunity data largely focus on global attributes across the entire metacommunity, such as mean alpha, beta, and gamma diversity, as well as the partitioning of compositional variation into single estimates of contributions of space and environmental effects and, more recently, possible contributions of species interactions. However, this view neglects the fact that different species and sites in the landscape can vary widely in how they contribute to these metacommunity-wide attributes. We argue for a new conceptual framework with matched analytics with the goals of studying the complex and interactive relations between process and pattern in metacommunities that is focused on the variation among species and among sites, which we call the "internal structure" of the metacommunity. To demonstrate how the internal structure could be studied, we create synthetic data using a process-based colonization-extinction metacommunity model, then use joint species distribution models to estimate how the contributions of space, environment, and biotic interactions driving metacommunity assembly differ among species and sites. We find that this approach provides useful information about the distinct ways that different species and different sites contribute to metacommunity structure, and although it has limitations, our work points at a more general approach to understand how other possible complexities might affect internal structure and might thus be incorporated into a more cohesive metacommunity theory.},
+  significance = {Proposes going beyond simple diversity-partitioning statistics to describe the actual internal structure of metacommunities — which species occur together and why — providing a richer framework for interpreting large community datasets.}
 }
 
 % ------------------------------------------------------------------ 2021 ----
@@ -296,8 +373,10 @@
   volume   = {36},
   number   = {2},
   pages    = {151--163},
-  doi      = {10.1016/j.tree.2020.06.006},
-  featured = {true}
+  doi      = {10.1016/j.tree.2020.10.003},
+  featured = {true},
+  abstract = {Half a century ago, Janzen and Connell hypothesized that the high tree species diversity in tropical forests is maintained by specialized natural enemies. Along with other mechanisms, these can cause conspecific negative density dependence (CNDD) and thus maintain species diversity. Numerous studies have measured proxies of CNDD worldwide, but doubt about its relative importance remains. We find ample evidence for CNDD in local populations, but methodological limitations make it difficult to assess if CNDD scales up to control community diversity and thereby local and global biodiversity patterns. A combination of more robust statistical methods, new study designs, and eco-evolutionary models are needed to provide a more definite evaluation of the importance of CNDD for geographic variation in plant species diversity.},
+  significance = {Asks whether differences in the strength of conspecific negative density dependence between species and regions can explain large-scale tree diversity gradients, a mechanistic hypothesis for why some forests are far more diverse than others.}
 }
 
 @article{pichler2021new,
@@ -308,7 +387,9 @@
   volume  = {12},
   number  = {11},
   pages   = {2159--2173},
-  doi     = {10.1111/2041-210X.13687}
+  doi     = {10.1111/2041-210X.13687},
+  abstract = {Joint species distribution models (JSDMs) explain spatial variation in community composition by contributions of the environment, biotic associations and possibly spatially structured residual covariance. They show great promise as a general analytical framework for community ecology and macroecology, but current JSDMs, even when approximated by latent variables, scale poorly on large datasets, limiting their usefulness for currently emerging big (e.g. metabarcoding and metagenomics) community datasets. Here, we present a novel, more scalable JSDM (sjSDM) that circumvents the need to use latent variables by using a Monte Carlo integration of the joint JSDM likelihood together with flexible elastic net regularization on all model components. We implemented sjSDM in PyTorch, a modern machine learning framework, which allows making use of both CPU and GPU calculations. Using simulated communities with known species-species associations and different numbers of species and sites, we compare sjSDM with state-of-the-art JSDM implementations to determine computational runtimes and accuracy of the inferred species-species and species-environment associations. We find that sjSDM is orders of magnitude faster than existing JSDM algorithms (even when run on the CPU) and can be scaled to very large datasets. Despite the dramatically improved speed, sjSDM produces more accurate estimates of species association structures than alternative JSDM implementations. We demonstrate the applicability of sjSDM to big community data using an eDNA case study with thousands of fungi operational taxonomic units, substantially extending the applicability of JSDMs in ecology.},
+  significance = {Introduces a faster and more accurate statistical model for inferring how species are associated with each other from large community datasets, making a computationally demanding class of models practical at the scale of modern biodiversity data.}
 }
 
 @article{oberpriller2021towards,
@@ -319,7 +400,9 @@
   volume  = {24},
   number  = {6},
   pages   = {1251--1261},
-  doi     = {10.1111/ele.13728}
+  doi     = {10.1111/ele.13728},
+  abstract = {Ecologists increasingly rely on complex computer simulations to forecast ecological systems. To make such forecasts precise, uncertainties in model parameters and structure must be reduced and correctly propagated to model outputs. Naively using standard statistical techniques for this task, however, can lead to bias and underestimation of uncertainties in parameters and predictions. Here, we explain why these problems occur and propose a framework for robust inference with complex computer simulations. Having identified that model error is more consequential in complex computer simulations, due to their more pronounced nonlinearity and interconnectedness, we discuss as possible solutions data rebalancing and adding bias corrections on model outputs or processes during or after the calibration procedure, illustrating the methods in a case study using a dynamic vegetation model. We conclude that developing better methods for robust inference of complex computer simulations is vital for generating reliable predictions of ecosystem responses.},
+  significance = {Addresses how to get statistically defensible parameter estimates and uncertainty bounds out of complex ecological simulation models — much harder than for simple statistical models but essential if such models are to inform real decisions.}
 }
 
 @article{speich2021sequential,
@@ -329,7 +412,8 @@
   year    = {2021},
   volume  = {455},
   pages   = {109608},
-  doi     = {10.1016/j.ecolmodel.2021.109608}
+  doi     = {10.1016/j.ecolmodel.2021.109608},
+  significance = {A review and comparison of Sequential Monte Carlo algorithms for calibrating ecological models in a Bayesian framework, giving practitioners guidance on which of these increasingly popular but technically demanding methods to use.}
 }
 
 @article{chalmandrier2021linking,
@@ -339,8 +423,10 @@
   year    = {2021},
   volume  = {12},
   number  = {1},
-  pages   = {1--9},
-  url     = {https://www.nature.com/articles/s41467-021-22630-1}
+  pages   = {2724},
+  doi     = {10.1038/s41467-021-22630-1},
+  abstract = {It has long been anticipated that relating functional traits to species demography would be a cornerstone for achieving large-scale predictability of ecological systems. If such a relationship existed, species demography could be modeled only by measuring functional traits, transforming our ability to predict states and dynamics of species-rich communities with process-based community models. Here, we introduce a new method that links empirical functional traits with the demographic parameters of a process-based model by calibrating a transfer function through inverse modeling. As a case study, we parameterize a modified Lotka-Volterra model of a high-diversity mountain grassland with static plant community and functional trait data only. The calibrated trait-demography relationships are amenable to ecological interpretation, and lead to species abundances that fit well to the observed community structure. We conclude that our new method offers a general solution to bridge the divide between trait data and process-based models in species-rich ecosystems.},
+  significance = {Develops a way to connect species' functional traits to their demographic rates within a single model of a diverse community, aiming to make predictions for hyperdiverse ecosystems tractable without modelling every species individually.}
 }
 
 @article{hagen2021gen3sis,
@@ -351,7 +437,9 @@
   volume  = {19},
   number  = {7},
   pages   = {e3001340},
-  doi     = {10.1371/journal.pbio.3001340}
+  doi     = {10.1371/journal.pbio.3001340},
+  abstract = {Understanding the origins of biodiversity has been an aspiration since the days of early naturalists. The immense complexity of ecological, evolutionary, and spatial processes, however, has made this goal elusive to this day. Computer models serve progress in many scientific fields, but in the fields of macroecology and macroevolution, eco-evolutionary models are comparatively less developed. We present a general, spatially explicit, eco-evolutionary engine with a modular implementation that enables the modeling of multiple macroecological and macroevolutionary processes and feedbacks across representative spatiotemporally dynamic landscapes. Modeled processes can include species' abiotic tolerances, biotic interactions, dispersal, speciation, and evolution of ecological traits; commonly observed biodiversity patterns, such as alpha, beta, and gamma diversity, species ranges, ecological traits, and phylogenies, emerge as simulations proceed. As an illustration, we examine alternative hypotheses expected to have shaped the latitudinal diversity gradient (LDG) during the Earth's Cenozoic era. Our exploratory simulations simultaneously produce multiple realistic biodiversity patterns, such as the LDG, current species richness, and range size frequencies, as well as phylogenetic metrics. The model engine is open source and available as an R package, enabling future exploration of various landscapes and biological processes, representing a key step toward a numeric, interdisciplinary, and mechanistic understanding of the physical and biological processes that shape Earth's biodiversity.},
+  significance = {Introduces a general, open-source simulation engine for modelling how ecological, evolutionary and spatial processes jointly generate biodiversity over geological timescales, letting researchers test eco-evolutionary hypotheses about the origins of today's biodiversity patterns in silico.}
 }
 
 @article{rosbakh2021siberian,
@@ -359,7 +447,12 @@
   title   = {Siberian plants shift their phenology in response to climate change},
   journal = {Global Change Biology},
   year    = {2021},
-  doi     = {10.1111/gcb.15744}
+  volume  = {27},
+  number  = {18},
+  pages   = {4435--4448},
+  doi     = {10.1111/gcb.15744},
+  abstract = {Siberia has undergone dramatic climatic changes due to global warming in recent decades. Yet, the ecological responses to these climatic changes are still poorly understood due to a lack of data. Here, we use a unique data set from the Russian "Chronicles of Nature" network to analyse the long-term (1976-2018) phenological shifts in leaf out, flowering, fruiting and senescence of 67 common Siberian plant species. We find that Siberian boreal forest plants advanced their early season (leaf out and flowering) and mid-season (fruiting) phenology by -2.2, -0.7 and -1.6 days/decade, and delayed the onset of senescence by 1.6 days/decade during this period. These mean values, however, are subject to substantial intraspecific variability, partly explained by the plants' growth forms: trees and shrubs advanced leaf out and flowering faster than herbs, presumably due to the more direct exposure of leaf and flower buds to ambient air for the woody vegetation, while for senescence we detected a reverse pattern, with stronger delays in herbs than in woody plants, presumably due to the stronger effects of autumn frosts on the leaves of herbs. Our findings point to a strong, yet heterogeneous, response of Siberian plant phenology to recent global warming, and highlight that species- and growth form-specific differences among study species could be used to identify plants particularly at risk of decline due to their low adaptive capacity or a loss of synchronization with important interaction partners.},
+  significance = {Documents how the timing of key life-cycle events in Siberian plants is shifting with climate change in one of the fastest-warming, least-studied regions on Earth, filling a data gap for a critically under-sampled part of the globe.}
 }
 
 @article{barraquand2021inferring,
@@ -370,8 +463,10 @@
   volume   = {14},
   number   = {1},
   pages    = {87--105},
-  url      = {https://link.springer.com/article/10.1007/s12080-020-00482-7},
-  preprint = {https://arxiv.org/abs/1909.00731}
+  doi      = {10.1007/s12080-020-00482-7},
+  abstract = {Identifying directed interactions between species from time series of their population densities has many uses in ecology. This key statistical task is equivalent to causal time series inference, which connects to the Granger causality (GC) concept: x causes y if x improves the prediction of y in a dynamic model. However, the entangled nature of nonlinear ecological systems has led to question the appropriateness of Granger causality, especially in its classical linear multivariate autoregressive (MAR) model form. Convergent cross mapping (CCM), a nonparametric method developed for deterministic dynamical systems, has been suggested as an alternative. Here, we show that linear GC and CCM are able to uncover interactions with surprisingly similar performance, for predator-prey cycles, two-species deterministic (chaotic) or stochastic competition, as well as 10- and 20-species interaction networks. We found no correspondence between the degree of nonlinearity of the dynamics and which method performs best. Our results therefore imply that Granger causality, even in its linear MAR(p) formulation, is a valid method for inferring interactions in nonlinear ecological networks; using GC or CCM (or both) can instead be decided based on the aims and specifics of the analysis.},
+  preprint = {https://arxiv.org/abs/1909.00731},
+  significance = {Compares two statistical approaches for inferring which species causally affect each other's population dynamics purely from time-series data, clarifying what these popular causal-inference tools can and cannot reliably detect in ecological data.}
 }
 
 @article{reisch2021species,
@@ -382,7 +477,9 @@
   volume  = {27},
   number  = {3},
   pages   = {392--401},
-  url     = {https://onlinelibrary.wiley.com/doi/full/10.1111/ddi.13199}
+  doi     = {10.1111/ddi.13199},
+  abstract = {Empirical studies have often reported parallel patterns of genetic and species diversity, but the strength and generality of this association, as well as its origin, are still debated. Particularly in human-dominated landscapes with complex land use histories, more complicated and partly diverging patterns have been observed. In this study, we examine whether species and genetic diversity correlate across grasslands with different levels of land use pressure and spatial differentiation in habitat quality and heterogeneity. We selected eight extensively used (grazed, unfertilized) dry grasslands and eight intensively used (mown, fertilized) hay meadows in southeastern Germany, using vegetation surveys and molecular markers of six widespread dry grassland and six hay meadow plant species to compare species and genetic alpha and beta diversity between the two grassland types. Species diversity patterns expectedly showed higher alpha diversity, stronger spatial structure and less turnover in dry grasslands than in hay meadows, but neither of the corresponding genetic diversity patterns showed the same significant trends. Our results question the idea that species and genetic diversity patterns will always show similar patterns; likely, genetic and species diversity emerge partly from shared, partly from different processes, including the regional species pool, environmental heterogeneity, fragmentation and land use history. The practical conservation implication is that species and genetic diversity are not generally interchangeable, though looking at both together may eventually lead to a better understanding of the complex processes that shape the structure and dynamics of ecological communities.},
+  significance = {Tests whether species diversity and within-species genetic diversity respond to land-use intensity in the same way, informing whether conservation policies aimed at species diversity also protect genetic diversity or need to be considered separately.}
 }
 
 @article{udy2021environmental,
@@ -393,7 +490,9 @@
   volume  = {30},
   number  = {4},
   pages   = {842--851},
-  url     = {https://onlinelibrary.wiley.com/doi/full/10.1111/geb.13261}
+  doi     = {10.1111/geb.13261},
+  abstract = {It is widely accepted that biodiversity is influenced by both niche-related and spatial processes from local to global scales, but their relative importance is still disputed, and empirical tests are surprisingly scarce at the global scale. Here, we compare the importance of area (as a proxy for pure spatial processes) and environmental heterogeneity (as a proxy for niche-related processes) for predicting native mammal species richness world-wide and within biogeographical regions, applying a spreading dye algorithm to a global snapshot of IUCN richness data for all terrestrial mammal species, using elevation ranges and precipitation ranges as measures of environmental heterogeneity. We found that environmental heterogeneity explained species richness relationships better than did area, suggesting that niche-related processes are more prevalent than pure area effects at broad scales. Our results imply that niche-related processes are essential to understand broad-scale species-area relationships, and that habitat diversity is more important than area alone for the protection of global biodiversity.},
+  significance = {Challenges the classic species-area relationship by showing that habitat heterogeneity is a better global predictor of species richness than area alone, with implications for how conservation planners prioritise which land to protect.}
 }
 
 @article{ryo2021explainable,
@@ -404,8 +503,10 @@
   volume   = {44},
   number   = {2},
   pages    = {199--205},
-  url      = {https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.05360},
-  preprint = {https://ecoevorxiv.org/w96pk}
+  doi      = {10.1111/ecog.05360},
+  preprint = {https://ecoevorxiv.org/w96pk},
+  abstract = {Species distribution models (SDMs) are widely used in ecology, biogeography and conservation biology to estimate relationships between environmental variables and species occurrence data and make predictions of how their distributions vary in space and time. During the past two decades, the field has increasingly made use of machine learning approaches for constructing and validating SDMs. Model accuracy has steadily increased as a result, but the interpretability of the fitted models, for example the relative importance of predictor variables or their causal effects on focal species, has not always kept pace. Here we draw attention to an emerging subdiscipline of artificial intelligence, explainable AI (xAI), as a toolbox for better interpreting SDMs. xAI aims at deciphering the behavior of complex statistical or machine learning models (e.g. neural networks, random forests, boosted regression trees), and can produce more transparent and understandable SDM predictions. We describe the rationale behind xAI and provide a list of tools that can be used to help ecological modelers better understand complex model behavior at different scales. As an example, we perform a reproducible SDM analysis in R on the African elephant and showcase some xAI tools such as local interpretable model-agnostic explanation (LIME) to help interpret local-scale behavior of the model, concluding with the benefits and caveats of these techniques and advocating for their use to improve the interpretability of machine learning SDMs.},
+  significance = {Applies explainable-AI techniques to species distribution models, making it possible to see what environmental relationships a machine-learning model has actually learned instead of treating its predictions as an uninterpretable black box.}
 }
 
 % ------------------------------------------------------------------ 2020 ----
@@ -418,7 +519,9 @@
   volume  = {11},
   number  = {2},
   pages   = {281--293},
-  url     = {https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13329}
+  doi     = {10.1111/2041-210X.13329},
+  abstract = {Ecologists have long suspected that species are more likely to interact if their traits match in a particular way. For example, a pollination interaction may be more likely if the proportions of a bee's tongue fit a plant's flower shape. Empirical estimates of the importance of trait-matching for determining species interactions, however, vary significantly among different types of ecological networks. Here, we show that ambiguity among empirical trait-matching studies may have arisen at least in part from using overly simple statistical models. Using simulated and real data, we contrast conventional generalized linear models (GLM) with more flexible machine learning (ML) models (random forest, boosted regression trees, deep neural networks, convolutional neural networks, support vector machines, naive Bayes, and k-nearest-neighbor), testing their ability to predict species interactions based on traits, and infer trait combinations causally responsible for species interactions. We found that the best ML models can successfully predict species interactions in plant-pollinator networks, outperforming GLMs by a substantial margin, and can also better identify the causally responsible trait-matching combinations than GLMs. In two case studies, the best ML models successfully predicted species interactions in a global plant-pollinator database and inferred ecologically plausible trait-matching rules for a plant-hummingbird network from Costa Rica, without any prior assumptions about the system. We conclude that flexible ML models offer many advantages over traditional regression models for understanding interaction networks, and anticipate that these results extrapolate to other ecological network types.},
+  significance = {Uses machine learning to test the long-suspected idea that species are more likely to interact, for example to pollinate, when their traits match in particular ways, and to predict unobserved interactions in ecological networks from trait data.}
 }
 
 @article{mair2020mdd,
@@ -429,7 +532,9 @@
   volume  = {39},
   number  = {11},
   pages   = {2109--2123},
-  doi     = {10.1002/etc.4847}
+  doi     = {10.1002/etc.4847},
+  abstract = {Current regulatory guidelines for pesticide risk assessment recommend that nonsignificant results should be complemented by the minimum detectable difference (MDD), a statistical indicator used to decide whether the experiment could have detected biologically relevant effects. We review the statistical theory of the MDD and perform simulations to understand its properties and error rates, comparing its skill in distinguishing between true and false negatives with two alternatives: the minimum detectable effect (MDE), an indicator based on a post hoc power analysis common in medical studies, and confidence intervals (CIs). Our results demonstrate that MDD and MDE only differ in that the power of the MDD depends on the sample size, and that although both have some skill in distinguishing between false negatives and true absence of an effect, they do not perform as well as using CI upper bounds to establish trust in a nonsignificant result -- because, unlike the CI, neither MDD nor MDE consider the estimated effect size in their calculation. We conclude that although MDDs are useful, CIs are preferable for deciding whether to treat a nonsignificant test result as a true negative, or for determining an upper bound for an unknown true effect.},
+  significance = {A critical review of the minimum-detectable-difference approach used in pesticide risk assessment to interpret ‘no significant effect’ results, relevant to whether current regulatory practice is actually protective when studies are underpowered.}
 }
 
 @article{trotsiuk2020r3pg,
@@ -440,7 +545,9 @@
   volume  = {11},
   number  = {11},
   pages   = {1470--1475},
-  doi     = {10.1111/2041-210X.13474}
+  doi     = {10.1111/2041-210X.13474},
+  abstract = {Process-based forest models (PBMs) are important tools for quantifying forest growth and vulnerability, particularly under climate change. The 3-PG model (Physiological Processes Predicting Growth) is one of the most widely used forest growth simulators for this purpose worldwide. Here, we present r3PG, a new Fortran implementation of 3-PG, wrapped into an R package. r3PG can simulate monospecific as well as mixtures of evergreen and deciduous tree species in even-aged or uneven-aged stands. The combination of Fortran functions with an R interface makes the model extremely fast, facilitating its use for extensive computer experiments and sensitivity analysis. We demonstrate this in a case study including single model runs, a sensitivity analysis and full Bayesian calibration of the model, and spatial simulations of forest growth across Switzerland. r3PG is faster and easier to use than previous implementations of 3-PG in Visual Basic, and we believe this will make 3-PG even more useful and popular for ecologists and climate change scientists.},
+  significance = {Provides an R implementation of the widely used 3-PG forest growth model, making a previously specialist process-based forestry tool easy to run, calibrate and integrate into modern statistical workflows.}
 }
 
 @article{morlon2020prior,
@@ -449,7 +556,10 @@
   journal  = {bioRxiv},
   year     = {2020},
   note     = {Preprint. Comment on Louca \& Pennell, Nature, 2020.},
-  preprint = {https://www.biorxiv.org/content/10.1101/2020.07.03.185074v1.abstract}
+  doi      = {10.1101/2020.07.03.185074},
+  preprint = {https://www.biorxiv.org/content/10.1101/2020.07.03.185074v1.abstract},
+  abstract = {Phylogenies of extant species are widely used to study past diversification dynamics, including how speciation and extinction rates have varied over time. Louca and Pennell recently argued that this is not possible: for any diversification history, there is an infinite number of "congruent" models with markedly different speciation and extinction dynamics that nevertheless have exactly the same likelihood for any tree of extant species. Here we discuss and clarify the implications of these results. We show that they neither undermine the hypothesis-driven model selection procedure widely used in the field, in which a finite set of diversification scenarios reflecting specific hypotheses are compared, nor do they show that speciation and extinction dynamics cannot be investigated from extant timetrees using a data-driven procedure, provided such an approach incorporates prior hypotheses or regularization to select among the congruent models.},
+  significance = {Responds to a critique of phylogenetic diversification methods, showing that adding biologically motivated priors or regularisation can still recover reliable estimates of past speciation/extinction dynamics from present-day phylogenies.}
 }
 
 @article{dormann2020plant,
@@ -459,8 +569,10 @@
   year    = {2020},
   volume  = {20},
   number  = {1},
-  pages   = {1--9},
-  url     = {https://link.springer.com/article/10.1186/s12898-020-00311-9}
+  pages   = {43},
+  doi     = {10.1186/s12898-020-00311-9},
+  abstract = {Temperate forest understorey vegetation poses an excellent study system to investigate whether increases in resource availability lead to an increase in plant species richness. Most sunlight is absorbed by the species-poor tree canopy, making the much more species-rich understorey inhabit a severely resource-limited habitat. Additionally, the heterogeneity of light availability, resulting from management-moderated tree composition and age structure, may contribute to species coexistence. One would therefore expect that the diversity in the herb layer correlates positively with either the overall light availability, or the light heterogeneity, depending on whether resource availability or heterogeneity are more important drivers of diversity. To test this idea, we assessed variability of light conditions in 75 forest plots across three ecoregions with four different methods and correlated these data with vegetation relevés. We found light availability to be strongly positively correlated with understorey plant species richness, as well as with understorey cover. Light variability within plots was positively correlated with transmittance but did not improve the relationship further, suggesting that the main driver of species richness in this system is the overall resource availability. Two of the three beech-dominated regions exhibited near-identical effects of light transmittance, while the third, featuring pine alongside beech and thus with the longest gradient of transmittance and lowest species richness, displayed a weaker light response. Our results suggest that light transmittance is a strong mediating factor of understorey plant species richness.},
+  significance = {Finds that forest-understorey plant diversity increases with the average amount of light reaching the ground but not with how variable that light is over time, refining what resource axis actually drives understorey diversity.}
 }
 
 @article{reyer2020profound,
@@ -471,7 +583,9 @@
   volume  = {12},
   number  = {2},
   pages   = {1295--1320},
-  doi     = {10.5194/essd-12-1295-2020}
+  doi     = {10.5194/essd-12-1295-2020},
+  abstract = {Process-based vegetation models are widely used to predict local and global ecosystem dynamics and climate change impacts. Due to their complexity, they require careful parameterization and evaluation to ensure that projections are accurate and reliable. The PROFOUND Database provides a wide range of empirical data on European forests to calibrate and evaluate vegetation models that simulate climate impacts at the forest stand scale. A particular advantage of this database is its wide coverage of multiple data sources at different hierarchical and temporal scales, together with environmental driving data as well as the latest climate scenarios. Specifically, it provides general site descriptions, soil, climate, CO2, nitrogen deposition, tree and forest stand level, and remote sensing data for nine contrasting forest stands distributed across Europe, and for a subset of five sites, time series of carbon fluxes, atmospheric heat conduction and soil water. The climate and nitrogen deposition data contain several datasets for the historic period and a wide range of future climate change scenarios following the Representative Concentration Pathways, plus pre-industrial climate simulations that allow for model runs aimed at disentangling the contribution of climate change to observed forest productivity changes. The database is available freely as an SQLite relational database or ASCII flat file version, and can also be accessed via the ProfoundData R package, which provides basic functions to explore, plot and extract the data for model set-up, calibration and evaluation.},
+  significance = {Describes a large, openly available database of European forest-monitoring data assembled specifically to let researchers rigorously test and compare vegetation models against real observations — infrastructure underpinning much of the forest-model-evaluation work in this list.}
 }
 
 @article{trotsiuk2020assessing,
@@ -482,7 +596,9 @@
   volume  = {26},
   number  = {4},
   pages   = {2463--2476},
-  doi     = {10.1111/gcb.15011}
+  doi     = {10.1111/gcb.15011},
+  abstract = {The response of forest productivity to climate extremes strongly depends on ambient environmental and site conditions. To better understand these relationships at a regional scale, we used nearly 800 observation years from 271 permanent long-term forest monitoring plots across Switzerland, obtained between 1980 and 2017. We assimilated these data into the 3-PG forest ecosystem model using Bayesian inference, reducing the bias of model predictions from 14% to 5% for forest stem carbon stocks and from 45% to 9% for stem carbon stock changes. We then estimated the productivity of forests dominated by Picea abies and Fagus sylvatica for the period of 1960-2018, and tested for productivity shifts in response to climate along an elevational gradient and in extreme years. Simulated net primary productivity (NPP) decreased with elevation for both species. During warm-dry extremes, simulated NPP for both species increased at higher and decreased at lower elevations, with reductions in NPP of more than 25% for up to 21% of the potential species distribution range in Switzerland; reduced plant water availability had a stronger effect on NPP than temperature during these extremes. Importantly, cold-dry extremes had negative impacts on regional forest NPP comparable to warm-dry extremes. Overall, our calibrated model suggests that the response of forest productivity to climate extremes is more complex than a simple shift toward higher elevation.},
+  significance = {Uses a model-data fusion approach to show how forest productivity's response to climate extremes depends on local site conditions, helping explain why the same drought or heatwave can hit different forests very differently.}
 }
 
 @article{beckman2020advancing,
@@ -493,7 +609,9 @@
   volume  = {12},
   number  = {2},
   pages   = {plz048},
-  doi     = {10.1093/aobpla/plz048}
+  doi     = {10.1093/aobpla/plz048},
+  abstract = {Although dispersal is generally viewed as a crucial determinant for the fitness of any organism, our understanding of its role in the persistence and spread of plant populations remains incomplete. Generalizing and predicting dispersal processes is challenging due to the context dependence of seed dispersal, environmental heterogeneity and interdependent processes occurring over multiple spatial and temporal scales. Current population models often use simple phenomenological descriptions of dispersal processes, limiting their ability to examine the role of population persistence and spread, especially under global change. To move seed dispersal ecology forward, we need to evaluate the impact of any single seed dispersal event within the full spatial and temporal context of a plant's life history and environmental variability that ultimately influences a population's ability to persist and spread. In this perspective, we provide guidance on integrating empirical and theoretical approaches that account for the context dependency of seed dispersal to improve our ability to generalize and predict the consequences of dispersal, and its anthropogenic alteration, across systems. We synthesize suitable theoretical frameworks, discuss concepts and approaches from diverse subdisciplines, and address knowledge gaps in the movement ecology of seeds and the integration of dispersal and demography, so as to better understand how global change will impact seed dispersal processes and its potential cascading effects on plant population persistence, spread and biodiversity.},
+  significance = {Proposes a framework for bringing together the fragmented sub-fields that study seed dispersal, arguing that understanding how plants track climate change or persist in fragmented landscapes needs an integrated view of dispersal.}
 }
 
 @article{berzaghi2020towards,
@@ -504,7 +622,9 @@
   volume  = {35},
   number  = {3},
   pages   = {191--205},
-  doi     = {10.1016/j.tree.2019.11.006}
+  doi     = {10.1016/j.tree.2019.11.006},
+  abstract = {Plant trait variability, emerging from eco-evolutionary dynamics that range from alleles to macroecological scales, is one of the most elusive, but possibly most consequential, aspects of biodiversity. Plasticity, epigenetics, and genetic diversity are major determinants of how plants will respond to climate change, yet these processes are rarely represented in current vegetation models. Here, we provide an overview of the challenges associated with understanding the causes and consequences of plant trait variability, and review current developments to include plasticity and evolutionary mechanisms in vegetation models. We also present a roadmap of research priorities to develop a next generation of vegetation models with flexible traits. Including trait variability in vegetation models is necessary to better represent biosphere responses to global change.},
+  significance = {Argues that vegetation models should represent plant trait variability, including evolutionary change, explicitly rather than using fixed traits per species, since this variability may be essential for correctly predicting vegetation's response to environmental change.}
 }
 
 @article{ruizbenito2020available,
@@ -514,7 +634,9 @@
   year    = {2020},
   volume  = {416},
   pages   = {108870},
-  doi     = {10.1016/j.ecolmodel.2019.108870}
+  doi     = {10.1016/j.ecolmodel.2019.108870},
+  abstract = {Climate change is expected to cause major changes in forest ecosystems during the 21st century and beyond. To assess forest impacts from climate change, the existing empirical information must be structured, harmonised and assimilated into a form suitable to develop and test state-of-the-art forest and ecosystem models. The combination of empirical data collected at large spatial and long temporal scales with suitable modelling approaches is key to understand forest dynamics under climate change. To facilitate data and model integration, we identified major climate change impacts observed on European forest functioning and summarised the data available for monitoring and predicting such impacts. Our analysis of c. 120 forest-related databases (including information from remote sensing, vegetation inventories, dendroecology, palaeoecology, eddy-flux sites, common garden experiments and genetic techniques) and 50 databases of environmental drivers highlights a substantial degree of data availability and accessibility. However, some critical variables relevant to predicting European forest responses to climate change are only available at relatively short time frames (up to 10-20 years), including intra-specific trait variability, defoliation patterns, tree mortality and recruitment. Moreover, we identified data gaps or lack of data integration particularly in variables related to local adaptation and phenotypic plasticity, dispersal capabilities and physiological responses. Overall, we conclude that forest data availability across Europe is improving, but further efforts are needed to integrate, harmonise and interpret […] data (i.e., making data useable for non-experts). Continuation of existing monitoring and networks schemes together with the establishments of new networks to address data gaps is crucial to rigorously predict climate change impacts on European forests.},
+  significance = {An audit of what data currently exists, and what is critically missing, for modelling climate change impacts on European forests, meant to guide where future data-collection effort should be directed.}
 }
 
 @article{henrich2020influence,
@@ -522,7 +644,12 @@
   title   = {The influence of camera trap flash type on the behavioural reactions and trapping rates of red deer and roe deer},
   journal = {Remote Sensing in Ecology and Conservation},
   year    = {2020},
-  doi     = {10.1002/rse2.150}
+  volume  = {6},
+  number  = {3},
+  pages   = {399--410},
+  doi     = {10.1002/rse2.150},
+  abstract = {Camera traps have become an important tool in wildlife monitoring. However, an issue in interpreting their data in statistical analyses of population densities, demography or behaviour is that the probability of detecting the target animals and their behaviours may vary depending on environmental and methodological factors. A specific problem is the type of flash used in the camera trap, as animals may react differently to different flash types and change their avoidance or habituation behaviour accordingly over time. Here, we provide the first systematic test of the impact of flash type in studies of red deer (Cervus elaphus) and roe deer (Capreolus capreolus), based on an analysis of behavioural responses to white, standard infrared and black flashes during 900 camera trap deployments in the Bavarian Forest National Park and the Northern Black Forest. Both deer species were more likely to react to standard infrared than to black flash, but trigger delays prevented comparisons to white flash. Red deer reacted more frequently to camera traps than did roe deer, and responses were more common in the Northern Black Forest than in the Bavarian Forest National Park, where hunting is severely restricted. Contrary to our expectations, camera trapping rates of free-ranging deer did not significantly decline over time for any flash type or species. Despite the lack of evidence for avoidance behaviour, we recommend the use of black flash for behavioural studies of deer populations to minimize the risk of introducing a source of disturbance, whereas infrared and white flash are equally suitable for determinations of demographic parameters.},
+  significance = {Tests whether the type of flash used in camera traps changes how deer behave around the cameras, informing best practice for a widely used, low-cost wildlife-monitoring tool.}
 }
 
 @article{cailleret2020bayesian,
@@ -533,7 +660,9 @@
   volume  = {30},
   number  = {1},
   pages   = {e02021},
-  url     = {https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/eap.2021}
+  doi     = {10.1002/eap.2021},
+  abstract = {Dynamic vegetation models (DVMs) are important tools to understand and predict the functioning and dynamics of terrestrial ecosystems under changing environmental conditions. In these models, uncertainty in the description of demographic processes, in particular tree mortality, is a persistent problem: current mortality formulations lack realism and are insufficiently constrained by empirical evidence. It has been suggested that empirically estimated mortality submodels would enhance DVM performance, but due to the many processes and interactions within a DVM, the claim has rarely been tested. Here, we compare the performance of three alternative growth-dependent tree mortality submodels in the DVM ForClim, using time series of inventory data from 30 ecologically distinct Swiss natural forest reserves collected over 35+ years for calibration and validation. The recalibration resulted in mortality parameters that differed from the direct empirical estimates, particularly for the relationship between tree size and mortality, and the calibrated parameters outperformed the direct estimates, and to a lesser extent the original mortality function, for predicting decadal-scale forest dynamics at both calibration and validation sites. Our results demonstrate that inverse calibration may be useful even when direct empirical estimates of DVM parameters are available, as structural model deficiencies or data problems can result in discrepancies between direct and inverse estimates, underlining the potential for learning more about elusive processes, such as tree mortality or recruitment, through data integration in DVMs.},
+  significance = {Calibrates a tree-mortality model against real European forest dynamics using Bayesian methods, improving the reliability of forest-model predictions for the process, tree death, that is hardest to model but most consequential for forecasting climate-driven forest carbon loss.}
 }
 
 % ------------------------------------------------------------------ 2019 ----
@@ -546,7 +675,9 @@
   volume  = {194},
   number  = {5},
   pages   = {E122--E133},
-  url     = {https://www.journals.uchicago.edu/doi/full/10.1086/705243}
+  doi     = {10.1086/705243},
+  abstract = {The latitudinal diversity gradient (LDG) is one of Earth's most iconic biodiversity patterns and still one of the most debated. Explanations for the LDG are often categorized into three broad pathways in which the diversity gradient is created by differential diversification rates, differential carrying capacities (ecological limits), or differential time to accumulate species across latitude. Support for these pathways has, however, been mostly verbally expressed. Here, we present a minimal model to clarify the essential assumptions of the three pathways and explore the sensitivity of diversity dynamics to these pathways. We find that an LDG arises most easily from a gradient in ecological limits compared with a gradient in the time for species accumulation or diversification rate in most modeled scenarios. Differential diversification rates create a stronger LDG than ecological limits only when speciation and dispersal rates are low, but then the predicted LDG seems weaker than the observed LDG. Moreover, range dynamics may reduce an LDG created by a gradient in diversification rates or time for species accumulation, but they cannot reduce an LDG induced by differential ecological limits. We conclude that our simple model provides a null prediction for the effectiveness of the three LDG pathways and can thus aid discussions about the causal mechanisms underlying the LDG or motivate more complex models to confirm or falsify our findings.},
+  significance = {Shows with a deliberately simple model that a hard cap on how much diversity an environment can support can by itself explain the latitudinal diversity gradient, without needing to invoke faster tropical speciation — reframing a century-old debate.}
 }
 
 @article{rogers2019total,
@@ -557,7 +688,9 @@
   volume  = {11},
   number  = {5},
   pages   = {plz042},
-  url     = {https://academic.oup.com/aobpla/article/11/5/plz042/5559435}
+  doi     = {10.1093/aobpla/plz042},
+  abstract = {The distribution and abundance of plants across the world depends in part on their ability to move, which is commonly characterized by a dispersal kernel. For seeds, the total dispersal kernel (TDK) describes the combined influence of all primary, secondary and higher-order dispersal vectors on the overall dispersal kernel for a plant individual, population, species or community. Understanding the role of each vector within the TDK, and their combined influence on the TDK, is critically important for being able to predict plant responses to a changing biotic or abiotic environment. Here, we review existing research on the TDK and discuss advances in empirical, conceptual modelling and statistical approaches that will facilitate broader application. The concept is simple, but few examples of well-characterized TDKs exist: significant empirical challenges exist, as many studies do not account for all dispersal vectors, inadequately measure or estimate long-distance dispersal resulting from multiple vectors, and/or neglect spatial heterogeneity and context dependence. Existing mathematical and conceptual modelling approaches and statistical methods allow fitting individual dispersal kernels and combining them to form a TDK; these will perform best if robust prior information is available. We recommend a modelling cycle to parameterize TDKs, where empirical data inform models, which in turn inform additional data collection, and that the TDK concept be extended to account for not only where seeds land, but also how that location affects the likelihood of establishing and producing a reproductive adult -- i.e. the total effective dispersal kernel.},
+  significance = {A synthesis defining the ‘total dispersal kernel’, combining every stage a seed goes through rather than just the initial launch, as the more complete and useful concept for predicting plant spread and range shifts.}
 }
 
 @article{nadalsala2019global,
@@ -567,7 +700,9 @@
   year    = {2019},
   volume  = {449},
   pages   = {117448},
-  doi     = {10.1016/j.foreco.2019.117448}
+  doi     = {10.1016/j.foreco.2019.117448},
+  abstract = {Mediterranean riparian forests are comparably humid environments that provide shelter for several broadleaved deciduous tree species at their southernmost distribution margin. The stability of these communities, however, is threatened by climate change as well as invasive tree species, such as black locust (Robinia pseudoacacia L.). So far, black locust's European distribution appears to be mostly limited by low temperatures, but global warming might enhance its growth in colder areas. Moreover, R. pseudoacacia can better access water from the phreatic level than some native non-phreatophytic tree species such as European ash (Fraxinus excelsior L.). In this study, we compare the performance of European ash, a native deciduous tree species at its southernmost distribution border, with the invasive black locust, under a range of climate change projections, in a stand located at N.E. Spain, using Bayesian inference to calibrate the GOTILWA+ vegetation model against sap flow data for both tree species and then projecting each species' performance under several climate change scenarios. Our results indicate that increasing temperatures will enlarge black locust's vegetative period, leading to substantially increased annual productivity if the phreatic water table keeps reachable; for European ash, we project a slight increase in productivity, but with higher uncertainty. Our findings suggest that black locust will profit more from global warming than the native European ash, which is concerning because of the already detrimental impact of black locust on the local ecosystems. Forest management should therefore include mechanisms to avoid black locust establishment, such as avoiding clear-cutting and maintaining closed riparian forest canopies.},
+  significance = {Projects that a widespread tree species will grow even faster under future warming in Mediterranean riparian forests, a finding relevant to managing forests already under pressure from climate change.}
 }
 
 @article{czaczkes2019multi,
@@ -578,7 +713,9 @@
   volume  = {286},
   number  = {1909},
   pages   = {20191136},
-  doi     = {10.1098/rspb.2019.1136}
+  doi     = {10.1098/rspb.2019.1136},
+  abstract = {When personally gathered and socially acquired information conflict, animals often prioritize private information. We propose that this is because private information often contains details that social information lacks. We test this idea in an ant model: ants using a food source learn its location and quality rapidly (private information), whereas pheromone trails (social information) provide good directional information but lack reliable information about food quality. If this lack is indeed responsible for the choice of memory over pheromone trails, adding information that better food is available should cause foragers to switch their priority to social information. We show it does: while ants follow memory rather than pheromones when they conflict, adding unambiguous information about a better potential food source reverses this pattern, from 60% of ants following their memory to 75% following the pheromone trail. Using fluorescence microscopy, we demonstrate that food (and thus information) flows from fed workers to outgoing foragers, explaining the frequent contacts of ants on trails. We conclude that social information may often be ignored because it lacks certain crucial dimensions, suggesting that information content is crucial for understanding how and when animals prioritize social and private information.},
+  significance = {Shows experimentally that ants weigh private over social information partly because private information carries more distinct dimensions of value, offering a mechanistic explanation for a widespread pattern in animal decision-making.}
 }
 
 @article{chanthorn2019defaunation,
@@ -588,8 +725,10 @@
   year    = {2019},
   volume  = {9},
   number  = {1},
-  pages   = {1--9},
-  url     = {https://www.nature.com/articles/s41598-019-46399-y}
+  pages   = {10015},
+  doi     = {10.1038/s41598-019-46399-y},
+  abstract = {Recent studies have suggested that defaunation of large-bodied frugivores reduces above-ground carbon storage in tropical forests of South America and Africa, but not, or less so, in Southeast Asian tropical forests. Here we analyze the issue using the seed dispersal network and forest composition of a 30-ha forest dynamics plot in central Thailand, where an intact fauna of primates, ungulates, bears and birds of all sizes still exists. We simulate the effect of two defaunation scenarios on forest biomass: only primates extirpated (a realistic possibility in the near future), and extirpation of all large-bodied frugivores (LBF) including gibbons, macaques, hornbills and terrestrial mammals, the main targets of poachers in this region, varying the population size reduction of the LBF-dispersed tree species from 20% to 100% for each scenario. We find that tree species dependent on seed dispersal by large-bodied frugivores account for nearly one-third of the total carbon biomass on the plot, and that the community turnover following a complete defaunation would result in a carbon reduction of 2.4% to 3.0%, depending on the defaunation scenario and model assumptions; the reduction was always greater than 1% when the defaunation intensity was at least 40%. These effect sizes are comparable to values reported for Neotropical forests, suggesting that the impact of defaunation on carbon deficit is not necessarily lower in Southeast Asian forests. The problem of defaunation in Asia, and the mutual benefits between biodiversity conservation and climate change mitigation, should therefore not be neglected by global policies to reduce carbon emissions.},
+  significance = {Provides Southeast Asian evidence that losing large fruit-eating animals to hunting reduces a tropical forest's carbon storage, extending a pattern previously shown in the Americas and Africa and strengthening the case that wildlife conservation is also a climate mitigation strategy.}
 }
 
 @article{maliet2019model,
@@ -600,7 +739,8 @@
   volume  = {3},
   number  = {7},
   pages   = {1086--1092},
-  url     = {https://www.nature.com/articles/s41559-019-0908-0}
+  doi     = {10.1038/s41559-019-0908-0},
+  significance = {Introduces a phylogenetic model that allows diversification rates to shift gradually and independently across many lineages rather than assuming a few large rate jumps — a more realistic null model for how speciation and extinction rates vary across the tree of life.}
 }
 
 @article{johnson2019rapid,
@@ -610,7 +750,10 @@
   year    = {2019},
   volume  = {11},
   number  = {3},
-  url     = {https://academic.oup.com/aobpla/article/11/3/plz020/5421216}
+  pages   = {plz020},
+  doi     = {10.1093/aobpla/plz020},
+  abstract = {When climatic or environmental conditions change, plant populations must either adapt to these new conditions, or track their niche via seed dispersal. Adaptation of plants to different abiotic environments has mostly been discussed with respect to physiological and demographic parameters that allow local persistence. However, rapid modifications in response to changing environmental conditions can also affect seed dispersal, both via plant traits and via their dispersal agents. Studying such changes empirically is challenging, due to the high variability in dispersal success, resulting from environmental heterogeneity, and substantial phenotypic variability of dispersal-related traits of seeds and their dispersers. The exact mechanisms that drive rapid changes are often not well understood, but the ecological implications of these processes are essential determinants of dispersal success, and deserve more attention from ecologists, especially in the context of adaptation to global change. We outline the evidence for rapid changes in seed dispersal traits by discussing variability due to plasticity or genetics broadly, and describe the specific traits and biological systems in which variability in dispersal is being studied, before discussing some of the potential underlying mechanisms. We then address future research needs and propose a simulation model that incorporates phenotypic plasticity in seed dispersal.},
+  significance = {Argues that seed-dispersal traits themselves can evolve quickly enough to matter for how well plants track shifting climates, a factor often ignored in models that treat dispersal ability as fixed.}
 }
 
 @article{hauenstein2019calibrating,
@@ -621,7 +764,9 @@
   volume  = {29},
   number  = {4},
   pages   = {e01873},
-  doi     = {10.1002/eap.1873}
+  doi     = {10.1002/eap.1873},
+  abstract = {Dispersal is crucial for population viability and thus a popular target for conservation measures, but the ability of individuals to move between habitat patches is notoriously difficult to estimate. One solution is to quantify functional connectivity via realistic individual-based movement models, which are difficult to build and even more difficult to parameterize. Here, we use the example of natal little owl (Athene noctua) dispersal to develop a new analysis chain for calibrating individual-based dispersal models using a hybrid of statistical parameter estimation and Approximate Bayesian Computation (ABC). Using locations of 126 radio-tracked juveniles, we first estimate habitat utilization by generalized additive models and the biased random bridges method, then include the estimated parameters in a spatially explicit individual-based model of little owl dispersal and calibrate further movement parameters using ABC, deriving efficient summary statistics via a dimension reduction method based on random forest regression. We use the calibrated model to predict the dispersal potential of little owls from local populations in southwestern Germany to suitable habitat patches in northern Switzerland. Estimated movement parameters reveal plausible inter-individual and inter-sexual differences in movement behavior during natal dispersal, and simulations from the fitted model indicate that a (re)colonization of northern Switzerland is generally possible, albeit restricted. Our study highlights existing, yet narrow dispersal corridors, which may require enhancements to facilitate a recolonization of little owl habitat patches in northern Switzerland.},
+  significance = {Calibrates an individual-based movement model against real little owl dispersal data to predict functional landscape connectivity, giving conservation planners a tool to assess whether a landscape actually lets this species move between habitat patches.}
 }
 
 @article{aslan2019employing,
@@ -632,7 +777,9 @@
   volume  = {11},
   number  = {2},
   pages   = {plz006},
-  url     = {https://academic.oup.com/aobpla/article/11/2/plz006/5308909}
+  doi     = {10.1093/aobpla/plz006},
+  abstract = {Seed dispersal enables plants to reach hospitable germination sites and escape natural enemies. Understanding when and how much seed dispersal matters to plant fitness is critical for understanding plant population and community dynamics, but the complexity of factors that determine if a seed will be successfully dispersed and subsequently develop into a reproductive plant is daunting -- quantifying all factors that may influence seed dispersal effectiveness for any potential seed-vector relationship would require an unrealistically large amount of time, materials and financial resources. On the other hand, being able to make dispersal predictions is critical for predicting whether single species and entire ecosystems will be resilient to global change. Building on current frameworks, we posit that seed dispersal ecology should adopt plant functional groups as analytical units to reduce this complexity to manageable levels: functional groups can be used to distinguish, for their constituent species, whether it matters if seeds are dispersed, into what context they are dispersed, and what vectors disperse them. To avoid overgeneralization, we propose that the utility of these functional groups may be assessed by generating predictions based on the groups and then testing those predictions against species-specific data, so that data collection and analysis can be guided by robust functional group definitions. Generalizing across similar species in this way could help us to better understand the population and community dynamics of plants and tackle the complexity of seed dispersal as well as its disruption.},
+  significance = {Proposes organising seed-dispersal research around plant functional groups rather than species-by-species case studies, aiming to make dispersal ecology's fragmented literature more generalisable for conservation.}
 }
 
 @article{pontarp2019latitudinal,
@@ -644,7 +791,9 @@
   number   = {3},
   pages    = {211--223},
   doi      = {10.1016/j.tree.2018.11.009},
-  featured = {true}
+  abstract = {The latitudinal diversity gradient (LDG) is one of the most widely studied patterns in ecology, yet no consensus has been reached about its underlying causes. We argue that the reasons for this are the verbal nature of existing hypotheses, the failure to mechanistically link interacting ecological and evolutionary processes to the LDG, and the fact that empirical patterns are often consistent with multiple explanations. To address this issue, we synthesize current LDG hypotheses, uncovering their eco-evolutionary mechanisms, hidden assumptions, and commonalities. Furthermore, we propose mechanistic eco-evolutionary modeling and an inferential approach that makes use of geographic, phylogenetic, and trait-based patterns to assess the relative importance of different processes for generating the LDG.},
+  featured = {true},
+  significance = {Argues that resolving the century-old debate about why the tropics are so diverse requires mechanistic eco-evolutionary models that jointly simulate ecology and evolution, rather than relying on purely statistical pattern-matching.}
 }
 
 @article{delpierre2019chilling,
@@ -655,7 +804,9 @@
   volume  = {25},
   number  = {3},
   pages   = {1089--1105},
-  doi     = {10.1111/gcb.14539}
+  doi     = {10.1111/gcb.14539},
+  abstract = {The phenology of wood formation is a critical process to consider for predicting how trees from the temperate and boreal zones may react to climate change, but compared to leaf phenology, the determinism of wood phenology is still poorly known. Here we compared for the first time three alternative ecophysiological model classes (threshold models, heat-sum models and chilling-influenced heat-sum models) and an empirical model in their ability to predict the starting date of xylem cell enlargement in spring, for four major Northern Hemisphere conifers (Larix decidua, Pinus sylvestris, Picea abies and Picea mariana). We fitted models with Bayesian inference to wood phenological data collected for 220 site-years over Europe and Canada. The chilling-influenced heat-sum model received most support for all four studied species, predicting validation data with a 7.7-day error, within one day of the observed data resolution, and showed virtually no spatial bias whichever the species, despite the large environmental gradients considered. We conclude that both chilling and forcing temperatures determine the onset of wood formation in Northern Hemisphere conifers, and that the spring onset of wood formation is far less affected by local adaptation than by environmentally driven plasticity. In a context of climate change, we therefore expect rising winter-spring temperature to exert ambivalent effects on the spring onset of wood formation, tending to hasten it through the accumulation of forcing temperature, but imposing a higher forcing temperature requirement through the lower accumulation of chilling.},
+  significance = {Shows that both cold (chilling) and warm (forcing) temperature signals jointly control when conifers start forming new wood each year, refining phenology models used to predict how climate change affects forest growth timing.}
 }
 
 @article{valdez2019recruitment,
@@ -664,7 +815,10 @@
   journal = {Frontiers in Plant Science},
   year    = {2019},
   volume  = {10},
-  pages   = {88}
+  pages   = {88},
+  doi     = {10.3389/fpls.2019.00088},
+  abstract = {Seedling emergence in plant communities depends on the composition in the soil seed bank, in combination with species-specific responses to the environment. It is generally assumed that this juvenile transition, known as the recruitment niche, is a crucial filter that determines species' distributions and plant community assemblies, though the relative importance of this filter has been widely debated and empirical descriptions of it are scarce, as most field studies focus on environmental effects at later life stages. In this study, we examine the importance of the recruitment niche for predicting plant communities across a hydrological gradient in a disturbed and undisturbed area in Lake Schmiechen, Baden-Württemberg, Germany, combining a seed bank experiment measuring germination in water basins under standardized conditions and different water levels with field observations of plant communities along a hydrological gradient in plowed and undisturbed transects in a former agricultural wetland. We find that hydrology consistently predicted plant community composition in both the germination experiment and in the field. The hydrological recruitment niches measured in the seed bank experiment correlated with the hydrological niche in both the plowed and undisturbed area, with slightly stronger correlation in the plowed area, which we explain by the fact that the seed bank experiment most closely resembles the plowed area, whereas succession and competitive interactions become more important in the undisturbed area. Our results support the view that the recruitment niche is an important driver of species composition, and that recognizing the recruitment niche and the response of seeds within a seed bank to environmental gradients and anthropogenic disturbance is necessary to understand and predict future plant community composition.},
+  significance = {Tests how the environmental conditions that let plant seedlings establish, the recruitment niche, shape community assembly along a wetland's hydrological gradient, relevant to restoring former agricultural wetlands to functioning plant communities.}
 }
 
 @article{bugmann2019tree,
@@ -675,7 +829,9 @@
   volume  = {10},
   number  = {2},
   pages   = {e02616},
-  doi     = {10.1002/ecs2.2616}
+  doi     = {10.1002/ecs2.2616},
+  abstract = {Models are pivotal for assessing future forest dynamics under the impacts of changing climate and management practices, incorporating representations of tree growth, mortality, and regeneration, yet quantitative studies on the importance of mortality submodels are scarce. We evaluated 15 dynamic vegetation models (DVMs) regarding their sensitivity to different formulations of tree mortality under different degrees of climate change. The set of models comprised eight DVMs at the stand scale, three at the landscape scale, and four typically applied at the continental to global scale; each was run with at least two alternative mortality submodels, evaluated against empirical time series data and then subjected to different scenarios of climate change. Most DVMs matched empirical data quite well irrespective of the mortality submodel used, but mortality submodels that performed in a very similar manner against past data often led to sharply different trajectories of forest dynamics under future climate change. Most DVMs featured high sensitivity to the mortality submodel, with deviations of basal area and stem numbers on the order of 10-40% per century under current climate and 20-170% under climate change; the sensitivity of a given DVM to scenarios of climate change, however, was typically lower by a factor of two to three. We conclude that mortality is one of the most uncertain processes when it comes to assessing forest response to climate change, and that more data and a better process understanding of tree mortality are needed to improve the robustness of simulated future forest dynamics.},
+  significance = {Compares 15 forest models and shows that how each represents tree mortality, often a crude add-on, is actually a dominant driver of their long-term simulated forest dynamics, flagging mortality as an under-scrutinised weak point across the field's models.}
 }
 
 @article{panassiti2019temperature,
@@ -685,7 +841,8 @@
   year    = {2019},
   volume  = {18},
   pages   = {1--11},
-  url     = {https://public.bibliothek.uni-halle.de/index.php/cicadina/article/view/1789}
+  url     = {https://public.bibliothek.uni-halle.de/index.php/cicadina/article/view/1789},
+  significance = {Builds a temperature-driven model to forecast the seasonal immigration of two insect vectors of apple proliferation disease in South Tyrol, supporting more timely disease-management decisions for orchards.}
 }
 
 @article{bagnara2019r,
@@ -694,7 +851,11 @@
   journal = {Environmental Modelling \& Software},
   year    = {2019},
   volume  = {111},
-  pages   = {55--60}
+  number  = {C},
+  pages   = {55--60},
+  doi     = {10.1016/j.envsoft.2018.09.004},
+  abstract = {Dynamic global vegetation models (DGVMs) are of crucial importance for understanding and predicting vegetation, carbon, nitrogen and water dynamics of ecosystems in response to climate change. Their complexity, however, creates challenges for model analysis and data integration. A solution is to interface DGVMs with established statistical computing environments. Here we introduce rLPJGUESS, an R package that couples the widely used DGVM LPJ-GUESS with the R environment for statistical computing, making existing R packages and functions readily available to perform complex analyses with this model. We demonstrate the advantages of this framework by using rLPJGUESS to perform several otherwise laborious tasks: a set of single simulations, followed by global and local sensitivity analyses, a Bayesian calibration with a Markov-Chain Monte Carlo (MCMC) algorithm, and a predictive simulation with multiple climate scenarios. Our example highlights the opportunities of interfacing existing models in earth and environmental sciences with state-of-the-art computing environments such as R.},
+  significance = {Provides an R toolkit that makes sensitivity analysis and Bayesian calibration of the LPJ-GUESS vegetation model, previously a specialist undertaking, accessible to a much wider set of users.}
 }
 
 % ------------------------------------------------------------------ 2018 ----
@@ -706,7 +867,10 @@
   year    = {2018},
   volume  = {360},
   number  = {6391},
-  url     = {http://science.sciencemag.org/content/360/6391/eaar2435.full}
+  pages   = {eaar2435},
+  doi     = {10.1126/science.aar2435},
+  abstract = {<jats:p>LaManna <jats:italic>et al.</jats:italic> (Reports, 30 June 2017, p. 1389) claim that subadult trees are proportionally less common at high conspecific adult density (CNDD) and that this effect increases toward the tropics and for rare species. We show that the CNDD-abundance correlation may have arisen from a methodological artifact and that a range of processes can explain the reported latitudinal pattern.</jats:p>},
+  significance = {A published comment challenging the statistical basis of a high-profile Science paper's claim about negative density dependence and global plant diversity, part of the normal scientific self-correction process on a contested finding.}
 }
 
 @article{fassnacht2018using,
@@ -716,7 +880,9 @@
   year    = {2018},
   volume  = {213},
   pages   = {115--128},
-  doi     = {10.1016/j.rse.2018.05.007}
+  doi     = {10.1016/j.rse.2018.05.007},
+  abstract = {With the maturation of methods for estimating aboveground forest biomass by remote sensing, researchers increasingly need test data, particularly ground reference data, that are large enough to fine-tune existing approaches and test their robustness under diverse conditions. In this context, realistic synthetic datasets present an interesting alternative to costly and limited field data. Here, we present a new approach to simulate realistic canopy height and cover type data by combining an individual-tree forest simulator with real LiDAR point clouds of individual trees, and demonstrate its utility by re-examining the influence of field plot size on the predictive power of remote-sensing models for biomass estimation. Our approach with a complete (wall-to-wall) field reference dataset and matching synthetic remote sensing data allowed us to not only perform internal cross-validations with field plots that were used to fit the model, as in studies with real data, but to also consider the quality of model predictions on a standardized spatial grid or across the entire region. Our results confirm earlier reports of smaller predictive errors with increased field plot sizes under internal model validation, but we show that this is mainly an artifact of comparing the models with the same data they were fit on. When validating on a grid with standardized scale, smaller field plots performed almost equally well as larger field plots, and even outperformed them once we accounted for the fact that increasing the plot size means fewer field plots can be obtained for the same effort. We conclude that synthetic remote sensing datasets are a useful tool for method testing, and could be instrumental in improving remote sensing methodology more broadly.},
+  significance = {Uses simulated forest data to quantify how much larger field plots actually improve LiDAR-based estimates of forest biomass, letting researchers weigh that benefit against the much higher cost of establishing bigger plots.}
 }
 
 @article{dormann2018model,
@@ -727,7 +893,9 @@
   volume  = {88},
   number  = {4},
   pages   = {485--504},
-  doi     = {10.1002/ecm.1309}
+  doi     = {10.1002/ecm.1309},
+  abstract = {In ecology, the true causal structure for a given problem is often not known, and several plausible models and thus model predictions exist. It has been claimed that using weighted averages of these models can reduce prediction error, as well as better reflect model selection uncertainty, but these claims are often demonstrated by isolated examples. Here we review the mathematical foundations of model averaging along with the diversity of approaches available. We explain that the error in model-averaged predictions depends on each model's predictive bias and variance, as well as the covariance in predictions between models, and uncertainty about model weights. We show that model averaging is particularly useful if the predictive error of contributing model predictions is dominated by variance, and if the covariance between models is low -- conditions that will often be met for noisy data, which predominate in ecology. A general recommendation on which of the many averaging methods to use is difficult, because performance is often context dependent, and estimating weights creates some additional uncertainty, so estimated model weights may not always outperform arbitrary fixed weights such as equal weights. When averaging a set of models with many inadequate models, however, estimating model weights will typically be superior to equal weights. We also investigate the quality of the confidence intervals calculated for model-averaged predictions, showing that they differ greatly in behaviour and seldom manage to achieve nominal coverage. Our overall recommendations stress the importance of non-parametric methods such as cross-validation for a reliable uncertainty quantification of model-averaged predictions.},
+  significance = {A widely cited review comparing Bayesian, information-theoretic and other approaches to model averaging in ecology, clarifying when combining predictions from multiple models actually improves on picking a single best one.}
 }
 
 @article{dormann2018biotic,
@@ -738,7 +906,9 @@
   volume  = {27},
   number  = {9},
   pages   = {1004--1016},
-  doi     = {10.1111/geb.12759}
+  doi     = {10.1111/geb.12759},
+  abstract = {Recent studies increasingly use statistical methods to infer biotic interactions from co-occurrence information at a large spatial scale. However, disentangling biotic interactions from other factors that can affect co-occurrence patterns at the macroscale is a major challenge. We present a set of questions that analysts and reviewers should ask to avoid erroneously attributing species association patterns to biotic interactions, relating to the appropriateness of data and models, the causality behind a correlative signal, and the problems associated with static data from dynamic systems. We summarize caveats reported by macroecological studies of biotic interactions and examine whether conclusions on the presence of biotic interactions are supported by the modelling approaches used. Irrespective of the method used, studies that set out to test for biotic interactions find statistical associations in species' co-occurrences, yet when compared with our list of questions, few purported interpretations of such associations as biotic interactions hold up to scrutiny. This does not dismiss the presence or importance of biotic interactions, but highlights the risk of too lenient interpretation of the data. We conclude that ecologists have to recognize that a species association pattern in joint species distribution models will be driven not only by real biotic interactions, but also by shared habitat preferences, common migration history, phylogenetic history and shared response to missing environmental drivers, which specifically need to be discussed and, if possible, integrated into models.},
+  significance = {Lays out ten guiding questions for correctly interpreting claims that species distribution models can detect biotic interactions, such as competition, from co-occurrence data, aiming to stop a common source of false conclusions in that literature.}
 }
 
 @article{fasiolo2018extended,
@@ -747,8 +917,11 @@
   journal = {Electronic Journal of Statistics},
   year    = {2018},
   volume  = {12},
+  number  = {1},
   pages   = {1544--1578},
-  url     = {https://projecteuclid.org/euclid.ejs/1527300140}
+  doi     = {10.1214/18-EJS1433},
+  abstract = {The challenges posed by complex stochastic models used in computational ecology, biology and genetics have stimulated the development of approximate approaches to statistical inference. Here we focus on Synthetic Likelihood (SL), a procedure that reduces the observed and simulated data to a set of summary statistics, and quantifies the discrepancy between them through a synthetic likelihood function. SL requires little tuning, but it relies on the approximate normality of the summary statistics. We relax this assumption by proposing a novel, more flexible, density estimator: the Extended Empirical Saddlepoint approximation. In addition to proving the consistency of SL, under either the new or the Gaussian density estimator, we illustrate the method using two examples, one of these being a complex individual-based forest model for which SL offers one of the few practical possibilities for statistical inference. The examples show that the new density estimator is able to capture large departures from normality, while being scalable to high dimensions, and this in turn leads to more accurate parameter estimates, relative to the Gaussian alternative. The new density estimator is implemented by the esaddle R package, available on CRAN.},
+  significance = {A statistical-methods paper extending saddlepoint approximation techniques to handle the intractable likelihoods that arise in complex ecological, biological and genetic models, giving researchers a faster alternative to fully simulation-based inference.}
 }
 
 @article{reisch2018comparison,
@@ -756,9 +929,11 @@
   title   = {A comparison of methods for estimating plant population size},
   journal = {Biodiversity and Conservation},
   year    = {2018},
+  volume  = {27},
   number  = {8},
   pages   = {2021--2028},
-  url     = {https://link.springer.com/article/10.1007/s10531-018-1522-1}
+  doi     = {10.1007/s10531-018-1522-1},
+  significance = {Compares different field methods for estimating how many individuals are in a plant population, informing which counting method is most reliable and cost-effective for conservation monitoring.}
 }
 
 @article{marques2018last,
@@ -767,8 +942,11 @@
   journal = {Ecological Applications},
   year    = {2018},
   volume  = {28},
+  number  = {1},
   pages   = {95--105},
-  url     = {https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/eap.1631}
+  doi     = {10.1002/eap.1631},
+  abstract = {Climate change in the Mediterranean, associated with warmer temperatures and more frequent droughts, is expected to impact forest productivity and the functioning of forest ecosystems as carbon reservoirs in the region. Climate warming can positively affect forest growth by extending the growing season, whereas increasing summer drought generally reduces forest productivity and may cause growth decline, trigger dieback, hamper regeneration, and increase mortality. Forest management could potentially counteract such negative effects by reducing stand density and thereby competition for water, though the effectiveness of such interventions has so far mostly been evaluated for short time periods at the tree and stand levels. In this study, we use a century-long historical data set to assess the effects of climate and management on forest productivity in rear-edge Scots pine (Pinus sylvestris) populations covering continental and Mediterranean conditions along an altitudinal gradient in Central Spain, using linear mixed-effects models to disentangle the effects of altitude, climate, and stand volume on forest growth and ingrowth. We find that warming tends to benefit these tree populations -- warmer winter temperature has a significant positive effect on both forest growth and ingrowth, more pronounced at low elevations -- but drought conditions severely reduce growth and ingrowth, in particular when competition (stand volume) is high. We conclude that summer droughts are the main threat to Scots pine populations in the region, and that a reduction of stand volume can partially mitigate the negative impacts of more arid conditions.},
+  significance = {Analyses a century of growth records from a Scots pine population at the dry edge of its range, showing warming has had both positive and negative effects on productivity — a nuanced counterpoint to simple 'warming is bad for forests' narratives.}
 }
 
 % ------------------------------------------------------------------ 2017 ----
@@ -780,7 +958,8 @@
   year    = {2017},
   volume  = {404},
   pages   = {100--107},
-  doi     = {10.1016/j.foreco.2017.08.001}
+  doi     = {10.1016/j.foreco.2017.08.001},
+  significance = {Shows how the structure and species composition of a tropical forest shifts as a stand develops over time, evidence that different ecological processes dominate at different successional stages.}
 }
 
 @article{augustynczik2017productivity,
@@ -790,7 +969,8 @@
   year    = {2017},
   volume  = {401},
   pages   = {192--206},
-  doi     = {10.1016/j.foreco.2017.06.061}
+  doi     = {10.1016/j.foreco.2017.06.061},
+  significance = {Uses Bayesian uncertainty analysis with the 3-PG growth model to project how European beech productivity will respond to climate change, explicitly quantifying how much confidence to place in the projection rather than presenting a single number.}
 }
 
 @article{pullens2017nucombog,
@@ -800,7 +980,8 @@
   year    = {2017},
   volume  = {40},
   pages   = {35--39},
-  doi     = {10.1016/j.ecoinf.2017.05.001}
+  doi     = {10.1016/j.ecoinf.2017.05.001},
+  significance = {Provides an R package implementing a model for simulating vegetation, water, carbon and nitrogen dynamics in peatlands — ecosystems that store enormous amounts of carbon and are highly sensitive to drainage and climate change.}
 }
 
 @incollection{hartig2017simulation,
@@ -810,7 +991,9 @@
   publisher = {Oxford University Press},
   year      = {2017},
   doi       = {10.1093/OBO/9780199830060-0189},
-  note      = {Book chapter, edited by D. Gibson.}
+  note      = {Book chapter, edited by D. Gibson.},
+  abstract  = {With the rise of computers, simulation models have emerged beside the more traditional statistical and mathematical models as a third pillar for ecological analysis. Broadly speaking, a simulation model is an algorithm, typically implemented as a computer program, which propagates the states of a system forward. Unlike in a mathematical model, however, this propagation does not employ the methods of calculus but rather a set of rules or formulae that directly prescribe the next state. Such an algorithmic model specification is particularly suited for describing systems that are difficult to capture or analyze with differential equations, such as systems that are highly nonlinear or chaotic, discrete systems (for example networks or groups of distinct individuals), stochastic systems, and systems that are too complex to be successfully treated with classical calculus. As these situations are frequently encountered in ecology, simulation models are now widely applied across the discipline, and have been instrumental in developing new insights into classical questions of species' coexistence, community assembly, population dynamics, biogeography, and many more. The methods for this relatively young field are still being actively developed, and practical work with simulation models requires ecologists to learn new skills such as coding, sensitivity analysis, calibration, validation, and forecasting uncertainties.},
+  significance = {An annotated bibliography positioning simulation modelling as a third pillar of ecological analysis alongside traditional statistical and mathematical models, meant as an entry point and reference guide for the field.}
 }
 
 @article{brieger2017roe,
@@ -821,7 +1004,8 @@
   volume  = {63},
   number  = {5},
   pages   = {72},
-  url     = {https://link.springer.com/article/10.1007/s10344-017-1130-5}
+  doi     = {10.1007/s10344-017-1130-5},
+  significance = {Tests, combining a controlled experiment with field data, whether roadside wildlife warning reflectors actually change roe deer behaviour — relevant evidence for whether this common, cheap road-safety measure works.}
 }
 
 @article{roberts2017cross,
@@ -832,7 +1016,9 @@
   volume  = {40},
   number  = {8},
   pages   = {913--929},
-  doi     = {10.1111/ecog.02881}
+  doi     = {10.1111/ecog.02881},
+  abstract = {Ecological data often show temporal, spatial, hierarchical (random effects), or phylogenetic structure. Modern statistical approaches are increasingly accounting for such dependencies, but when performing cross-validation, these structures are regularly ignored, resulting in serious underestimation of predictive error. One cause for the poor performance of uncorrected (random) cross-validation is dependence structures in the data that persist as dependence structures in model residuals, violating the assumption of independence. Even more concerning, because often overlooked, is that structured data also provides ample opportunity for overfitting with non-causal predictors. Block cross-validation, where data are split strategically rather than randomly, can address these issues, but the blocking strategy must be carefully considered: blocking may unwittingly induce extrapolations by restricting the ranges or combinations of predictor variables available for model training, thus overestimating interpolation errors, while deliberate blocking in predictor space may improve error estimates when extrapolation is the modelling goal. Here we review the ecological literature on non-random and blocked cross-validation approaches, and provide a series of simulations and case studies showing that, for all instances tested, block cross-validation is nearly universally more appropriate than random cross-validation if the goal is predicting to new data or predictor space, or for selecting causal predictors. We recommend that block cross-validation be used wherever dependence structures exist in a dataset, even if no correlation structure is visible in the fitted model residuals.},
+  significance = {A highly cited methods paper showing that standard cross-validation gives overly optimistic performance estimates for ecological models when the data have spatial, temporal or phylogenetic structure, and providing corrected strategies now standard in the field.}
 }
 
 @article{panassiti2017identifying,
@@ -842,7 +1028,9 @@
   year    = {2017},
   volume  = {18},
   pages   = {75--85},
-  doi     = {10.1016/j.baae.2016.11.005}
+  doi     = {10.1016/j.baae.2016.11.005},
+  abstract = {"Bois noir" is a phytoplasma-mediated grapevine yellows disease that causes great economic damage in European vineyards. Previous studies have examined habitat relationships on a regional scale, which help to better understand the large-scale epidemiology. Local drivers, such as micro-habitat preferences of the vector (Hyalesthes obsoletus, a cixiid planthopper), or local interactions with reservoir host plants, however, are still poorly understood, although this knowledge is crucial for developing site-specific management strategies. Here, we examined the local environment-species relationships of a phytoplasma-mediated grapevine disease on a scale of 15 m in a 2.9 ha vineyard, combining data on elevation and habitat types, cover of host plants Urtica dioica and Convolvulus arvensis over three seasons, vector monitoring over four seasons, genetic tests for phytoplasma presence in the vector, and inspection of 6056 grapevine plants for visual symptoms, analysed in a joint causal model estimated with Bayesian inference. Our results indicate that surrounding natural and semi-natural vegetation and high density of the major host plant U. dioica are associated with an increase in vector population densities, and that higher vector population densities at low availability of U. dioica were associated with higher phytoplasma infection rates in the vector. The prevalence of disease symptoms in grapevine plants was nonetheless more affected by grapevine cultivar and higher elevation than by the estimated availability of infected vectors. The results support current bois noir management recommendations that removal of the host plant U. dioica should be carried out in either spring or autumn, and that grapevine cultivars are unequally susceptible -- while also showing that U. dioica control before the flight period may result in low U. dioica densities and high H. obsoletus population densities, causing an increase in vector infection rates and disease pressure.},
+  significance = {Uses Bayesian modelling to identify which local habitat factors drive the spread of a phytoplasma disease and its insect vector in vineyards, supporting more targeted management of an economically damaging grapevine disease.}
 }
 
 @article{fornoff2017functional,
@@ -851,8 +1039,11 @@
   journal = {Oikos},
   year    = {2017},
   volume  = {126},
+  number  = {7},
   pages   = {1020--1030},
-  doi     = {10.1111/oik.03869}
+  doi     = {10.1111/oik.03869},
+  abstract = {Recent studies have shown that the diversity of flowering plants can enhance pollinator richness and visitation frequency and thereby increase the resilience of pollination. It is assumed that flower traits explain these effects, but it is still unclear which flower traits are responsible, and whether pollinator richness and visitation frequency are more driven by mass-ratio effects (mean trait values) or by trait diversity. Here, we analyse a three-year data set of pollinator observations collected in a European grassland plant diversity experiment (the Jena Experiment), with comprehensive flower trait measurements including reward, morphological and chemical traits. Overall functional diversity did not affect pollinator species richness but reduced visitation frequency. When looking at individual flower traits separately, single trait diversity of flower reflectance and flower morphology were important predictors of pollinator visitation frequency, and, independent of total flower abundance, community-weighted means of flower height, area, reflectance, nectar-sugar concentration and nectar-amino acid concentration strongly affected both pollinator species richness and visitation frequency. Our results challenge the idea that functional diversity always positively affects ecosystem functions, but demonstrate that both single trait diversity and mass-ratio effects of flower traits play an important role for diverse and frequent flower visits.},
+  significance = {Shows that the diversity of flower functional traits, not just plant species richness, drives pollinator visitation, refining how plant diversity should be measured when the goal is supporting pollinators.}
 }
 
 @article{cabral2017mechanistic,
@@ -861,30 +1052,38 @@
   journal = {Ecography},
   year    = {2017},
   volume  = {40},
+  number  = {2},
   pages   = {267--280},
-  doi     = {10.1111/ecog.02480}
+  doi     = {10.1111/ecog.02480},
+  abstract = {Macroecology and biogeography are concerned with understanding biodiversity patterns across space and time. In the past, the two disciplines have addressed this question mainly with correlative approaches, despite frequent calls for more mechanistic explanations. Recent advances in computational power, theoretical understanding, and statistical tools are, however, currently facilitating the development of more system-oriented, mechanistic models. We review these models, identify different model types and theoretical frameworks, compare their processes and properties, and summarize emergent findings. We show that ecological (physiology, demographics, dispersal, biotic interactions) and evolutionary processes, as well as environmental and human-induced drivers, are increasingly modelled mechanistically, and that new insights into biodiversity dynamics emerge from these models. Yet substantial challenges still lie ahead for this young research field, among which we identify scaling, calibration, validation, and balancing complexity as pressing issues. Future work should aim at developing more flexible and modular models that not only allow different ecological theories to be expressed and contrasted, but which are also built for tight integration with all macroecological data sources.},
+  significance = {A field-defining review of mechanistic models in macroecology and biogeography, mapping out what has been achieved and what remains to be done in modelling biodiversity patterns from first-principles processes rather than statistical correlation alone.}
 }
 
 % ------------------------------------------------------------------ 2016 ----
 
 @article{sohn2016drought,
   author  = {Sohn, Julia A. and Bauhus, J{\"u}rgen and Hartig, Florian and Huss, J{\"u}rgen and Kohler, Martin},
-  title   = {Drought response of radial growth in Pinus sylvestris is affected by thinning intensity and time since the last thinning},
+  title   = {Heavy and frequent thinning promotes drought adaptation in Pinus sylvestris forests},
   journal = {Ecological Applications},
   year    = {2016},
   volume  = {26},
+  number  = {7},
   pages   = {2190--2205},
-  url     = {http://onlinelibrary.wiley.com/doi/10.1002/eap.1373/abstract}
+  doi     = {10.1002/eap.1373},
+  abstract = {Droughts and their negative effects on forest ecosystems are projected to increase under climate change for many regions. It has been suggested that intensive thinning could reduce drought impacts on established forests in the short term, but most previous studies have been confined to single forest sites, so it is still unclear how general and persisting the benefits of thinning are. This study assesses the potential of thinning to increase drought tolerance of the widespread Scots pine (Pinus sylvestris) in Central Europe. We hypothesized that increasing thinning intensity benefits the maintenance of radial growth of crop trees during drought (resistance) and its recovery following drought; that those benefits decrease with time elapsed since the last thinning and with stand age; and that they may depend on drought severity as well as water limitations in pre- and post-drought periods. We assessed the effects of thinning regime, stand age, and drought severity on radial growth of 129 Scots pine trees during and after drought events in four long-term thinning experiments in Germany. Thinning improved the recovery of radial growth following drought, and to a lesser extent the growth resistance during a drought event; growth recovery was highest after the first thinning intervention and in recently and heavily thinned stands, but this effect decreased with time since the last thinning and could even become negative compared to unthinned stands. Thinning also helped avoid an age-related decline in growth resistance and recovery following drought. According to our analysis, only thinning regimes with relatively heavy and frequent thinning interventions would increase drought tolerance in pine stands.},
+  significance = {Shows that heavier, more frequent thinning can make pine forests more resilient to drought, providing evidence-based guidance for forest managers trying to climate-proof stands against increasing drought risk.}
 }
 
 @article{singer2016community,
   author  = {Singer, Alexander and Johst, Karin and Banitz, Thomas and others and Hartig, Florian and others},
-  title   = {Community dynamics under climate change: will next generation mechanistic models improve projections of species distributions?},
+  title   = {Community dynamics under environmental change: how can next generation mechanistic models improve projections of species distributions?},
   journal = {Ecological Modelling},
   year    = {2016},
   volume  = {326},
   pages   = {63--74},
-  doi     = {10.1016/j.ecolmodel.2015.11.007}
+  doi     = {10.1016/j.ecolmodel.2015.11.007},
+  abstract = {Environmental change is expected to shift the geographic range of species and communities. To estimate the consequences of these shifts for the functioning and stability of ecosystems, reliable predictions of alterations in species distributions are needed. Projections with correlative species distribution models, which correlate species' distributions to the abiotic environment, have become a standard approach. Criticism of this approach centres around the omission of relevant biotic feedbacks and triggered the search for alternatives. A new generation of mechanistic process-based species distribution models aims at implementing formulations of relevant biotic processes to cover species' life histories, physiology, dispersal abilities, evolution, and both intra- and interspecific interactions. Although this step towards more structural realism is considered important, it remains unclear whether the resulting projections are more reliable. In this opinion paper, we discuss how the discrepancy between demand for structural realism on the one hand and related knowledge gaps on the other hand affects the reliability of mechanistic species distribution models. We argue that omission of relevant processes potentially impairs projection accuracy, particularly if species range shifts emerge from species and community dynamics, whereas insufficient knowledge that limits model specification and parameterization, as well as process complexity, increases projection uncertainty. We propose a protocol to improve and communicate projection reliability, combining modelling and empirical research to efficiently fill critical knowledge gaps that currently limit the reliability of species and community projections.},
+  significance = {Reviews how a new generation of mechanistic community models can better project how species distributions and community composition will shift under environmental change, compared to the correlative models that dominated earlier work.}
 }
 
 @article{moran2016intraspecific,
@@ -893,20 +1092,26 @@
   journal = {Global Change Biology},
   year    = {2016},
   volume  = {22},
+  number  = {1},
   pages   = {137--150},
-  doi     = {10.1111/gcb.13000}
+  doi     = {10.1111/gcb.13000},
+  abstract = {Recognition of the importance of intraspecific variation in ecological processes has been growing, but empirical studies and models of global change have only begun to address this issue in detail. This review discusses sources and patterns of intraspecific trait variation and their consequences for understanding how ecological processes and patterns will respond to global change. We examine how current ecological models and theories incorporate intraspecific variation, review existing data sources that could help parameterize models that account for intraspecific variation in global change predictions, and discuss new data that may be needed. We provide guidelines on when it is most important to consider intraspecific variation, such as when trait variation is heritable or when nonlinear relationships are involved, and argue that many common modeling approaches such as matrix population models or global dynamic vegetation models can allow a stronger consideration of intraspecific trait variation if the necessary data are available. We recommend that existing data need to be made more accessible, though in some cases, new experiments are needed to disentangle causes of variation.},
+  significance = {Synthesises evidence that variation within a species, not just between species, matters for how ecosystems respond to global change, arguing that models ignoring intraspecific trait variation may mispredict these responses.}
 }
 
 % ------------------------------------------------------------------ 2015 ----
 
 @article{latifi2015assessing,
   author  = {Latifi, Hooman and Heurich, Marco and Hartig, Florian and M{\"u}ller, J{\"o}rg and Krzystek, Peter and Jehl, Heinrich and Dech, Stefan},
-  title   = {Assessing over- and understory density of temperate mixed forest stands by airborne LiDAR data},
+  title   = {Estimating over- and understorey canopy density of temperate mixed stands by airborne LiDAR data},
   journal = {Forestry},
   year    = {2015},
   volume  = {89},
+  number  = {1},
   pages   = {69--81},
-  url     = {http://forestry.oxfordjournals.org/content/early/2015/08/20/forestry.cpv032.abstract}
+  doi     = {10.1093/forestry/cpv032},
+  abstract = {Estimating forest structural attributes is one of the essential forestry-related remote sensing applications. The methods applied so far typically concentrate on the structure of the overstorey. For various conservation and management applications, however, information on lower layers is also of great interest. Detecting understorey cover by remote sensing is challenging, as passive sensors do not penetrate to the ground layer. An alternative to these is 3D metrics from airborne light detection and ranging (LiDAR). Here, we evaluate this technique for describing the vegetation density of multiple stand layers within temperate stands of a large protected area in south-eastern Germany. We combined LiDAR metrics and habitat types with regression models to investigate which LiDAR metrics are significantly correlated with vegetation density. The top canopy and herb layer showed strong correlations with the metrics, whereas the predictive power was lower for intermediate stand layers. Moreover, our results suggest that the relationship between LiDAR predictors and vegetation depends on forest type. In conclusion, this study highlights the value of characterizing forest properties of lower layers, which has implications for wildlife management, especially in protected areas.},
+  significance = {Develops a LiDAR-based method to separately estimate canopy density in the upper and lower layers of structurally complex mixed forest stands, improving remote-sensing-based forest structure assessment beyond simpler single-layer approaches.}
 }
 
 @article{schiro2015genetic,
@@ -915,7 +1120,10 @@
   journal  = {PeerJ Preprints},
   year     = {2015},
   note     = {Preprint.},
-  preprint = {https://peerj.com/preprints/732/}
+  doi      = {10.7287/peerj.preprints.732},
+  preprint = {https://peerj.com/preprints/732/},
+  abstract = {<jats:p>Bois Noir is a grapevine disease responsible for severe economic losses in wine production. Bois Noir is caused by <jats:italic>Candidatus</jats:italic> Phytoplasma solani, cell wall-less bacteria belonging to the taxonomic group 16Sr-XII-A. In Germany, they are known to be vectored from plant to plant by the cixiid <jats:italic>Hyalesthes obsoletus</jats:italic>, but so far the prevalence of the disease in the vector population, as well as its spatio-temporal distribution is poorly understood. We therefore analyzed infections of <jats:italic>H. obsoletus</jats:italic> collected in different vineyards in Baden (South-Western Germany) with quantitative real-time PCR. From 125 analyzed individuals, only five were infected with <jats:italic>Ca</jats:italic>. Phytoplasma solani. All infected individuals were colonized by <jats:italic>Ca</jats:italic>. Phytoplasma solani type I which is associated with the host plant <jats:italic>Urtica dioica</jats:italic> (stinging nettle). More research is needed to understand the reasons of this surprisingly low prevalence of Bois Noir in the population of <jats:italic>H. obsoletus</jats:italic> in South-West Germany.</jats:p>},
+  significance = {Uses genetic analysis to show that infection prevalence of the bois noir pathogen in its main insect vector is lower than assumed in southwestern Germany, informing regional disease-risk assessment for vineyards.}
 }
 
 @article{latifi2015stratified,
@@ -925,7 +1133,9 @@
   year    = {2015},
   volume  = {38},
   pages   = {229--241},
-  doi     = {10.1016/j.jag.2015.01.016}
+  doi     = {10.1016/j.jag.2015.01.016},
+  abstract = {Remote sensing-assisted estimates of aboveground forest biomass are essential for modeling carbon budgets. It has been suggested that estimates can be improved by building species- or strata-specific biomass models, but few studies have attempted a systematic analysis of the benefits of such stratification, especially in combination with other factors such as sensor type, statistical prediction method and sampling design of the reference inventory data. We addressed this topic by analyzing the impact of stratifying forest data into three classes (broadleaved, coniferous and mixed forest), comparing predictive accuracy between the strata and to a case without stratification for a set of pre-selected predictors from airborne LiDAR and hyperspectral data obtained in a managed mixed forest site in southwestern Germany. We used five commonly applied algorithms for biomass predictions on bootstrapped subsamples of the data to obtain cross-validated RMSE and r-squared diagnostics, analysed in a factorial design by ANOVA to rank the relative importance of each factor, and used selected models for wall-to-wall mapping of biomass estimates and their associated uncertainty. The results revealed marginal advantages for the strata-specific prediction models over the unstratified ones, which were more obvious on the wall-to-wall mapped area-based predictions, though further tests are necessary to establish the generality of these results. Input data type and statistical prediction method are concluded to remain the two most crucial factors for the quality of remote sensing-assisted biomass models.},
+  significance = {Shows that stratifying forest area by species composition before applying remote-sensing biomass models improves estimate accuracy, a practical refinement for carbon-stock mapping from satellite and LiDAR data.}
 }
 
 @article{panassiti2015bayesian,
@@ -934,8 +1144,11 @@
   journal = {Ecosphere},
   year    = {2015},
   volume  = {6},
-  pages   = {143},
-  url     = {http://www.esajournals.org/doi/full/10.1890/ES14-00439.1}
+  number  = {8},
+  pages   = {1--13},
+  doi     = {10.1890/ES14-00439.1},
+  abstract = {Insect-vectored plant diseases often create complex epidemiological systems that are challenging to understand, predict, and manage. An example is "bois noir" (BN), a phytoplasma-associated grapevine disease commonly found in European vineyards. Although BN has the potential to cause substantial economic damage, the factors that contribute to BN prevalence in vineyards are still not well understood. We used Bayesian inference with generalized linear mixed-effect models to test the hypotheses that grapevine varieties exhibit different BN susceptibility, that environmental drivers influence prevalence of the disease and occurrence of the vector, and that the presence of the main vector is a major determinant of BN occurrence. We found that the presence of the vector Hyalesthes obsoletus increased with increasing isothermality, minimum temperatures during the coldest period, soil erosion, and natural vegetation in close proximity to the vineyards, and that presence of the BN disease increased with presence of the vector as well as increasing altitudes and mean annual temperatures. After accounting for those factors, Chardonnay and Riesling showed higher disease prevalence than Müller-Thurgau, Silvaner, and Merlot. Although the vector had an overall positive effect on the disease prevalence, disease and vector occurrence show distinct spatial patterns, suggesting that vector presence is not the only, and maybe not the most important, factor for BN disease prevalence -- environment and grape cultivar also play important roles. Area-wide predictions of both environmental disease risk and vector presence, together with information about the susceptibility of grape cultivars, will enable more targeted disease management, and our modelling framework could easily be applied to other diseases of concern, such as apple proliferation or flavescence dorée.},
+  significance = {Uses Bayesian inference to disentangle which environmental and biotic factors actually drive occurrence of the bois noir grapevine disease, part of a series of papers building an evidence base for managing this vector-borne disease.}
 }
 
 @article{hartig2015dale,
@@ -944,7 +1157,10 @@
   journal = {Frontiers of Biogeography},
   year    = {2015},
   volume  = {7},
-  url     = {https://escholarship.org/uc/item/7n80854n}
+  number  = {2},
+  doi     = {10.21425/F5FBG27393},
+  abstract = {It may be too early to call "Spatial Analysis -- A Guide for Ecologists" by Fortin and Dale a modern classic, but since its publication in 2005 the book has certainly become a widely cited reference in the field of spatial ecology. Cambridge University Press has now published a second edition of this introductory textbook. When holding both editions back to back, it is apparent that the changes made for this new edition go beyond mere cosmetics: it comes with a redesigned cover and a new two-column layout, but also with a considerably altered content structure and a noticeable extension in text volume. Doubtless, the new edition updates and improves on its predecessor in many important aspects, providing a broad overview of methods in spatial analysis covering data types and sampling design, point-patterns, continuous spatial patterns, spatial clustering and spatio-temporal data. The new layout is more readable, and the already concise and well-referenced text has been complemented in many places by added material and more recent references. What I did not find in the new edition was a substantial broadening of scope, nor a substantial shift of weight towards the developments of the last decade -- particularly the trend towards fitting explicit, often hierarchical spatial models to data, instead of merely testing against null models or assumptions of spatial homogeneity, driven by the wider appreciation of Bayesian inference and progress in numerical approximation methods such as MCMC or INLA. I still feel more movement in this direction, for example through a chapter on Bayesian inference and hierarchical models, would have been a worthwhile addition. Overall it seems to me that reader orientation and the storyline were better supported by the simpler structure of the first edition, even as the new one succeeds as an excellent, updated guide to the field.},
+  significance = {A book review assessing the revised edition of a standard reference text on spatial analysis methods for ecologists, guiding readers on whether and how to use the updated edition.}
 }
 
 % ------------------------------------------------------------------ 2014 ----
@@ -956,7 +1172,8 @@
   year    = {2014},
   volume  = {154},
   pages   = {102--114},
-  url     = {http://www.sciencedirect.com/science/article/pii/S0034425714003022}
+  doi     = {10.1016/j.rse.2014.07.028},
+  significance = {A methodological study on how sample size, the type of reference data, and the choice of statistical prediction method each affect the accuracy of remote-sensing-based forest biomass estimates, offering practical guidance for designing biomass-mapping studies.}
 }
 
 @article{hartig2014sympatric,
@@ -965,8 +1182,11 @@
   journal = {PLoS ONE},
   year    = {2014},
   volume  = {9},
+  number  = {9},
   pages   = {e94454},
-  doi     = {10.1371/journal.pone.0094454}
+  doi     = {10.1371/journal.pone.0094454},
+  abstract = {If two species exhibit different nonlinear responses to a single shared resource, and if each species modifies the resource dynamics such that this favors its competitor, they may stably coexist. This coexistence mechanism, known as relative nonlinearity of competition, is well understood theoretically, but less is known about its evolutionary properties and its prevalence in real communities. We address this challenge by using adaptive dynamics theory and individual-based simulations to compare community stabilization and evolutionary stability of species that coexist by relative nonlinearity. In our analysis, evolution operates on the species' density-compensation strategies, and we consider a trade-off between population growth rates at high and low resource availability. We confirm previous findings that, irrespective of the particular model of density dependence, there are many combinations of overcompensating and undercompensating density-compensation strategies that allow stable coexistence by relative nonlinearity. However, our analysis also shows that most of these strategy combinations are not evolutionarily stable and will be outcompeted by an intermediate density-compensation strategy. Only very specific trade-offs lead to evolutionarily stable coexistence by relative nonlinearity. As we find no reason why these particular trade-offs should be common in nature, we conclude that the sympatric evolution and evolutionary stability of relative nonlinearity, while possible in principle, seems rather unlikely. Our study highlights the need for combining ecological and evolutionary perspectives for gaining a better understanding of community assembly and biogeographic patterns.},
+  significance = {A theoretical evolutionary-ecology paper showing conditions under which two competing species can evolve to stably coexist through differences in how nonlinearly they respond to a shared resource, a coexistence mechanism that doesn't require classic niche differentiation.}
 }
 
 @article{teeffelen2014ecological,
@@ -976,7 +1196,8 @@
   year    = {2014},
   volume  = {130},
   pages   = {64--72},
-  url     = {http://www.sciencedirect.com/science/article/pii/S0169204614001467}
+  doi     = {10.1016/j.landurbplan.2014.06.004},
+  significance = {Examines the ecological and economic conditions, and the institutional obstacles, that determine whether market-based conservation banking schemes can work in landscapes that keep changing.}
 }
 
 @article{peer2014eu,
@@ -987,7 +1208,9 @@
   volume   = {344},
   pages    = {1090--1092},
   doi      = {10.1126/science.1253425},
-  featured = {true}
+  abstract = {Extra steps by Member States are needed to protect farmed and grassland ecosystems.},
+  featured = {true},
+  significance = {A policy commentary arguing that the reformed EU Common Agricultural Policy does not go far enough to protect farmed and grassland biodiversity, and that individual member states need to take additional steps.}
 }
 
 @article{hartig2014technical,
@@ -997,7 +1220,9 @@
   year    = {2014},
   volume  = {11},
   pages   = {1261--1272},
-  url     = {http://www.biogeosciences.net/11/1261/2014/bg-11-1261-2014.html}
+  doi     = {10.5194/bg-11-1261-2014},
+  abstract = {Inverse parameter estimation of process-based models is a long-standing problem in many scientific disciplines. A key question for inverse parameter estimation is how to define the metric that quantifies how well model predictions fit the data. This metric can be expressed by general cost or objective functions, but statistical inversion methods require a particular metric, the probability of observing the data given the model parameters, known as the likelihood. For technical and computational reasons, likelihoods for process-based stochastic models are usually based on general assumptions about variability in the observed data, and not on the stochasticity generated by the model. Only in recent years have new methods become available that allow the generation of likelihoods directly from stochastic simulations. Previous applications of these approximate Bayesian methods have concentrated on relatively simple models. Here, we report on the application of a simulation-based likelihood approximation for FORMIND, a parameter-rich individual-based model of tropical forest dynamics. We show that approximate Bayesian inference, based on a parametric likelihood approximation placed in a conventional Markov chain Monte Carlo (MCMC) sampler, performs well in retrieving known parameter values from virtual inventory data generated by the forest model. We analyze the results of the parameter estimation, examine its sensitivity to the choice and aggregation of model outputs and observed data (summary statistics), and demonstrate the application of this method by fitting the FORMIND model to field data from an Ecuadorian tropical forest. Our results demonstrate that simulation-based inference, which offers considerable conceptual advantages over more traditional methods for inverse parameter estimation, can be successfully applied to process-based models of high complexity. The methodology is particularly suitable for heterogeneous and complex data structures and can easily be adjusted to other model types, including most stochastic population and individual-based models.},
+  significance = {A technical methods paper on how to define the likelihood function needed for Bayesian calibration of complex process-based forest models — a foundational statistical problem for fitting mechanistic ecosystem models to data at all.}
 }
 
 % ------------------------------------------------------------------ 2013 ----
@@ -1008,8 +1233,11 @@
   journal = {Proceedings of the National Academy of Sciences},
   year    = {2013},
   volume  = {110},
+  number  = {42},
   pages   = {E3975},
-  url     = {http://www.pnas.org/content/110/42/E3975}
+  doi     = {10.1073/pnas.1308603110},
+  abstract = {Estimating population models from uncertain observations is an important problem in ecology. Perretti et al. observed that standard Bayesian state-space solutions to this problem may provide biased parameter estimates when the underlying dynamics are chaotic. Consequently, forecasts based on these estimates showed poor predictive accuracy compared with simple "model-free" methods, which led Perretti et al. to conclude that model-free forecasting outperforms the correct mechanistic model for simulated and experimental data. However, a simple modification of the statistical methods also suffices to remove the bias and reverse their results.},
+  significance = {A statistical rebuttal showing that a widely publicised claim, that ‘model-free’ forecasting beats mechanistic population models, rested on a flawed comparison, restoring confidence that properly specified mechanistic models are not actually inferior.}
 }
 
 @article{taubert2013challenge,
@@ -1018,8 +1246,11 @@
   journal = {PLoS ONE},
   year    = {2013},
   volume  = {8},
+  number  = {2},
   pages   = {e58036},
-  doi     = {10.1371/journal.pone.0058036}
+  doi     = {10.1371/journal.pone.0058036},
+  abstract = {Patterns that resemble strongly skewed size distributions are frequently observed in ecology. A typical example represents tree size distributions of stem diameters. Empirical tests of ecological theories predicting their parameters have been conducted, but the results are difficult to interpret because the statistical methods that are applied to fit such decaying size distributions vary. In addition, binning of field data as well as measurement errors might potentially bias parameter estimates. Here, we compare three different methods for parameter estimation -- the common maximum likelihood estimation (MLE) and two modified types of MLE correcting for binning of observations or random measurement errors. We test whether three typical frequency distributions, namely the power-law, negative exponential and Weibull distribution, can be precisely identified, and how parameter estimates are biased when observations are additionally either binned or contain measurement error. We show that uncorrected MLE already loses the ability to discern functional form and parameters at relatively small levels of uncertainties, while the modified MLE methods that consider such uncertainties are comparatively much more robust. We conclude that it is important to reduce binning of observations, if possible, and to quantify observation accuracy in empirical studies for fitting strongly skewed size distributions.},
+  significance = {Shows that commonly used statistical tests for whether tree size distributions follow a power law are unreliable, cautioning against a popular but statistically shaky practice in forest ecology.}
 }
 
 @article{schymanski2013process,
@@ -1028,8 +1259,11 @@
   journal = {Journal of Biogeography},
   year    = {2013},
   volume  = {40},
+  number  = {3},
   pages   = {612--613},
-  doi     = {10.1111/jbi.12075}
+  doi     = {10.1111/jbi.12075},
+  abstract = {In a recent article (Dormann et al., 2012, Journal of Biogeography, 39, 2119-2131), we compared different approaches to species distribution modelling and depicted modelling approaches along an axis from purely "correlative" to "forward process-based" models. In their correspondence, Kriticos et al. challenge this view, claiming that our continuum representation neglects differences among models and does not consider the ability of fitted process-based models to combine the advantages of both process-based and correlative modelling approaches. Here we clarify that the continuum view resulted from recognition of the manifold differences between models. We also reinforce the point that the current trend towards combining different modelling approaches may lead not only to the desired combination of the advantages but also to the accumulation of the disadvantages of those approaches.},
+  significance = {A response defending an earlier framework for distinguishing process-based from correlative species distribution models against a published critique, clarifying the conceptual distinctions at stake in an ongoing methodological debate.}
 }
 
 @article{vanoijen2013bayesian,
@@ -1039,7 +1273,8 @@
   year    = {2013},
   volume  = {289},
   pages   = {255--268},
-  doi     = {10.1016/j.foreco.2012.09.043}
+  doi     = {10.1016/j.foreco.2012.09.043},
+  significance = {Bayesian-calibrates and compares six different forest models against the same Scots pine data across Europe, providing a rare apples-to-apples test of how differently structured forest models perform when fit to identical data.}
 }
 
 % ------------------------------------------------------------------ 2012 ----
@@ -1050,8 +1285,11 @@
   journal = {Journal of Biogeography},
   year    = {2012},
   volume  = {39},
+  number  = {12},
   pages   = {2240--2252},
-  doi     = {10.1111/j.1365-2699.2012.02745.x}
+  doi     = {10.1111/j.1365-2699.2012.02745.x},
+  abstract = {Dynamic vegetation models provide process-based explanations of the dynamics and the distribution of plant ecosystems, offering significant advantages over static, correlative modelling approaches, particularly for ecosystems that are outside their equilibrium due to global change or climate change. A persistent problem, however, is their parameterization. Parameters and processes of dynamic vegetation models (DVMs) are traditionally determined independently of the model, while model outputs are compared to empirical data for validation and informal model comparison only. In this paper, we discuss the use of Bayesian methods to bridge this gap, explaining how they allow direct estimates of parameters and processes, encoded in prior distributions, to be combined with inverse estimates, encoded in likelihood functions. The combination of direct and inverse estimation allows a much wider range of vegetation data to be used simultaneously, including vegetation inventories, species traits, species distributions, remote sensing, eddy flux measurements and palaeorecords. The possible reduction of uncertainty regarding structure, parameters and predictions of DVMs may not only foster scientific progress, but will also increase the relevance of these models for policy advice.},
+  significance = {Frames fitting dynamic vegetation models to observational data as an ‘inverse problem’, providing a conceptual and statistical roadmap for calibrating process-based vegetation models — foundational for the model-data fusion approach used throughout much of Hartig's later forest-model work.}
 }
 
 @article{marion2012parameter,
@@ -1060,8 +1298,11 @@
   journal = {Journal of Biogeography},
   year    = {2012},
   volume  = {39},
+  number  = {12},
   pages   = {2225--2239},
-  doi     = {10.1111/j.1365-2699.2012.02772.x}
+  doi     = {10.1111/j.1365-2699.2012.02772.x},
+  abstract = {The spatial distribution of a species is determined by dynamic processes such as reproduction, mortality and dispersal. Conventional static species distribution models (SDMs) do not incorporate these processes explicitly, which limits their applicability, particularly for non-equilibrium situations such as invasions or climate change. In this paper we show how dynamic SDMs can be formulated and fitted to data within a Bayesian framework, focusing on discrete state-space Markov process models which provide a flexible framework to account for stochasticity in key demographic processes, including dispersal, growth and competition. We show how to construct likelihood functions for such models and how these can be combined with suitable observation models to conduct Bayesian parameter inference using computational techniques such as Markov chain Monte Carlo, illustrating the current state of the art with three contrasting examples using both simulated and empirical data. Application of such techniques will enable more reliable inference and projections under future climate change scenarios than is possible with purely correlative approaches.},
+  significance = {Reviews how to properly estimate parameters and their uncertainty in process-based population and distribution models, arguing these need the same statistical rigor as standard correlative species distribution models to be trusted.}
 }
 
 @article{schurr2012how,
@@ -1070,8 +1311,11 @@
   journal = {Journal of Biogeography},
   year    = {2012},
   volume  = {39},
+  number  = {12},
   pages   = {2146--2162},
-  doi     = {10.1111/j.1365-2699.2012.02737.x}
+  doi     = {10.1111/j.1365-2699.2012.02737.x},
+  abstract = {Range dynamics causes mismatches between a species' geographical distribution and the set of suitable environments in which population growth is positive (the Hutchinsonian niche). This is because source-sink population dynamics cause species to occupy unsuitable environments, and because environmental change creates non-equilibrium situations in which species may be absent from suitable environments or present in unsuitable environments that were previously suitable. Because correlative species distribution models do not account for these processes, they are likely to produce biased niche estimates and biased forecasts of future range dynamics. Recently developed dynamic range models (DRMs) overcome this problem: they statistically estimate both range dynamics and the underlying environmental response of demographic rates from species distribution data. Here we review current and potential contributions of statistical modelling, empirical data collection and ecological theory to a demographic understanding of niches and range dynamics, formulating a research agenda that entails advances in incorporating process-based models into a statistical framework, systematic collection of data on distribution, abundance and demographic rates, and improved theoretical understanding of the scaling of demographic rates and the dynamics of spatially coupled populations.},
+  significance = {Sets out a demographic research agenda for reconciling a species' realised geographic distribution with its underlying niche, influential in shifting biogeography toward explicitly demographic explanations of range limits.}
 }
 
 @article{dormann2012correlation,
@@ -1080,8 +1324,11 @@
   journal = {Journal of Biogeography},
   year    = {2012},
   volume  = {39},
+  number  = {12},
   pages   = {2119--2131},
-  doi     = {10.1111/j.1365-2699.2011.02659.x}
+  doi     = {10.1111/j.1365-2699.2011.02659.x},
+  abstract = {Within the field of species distribution modelling an apparent dichotomy exists between process-based and correlative approaches, where the processes are explicit in the former and implicit in the latter. However, these intuitive distinctions can become blurred when comparing species distribution modelling approaches in more detail. In this review article, we contrast the extremes of the correlative-process spectrum of species distribution models with respect to core assumptions, model building and selection strategies, validation, uncertainties, common errors and the questions they are most suited to answer. The extremes of such approaches differ clearly in many aspects, such as model building approaches, parameter estimation strategies and transferability. However, they also share strengths and weaknesses. We show that claims of one approach being intrinsically superior to the other are misguided and that they ignore the process-correlation continuum as well as the domains of questions that each approach is addressing. Nonetheless, the application of process-based approaches to species distribution modelling lags far behind more correlative (process-implicit) methods and more research is required to explore their potential benefits. We close with challenges for future development of process-explicit species distribution models and how they may complement current approaches to study species distributions.},
+  significance = {Argues that the perceived split between correlative and process-based species distribution models is a false dichotomy, and proposes ways to bridge the two — an influential framing paper for the field.}
 }
 
 @incollection{johst2012offsetting,
@@ -1090,8 +1337,10 @@
   booktitle = {Models of the Ecological Hierarchy from Molecules to the Ecosphere},
   publisher = {Elsevier},
   year      = {2012},
+  pages     = {413--430},
   doi       = {10.1016/B978-0-444-59396-2.00024-9},
-  note      = {Book chapter, edited by F. Jord{\'a}n and S. E. J{\o}rgensen.}
+  note      = {Book chapter, edited by F. Jord{\'a}n and S. E. J{\o}rgensen.},
+  significance = {Examines biodiversity-offsetting policy, arguing that compensating for habitat loss by relocating habitat elsewhere needs careful design to actually deliver equivalent conservation value.}
 }
 
 % ------------------------------------------------------------------ 2011 ----
@@ -1102,8 +1351,11 @@
   journal = {Ecology Letters},
   year    = {2011},
   volume  = {14},
+  number  = {8},
   pages   = {816--827},
-  doi     = {10.1111/j.1461-0248.2011.01640.x}
+  doi     = {10.1111/j.1461-0248.2011.01640.x},
+  abstract = {Statistical models are the traditional choice to test scientific theories when observations, processes or boundary conditions are subject to stochasticity. Many important systems in ecology and biology, however, are difficult to capture with statistical models. Stochastic simulation models offer an alternative, but they were hitherto associated with a major disadvantage: their likelihood functions can usually not be calculated explicitly, and thus it is difficult to couple them to well-established statistical theory such as maximum likelihood and Bayesian statistics. A number of new methods, among them Approximate Bayesian Computing and Pattern-Oriented Modelling, bypass this limitation. These methods share three main principles: aggregation of simulated and observed data via summary statistics, likelihood approximation based on the summary statistics, and efficient sampling. We discuss these principles as well as advantages and caveats of these methods, and demonstrate their potential for integrating stochastic simulation models into a unified framework for statistical modelling.},
+  significance = {A foundational methods paper laying out how to statistically fit stochastic ecological simulation models to data and test them against real-world observations — widely cited groundwork for treating simulation models as testable scientific hypotheses.}
 }
 
 @article{drechsler2011conserving,
@@ -1112,8 +1364,10 @@
   journal = {Ecological Economics},
   year    = {2011},
   volume  = {70},
+  number  = {3},
   pages   = {533--541},
-  doi     = {10.1016/j.ecolecon.2010.10.004}
+  doi     = {10.1016/j.ecolecon.2010.10.004},
+  significance = {Models how tradable conservation permit markets perform when habitat restoration costs change over time and restored habitat takes years to become ecologically functional, informing the design of biodiversity-credit markets.}
 }
 
 @article{johst2011biodiversity,
@@ -1122,8 +1376,11 @@
   journal = {Journal of Applied Ecology},
   year    = {2011},
   volume  = {48},
+  number  = {5},
   pages   = {1227--1235},
-  doi     = {10.1111/j.1365-2664.2011.02015.x}
+  doi     = {10.1111/j.1365-2664.2011.02015.x},
+  abstract = {Many species are adapted to landscapes with characteristic dynamics generated by ongoing habitat destruction and creation. Climate change and human land use, however, may change the dynamics of these landscapes. Studies have repeatedly shown that many species are not able to cope with such changes in landscape dynamics. Conservation policies must therefore explicitly address this threat. Using an analytical formula for the rapid assessment of metapopulation lifetime in dynamic landscapes, we investigate if and how changes in one landscape attribute may be compensated by changes in another to maintain species viability, considering both spatial (number, connectivity of patches) and temporal (patch destruction and creation rates) landscape attributes. We show that increasing patch destruction can be compensated to a certain extent by improvements in other spatial and/or temporal landscape attributes, though the trade-offs are generally nonlinear and species respond differently depending on their dispersal ability. Two practical management recommendations follow: monitoring the current level of landscape attributes is indispensable, since the effectiveness of conservation measures depends on it; and compensating increased patch destruction with increased patch creation is only suitable for species with high dispersal propensity, meaning policies relying on such compensation, like offsetting and conservation banking, are feasible only for this type of species.},
+  significance = {Shows there are fundamental trade-offs between the number, connectivity and turnover rate of protected habitat patches in landscapes shaped by ongoing habitat change, informing how conservation reserve networks should be designed.}
 }
 
 @incollection{watzold2011applying,
@@ -1132,7 +1389,8 @@
   booktitle = {Permit Trading in Different Applications},
   publisher = {Routledge},
   year      = {2011},
-  note      = {Book chapter, edited by B. Hansj{\"u}rgens, R. Antes and M. Strunz.}
+  note      = {Book chapter, edited by B. Hansj{\"u}rgens, R. Antes and M. Strunz.},
+  significance = {Reviews the design issues, modelling approaches and policy considerations involved in applying tradable-permit markets to biodiversity conservation, part of a broader body of work on market-based conservation instruments.}
 }
 
 % ------------------------------------------------------------------ 2010 ----
@@ -1143,8 +1401,11 @@
   journal = {Environmental Modelling \& Software},
   year    = {2010},
   volume  = {25},
+  number  = {11},
   pages   = {1479--1480},
-  doi     = {10.1016/j.envsoft.2009.01.003}
+  doi     = {10.1016/j.envsoft.2009.01.003},
+  abstract = {EcoTRADE is a multi-player network game of a virtual biodiversity credit market. Each player controls the land use of a certain amount of parcels on a virtual landscape. The biodiversity credits of a particular parcel depend on neighboring parcels, which may be owned by other players. The game can be used to study the strategies of players in experiments or classroom games and as a communication tool for stakeholders participating in credit markets that include spatially interdependent credits.},
+  significance = {Describes EcoTRADE, a multiplayer simulation game of a tradable biodiversity-credit market, built both as a research tool for studying how people actually behave in such markets and as a teaching and outreach tool.}
 }
 
 @article{hartig2010stay,
@@ -1153,8 +1414,10 @@
   journal = {Ecological Complexity},
   year    = {2010},
   volume  = {7},
+  number  = {1},
   pages   = {91--99},
-  doi     = {10.1016/j.ecocom.2009.07.001}
+  doi     = {10.1016/j.ecocom.2009.07.001},
+  significance = {Shows that how landowners are socially organised affects how efficiently spatially explicit biodiversity markets can allocate conservation incentives, suggesting market design needs to account for social network structure, not just economic incentives.}
 }
 
 % ------------------------------------------------------------------ 2009 ----
@@ -1165,8 +1428,11 @@
   journal = {Biological Conservation},
   year    = {2009},
   volume  = {142},
+  number  = {4},
   pages   = {779--788},
-  doi     = {10.1016/j.biocon.2008.12.014}
+  doi     = {10.1016/j.biocon.2008.12.014},
+  abstract = {Market-based instruments such as payments, auctions or tradable permits have been proposed as flexible and cost-effective instruments for biodiversity conservation on private lands. Trading the service of conservation requires one to define a metric that determines the extent to which a conserved site adds to the regional conservation objective. Yet, while markets for conservation are widely discussed and increasingly applied, little research has been conducted on explicitly accounting for spatial ecological processes in the trading. In this paper, we use a coupled ecological-economic simulation model to examine how spatial connectivity may be considered in the financial incentives created by a market-based conservation scheme. Land use decisions, driven by changing conservation costs and the conservation market, are simulated by an agent-based model of land users, on top of which a metapopulation model evaluates the conservational success of the market. We find that optimal spatial incentives for agents correlate with species characteristics such as the dispersal distance, but they also depend on the spatio-temporal distribution of conservation costs. We conclude that a combined analysis of ecological and socio-economic conditions should be applied when designing market instruments to protect biodiversity.},
+  significance = {Proposes spatially ‘smart’ incentive schemes for market-based conservation instruments, showing that accounting for spatial context in how payments are allocated can make conservation markets substantially more effective per dollar spent.}
 }
 
 % ------------------------------------------------------------------ 2008 ----
@@ -1177,6 +1443,9 @@
   journal = {Biological Conservation},
   year    = {2008},
   volume  = {141},
+  number  = {10},
   pages   = {2625--2631},
-  doi     = {10.1016/j.biocon.2008.07.028}
+  doi     = {10.1016/j.biocon.2008.07.028},
+  abstract = {Survival probability within a certain time horizon T is a common measure of population viability. The choice of T implicitly involves a time preference, similar to economic discounting: conservation success is evaluated at the time horizon T, while all effects that occur later than T are not considered. Despite the obvious relevance of the time horizon, ecological studies seldom analyze its impact on the evaluation of conservation options. In this paper, we show that, while the choice of T does not change the ranking of conservation options for single species under stationary conditions, it may substantially change conservation decisions for multiple species. We conclude that it is of crucial importance to investigate the sensitivity of model results to the choice of the time horizon or other measures of time preference when prioritizing biodiversity conservation efforts.},
+  significance = {Shows that the choice of planning time horizon in conservation planning is not a neutral technical detail but functions like an implicit discount rate, systematically changing which species and habitats get prioritised for protection.}
 }

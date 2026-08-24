@@ -3,7 +3,7 @@
 title: "Novel community data in ecology — properties and prospects"
 date: 2024-01-01
 year: "2024"
-weight: 9
+weight: 10
 slug: "hartig2024novel"
 featured: true
 authors:
@@ -20,5 +20,12 @@ volume: "39"
 issue: "3"
 pages: "280–293"
 doi: "10.1016/j.tree.2023.09.017"
+abstract: "New technologies for monitoring biodiversity such as environmental (e)DNA, passive acoustic monitoring, and optical sensors promise to generate automated spatiotemporal community observations at unprecedented scales and resolutions. Here, we introduce \"novel community data\" as an umbrella term for these data. We review the emerging field around novel community data, focusing on new ecological questions that could be addressed; the analytical tools available or needed to make best use of these data; and the potential implications of these developments for policy and conservation. We conclude that novel community data offer many opportunities to advance our understanding of fundamental ecological processes, including community assembly, biotic interactions, micro- and macroevolution, and overall ecosystem functioning."
+significance: "Maps out what new automated biodiversity-monitoring technologies (eDNA, acoustics, imaging) actually measure and how their statistical properties differ from traditional survey data, steering ecologists away from analysing this new data as if it were old data."
+description: "Maps out what new automated biodiversity-monitoring technologies (eDNA, acoustics, imaging) actually measure and how their statistical properties differ…"
 entry_type: "article"
 ---
+
+## Abstract
+
+New technologies for monitoring biodiversity such as environmental (e)DNA, passive acoustic monitoring, and optical sensors promise to generate automated spatiotemporal community observations at unprecedented scales and resolutions. Here, we introduce "novel community data" as an umbrella term for these data. We review the emerging field around novel community data, focusing on new ecological questions that could be addressed; the analytical tools available or needed to make best use of these data; and the potential implications of these developments for policy and conservation. We conclude that novel community data offer many opportunities to advance our understanding of fundamental ecological processes, including community assembly, biotic interactions, micro- and macroevolution, and overall ecosystem functioning.

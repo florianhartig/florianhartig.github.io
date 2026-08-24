@@ -3,7 +3,7 @@
 title: "A comparison of methods for estimating plant population size"
 date: 2018-01-01
 year: "2018"
-weight: 69
+weight: 70
 slug: "reisch2018comparison"
 authors:
   - "Christoph Reisch"
@@ -11,8 +11,11 @@ authors:
   - "Florian Hartig"
 authors_display: "Christoph Reisch, Christina Schmid, Florian Hartig"
 journal: "Biodiversity and Conservation"
+volume: "27"
 issue: "8"
 pages: "2021–2028"
-publisher_url: "https://link.springer.com/article/10.1007/s10531-018-1522-1"
+doi: "10.1007/s10531-018-1522-1"
+significance: "Compares different field methods for estimating how many individuals are in a plant population, informing which counting method is most reliable and cost-effective for conservation monitoring."
+description: "Compares different field methods for estimating how many individuals are in a plant population, informing which counting method is most reliable and…"
 entry_type: "article"
 ---

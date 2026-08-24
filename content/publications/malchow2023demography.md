@@ -3,7 +3,7 @@
 title: "Demography-environment relationships improve mechanistic understanding of range dynamics under climate change"
 date: 2023-01-01
 year: "2023"
-weight: 17
+weight: 18
 slug: "malchow2023demography"
 authors:
   - "Anne-Kathleen Malchow"
@@ -15,6 +15,14 @@ authors_display: "Anne-Kathleen Malchow, Florian Hartig, Jette Reeg, Marc Kéry,
 journal: "Philosophical Transactions of the Royal Society B: Biological Sciences"
 volume: "378"
 issue: "1881"
+pages: "20220194"
 doi: "10.1098/rstb.2022.0194"
+abstract: "Species respond to climate change with range and abundance dynamics. To better explain and predict them, we need a mechanistic understanding of how the underlying demographic processes are shaped by climatic conditions. Here, we aim to infer demography-climate relationships from distribution and abundance data. For this, we developed spatially explicit, process-based models for eight Swiss breeding bird populations, which jointly consider dispersal, population dynamics and the climate-dependence of three demographic processes – juvenile survival, adult survival and fecundity. The models were calibrated to 267 nationwide abundance time series in a Bayesian framework and showed moderate to excellent goodness-of-fit and discriminatory power. The most influential climatic predictors for population performance were the mean breeding-season temperature and the total winter precipitation. Contemporary climate change benefitted the population trends of typical mountain birds, leading to lower population losses or even slight increases, whereas lowland birds were adversely affected. Our results emphasize that generic process-based models embedded in a robust statistical framework can improve our predictions of range dynamics and may allow disentangling of the underlying processes."
+significance: "Argues that predicting how species' ranges shift under climate change requires understanding how environment affects birth, death and movement rates individually, not just where a species currently occurs — a case for mechanistic over purely correlative range models."
+description: "Argues that predicting how species' ranges shift under climate change requires understanding how environment affects birth, death and movement rates…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Species respond to climate change with range and abundance dynamics. To better explain and predict them, we need a mechanistic understanding of how the underlying demographic processes are shaped by climatic conditions. Here, we aim to infer demography-climate relationships from distribution and abundance data. For this, we developed spatially explicit, process-based models for eight Swiss breeding bird populations, which jointly consider dispersal, population dynamics and the climate-dependence of three demographic processes – juvenile survival, adult survival and fecundity. The models were calibrated to 267 nationwide abundance time series in a Bayesian framework and showed moderate to excellent goodness-of-fit and discriminatory power. The most influential climatic predictors for population performance were the mean breeding-season temperature and the total winter precipitation. Contemporary climate change benefitted the population trends of typical mountain birds, leading to lower population losses or even slight increases, whereas lowland birds were adversely affected. Our results emphasize that generic process-based models embedded in a robust statistical framework can improve our predictions of range dynamics and may allow disentangling of the underlying processes.

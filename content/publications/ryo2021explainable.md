@@ -3,7 +3,7 @@
 title: "Explainable artificial intelligence enhances the ecological interpretability of black-box species distribution models"
 date: 2021-01-01
 year: "2021"
-weight: 36
+weight: 37
 slug: "ryo2021explainable"
 authors:
   - "Masahiro Ryo"
@@ -17,7 +17,14 @@ journal: "Ecography"
 volume: "44"
 issue: "2"
 pages: "199–205"
-publisher_url: "https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.05360"
+doi: "10.1111/ecog.05360"
 preprint: "https://ecoevorxiv.org/w96pk"
+abstract: "Species distribution models (SDMs) are widely used in ecology, biogeography and conservation biology to estimate relationships between environmental variables and species occurrence data and make predictions of how their distributions vary in space and time. During the past two decades, the field has increasingly made use of machine learning approaches for constructing and validating SDMs. Model accuracy has steadily increased as a result, but the interpretability of the fitted models, for example the relative importance of predictor variables or their causal effects on focal species, has not always kept pace. Here we draw attention to an emerging subdiscipline of artificial intelligence, explainable AI (xAI), as a toolbox for better interpreting SDMs. xAI aims at deciphering the behavior of complex statistical or machine learning models (e.g. neural networks, random forests, boosted regression trees), and can produce more transparent and understandable SDM predictions. We describe the rationale behind xAI and provide a list of tools that can be used to help ecological modelers better understand complex model behavior at different scales. As an example, we perform a reproducible SDM analysis in R on the African elephant and showcase some xAI tools such as local interpretable model-agnostic explanation (LIME) to help interpret local-scale behavior of the model, concluding with the benefits and caveats of these techniques and advocating for their use to improve the interpretability of machine learning SDMs."
+significance: "Applies explainable-AI techniques to species distribution models, making it possible to see what environmental relationships a machine-learning model has actually learned instead of treating its predictions as an uninterpretable black box."
+description: "Applies explainable-AI techniques to species distribution models, making it possible to see what environmental relationships a machine-learning model has…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Species distribution models (SDMs) are widely used in ecology, biogeography and conservation biology to estimate relationships between environmental variables and species occurrence data and make predictions of how their distributions vary in space and time. During the past two decades, the field has increasingly made use of machine learning approaches for constructing and validating SDMs. Model accuracy has steadily increased as a result, but the interpretability of the fitted models, for example the relative importance of predictor variables or their causal effects on focal species, has not always kept pace. Here we draw attention to an emerging subdiscipline of artificial intelligence, explainable AI (xAI), as a toolbox for better interpreting SDMs. xAI aims at deciphering the behavior of complex statistical or machine learning models (e.g. neural networks, random forests, boosted regression trees), and can produce more transparent and understandable SDM predictions. We describe the rationale behind xAI and provide a list of tools that can be used to help ecological modelers better understand complex model behavior at different scales. As an example, we perform a reproducible SDM analysis in R on the African elephant and showcase some xAI tools such as local interpretable model-agnostic explanation (LIME) to help interpret local-scale behavior of the model, concluding with the benefits and caveats of these techniques and advocating for their use to improve the interpretability of machine learning SDMs.

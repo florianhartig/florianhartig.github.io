@@ -3,7 +3,7 @@
 title: "Sequential Monte-Carlo algorithms for Bayesian model calibration — a review and method comparison"
 date: 2021-01-01
 year: "2021"
-weight: 29
+weight: 30
 slug: "speich2021sequential"
 authors:
   - "Matthias Speich"
@@ -14,5 +14,7 @@ journal: "Ecological Modelling"
 volume: "455"
 pages: "109608"
 doi: "10.1016/j.ecolmodel.2021.109608"
+significance: "A review and comparison of Sequential Monte Carlo algorithms for calibrating ecological models in a Bayesian framework, giving practitioners guidance on which of these increasingly popular but technically demanding methods to use."
+description: "A review and comparison of Sequential Monte Carlo algorithms for calibrating ecological models in a Bayesian framework, giving practitioners guidance on…"
 entry_type: "article"
 ---

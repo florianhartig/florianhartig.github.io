@@ -3,7 +3,7 @@
 title: "The latitudinal diversity gradient: novel understanding through mechanistic eco-evolutionary models"
 date: 2019-01-01
 year: "2019"
-weight: 58
+weight: 59
 slug: "pontarp2019latitudinal"
 featured: true
 authors:
@@ -21,5 +21,12 @@ volume: "34"
 issue: "3"
 pages: "211–223"
 doi: "10.1016/j.tree.2018.11.009"
+abstract: "The latitudinal diversity gradient (LDG) is one of the most widely studied patterns in ecology, yet no consensus has been reached about its underlying causes. We argue that the reasons for this are the verbal nature of existing hypotheses, the failure to mechanistically link interacting ecological and evolutionary processes to the LDG, and the fact that empirical patterns are often consistent with multiple explanations. To address this issue, we synthesize current LDG hypotheses, uncovering their eco-evolutionary mechanisms, hidden assumptions, and commonalities. Furthermore, we propose mechanistic eco-evolutionary modeling and an inferential approach that makes use of geographic, phylogenetic, and trait-based patterns to assess the relative importance of different processes for generating the LDG."
+significance: "Argues that resolving the century-old debate about why the tropics are so diverse requires mechanistic eco-evolutionary models that jointly simulate ecology and evolution, rather than relying on purely statistical pattern-matching."
+description: "Argues that resolving the century-old debate about why the tropics are so diverse requires mechanistic eco-evolutionary models that jointly simulate…"
 entry_type: "article"
 ---
+
+## Abstract
+
+The latitudinal diversity gradient (LDG) is one of the most widely studied patterns in ecology, yet no consensus has been reached about its underlying causes. We argue that the reasons for this are the verbal nature of existing hypotheses, the failure to mechanistically link interacting ecological and evolutionary processes to the LDG, and the fact that empirical patterns are often consistent with multiple explanations. To address this issue, we synthesize current LDG hypotheses, uncovering their eco-evolutionary mechanisms, hidden assumptions, and commonalities. Furthermore, we propose mechanistic eco-evolutionary modeling and an inferential approach that makes use of geographic, phylogenetic, and trait-based patterns to assess the relative importance of different processes for generating the LDG.

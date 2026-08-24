@@ -18,6 +18,18 @@
 {{- $addr := site.Params.address -}}
 {{- $personID := printf "%s#person" site.BaseURL -}}
 
+{{- /* Stable institution identifiers (ROR + Wikidata), verified against
+       ROR's own API rather than assumed — distinct from the OTH Regensburg
+       record. Defined once and reused for both `affiliation` and `worksFor`
+       so the two can't drift apart. */ -}}
+{{- $university := dict
+  "@type" "CollegeOrUniversity"
+  "name" $author.affiliation
+  "url" $author.affiliationURL
+  "identifier" "https://ror.org/01eezs655"
+  "sameAs" "https://www.wikidata.org/wiki/Q574571"
+-}}
+
 {{- /* `person: false` entries are group URLs, not Florian's own profiles, so
        they are shown on the page but withheld from `sameAs` — asserting they
        identify the same entity would be wrong. */ -}}
@@ -58,14 +70,8 @@
     "System models"
     "Machine learning"
     "Deep learning")
-  "affiliation" (dict
-    "@type" "CollegeOrUniversity"
-    "name" $author.affiliation
-    "url" $author.affiliationURL)
-  "worksFor" (dict
-    "@type" "CollegeOrUniversity"
-    "name" $author.affiliation
-    "url" $author.affiliationURL)
+  "affiliation" $university
+  "worksFor" $university
   "alumniOf" $alumni
   "workLocation" (dict
     "@type" "Place"
@@ -111,7 +117,7 @@
   {{- $graph := dict "@context" "https://schema.org" "@graph" (slice $person $website $profile) -}}
 <script type="application/ld+json">{{ $graph | jsonify (dict "indent" "  ") | safeJS }}</script>
 
-{{- else if eq .Section "publications" -}}
+{{- else if and (eq .Section "publications") .IsPage -}}
   {{- /* Florian's own entry points at the Person @id rather than repeating a
          bare name, which is what ties the publication list back to the one
          author entity. Co-authors stay plain Person nodes. */ -}}
@@ -143,7 +149,49 @@
       "identifier" (dict "@type" "PropertyValue" "propertyID" "DOI" "value" .)
       "sameAs" (printf "https://doi.org/%s" .)) -}}
   {{- end -}}
+  {{- with .Params.abstract -}}
+    {{- $article = merge $article (dict "abstract" .) -}}
+  {{- end -}}
+  {{- with .Lastmod -}}
+    {{- $article = merge $article (dict "dateModified" (.Format "2006-01-02")) -}}
+  {{- end -}}
 <script type="application/ld+json">{{ $article | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- partial "breadcrumb-schema.html" (dict "page" . "name" "Publications" "url" ("/publications/" | absURL)) -}}
+
+{{- else if and (eq .Section "software") .IsPage -}}
+  {{- /* A companion `paper = "<publication-slug>"` front-matter field (only
+         on the 5 packages that genuinely have one in the .bib) links to that
+         page rather than inventing a citation — see the standing decision on
+         not fabricating facts. */ -}}
+  {{- $github := "" -}}
+  {{- range .Params.links -}}
+    {{- if eq .name "GitHub" -}}{{ $github = .url }}{{ end -}}
+  {{- end -}}
+  {{- $software := dict
+    "@context" "https://schema.org"
+    "@type" "SoftwareSourceCode"
+    "@id" (printf "%s#software" .Permalink)
+    "name" .Title
+    "url" .Permalink
+    "programmingLanguage" "R"
+    "author" (dict "@id" $personID)
+  -}}
+  {{- with .Params.summary -}}
+    {{- $software = merge $software (dict "description" .) -}}
+  {{- end -}}
+  {{- with $github -}}
+    {{- $software = merge $software (dict "codeRepository" .) -}}
+  {{- end -}}
+  {{- with .Params.paper -}}
+    {{- with site.GetPage (printf "/publications/%s" .) -}}
+      {{- $software = merge $software (dict "citation" .Permalink) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with .Lastmod -}}
+    {{- $software = merge $software (dict "dateModified" (.Format "2006-01-02")) -}}
+  {{- end -}}
+<script type="application/ld+json">{{ $software | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- partial "breadcrumb-schema.html" (dict "page" . "name" "Software" "url" ("/software/" | absURL)) -}}
 
 {{- else -}}
   {{- $page := dict
@@ -154,5 +202,8 @@
     "isPartOf" (dict "@id" (printf "%s#website" site.BaseURL))
     "about" (dict "@id" $personID)
   -}}
+  {{- with .Lastmod -}}
+    {{- $page = merge $page (dict "dateModified" (.Format "2006-01-02")) -}}
+  {{- end -}}
 <script type="application/ld+json">{{ $page | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{- end -}}

@@ -3,7 +3,7 @@
 title: "Simulation modeling"
 date: 2017-01-01
 year: "2017"
-weight: 74
+weight: 75
 slug: "hartig2017simulation"
 authors:
   - "Florian Hartig"
@@ -12,5 +12,12 @@ journal: "Oxford Bibliographies in Ecology"
 publisher: "Oxford University Press"
 doi: "10.1093/OBO/9780199830060-0189"
 note: "Book chapter, edited by D. Gibson."
+abstract: "With the rise of computers, simulation models have emerged beside the more traditional statistical and mathematical models as a third pillar for ecological analysis. Broadly speaking, a simulation model is an algorithm, typically implemented as a computer program, which propagates the states of a system forward. Unlike in a mathematical model, however, this propagation does not employ the methods of calculus but rather a set of rules or formulae that directly prescribe the next state. Such an algorithmic model specification is particularly suited for describing systems that are difficult to capture or analyze with differential equations, such as systems that are highly nonlinear or chaotic, discrete systems (for example networks or groups of distinct individuals), stochastic systems, and systems that are too complex to be successfully treated with classical calculus. As these situations are frequently encountered in ecology, simulation models are now widely applied across the discipline, and have been instrumental in developing new insights into classical questions of species' coexistence, community assembly, population dynamics, biogeography, and many more. The methods for this relatively young field are still being actively developed, and practical work with simulation models requires ecologists to learn new skills such as coding, sensitivity analysis, calibration, validation, and forecasting uncertainties."
+significance: "An annotated bibliography positioning simulation modelling as a third pillar of ecological analysis alongside traditional statistical and mathematical models, meant as an entry point and reference guide for the field."
+description: "An annotated bibliography positioning simulation modelling as a third pillar of ecological analysis alongside traditional statistical and mathematical…"
 entry_type: "incollection"
 ---
+
+## Abstract
+
+With the rise of computers, simulation models have emerged beside the more traditional statistical and mathematical models as a third pillar for ecological analysis. Broadly speaking, a simulation model is an algorithm, typically implemented as a computer program, which propagates the states of a system forward. Unlike in a mathematical model, however, this propagation does not employ the methods of calculus but rather a set of rules or formulae that directly prescribe the next state. Such an algorithmic model specification is particularly suited for describing systems that are difficult to capture or analyze with differential equations, such as systems that are highly nonlinear or chaotic, discrete systems (for example networks or groups of distinct individuals), stochastic systems, and systems that are too complex to be successfully treated with classical calculus. As these situations are frequently encountered in ecology, simulation models are now widely applied across the discipline, and have been instrumental in developing new insights into classical questions of species' coexistence, community assembly, population dynamics, biogeography, and many more. The methods for this relatively young field are still being actively developed, and practical work with simulation models requires ecologists to learn new skills such as coding, sensitivity analysis, calibration, validation, and forecasting uncertainties.

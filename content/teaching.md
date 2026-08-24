@@ -1,6 +1,6 @@
 ---
 title: "Teaching"
-description: "Courses taught by Florian Hartig at the University of Regensburg — ecology, statistics, data science, machine learning and simulation models, plus BSc and MSc thesis opportunities."
+description: "Courses taught by Florian Hartig at Regensburg: ecology, statistics, data science and machine learning, plus thesis opportunities."
 ---
 
 Our teaching activities focus on the theory of ecology as well as statistics,
@@ -37,7 +37,7 @@ evolution. The following is a list of regularly taught courses and lectures.
 - **Blockkurs 54376: Evolutionary Game Theory** (currently not regularly offered)
 - **Blockkurs 54370: Research Skills**
   [[GRIPS](https://elearning.uni-regensburg.de/course/view.php?id=30939) /
-  lecture notes see GRIPS]
+  [lecture notes](https://github.com/florianhartig/ResearchSkills)]
 
 Dates for the courses taught in a given semester are in our
 [course catalogue](https://spur.uni-regensburg.de/qisserver/a/cs.psv.frontend/person/view/266108&page%3D1).

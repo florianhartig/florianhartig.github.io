@@ -3,7 +3,7 @@
 title: "Productivity of Fagus sylvatica under climate change — a Bayesian analysis of risk and uncertainty using the model 3-PG"
 date: 2017-01-01
 year: "2017"
-weight: 72
+weight: 73
 slug: "augustynczik2017productivity"
 authors:
   - "Andrey Lessa Derci Augustynczik"
@@ -18,5 +18,7 @@ journal: "Forest Ecology and Management"
 volume: "401"
 pages: "192–206"
 doi: "10.1016/j.foreco.2017.06.061"
+significance: "Uses Bayesian uncertainty analysis with the 3-PG growth model to project how European beech productivity will respond to climate change, explicitly quantifying how much confidence to place in the projection rather than presenting a single number."
+description: "Uses Bayesian uncertainty analysis with the 3-PG growth model to project how European beech productivity will respond to climate change, explicitly…"
 entry_type: "article"
 ---

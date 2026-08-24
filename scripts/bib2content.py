@@ -12,6 +12,20 @@ Generated files are overwritten on every run and the whole output directory is
 cleared first, so deletions in the .bib propagate. Do not hand-edit the
 generated markdown; edit the .bib instead.
 
+An optional `abstract = {...}` field becomes a real "## Abstract" section in
+the page body, a front-matter field (so schema.html can put the full text into
+the page's JSON-LD `abstract` property), and the source for a separately
+truncated meta description (see `meta_description()` — search engines cut
+descriptions at ~155-160 chars anyway, so the full text there would be dead
+weight). JATS/XML tags (as raw Crossref API responses wrap abstracts in
+`<jats:p>...</jats:p>`) are stripped automatically.
+
+An optional `significance = {...}` field is a short, hand-written "why it
+matters" note — never sourced from an API, always written by whoever is
+maintaining this file, in plain language for a non-specialist reader. Renders
+under the abstract (or as the sole body content, and the meta description, if
+there is no abstract).
+
 Deliberately dependency-free (no bibtexparser) so it runs on a bare Python 3
 with no network access.
 """
@@ -36,6 +50,7 @@ KEEP = {"_index.md"}
 LATEX = {
     r"{\"a}": "ä", r"{\"o}": "ö", r"{\"u}": "ü",
     r"{\"A}": "Ä", r"{\"O}": "Ö", r"{\"U}": "Ü",
+    r"{\"i}": "ï",
     r"{\'a}": "á", r"{\'e}": "é", r"{\'i}": "í", r"{\'o}": "ó", r"{\'u}": "ú",
     r"{\'c}": "ć", r"{\'n}": "ń", r"{\'s}": "ś", r"{\'z}": "ź",
     r"{\'A}": "Á", r"{\'E}": "É", r"{\'I}": "Í", r"{\'O}": "Ó", r"{\'U}": "Ú",
@@ -44,6 +59,7 @@ LATEX = {
     r"{\~n}": "ñ", r"{\~a}": "ã", r"{\~o}": "õ",
     r"{\c c}": "ç", r"{\c{c}}": "ç",
     r"{\v s}": "š", r"{\v{s}}": "š", r"{\v c}": "č", r"{\v{c}}": "č",
+    r"{\v C}": "Č", r"{\v{C}}": "Č", r"{\v S}": "Š", r"{\v{S}}": "Š",
     r"{\o}": "ø", r"{\O}": "Ø", r"{\aa}": "å", r"{\AA}": "Å",
     r"{\ss}": "ß", r"{\ae}": "æ", r"{\l}": "ł", r"{\L}": "Ł",
     r"\&": "&", r"\%": "%", r"\_": "_", r"\$": "$", r"\#": "#",
@@ -65,6 +81,19 @@ def detex(value: str) -> str:
     # Remaining braces are BibTeX capitalisation guards, not content.
     value = value.replace("{", "").replace("}", "")
     return re.sub(r"\s+", " ", value).strip()
+
+
+def clean_abstract(value: str) -> str:
+    """Crossref abstracts often arrive as JATS XML (`<jats:p>...</jats:p>`),
+    sometimes with JSON-escaped slashes (`\\/`) left over from a raw API
+    response. Strip both before the text goes anywhere near YAML or Markdown.
+    Nested tags (e.g. `<jats:italic>`) that border punctuation leave a stray
+    space behind once stripped (" obsoletus , but" from "obsoletus</jats:italic>,
+    but"); collapse that before it reaches the page."""
+    value = re.sub(r"<[^>]+>", " ", value)
+    value = value.replace("\\/", "/")
+    value = re.sub(r"\s+([.,;:])", r"\1", value)
+    return detex(value)
 
 
 def split_entries(text: str):
@@ -147,6 +176,20 @@ def yaml_quote(value: str) -> str:
     return '"' + str(value).replace("\\", "\\\\").replace('"', '\\"') + '"'
 
 
+def meta_description(value: str, limit: int = 155) -> str:
+    """Search engines truncate meta descriptions at ~155-160 chars anyway, so
+    a full abstract or significance note is mostly dead weight there — cut at
+    a word boundary and mark the cut, rather than dumping the whole text in."""
+    value = value.strip()
+    if len(value) <= limit:
+        return value
+    truncated = value[:limit]
+    cut = truncated.rfind(" ")
+    if cut > 0:
+        truncated = truncated[:cut]
+    return truncated.rstrip(",.;:—–- ") + "…"
+
+
 def main() -> int:
     if not BIB.exists():
         print(f"error: {BIB} not found", file=sys.stderr)
@@ -204,8 +247,44 @@ def main() -> int:
             value = fields.get(bib_field)
             if value and not any(l.startswith(f"{fm_field}:") for l in lines):
                 lines.append(f"{fm_field}: {yaml_quote(detex(value))}")
+
+        # `abstract` renders as real body content ("## Abstract") — not just
+        # SEO plumbing. It is kept in full there; the meta description below
+        # is a separately truncated summary, not this text dumped whole. It is
+        # also emitted as a front-matter field so schema.html can put the full
+        # text into the page's JSON-LD `abstract` property.
+        abstract = fields.get("abstract")
+        if abstract:
+            abstract = clean_abstract(abstract)
+            lines.append(f"abstract: {yaml_quote(abstract)}")
+
+        # `significance` is a short, plain-language "why it matters" note,
+        # written by hand (not sourced from Crossref) for every entry —
+        # renders under the abstract as its own section. For the entries with
+        # no abstract, it is also the basis for the meta description, since it
+        # is still unique per-page text rather than the site-wide fallback.
+        significance = fields.get("significance")
+        if significance:
+            significance = clean_abstract(significance)
+            lines.append(f"significance: {yaml_quote(significance)}")
+
+        # Meta description is a short, truncated summary — not the full
+        # abstract/significance text, which search engines cut at ~155-160
+        # chars anyway. Prefers `significance`: it's paper-specific from the
+        # first word, whereas an abstract's opening is usually generic
+        # scene-setting that identifies nothing once cut at 155 chars (e.g.
+        # "Understanding the origins of biodiversity has been an aspiration
+        # since the days of early naturalists…"). Falls back to the abstract
+        # only for the handful of entries predating the significance field.
+        description_source = significance or abstract
+        if description_source:
+            lines.append(f"description: {yaml_quote(meta_description(description_source))}")
+
         lines.append(f"entry_type: {yaml_quote(entry_type)}")
-        lines += ["---", ""]
+        lines.append("---")
+        if abstract:
+            lines += ["", "## Abstract", "", abstract]
+        lines.append("")
 
         (OUT / f"{key}.md").write_text("\n".join(lines), encoding="utf-8")
         count += 1

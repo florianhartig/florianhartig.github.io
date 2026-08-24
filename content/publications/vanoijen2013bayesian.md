@@ -3,7 +3,7 @@
 title: "Bayesian calibration, comparison and averaging of six forest models, using data from Scots pine stands across Europe"
 date: 2013-01-01
 year: "2013"
-weight: 96
+weight: 97
 slug: "vanoijen2013bayesian"
 authors:
   - "Marcel van Oijen"
@@ -26,5 +26,7 @@ journal: "Forest Ecology and Management"
 volume: "289"
 pages: "255–268"
 doi: "10.1016/j.foreco.2012.09.043"
+significance: "Bayesian-calibrates and compares six different forest models against the same Scots pine data across Europe, providing a rare apples-to-apples test of how differently structured forest models perform when fit to identical data."
+description: "Bayesian-calibrates and compares six different forest models against the same Scots pine data across Europe, providing a rare apples-to-apples test of how…"
 entry_type: "article"
 ---

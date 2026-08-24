@@ -3,13 +3,23 @@
 title: "The evidence contained in the P-value is context dependent"
 date: 2022-01-01
 year: "2022"
-weight: 19
+weight: 20
 slug: "hartig2022evidence"
 authors:
   - "Florian Hartig"
   - "Frédéric Barraquand"
 authors_display: "Florian Hartig, Frédéric Barraquand"
 journal: "Trends in Ecology & Evolution"
+volume: "37"
+issue: "7"
+pages: "569–570"
 doi: "10.1016/j.tree.2022.02.011"
+abstract: "In a recent opinion article, Muff et al. recapitulate well-known objections to the Neyman-Pearson null-hypothesis significance testing (NHST) framework and call for reforming our practices in statistical reporting. We agree with them on several important points: the significance threshold P < 0.05 is only a convention, chosen as a compromise between type I and II error rates; transforming the p-value into a dichotomous statement leads to a loss of information; and p-values should be interpreted together with other statistical indicators, in particular effect sizes and their uncertainty. In our view, a lot of progress in reporting results can already be achieved by keeping these three points in mind. We were surprised and worried, however, by Muff et al.'s suggestion to interpret the p-value as a \"gradual notion of evidence\": Muff et al. recommend, for example, that a P-value greater than 0.1 should be reported as \"little or no evidence\" and a P-value of 0.001 as \"strong evidence\" in favor of the alternative hypothesis H1."
+significance: "A methodological commentary in an ongoing debate about statistical significance testing, arguing that how much evidence a p-value provides depends on context, such as study design and prior plausibility, not on the number alone."
+description: "A methodological commentary in an ongoing debate about statistical significance testing, arguing that how much evidence a p-value provides depends on…"
 entry_type: "article"
 ---
+
+## Abstract
+
+In a recent opinion article, Muff et al. recapitulate well-known objections to the Neyman-Pearson null-hypothesis significance testing (NHST) framework and call for reforming our practices in statistical reporting. We agree with them on several important points: the significance threshold P < 0.05 is only a convention, chosen as a compromise between type I and II error rates; transforming the p-value into a dichotomous statement leads to a loss of information; and p-values should be interpreted together with other statistical indicators, in particular effect sizes and their uncertainty. In our view, a lot of progress in reporting results can already be achieved by keeping these three points in mind. We were surprised and worried, however, by Muff et al.'s suggestion to interpret the p-value as a "gradual notion of evidence": Muff et al. recommend, for example, that a P-value greater than 0.1 should be reported as "little or no evidence" and a P-value of 0.001 as "strong evidence" in favor of the alternative hypothesis H1.

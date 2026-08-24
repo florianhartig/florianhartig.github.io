@@ -3,7 +3,7 @@
 title: "The PROFOUND database for evaluating vegetation models and simulating climate impacts on European forests"
 date: 2020-01-01
 year: "2020"
-weight: 42
+weight: 43
 slug: "reyer2020profound"
 authors:
   - "Christopher P. O. Reyer"
@@ -19,5 +19,12 @@ volume: "12"
 issue: "2"
 pages: "1295–1320"
 doi: "10.5194/essd-12-1295-2020"
+abstract: "Process-based vegetation models are widely used to predict local and global ecosystem dynamics and climate change impacts. Due to their complexity, they require careful parameterization and evaluation to ensure that projections are accurate and reliable. The PROFOUND Database provides a wide range of empirical data on European forests to calibrate and evaluate vegetation models that simulate climate impacts at the forest stand scale. A particular advantage of this database is its wide coverage of multiple data sources at different hierarchical and temporal scales, together with environmental driving data as well as the latest climate scenarios. Specifically, it provides general site descriptions, soil, climate, CO2, nitrogen deposition, tree and forest stand level, and remote sensing data for nine contrasting forest stands distributed across Europe, and for a subset of five sites, time series of carbon fluxes, atmospheric heat conduction and soil water. The climate and nitrogen deposition data contain several datasets for the historic period and a wide range of future climate change scenarios following the Representative Concentration Pathways, plus pre-industrial climate simulations that allow for model runs aimed at disentangling the contribution of climate change to observed forest productivity changes. The database is available freely as an SQLite relational database or ASCII flat file version, and can also be accessed via the ProfoundData R package, which provides basic functions to explore, plot and extract the data for model set-up, calibration and evaluation."
+significance: "Describes a large, openly available database of European forest-monitoring data assembled specifically to let researchers rigorously test and compare vegetation models against real observations — infrastructure underpinning much of the forest-model-evaluation work in this list."
+description: "Describes a large, openly available database of European forest-monitoring data assembled specifically to let researchers rigorously test and compare…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Process-based vegetation models are widely used to predict local and global ecosystem dynamics and climate change impacts. Due to their complexity, they require careful parameterization and evaluation to ensure that projections are accurate and reliable. The PROFOUND Database provides a wide range of empirical data on European forests to calibrate and evaluate vegetation models that simulate climate impacts at the forest stand scale. A particular advantage of this database is its wide coverage of multiple data sources at different hierarchical and temporal scales, together with environmental driving data as well as the latest climate scenarios. Specifically, it provides general site descriptions, soil, climate, CO2, nitrogen deposition, tree and forest stand level, and remote sensing data for nine contrasting forest stands distributed across Europe, and for a subset of five sites, time series of carbon fluxes, atmospheric heat conduction and soil water. The climate and nitrogen deposition data contain several datasets for the historic period and a wide range of future climate change scenarios following the Representative Concentration Pathways, plus pre-industrial climate simulations that allow for model runs aimed at disentangling the contribution of climate change to observed forest productivity changes. The database is available freely as an SQLite relational database or ASCII flat file version, and can also be accessed via the ProfoundData R package, which provides basic functions to explore, plot and extract the data for model set-up, calibration and evaluation.

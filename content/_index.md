@@ -1,15 +1,14 @@
 ---
 title: "Florian Hartig"
+description: "Florian Hartig is a theoretical ecologist and ecological data scientist, W3 Professor at the University of Regensburg."
 ---
 
 ## About me
 
 I am a theoretical ecologist and ecological data scientist. I currently act as
-head of the [Theoretical Ecology Group](https://www.uni-regensburg.de/biologie-vorklinische-medizin/forschen/arbeitsgruppen/ag-hartig),
-as well as interim head of the Chair for Plant Ecology, Deputy Dean of Research
-of the Faculty of Biology and Preclinical Medicine, and coordinator and head of
-the examination committee of the M.Sc. programme Ecology, Evolution &
-Conservation (EEC).
+head of the [Theoretical Ecology Group](https://www.uni-regensburg.de/biologie-vorklinische-medizin/forschen/arbeitsgruppen/ag-hartig)
+and Deputy Dean of Research of the Faculty of Biology and Preclinical Medicine.
+A full list of my current roles is on my [CV](/cv/).
 
 ## Research
 

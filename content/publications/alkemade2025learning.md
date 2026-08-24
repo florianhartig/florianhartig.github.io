@@ -3,7 +3,7 @@
 title: "Learning from fungicide resistance: evolutionary insights to guide RNAi-based control of fungal crop pathogens"
 date: 2025-01-01
 year: "2025"
-weight: 4
+weight: 5
 slug: "alkemade2025learning"
 authors:
   - "Joris A. Alkemade"
@@ -16,5 +16,12 @@ journal: "Fungal Biology Reviews"
 volume: "53"
 pages: "100443"
 doi: "10.1016/j.fbr.2025.100443"
+abstract: "Crop protection against fungal pathogens is essential to prevent crop losses and maintain food security. Current crop protection relies heavily on chemical fungicides. However, rapid evolution of fungicide resistance, the constant appearance of new pathogens, and legislation against chemical pesticides due to concerns regarding their impact on human health and the environment, mean new crop protection strategies are urgently required. One elegant solution is double-stranded RNA-based crop protection, which aims to silence selected genes in the pathogen to reduce crop damage. This technology brings the promise of targeting specific genes, which could be chosen to maximise protection, minimize off-target effects and reduce the risk of resistance evolution. Here we discuss strategies for successful use of this novel technology based on lessons learned from fungicide resistance and recent discoveries in fungal evolution derived from genome-sequencing."
+significance: "Draws lessons from how fungal crop pathogens evolve resistance to fungicides to inform the design of RNA-interference-based crop protection, aiming to build resistance-durability into a new generation of pesticides before it becomes a field problem."
+description: "Draws lessons from how fungal crop pathogens evolve resistance to fungicides to inform the design of RNA-interference-based crop protection, aiming to…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Crop protection against fungal pathogens is essential to prevent crop losses and maintain food security. Current crop protection relies heavily on chemical fungicides. However, rapid evolution of fungicide resistance, the constant appearance of new pathogens, and legislation against chemical pesticides due to concerns regarding their impact on human health and the environment, mean new crop protection strategies are urgently required. One elegant solution is double-stranded RNA-based crop protection, which aims to silence selected genes in the pathogen to reduce crop damage. This technology brings the promise of targeting specific genes, which could be chosen to maximise protection, minimize off-target effects and reduce the risk of resistance evolution. Here we discuss strategies for successful use of this novel technology based on lessons learned from fungicide resistance and recent discoveries in fungal evolution derived from genome-sequencing.

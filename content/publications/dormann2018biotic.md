@@ -3,7 +3,7 @@
 title: "Biotic interactions in species distribution modelling: ten questions to guide interpretation and avoid false conclusions"
 date: 2018-01-01
 year: "2018"
-weight: 67
+weight: 68
 slug: "dormann2018biotic"
 authors:
   - "Carsten F. Dormann"
@@ -14,5 +14,12 @@ volume: "27"
 issue: "9"
 pages: "1004–1016"
 doi: "10.1111/geb.12759"
+abstract: "Recent studies increasingly use statistical methods to infer biotic interactions from co-occurrence information at a large spatial scale. However, disentangling biotic interactions from other factors that can affect co-occurrence patterns at the macroscale is a major challenge. We present a set of questions that analysts and reviewers should ask to avoid erroneously attributing species association patterns to biotic interactions, relating to the appropriateness of data and models, the causality behind a correlative signal, and the problems associated with static data from dynamic systems. We summarize caveats reported by macroecological studies of biotic interactions and examine whether conclusions on the presence of biotic interactions are supported by the modelling approaches used. Irrespective of the method used, studies that set out to test for biotic interactions find statistical associations in species' co-occurrences, yet when compared with our list of questions, few purported interpretations of such associations as biotic interactions hold up to scrutiny. This does not dismiss the presence or importance of biotic interactions, but highlights the risk of too lenient interpretation of the data. We conclude that ecologists have to recognize that a species association pattern in joint species distribution models will be driven not only by real biotic interactions, but also by shared habitat preferences, common migration history, phylogenetic history and shared response to missing environmental drivers, which specifically need to be discussed and, if possible, integrated into models."
+significance: "Lays out ten guiding questions for correctly interpreting claims that species distribution models can detect biotic interactions, such as competition, from co-occurrence data, aiming to stop a common source of false conclusions in that literature."
+description: "Lays out ten guiding questions for correctly interpreting claims that species distribution models can detect biotic interactions, such as competition…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Recent studies increasingly use statistical methods to infer biotic interactions from co-occurrence information at a large spatial scale. However, disentangling biotic interactions from other factors that can affect co-occurrence patterns at the macroscale is a major challenge. We present a set of questions that analysts and reviewers should ask to avoid erroneously attributing species association patterns to biotic interactions, relating to the appropriateness of data and models, the causality behind a correlative signal, and the problems associated with static data from dynamic systems. We summarize caveats reported by macroecological studies of biotic interactions and examine whether conclusions on the presence of biotic interactions are supported by the modelling approaches used. Irrespective of the method used, studies that set out to test for biotic interactions find statistical associations in species' co-occurrences, yet when compared with our list of questions, few purported interpretations of such associations as biotic interactions hold up to scrutiny. This does not dismiss the presence or importance of biotic interactions, but highlights the risk of too lenient interpretation of the data. We conclude that ecologists have to recognize that a species association pattern in joint species distribution models will be driven not only by real biotic interactions, but also by shared habitat preferences, common migration history, phylogenetic history and shared response to missing environmental drivers, which specifically need to be discussed and, if possible, integrated into models.

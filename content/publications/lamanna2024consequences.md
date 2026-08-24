@@ -3,7 +3,7 @@
 title: "Consequences of local conspecific density effects for plant diversity and community dynamics"
 date: 2024-01-01
 year: "2024"
-weight: 10
+weight: 11
 slug: "lamanna2024consequences"
 authors:
   - "Joseph A. LaManna"
@@ -19,5 +19,12 @@ volume: "27"
 issue: "9"
 pages: "e14506"
 doi: "10.1111/ele.14506"
+abstract: "Conspecific density dependence (CDD) in plant populations is widespread, most likely caused by local-scale biotic interactions, and has potentially important implications for biodiversity, community composition, and ecosystem processes. However, progress in this important area of ecology has been hindered by differing viewpoints on CDD across subfields in ecology, lack of synthesis across CDD-related frameworks, and misunderstandings about how empirical measurements of local CDD fit within the context of broader ecological theories on community assembly and diversity maintenance. Here, we propose a conceptual synthesis of local-scale CDD and its causes, including species-specific antagonistic and mutualistic interactions, comparing and clarifying different uses of CDD and related concepts across subfields within ecology. We suggest the use of local stabilizing/destabilizing CDD to refer to the scenario where local conspecific density effects are more negative/positive than heterospecific effects, discuss different mechanisms for each and how they cut across several fields of study, and place local stabilizing/destabilizing CDD within the context of broader ecological theories. The ultimate goal of this synthesis is to provide a conceptual roadmap for researchers studying local CDD and its implications for population and community dynamics."
+significance: "Synthesises what conspecific density dependence — the tendency for a plant to fare worse near others of its own species — implies for plant diversity and community dynamics at larger scales, connecting a well-studied local mechanism to landscape-level biodiversity patterns."
+description: "Synthesises what conspecific density dependence — the tendency for a plant to fare worse near others of its own species — implies for plant diversity and…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Conspecific density dependence (CDD) in plant populations is widespread, most likely caused by local-scale biotic interactions, and has potentially important implications for biodiversity, community composition, and ecosystem processes. However, progress in this important area of ecology has been hindered by differing viewpoints on CDD across subfields in ecology, lack of synthesis across CDD-related frameworks, and misunderstandings about how empirical measurements of local CDD fit within the context of broader ecological theories on community assembly and diversity maintenance. Here, we propose a conceptual synthesis of local-scale CDD and its causes, including species-specific antagonistic and mutualistic interactions, comparing and clarifying different uses of CDD and related concepts across subfields within ecology. We suggest the use of local stabilizing/destabilizing CDD to refer to the scenario where local conspecific density effects are more negative/positive than heterospecific effects, discuss different mechanisms for each and how they cut across several fields of study, and place local stabilizing/destabilizing CDD within the context of broader ecological theories. The ultimate goal of this synthesis is to provide a conceptual roadmap for researchers studying local CDD and its implications for population and community dynamics.

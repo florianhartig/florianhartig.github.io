@@ -7,13 +7,14 @@
 # `*_approx: true` renders the number with a trailing "+" (e.g. "100+"),
 # matching the ">100 articles" / ">632 co-authors" phrasing of the source.
 show: true
-as_of: "July 2026"
+as_of: "August 2026"
 
 # Google Scholar
 source: "Google Scholar"
 source_url: "https://scholar.google.de/citations?user=AdcDit0AAAAJ"
-citations: 27963
-h_index: 55
+citations: 28783
+h_index: 56
+i10_index: 107
 
 # Scopus
 scopus_url: "https://www.scopus.com/authid/detail.uri?authorId=24773326300"

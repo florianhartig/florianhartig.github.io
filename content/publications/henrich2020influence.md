@@ -3,7 +3,7 @@
 title: "The influence of camera trap flash type on the behavioural reactions and trapping rates of red deer and roe deer"
 date: 2020-01-01
 year: "2020"
-weight: 47
+weight: 48
 slug: "henrich2020influence"
 authors:
   - "Maik Henrich"
@@ -15,6 +15,16 @@ authors:
   - "Marco Heurich"
 authors_display: "Maik Henrich, Sabrina Niederlechner, Max Kröschel, Sebastian Thoma, Carsten F. Dormann, Florian Hartig, Marco Heurich"
 journal: "Remote Sensing in Ecology and Conservation"
+volume: "6"
+issue: "3"
+pages: "399–410"
 doi: "10.1002/rse2.150"
+abstract: "Camera traps have become an important tool in wildlife monitoring. However, an issue in interpreting their data in statistical analyses of population densities, demography or behaviour is that the probability of detecting the target animals and their behaviours may vary depending on environmental and methodological factors. A specific problem is the type of flash used in the camera trap, as animals may react differently to different flash types and change their avoidance or habituation behaviour accordingly over time. Here, we provide the first systematic test of the impact of flash type in studies of red deer (Cervus elaphus) and roe deer (Capreolus capreolus), based on an analysis of behavioural responses to white, standard infrared and black flashes during 900 camera trap deployments in the Bavarian Forest National Park and the Northern Black Forest. Both deer species were more likely to react to standard infrared than to black flash, but trigger delays prevented comparisons to white flash. Red deer reacted more frequently to camera traps than did roe deer, and responses were more common in the Northern Black Forest than in the Bavarian Forest National Park, where hunting is severely restricted. Contrary to our expectations, camera trapping rates of free-ranging deer did not significantly decline over time for any flash type or species. Despite the lack of evidence for avoidance behaviour, we recommend the use of black flash for behavioural studies of deer populations to minimize the risk of introducing a source of disturbance, whereas infrared and white flash are equally suitable for determinations of demographic parameters."
+significance: "Tests whether the type of flash used in camera traps changes how deer behave around the cameras, informing best practice for a widely used, low-cost wildlife-monitoring tool."
+description: "Tests whether the type of flash used in camera traps changes how deer behave around the cameras, informing best practice for a widely used, low-cost…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Camera traps have become an important tool in wildlife monitoring. However, an issue in interpreting their data in statistical analyses of population densities, demography or behaviour is that the probability of detecting the target animals and their behaviours may vary depending on environmental and methodological factors. A specific problem is the type of flash used in the camera trap, as animals may react differently to different flash types and change their avoidance or habituation behaviour accordingly over time. Here, we provide the first systematic test of the impact of flash type in studies of red deer (Cervus elaphus) and roe deer (Capreolus capreolus), based on an analysis of behavioural responses to white, standard infrared and black flashes during 900 camera trap deployments in the Bavarian Forest National Park and the Northern Black Forest. Both deer species were more likely to react to standard infrared than to black flash, but trigger delays prevented comparisons to white flash. Red deer reacted more frequently to camera traps than did roe deer, and responses were more common in the Northern Black Forest than in the Bavarian Forest National Park, where hunting is severely restricted. Contrary to our expectations, camera trapping rates of free-ranging deer did not significantly decline over time for any flash type or species. Despite the lack of evidence for avoidance behaviour, we recommend the use of black flash for behavioural studies of deer populations to minimize the risk of introducing a source of disturbance, whereas infrared and white flash are equally suitable for determinations of demographic parameters.

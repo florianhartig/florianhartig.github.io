@@ -3,7 +3,7 @@
 title: "The MDD concept for establishing trust in non-significant results — a critical review"
 date: 2020-01-01
 year: "2020"
-weight: 38
+weight: 39
 slug: "mair2020mdd"
 authors:
   - "Magdalena M. Mair"
@@ -16,5 +16,12 @@ volume: "39"
 issue: "11"
 pages: "2109–2123"
 doi: "10.1002/etc.4847"
+abstract: "Current regulatory guidelines for pesticide risk assessment recommend that nonsignificant results should be complemented by the minimum detectable difference (MDD), a statistical indicator used to decide whether the experiment could have detected biologically relevant effects. We review the statistical theory of the MDD and perform simulations to understand its properties and error rates, comparing its skill in distinguishing between true and false negatives with two alternatives: the minimum detectable effect (MDE), an indicator based on a post hoc power analysis common in medical studies, and confidence intervals (CIs). Our results demonstrate that MDD and MDE only differ in that the power of the MDD depends on the sample size, and that although both have some skill in distinguishing between false negatives and true absence of an effect, they do not perform as well as using CI upper bounds to establish trust in a nonsignificant result – because, unlike the CI, neither MDD nor MDE consider the estimated effect size in their calculation. We conclude that although MDDs are useful, CIs are preferable for deciding whether to treat a nonsignificant test result as a true negative, or for determining an upper bound for an unknown true effect."
+significance: "A critical review of the minimum-detectable-difference approach used in pesticide risk assessment to interpret ‘no significant effect’ results, relevant to whether current regulatory practice is actually protective when studies are underpowered."
+description: "A critical review of the minimum-detectable-difference approach used in pesticide risk assessment to interpret ‘no significant effect’ results, relevant…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Current regulatory guidelines for pesticide risk assessment recommend that nonsignificant results should be complemented by the minimum detectable difference (MDD), a statistical indicator used to decide whether the experiment could have detected biologically relevant effects. We review the statistical theory of the MDD and perform simulations to understand its properties and error rates, comparing its skill in distinguishing between true and false negatives with two alternatives: the minimum detectable effect (MDE), an indicator based on a post hoc power analysis common in medical studies, and confidence intervals (CIs). Our results demonstrate that MDD and MDE only differ in that the power of the MDD depends on the sample size, and that although both have some skill in distinguishing between false negatives and true absence of an effect, they do not perform as well as using CI upper bounds to establish trust in a nonsignificant result – because, unlike the CI, neither MDD nor MDE consider the estimated effect size in their calculation. We conclude that although MDDs are useful, CIs are preferable for deciding whether to treat a nonsignificant test result as a true negative, or for determining an upper bound for an unknown true effect.

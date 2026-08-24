@@ -3,7 +3,7 @@
 title: "Analyzing longitudinal trait trajectories using GWAS identifies genetic variants for kidney function decline"
 date: 2024-01-01
 year: "2024"
-weight: 14
+weight: 15
 slug: "wiegrebe2024analyzing"
 authors:
   - "Simon Wiegrebe"
@@ -17,5 +17,12 @@ volume: "15"
 issue: "1"
 pages: "10061"
 doi: "10.1038/s41467-024-54483-9"
+abstract: "Understanding the genetics of kidney function decline, or trait change in general, is hampered by scarce longitudinal data for GWAS (longGWAS) and uncertainty about how to analyze such data. We use longitudinal UK Biobank data for creatinine-based estimated glomerular filtration rate from 348,275 individuals to search for genetic variants associated with eGFR-decline, both among 595 variants previously associated with eGFR in cross-sectional GWAS and genome-wide. We use seven statistical approaches to analyze the UK Biobank data and simulated data, finding that a linear mixed model is a powerful approach with unbiased effect estimates which is viable for longGWAS. The linear mixed model identifies 13 independent genetic variants associated with eGFR-decline, including 6 novel variants, and links them to age-dependent eGFR-genetics. We demonstrate that age-dependent and age-independent eGFR-genetics exhibit a differential pattern regarding clinical progression traits and kidney-specific gene expression regulation. Overall, our results provide insights into kidney aging and linear mixed model-based longGWAS generally."
+significance: "A statistical-methods contribution, outside Hartig's usual ecology work, on how to analyse genome-wide association data for traits that change over time, applied to kidney function decline."
+description: "A statistical-methods contribution, outside Hartig's usual ecology work, on how to analyse genome-wide association data for traits that change over time…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Understanding the genetics of kidney function decline, or trait change in general, is hampered by scarce longitudinal data for GWAS (longGWAS) and uncertainty about how to analyze such data. We use longitudinal UK Biobank data for creatinine-based estimated glomerular filtration rate from 348,275 individuals to search for genetic variants associated with eGFR-decline, both among 595 variants previously associated with eGFR in cross-sectional GWAS and genome-wide. We use seven statistical approaches to analyze the UK Biobank data and simulated data, finding that a linear mixed model is a powerful approach with unbiased effect estimates which is viable for longGWAS. The linear mixed model identifies 13 independent genetic variants associated with eGFR-decline, including 6 novel variants, and links them to age-dependent eGFR-genetics. We demonstrate that age-dependent and age-independent eGFR-genetics exhibit a differential pattern regarding clinical progression traits and kidney-specific gene expression regulation. Overall, our results provide insights into kidney aging and linear mixed model-based longGWAS generally.

@@ -3,7 +3,7 @@
 title: "Defaunation of large-bodied frugivores reduces carbon storage in a tropical forest of Southeast Asia"
 date: 2019-01-01
 year: "2019"
-weight: 53
+weight: 54
 slug: "chanthorn2019defaunation"
 authors:
   - "Wirong Chanthorn"
@@ -16,7 +16,14 @@ authors_display: "Wirong Chanthorn, Florian Hartig, Warren Y. Brockelman, Wachar
 journal: "Scientific Reports"
 volume: "9"
 issue: "1"
-pages: "1–9"
-publisher_url: "https://www.nature.com/articles/s41598-019-46399-y"
+pages: "10015"
+doi: "10.1038/s41598-019-46399-y"
+abstract: "Recent studies have suggested that defaunation of large-bodied frugivores reduces above-ground carbon storage in tropical forests of South America and Africa, but not, or less so, in Southeast Asian tropical forests. Here we analyze the issue using the seed dispersal network and forest composition of a 30-ha forest dynamics plot in central Thailand, where an intact fauna of primates, ungulates, bears and birds of all sizes still exists. We simulate the effect of two defaunation scenarios on forest biomass: only primates extirpated (a realistic possibility in the near future), and extirpation of all large-bodied frugivores (LBF) including gibbons, macaques, hornbills and terrestrial mammals, the main targets of poachers in this region, varying the population size reduction of the LBF-dispersed tree species from 20% to 100% for each scenario. We find that tree species dependent on seed dispersal by large-bodied frugivores account for nearly one-third of the total carbon biomass on the plot, and that the community turnover following a complete defaunation would result in a carbon reduction of 2.4% to 3.0%, depending on the defaunation scenario and model assumptions; the reduction was always greater than 1% when the defaunation intensity was at least 40%. These effect sizes are comparable to values reported for Neotropical forests, suggesting that the impact of defaunation on carbon deficit is not necessarily lower in Southeast Asian forests. The problem of defaunation in Asia, and the mutual benefits between biodiversity conservation and climate change mitigation, should therefore not be neglected by global policies to reduce carbon emissions."
+significance: "Provides Southeast Asian evidence that losing large fruit-eating animals to hunting reduces a tropical forest's carbon storage, extending a pattern previously shown in the Americas and Africa and strengthening the case that wildlife conservation is also a climate mitigation strategy."
+description: "Provides Southeast Asian evidence that losing large fruit-eating animals to hunting reduces a tropical forest's carbon storage, extending a pattern…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Recent studies have suggested that defaunation of large-bodied frugivores reduces above-ground carbon storage in tropical forests of South America and Africa, but not, or less so, in Southeast Asian tropical forests. Here we analyze the issue using the seed dispersal network and forest composition of a 30-ha forest dynamics plot in central Thailand, where an intact fauna of primates, ungulates, bears and birds of all sizes still exists. We simulate the effect of two defaunation scenarios on forest biomass: only primates extirpated (a realistic possibility in the near future), and extirpation of all large-bodied frugivores (LBF) including gibbons, macaques, hornbills and terrestrial mammals, the main targets of poachers in this region, varying the population size reduction of the LBF-dispersed tree species from 20% to 100% for each scenario. We find that tree species dependent on seed dispersal by large-bodied frugivores account for nearly one-third of the total carbon biomass on the plot, and that the community turnover following a complete defaunation would result in a carbon reduction of 2.4% to 3.0%, depending on the defaunation scenario and model assumptions; the reduction was always greater than 1% when the defaunation intensity was at least 40%. These effect sizes are comparable to values reported for Neotropical forests, suggesting that the impact of defaunation on carbon deficit is not necessarily lower in Southeast Asian forests. The problem of defaunation in Asia, and the mutual benefits between biodiversity conservation and climate change mitigation, should therefore not be neglected by global policies to reduce carbon emissions.

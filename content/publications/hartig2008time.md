@@ -3,7 +3,7 @@
 title: "The time horizon and its role in multiple species conservation planning"
 date: 2008-01-01
 year: "2008"
-weight: 109
+weight: 110
 slug: "hartig2008time"
 authors:
   - "Florian Hartig"
@@ -11,7 +11,15 @@ authors:
 authors_display: "Florian Hartig, Martin Drechsler"
 journal: "Biological Conservation"
 volume: "141"
+issue: "10"
 pages: "2625–2631"
 doi: "10.1016/j.biocon.2008.07.028"
+abstract: "Survival probability within a certain time horizon T is a common measure of population viability. The choice of T implicitly involves a time preference, similar to economic discounting: conservation success is evaluated at the time horizon T, while all effects that occur later than T are not considered. Despite the obvious relevance of the time horizon, ecological studies seldom analyze its impact on the evaluation of conservation options. In this paper, we show that, while the choice of T does not change the ranking of conservation options for single species under stationary conditions, it may substantially change conservation decisions for multiple species. We conclude that it is of crucial importance to investigate the sensitivity of model results to the choice of the time horizon or other measures of time preference when prioritizing biodiversity conservation efforts."
+significance: "Shows that the choice of planning time horizon in conservation planning is not a neutral technical detail but functions like an implicit discount rate, systematically changing which species and habitats get prioritised for protection."
+description: "Shows that the choice of planning time horizon in conservation planning is not a neutral technical detail but functions like an implicit discount rate…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Survival probability within a certain time horizon T is a common measure of population viability. The choice of T implicitly involves a time preference, similar to economic discounting: conservation success is evaluated at the time horizon T, while all effects that occur later than T are not considered. Despite the obvious relevance of the time horizon, ecological studies seldom analyze its impact on the evaluation of conservation options. In this paper, we show that, while the choice of T does not change the ranking of conservation options for single species under stationary conditions, it may substantially change conservation decisions for multiple species. We conclude that it is of crucial importance to investigate the sensitivity of model results to the choice of the time horizon or other measures of time preference when prioritizing biodiversity conservation efforts.

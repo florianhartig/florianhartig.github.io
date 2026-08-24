@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found — {{ site.Title }}</title>
+  <meta name="robots" content="noindex">
+  {{- $css := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  {{ partial "header.html" . }}
+  <main id="content">
+    <div class="wrap wrap-narrow">
+      <article class="page">
+        <h1>Page not found</h1>
+        <p>The page you're looking for doesn't exist, or has moved.</p>
+        <p>
+          <a href="{{ "/" | relURL }}">Back to the homepage</a>
+          · <a href="{{ "/publications/" | relURL }}">Publications</a>
+        </p>
+      </article>
+    </div>
+  </main>
+  {{ partial "footer.html" . }}
+</body>
+</html>

@@ -3,7 +3,7 @@
 title: "Towards a new generation of trait-flexible vegetation models"
 date: 2020-01-01
 year: "2020"
-weight: 45
+weight: 46
 slug: "berzaghi2020towards"
 authors:
   - "Fabio Berzaghi"
@@ -19,5 +19,12 @@ volume: "35"
 issue: "3"
 pages: "191–205"
 doi: "10.1016/j.tree.2019.11.006"
+abstract: "Plant trait variability, emerging from eco-evolutionary dynamics that range from alleles to macroecological scales, is one of the most elusive, but possibly most consequential, aspects of biodiversity. Plasticity, epigenetics, and genetic diversity are major determinants of how plants will respond to climate change, yet these processes are rarely represented in current vegetation models. Here, we provide an overview of the challenges associated with understanding the causes and consequences of plant trait variability, and review current developments to include plasticity and evolutionary mechanisms in vegetation models. We also present a roadmap of research priorities to develop a next generation of vegetation models with flexible traits. Including trait variability in vegetation models is necessary to better represent biosphere responses to global change."
+significance: "Argues that vegetation models should represent plant trait variability, including evolutionary change, explicitly rather than using fixed traits per species, since this variability may be essential for correctly predicting vegetation's response to environmental change."
+description: "Argues that vegetation models should represent plant trait variability, including evolutionary change, explicitly rather than using fixed traits per…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Plant trait variability, emerging from eco-evolutionary dynamics that range from alleles to macroecological scales, is one of the most elusive, but possibly most consequential, aspects of biodiversity. Plasticity, epigenetics, and genetic diversity are major determinants of how plants will respond to climate change, yet these processes are rarely represented in current vegetation models. Here, we provide an overview of the challenges associated with understanding the causes and consequences of plant trait variability, and review current developments to include plasticity and evolutionary mechanisms in vegetation models. We also present a roadmap of research priorities to develop a next generation of vegetation models with flexible traits. Including trait variability in vegetation models is necessary to better represent biosphere responses to global change.

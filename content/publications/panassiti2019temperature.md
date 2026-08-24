@@ -3,7 +3,7 @@
 title: "A temperature-based model for predicting the immigration of Cacopsylla melanoneura and C. picta, vectors of the apple proliferation disease, in South Tyrol, Northern Italy (Hemiptera: Psylloidea)"
 date: 2019-01-01
 year: "2019"
-weight: 62
+weight: 63
 slug: "panassiti2019temperature"
 authors:
   - "Bernd Panassiti"
@@ -18,5 +18,7 @@ journal: "Cicadina"
 volume: "18"
 pages: "1–11"
 publisher_url: "https://public.bibliothek.uni-halle.de/index.php/cicadina/article/view/1789"
+significance: "Builds a temperature-driven model to forecast the seasonal immigration of two insect vectors of apple proliferation disease in South Tyrol, supporting more timely disease-management decisions for orchards."
+description: "Builds a temperature-driven model to forecast the seasonal immigration of two insect vectors of apple proliferation disease in South Tyrol, supporting…"
 entry_type: "article"
 ---

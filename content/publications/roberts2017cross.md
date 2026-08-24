@@ -3,7 +3,7 @@
 title: "Cross-validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure"
 date: 2017-01-01
 year: "2017"
-weight: 76
+weight: 77
 slug: "roberts2017cross"
 authors:
   - "David R. Roberts"
@@ -26,5 +26,12 @@ volume: "40"
 issue: "8"
 pages: "913–929"
 doi: "10.1111/ecog.02881"
+abstract: "Ecological data often show temporal, spatial, hierarchical (random effects), or phylogenetic structure. Modern statistical approaches are increasingly accounting for such dependencies, but when performing cross-validation, these structures are regularly ignored, resulting in serious underestimation of predictive error. One cause for the poor performance of uncorrected (random) cross-validation is dependence structures in the data that persist as dependence structures in model residuals, violating the assumption of independence. Even more concerning, because often overlooked, is that structured data also provides ample opportunity for overfitting with non-causal predictors. Block cross-validation, where data are split strategically rather than randomly, can address these issues, but the blocking strategy must be carefully considered: blocking may unwittingly induce extrapolations by restricting the ranges or combinations of predictor variables available for model training, thus overestimating interpolation errors, while deliberate blocking in predictor space may improve error estimates when extrapolation is the modelling goal. Here we review the ecological literature on non-random and blocked cross-validation approaches, and provide a series of simulations and case studies showing that, for all instances tested, block cross-validation is nearly universally more appropriate than random cross-validation if the goal is predicting to new data or predictor space, or for selecting causal predictors. We recommend that block cross-validation be used wherever dependence structures exist in a dataset, even if no correlation structure is visible in the fitted model residuals."
+significance: "A highly cited methods paper showing that standard cross-validation gives overly optimistic performance estimates for ecological models when the data have spatial, temporal or phylogenetic structure, and providing corrected strategies now standard in the field."
+description: "A highly cited methods paper showing that standard cross-validation gives overly optimistic performance estimates for ecological models when the data have…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Ecological data often show temporal, spatial, hierarchical (random effects), or phylogenetic structure. Modern statistical approaches are increasingly accounting for such dependencies, but when performing cross-validation, these structures are regularly ignored, resulting in serious underestimation of predictive error. One cause for the poor performance of uncorrected (random) cross-validation is dependence structures in the data that persist as dependence structures in model residuals, violating the assumption of independence. Even more concerning, because often overlooked, is that structured data also provides ample opportunity for overfitting with non-causal predictors. Block cross-validation, where data are split strategically rather than randomly, can address these issues, but the blocking strategy must be carefully considered: blocking may unwittingly induce extrapolations by restricting the ranges or combinations of predictor variables available for model training, thus overestimating interpolation errors, while deliberate blocking in predictor space may improve error estimates when extrapolation is the modelling goal. Here we review the ecological literature on non-random and blocked cross-validation approaches, and provide a series of simulations and case studies showing that, for all instances tested, block cross-validation is nearly universally more appropriate than random cross-validation if the goal is predicting to new data or predictor space, or for selecting causal predictors. We recommend that block cross-validation be used wherever dependence structures exist in a dataset, even if no correlation structure is visible in the fitted model residuals.

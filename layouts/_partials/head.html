@@ -7,13 +7,26 @@
 {{- else -}}
   {{- $title = printf "%s — %s" .Title site.Title -}}
 {{- end -}}
-<title>{{ $title }}</title>
+
+{{- /* Some publication titles run well past what search engines display
+       (~60 chars) — truncate just the <title> element for those; the full
+       title still stands as the on-page H1 and in og:title/twitter:title. */ -}}
+{{- $titleTag := $title -}}
+{{- if not .IsHome -}}
+  {{- if gt (len .Title) 55 -}}
+    {{- $titleTag = printf "%s — %s" (.Title | truncate 38 "…") site.Title -}}
+  {{- end -}}
+{{- end -}}
+<title>{{ $titleTag }}</title>
 
 {{- $desc := .Description | default .Summary | default site.Params.description -}}
 {{- $desc = $desc | plainify | htmlUnescape | chomp -}}
 <meta name="description" content="{{ $desc }}">
 <meta name="author" content="{{ site.Params.author.name }}">
 <link rel="canonical" href="{{ .Permalink }}">
+{{- with site.Params.googleSiteVerification }}
+<meta name="google-site-verification" content="{{ . }}">
+{{- end }}
 
 <meta property="og:type" content="{{ if .IsHome }}profile{{ else }}article{{ end }}">
 <meta property="og:title" content="{{ $title }}">

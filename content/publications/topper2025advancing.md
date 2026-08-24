@@ -3,7 +3,7 @@
 title: "Advancing general ecosystem models (GEMs): towards a mechanistic understanding of the biosphere in the light of the Anthropocene"
 date: 2025-01-01
 year: "2025"
-weight: 5
+weight: 6
 slug: "topper2025advancing"
 authors:
   - "Joachim P. Töpper"
@@ -19,5 +19,12 @@ volume: "6"
 issue: "2"
 pages: "e70053"
 doi: "10.1002/2688-8319.70053"
+abstract: "General ecosystem models (GEMs) are process-based simulations of ecosystems functioning worldwide. They represent all essential processes in an ecosystem, going beyond a focus on specific biomes or organismal groups. GEMs are a comparably young development, and currently, there is still only one GEM available: the Madingley model, which was first announced in 2013. GEMs allow studying ecosystem mechanisms that are difficult or impossible to investigate empirically, and to perform simulation experiments to assess impacts of human pressures on ecosystems. As such, GEMs can be seen as the nature equivalent to 'climate models'. As managers and policymakers urgently need good information on nature values and human impacts on them for policy design and decision-making, they have much to gain from GEMs, which allow understanding current and predicting future outcomes of human actions on biodiversity and ecosystem functioning. To increase the applicability of GEMs for informing management and policy, we argue for an acceleration and diversification in model development, and we suggest a range of developments to propel GEMs forward not only towards improved global representativeness but also towards applicability for more landscape-level problems, a scale at which actual decision-making often takes place. In addition, we argue for more accessible implementations and better documentation to increase both the transparency and credibility of GEMs, as well as the user basis applying GEMs."
+significance: "Sets an agenda for ‘general ecosystem models’ that mechanistically simulate whole ecosystems worldwide, arguing this kind of integrated modelling is needed to anticipate how ecosystems will respond to human-driven global change."
+description: "Sets an agenda for ‘general ecosystem models’ that mechanistically simulate whole ecosystems worldwide, arguing this kind of integrated modelling is…"
 entry_type: "article"
 ---
+
+## Abstract
+
+General ecosystem models (GEMs) are process-based simulations of ecosystems functioning worldwide. They represent all essential processes in an ecosystem, going beyond a focus on specific biomes or organismal groups. GEMs are a comparably young development, and currently, there is still only one GEM available: the Madingley model, which was first announced in 2013. GEMs allow studying ecosystem mechanisms that are difficult or impossible to investigate empirically, and to perform simulation experiments to assess impacts of human pressures on ecosystems. As such, GEMs can be seen as the nature equivalent to 'climate models'. As managers and policymakers urgently need good information on nature values and human impacts on them for policy design and decision-making, they have much to gain from GEMs, which allow understanding current and predicting future outcomes of human actions on biodiversity and ecosystem functioning. To increase the applicability of GEMs for informing management and policy, we argue for an acceleration and diversification in model development, and we suggest a range of developments to propel GEMs forward not only towards improved global representativeness but also towards applicability for more landscape-level problems, a scale at which actual decision-making often takes place. In addition, we argue for more accessible implementations and better documentation to increase both the transparency and credibility of GEMs, as well as the user basis applying GEMs.

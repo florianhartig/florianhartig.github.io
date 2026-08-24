@@ -3,7 +3,7 @@
 title: "Model averaging in ecology: a review of Bayesian, information-theoretic and tactical approaches"
 date: 2018-01-01
 year: "2018"
-weight: 66
+weight: 67
 slug: "dormann2018model"
 authors:
   - "Carsten F. Dormann"
@@ -16,5 +16,12 @@ volume: "88"
 issue: "4"
 pages: "485–504"
 doi: "10.1002/ecm.1309"
+abstract: "In ecology, the true causal structure for a given problem is often not known, and several plausible models and thus model predictions exist. It has been claimed that using weighted averages of these models can reduce prediction error, as well as better reflect model selection uncertainty, but these claims are often demonstrated by isolated examples. Here we review the mathematical foundations of model averaging along with the diversity of approaches available. We explain that the error in model-averaged predictions depends on each model's predictive bias and variance, as well as the covariance in predictions between models, and uncertainty about model weights. We show that model averaging is particularly useful if the predictive error of contributing model predictions is dominated by variance, and if the covariance between models is low – conditions that will often be met for noisy data, which predominate in ecology. A general recommendation on which of the many averaging methods to use is difficult, because performance is often context dependent, and estimating weights creates some additional uncertainty, so estimated model weights may not always outperform arbitrary fixed weights such as equal weights. When averaging a set of models with many inadequate models, however, estimating model weights will typically be superior to equal weights. We also investigate the quality of the confidence intervals calculated for model-averaged predictions, showing that they differ greatly in behaviour and seldom manage to achieve nominal coverage. Our overall recommendations stress the importance of non-parametric methods such as cross-validation for a reliable uncertainty quantification of model-averaged predictions."
+significance: "A widely cited review comparing Bayesian, information-theoretic and other approaches to model averaging in ecology, clarifying when combining predictions from multiple models actually improves on picking a single best one."
+description: "A widely cited review comparing Bayesian, information-theoretic and other approaches to model averaging in ecology, clarifying when combining predictions…"
 entry_type: "article"
 ---
+
+## Abstract
+
+In ecology, the true causal structure for a given problem is often not known, and several plausible models and thus model predictions exist. It has been claimed that using weighted averages of these models can reduce prediction error, as well as better reflect model selection uncertainty, but these claims are often demonstrated by isolated examples. Here we review the mathematical foundations of model averaging along with the diversity of approaches available. We explain that the error in model-averaged predictions depends on each model's predictive bias and variance, as well as the covariance in predictions between models, and uncertainty about model weights. We show that model averaging is particularly useful if the predictive error of contributing model predictions is dominated by variance, and if the covariance between models is low – conditions that will often be met for noisy data, which predominate in ecology. A general recommendation on which of the many averaging methods to use is difficult, because performance is often context dependent, and estimating weights creates some additional uncertainty, so estimated model weights may not always outperform arbitrary fixed weights such as equal weights. When averaging a set of models with many inadequate models, however, estimating model weights will typically be superior to equal weights. We also investigate the quality of the confidence intervals calculated for model-averaged predictions, showing that they differ greatly in behaviour and seldom manage to achieve nominal coverage. Our overall recommendations stress the importance of non-parametric methods such as cross-validation for a reliable uncertainty quantification of model-averaged predictions.

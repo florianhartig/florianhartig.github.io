@@ -13,7 +13,9 @@ process-based forest growth model, so that it can be called from R.
 
 As with [rLPJGUESS](/software/rlpjguess/), the reason for the wrapper is
 inference: keeping the model fast in Fortran while driving it from R makes the
-repeated evaluation that Bayesian calibration needs practical.
+repeated evaluation that Bayesian calibration needs practical. It's a separate
+codebase from [r3PG](/software/r3pg/) above — that one wraps the original 3-PG
+model rather than the 3PGN variant.
 
 The package is marked as work in progress and is not on CRAN. Compiling on
 Windows needs Rtools, because of the C++ and Fortran components.

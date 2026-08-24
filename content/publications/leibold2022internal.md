@@ -3,7 +3,7 @@
 title: "The internal structure of metacommunities"
 date: 2022-01-01
 year: "2022"
-weight: 25
+weight: 26
 slug: "leibold2022internal"
 authors:
   - "Mathew A. Leibold"
@@ -18,5 +18,12 @@ journal: "Oikos"
 volume: "2022"
 issue: "1"
 doi: "10.1111/oik.08618"
+abstract: "Current analyses of metacommunity data largely focus on global attributes across the entire metacommunity, such as mean alpha, beta, and gamma diversity, as well as the partitioning of compositional variation into single estimates of contributions of space and environmental effects and, more recently, possible contributions of species interactions. However, this view neglects the fact that different species and sites in the landscape can vary widely in how they contribute to these metacommunity-wide attributes. We argue for a new conceptual framework with matched analytics with the goals of studying the complex and interactive relations between process and pattern in metacommunities that is focused on the variation among species and among sites, which we call the \"internal structure\" of the metacommunity. To demonstrate how the internal structure could be studied, we create synthetic data using a process-based colonization-extinction metacommunity model, then use joint species distribution models to estimate how the contributions of space, environment, and biotic interactions driving metacommunity assembly differ among species and sites. We find that this approach provides useful information about the distinct ways that different species and different sites contribute to metacommunity structure, and although it has limitations, our work points at a more general approach to understand how other possible complexities might affect internal structure and might thus be incorporated into a more cohesive metacommunity theory."
+significance: "Proposes going beyond simple diversity-partitioning statistics to describe the actual internal structure of metacommunities — which species occur together and why — providing a richer framework for interpreting large community datasets."
+description: "Proposes going beyond simple diversity-partitioning statistics to describe the actual internal structure of metacommunities — which species occur together…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Current analyses of metacommunity data largely focus on global attributes across the entire metacommunity, such as mean alpha, beta, and gamma diversity, as well as the partitioning of compositional variation into single estimates of contributions of space and environmental effects and, more recently, possible contributions of species interactions. However, this view neglects the fact that different species and sites in the landscape can vary widely in how they contribute to these metacommunity-wide attributes. We argue for a new conceptual framework with matched analytics with the goals of studying the complex and interactive relations between process and pattern in metacommunities that is focused on the variation among species and among sites, which we call the "internal structure" of the metacommunity. To demonstrate how the internal structure could be studied, we create synthetic data using a process-based colonization-extinction metacommunity model, then use joint species distribution models to estimate how the contributions of space, environment, and biotic interactions driving metacommunity assembly differ among species and sites. We find that this approach provides useful information about the distinct ways that different species and different sites contribute to metacommunity structure, and although it has limitations, our work points at a more general approach to understand how other possible complexities might affect internal structure and might thus be incorporated into a more cohesive metacommunity theory.

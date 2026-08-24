@@ -3,7 +3,7 @@
 title: "Statistical inference for stochastic simulation models — theory and application"
 date: 2011-01-01
 year: "2011"
-weight: 102
+weight: 103
 slug: "hartig2011statistical"
 authors:
   - "Florian Hartig"
@@ -14,7 +14,15 @@ authors:
 authors_display: "Florian Hartig, Justin M. Calabrese, Björn Reineking, Thorsten Wiegand, Andreas Huth"
 journal: "Ecology Letters"
 volume: "14"
+issue: "8"
 pages: "816–827"
 doi: "10.1111/j.1461-0248.2011.01640.x"
+abstract: "Statistical models are the traditional choice to test scientific theories when observations, processes or boundary conditions are subject to stochasticity. Many important systems in ecology and biology, however, are difficult to capture with statistical models. Stochastic simulation models offer an alternative, but they were hitherto associated with a major disadvantage: their likelihood functions can usually not be calculated explicitly, and thus it is difficult to couple them to well-established statistical theory such as maximum likelihood and Bayesian statistics. A number of new methods, among them Approximate Bayesian Computing and Pattern-Oriented Modelling, bypass this limitation. These methods share three main principles: aggregation of simulated and observed data via summary statistics, likelihood approximation based on the summary statistics, and efficient sampling. We discuss these principles as well as advantages and caveats of these methods, and demonstrate their potential for integrating stochastic simulation models into a unified framework for statistical modelling."
+significance: "A foundational methods paper laying out how to statistically fit stochastic ecological simulation models to data and test them against real-world observations — widely cited groundwork for treating simulation models as testable scientific hypotheses."
+description: "A foundational methods paper laying out how to statistically fit stochastic ecological simulation models to data and test them against real-world…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Statistical models are the traditional choice to test scientific theories when observations, processes or boundary conditions are subject to stochasticity. Many important systems in ecology and biology, however, are difficult to capture with statistical models. Stochastic simulation models offer an alternative, but they were hitherto associated with a major disadvantage: their likelihood functions can usually not be calculated explicitly, and thus it is difficult to couple them to well-established statistical theory such as maximum likelihood and Bayesian statistics. A number of new methods, among them Approximate Bayesian Computing and Pattern-Oriented Modelling, bypass this limitation. These methods share three main principles: aggregation of simulated and observed data via summary statistics, likelihood approximation based on the summary statistics, and efficient sampling. We discuss these principles as well as advantages and caveats of these methods, and demonstrate their potential for integrating stochastic simulation models into a unified framework for statistical modelling.

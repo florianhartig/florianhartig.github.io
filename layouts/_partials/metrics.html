@@ -20,9 +20,15 @@
       <dt>h-index</dt>
       <dd>{{ $m.h_index }}</dd>
     </div>
+    {{- with $m.i10_index }}
+    <div>
+      <dt>i10-index</dt>
+      <dd>{{ . }}</dd>
+    </div>
+    {{- end }}
   </dl>
   <p class="metrics-note">
-    Citations and h-index per
+    Citations, h-index{{ with $m.i10_index }} and i10-index{{ end }} per
     <a href="{{ $m.source_url }}" rel="noopener">{{ $m.source }}</a>,
     {{ $m.as_of }}. Article and co-author counts per
     <a href="{{ $m.scopus_url }}" rel="noopener">Scopus</a>.

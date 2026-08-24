@@ -3,7 +3,7 @@
 title: "Do roe deer react to wildlife warning reflectors? A test combining a controlled experiment with field observations"
 date: 2017-01-01
 year: "2017"
-weight: 75
+weight: 76
 slug: "brieger2017roe"
 authors:
   - "Falko Brieger"
@@ -18,6 +18,8 @@ journal: "European Journal of Wildlife Research"
 volume: "63"
 issue: "5"
 pages: "72"
-publisher_url: "https://link.springer.com/article/10.1007/s10344-017-1130-5"
+doi: "10.1007/s10344-017-1130-5"
+significance: "Tests, combining a controlled experiment with field data, whether roadside wildlife warning reflectors actually change roe deer behaviour — relevant evidence for whether this common, cheap road-safety measure works."
+description: "Tests, combining a controlled experiment with field data, whether roadside wildlife warning reflectors actually change roe deer behaviour — relevant…"
 entry_type: "article"
 ---

@@ -3,7 +3,7 @@
 title: "Using the ODD protocol and NetLogo to replicate agent-based models"
 date: 2025-01-01
 year: "2025"
-weight: 7
+weight: 8
 slug: "grimm2025using"
 authors:
   - "Volker Grimm"
@@ -16,5 +16,7 @@ journal: "Ecological Modelling"
 volume: "501"
 pages: "110967"
 doi: "10.1016/j.ecolmodel.2024.110967"
+significance: "A practical methods paper on making agent-based ecological models reproducible, using the standard ODD documentation protocol together with the NetLogo platform — addressing ecology's persistent replication problem for simulation studies."
+description: "A practical methods paper on making agent-based ecological models reproducible, using the standard ODD documentation protocol together with the NetLogo…"
 entry_type: "article"
 ---

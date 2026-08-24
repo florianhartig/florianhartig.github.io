@@ -3,7 +3,7 @@
 title: "Comment on “Plant diversity increases with the strength of negative density dependence at the global scale”"
 date: 2018-01-01
 year: "2018"
-weight: 64
+weight: 65
 slug: "hulsmann2018comment"
 authors:
   - "Lisa Hülsmann"
@@ -12,6 +12,14 @@ authors_display: "Lisa Hülsmann, Florian Hartig"
 journal: "Science"
 volume: "360"
 issue: "6391"
-publisher_url: "http://science.sciencemag.org/content/360/6391/eaar2435.full"
+pages: "eaar2435"
+doi: "10.1126/science.aar2435"
+abstract: "LaManna et al. (Reports, 30 June 2017, p. 1389) claim that subadult trees are proportionally less common at high conspecific adult density (CNDD) and that this effect increases toward the tropics and for rare species. We show that the CNDD-abundance correlation may have arisen from a methodological artifact and that a range of processes can explain the reported latitudinal pattern."
+significance: "A published comment challenging the statistical basis of a high-profile Science paper's claim about negative density dependence and global plant diversity, part of the normal scientific self-correction process on a contested finding."
+description: "A published comment challenging the statistical basis of a high-profile Science paper's claim about negative density dependence and global plant…"
 entry_type: "article"
 ---
+
+## Abstract
+
+LaManna et al. (Reports, 30 June 2017, p. 1389) claim that subadult trees are proportionally less common at high conspecific adult density (CNDD) and that this effect increases toward the tropics and for rare species. We show that the CNDD-abundance correlation may have arisen from a methodological artifact and that a range of processes can explain the reported latitudinal pattern.

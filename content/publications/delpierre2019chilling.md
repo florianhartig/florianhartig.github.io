@@ -3,7 +3,7 @@
 title: "Chilling and forcing temperatures interact to predict the onset of wood formation in Northern Hemisphere conifers"
 date: 2019-01-01
 year: "2019"
-weight: 59
+weight: 60
 slug: "delpierre2019chilling"
 authors:
   - "Nicolas Delpierre"
@@ -11,13 +11,20 @@ authors:
   - "Florian Hartig"
   - "J. Julio Camarero"
   - "Alissar Cheaib"
-  - "Katarina \\v Cufar"
+  - "Katarina Čufar"
   - "Jian-Guo Huang"
-authors_display: "Nicolas Delpierre, Sylvain Lireux, Florian Hartig, J. Julio Camarero, Alissar Cheaib, Katarina \\v Cufar, …, Jian-Guo Huang"
+authors_display: "Nicolas Delpierre, Sylvain Lireux, Florian Hartig, J. Julio Camarero, Alissar Cheaib, Katarina Čufar, …, Jian-Guo Huang"
 journal: "Global Change Biology"
 volume: "25"
 issue: "3"
 pages: "1089–1105"
 doi: "10.1111/gcb.14539"
+abstract: "The phenology of wood formation is a critical process to consider for predicting how trees from the temperate and boreal zones may react to climate change, but compared to leaf phenology, the determinism of wood phenology is still poorly known. Here we compared for the first time three alternative ecophysiological model classes (threshold models, heat-sum models and chilling-influenced heat-sum models) and an empirical model in their ability to predict the starting date of xylem cell enlargement in spring, for four major Northern Hemisphere conifers (Larix decidua, Pinus sylvestris, Picea abies and Picea mariana). We fitted models with Bayesian inference to wood phenological data collected for 220 site-years over Europe and Canada. The chilling-influenced heat-sum model received most support for all four studied species, predicting validation data with a 7.7-day error, within one day of the observed data resolution, and showed virtually no spatial bias whichever the species, despite the large environmental gradients considered. We conclude that both chilling and forcing temperatures determine the onset of wood formation in Northern Hemisphere conifers, and that the spring onset of wood formation is far less affected by local adaptation than by environmentally driven plasticity. In a context of climate change, we therefore expect rising winter-spring temperature to exert ambivalent effects on the spring onset of wood formation, tending to hasten it through the accumulation of forcing temperature, but imposing a higher forcing temperature requirement through the lower accumulation of chilling."
+significance: "Shows that both cold (chilling) and warm (forcing) temperature signals jointly control when conifers start forming new wood each year, refining phenology models used to predict how climate change affects forest growth timing."
+description: "Shows that both cold (chilling) and warm (forcing) temperature signals jointly control when conifers start forming new wood each year, refining phenology…"
 entry_type: "article"
 ---
+
+## Abstract
+
+The phenology of wood formation is a critical process to consider for predicting how trees from the temperate and boreal zones may react to climate change, but compared to leaf phenology, the determinism of wood phenology is still poorly known. Here we compared for the first time three alternative ecophysiological model classes (threshold models, heat-sum models and chilling-influenced heat-sum models) and an empirical model in their ability to predict the starting date of xylem cell enlargement in spring, for four major Northern Hemisphere conifers (Larix decidua, Pinus sylvestris, Picea abies and Picea mariana). We fitted models with Bayesian inference to wood phenological data collected for 220 site-years over Europe and Canada. The chilling-influenced heat-sum model received most support for all four studied species, predicting validation data with a 7.7-day error, within one day of the observed data resolution, and showed virtually no spatial bias whichever the species, despite the large environmental gradients considered. We conclude that both chilling and forcing temperatures determine the onset of wood formation in Northern Hemisphere conifers, and that the spring onset of wood formation is far less affected by local adaptation than by environmentally driven plasticity. In a context of climate change, we therefore expect rising winter-spring temperature to exert ambivalent effects on the spring onset of wood formation, tending to hasten it through the accumulation of forcing temperature, but imposing a higher forcing temperature requirement through the lower accumulation of chilling.

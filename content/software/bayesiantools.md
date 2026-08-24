@@ -8,6 +8,8 @@ links:
     url: "https://github.com/florianhartig/BayesianTools"
   - name: "CRAN"
     url: "https://cran.r-project.org/web/packages/BayesianTools/index.html"
+  - name: "r-universe"
+    url: "https://florianhartig.r-universe.dev/BayesianTools"
 ---
 
 General-purpose MCMC and SMC samplers, together with plotting and diagnostic

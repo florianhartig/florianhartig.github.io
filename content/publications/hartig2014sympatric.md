@@ -3,7 +3,7 @@
 title: "On the sympatric evolution and evolutionary stability of coexistence by relative nonlinearity of competition"
 date: 2014-01-01
 year: "2014"
-weight: 89
+weight: 90
 slug: "hartig2014sympatric"
 authors:
   - "Florian Hartig"
@@ -13,7 +13,15 @@ authors:
 authors_display: "Florian Hartig, Tamara Münkemüller, Karin Johst, Ulf Dieckmann"
 journal: "PLoS ONE"
 volume: "9"
+issue: "9"
 pages: "e94454"
 doi: "10.1371/journal.pone.0094454"
+abstract: "If two species exhibit different nonlinear responses to a single shared resource, and if each species modifies the resource dynamics such that this favors its competitor, they may stably coexist. This coexistence mechanism, known as relative nonlinearity of competition, is well understood theoretically, but less is known about its evolutionary properties and its prevalence in real communities. We address this challenge by using adaptive dynamics theory and individual-based simulations to compare community stabilization and evolutionary stability of species that coexist by relative nonlinearity. In our analysis, evolution operates on the species' density-compensation strategies, and we consider a trade-off between population growth rates at high and low resource availability. We confirm previous findings that, irrespective of the particular model of density dependence, there are many combinations of overcompensating and undercompensating density-compensation strategies that allow stable coexistence by relative nonlinearity. However, our analysis also shows that most of these strategy combinations are not evolutionarily stable and will be outcompeted by an intermediate density-compensation strategy. Only very specific trade-offs lead to evolutionarily stable coexistence by relative nonlinearity. As we find no reason why these particular trade-offs should be common in nature, we conclude that the sympatric evolution and evolutionary stability of relative nonlinearity, while possible in principle, seems rather unlikely. Our study highlights the need for combining ecological and evolutionary perspectives for gaining a better understanding of community assembly and biogeographic patterns."
+significance: "A theoretical evolutionary-ecology paper showing conditions under which two competing species can evolve to stably coexist through differences in how nonlinearly they respond to a shared resource, a coexistence mechanism that doesn't require classic niche differentiation."
+description: "A theoretical evolutionary-ecology paper showing conditions under which two competing species can evolve to stably coexist through differences in how…"
 entry_type: "article"
 ---
+
+## Abstract
+
+If two species exhibit different nonlinear responses to a single shared resource, and if each species modifies the resource dynamics such that this favors its competitor, they may stably coexist. This coexistence mechanism, known as relative nonlinearity of competition, is well understood theoretically, but less is known about its evolutionary properties and its prevalence in real communities. We address this challenge by using adaptive dynamics theory and individual-based simulations to compare community stabilization and evolutionary stability of species that coexist by relative nonlinearity. In our analysis, evolution operates on the species' density-compensation strategies, and we consider a trade-off between population growth rates at high and low resource availability. We confirm previous findings that, irrespective of the particular model of density dependence, there are many combinations of overcompensating and undercompensating density-compensation strategies that allow stable coexistence by relative nonlinearity. However, our analysis also shows that most of these strategy combinations are not evolutionarily stable and will be outcompeted by an intermediate density-compensation strategy. Only very specific trade-offs lead to evolutionarily stable coexistence by relative nonlinearity. As we find no reason why these particular trade-offs should be common in nature, we conclude that the sympatric evolution and evolutionary stability of relative nonlinearity, while possible in principle, seems rather unlikely. Our study highlights the need for combining ecological and evolutionary perspectives for gaining a better understanding of community assembly and biogeographic patterns.

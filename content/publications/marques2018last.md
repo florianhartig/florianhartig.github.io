@@ -3,7 +3,7 @@
 title: "Last-century forest productivity in a managed dry-edge Scots pine population: the two sides of climate warming"
 date: 2018-01-01
 year: "2018"
-weight: 70
+weight: 71
 slug: "marques2018last"
 authors:
   - "Laura Marqués"
@@ -14,7 +14,15 @@ authors:
 authors_display: "Laura Marqués, Jaime Madrigal-González, Miguel A. Zavala, J. Julio Camarero, Florian Hartig"
 journal: "Ecological Applications"
 volume: "28"
+issue: "1"
 pages: "95–105"
-publisher_url: "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/eap.1631"
+doi: "10.1002/eap.1631"
+abstract: "Climate change in the Mediterranean, associated with warmer temperatures and more frequent droughts, is expected to impact forest productivity and the functioning of forest ecosystems as carbon reservoirs in the region. Climate warming can positively affect forest growth by extending the growing season, whereas increasing summer drought generally reduces forest productivity and may cause growth decline, trigger dieback, hamper regeneration, and increase mortality. Forest management could potentially counteract such negative effects by reducing stand density and thereby competition for water, though the effectiveness of such interventions has so far mostly been evaluated for short time periods at the tree and stand levels. In this study, we use a century-long historical data set to assess the effects of climate and management on forest productivity in rear-edge Scots pine (Pinus sylvestris) populations covering continental and Mediterranean conditions along an altitudinal gradient in Central Spain, using linear mixed-effects models to disentangle the effects of altitude, climate, and stand volume on forest growth and ingrowth. We find that warming tends to benefit these tree populations – warmer winter temperature has a significant positive effect on both forest growth and ingrowth, more pronounced at low elevations – but drought conditions severely reduce growth and ingrowth, in particular when competition (stand volume) is high. We conclude that summer droughts are the main threat to Scots pine populations in the region, and that a reduction of stand volume can partially mitigate the negative impacts of more arid conditions."
+significance: "Analyses a century of growth records from a Scots pine population at the dry edge of its range, showing warming has had both positive and negative effects on productivity — a nuanced counterpoint to simple 'warming is bad for forests' narratives."
+description: "Analyses a century of growth records from a Scots pine population at the dry edge of its range, showing warming has had both positive and negative effects…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Climate change in the Mediterranean, associated with warmer temperatures and more frequent droughts, is expected to impact forest productivity and the functioning of forest ecosystems as carbon reservoirs in the region. Climate warming can positively affect forest growth by extending the growing season, whereas increasing summer drought generally reduces forest productivity and may cause growth decline, trigger dieback, hamper regeneration, and increase mortality. Forest management could potentially counteract such negative effects by reducing stand density and thereby competition for water, though the effectiveness of such interventions has so far mostly been evaluated for short time periods at the tree and stand levels. In this study, we use a century-long historical data set to assess the effects of climate and management on forest productivity in rear-edge Scots pine (Pinus sylvestris) populations covering continental and Mediterranean conditions along an altitudinal gradient in Central Spain, using linear mixed-effects models to disentangle the effects of altitude, climate, and stand volume on forest growth and ingrowth. We find that warming tends to benefit these tree populations – warmer winter temperature has a significant positive effect on both forest growth and ingrowth, more pronounced at low elevations – but drought conditions severely reduce growth and ingrowth, in particular when competition (stand volume) is high. We conclude that summer droughts are the main threat to Scots pine populations in the region, and that a reduction of stand volume can partially mitigate the negative impacts of more arid conditions.

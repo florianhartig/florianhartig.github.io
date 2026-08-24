@@ -8,6 +8,7 @@
     <p class="footer-meta">
       © {{ now.Format "2006" }} {{ site.Params.author.name }}.
       Built with <a href="https://gohugo.io/" rel="noopener">Hugo</a>.
+      {{- with site.Lastmod }} Last updated {{ .Format "2 January 2006" }}.{{ end }}
     </p>
   </div>
 </footer>

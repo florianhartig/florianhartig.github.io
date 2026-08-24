@@ -3,7 +3,7 @@
 title: "Advancing an interdisciplinary framework to study seed dispersal ecology"
 date: 2020-01-01
 year: "2020"
-weight: 44
+weight: 45
 slug: "beckman2020advancing"
 authors:
   - "Noelle G. Beckman"
@@ -20,5 +20,12 @@ volume: "12"
 issue: "2"
 pages: "plz048"
 doi: "10.1093/aobpla/plz048"
+abstract: "Although dispersal is generally viewed as a crucial determinant for the fitness of any organism, our understanding of its role in the persistence and spread of plant populations remains incomplete. Generalizing and predicting dispersal processes is challenging due to the context dependence of seed dispersal, environmental heterogeneity and interdependent processes occurring over multiple spatial and temporal scales. Current population models often use simple phenomenological descriptions of dispersal processes, limiting their ability to examine the role of population persistence and spread, especially under global change. To move seed dispersal ecology forward, we need to evaluate the impact of any single seed dispersal event within the full spatial and temporal context of a plant's life history and environmental variability that ultimately influences a population's ability to persist and spread. In this perspective, we provide guidance on integrating empirical and theoretical approaches that account for the context dependency of seed dispersal to improve our ability to generalize and predict the consequences of dispersal, and its anthropogenic alteration, across systems. We synthesize suitable theoretical frameworks, discuss concepts and approaches from diverse subdisciplines, and address knowledge gaps in the movement ecology of seeds and the integration of dispersal and demography, so as to better understand how global change will impact seed dispersal processes and its potential cascading effects on plant population persistence, spread and biodiversity."
+significance: "Proposes a framework for bringing together the fragmented sub-fields that study seed dispersal, arguing that understanding how plants track climate change or persist in fragmented landscapes needs an integrated view of dispersal."
+description: "Proposes a framework for bringing together the fragmented sub-fields that study seed dispersal, arguing that understanding how plants track climate change…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Although dispersal is generally viewed as a crucial determinant for the fitness of any organism, our understanding of its role in the persistence and spread of plant populations remains incomplete. Generalizing and predicting dispersal processes is challenging due to the context dependence of seed dispersal, environmental heterogeneity and interdependent processes occurring over multiple spatial and temporal scales. Current population models often use simple phenomenological descriptions of dispersal processes, limiting their ability to examine the role of population persistence and spread, especially under global change. To move seed dispersal ecology forward, we need to evaluate the impact of any single seed dispersal event within the full spatial and temporal context of a plant's life history and environmental variability that ultimately influences a population's ability to persist and spread. In this perspective, we provide guidance on integrating empirical and theoretical approaches that account for the context dependency of seed dispersal to improve our ability to generalize and predict the consequences of dispersal, and its anthropogenic alteration, across systems. We synthesize suitable theoretical frameworks, discuss concepts and approaches from diverse subdisciplines, and address knowledge gaps in the movement ecology of seeds and the integration of dispersal and demography, so as to better understand how global change will impact seed dispersal processes and its potential cascading effects on plant population persistence, spread and biodiversity.

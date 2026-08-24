@@ -3,13 +3,21 @@
 title: "Dale & Fortin — the revised guide to spatial analysis"
 date: 2015-01-01
 year: "2015"
-weight: 87
+weight: 88
 slug: "hartig2015dale"
 authors:
   - "Florian Hartig"
 authors_display: "Florian Hartig"
 journal: "Frontiers of Biogeography"
 volume: "7"
-publisher_url: "https://escholarship.org/uc/item/7n80854n"
+issue: "2"
+doi: "10.21425/F5FBG27393"
+abstract: "It may be too early to call \"Spatial Analysis – A Guide for Ecologists\" by Fortin and Dale a modern classic, but since its publication in 2005 the book has certainly become a widely cited reference in the field of spatial ecology. Cambridge University Press has now published a second edition of this introductory textbook. When holding both editions back to back, it is apparent that the changes made for this new edition go beyond mere cosmetics: it comes with a redesigned cover and a new two-column layout, but also with a considerably altered content structure and a noticeable extension in text volume. Doubtless, the new edition updates and improves on its predecessor in many important aspects, providing a broad overview of methods in spatial analysis covering data types and sampling design, point-patterns, continuous spatial patterns, spatial clustering and spatio-temporal data. The new layout is more readable, and the already concise and well-referenced text has been complemented in many places by added material and more recent references. What I did not find in the new edition was a substantial broadening of scope, nor a substantial shift of weight towards the developments of the last decade – particularly the trend towards fitting explicit, often hierarchical spatial models to data, instead of merely testing against null models or assumptions of spatial homogeneity, driven by the wider appreciation of Bayesian inference and progress in numerical approximation methods such as MCMC or INLA. I still feel more movement in this direction, for example through a chapter on Bayesian inference and hierarchical models, would have been a worthwhile addition. Overall it seems to me that reader orientation and the storyline were better supported by the simpler structure of the first edition, even as the new one succeeds as an excellent, updated guide to the field."
+significance: "A book review assessing the revised edition of a standard reference text on spatial analysis methods for ecologists, guiding readers on whether and how to use the updated edition."
+description: "A book review assessing the revised edition of a standard reference text on spatial analysis methods for ecologists, guiding readers on whether and how to…"
 entry_type: "article"
 ---
+
+## Abstract
+
+It may be too early to call "Spatial Analysis – A Guide for Ecologists" by Fortin and Dale a modern classic, but since its publication in 2005 the book has certainly become a widely cited reference in the field of spatial ecology. Cambridge University Press has now published a second edition of this introductory textbook. When holding both editions back to back, it is apparent that the changes made for this new edition go beyond mere cosmetics: it comes with a redesigned cover and a new two-column layout, but also with a considerably altered content structure and a noticeable extension in text volume. Doubtless, the new edition updates and improves on its predecessor in many important aspects, providing a broad overview of methods in spatial analysis covering data types and sampling design, point-patterns, continuous spatial patterns, spatial clustering and spatio-temporal data. The new layout is more readable, and the already concise and well-referenced text has been complemented in many places by added material and more recent references. What I did not find in the new edition was a substantial broadening of scope, nor a substantial shift of weight towards the developments of the last decade – particularly the trend towards fitting explicit, often hierarchical spatial models to data, instead of merely testing against null models or assumptions of spatial homogeneity, driven by the wider appreciation of Bayesian inference and progress in numerical approximation methods such as MCMC or INLA. I still feel more movement in this direction, for example through a chapter on Bayesian inference and hierarchical models, would have been a worthwhile addition. Overall it seems to me that reader orientation and the storyline were better supported by the simpler structure of the first edition, even as the new one succeeds as an excellent, updated guide to the field.

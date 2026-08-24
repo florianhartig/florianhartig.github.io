@@ -3,7 +3,7 @@
 title: "The road to integrate climate change projections with regional land-use–biodiversity models"
 date: 2024-01-01
 year: "2024"
-weight: 15
+weight: 16
 slug: "cabral2024road"
 authors:
   - "Juliano Sarmento Cabral"
@@ -17,5 +17,12 @@ volume: "6"
 issue: "5"
 pages: "1716–1741"
 doi: "10.1002/pan3.10472"
+abstract: "Current approaches to project spatial biodiversity responses to climate change mainly focus on the direct effects of climate on species while regarding land use and land cover as constant or prescribed by global land-use scenarios. However, local land-use decisions are often affected by climate change and biodiversity on top of socioeconomic and policy drivers. To realistically understand and predict climate impacts on biodiversity, it is therefore necessary to integrate both direct and indirect effects (via climate-driven land-use change) of climate change on biodiversity. In this perspective paper, we outline how biodiversity models could be better integrated with regional, climate-driven land-use models, providing a short review of empirical and modelling approaches to land-use and land-cover change (LU) and biodiversity (BD) change at regional scales, with a special emphasis on mechanistic models. We find that LU integration in BD models is more frequent than the other way around and has been achieved at different levels, from overlapping predictions to simultaneously coupled simulations. Important research avenues include concerted efforts in harmonizing spatial and temporal resolution, disentangling direct and indirect effects of climate change on biodiversity, explicitly accounting for bidirectional feedbacks, and ultimately feeding socio-ecological systems back into climate predictions. Recent developments of coupled models show that such integration is achievable and can lead to novel insights into climate-land use-biodiversity relations."
+significance: "A roadmap paper arguing that biodiversity forecasts under climate change need to properly account for land-use change too, not just climate alone, and outlining how to combine climate and land-use models to do so."
+description: "A roadmap paper arguing that biodiversity forecasts under climate change need to properly account for land-use change too, not just climate alone, and…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Current approaches to project spatial biodiversity responses to climate change mainly focus on the direct effects of climate on species while regarding land use and land cover as constant or prescribed by global land-use scenarios. However, local land-use decisions are often affected by climate change and biodiversity on top of socioeconomic and policy drivers. To realistically understand and predict climate impacts on biodiversity, it is therefore necessary to integrate both direct and indirect effects (via climate-driven land-use change) of climate change on biodiversity. In this perspective paper, we outline how biodiversity models could be better integrated with regional, climate-driven land-use models, providing a short review of empirical and modelling approaches to land-use and land-cover change (LU) and biodiversity (BD) change at regional scales, with a special emphasis on mechanistic models. We find that LU integration in BD models is more frequent than the other way around and has been achieved at different levels, from overlapping predictions to simultaneously coupled simulations. Important research avenues include concerted efforts in harmonizing spatial and temporal resolution, disentangling direct and indirect effects of climate change on biodiversity, explicitly accounting for bidirectional feedbacks, and ultimately feeding socio-ecological systems back into climate predictions. Recent developments of coupled models show that such integration is achievable and can lead to novel insights into climate-land use-biodiversity relations.

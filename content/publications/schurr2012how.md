@@ -3,7 +3,7 @@
 title: "How to understand species niches and range dynamics: a demographic research agenda for biogeography"
 date: 2012-01-01
 year: "2012"
-weight: 99
+weight: 100
 slug: "schurr2012how"
 authors:
   - "Frank M. Schurr"
@@ -22,7 +22,15 @@ authors:
 authors_display: "Frank M. Schurr, Jörn Pagel, Juliano S. Cabral, Jürgen Groeneveld, Olga Bykova, Robert B. O'Hara, Florian Hartig, W. Daniel Kissling, H. Peter Linder, Guy F. Midgley, Boris Schröder, Alexander Singer, Niklaus E. Zimmermann"
 journal: "Journal of Biogeography"
 volume: "39"
+issue: "12"
 pages: "2146–2162"
 doi: "10.1111/j.1365-2699.2012.02737.x"
+abstract: "Range dynamics causes mismatches between a species' geographical distribution and the set of suitable environments in which population growth is positive (the Hutchinsonian niche). This is because source-sink population dynamics cause species to occupy unsuitable environments, and because environmental change creates non-equilibrium situations in which species may be absent from suitable environments or present in unsuitable environments that were previously suitable. Because correlative species distribution models do not account for these processes, they are likely to produce biased niche estimates and biased forecasts of future range dynamics. Recently developed dynamic range models (DRMs) overcome this problem: they statistically estimate both range dynamics and the underlying environmental response of demographic rates from species distribution data. Here we review current and potential contributions of statistical modelling, empirical data collection and ecological theory to a demographic understanding of niches and range dynamics, formulating a research agenda that entails advances in incorporating process-based models into a statistical framework, systematic collection of data on distribution, abundance and demographic rates, and improved theoretical understanding of the scaling of demographic rates and the dynamics of spatially coupled populations."
+significance: "Sets out a demographic research agenda for reconciling a species' realised geographic distribution with its underlying niche, influential in shifting biogeography toward explicitly demographic explanations of range limits."
+description: "Sets out a demographic research agenda for reconciling a species' realised geographic distribution with its underlying niche, influential in shifting…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Range dynamics causes mismatches between a species' geographical distribution and the set of suitable environments in which population growth is positive (the Hutchinsonian niche). This is because source-sink population dynamics cause species to occupy unsuitable environments, and because environmental change creates non-equilibrium situations in which species may be absent from suitable environments or present in unsuitable environments that were previously suitable. Because correlative species distribution models do not account for these processes, they are likely to produce biased niche estimates and biased forecasts of future range dynamics. Recently developed dynamic range models (DRMs) overcome this problem: they statistically estimate both range dynamics and the underlying environmental response of demographic rates from species distribution data. Here we review current and potential contributions of statistical modelling, empirical data collection and ecological theory to a demographic understanding of niches and range dynamics, formulating a research agenda that entails advances in incorporating process-based models into a statistical framework, systematic collection of data on distribution, abundance and demographic rates, and improved theoretical understanding of the scaling of demographic rates and the dynamics of spatially coupled populations.

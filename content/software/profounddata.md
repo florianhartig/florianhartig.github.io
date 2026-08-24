@@ -3,6 +3,7 @@ title: "ProfoundData"
 weight: 60
 category: "Contributions to other projects"
 summary: "The PROFOUND database of European forest data, for calibrating, validating and benchmarking vegetation models."
+paper: "reyer2020profound"
 links:
   - name: "GitHub"
     url: "https://github.com/COST-FP1304-PROFOUND/ProfoundData"

@@ -3,7 +3,7 @@
 title: "Using synthetic data to evaluate the benefits of large field plots for forest biomass estimation with LiDAR"
 date: 2018-01-01
 year: "2018"
-weight: 65
+weight: 66
 slug: "fassnacht2018using"
 authors:
   - "Fabian Fassnacht"
@@ -14,5 +14,12 @@ journal: "Remote Sensing of Environment"
 volume: "213"
 pages: "115–128"
 doi: "10.1016/j.rse.2018.05.007"
+abstract: "With the maturation of methods for estimating aboveground forest biomass by remote sensing, researchers increasingly need test data, particularly ground reference data, that are large enough to fine-tune existing approaches and test their robustness under diverse conditions. In this context, realistic synthetic datasets present an interesting alternative to costly and limited field data. Here, we present a new approach to simulate realistic canopy height and cover type data by combining an individual-tree forest simulator with real LiDAR point clouds of individual trees, and demonstrate its utility by re-examining the influence of field plot size on the predictive power of remote-sensing models for biomass estimation. Our approach with a complete (wall-to-wall) field reference dataset and matching synthetic remote sensing data allowed us to not only perform internal cross-validations with field plots that were used to fit the model, as in studies with real data, but to also consider the quality of model predictions on a standardized spatial grid or across the entire region. Our results confirm earlier reports of smaller predictive errors with increased field plot sizes under internal model validation, but we show that this is mainly an artifact of comparing the models with the same data they were fit on. When validating on a grid with standardized scale, smaller field plots performed almost equally well as larger field plots, and even outperformed them once we accounted for the fact that increasing the plot size means fewer field plots can be obtained for the same effort. We conclude that synthetic remote sensing datasets are a useful tool for method testing, and could be instrumental in improving remote sensing methodology more broadly."
+significance: "Uses simulated forest data to quantify how much larger field plots actually improve LiDAR-based estimates of forest biomass, letting researchers weigh that benefit against the much higher cost of establishing bigger plots."
+description: "Uses simulated forest data to quantify how much larger field plots actually improve LiDAR-based estimates of forest biomass, letting researchers weigh…"
 entry_type: "article"
 ---
+
+## Abstract
+
+With the maturation of methods for estimating aboveground forest biomass by remote sensing, researchers increasingly need test data, particularly ground reference data, that are large enough to fine-tune existing approaches and test their robustness under diverse conditions. In this context, realistic synthetic datasets present an interesting alternative to costly and limited field data. Here, we present a new approach to simulate realistic canopy height and cover type data by combining an individual-tree forest simulator with real LiDAR point clouds of individual trees, and demonstrate its utility by re-examining the influence of field plot size on the predictive power of remote-sensing models for biomass estimation. Our approach with a complete (wall-to-wall) field reference dataset and matching synthetic remote sensing data allowed us to not only perform internal cross-validations with field plots that were used to fit the model, as in studies with real data, but to also consider the quality of model predictions on a standardized spatial grid or across the entire region. Our results confirm earlier reports of smaller predictive errors with increased field plot sizes under internal model validation, but we show that this is mainly an artifact of comparing the models with the same data they were fit on. When validating on a grid with standardized scale, smaller field plots performed almost equally well as larger field plots, and even outperformed them once we accounted for the fact that increasing the plot size means fewer field plots can be obtained for the same effort. We conclude that synthetic remote sensing datasets are a useful tool for method testing, and could be instrumental in improving remote sensing methodology more broadly.

@@ -10,6 +10,8 @@ links:
     url: "https://github.com/florianhartig/DHARMa"
   - name: "CRAN"
     url: "https://cran.r-project.org/web/packages/DHARMa/index.html"
+  - name: "r-universe"
+    url: "https://florianhartig.r-universe.dev/DHARMa"
 ---
 
 **D**iagnostics for **H**ier**A**rchical **R**egression **M**odels.

@@ -3,7 +3,7 @@
 title: "Species and genetic diversity patterns show different responses to land use intensity in central European grasslands"
 date: 2021-01-01
 year: "2021"
-weight: 34
+weight: 35
 slug: "reisch2021species"
 authors:
   - "Christoph Reisch"
@@ -13,6 +13,13 @@ journal: "Diversity and Distributions"
 volume: "27"
 issue: "3"
 pages: "392–401"
-publisher_url: "https://onlinelibrary.wiley.com/doi/full/10.1111/ddi.13199"
+doi: "10.1111/ddi.13199"
+abstract: "Empirical studies have often reported parallel patterns of genetic and species diversity, but the strength and generality of this association, as well as its origin, are still debated. Particularly in human-dominated landscapes with complex land use histories, more complicated and partly diverging patterns have been observed. In this study, we examine whether species and genetic diversity correlate across grasslands with different levels of land use pressure and spatial differentiation in habitat quality and heterogeneity. We selected eight extensively used (grazed, unfertilized) dry grasslands and eight intensively used (mown, fertilized) hay meadows in southeastern Germany, using vegetation surveys and molecular markers of six widespread dry grassland and six hay meadow plant species to compare species and genetic alpha and beta diversity between the two grassland types. Species diversity patterns expectedly showed higher alpha diversity, stronger spatial structure and less turnover in dry grasslands than in hay meadows, but neither of the corresponding genetic diversity patterns showed the same significant trends. Our results question the idea that species and genetic diversity patterns will always show similar patterns; likely, genetic and species diversity emerge partly from shared, partly from different processes, including the regional species pool, environmental heterogeneity, fragmentation and land use history. The practical conservation implication is that species and genetic diversity are not generally interchangeable, though looking at both together may eventually lead to a better understanding of the complex processes that shape the structure and dynamics of ecological communities."
+significance: "Tests whether species diversity and within-species genetic diversity respond to land-use intensity in the same way, informing whether conservation policies aimed at species diversity also protect genetic diversity or need to be considered separately."
+description: "Tests whether species diversity and within-species genetic diversity respond to land-use intensity in the same way, informing whether conservation…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Empirical studies have often reported parallel patterns of genetic and species diversity, but the strength and generality of this association, as well as its origin, are still debated. Particularly in human-dominated landscapes with complex land use histories, more complicated and partly diverging patterns have been observed. In this study, we examine whether species and genetic diversity correlate across grasslands with different levels of land use pressure and spatial differentiation in habitat quality and heterogeneity. We selected eight extensively used (grazed, unfertilized) dry grasslands and eight intensively used (mown, fertilized) hay meadows in southeastern Germany, using vegetation surveys and molecular markers of six widespread dry grassland and six hay meadow plant species to compare species and genetic alpha and beta diversity between the two grassland types. Species diversity patterns expectedly showed higher alpha diversity, stronger spatial structure and less turnover in dry grasslands than in hay meadows, but neither of the corresponding genetic diversity patterns showed the same significant trends. Our results question the idea that species and genetic diversity patterns will always show similar patterns; likely, genetic and species diversity emerge partly from shared, partly from different processes, including the regional species pool, environmental heterogeneity, fragmentation and land use history. The practical conservation implication is that species and genetic diversity are not generally interchangeable, though looking at both together may eventually lead to a better understanding of the complex processes that shape the structure and dynamics of ecological communities.

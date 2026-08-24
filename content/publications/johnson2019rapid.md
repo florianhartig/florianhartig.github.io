@@ -3,7 +3,7 @@
 title: "Rapid changes in seed dispersal traits may modify plant responses to global change"
 date: 2019-01-01
 year: "2019"
-weight: 55
+weight: 56
 slug: "johnson2019rapid"
 authors:
   - "Jeremy S. Johnson"
@@ -15,6 +15,14 @@ authors_display: "Jeremy S. Johnson, Robert Stephen Cantrell, Chris Cosner, …,
 journal: "AoB Plants"
 volume: "11"
 issue: "3"
-publisher_url: "https://academic.oup.com/aobpla/article/11/3/plz020/5421216"
+pages: "plz020"
+doi: "10.1093/aobpla/plz020"
+abstract: "When climatic or environmental conditions change, plant populations must either adapt to these new conditions, or track their niche via seed dispersal. Adaptation of plants to different abiotic environments has mostly been discussed with respect to physiological and demographic parameters that allow local persistence. However, rapid modifications in response to changing environmental conditions can also affect seed dispersal, both via plant traits and via their dispersal agents. Studying such changes empirically is challenging, due to the high variability in dispersal success, resulting from environmental heterogeneity, and substantial phenotypic variability of dispersal-related traits of seeds and their dispersers. The exact mechanisms that drive rapid changes are often not well understood, but the ecological implications of these processes are essential determinants of dispersal success, and deserve more attention from ecologists, especially in the context of adaptation to global change. We outline the evidence for rapid changes in seed dispersal traits by discussing variability due to plasticity or genetics broadly, and describe the specific traits and biological systems in which variability in dispersal is being studied, before discussing some of the potential underlying mechanisms. We then address future research needs and propose a simulation model that incorporates phenotypic plasticity in seed dispersal."
+significance: "Argues that seed-dispersal traits themselves can evolve quickly enough to matter for how well plants track shifting climates, a factor often ignored in models that treat dispersal ability as fixed."
+description: "Argues that seed-dispersal traits themselves can evolve quickly enough to matter for how well plants track shifting climates, a factor often ignored in…"
 entry_type: "article"
 ---
+
+## Abstract
+
+When climatic or environmental conditions change, plant populations must either adapt to these new conditions, or track their niche via seed dispersal. Adaptation of plants to different abiotic environments has mostly been discussed with respect to physiological and demographic parameters that allow local persistence. However, rapid modifications in response to changing environmental conditions can also affect seed dispersal, both via plant traits and via their dispersal agents. Studying such changes empirically is challenging, due to the high variability in dispersal success, resulting from environmental heterogeneity, and substantial phenotypic variability of dispersal-related traits of seeds and their dispersers. The exact mechanisms that drive rapid changes are often not well understood, but the ecological implications of these processes are essential determinants of dispersal success, and deserve more attention from ecologists, especially in the context of adaptation to global change. We outline the evidence for rapid changes in seed dispersal traits by discussing variability due to plasticity or genetics broadly, and describe the specific traits and biological systems in which variability in dispersal is being studied, before discussing some of the potential underlying mechanisms. We then address future research needs and propose a simulation model that incorporates phenotypic plasticity in seed dispersal.

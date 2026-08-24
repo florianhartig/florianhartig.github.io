@@ -3,7 +3,7 @@
 title: "The total dispersal kernel: a review and future directions"
 date: 2019-01-01
 year: "2019"
-weight: 50
+weight: 51
 slug: "rogers2019total"
 authors:
   - "Haldre S. Rogers"
@@ -18,6 +18,13 @@ journal: "AoB Plants"
 volume: "11"
 issue: "5"
 pages: "plz042"
-publisher_url: "https://academic.oup.com/aobpla/article/11/5/plz042/5559435"
+doi: "10.1093/aobpla/plz042"
+abstract: "The distribution and abundance of plants across the world depends in part on their ability to move, which is commonly characterized by a dispersal kernel. For seeds, the total dispersal kernel (TDK) describes the combined influence of all primary, secondary and higher-order dispersal vectors on the overall dispersal kernel for a plant individual, population, species or community. Understanding the role of each vector within the TDK, and their combined influence on the TDK, is critically important for being able to predict plant responses to a changing biotic or abiotic environment. Here, we review existing research on the TDK and discuss advances in empirical, conceptual modelling and statistical approaches that will facilitate broader application. The concept is simple, but few examples of well-characterized TDKs exist: significant empirical challenges exist, as many studies do not account for all dispersal vectors, inadequately measure or estimate long-distance dispersal resulting from multiple vectors, and/or neglect spatial heterogeneity and context dependence. Existing mathematical and conceptual modelling approaches and statistical methods allow fitting individual dispersal kernels and combining them to form a TDK; these will perform best if robust prior information is available. We recommend a modelling cycle to parameterize TDKs, where empirical data inform models, which in turn inform additional data collection, and that the TDK concept be extended to account for not only where seeds land, but also how that location affects the likelihood of establishing and producing a reproductive adult – i.e. the total effective dispersal kernel."
+significance: "A synthesis defining the ‘total dispersal kernel’, combining every stage a seed goes through rather than just the initial launch, as the more complete and useful concept for predicting plant spread and range shifts."
+description: "A synthesis defining the ‘total dispersal kernel’, combining every stage a seed goes through rather than just the initial launch, as the more complete and…"
 entry_type: "article"
 ---
+
+## Abstract
+
+The distribution and abundance of plants across the world depends in part on their ability to move, which is commonly characterized by a dispersal kernel. For seeds, the total dispersal kernel (TDK) describes the combined influence of all primary, secondary and higher-order dispersal vectors on the overall dispersal kernel for a plant individual, population, species or community. Understanding the role of each vector within the TDK, and their combined influence on the TDK, is critically important for being able to predict plant responses to a changing biotic or abiotic environment. Here, we review existing research on the TDK and discuss advances in empirical, conceptual modelling and statistical approaches that will facilitate broader application. The concept is simple, but few examples of well-characterized TDKs exist: significant empirical challenges exist, as many studies do not account for all dispersal vectors, inadequately measure or estimate long-distance dispersal resulting from multiple vectors, and/or neglect spatial heterogeneity and context dependence. Existing mathematical and conceptual modelling approaches and statistical methods allow fitting individual dispersal kernels and combining them to form a TDK; these will perform best if robust prior information is available. We recommend a modelling cycle to parameterize TDKs, where empirical data inform models, which in turn inform additional data collection, and that the TDK concept be extended to account for not only where seeds land, but also how that location affects the likelihood of establishing and producing a reproductive adult – i.e. the total effective dispersal kernel.

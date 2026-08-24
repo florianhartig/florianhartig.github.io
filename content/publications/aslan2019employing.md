@@ -3,7 +3,7 @@
 title: "Employing plant functional groups to advance seed dispersal ecology and conservation"
 date: 2019-01-01
 year: "2019"
-weight: 57
+weight: 58
 slug: "aslan2019employing"
 authors:
   - "Clare Aslan"
@@ -18,6 +18,13 @@ journal: "AoB Plants"
 volume: "11"
 issue: "2"
 pages: "plz006"
-publisher_url: "https://academic.oup.com/aobpla/article/11/2/plz006/5308909"
+doi: "10.1093/aobpla/plz006"
+abstract: "Seed dispersal enables plants to reach hospitable germination sites and escape natural enemies. Understanding when and how much seed dispersal matters to plant fitness is critical for understanding plant population and community dynamics, but the complexity of factors that determine if a seed will be successfully dispersed and subsequently develop into a reproductive plant is daunting – quantifying all factors that may influence seed dispersal effectiveness for any potential seed-vector relationship would require an unrealistically large amount of time, materials and financial resources. On the other hand, being able to make dispersal predictions is critical for predicting whether single species and entire ecosystems will be resilient to global change. Building on current frameworks, we posit that seed dispersal ecology should adopt plant functional groups as analytical units to reduce this complexity to manageable levels: functional groups can be used to distinguish, for their constituent species, whether it matters if seeds are dispersed, into what context they are dispersed, and what vectors disperse them. To avoid overgeneralization, we propose that the utility of these functional groups may be assessed by generating predictions based on the groups and then testing those predictions against species-specific data, so that data collection and analysis can be guided by robust functional group definitions. Generalizing across similar species in this way could help us to better understand the population and community dynamics of plants and tackle the complexity of seed dispersal as well as its disruption."
+significance: "Proposes organising seed-dispersal research around plant functional groups rather than species-by-species case studies, aiming to make dispersal ecology's fragmented literature more generalisable for conservation."
+description: "Proposes organising seed-dispersal research around plant functional groups rather than species-by-species case studies, aiming to make dispersal ecology's…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Seed dispersal enables plants to reach hospitable germination sites and escape natural enemies. Understanding when and how much seed dispersal matters to plant fitness is critical for understanding plant population and community dynamics, but the complexity of factors that determine if a seed will be successfully dispersed and subsequently develop into a reproductive plant is daunting – quantifying all factors that may influence seed dispersal effectiveness for any potential seed-vector relationship would require an unrealistically large amount of time, materials and financial resources. On the other hand, being able to make dispersal predictions is critical for predicting whether single species and entire ecosystems will be resilient to global change. Building on current frameworks, we posit that seed dispersal ecology should adopt plant functional groups as analytical units to reduce this complexity to manageable levels: functional groups can be used to distinguish, for their constituent species, whether it matters if seeds are dispersed, into what context they are dispersed, and what vectors disperse them. To avoid overgeneralization, we propose that the utility of these functional groups may be assessed by generating predictions based on the groups and then testing those predictions against species-specific data, so that data collection and analysis can be guided by robust functional group definitions. Generalizing across similar species in this way could help us to better understand the population and community dynamics of plants and tackle the complexity of seed dispersal as well as its disruption.

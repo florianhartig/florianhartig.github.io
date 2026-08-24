@@ -1,0 +1,19 @@
+{{- /*
+  BreadcrumbList JSON-LD for a leaf page one level under a section list page
+  (Home > Section > page). Mirrors the visible "← Section" breadcrumb link
+  already in layouts/publications/page.html and layouts/software/page.html —
+  markup for an existing UI pattern, not new navigation.
+
+  Params: "page" (the current Page), "name" (section display name),
+  "url" (section list page's absolute URL).
+*/ -}}
+{{- $page := .page -}}
+{{- $list := dict "@type" "ListItem" "position" 1 "name" "Home" "item" site.BaseURL -}}
+{{- $section := dict "@type" "ListItem" "position" 2 "name" .name "item" .url -}}
+{{- $current := dict "@type" "ListItem" "position" 3 "name" $page.Title "item" $page.Permalink -}}
+{{- $breadcrumb := dict
+  "@context" "https://schema.org"
+  "@type" "BreadcrumbList"
+  "itemListElement" (slice $list $section $current)
+-}}
+<script type="application/ld+json">{{ $breadcrumb | jsonify (dict "indent" "  ") | safeJS }}</script>

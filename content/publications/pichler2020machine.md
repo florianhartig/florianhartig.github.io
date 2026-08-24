@@ -3,7 +3,7 @@
 title: "Machine learning algorithms to infer trait-matching and predict species interactions in ecological networks"
 date: 2020-01-01
 year: "2020"
-weight: 37
+weight: 38
 slug: "pichler2020machine"
 authors:
   - "Maximilian Pichler"
@@ -16,6 +16,13 @@ journal: "Methods in Ecology and Evolution"
 volume: "11"
 issue: "2"
 pages: "281–293"
-publisher_url: "https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13329"
+doi: "10.1111/2041-210X.13329"
+abstract: "Ecologists have long suspected that species are more likely to interact if their traits match in a particular way. For example, a pollination interaction may be more likely if the proportions of a bee's tongue fit a plant's flower shape. Empirical estimates of the importance of trait-matching for determining species interactions, however, vary significantly among different types of ecological networks. Here, we show that ambiguity among empirical trait-matching studies may have arisen at least in part from using overly simple statistical models. Using simulated and real data, we contrast conventional generalized linear models (GLM) with more flexible machine learning (ML) models (random forest, boosted regression trees, deep neural networks, convolutional neural networks, support vector machines, naive Bayes, and k-nearest-neighbor), testing their ability to predict species interactions based on traits, and infer trait combinations causally responsible for species interactions. We found that the best ML models can successfully predict species interactions in plant-pollinator networks, outperforming GLMs by a substantial margin, and can also better identify the causally responsible trait-matching combinations than GLMs. In two case studies, the best ML models successfully predicted species interactions in a global plant-pollinator database and inferred ecologically plausible trait-matching rules for a plant-hummingbird network from Costa Rica, without any prior assumptions about the system. We conclude that flexible ML models offer many advantages over traditional regression models for understanding interaction networks, and anticipate that these results extrapolate to other ecological network types."
+significance: "Uses machine learning to test the long-suspected idea that species are more likely to interact, for example to pollinate, when their traits match in particular ways, and to predict unobserved interactions in ecological networks from trait data."
+description: "Uses machine learning to test the long-suspected idea that species are more likely to interact, for example to pollinate, when their traits match in…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Ecologists have long suspected that species are more likely to interact if their traits match in a particular way. For example, a pollination interaction may be more likely if the proportions of a bee's tongue fit a plant's flower shape. Empirical estimates of the importance of trait-matching for determining species interactions, however, vary significantly among different types of ecological networks. Here, we show that ambiguity among empirical trait-matching studies may have arisen at least in part from using overly simple statistical models. Using simulated and real data, we contrast conventional generalized linear models (GLM) with more flexible machine learning (ML) models (random forest, boosted regression trees, deep neural networks, convolutional neural networks, support vector machines, naive Bayes, and k-nearest-neighbor), testing their ability to predict species interactions based on traits, and infer trait combinations causally responsible for species interactions. We found that the best ML models can successfully predict species interactions in plant-pollinator networks, outperforming GLMs by a substantial margin, and can also better identify the causally responsible trait-matching combinations than GLMs. In two case studies, the best ML models successfully predicted species interactions in a global plant-pollinator database and inferred ecologically plausible trait-matching rules for a plant-hummingbird network from Costa Rica, without any prior assumptions about the system. We conclude that flexible ML models offer many advantages over traditional regression models for understanding interaction networks, and anticipate that these results extrapolate to other ecological network types.

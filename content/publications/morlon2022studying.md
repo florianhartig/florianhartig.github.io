@@ -3,7 +3,7 @@
 title: "Studying speciation and extinction dynamics from phylogenies: addressing identifiability issues"
 date: 2022-01-01
 year: "2022"
-weight: 18
+weight: 19
 slug: "morlon2022studying"
 featured: true
 authors:
@@ -12,8 +12,16 @@ authors:
   - "Florian Hartig"
 authors_display: "Hélène Morlon, Stéphane Robin, Florian Hartig"
 journal: "Trends in Ecology & Evolution"
+volume: "37"
 issue: "6"
 pages: "497–506"
 doi: "10.1016/j.tree.2022.02.004"
+abstract: "A lot of what we know about past speciation and extinction dynamics is based on statistically fitting birth-death processes to phylogenies of extant species. Despite their wide use, the reliability of these tools is regularly questioned. It was recently demonstrated that vast \"congruent\" sets of alternative diversification histories cannot be distinguished (i.e., are not identifiable) using extant phylogenies alone, reanimating the debate about the limits of phylogenetic diversification analysis. Here, we summarize what we know about the identifiability of the birth-death process and how identifiability issues can be addressed. We conclude that extant phylogenies, when combined with appropriate prior hypotheses and regularization techniques, can still tell us a lot about past diversification dynamics."
+significance: "Highlights a fundamental statistical problem, non-identifiability, in the popular practice of estimating past speciation and extinction rates from present-day species trees alone, cautioning the field against over-interpreting such estimates."
+description: "Highlights a fundamental statistical problem, non-identifiability, in the popular practice of estimating past speciation and extinction rates from…"
 entry_type: "article"
 ---
+
+## Abstract
+
+A lot of what we know about past speciation and extinction dynamics is based on statistically fitting birth-death processes to phylogenies of extant species. Despite their wide use, the reliability of these tools is regularly questioned. It was recently demonstrated that vast "congruent" sets of alternative diversification histories cannot be distinguished (i.e., are not identifiable) using extant phylogenies alone, reanimating the debate about the limits of phylogenetic diversification analysis. Here, we summarize what we know about the identifiability of the birth-death process and how identifiability issues can be addressed. We conclude that extant phylogenies, when combined with appropriate prior hypotheses and regularization techniques, can still tell us a lot about past diversification dynamics.

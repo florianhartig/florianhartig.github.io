@@ -3,7 +3,7 @@
 title: "gen3sis: a general engine for eco-evolutionary simulations of the processes that shape Earth's biodiversity"
 date: 2021-01-01
 year: "2021"
-weight: 31
+weight: 32
 slug: "hagen2021gen3sis"
 authors:
   - "Oskar Hagen"
@@ -12,12 +12,19 @@ authors:
   - "Juliano S. Cabral"
   - "Florian Hartig"
   - "Mikael Pontarp"
-  - "Lo\\\"ic Pellissier"
-authors_display: "Oskar Hagen, Benjamin Flück, Fabian Fopp, Juliano S. Cabral, Florian Hartig, Mikael Pontarp, …, Lo\\\"ic Pellissier"
+  - "Loïc Pellissier"
+authors_display: "Oskar Hagen, Benjamin Flück, Fabian Fopp, Juliano S. Cabral, Florian Hartig, Mikael Pontarp, …, Loïc Pellissier"
 journal: "PLoS Biology"
 volume: "19"
 issue: "7"
 pages: "e3001340"
 doi: "10.1371/journal.pbio.3001340"
+abstract: "Understanding the origins of biodiversity has been an aspiration since the days of early naturalists. The immense complexity of ecological, evolutionary, and spatial processes, however, has made this goal elusive to this day. Computer models serve progress in many scientific fields, but in the fields of macroecology and macroevolution, eco-evolutionary models are comparatively less developed. We present a general, spatially explicit, eco-evolutionary engine with a modular implementation that enables the modeling of multiple macroecological and macroevolutionary processes and feedbacks across representative spatiotemporally dynamic landscapes. Modeled processes can include species' abiotic tolerances, biotic interactions, dispersal, speciation, and evolution of ecological traits; commonly observed biodiversity patterns, such as alpha, beta, and gamma diversity, species ranges, ecological traits, and phylogenies, emerge as simulations proceed. As an illustration, we examine alternative hypotheses expected to have shaped the latitudinal diversity gradient (LDG) during the Earth's Cenozoic era. Our exploratory simulations simultaneously produce multiple realistic biodiversity patterns, such as the LDG, current species richness, and range size frequencies, as well as phylogenetic metrics. The model engine is open source and available as an R package, enabling future exploration of various landscapes and biological processes, representing a key step toward a numeric, interdisciplinary, and mechanistic understanding of the physical and biological processes that shape Earth's biodiversity."
+significance: "Introduces a general, open-source simulation engine for modelling how ecological, evolutionary and spatial processes jointly generate biodiversity over geological timescales, letting researchers test eco-evolutionary hypotheses about the origins of today's biodiversity patterns in silico."
+description: "Introduces a general, open-source simulation engine for modelling how ecological, evolutionary and spatial processes jointly generate biodiversity over…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Understanding the origins of biodiversity has been an aspiration since the days of early naturalists. The immense complexity of ecological, evolutionary, and spatial processes, however, has made this goal elusive to this day. Computer models serve progress in many scientific fields, but in the fields of macroecology and macroevolution, eco-evolutionary models are comparatively less developed. We present a general, spatially explicit, eco-evolutionary engine with a modular implementation that enables the modeling of multiple macroecological and macroevolutionary processes and feedbacks across representative spatiotemporally dynamic landscapes. Modeled processes can include species' abiotic tolerances, biotic interactions, dispersal, speciation, and evolution of ecological traits; commonly observed biodiversity patterns, such as alpha, beta, and gamma diversity, species ranges, ecological traits, and phylogenies, emerge as simulations proceed. As an illustration, we examine alternative hypotheses expected to have shaped the latitudinal diversity gradient (LDG) during the Earth's Cenozoic era. Our exploratory simulations simultaneously produce multiple realistic biodiversity patterns, such as the LDG, current species richness, and range size frequencies, as well as phylogenetic metrics. The model engine is open source and available as an R package, enabling future exploration of various landscapes and biological processes, representing a key step toward a numeric, interdisciplinary, and mechanistic understanding of the physical and biological processes that shape Earth's biodiversity.

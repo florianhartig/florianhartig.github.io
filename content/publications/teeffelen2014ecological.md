@@ -3,7 +3,7 @@
 title: "Ecological and economic conditions and associated institutional challenges for conservation banking in dynamic landscapes"
 date: 2014-01-01
 year: "2014"
-weight: 90
+weight: 91
 slug: "teeffelen2014ecological"
 authors:
   - "Astrid J. A. van Teeffelen"
@@ -19,6 +19,8 @@ authors_display: "Astrid J. A. van Teeffelen, Paul Opdam, Frank Wätzold, Floria
 journal: "Landscape and Urban Planning"
 volume: "130"
 pages: "64–72"
-publisher_url: "http://www.sciencedirect.com/science/article/pii/S0169204614001467"
+doi: "10.1016/j.landurbplan.2014.06.004"
+significance: "Examines the ecological and economic conditions, and the institutional obstacles, that determine whether market-based conservation banking schemes can work in landscapes that keep changing."
+description: "Examines the ecological and economic conditions, and the institutional obstacles, that determine whether market-based conservation banking schemes can…"
 entry_type: "article"
 ---

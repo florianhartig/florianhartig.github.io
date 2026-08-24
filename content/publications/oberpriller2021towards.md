@@ -3,7 +3,7 @@
 title: "Towards robust statistical inference for complex computer models"
 date: 2021-01-01
 year: "2021"
-weight: 28
+weight: 29
 slug: "oberpriller2021towards"
 authors:
   - "Johannes Oberpriller"
@@ -16,5 +16,12 @@ volume: "24"
 issue: "6"
 pages: "1251–1261"
 doi: "10.1111/ele.13728"
+abstract: "Ecologists increasingly rely on complex computer simulations to forecast ecological systems. To make such forecasts precise, uncertainties in model parameters and structure must be reduced and correctly propagated to model outputs. Naively using standard statistical techniques for this task, however, can lead to bias and underestimation of uncertainties in parameters and predictions. Here, we explain why these problems occur and propose a framework for robust inference with complex computer simulations. Having identified that model error is more consequential in complex computer simulations, due to their more pronounced nonlinearity and interconnectedness, we discuss as possible solutions data rebalancing and adding bias corrections on model outputs or processes during or after the calibration procedure, illustrating the methods in a case study using a dynamic vegetation model. We conclude that developing better methods for robust inference of complex computer simulations is vital for generating reliable predictions of ecosystem responses."
+significance: "Addresses how to get statistically defensible parameter estimates and uncertainty bounds out of complex ecological simulation models — much harder than for simple statistical models but essential if such models are to inform real decisions."
+description: "Addresses how to get statistically defensible parameter estimates and uncertainty bounds out of complex ecological simulation models — much harder than…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Ecologists increasingly rely on complex computer simulations to forecast ecological systems. To make such forecasts precise, uncertainties in model parameters and structure must be reduced and correctly propagated to model outputs. Naively using standard statistical techniques for this task, however, can lead to bias and underestimation of uncertainties in parameters and predictions. Here, we explain why these problems occur and propose a framework for robust inference with complex computer simulations. Having identified that model error is more consequential in complex computer simulations, due to their more pronounced nonlinearity and interconnectedness, we discuss as possible solutions data rebalancing and adding bias corrections on model outputs or processes during or after the calibration procedure, illustrating the methods in a case study using a dynamic vegetation model. We conclude that developing better methods for robust inference of complex computer simulations is vital for generating reliable predictions of ecosystem responses.

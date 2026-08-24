@@ -3,7 +3,7 @@
 title: "Intraspecific trait variation across scales: implications for understanding global change responses"
 date: 2016-01-01
 year: "2016"
-weight: 82
+weight: 83
 slug: "moran2016intraspecific"
 authors:
   - "Emily V. Moran"
@@ -12,7 +12,15 @@ authors:
 authors_display: "Emily V. Moran, Florian Hartig, David M. Bell"
 journal: "Global Change Biology"
 volume: "22"
+issue: "1"
 pages: "137–150"
 doi: "10.1111/gcb.13000"
+abstract: "Recognition of the importance of intraspecific variation in ecological processes has been growing, but empirical studies and models of global change have only begun to address this issue in detail. This review discusses sources and patterns of intraspecific trait variation and their consequences for understanding how ecological processes and patterns will respond to global change. We examine how current ecological models and theories incorporate intraspecific variation, review existing data sources that could help parameterize models that account for intraspecific variation in global change predictions, and discuss new data that may be needed. We provide guidelines on when it is most important to consider intraspecific variation, such as when trait variation is heritable or when nonlinear relationships are involved, and argue that many common modeling approaches such as matrix population models or global dynamic vegetation models can allow a stronger consideration of intraspecific trait variation if the necessary data are available. We recommend that existing data need to be made more accessible, though in some cases, new experiments are needed to disentangle causes of variation."
+significance: "Synthesises evidence that variation within a species, not just between species, matters for how ecosystems respond to global change, arguing that models ignoring intraspecific trait variation may mispredict these responses."
+description: "Synthesises evidence that variation within a species, not just between species, matters for how ecosystems respond to global change, arguing that models…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Recognition of the importance of intraspecific variation in ecological processes has been growing, but empirical studies and models of global change have only begun to address this issue in detail. This review discusses sources and patterns of intraspecific trait variation and their consequences for understanding how ecological processes and patterns will respond to global change. We examine how current ecological models and theories incorporate intraspecific variation, review existing data sources that could help parameterize models that account for intraspecific variation in global change predictions, and discuss new data that may be needed. We provide guidelines on when it is most important to consider intraspecific variation, such as when trait variation is heritable or when nonlinear relationships are involved, and argue that many common modeling approaches such as matrix population models or global dynamic vegetation models can allow a stronger consideration of intraspecific trait variation if the necessary data are available. We recommend that existing data need to be made more accessible, though in some cases, new experiments are needed to disentangle causes of variation.

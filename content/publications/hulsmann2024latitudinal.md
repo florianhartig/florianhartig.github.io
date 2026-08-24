@@ -3,7 +3,7 @@
 title: "Latitudinal patterns in stabilizing density dependence of forest communities"
 date: 2024-01-01
 year: "2024"
-weight: 8
+weight: 9
 slug: "hulsmann2024latitudinal"
 featured: true
 authors:
@@ -16,7 +16,16 @@ authors:
   - "Florian Hartig"
 authors_display: "Lisa Hülsmann, Ryan A. Chisholm, Liza Comita, Marco D. Visser, Melina de Souza Leite, Salomón Aguilar, …, Florian Hartig"
 journal: "Nature"
-pages: "1–8"
+volume: "627"
+issue: "8004"
+pages: "564–571"
 doi: "10.1038/s41586-024-07118-4"
+abstract: "Numerous studies have shown reduced performance in plants surrounded by same-species neighbors, a phenomenon called conspecific negative density dependence (CNDD). This research comprehensively assesses latitudinal CNDD patterns using dynamic mortality data across 23 forest sites. While stabilizing CNDD appeared at nearly all sites, it was not stronger in tropical regions as previously hypothesized. However, in tropical communities, rare and intermediate-abundant species experienced stronger stabilizing CNDD than common species – a pattern absent in temperate forests. This suggests CNDD more effectively regulates tropical tree population abundances, potentially contributing to greater stabilization and higher local diversity in tropical forests."
+significance: "A large global forest-plot analysis testing whether the mechanism that lets rare tree species recover, conspecific negative density dependence, varies systematically with latitude — a long-standing hypothesis for why the tropics are so much more diverse than temperate forests."
+description: "A large global forest-plot analysis testing whether the mechanism that lets rare tree species recover, conspecific negative density dependence, varies…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Numerous studies have shown reduced performance in plants surrounded by same-species neighbors, a phenomenon called conspecific negative density dependence (CNDD). This research comprehensively assesses latitudinal CNDD patterns using dynamic mortality data across 23 forest sites. While stabilizing CNDD appeared at nearly all sites, it was not stronger in tropical regions as previously hypothesized. However, in tropical communities, rare and intermediate-abundant species experienced stronger stabilizing CNDD than common species – a pattern absent in temperate forests. This suggests CNDD more effectively regulates tropical tree population abundances, potentially contributing to greater stabilization and higher local diversity in tropical forests.

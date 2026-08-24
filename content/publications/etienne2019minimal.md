@@ -3,7 +3,7 @@
 title: "A minimal model for the latitudinal diversity gradient suggests a dominant role for ecological limits"
 date: 2019-01-01
 year: "2019"
-weight: 49
+weight: 50
 slug: "etienne2019minimal"
 authors:
   - "Rampal S. Etienne"
@@ -11,13 +11,20 @@ authors:
   - "Oskar Hagen"
   - "Florian Hartig"
   - "Allen H. Hurlbert"
-  - "Lo\\\"ic Pellissier"
+  - "Loïc Pellissier"
   - "David Storch"
-authors_display: "Rampal S. Etienne, Juliano S. Cabral, Oskar Hagen, Florian Hartig, Allen H. Hurlbert, Lo\\\"ic Pellissier, …, David Storch"
+authors_display: "Rampal S. Etienne, Juliano S. Cabral, Oskar Hagen, Florian Hartig, Allen H. Hurlbert, Loïc Pellissier, …, David Storch"
 journal: "The American Naturalist"
 volume: "194"
 issue: "5"
 pages: "E122–E133"
-publisher_url: "https://www.journals.uchicago.edu/doi/full/10.1086/705243"
+doi: "10.1086/705243"
+abstract: "The latitudinal diversity gradient (LDG) is one of Earth's most iconic biodiversity patterns and still one of the most debated. Explanations for the LDG are often categorized into three broad pathways in which the diversity gradient is created by differential diversification rates, differential carrying capacities (ecological limits), or differential time to accumulate species across latitude. Support for these pathways has, however, been mostly verbally expressed. Here, we present a minimal model to clarify the essential assumptions of the three pathways and explore the sensitivity of diversity dynamics to these pathways. We find that an LDG arises most easily from a gradient in ecological limits compared with a gradient in the time for species accumulation or diversification rate in most modeled scenarios. Differential diversification rates create a stronger LDG than ecological limits only when speciation and dispersal rates are low, but then the predicted LDG seems weaker than the observed LDG. Moreover, range dynamics may reduce an LDG created by a gradient in diversification rates or time for species accumulation, but they cannot reduce an LDG induced by differential ecological limits. We conclude that our simple model provides a null prediction for the effectiveness of the three LDG pathways and can thus aid discussions about the causal mechanisms underlying the LDG or motivate more complex models to confirm or falsify our findings."
+significance: "Shows with a deliberately simple model that a hard cap on how much diversity an environment can support can by itself explain the latitudinal diversity gradient, without needing to invoke faster tropical speciation — reframing a century-old debate."
+description: "Shows with a deliberately simple model that a hard cap on how much diversity an environment can support can by itself explain the latitudinal diversity…"
 entry_type: "article"
 ---
+
+## Abstract
+
+The latitudinal diversity gradient (LDG) is one of Earth's most iconic biodiversity patterns and still one of the most debated. Explanations for the LDG are often categorized into three broad pathways in which the diversity gradient is created by differential diversification rates, differential carrying capacities (ecological limits), or differential time to accumulate species across latitude. Support for these pathways has, however, been mostly verbally expressed. Here, we present a minimal model to clarify the essential assumptions of the three pathways and explore the sensitivity of diversity dynamics to these pathways. We find that an LDG arises most easily from a gradient in ecological limits compared with a gradient in the time for species accumulation or diversification rate in most modeled scenarios. Differential diversification rates create a stronger LDG than ecological limits only when speciation and dispersal rates are low, but then the predicted LDG seems weaker than the observed LDG. Moreover, range dynamics may reduce an LDG created by a gradient in diversification rates or time for species accumulation, but they cannot reduce an LDG induced by differential ecological limits. We conclude that our simple model provides a null prediction for the effectiveness of the three LDG pathways and can thus aid discussions about the causal mechanisms underlying the LDG or motivate more complex models to confirm or falsify our findings.

@@ -3,7 +3,7 @@
 title: "Applying tradable permits to biodiversity conservation: design issues, modelling and policies"
 date: 2011-01-01
 year: "2011"
-weight: 105
+weight: 106
 slug: "watzold2011applying"
 authors:
   - "Frank Wätzold"
@@ -14,5 +14,7 @@ authors_display: "Frank Wätzold, Martin Drechsler, Florian Hartig, Silke Wissel
 journal: "Permit Trading in Different Applications"
 publisher: "Routledge"
 note: "Book chapter, edited by B. Hansjürgens, R. Antes and M. Strunz."
+significance: "Reviews the design issues, modelling approaches and policy considerations involved in applying tradable-permit markets to biodiversity conservation, part of a broader body of work on market-based conservation instruments."
+description: "Reviews the design issues, modelling approaches and policy considerations involved in applying tradable-permit markets to biodiversity conservation, part…"
 entry_type: "incollection"
 ---

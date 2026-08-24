@@ -3,7 +3,7 @@
 title: "An extended empirical saddlepoint approximation for intractable likelihoods"
 date: 2018-01-01
 year: "2018"
-weight: 68
+weight: 69
 slug: "fasiolo2018extended"
 authors:
   - "Matteo Fasiolo"
@@ -13,7 +13,15 @@ authors:
 authors_display: "Matteo Fasiolo, Simon N. Wood, Florian Hartig, Mark V. Bravington"
 journal: "Electronic Journal of Statistics"
 volume: "12"
+issue: "1"
 pages: "1544–1578"
-publisher_url: "https://projecteuclid.org/euclid.ejs/1527300140"
+doi: "10.1214/18-EJS1433"
+abstract: "The challenges posed by complex stochastic models used in computational ecology, biology and genetics have stimulated the development of approximate approaches to statistical inference. Here we focus on Synthetic Likelihood (SL), a procedure that reduces the observed and simulated data to a set of summary statistics, and quantifies the discrepancy between them through a synthetic likelihood function. SL requires little tuning, but it relies on the approximate normality of the summary statistics. We relax this assumption by proposing a novel, more flexible, density estimator: the Extended Empirical Saddlepoint approximation. In addition to proving the consistency of SL, under either the new or the Gaussian density estimator, we illustrate the method using two examples, one of these being a complex individual-based forest model for which SL offers one of the few practical possibilities for statistical inference. The examples show that the new density estimator is able to capture large departures from normality, while being scalable to high dimensions, and this in turn leads to more accurate parameter estimates, relative to the Gaussian alternative. The new density estimator is implemented by the esaddle R package, available on CRAN."
+significance: "A statistical-methods paper extending saddlepoint approximation techniques to handle the intractable likelihoods that arise in complex ecological, biological and genetic models, giving researchers a faster alternative to fully simulation-based inference."
+description: "A statistical-methods paper extending saddlepoint approximation techniques to handle the intractable likelihoods that arise in complex ecological…"
 entry_type: "article"
 ---
+
+## Abstract
+
+The challenges posed by complex stochastic models used in computational ecology, biology and genetics have stimulated the development of approximate approaches to statistical inference. Here we focus on Synthetic Likelihood (SL), a procedure that reduces the observed and simulated data to a set of summary statistics, and quantifies the discrepancy between them through a synthetic likelihood function. SL requires little tuning, but it relies on the approximate normality of the summary statistics. We relax this assumption by proposing a novel, more flexible, density estimator: the Extended Empirical Saddlepoint approximation. In addition to proving the consistency of SL, under either the new or the Gaussian density estimator, we illustrate the method using two examples, one of these being a complex individual-based forest model for which SL offers one of the few practical possibilities for statistical inference. The examples show that the new density estimator is able to capture large departures from normality, while being scalable to high dimensions, and this in turn leads to more accurate parameter estimates, relative to the Gaussian alternative. The new density estimator is implemented by the esaddle R package, available on CRAN.

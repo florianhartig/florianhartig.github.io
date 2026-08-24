@@ -18,3 +18,7 @@ clusters and on HPC systems via MPI, which is what makes it usable together
 with samplers such as [BayesianTools](/software/bayesiantools/).
 
 Not on CRAN — install from the GitHub releases or build from source.
+
+Developed by Maurizio Bagnara and Ramiro Silveyra Gonzalez, with Florian
+Hartig, and described in [Bagnara et al. (2019)](/publications/bagnara2019r/)
+in *Environmental Modelling & Software*.

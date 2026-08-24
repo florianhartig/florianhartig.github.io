@@ -3,7 +3,7 @@
 title: "The multi-dimensional nature of information drives prioritization of private over social information in ants"
 date: 2019-01-01
 year: "2019"
-weight: 52
+weight: 53
 slug: "czaczkes2019multi"
 authors:
   - "Tomer J. Czaczkes"
@@ -16,5 +16,12 @@ volume: "286"
 issue: "1909"
 pages: "20191136"
 doi: "10.1098/rspb.2019.1136"
+abstract: "When personally gathered and socially acquired information conflict, animals often prioritize private information. We propose that this is because private information often contains details that social information lacks. We test this idea in an ant model: ants using a food source learn its location and quality rapidly (private information), whereas pheromone trails (social information) provide good directional information but lack reliable information about food quality. If this lack is indeed responsible for the choice of memory over pheromone trails, adding information that better food is available should cause foragers to switch their priority to social information. We show it does: while ants follow memory rather than pheromones when they conflict, adding unambiguous information about a better potential food source reverses this pattern, from 60% of ants following their memory to 75% following the pheromone trail. Using fluorescence microscopy, we demonstrate that food (and thus information) flows from fed workers to outgoing foragers, explaining the frequent contacts of ants on trails. We conclude that social information may often be ignored because it lacks certain crucial dimensions, suggesting that information content is crucial for understanding how and when animals prioritize social and private information."
+significance: "Shows experimentally that ants weigh private over social information partly because private information carries more distinct dimensions of value, offering a mechanistic explanation for a widespread pattern in animal decision-making."
+description: "Shows experimentally that ants weigh private over social information partly because private information carries more distinct dimensions of value…"
 entry_type: "article"
 ---
+
+## Abstract
+
+When personally gathered and socially acquired information conflict, animals often prioritize private information. We propose that this is because private information often contains details that social information lacks. We test this idea in an ant model: ants using a food source learn its location and quality rapidly (private information), whereas pheromone trails (social information) provide good directional information but lack reliable information about food quality. If this lack is indeed responsible for the choice of memory over pheromone trails, adding information that better food is available should cause foragers to switch their priority to social information. We show it does: while ants follow memory rather than pheromones when they conflict, adding unambiguous information about a better potential food source reverses this pattern, from 60% of ants following their memory to 75% following the pheromone trail. Using fluorescence microscopy, we demonstrate that food (and thus information) flows from fed workers to outgoing foragers, explaining the frequent contacts of ants on trails. We conclude that social information may often be ignored because it lacks certain crucial dimensions, suggesting that information content is crucial for understanding how and when animals prioritize social and private information.

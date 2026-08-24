@@ -3,7 +3,7 @@
 title: "On the challenge of fitting tree size distributions in ecology"
 date: 2013-01-01
 year: "2013"
-weight: 94
+weight: 95
 slug: "taubert2013challenge"
 authors:
   - "Franziska Taubert"
@@ -13,7 +13,15 @@ authors:
 authors_display: "Franziska Taubert, Florian Hartig, Hans-Jürgen Dobner, Andreas Huth"
 journal: "PLoS ONE"
 volume: "8"
+issue: "2"
 pages: "e58036"
 doi: "10.1371/journal.pone.0058036"
+abstract: "Patterns that resemble strongly skewed size distributions are frequently observed in ecology. A typical example represents tree size distributions of stem diameters. Empirical tests of ecological theories predicting their parameters have been conducted, but the results are difficult to interpret because the statistical methods that are applied to fit such decaying size distributions vary. In addition, binning of field data as well as measurement errors might potentially bias parameter estimates. Here, we compare three different methods for parameter estimation – the common maximum likelihood estimation (MLE) and two modified types of MLE correcting for binning of observations or random measurement errors. We test whether three typical frequency distributions, namely the power-law, negative exponential and Weibull distribution, can be precisely identified, and how parameter estimates are biased when observations are additionally either binned or contain measurement error. We show that uncorrected MLE already loses the ability to discern functional form and parameters at relatively small levels of uncertainties, while the modified MLE methods that consider such uncertainties are comparatively much more robust. We conclude that it is important to reduce binning of observations, if possible, and to quantify observation accuracy in empirical studies for fitting strongly skewed size distributions."
+significance: "Shows that commonly used statistical tests for whether tree size distributions follow a power law are unreliable, cautioning against a popular but statistically shaky practice in forest ecology."
+description: "Shows that commonly used statistical tests for whether tree size distributions follow a power law are unreliable, cautioning against a popular but…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Patterns that resemble strongly skewed size distributions are frequently observed in ecology. A typical example represents tree size distributions of stem diameters. Empirical tests of ecological theories predicting their parameters have been conducted, but the results are difficult to interpret because the statistical methods that are applied to fit such decaying size distributions vary. In addition, binning of field data as well as measurement errors might potentially bias parameter estimates. Here, we compare three different methods for parameter estimation – the common maximum likelihood estimation (MLE) and two modified types of MLE correcting for binning of observations or random measurement errors. We test whether three typical frequency distributions, namely the power-law, negative exponential and Weibull distribution, can be precisely identified, and how parameter estimates are biased when observations are additionally either binned or contain measurement error. We show that uncorrected MLE already loses the ability to discern functional form and parameters at relatively small levels of uncertainties, while the modified MLE methods that consider such uncertainties are comparatively much more robust. We conclude that it is important to reduce binning of observations, if possible, and to quantify observation accuracy in empirical studies for fitting strongly skewed size distributions.

@@ -3,6 +3,13 @@ locale: "en-GB"
 title: "Florian Hartig"
 enableRobotsTXT: true
 
+# Per-page Lastmod straight from git history (self-maintaining, unlike a
+# generation timestamp — bib2content.py rewrites all publication pages on
+# every run, so a build-time stamp would mark every page changed every time).
+# Needs full git history at build time; the deploy workflow's
+# `fetch-depth: 0` already provides that.
+enableGitInfo: true
+
 # No external theme: layouts live in layouts/ and are self-contained, so the
 # site builds with no network access and no Go toolchain.
 
@@ -21,6 +28,9 @@ outputs:
   home: ["html", "rss", "llms"]
 
 params:
+  # Google Search Console site-ownership verification. Safe to be public —
+  # this only proves ownership of the domain, it grants no access on its own.
+  googleSiteVerification: "MKtQZE5EApvtwT3COSFwWm4b52xlBZN3rQV8Hf6oG1g"
   description: >-
     Florian Hartig is a theoretical ecologist and ecological data scientist,
     Professor at the University of Regensburg, working on biodiversity in
@@ -77,9 +87,12 @@ menus:
     - name: "Software"
       pageRef: "/software"
       weight: 30
+    - name: "Projects"
+      pageRef: "/projects"
+      weight: 40
     - name: "Teaching"
       pageRef: "/teaching"
-      weight: 40
+      weight: 50
     - name: "CV"
       pageRef: "/cv"
-      weight: 50
+      weight: 60

@@ -3,7 +3,7 @@
 title: "Is variation in conspecific negative density dependence driving tree diversity patterns at large scales?"
 date: 2021-01-01
 year: "2021"
-weight: 26
+weight: 27
 slug: "hulsmann2021variation"
 featured: true
 authors:
@@ -15,6 +15,13 @@ journal: "Trends in Ecology & Evolution"
 volume: "36"
 issue: "2"
 pages: "151–163"
-doi: "10.1016/j.tree.2020.06.006"
+doi: "10.1016/j.tree.2020.10.003"
+abstract: "Half a century ago, Janzen and Connell hypothesized that the high tree species diversity in tropical forests is maintained by specialized natural enemies. Along with other mechanisms, these can cause conspecific negative density dependence (CNDD) and thus maintain species diversity. Numerous studies have measured proxies of CNDD worldwide, but doubt about its relative importance remains. We find ample evidence for CNDD in local populations, but methodological limitations make it difficult to assess if CNDD scales up to control community diversity and thereby local and global biodiversity patterns. A combination of more robust statistical methods, new study designs, and eco-evolutionary models are needed to provide a more definite evaluation of the importance of CNDD for geographic variation in plant species diversity."
+significance: "Asks whether differences in the strength of conspecific negative density dependence between species and regions can explain large-scale tree diversity gradients, a mechanistic hypothesis for why some forests are far more diverse than others."
+description: "Asks whether differences in the strength of conspecific negative density dependence between species and regions can explain large-scale tree diversity…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Half a century ago, Janzen and Connell hypothesized that the high tree species diversity in tropical forests is maintained by specialized natural enemies. Along with other mechanisms, these can cause conspecific negative density dependence (CNDD) and thus maintain species diversity. Numerous studies have measured proxies of CNDD worldwide, but doubt about its relative importance remains. We find ample evidence for CNDD in local populations, but methodological limitations make it difficult to assess if CNDD scales up to control community diversity and thereby local and global biodiversity patterns. A combination of more robust statistical methods, new study designs, and eco-evolutionary models are needed to provide a more definite evaluation of the importance of CNDD for geographic variation in plant species diversity.

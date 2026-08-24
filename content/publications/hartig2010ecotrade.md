@@ -3,7 +3,7 @@
 title: "EcoTRADE — a multi-player network game of a tradable permit market for biodiversity credits"
 date: 2010-01-01
 year: "2010"
-weight: 106
+weight: 107
 slug: "hartig2010ecotrade"
 authors:
   - "Florian Hartig"
@@ -12,7 +12,15 @@ authors:
 authors_display: "Florian Hartig, Martin Horn, Martin Drechsler"
 journal: "Environmental Modelling & Software"
 volume: "25"
+issue: "11"
 pages: "1479–1480"
 doi: "10.1016/j.envsoft.2009.01.003"
+abstract: "EcoTRADE is a multi-player network game of a virtual biodiversity credit market. Each player controls the land use of a certain amount of parcels on a virtual landscape. The biodiversity credits of a particular parcel depend on neighboring parcels, which may be owned by other players. The game can be used to study the strategies of players in experiments or classroom games and as a communication tool for stakeholders participating in credit markets that include spatially interdependent credits."
+significance: "Describes EcoTRADE, a multiplayer simulation game of a tradable biodiversity-credit market, built both as a research tool for studying how people actually behave in such markets and as a teaching and outreach tool."
+description: "Describes EcoTRADE, a multiplayer simulation game of a tradable biodiversity-credit market, built both as a research tool for studying how people actually…"
 entry_type: "article"
 ---
+
+## Abstract
+
+EcoTRADE is a multi-player network game of a virtual biodiversity credit market. Each player controls the land use of a certain amount of parcels on a virtual landscape. The biodiversity credits of a particular parcel depend on neighboring parcels, which may be owned by other players. The game can be used to study the strategies of players in experiments or classroom games and as a communication tool for stakeholders participating in credit markets that include spatially interdependent credits.

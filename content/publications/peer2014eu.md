@@ -3,7 +3,7 @@
 title: "EU agricultural reform fails on biodiversity"
 date: 2014-01-01
 year: "2014"
-weight: 91
+weight: 92
 slug: "peer2014eu"
 featured: true
 authors:
@@ -33,5 +33,12 @@ journal: "Science"
 volume: "344"
 pages: "1090–1092"
 doi: "10.1126/science.1253425"
+abstract: "Extra steps by Member States are needed to protect farmed and grassland ecosystems."
+significance: "A policy commentary arguing that the reformed EU Common Agricultural Policy does not go far enough to protect farmed and grassland biodiversity, and that individual member states need to take additional steps."
+description: "A policy commentary arguing that the reformed EU Common Agricultural Policy does not go far enough to protect farmed and grassland biodiversity, and that…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Extra steps by Member States are needed to protect farmed and grassland ecosystems.

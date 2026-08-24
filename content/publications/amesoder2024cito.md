@@ -3,7 +3,7 @@
 title: "cito: an R package for training neural networks using torch"
 date: 2024-01-01
 year: "2024"
-weight: 12
+weight: 13
 slug: "amesoder2024cito"
 authors:
   - "Christian Amesöder"
@@ -13,5 +13,12 @@ authors_display: "Christian Amesöder, Florian Hartig, Maximilian Pichler"
 journal: "Ecography"
 pages: "e07143"
 doi: "10.1111/ecog.07143"
+abstract: "Deep neural networks (DNN) have become a central method in ecology. To build and train DNNs in deep learning (DL) applications, most users rely on one of the major deep learning frameworks, in particular PyTorch or TensorFlow. Using these frameworks, however, requires substantial experience and time. Here, we present 'cito', a user-friendly R package for DL that allows specifying DNNs in the familiar formula syntax used by many R packages. To fit the models, 'cito' takes advantage of the numerically optimized 'torch' library, including the ability to switch between training models on the CPU or the graphics processing unit (GPU), which allows the efficient training of large DNNs. Moreover, 'cito' includes many user-friendly functions for model plotting and analysis, including explainable AI (xAI) metrics for effect sizes and variable importance. All xAI metrics as well as predictions can optionally be bootstrapped to generate confidence intervals, including p-values. To showcase a typical analysis pipeline using 'cito', with its built-in xAI features, we built a species distribution model of the African elephant. We hope that by providing a user-friendly R framework to specify, deploy and interpret DNNs, 'cito' will make this interesting class of models more accessible to ecological data analysis."
+significance: "Introduces cito, an R package that makes it much easier for ecologists to build and train deep neural networks via torch without learning a general-purpose deep-learning framework, lowering the barrier to using deep learning in ecology."
+description: "Introduces cito, an R package that makes it much easier for ecologists to build and train deep neural networks via torch without learning a…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Deep neural networks (DNN) have become a central method in ecology. To build and train DNNs in deep learning (DL) applications, most users rely on one of the major deep learning frameworks, in particular PyTorch or TensorFlow. Using these frameworks, however, requires substantial experience and time. Here, we present 'cito', a user-friendly R package for DL that allows specifying DNNs in the familiar formula syntax used by many R packages. To fit the models, 'cito' takes advantage of the numerically optimized 'torch' library, including the ability to switch between training models on the CPU or the graphics processing unit (GPU), which allows the efficient training of large DNNs. Moreover, 'cito' includes many user-friendly functions for model plotting and analysis, including explainable AI (xAI) metrics for effect sizes and variable importance. All xAI metrics as well as predictions can optionally be bootstrapped to generate confidence intervals, including p-values. To showcase a typical analysis pipeline using 'cito', with its built-in xAI features, we built a species distribution model of the African elephant. We hope that by providing a user-friendly R framework to specify, deploy and interpret DNNs, 'cito' will make this interesting class of models more accessible to ecological data analysis.

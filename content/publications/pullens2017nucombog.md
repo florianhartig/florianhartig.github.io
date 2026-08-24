@@ -3,7 +3,7 @@
 title: "The NUCOMBog R package for simulating vegetation, water, carbon and nitrogen dynamics in peatlands"
 date: 2017-01-01
 year: "2017"
-weight: 73
+weight: 74
 slug: "pullens2017nucombog"
 authors:
   - "Johannes W. M. Pullens"
@@ -19,5 +19,7 @@ journal: "Ecological Informatics"
 volume: "40"
 pages: "35–39"
 doi: "10.1016/j.ecoinf.2017.05.001"
+significance: "Provides an R package implementing a model for simulating vegetation, water, carbon and nitrogen dynamics in peatlands — ecosystems that store enormous amounts of carbon and are highly sensitive to drainage and climate change."
+description: "Provides an R package implementing a model for simulating vegetation, water, carbon and nitrogen dynamics in peatlands — ecosystems that store enormous…"
 entry_type: "article"
 ---

@@ -3,7 +3,7 @@
 title: "Assessing the response of forest productivity to climate extremes in Switzerland using model–data fusion"
 date: 2020-01-01
 year: "2020"
-weight: 43
+weight: 44
 slug: "trotsiuk2020assessing"
 authors:
   - "Volodymyr Trotsiuk"
@@ -19,5 +19,12 @@ volume: "26"
 issue: "4"
 pages: "2463–2476"
 doi: "10.1111/gcb.15011"
+abstract: "The response of forest productivity to climate extremes strongly depends on ambient environmental and site conditions. To better understand these relationships at a regional scale, we used nearly 800 observation years from 271 permanent long-term forest monitoring plots across Switzerland, obtained between 1980 and 2017. We assimilated these data into the 3-PG forest ecosystem model using Bayesian inference, reducing the bias of model predictions from 14% to 5% for forest stem carbon stocks and from 45% to 9% for stem carbon stock changes. We then estimated the productivity of forests dominated by Picea abies and Fagus sylvatica for the period of 1960-2018, and tested for productivity shifts in response to climate along an elevational gradient and in extreme years. Simulated net primary productivity (NPP) decreased with elevation for both species. During warm-dry extremes, simulated NPP for both species increased at higher and decreased at lower elevations, with reductions in NPP of more than 25% for up to 21% of the potential species distribution range in Switzerland; reduced plant water availability had a stronger effect on NPP than temperature during these extremes. Importantly, cold-dry extremes had negative impacts on regional forest NPP comparable to warm-dry extremes. Overall, our calibrated model suggests that the response of forest productivity to climate extremes is more complex than a simple shift toward higher elevation."
+significance: "Uses a model-data fusion approach to show how forest productivity's response to climate extremes depends on local site conditions, helping explain why the same drought or heatwave can hit different forests very differently."
+description: "Uses a model-data fusion approach to show how forest productivity's response to climate extremes depends on local site conditions, helping explain why the…"
 entry_type: "article"
 ---
+
+## Abstract
+
+The response of forest productivity to climate extremes strongly depends on ambient environmental and site conditions. To better understand these relationships at a regional scale, we used nearly 800 observation years from 271 permanent long-term forest monitoring plots across Switzerland, obtained between 1980 and 2017. We assimilated these data into the 3-PG forest ecosystem model using Bayesian inference, reducing the bias of model predictions from 14% to 5% for forest stem carbon stocks and from 45% to 9% for stem carbon stock changes. We then estimated the productivity of forests dominated by Picea abies and Fagus sylvatica for the period of 1960-2018, and tested for productivity shifts in response to climate along an elevational gradient and in extreme years. Simulated net primary productivity (NPP) decreased with elevation for both species. During warm-dry extremes, simulated NPP for both species increased at higher and decreased at lower elevations, with reductions in NPP of more than 25% for up to 21% of the potential species distribution range in Switzerland; reduced plant water availability had a stronger effect on NPP than temperature during these extremes. Importantly, cold-dry extremes had negative impacts on regional forest NPP comparable to warm-dry extremes. Overall, our calibrated model suggests that the response of forest productivity to climate extremes is more complex than a simple shift toward higher elevation.

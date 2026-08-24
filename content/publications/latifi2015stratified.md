@@ -3,7 +3,7 @@
 title: "Stratified aboveground forest biomass estimation by remote sensing data"
 date: 2015-01-01
 year: "2015"
-weight: 85
+weight: 86
 slug: "latifi2015stratified"
 authors:
   - "Hooman Latifi"
@@ -18,5 +18,12 @@ journal: "International Journal of Applied Earth Observation and Geoinformation"
 volume: "38"
 pages: "229–241"
 doi: "10.1016/j.jag.2015.01.016"
+abstract: "Remote sensing-assisted estimates of aboveground forest biomass are essential for modeling carbon budgets. It has been suggested that estimates can be improved by building species- or strata-specific biomass models, but few studies have attempted a systematic analysis of the benefits of such stratification, especially in combination with other factors such as sensor type, statistical prediction method and sampling design of the reference inventory data. We addressed this topic by analyzing the impact of stratifying forest data into three classes (broadleaved, coniferous and mixed forest), comparing predictive accuracy between the strata and to a case without stratification for a set of pre-selected predictors from airborne LiDAR and hyperspectral data obtained in a managed mixed forest site in southwestern Germany. We used five commonly applied algorithms for biomass predictions on bootstrapped subsamples of the data to obtain cross-validated RMSE and r-squared diagnostics, analysed in a factorial design by ANOVA to rank the relative importance of each factor, and used selected models for wall-to-wall mapping of biomass estimates and their associated uncertainty. The results revealed marginal advantages for the strata-specific prediction models over the unstratified ones, which were more obvious on the wall-to-wall mapped area-based predictions, though further tests are necessary to establish the generality of these results. Input data type and statistical prediction method are concluded to remain the two most crucial factors for the quality of remote sensing-assisted biomass models."
+significance: "Shows that stratifying forest area by species composition before applying remote-sensing biomass models improves estimate accuracy, a practical refinement for carbon-stock mapping from satellite and LiDAR data."
+description: "Shows that stratifying forest area by species composition before applying remote-sensing biomass models improves estimate accuracy, a practical refinement…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Remote sensing-assisted estimates of aboveground forest biomass are essential for modeling carbon budgets. It has been suggested that estimates can be improved by building species- or strata-specific biomass models, but few studies have attempted a systematic analysis of the benefits of such stratification, especially in combination with other factors such as sensor type, statistical prediction method and sampling design of the reference inventory data. We addressed this topic by analyzing the impact of stratifying forest data into three classes (broadleaved, coniferous and mixed forest), comparing predictive accuracy between the strata and to a case without stratification for a set of pre-selected predictors from airborne LiDAR and hyperspectral data obtained in a managed mixed forest site in southwestern Germany. We used five commonly applied algorithms for biomass predictions on bootstrapped subsamples of the data to obtain cross-validated RMSE and r-squared diagnostics, analysed in a factorial design by ANOVA to rank the relative importance of each factor, and used selected models for wall-to-wall mapping of biomass estimates and their associated uncertainty. The results revealed marginal advantages for the strata-specific prediction models over the unstratified ones, which were more obvious on the wall-to-wall mapped area-based predictions, though further tests are necessary to establish the generality of these results. Input data type and statistical prediction method are concluded to remain the two most crucial factors for the quality of remote sensing-assisted biomass models.

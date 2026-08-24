@@ -3,7 +3,7 @@
 title: "Climate-driven, but dynamic and complex? A reconciliation of competing hypotheses for species' distributions"
 date: 2022-01-01
 year: "2022"
-weight: 21
+weight: 22
 slug: "schultz2022climate"
 authors:
   - "Emily L. Schultz"
@@ -19,5 +19,12 @@ volume: "25"
 issue: "1"
 pages: "38–51"
 doi: "10.1111/ele.13902"
+abstract: "Estimates of the percentage of species \"committed to extinction\" by climate change range from 15% to 37%. The question is whether factors other than climate need to be included in models predicting species' range change. We created demographic range models that include climate vs. climate-plus-competition, evaluating their influence on the geographic distribution of Pinus edulis, a pine endemic to the semiarid southwestern U.S. Analyses of data on 23,426 trees in 1941 forest inventory plots support the inclusion of competition in range models. However, climate and competition together only partially explain this species' distribution. Instead, the evidence suggests that climate affects other range-limiting processes, including landscape-scale, spatial processes such as disturbances and antagonistic biotic interactions. Complex effects of climate on species distributions – through indirect effects, interactions, and feedbacks – are likely to cause sudden changes in abundance and distribution that are not predictable from a climate-only perspective."
+significance: "Reconciles competing views on how strongly climate alone determines species' distributions, showing dynamic, non-climatic factors also matter — with direct implications for how confidently extinction risk can be predicted from climate variables alone."
+description: "Reconciles competing views on how strongly climate alone determines species' distributions, showing dynamic, non-climatic factors also matter — with…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Estimates of the percentage of species "committed to extinction" by climate change range from 15% to 37%. The question is whether factors other than climate need to be included in models predicting species' range change. We created demographic range models that include climate vs. climate-plus-competition, evaluating their influence on the geographic distribution of Pinus edulis, a pine endemic to the semiarid southwestern U.S. Analyses of data on 23,426 trees in 1941 forest inventory plots support the inclusion of competition in range models. However, climate and competition together only partially explain this species' distribution. Instead, the evidence suggests that climate affects other range-limiting processes, including landscape-scale, spatial processes such as disturbances and antagonistic biotic interactions. Complex effects of climate on species distributions – through indirect effects, interactions, and feedbacks – are likely to cause sudden changes in abundance and distribution that are not predictable from a climate-only perspective.

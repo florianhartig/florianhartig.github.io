@@ -3,7 +3,7 @@
 title: "Conserving biodiversity with tradable permits under changing conservation costs and habitat restoration time lags"
 date: 2011-01-01
 year: "2011"
-weight: 103
+weight: 104
 slug: "drechsler2011conserving"
 authors:
   - "Martin Drechsler"
@@ -11,7 +11,10 @@ authors:
 authors_display: "Martin Drechsler, Florian Hartig"
 journal: "Ecological Economics"
 volume: "70"
+issue: "3"
 pages: "533–541"
 doi: "10.1016/j.ecolecon.2010.10.004"
+significance: "Models how tradable conservation permit markets perform when habitat restoration costs change over time and restored habitat takes years to become ecologically functional, informing the design of biodiversity-credit markets."
+description: "Models how tradable conservation permit markets perform when habitat restoration costs change over time and restored habitat takes years to become…"
 entry_type: "article"
 ---

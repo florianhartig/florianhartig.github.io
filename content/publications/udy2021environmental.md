@@ -3,7 +3,7 @@
 title: "Environmental heterogeneity predicts global species richness patterns better than area"
 date: 2021-01-01
 year: "2021"
-weight: 35
+weight: 36
 slug: "udy2021environmental"
 authors:
   - "Kristy Udy"
@@ -18,6 +18,13 @@ journal: "Global Ecology and Biogeography"
 volume: "30"
 issue: "4"
 pages: "842–851"
-publisher_url: "https://onlinelibrary.wiley.com/doi/full/10.1111/geb.13261"
+doi: "10.1111/geb.13261"
+abstract: "It is widely accepted that biodiversity is influenced by both niche-related and spatial processes from local to global scales, but their relative importance is still disputed, and empirical tests are surprisingly scarce at the global scale. Here, we compare the importance of area (as a proxy for pure spatial processes) and environmental heterogeneity (as a proxy for niche-related processes) for predicting native mammal species richness world-wide and within biogeographical regions, applying a spreading dye algorithm to a global snapshot of IUCN richness data for all terrestrial mammal species, using elevation ranges and precipitation ranges as measures of environmental heterogeneity. We found that environmental heterogeneity explained species richness relationships better than did area, suggesting that niche-related processes are more prevalent than pure area effects at broad scales. Our results imply that niche-related processes are essential to understand broad-scale species-area relationships, and that habitat diversity is more important than area alone for the protection of global biodiversity."
+significance: "Challenges the classic species-area relationship by showing that habitat heterogeneity is a better global predictor of species richness than area alone, with implications for how conservation planners prioritise which land to protect."
+description: "Challenges the classic species-area relationship by showing that habitat heterogeneity is a better global predictor of species richness than area alone…"
 entry_type: "article"
 ---
+
+## Abstract
+
+It is widely accepted that biodiversity is influenced by both niche-related and spatial processes from local to global scales, but their relative importance is still disputed, and empirical tests are surprisingly scarce at the global scale. Here, we compare the importance of area (as a proxy for pure spatial processes) and environmental heterogeneity (as a proxy for niche-related processes) for predicting native mammal species richness world-wide and within biogeographical regions, applying a spreading dye algorithm to a global snapshot of IUCN richness data for all terrestrial mammal species, using elevation ranges and precipitation ranges as measures of environmental heterogeneity. We found that environmental heterogeneity explained species richness relationships better than did area, suggesting that niche-related processes are more prevalent than pure area effects at broad scales. Our results imply that niche-related processes are essential to understand broad-scale species-area relationships, and that habitat diversity is more important than area alone for the protection of global biodiversity.

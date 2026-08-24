@@ -3,7 +3,7 @@
 title: "Siberian plants shift their phenology in response to climate change"
 date: 2021-01-01
 year: "2021"
-weight: 32
+weight: 33
 slug: "rosbakh2021siberian"
 authors:
   - "Sergey Rosbakh"
@@ -14,6 +14,16 @@ authors:
   - "Richard B. Primack"
 authors_display: "Sergey Rosbakh, Florian Hartig, Denis V. Sandanov, Evgeniya V. Bukharova, Tara K. Miller, Richard B. Primack"
 journal: "Global Change Biology"
+volume: "27"
+issue: "18"
+pages: "4435–4448"
 doi: "10.1111/gcb.15744"
+abstract: "Siberia has undergone dramatic climatic changes due to global warming in recent decades. Yet, the ecological responses to these climatic changes are still poorly understood due to a lack of data. Here, we use a unique data set from the Russian \"Chronicles of Nature\" network to analyse the long-term (1976-2018) phenological shifts in leaf out, flowering, fruiting and senescence of 67 common Siberian plant species. We find that Siberian boreal forest plants advanced their early season (leaf out and flowering) and mid-season (fruiting) phenology by -2.2, -0.7 and -1.6 days/decade, and delayed the onset of senescence by 1.6 days/decade during this period. These mean values, however, are subject to substantial intraspecific variability, partly explained by the plants' growth forms: trees and shrubs advanced leaf out and flowering faster than herbs, presumably due to the more direct exposure of leaf and flower buds to ambient air for the woody vegetation, while for senescence we detected a reverse pattern, with stronger delays in herbs than in woody plants, presumably due to the stronger effects of autumn frosts on the leaves of herbs. Our findings point to a strong, yet heterogeneous, response of Siberian plant phenology to recent global warming, and highlight that species- and growth form-specific differences among study species could be used to identify plants particularly at risk of decline due to their low adaptive capacity or a loss of synchronization with important interaction partners."
+significance: "Documents how the timing of key life-cycle events in Siberian plants is shifting with climate change in one of the fastest-warming, least-studied regions on Earth, filling a data gap for a critically under-sampled part of the globe."
+description: "Documents how the timing of key life-cycle events in Siberian plants is shifting with climate change in one of the fastest-warming, least-studied regions…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Siberia has undergone dramatic climatic changes due to global warming in recent decades. Yet, the ecological responses to these climatic changes are still poorly understood due to a lack of data. Here, we use a unique data set from the Russian "Chronicles of Nature" network to analyse the long-term (1976-2018) phenological shifts in leaf out, flowering, fruiting and senescence of 67 common Siberian plant species. We find that Siberian boreal forest plants advanced their early season (leaf out and flowering) and mid-season (fruiting) phenology by -2.2, -0.7 and -1.6 days/decade, and delayed the onset of senescence by 1.6 days/decade during this period. These mean values, however, are subject to substantial intraspecific variability, partly explained by the plants' growth forms: trees and shrubs advanced leaf out and flowering faster than herbs, presumably due to the more direct exposure of leaf and flower buds to ambient air for the woody vegetation, while for senescence we detected a reverse pattern, with stronger delays in herbs than in woody plants, presumably due to the stronger effects of autumn frosts on the leaves of herbs. Our findings point to a strong, yet heterogeneous, response of Siberian plant phenology to recent global warming, and highlight that species- and growth form-specific differences among study species could be used to identify plants particularly at risk of decline due to their low adaptive capacity or a loss of synchronization with important interaction partners.

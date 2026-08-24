@@ -3,7 +3,7 @@
 title: "Bayesian inference of environmental and biotic factors determining the occurrence of the grapevine disease bois noir"
 date: 2015-01-01
 year: "2015"
-weight: 86
+weight: 87
 slug: "panassiti2015bayesian"
 authors:
   - "Bernd Panassiti"
@@ -13,7 +13,15 @@ authors:
 authors_display: "Bernd Panassiti, Florian Hartig, Michael Breuer, Robert Biedermann"
 journal: "Ecosphere"
 volume: "6"
-pages: "143"
-publisher_url: "http://www.esajournals.org/doi/full/10.1890/ES14-00439.1"
+issue: "8"
+pages: "1–13"
+doi: "10.1890/ES14-00439.1"
+abstract: "Insect-vectored plant diseases often create complex epidemiological systems that are challenging to understand, predict, and manage. An example is \"bois noir\" (BN), a phytoplasma-associated grapevine disease commonly found in European vineyards. Although BN has the potential to cause substantial economic damage, the factors that contribute to BN prevalence in vineyards are still not well understood. We used Bayesian inference with generalized linear mixed-effect models to test the hypotheses that grapevine varieties exhibit different BN susceptibility, that environmental drivers influence prevalence of the disease and occurrence of the vector, and that the presence of the main vector is a major determinant of BN occurrence. We found that the presence of the vector Hyalesthes obsoletus increased with increasing isothermality, minimum temperatures during the coldest period, soil erosion, and natural vegetation in close proximity to the vineyards, and that presence of the BN disease increased with presence of the vector as well as increasing altitudes and mean annual temperatures. After accounting for those factors, Chardonnay and Riesling showed higher disease prevalence than Müller-Thurgau, Silvaner, and Merlot. Although the vector had an overall positive effect on the disease prevalence, disease and vector occurrence show distinct spatial patterns, suggesting that vector presence is not the only, and maybe not the most important, factor for BN disease prevalence – environment and grape cultivar also play important roles. Area-wide predictions of both environmental disease risk and vector presence, together with information about the susceptibility of grape cultivars, will enable more targeted disease management, and our modelling framework could easily be applied to other diseases of concern, such as apple proliferation or flavescence dorée."
+significance: "Uses Bayesian inference to disentangle which environmental and biotic factors actually drive occurrence of the bois noir grapevine disease, part of a series of papers building an evidence base for managing this vector-borne disease."
+description: "Uses Bayesian inference to disentangle which environmental and biotic factors actually drive occurrence of the bois noir grapevine disease, part of a…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Insect-vectored plant diseases often create complex epidemiological systems that are challenging to understand, predict, and manage. An example is "bois noir" (BN), a phytoplasma-associated grapevine disease commonly found in European vineyards. Although BN has the potential to cause substantial economic damage, the factors that contribute to BN prevalence in vineyards are still not well understood. We used Bayesian inference with generalized linear mixed-effect models to test the hypotheses that grapevine varieties exhibit different BN susceptibility, that environmental drivers influence prevalence of the disease and occurrence of the vector, and that the presence of the main vector is a major determinant of BN occurrence. We found that the presence of the vector Hyalesthes obsoletus increased with increasing isothermality, minimum temperatures during the coldest period, soil erosion, and natural vegetation in close proximity to the vineyards, and that presence of the BN disease increased with presence of the vector as well as increasing altitudes and mean annual temperatures. After accounting for those factors, Chardonnay and Riesling showed higher disease prevalence than Müller-Thurgau, Silvaner, and Merlot. Although the vector had an overall positive effect on the disease prevalence, disease and vector occurrence show distinct spatial patterns, suggesting that vector presence is not the only, and maybe not the most important, factor for BN disease prevalence – environment and grape cultivar also play important roles. Area-wide predictions of both environmental disease risk and vector presence, together with information about the susceptibility of grape cultivars, will enable more targeted disease management, and our modelling framework could easily be applied to other diseases of concern, such as apple proliferation or flavescence dorée.

@@ -3,7 +3,7 @@
 title: "Connecting dynamic vegetation models to data — an inverse perspective"
 date: 2012-01-01
 year: "2012"
-weight: 97
+weight: 98
 slug: "hartig2012connecting"
 authors:
   - "Florian Hartig"
@@ -16,7 +16,15 @@ authors:
 authors_display: "Florian Hartig, James Dyke, Thomas Hickler, Steven Higgins, Robert B. O'Hara, Simon Scheiter, Andreas Huth"
 journal: "Journal of Biogeography"
 volume: "39"
+issue: "12"
 pages: "2240–2252"
 doi: "10.1111/j.1365-2699.2012.02745.x"
+abstract: "Dynamic vegetation models provide process-based explanations of the dynamics and the distribution of plant ecosystems, offering significant advantages over static, correlative modelling approaches, particularly for ecosystems that are outside their equilibrium due to global change or climate change. A persistent problem, however, is their parameterization. Parameters and processes of dynamic vegetation models (DVMs) are traditionally determined independently of the model, while model outputs are compared to empirical data for validation and informal model comparison only. In this paper, we discuss the use of Bayesian methods to bridge this gap, explaining how they allow direct estimates of parameters and processes, encoded in prior distributions, to be combined with inverse estimates, encoded in likelihood functions. The combination of direct and inverse estimation allows a much wider range of vegetation data to be used simultaneously, including vegetation inventories, species traits, species distributions, remote sensing, eddy flux measurements and palaeorecords. The possible reduction of uncertainty regarding structure, parameters and predictions of DVMs may not only foster scientific progress, but will also increase the relevance of these models for policy advice."
+significance: "Frames fitting dynamic vegetation models to observational data as an ‘inverse problem’, providing a conceptual and statistical roadmap for calibrating process-based vegetation models — foundational for the model-data fusion approach used throughout much of Hartig's later forest-model work."
+description: "Frames fitting dynamic vegetation models to observational data as an ‘inverse problem’, providing a conceptual and statistical roadmap for calibrating…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Dynamic vegetation models provide process-based explanations of the dynamics and the distribution of plant ecosystems, offering significant advantages over static, correlative modelling approaches, particularly for ecosystems that are outside their equilibrium due to global change or climate change. A persistent problem, however, is their parameterization. Parameters and processes of dynamic vegetation models (DVMs) are traditionally determined independently of the model, while model outputs are compared to empirical data for validation and informal model comparison only. In this paper, we discuss the use of Bayesian methods to bridge this gap, explaining how they allow direct estimates of parameters and processes, encoded in prior distributions, to be combined with inverse estimates, encoded in likelihood functions. The combination of direct and inverse estimation allows a much wider range of vegetation data to be used simultaneously, including vegetation inventories, species traits, species distributions, remote sensing, eddy flux measurements and palaeorecords. The possible reduction of uncertainty regarding structure, parameters and predictions of DVMs may not only foster scientific progress, but will also increase the relevance of these models for policy advice.

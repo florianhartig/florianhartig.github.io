@@ -3,7 +3,7 @@
 title: "Inferring species interactions using Granger causality and convergent cross mapping"
 date: 2021-01-01
 year: "2021"
-weight: 33
+weight: 34
 slug: "barraquand2021inferring"
 authors:
   - "Frédéric Barraquand"
@@ -15,7 +15,14 @@ journal: "Theoretical Ecology"
 volume: "14"
 issue: "1"
 pages: "87–105"
-publisher_url: "https://link.springer.com/article/10.1007/s12080-020-00482-7"
+doi: "10.1007/s12080-020-00482-7"
 preprint: "https://arxiv.org/abs/1909.00731"
+abstract: "Identifying directed interactions between species from time series of their population densities has many uses in ecology. This key statistical task is equivalent to causal time series inference, which connects to the Granger causality (GC) concept: x causes y if x improves the prediction of y in a dynamic model. However, the entangled nature of nonlinear ecological systems has led to question the appropriateness of Granger causality, especially in its classical linear multivariate autoregressive (MAR) model form. Convergent cross mapping (CCM), a nonparametric method developed for deterministic dynamical systems, has been suggested as an alternative. Here, we show that linear GC and CCM are able to uncover interactions with surprisingly similar performance, for predator-prey cycles, two-species deterministic (chaotic) or stochastic competition, as well as 10- and 20-species interaction networks. We found no correspondence between the degree of nonlinearity of the dynamics and which method performs best. Our results therefore imply that Granger causality, even in its linear MAR(p) formulation, is a valid method for inferring interactions in nonlinear ecological networks; using GC or CCM (or both) can instead be decided based on the aims and specifics of the analysis."
+significance: "Compares two statistical approaches for inferring which species causally affect each other's population dynamics purely from time-series data, clarifying what these popular causal-inference tools can and cannot reliably detect in ecological data."
+description: "Compares two statistical approaches for inferring which species causally affect each other's population dynamics purely from time-series data, clarifying…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Identifying directed interactions between species from time series of their population densities has many uses in ecology. This key statistical task is equivalent to causal time series inference, which connects to the Granger causality (GC) concept: x causes y if x improves the prediction of y in a dynamic model. However, the entangled nature of nonlinear ecological systems has led to question the appropriateness of Granger causality, especially in its classical linear multivariate autoregressive (MAR) model form. Convergent cross mapping (CCM), a nonparametric method developed for deterministic dynamical systems, has been suggested as an alternative. Here, we show that linear GC and CCM are able to uncover interactions with surprisingly similar performance, for predator-prey cycles, two-species deterministic (chaotic) or stochastic competition, as well as 10- and 20-species interaction networks. We found no correspondence between the degree of nonlinearity of the dynamics and which method performs best. Our results therefore imply that Granger causality, even in its linear MAR(p) formulation, is a valid method for inferring interactions in nonlinear ecological networks; using GC or CCM (or both) can instead be decided based on the aims and specifics of the analysis.

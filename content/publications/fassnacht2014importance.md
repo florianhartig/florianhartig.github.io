@@ -3,7 +3,7 @@
 title: "Importance of sample size, data type and prediction method for remote sensing based estimations of aboveground forest biomass"
 date: 2014-01-01
 year: "2014"
-weight: 88
+weight: 89
 slug: "fassnacht2014importance"
 authors:
   - "Fabian Fassnacht"
@@ -17,6 +17,8 @@ authors_display: "Fabian Fassnacht, Florian Hartig, Hooman Latifi, Christian Ber
 journal: "Remote Sensing of Environment"
 volume: "154"
 pages: "102–114"
-publisher_url: "http://www.sciencedirect.com/science/article/pii/S0034425714003022"
+doi: "10.1016/j.rse.2014.07.028"
+significance: "A methodological study on how sample size, the type of reference data, and the choice of statistical prediction method each affect the accuracy of remote-sensing-based forest biomass estimates, offering practical guidance for designing biomass-mapping studies."
+description: "A methodological study on how sample size, the type of reference data, and the choice of statistical prediction method each affect the accuracy of…"
 entry_type: "article"
 ---

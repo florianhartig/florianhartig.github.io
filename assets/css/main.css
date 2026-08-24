@@ -367,11 +367,57 @@ p { margin: 0 0 1.1em; }
 
 .pub-authors { font-size: 0.95rem; margin-top: 1rem; }
 .pub-actions { margin: 1.75rem 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.pub-doi {
+  display: inline-block;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--text-faint);
+}
+.pub-doi a { color: var(--text-faint); }
+.pub-doi a:hover { color: var(--accent); }
+.pub-significance {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.pub-significance h2 { margin-top: 0; }
 .pub-note {
   font-size: 0.85rem;
   color: var(--text-faint);
   border-top: 1px solid var(--border);
   padding-top: 0.9rem;
+}
+.pub-cite {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+.pub-cite summary {
+  cursor: pointer;
+  color: var(--text-faint);
+}
+.pub-cite summary:hover { color: var(--accent); }
+.pub-cite pre {
+  margin-top: 0.6rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+/* Sits inline in the citation-meta line (right after the year, before the
+   DOI) rather than as its own block — only the summary trigger is inline;
+   the <pre> still opens as its own full-width block below. */
+.pub-cite-inline {
+  display: inline-block;
+  margin-top: 0;
+  margin-left: 0.5em;
+  font-size: 0.8rem;
+  vertical-align: baseline;
+}
+.pub-cite-inline pre {
+  display: block;
+  white-space: pre;
 }
 
 .button {

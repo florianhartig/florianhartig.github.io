@@ -3,7 +3,7 @@
 title: "Calibrating an individual-based movement model to predict functional connectivity for little owls"
 date: 2019-01-01
 year: "2019"
-weight: 56
+weight: 57
 slug: "hauenstein2019calibrating"
 authors:
   - "Severin Hauenstein"
@@ -18,5 +18,12 @@ volume: "29"
 issue: "4"
 pages: "e01873"
 doi: "10.1002/eap.1873"
+abstract: "Dispersal is crucial for population viability and thus a popular target for conservation measures, but the ability of individuals to move between habitat patches is notoriously difficult to estimate. One solution is to quantify functional connectivity via realistic individual-based movement models, which are difficult to build and even more difficult to parameterize. Here, we use the example of natal little owl (Athene noctua) dispersal to develop a new analysis chain for calibrating individual-based dispersal models using a hybrid of statistical parameter estimation and Approximate Bayesian Computation (ABC). Using locations of 126 radio-tracked juveniles, we first estimate habitat utilization by generalized additive models and the biased random bridges method, then include the estimated parameters in a spatially explicit individual-based model of little owl dispersal and calibrate further movement parameters using ABC, deriving efficient summary statistics via a dimension reduction method based on random forest regression. We use the calibrated model to predict the dispersal potential of little owls from local populations in southwestern Germany to suitable habitat patches in northern Switzerland. Estimated movement parameters reveal plausible inter-individual and inter-sexual differences in movement behavior during natal dispersal, and simulations from the fitted model indicate that a (re)colonization of northern Switzerland is generally possible, albeit restricted. Our study highlights existing, yet narrow dispersal corridors, which may require enhancements to facilitate a recolonization of little owl habitat patches in northern Switzerland."
+significance: "Calibrates an individual-based movement model against real little owl dispersal data to predict functional landscape connectivity, giving conservation planners a tool to assess whether a landscape actually lets this species move between habitat patches."
+description: "Calibrates an individual-based movement model against real little owl dispersal data to predict functional landscape connectivity, giving conservation…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Dispersal is crucial for population viability and thus a popular target for conservation measures, but the ability of individuals to move between habitat patches is notoriously difficult to estimate. One solution is to quantify functional connectivity via realistic individual-based movement models, which are difficult to build and even more difficult to parameterize. Here, we use the example of natal little owl (Athene noctua) dispersal to develop a new analysis chain for calibrating individual-based dispersal models using a hybrid of statistical parameter estimation and Approximate Bayesian Computation (ABC). Using locations of 126 radio-tracked juveniles, we first estimate habitat utilization by generalized additive models and the biased random bridges method, then include the estimated parameters in a spatially explicit individual-based model of little owl dispersal and calibrate further movement parameters using ABC, deriving efficient summary statistics via a dimension reduction method based on random forest regression. We use the calibrated model to predict the dispersal potential of little owls from local populations in southwestern Germany to suitable habitat patches in northern Switzerland. Estimated movement parameters reveal plausible inter-individual and inter-sexual differences in movement behavior during natal dispersal, and simulations from the fitted model indicate that a (re)colonization of northern Switzerland is generally possible, albeit restricted. Our study highlights existing, yet narrow dispersal corridors, which may require enhancements to facilitate a recolonization of little owl habitat patches in northern Switzerland.

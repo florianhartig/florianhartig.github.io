@@ -3,7 +3,7 @@
 title: "An R package facilitating sensitivity analysis, calibration and forward simulations with the LPJ-GUESS dynamic vegetation model"
 date: 2019-01-01
 year: "2019"
-weight: 63
+weight: 64
 slug: "bagnara2019r"
 authors:
   - "Maurizio Bagnara"
@@ -13,6 +13,15 @@ authors:
 authors_display: "Maurizio Bagnara, Ramiro Silveyra Gonzalez, Simon Reifenberg, …, Florian Hartig"
 journal: "Environmental Modelling & Software"
 volume: "111"
+issue: "C"
 pages: "55–60"
+doi: "10.1016/j.envsoft.2018.09.004"
+abstract: "Dynamic global vegetation models (DGVMs) are of crucial importance for understanding and predicting vegetation, carbon, nitrogen and water dynamics of ecosystems in response to climate change. Their complexity, however, creates challenges for model analysis and data integration. A solution is to interface DGVMs with established statistical computing environments. Here we introduce rLPJGUESS, an R package that couples the widely used DGVM LPJ-GUESS with the R environment for statistical computing, making existing R packages and functions readily available to perform complex analyses with this model. We demonstrate the advantages of this framework by using rLPJGUESS to perform several otherwise laborious tasks: a set of single simulations, followed by global and local sensitivity analyses, a Bayesian calibration with a Markov-Chain Monte Carlo (MCMC) algorithm, and a predictive simulation with multiple climate scenarios. Our example highlights the opportunities of interfacing existing models in earth and environmental sciences with state-of-the-art computing environments such as R."
+significance: "Provides an R toolkit that makes sensitivity analysis and Bayesian calibration of the LPJ-GUESS vegetation model, previously a specialist undertaking, accessible to a much wider set of users."
+description: "Provides an R toolkit that makes sensitivity analysis and Bayesian calibration of the LPJ-GUESS vegetation model, previously a specialist undertaking…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Dynamic global vegetation models (DGVMs) are of crucial importance for understanding and predicting vegetation, carbon, nitrogen and water dynamics of ecosystems in response to climate change. Their complexity, however, creates challenges for model analysis and data integration. A solution is to interface DGVMs with established statistical computing environments. Here we introduce rLPJGUESS, an R package that couples the widely used DGVM LPJ-GUESS with the R environment for statistical computing, making existing R packages and functions readily available to perform complex analyses with this model. We demonstrate the advantages of this framework by using rLPJGUESS to perform several otherwise laborious tasks: a set of single simulations, followed by global and local sensitivity analyses, a Bayesian calibration with a Markov-Chain Monte Carlo (MCMC) algorithm, and a predictive simulation with multiple climate scenarios. Our example highlights the opportunities of interfacing existing models in earth and environmental sciences with state-of-the-art computing environments such as R.

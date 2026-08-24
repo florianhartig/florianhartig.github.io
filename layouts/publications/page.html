@@ -4,12 +4,41 @@
     <p class="breadcrumb"><a href="{{ "/publications/" | relURL }}">← Publications</a></p>
     <h1>{{ .Title }}</h1>
     <p class="citation-authors pub-authors">{{ .Params.authors_display | default (delimit .Params.authors ", ") }}</p>
-    <p class="citation-meta">
+    <div class="citation-meta">
       {{- with .Params.journal }}<em>{{ . }}</em>{{ end }}
       {{- with .Params.volume }}, {{ . }}{{ with $.Params.issue }}({{ . }}){{ end }}{{ else }}{{ with .Params.issue }}, ({{ . }}){{ end }}{{ end }}
       {{- with .Params.pages }}, {{ . }}{{ end }}
       {{- with .Params.year }} ({{ . }}){{ end }}
-    </p>
+      {{- with .Params.authors }}
+      {{- $type := $.Params.entry_type | default "article" }}
+      <details class="pub-cite pub-cite-inline">
+        <summary>Cite this</summary>
+<pre>@{{ $type }}{{"{"}}{{ $.Params.slug }},
+  author = {{"{"}}{{ delimit . " and " }}{{"}"}},
+  title = {{"{"}}{{ $.Title }}{{"}"}},
+  {{- with $.Params.journal }}
+  journal = {{"{"}}{{ . }}{{"}"}},
+  {{- end }}
+  {{- with $.Params.volume }}
+  volume = {{"{"}}{{ . }}{{"}"}},
+  {{- end }}
+  {{- with $.Params.issue }}
+  number = {{"{"}}{{ . }}{{"}"}},
+  {{- end }}
+  {{- with $.Params.pages }}
+  pages = {{"{"}}{{ . }}{{"}"}},
+  {{- end }}
+  {{- with $.Params.year }}
+  year = {{"{"}}{{ . }}{{"}"}},
+  {{- end }}
+  {{- with $.Params.doi }}
+  doi = {{"{"}}{{ . }}{{"}"}},
+  {{- end }}
+}</pre>
+      </details>
+      {{- end }}
+      {{- with .Params.doi }}<br><span class="pub-doi">DOI: <a href="https://doi.org/{{ . }}" rel="noopener">{{ . }}</a></span>{{ end }}
+    </div>
 
     <p class="pub-actions">
       {{- with .Params.doi }}
@@ -25,6 +54,13 @@
 
     {{- with .Content }}
     <div class="prose">{{ . }}</div>
+    {{- end }}
+
+    {{- with .Params.significance }}
+    <div class="prose pub-significance">
+      <h2>What the paper shows and why it matters</h2>
+      <p>{{ . }}</p>
+    </div>
     {{- end }}
 
     {{- with .Params.note }}

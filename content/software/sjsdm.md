@@ -3,6 +3,7 @@ title: "sjSDM"
 weight: 30
 category: "Further packages from the group"
 summary: "Scalable joint species distribution modelling, estimating the full species covariance matrix rather than approximating it."
+paper: "pichler2021new"
 links:
   - name: "GitHub"
     url: "https://github.com/TheoreticalEcology/s-jSDM"

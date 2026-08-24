@@ -3,7 +3,7 @@
 title: "Prior hypotheses or regularization allow inference of diversification histories from extant timetrees"
 date: 2020-01-01
 year: "2020"
-weight: 40
+weight: 41
 slug: "morlon2020prior"
 authors:
   - "Hélène Morlon"
@@ -11,7 +11,15 @@ authors:
   - "Stéphane Robin"
 authors_display: "Hélène Morlon, Florian Hartig, Stéphane Robin"
 journal: "bioRxiv"
+doi: "10.1101/2020.07.03.185074"
 preprint: "https://www.biorxiv.org/content/10.1101/2020.07.03.185074v1.abstract"
 note: "Preprint. Comment on Louca & Pennell, Nature, 2020."
+abstract: "Phylogenies of extant species are widely used to study past diversification dynamics, including how speciation and extinction rates have varied over time. Louca and Pennell recently argued that this is not possible: for any diversification history, there is an infinite number of \"congruent\" models with markedly different speciation and extinction dynamics that nevertheless have exactly the same likelihood for any tree of extant species. Here we discuss and clarify the implications of these results. We show that they neither undermine the hypothesis-driven model selection procedure widely used in the field, in which a finite set of diversification scenarios reflecting specific hypotheses are compared, nor do they show that speciation and extinction dynamics cannot be investigated from extant timetrees using a data-driven procedure, provided such an approach incorporates prior hypotheses or regularization to select among the congruent models."
+significance: "Responds to a critique of phylogenetic diversification methods, showing that adding biologically motivated priors or regularisation can still recover reliable estimates of past speciation/extinction dynamics from present-day phylogenies."
+description: "Responds to a critique of phylogenetic diversification methods, showing that adding biologically motivated priors or regularisation can still recover…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Phylogenies of extant species are widely used to study past diversification dynamics, including how speciation and extinction rates have varied over time. Louca and Pennell recently argued that this is not possible: for any diversification history, there is an infinite number of "congruent" models with markedly different speciation and extinction dynamics that nevertheless have exactly the same likelihood for any tree of extant species. Here we discuss and clarify the implications of these results. We show that they neither undermine the hypothesis-driven model selection procedure widely used in the field, in which a finite set of diversification scenarios reflecting specific hypotheses are compared, nor do they show that speciation and extinction dynamics cannot be investigated from extant timetrees using a data-driven procedure, provided such an approach incorporates prior hypotheses or regularization to select among the congruent models.

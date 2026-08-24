@@ -3,7 +3,7 @@
 title: "Plant species richness increases with light availability, but not variability, in temperate forests understorey"
 date: 2020-01-01
 year: "2020"
-weight: 41
+weight: 42
 slug: "dormann2020plant"
 authors:
   - "Carsten F. Dormann"
@@ -17,7 +17,14 @@ authors_display: "Carsten F. Dormann, Maurizio Bagnara, Steffen Boch, Judith Hin
 journal: "BMC Ecology"
 volume: "20"
 issue: "1"
-pages: "1–9"
-publisher_url: "https://link.springer.com/article/10.1186/s12898-020-00311-9"
+pages: "43"
+doi: "10.1186/s12898-020-00311-9"
+abstract: "Temperate forest understorey vegetation poses an excellent study system to investigate whether increases in resource availability lead to an increase in plant species richness. Most sunlight is absorbed by the species-poor tree canopy, making the much more species-rich understorey inhabit a severely resource-limited habitat. Additionally, the heterogeneity of light availability, resulting from management-moderated tree composition and age structure, may contribute to species coexistence. One would therefore expect that the diversity in the herb layer correlates positively with either the overall light availability, or the light heterogeneity, depending on whether resource availability or heterogeneity are more important drivers of diversity. To test this idea, we assessed variability of light conditions in 75 forest plots across three ecoregions with four different methods and correlated these data with vegetation relevés. We found light availability to be strongly positively correlated with understorey plant species richness, as well as with understorey cover. Light variability within plots was positively correlated with transmittance but did not improve the relationship further, suggesting that the main driver of species richness in this system is the overall resource availability. Two of the three beech-dominated regions exhibited near-identical effects of light transmittance, while the third, featuring pine alongside beech and thus with the longest gradient of transmittance and lowest species richness, displayed a weaker light response. Our results suggest that light transmittance is a strong mediating factor of understorey plant species richness."
+significance: "Finds that forest-understorey plant diversity increases with the average amount of light reaching the ground but not with how variable that light is over time, refining what resource axis actually drives understorey diversity."
+description: "Finds that forest-understorey plant diversity increases with the average amount of light reaching the ground but not with how variable that light is over…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Temperate forest understorey vegetation poses an excellent study system to investigate whether increases in resource availability lead to an increase in plant species richness. Most sunlight is absorbed by the species-poor tree canopy, making the much more species-rich understorey inhabit a severely resource-limited habitat. Additionally, the heterogeneity of light availability, resulting from management-moderated tree composition and age structure, may contribute to species coexistence. One would therefore expect that the diversity in the herb layer correlates positively with either the overall light availability, or the light heterogeneity, depending on whether resource availability or heterogeneity are more important drivers of diversity. To test this idea, we assessed variability of light conditions in 75 forest plots across three ecoregions with four different methods and correlated these data with vegetation relevés. We found light availability to be strongly positively correlated with understorey plant species richness, as well as with understorey cover. Light variability within plots was positively correlated with transmittance but did not improve the relationship further, suggesting that the main driver of species richness in this system is the overall resource availability. Two of the three beech-dominated regions exhibited near-identical effects of light transmittance, while the third, featuring pine alongside beech and thus with the longest gradient of transmittance and lowest species richness, displayed a weaker light response. Our results suggest that light transmittance is a strong mediating factor of understorey plant species richness.

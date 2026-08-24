@@ -3,7 +3,7 @@
 title: "Tree mortality submodels drive simulated long-term forest dynamics: assessing 15 models from the stand to global scale"
 date: 2019-01-01
 year: "2019"
-weight: 61
+weight: 62
 slug: "bugmann2019tree"
 authors:
   - "Harald Bugmann"
@@ -16,5 +16,12 @@ volume: "10"
 issue: "2"
 pages: "e02616"
 doi: "10.1002/ecs2.2616"
+abstract: "Models are pivotal for assessing future forest dynamics under the impacts of changing climate and management practices, incorporating representations of tree growth, mortality, and regeneration, yet quantitative studies on the importance of mortality submodels are scarce. We evaluated 15 dynamic vegetation models (DVMs) regarding their sensitivity to different formulations of tree mortality under different degrees of climate change. The set of models comprised eight DVMs at the stand scale, three at the landscape scale, and four typically applied at the continental to global scale; each was run with at least two alternative mortality submodels, evaluated against empirical time series data and then subjected to different scenarios of climate change. Most DVMs matched empirical data quite well irrespective of the mortality submodel used, but mortality submodels that performed in a very similar manner against past data often led to sharply different trajectories of forest dynamics under future climate change. Most DVMs featured high sensitivity to the mortality submodel, with deviations of basal area and stem numbers on the order of 10-40% per century under current climate and 20-170% under climate change; the sensitivity of a given DVM to scenarios of climate change, however, was typically lower by a factor of two to three. We conclude that mortality is one of the most uncertain processes when it comes to assessing forest response to climate change, and that more data and a better process understanding of tree mortality are needed to improve the robustness of simulated future forest dynamics."
+significance: "Compares 15 forest models and shows that how each represents tree mortality, often a crude add-on, is actually a dominant driver of their long-term simulated forest dynamics, flagging mortality as an under-scrutinised weak point across the field's models."
+description: "Compares 15 forest models and shows that how each represents tree mortality, often a crude add-on, is actually a dominant driver of their long-term…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Models are pivotal for assessing future forest dynamics under the impacts of changing climate and management practices, incorporating representations of tree growth, mortality, and regeneration, yet quantitative studies on the importance of mortality submodels are scarce. We evaluated 15 dynamic vegetation models (DVMs) regarding their sensitivity to different formulations of tree mortality under different degrees of climate change. The set of models comprised eight DVMs at the stand scale, three at the landscape scale, and four typically applied at the continental to global scale; each was run with at least two alternative mortality submodels, evaluated against empirical time series data and then subjected to different scenarios of climate change. Most DVMs matched empirical data quite well irrespective of the mortality submodel used, but mortality submodels that performed in a very similar manner against past data often led to sharply different trajectories of forest dynamics under future climate change. Most DVMs featured high sensitivity to the mortality submodel, with deviations of basal area and stem numbers on the order of 10-40% per century under current climate and 20-170% under climate change; the sensitivity of a given DVM to scenarios of climate change, however, was typically lower by a factor of two to three. We conclude that mortality is one of the most uncertain processes when it comes to assessing forest response to climate change, and that more data and a better process understanding of tree mortality are needed to improve the robustness of simulated future forest dynamics.

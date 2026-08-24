@@ -3,7 +3,7 @@
 title: "Smart spatial incentives for market-based conservation"
 date: 2009-01-01
 year: "2009"
-weight: 108
+weight: 109
 slug: "hartig2009smart"
 authors:
   - "Florian Hartig"
@@ -11,7 +11,15 @@ authors:
 authors_display: "Florian Hartig, Martin Drechsler"
 journal: "Biological Conservation"
 volume: "142"
+issue: "4"
 pages: "779–788"
 doi: "10.1016/j.biocon.2008.12.014"
+abstract: "Market-based instruments such as payments, auctions or tradable permits have been proposed as flexible and cost-effective instruments for biodiversity conservation on private lands. Trading the service of conservation requires one to define a metric that determines the extent to which a conserved site adds to the regional conservation objective. Yet, while markets for conservation are widely discussed and increasingly applied, little research has been conducted on explicitly accounting for spatial ecological processes in the trading. In this paper, we use a coupled ecological-economic simulation model to examine how spatial connectivity may be considered in the financial incentives created by a market-based conservation scheme. Land use decisions, driven by changing conservation costs and the conservation market, are simulated by an agent-based model of land users, on top of which a metapopulation model evaluates the conservational success of the market. We find that optimal spatial incentives for agents correlate with species characteristics such as the dispersal distance, but they also depend on the spatio-temporal distribution of conservation costs. We conclude that a combined analysis of ecological and socio-economic conditions should be applied when designing market instruments to protect biodiversity."
+significance: "Proposes spatially ‘smart’ incentive schemes for market-based conservation instruments, showing that accounting for spatial context in how payments are allocated can make conservation markets substantially more effective per dollar spent."
+description: "Proposes spatially ‘smart’ incentive schemes for market-based conservation instruments, showing that accounting for spatial context in how payments are…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Market-based instruments such as payments, auctions or tradable permits have been proposed as flexible and cost-effective instruments for biodiversity conservation on private lands. Trading the service of conservation requires one to define a metric that determines the extent to which a conserved site adds to the regional conservation objective. Yet, while markets for conservation are widely discussed and increasingly applied, little research has been conducted on explicitly accounting for spatial ecological processes in the trading. In this paper, we use a coupled ecological-economic simulation model to examine how spatial connectivity may be considered in the financial incentives created by a market-based conservation scheme. Land use decisions, driven by changing conservation costs and the conservation market, are simulated by an agent-based model of land users, on top of which a metapopulation model evaluates the conservational success of the market. We find that optimal spatial incentives for agents correlate with species characteristics such as the dispersal distance, but they also depend on the spatio-temporal distribution of conservation costs. We conclude that a combined analysis of ecological and socio-economic conditions should be applied when designing market instruments to protect biodiversity.

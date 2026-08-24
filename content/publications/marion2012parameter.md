@@ -3,7 +3,7 @@
 title: "Parameter and uncertainty estimation for process-oriented population and distribution models: data, statistics and the niche"
 date: 2012-01-01
 year: "2012"
-weight: 98
+weight: 99
 slug: "marion2012parameter"
 authors:
   - "Glenn Marion"
@@ -17,7 +17,15 @@ authors:
 authors_display: "Glenn Marion, Greg McInerny, Jörn Pagel, Stephen Catterall, Alex Cook, Florian Hartig, Frank Schurr, Robert B. O'Hara"
 journal: "Journal of Biogeography"
 volume: "39"
+issue: "12"
 pages: "2225–2239"
 doi: "10.1111/j.1365-2699.2012.02772.x"
+abstract: "The spatial distribution of a species is determined by dynamic processes such as reproduction, mortality and dispersal. Conventional static species distribution models (SDMs) do not incorporate these processes explicitly, which limits their applicability, particularly for non-equilibrium situations such as invasions or climate change. In this paper we show how dynamic SDMs can be formulated and fitted to data within a Bayesian framework, focusing on discrete state-space Markov process models which provide a flexible framework to account for stochasticity in key demographic processes, including dispersal, growth and competition. We show how to construct likelihood functions for such models and how these can be combined with suitable observation models to conduct Bayesian parameter inference using computational techniques such as Markov chain Monte Carlo, illustrating the current state of the art with three contrasting examples using both simulated and empirical data. Application of such techniques will enable more reliable inference and projections under future climate change scenarios than is possible with purely correlative approaches."
+significance: "Reviews how to properly estimate parameters and their uncertainty in process-based population and distribution models, arguing these need the same statistical rigor as standard correlative species distribution models to be trusted."
+description: "Reviews how to properly estimate parameters and their uncertainty in process-based population and distribution models, arguing these need the same…"
 entry_type: "article"
 ---
+
+## Abstract
+
+The spatial distribution of a species is determined by dynamic processes such as reproduction, mortality and dispersal. Conventional static species distribution models (SDMs) do not incorporate these processes explicitly, which limits their applicability, particularly for non-equilibrium situations such as invasions or climate change. In this paper we show how dynamic SDMs can be formulated and fitted to data within a Bayesian framework, focusing on discrete state-space Markov process models which provide a flexible framework to account for stochasticity in key demographic processes, including dispersal, growth and competition. We show how to construct likelihood functions for such models and how these can be combined with suitable observation models to conduct Bayesian parameter inference using computational techniques such as Markov chain Monte Carlo, illustrating the current state of the art with three contrasting examples using both simulated and empirical data. Application of such techniques will enable more reliable inference and projections under future climate change scenarios than is possible with purely correlative approaches.

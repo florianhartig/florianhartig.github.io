@@ -3,7 +3,7 @@
 title: "Climate and parameter sensitivity and induced uncertainties in carbon stock projections for European forests (using LPJ-GUESS 4.0)"
 date: 2022-01-01
 year: "2022"
-weight: 22
+weight: 23
 slug: "oberpriller2022climate"
 authors:
   - "Johannes Oberpriller"
@@ -18,6 +18,13 @@ journal: "Geoscientific Model Development"
 volume: "15"
 issue: "16"
 pages: "6495–6519"
-publisher_url: "https://gmd.copernicus.org/articles/15/6495/2022/"
+doi: "10.5194/gmd-15-6495-2022"
+abstract: "Understanding uncertainties and sensitivities of projected ecosystem dynamics under environmental change is of immense value for research and climate change policy. Here, we analyze sensitivities (change in model outputs per unit change in inputs) and uncertainties (changes in model outputs scaled to uncertainty in inputs) of vegetation dynamics under climate change, projected by a state-of-the-art dynamic vegetation model (LPJ-GUESS v4.0) across European forests (the species Picea abies, Fagus sylvatica and Pinus sylvestris), considering uncertainties of both model parameters and environmental drivers. We find that projected forest carbon fluxes are most sensitive to photosynthesis-, water-, and mortality-related parameters, while predictive uncertainties are dominantly induced by environmental drivers and parameters related to water and mortality; the importance of environmental drivers for predictive uncertainty increases with increasing temperature. Moreover, most of the interactions of model inputs are between environmental drivers themselves or between parameters and environmental drivers. Our study highlights the importance of environmental drivers not only as contributors to predictive uncertainty in their own right but also as modifiers of sensitivities and thus uncertainties in other ecosystem processes – reducing uncertainty in mortality-related processes and accounting for environmental influence on processes should therefore be a focus in further model development."
+significance: "Systematically quantifies how sensitive carbon-stock forecasts from a major vegetation model are to climate inputs versus internal model parameters, helping identify where uncertainty in forest carbon projections actually comes from."
+description: "Systematically quantifies how sensitive carbon-stock forecasts from a major vegetation model are to climate inputs versus internal model parameters…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Understanding uncertainties and sensitivities of projected ecosystem dynamics under environmental change is of immense value for research and climate change policy. Here, we analyze sensitivities (change in model outputs per unit change in inputs) and uncertainties (changes in model outputs scaled to uncertainty in inputs) of vegetation dynamics under climate change, projected by a state-of-the-art dynamic vegetation model (LPJ-GUESS v4.0) across European forests (the species Picea abies, Fagus sylvatica and Pinus sylvestris), considering uncertainties of both model parameters and environmental drivers. We find that projected forest carbon fluxes are most sensitive to photosynthesis-, water-, and mortality-related parameters, while predictive uncertainties are dominantly induced by environmental drivers and parameters related to water and mortality; the importance of environmental drivers for predictive uncertainty increases with increasing temperature. Moreover, most of the interactions of model inputs are between environmental drivers themselves or between parameters and environmental drivers. Our study highlights the importance of environmental drivers not only as contributors to predictive uncertainty in their own right but also as modifiers of sensitivities and thus uncertainties in other ecosystem processes – reducing uncertainty in mortality-related processes and accounting for environmental influence on processes should therefore be a focus in further model development.

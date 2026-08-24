@@ -3,7 +3,7 @@
 title: "Functional flower traits and their diversity drive pollinator visitation"
 date: 2017-01-01
 year: "2017"
-weight: 78
+weight: 79
 slug: "fornoff2017functional"
 authors:
   - "Felix Fornoff"
@@ -16,7 +16,15 @@ authors:
 authors_display: "Felix Fornoff, Alexandra-Maria Klein, Florian Hartig, Gita Benadi, Christine Venjakob, H. Martin Schaefer, Anne Ebeling"
 journal: "Oikos"
 volume: "126"
+issue: "7"
 pages: "1020–1030"
 doi: "10.1111/oik.03869"
+abstract: "Recent studies have shown that the diversity of flowering plants can enhance pollinator richness and visitation frequency and thereby increase the resilience of pollination. It is assumed that flower traits explain these effects, but it is still unclear which flower traits are responsible, and whether pollinator richness and visitation frequency are more driven by mass-ratio effects (mean trait values) or by trait diversity. Here, we analyse a three-year data set of pollinator observations collected in a European grassland plant diversity experiment (the Jena Experiment), with comprehensive flower trait measurements including reward, morphological and chemical traits. Overall functional diversity did not affect pollinator species richness but reduced visitation frequency. When looking at individual flower traits separately, single trait diversity of flower reflectance and flower morphology were important predictors of pollinator visitation frequency, and, independent of total flower abundance, community-weighted means of flower height, area, reflectance, nectar-sugar concentration and nectar-amino acid concentration strongly affected both pollinator species richness and visitation frequency. Our results challenge the idea that functional diversity always positively affects ecosystem functions, but demonstrate that both single trait diversity and mass-ratio effects of flower traits play an important role for diverse and frequent flower visits."
+significance: "Shows that the diversity of flower functional traits, not just plant species richness, drives pollinator visitation, refining how plant diversity should be measured when the goal is supporting pollinators."
+description: "Shows that the diversity of flower functional traits, not just plant species richness, drives pollinator visitation, refining how plant diversity should…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Recent studies have shown that the diversity of flowering plants can enhance pollinator richness and visitation frequency and thereby increase the resilience of pollination. It is assumed that flower traits explain these effects, but it is still unclear which flower traits are responsible, and whether pollinator richness and visitation frequency are more driven by mass-ratio effects (mean trait values) or by trait diversity. Here, we analyse a three-year data set of pollinator observations collected in a European grassland plant diversity experiment (the Jena Experiment), with comprehensive flower trait measurements including reward, morphological and chemical traits. Overall functional diversity did not affect pollinator species richness but reduced visitation frequency. When looking at individual flower traits separately, single trait diversity of flower reflectance and flower morphology were important predictors of pollinator visitation frequency, and, independent of total flower abundance, community-weighted means of flower height, area, reflectance, nectar-sugar concentration and nectar-amino acid concentration strongly affected both pollinator species richness and visitation frequency. Our results challenge the idea that functional diversity always positively affects ecosystem functions, but demonstrate that both single trait diversity and mass-ratio effects of flower traits play an important role for diverse and frequent flower visits.

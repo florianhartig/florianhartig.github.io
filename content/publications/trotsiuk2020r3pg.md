@@ -3,7 +3,7 @@
 title: "r3PG — an R package for simulating forest growth using the 3-PG process-based model"
 date: 2020-01-01
 year: "2020"
-weight: 39
+weight: 40
 slug: "trotsiuk2020r3pg"
 authors:
   - "Volodymyr Trotsiuk"
@@ -15,5 +15,12 @@ volume: "11"
 issue: "11"
 pages: "1470–1475"
 doi: "10.1111/2041-210X.13474"
+abstract: "Process-based forest models (PBMs) are important tools for quantifying forest growth and vulnerability, particularly under climate change. The 3-PG model (Physiological Processes Predicting Growth) is one of the most widely used forest growth simulators for this purpose worldwide. Here, we present r3PG, a new Fortran implementation of 3-PG, wrapped into an R package. r3PG can simulate monospecific as well as mixtures of evergreen and deciduous tree species in even-aged or uneven-aged stands. The combination of Fortran functions with an R interface makes the model extremely fast, facilitating its use for extensive computer experiments and sensitivity analysis. We demonstrate this in a case study including single model runs, a sensitivity analysis and full Bayesian calibration of the model, and spatial simulations of forest growth across Switzerland. r3PG is faster and easier to use than previous implementations of 3-PG in Visual Basic, and we believe this will make 3-PG even more useful and popular for ecologists and climate change scientists."
+significance: "Provides an R implementation of the widely used 3-PG forest growth model, making a previously specialist process-based forestry tool easy to run, calibrate and integrate into modern statistical workflows."
+description: "Provides an R implementation of the widely used 3-PG forest growth model, making a previously specialist process-based forestry tool easy to run…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Process-based forest models (PBMs) are important tools for quantifying forest growth and vulnerability, particularly under climate change. The 3-PG model (Physiological Processes Predicting Growth) is one of the most widely used forest growth simulators for this purpose worldwide. Here, we present r3PG, a new Fortran implementation of 3-PG, wrapped into an R package. r3PG can simulate monospecific as well as mixtures of evergreen and deciduous tree species in even-aged or uneven-aged stands. The combination of Fortran functions with an R interface makes the model extremely fast, facilitating its use for extensive computer experiments and sensitivity analysis. We demonstrate this in a case study including single model runs, a sensitivity analysis and full Bayesian calibration of the model, and spatial simulations of forest growth across Switzerland. r3PG is faster and easier to use than previous implementations of 3-PG in Visual Basic, and we believe this will make 3-PG even more useful and popular for ecologists and climate change scientists.

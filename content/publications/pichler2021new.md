@@ -3,7 +3,7 @@
 title: "A new joint species distribution model for faster and more accurate inference of species associations from big community data"
 date: 2021-01-01
 year: "2021"
-weight: 27
+weight: 28
 slug: "pichler2021new"
 authors:
   - "Maximilian Pichler"
@@ -14,5 +14,12 @@ volume: "12"
 issue: "11"
 pages: "2159–2173"
 doi: "10.1111/2041-210X.13687"
+abstract: "Joint species distribution models (JSDMs) explain spatial variation in community composition by contributions of the environment, biotic associations and possibly spatially structured residual covariance. They show great promise as a general analytical framework for community ecology and macroecology, but current JSDMs, even when approximated by latent variables, scale poorly on large datasets, limiting their usefulness for currently emerging big (e.g. metabarcoding and metagenomics) community datasets. Here, we present a novel, more scalable JSDM (sjSDM) that circumvents the need to use latent variables by using a Monte Carlo integration of the joint JSDM likelihood together with flexible elastic net regularization on all model components. We implemented sjSDM in PyTorch, a modern machine learning framework, which allows making use of both CPU and GPU calculations. Using simulated communities with known species-species associations and different numbers of species and sites, we compare sjSDM with state-of-the-art JSDM implementations to determine computational runtimes and accuracy of the inferred species-species and species-environment associations. We find that sjSDM is orders of magnitude faster than existing JSDM algorithms (even when run on the CPU) and can be scaled to very large datasets. Despite the dramatically improved speed, sjSDM produces more accurate estimates of species association structures than alternative JSDM implementations. We demonstrate the applicability of sjSDM to big community data using an eDNA case study with thousands of fungi operational taxonomic units, substantially extending the applicability of JSDMs in ecology."
+significance: "Introduces a faster and more accurate statistical model for inferring how species are associated with each other from large community datasets, making a computationally demanding class of models practical at the scale of modern biodiversity data."
+description: "Introduces a faster and more accurate statistical model for inferring how species are associated with each other from large community datasets, making a…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Joint species distribution models (JSDMs) explain spatial variation in community composition by contributions of the environment, biotic associations and possibly spatially structured residual covariance. They show great promise as a general analytical framework for community ecology and macroecology, but current JSDMs, even when approximated by latent variables, scale poorly on large datasets, limiting their usefulness for currently emerging big (e.g. metabarcoding and metagenomics) community datasets. Here, we present a novel, more scalable JSDM (sjSDM) that circumvents the need to use latent variables by using a Monte Carlo integration of the joint JSDM likelihood together with flexible elastic net regularization on all model components. We implemented sjSDM in PyTorch, a modern machine learning framework, which allows making use of both CPU and GPU calculations. Using simulated communities with known species-species associations and different numbers of species and sites, we compare sjSDM with state-of-the-art JSDM implementations to determine computational runtimes and accuracy of the inferred species-species and species-environment associations. We find that sjSDM is orders of magnitude faster than existing JSDM algorithms (even when run on the CPU) and can be scaled to very large datasets. Despite the dramatically improved speed, sjSDM produces more accurate estimates of species association structures than alternative JSDM implementations. We demonstrate the applicability of sjSDM to big community data using an eDNA case study with thousands of fungi operational taxonomic units, substantially extending the applicability of JSDMs in ecology.
