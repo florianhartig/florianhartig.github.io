@@ -15,6 +15,12 @@
     {{- $pubs := .RegularPages.ByWeight }}
     {{- $groups := $pubs.GroupByParam "year" "desc" }}
 
+    <div class="pub-search">
+      <label for="pub-search-input" class="visually-hidden">Search publications by author or keyword</label>
+      <input type="search" id="pub-search-input" placeholder="Search by author or keyword…" autocomplete="off">
+      <p class="pub-search-count" aria-live="polite"></p>
+    </div>
+
     <nav class="year-nav" aria-label="Jump to year">
       {{- range $groups }}
       <a href="#y{{ .Key }}">{{ .Key }}</a>
@@ -33,4 +39,46 @@
     {{- end }}
   </article>
 </div>
+
+{{- /* Client-side only: filters the 110 entries already in the page rather
+       than fetching or duplicating data. Matches against each citation's own
+       visible text (title, authors, journal), so search stays in sync with
+       what's on the page with no separate index to maintain. */ -}}
+<script>
+(function () {
+  var input = document.getElementById('pub-search-input');
+  if (!input) return;
+  var countEl = document.querySelector('.pub-search-count');
+  var yearNav = document.querySelector('.year-nav');
+  var sections = Array.prototype.slice.call(document.querySelectorAll('.pub-year'));
+  var total = document.querySelectorAll('.citation').length;
+
+  function filter() {
+    var q = input.value.trim().toLowerCase();
+    if (!q) {
+      sections.forEach(function (section) {
+        section.hidden = false;
+        section.querySelectorAll('.citation').forEach(function (c) { c.hidden = false; });
+      });
+      if (yearNav) yearNav.hidden = false;
+      countEl.textContent = '';
+      return;
+    }
+    if (yearNav) yearNav.hidden = true;
+    var shown = 0;
+    sections.forEach(function (section) {
+      var anyVisible = false;
+      section.querySelectorAll('.citation').forEach(function (c) {
+        var match = c.textContent.toLowerCase().indexOf(q) !== -1;
+        c.hidden = !match;
+        if (match) { anyVisible = true; shown++; }
+      });
+      section.hidden = !anyVisible;
+    });
+    countEl.textContent = shown + ' of ' + total + ' publications match “' + input.value.trim() + '”';
+  }
+
+  input.addEventListener('input', filter);
+})();
+</script>
 {{ end }}

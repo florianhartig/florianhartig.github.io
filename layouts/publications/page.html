@@ -38,6 +38,13 @@
       </details>
       {{- end }}
       {{- with .Params.doi }}<br><span class="pub-doi">DOI: <a href="https://doi.org/{{ . }}" rel="noopener">{{ . }}</a></span>{{ end }}
+      {{- with (index hugo.Data.citations.papers .Params.slug) }}
+      <br><span class="pub-doi pub-citations">Cited by
+        {{- if .scholar }} <a href="{{ hugo.Data.citations.scholar_url }}" rel="noopener">{{ lang.FormatNumber 0 .scholar }}</a> (Google Scholar){{ end -}}
+        {{- if and .scholar .openalex }} ·{{ end -}}
+        {{- if .openalex }} {{ lang.FormatNumber 0 .openalex }} (OpenAlex){{ end -}}
+        , as of {{ hugo.Data.citations.as_of }}</span>
+      {{- end }}
     </div>
 
     <p class="pub-actions">

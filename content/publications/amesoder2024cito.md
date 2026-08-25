@@ -11,11 +11,13 @@ authors:
   - "Maximilian Pichler"
 authors_display: "Christian Amesöder, Florian Hartig, Maximilian Pichler"
 journal: "Ecography"
+volume: "2024"
+issue: "6"
 pages: "e07143"
 doi: "10.1111/ecog.07143"
 abstract: "Deep neural networks (DNN) have become a central method in ecology. To build and train DNNs in deep learning (DL) applications, most users rely on one of the major deep learning frameworks, in particular PyTorch or TensorFlow. Using these frameworks, however, requires substantial experience and time. Here, we present 'cito', a user-friendly R package for DL that allows specifying DNNs in the familiar formula syntax used by many R packages. To fit the models, 'cito' takes advantage of the numerically optimized 'torch' library, including the ability to switch between training models on the CPU or the graphics processing unit (GPU), which allows the efficient training of large DNNs. Moreover, 'cito' includes many user-friendly functions for model plotting and analysis, including explainable AI (xAI) metrics for effect sizes and variable importance. All xAI metrics as well as predictions can optionally be bootstrapped to generate confidence intervals, including p-values. To showcase a typical analysis pipeline using 'cito', with its built-in xAI features, we built a species distribution model of the African elephant. We hope that by providing a user-friendly R framework to specify, deploy and interpret DNNs, 'cito' will make this interesting class of models more accessible to ecological data analysis."
-significance: "Introduces cito, an R package that makes it much easier for ecologists to build and train deep neural networks via torch without learning a general-purpose deep-learning framework, lowering the barrier to using deep learning in ecology."
-description: "Introduces cito, an R package that makes it much easier for ecologists to build and train deep neural networks via torch without learning a…"
+significance: "cito lets ecologists specify and train deep neural networks with the same formula syntax as lm or glm, built on the numerically optimized torch library rather than a general-purpose framework like PyTorch or TensorFlow that most ecologists have no reason to already know. It ships with built-in explainable-AI tools — variable importance, effect sizes, bootstrapped confidence intervals — so a fitted network doesn't have to stay a black box, demonstrated in the paper itself on a species distribution model of the African elephant."
+description: "cito lets ecologists specify and train deep neural networks with the same formula syntax as lm or glm, built on the numerically optimized torch library…"
 entry_type: "article"
 ---
 

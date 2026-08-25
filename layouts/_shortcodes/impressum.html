@@ -1,0 +1,16 @@
+{{- /* Reuses site.Params.address / site.Params.author instead of retyping
+       them on the impressum page — same source layouts/_partials/contact.html
+       draws from, so the two can't drift apart. */ -}}
+{{- $a := site.Params.address -}}
+{{- $author := site.Params.author -}}
+<p class="legal-address">
+  {{ $author.name }}<br>
+  {{ $a.faculty }}<br>
+  {{ $a.institution }}<br>
+  {{ $a.street }}<br>
+  {{ $a.postalCode }} {{ $a.city }}, {{ $a.country }}
+</p>
+<p>
+  Kontakt: Bitte kontaktieren Sie mich oder mein Sekretariat über unsere
+  <a href="{{ $author.teamURL }}" rel="noopener">Team-Seite</a>.
+</p>

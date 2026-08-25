@@ -15,9 +15,10 @@ volume: "25"
 issue: "11"
 pages: "1479–1480"
 doi: "10.1016/j.envsoft.2009.01.003"
+preprint: "https://arxiv.org/abs/0812.0956"
 abstract: "EcoTRADE is a multi-player network game of a virtual biodiversity credit market. Each player controls the land use of a certain amount of parcels on a virtual landscape. The biodiversity credits of a particular parcel depend on neighboring parcels, which may be owned by other players. The game can be used to study the strategies of players in experiments or classroom games and as a communication tool for stakeholders participating in credit markets that include spatially interdependent credits."
-significance: "Describes EcoTRADE, a multiplayer simulation game of a tradable biodiversity-credit market, built both as a research tool for studying how people actually behave in such markets and as a teaching and outreach tool."
-description: "Describes EcoTRADE, a multiplayer simulation game of a tradable biodiversity-credit market, built both as a research tool for studying how people actually…"
+significance: "EcoTRADE turns an abstract question about spatially interdependent biodiversity credit markets — how does one player's land-use choice affect a neighbor's credit value? — into something people can actually play through and study empirically, as a multiplayer network game rather than a pure simulation. Built for both research and classroom use, it's since been cited in ecological-economic modelling reviews and instrument-design overviews as a concrete example of participatory market experimentation."
+description: "EcoTRADE turns an abstract question about spatially interdependent biodiversity credit markets — how does one player's land-use choice affect a neighbor's…"
 entry_type: "article"
 ---
 

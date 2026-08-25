@@ -14,7 +14,12 @@ authors_display: "Frank Wätzold, Martin Drechsler, Florian Hartig, Silke Wissel
 journal: "Permit Trading in Different Applications"
 publisher: "Routledge"
 note: "Book chapter, edited by B. Hansjürgens, R. Antes and M. Strunz."
-significance: "Reviews the design issues, modelling approaches and policy considerations involved in applying tradable-permit markets to biodiversity conservation, part of a broader body of work on market-based conservation instruments."
-description: "Reviews the design issues, modelling approaches and policy considerations involved in applying tradable-permit markets to biodiversity conservation, part…"
+abstract: "Habitat loss and fragmentation caused by economic development are major threats to the conservation of biodiversity (Millennium Ecosystem Assessment 2005). Policy responses aimed at addressing this threat have so far been inadequate. The main policy response – the designation of areas as reserves where economic development is not allowed – has generated some protection. However, the selection of reserves may not have led to a cost-effective allocation of land between areas for conservation and areas for economic development (see Ando et al. 1998 for the general idea of cost-effective land allocation, and Polasky et al. 2008 for an empirical analysis where land allocation is not cost-effective)."
+significance: "Tradable-permit markets for biodiversity conservation raise design questions — how to set trading ratios, how to handle spatial heterogeneity in habitat value, how to structure the policy around them — that this chapter consolidates from the authors' own preceding body of work into one reference. Unlike the journal articles it draws on, a book chapter without a DOI leaves little trace in citation databases, but the underlying design questions it organised remain live in the tradable-permit literature that followed."
+description: "Tradable-permit markets for biodiversity conservation raise design questions — how to set trading ratios, how to handle spatial heterogeneity in habitat…"
 entry_type: "incollection"
 ---
+
+## Abstract
+
+Habitat loss and fragmentation caused by economic development are major threats to the conservation of biodiversity (Millennium Ecosystem Assessment 2005). Policy responses aimed at addressing this threat have so far been inadequate. The main policy response – the designation of areas as reserves where economic development is not allowed – has generated some protection. However, the selection of reserves may not have led to a cost-effective allocation of land between areas for conservation and areas for economic development (see Ando et al. 1998 for the general idea of cost-effective land allocation, and Polasky et al. 2008 for an empirical analysis where land allocation is not cost-effective).

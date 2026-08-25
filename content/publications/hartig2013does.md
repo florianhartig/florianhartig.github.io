@@ -14,9 +14,10 @@ volume: "110"
 issue: "42"
 pages: "E3975"
 doi: "10.1073/pnas.1308603110"
+preprint: "https://arxiv.org/abs/1305.3544"
 abstract: "Estimating population models from uncertain observations is an important problem in ecology. Perretti et al. observed that standard Bayesian state-space solutions to this problem may provide biased parameter estimates when the underlying dynamics are chaotic. Consequently, forecasts based on these estimates showed poor predictive accuracy compared with simple \"model-free\" methods, which led Perretti et al. to conclude that model-free forecasting outperforms the correct mechanistic model for simulated and experimental data. However, a simple modification of the statistical methods also suffices to remove the bias and reverse their results."
-significance: "A statistical rebuttal showing that a widely publicised claim, that ‘model-free’ forecasting beats mechanistic population models, rested on a flawed comparison, restoring confidence that properly specified mechanistic models are not actually inferior."
-description: "A statistical rebuttal showing that a widely publicised claim, that ‘model-free’ forecasting beats mechanistic population models, rested on a flawed…"
+significance: "This reply shows that a widely cited claim, that simple “model-free” forecasting outperforms a correctly specified mechanistic population model, rested on a biased statistical estimator, and that a straightforward correction removes the bias and reverses the original conclusion. The original claim risked being read as evidence against mechanistic modelling in ecology more broadly, when the real lesson was about the choice of estimator rather than any inherent weakness of model-based forecasting."
+description: "This reply shows that a widely cited claim, that simple “model-free” forecasting outperforms a correctly specified mechanistic population model, rested on…"
 entry_type: "article"
 ---
 

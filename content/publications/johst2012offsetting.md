@@ -15,7 +15,12 @@ pages: "413–430"
 publisher: "Elsevier"
 doi: "10.1016/B978-0-444-59396-2.00024-9"
 note: "Book chapter, edited by F. Jordán and S. E. Jørgensen."
-significance: "Examines biodiversity-offsetting policy, arguing that compensating for habitat loss by relocating habitat elsewhere needs careful design to actually deliver equivalent conservation value."
-description: "Examines biodiversity-offsetting policy, arguing that compensating for habitat loss by relocating habitat elsewhere needs careful design to actually…"
+abstract: "To halt biodiversity loss, market-based conservation policies known as biodiversity offsetting are increasingly implemented in developed countries. These policies allow the destruction of natural habitats if new habitat of equal quality has been created elsewhere. Yet, even at constant total habitat area, patch relocations can be detrimental for species. Using an analytical formula for metapopulation viability, we provide understanding and novel insights into the interplay between the landscape attributes patch number, connectivity, and level of patch turnover. We show that both landscape and species characteristics must be considered to ensure that biodiversity offsetting is effective and derive guidelines for the design of such policies."
+significance: "Compensating for habitat loss by creating or relocating habitat elsewhere sounds straightforward, but this chapter shows the ecological math only works out if the relocation is designed carefully — get the timing or location wrong and an offset can look adequate on paper while delivering far less real conservation value. Its reach has stayed modest, but the same group followed up directly two years later with a fuller look at conservation banking in landscapes that keep changing, exactly the follow-on question this chapter's caveats raised."
+description: "Compensating for habitat loss by creating or relocating habitat elsewhere sounds straightforward, but this chapter shows the ecological math only works…"
 entry_type: "incollection"
 ---
+
+## Abstract
+
+To halt biodiversity loss, market-based conservation policies known as biodiversity offsetting are increasingly implemented in developed countries. These policies allow the destruction of natural habitats if new habitat of equal quality has been created elsewhere. Yet, even at constant total habitat area, patch relocations can be detrimental for species. Using an analytical formula for metapopulation viability, we provide understanding and novel insights into the interplay between the landscape attributes patch number, connectivity, and level of patch turnover. We show that both landscape and species characteristics must be considered to ensure that biodiversity offsetting is effective and derive guidelines for the design of such policies.

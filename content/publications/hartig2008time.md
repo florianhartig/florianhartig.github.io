@@ -14,9 +14,10 @@ volume: "141"
 issue: "10"
 pages: "2625–2631"
 doi: "10.1016/j.biocon.2008.07.028"
+preprint: "https://arxiv.org/abs/0807.4040"
 abstract: "Survival probability within a certain time horizon T is a common measure of population viability. The choice of T implicitly involves a time preference, similar to economic discounting: conservation success is evaluated at the time horizon T, while all effects that occur later than T are not considered. Despite the obvious relevance of the time horizon, ecological studies seldom analyze its impact on the evaluation of conservation options. In this paper, we show that, while the choice of T does not change the ranking of conservation options for single species under stationary conditions, it may substantially change conservation decisions for multiple species. We conclude that it is of crucial importance to investigate the sensitivity of model results to the choice of the time horizon or other measures of time preference when prioritizing biodiversity conservation efforts."
-significance: "Shows that the choice of planning time horizon in conservation planning is not a neutral technical detail but functions like an implicit discount rate, systematically changing which species and habitats get prioritised for protection."
-description: "Shows that the choice of planning time horizon in conservation planning is not a neutral technical detail but functions like an implicit discount rate…"
+significance: "Population viability is usually judged over some fixed time horizon T, an implicit choice functioning much like an economic discount rate — yet ecological studies rarely ask what happens if T is set differently. This paper shows the choice barely matters for ranking options for a single species, but can substantially reshuffle priorities once multiple species are considered together, meaning conservation plans should report how sensitive their recommendations are to that choice rather than treating it as an arbitrary modelling convenience. The time-horizon sensitivity it flagged has resurfaced in later work on systematic conservation planning and extinction-risk forecasting."
+description: "Population viability is usually judged over some fixed time horizon T, an implicit choice functioning much like an economic discount rate — yet ecological…"
 entry_type: "article"
 ---
 

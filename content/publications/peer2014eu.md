@@ -31,11 +31,12 @@ authors:
 authors_display: "Guy Pe'er, Lynn V. Dicks, Piero Visconti, Raphael Arlettaz, András Báldi, Tim G. Benton, Sarah Collins, Martin Dieterich, Richard D. Gregory, Florian Hartig, Klaus Henle, Peter R. Hobson, David Kleijn, Rebecca K. Neumann, Tim Robijns, Jenny Schmidt, Assaf Shwartz, William J. Sutherland, Anne Turbé, Florian Wulf, Alexander V. Scott"
 journal: "Science"
 volume: "344"
+issue: "6188"
 pages: "1090–1092"
 doi: "10.1126/science.1253425"
 abstract: "Extra steps by Member States are needed to protect farmed and grassland ecosystems."
-significance: "A policy commentary arguing that the reformed EU Common Agricultural Policy does not go far enough to protect farmed and grassland biodiversity, and that individual member states need to take additional steps."
-description: "A policy commentary arguing that the reformed EU Common Agricultural Policy does not go far enough to protect farmed and grassland biodiversity, and that…"
+significance: "The European Union's 2013 Common Agricultural Policy reform promised “greening” measures to protect farmland biodiversity, and this commentary's central claim is that the reform falls well short of what's actually needed. That's not a minor critique: CAP payments are the single largest lever European governments have over how farmland gets managed, and with over 600 citing papers spanning organic-farming policy, agri-environment scheme design and farmland bird conservation, the paper's diagnosis has become a standing reference point for exactly the debate about whether CAP reform delivers for biodiversity that continues today."
+description: "The European Union's 2013 Common Agricultural Policy reform promised “greening” measures to protect farmland biodiversity, and this commentary's central…"
 entry_type: "article"
 ---
 

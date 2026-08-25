@@ -13,7 +13,7 @@
        title still stands as the on-page H1 and in og:title/twitter:title. */ -}}
 {{- $titleTag := $title -}}
 {{- if not .IsHome -}}
-  {{- if gt (len .Title) 55 -}}
+  {{- if gt (len .Title) 43 -}}
     {{- $titleTag = printf "%s — %s" (.Title | truncate 38 "…") site.Title -}}
   {{- end -}}
 {{- end -}}
@@ -61,5 +61,8 @@
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
 <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+<link rel="icon" href="{{ "favicon-32x32.png" | relURL }}" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
+<link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
 
 {{ partial "schema.html" . }}

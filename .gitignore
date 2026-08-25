@@ -14,7 +14,10 @@ CLAUDE.md
 # repo (florianhartig.github.io) and this file is written for whoever picks
 # the project back up, not for visitors. See its own header for why this is
 # safe (the folder is Dropbox-synced, so it isn't only-on-this-machine).
-CLAUDE_HANDOFF.md
+Persönliche_Webseite_Handoff.md
+
+# Output of scripts/citation_stats.R — personal research data, not site content
+/citation_reports/
 
 # macOS
 .DS_Store

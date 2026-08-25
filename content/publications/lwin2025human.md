@@ -6,17 +6,22 @@ year: "2025"
 weight: 4
 slug: "lwin2025human"
 authors:
-  - "Yan Htay Lwin"
+  - "Ye Htet Lwin"
   - "Rui-Chang Quan"
   - "Florian Hartig"
   - "Hjalmar S. Kühl"
   - "Marco Heurich"
-authors_display: "Yan Htay Lwin, Rui-Chang Quan, Florian Hartig, Hjalmar S. Kühl, Marco Heurich"
+authors_display: "Ye Htet Lwin, Rui-Chang Quan, Florian Hartig, Hjalmar S. Kühl, Marco Heurich"
 journal: "Biological Conservation"
 volume: "310"
 pages: "111352"
 doi: "10.1016/j.biocon.2025.111352"
-significance: "Examines how humans, alongside natural apex predators, exert top-down control on ecosystems — relevant to understanding how removing or adding predators, including through hunting policy, cascades through food webs."
-description: "Examines how humans, alongside natural apex predators, exert top-down control on ecosystems — relevant to understanding how removing or adding predators…"
+abstract: "Apex predators are thought to regulate ecosystems through top-down control, but the extent of their impact often varies, potentially due to differences in their abundance and other aspects of the ecosystem, including human disturbances. Here, we analyzed three years of data collected from 114 camera traps placed in Htamanthi Wildlife Sanctuary, northwestern Myanmar. Using multigroup piecewise structural equation modeling, we explored associations among multiple trophic levels, including humans, apex predators, mesopredators, prey species and vegetation across varying apex predator biomass levels within similar environments. We found that variation in apex predator biomass significantly influences trophic associations, especially concerning top-down control exerted by humans and apex predators. Human disturbances had a regulatory role on apex predators and large prey populations and alter their behavior. Apex predators both suppressed and facilitated prey populations, underscoring the crucial role of sustaining apex predator populations in ecosystems. Furthermore, our study highlights positive associations between mesopredators and prey species, demonstrating their coexistence within the ecosystem. Bottom-up effects from vegetation were weaker than top-down processes. Nevertheless, the observed positive link between vegetation and small prey suggests that this bottom-up component also plays an important role in the trophic network. Our study highlights the complex associations between different trophic levels and underscores the importance of considering multiple species for effective conservation and ecosystem stability."
+significance: "Camera-trap data from a Myanmar wildlife sanctuary show that humans and remaining apex predators both exert top-down control on lower trophic levels, but not in the same way — evidence that removing a large predator from a landscape isn't ecologically neutral just because people remain present and active there."
+description: "Camera-trap data from a Myanmar wildlife sanctuary show that humans and remaining apex predators both exert top-down control on lower trophic levels, but…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Apex predators are thought to regulate ecosystems through top-down control, but the extent of their impact often varies, potentially due to differences in their abundance and other aspects of the ecosystem, including human disturbances. Here, we analyzed three years of data collected from 114 camera traps placed in Htamanthi Wildlife Sanctuary, northwestern Myanmar. Using multigroup piecewise structural equation modeling, we explored associations among multiple trophic levels, including humans, apex predators, mesopredators, prey species and vegetation across varying apex predator biomass levels within similar environments. We found that variation in apex predator biomass significantly influences trophic associations, especially concerning top-down control exerted by humans and apex predators. Human disturbances had a regulatory role on apex predators and large prey populations and alter their behavior. Apex predators both suppressed and facilitated prey populations, underscoring the crucial role of sustaining apex predator populations in ecosystems. Furthermore, our study highlights positive associations between mesopredators and prey species, demonstrating their coexistence within the ecosystem. Bottom-up effects from vegetation were weaker than top-down processes. Nevertheless, the observed positive link between vegetation and small prey suggests that this bottom-up component also plays an important role in the trophic network. Our study highlights the complex associations between different trophic levels and underscores the importance of considering multiple species for effective conservation and ecosystem stability.

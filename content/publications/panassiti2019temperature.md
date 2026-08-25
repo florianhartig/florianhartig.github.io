@@ -7,18 +7,24 @@ weight: 63
 slug: "panassiti2019temperature"
 authors:
   - "Bernd Panassiti"
-  - "Nadine Sander"
+  - "Nicolas Sander"
   - "Valerio Mazzoni"
   - "Stefanie Fischnaller"
-  - "Manfred Parth"
-  - "Monika Messner"
+  - "Martin Parth"
+  - "Manuel Messner"
+  - "Katrin Janik"
   - "Florian Hartig"
-authors_display: "Bernd Panassiti, Nadine Sander, Valerio Mazzoni, Stefanie Fischnaller, Manfred Parth, Monika Messner, …, Florian Hartig"
+authors_display: "Bernd Panassiti, Nicolas Sander, Valerio Mazzoni, Stefanie Fischnaller, Martin Parth, Manuel Messner, Katrin Janik, Florian Hartig"
 journal: "Cicadina"
 volume: "18"
 pages: "1–11"
 publisher_url: "https://public.bibliothek.uni-halle.de/index.php/cicadina/article/view/1789"
-significance: "Builds a temperature-driven model to forecast the seasonal immigration of two insect vectors of apple proliferation disease in South Tyrol, supporting more timely disease-management decisions for orchards."
-description: "Builds a temperature-driven model to forecast the seasonal immigration of two insect vectors of apple proliferation disease in South Tyrol, supporting…"
+abstract: "Insects in temperate regions usually emerge in spring, based on climatic cues. Temperature-based models that predict the first flight onset of pest insects in crop fields are therefore useful tools for agriculture and crop protection. Here, we calibrate and apply such a temperature-based model for Cacopsylla melanoneura and Cacopsylla picta (Hemiptera - Psyllidae) in South Tyrol, Northern Italy. These psyllid species are the main vectors of apple proliferation, an economically important phytoplasma disease. We found that the temperature associated with the onset (first presence) of the insects in the orchards differs between vectors and between different regions. For the regions Burggrafenamt and Vinschgau, the first adults of Cacopsylla melanoneura remigrants mostly occurred in January while first Cacopsylla picta remigrants mostly occurred in the orchard between March and April. The presented temperature-based immigration model may be used as a tool to predict the first vector appearance in apple orchards in South Tyrol."
+significance: "Two psyllid species carry apple proliferation disease into South Tyrol orchards each spring, and the timing of their arrival — calibrated here from temperature data — turns out to differ by species and even between neighbouring regions of the same valley. That's directly actionable for growers: knowing when each vector actually shows up lets insecticide treatments be timed to when they'll work, rather than applied on a fixed calendar regardless of that year's weather."
+description: "Two psyllid species carry apple proliferation disease into South Tyrol orchards each spring, and the timing of their arrival — calibrated here from…"
 entry_type: "article"
 ---
+
+## Abstract
+
+Insects in temperate regions usually emerge in spring, based on climatic cues. Temperature-based models that predict the first flight onset of pest insects in crop fields are therefore useful tools for agriculture and crop protection. Here, we calibrate and apply such a temperature-based model for Cacopsylla melanoneura and Cacopsylla picta (Hemiptera - Psyllidae) in South Tyrol, Northern Italy. These psyllid species are the main vectors of apple proliferation, an economically important phytoplasma disease. We found that the temperature associated with the onset (first presence) of the insects in the orchards differs between vectors and between different regions. For the regions Burggrafenamt and Vinschgau, the first adults of Cacopsylla melanoneura remigrants mostly occurred in January while first Cacopsylla picta remigrants mostly occurred in the orchard between March and April. The presented temperature-based immigration model may be used as a tool to predict the first vector appearance in apple orchards in South Tyrol.

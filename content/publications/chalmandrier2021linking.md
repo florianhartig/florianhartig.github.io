@@ -19,9 +19,10 @@ volume: "12"
 issue: "1"
 pages: "2724"
 doi: "10.1038/s41467-021-22630-1"
+preprint: "https://www.biorxiv.org/content/10.1101/2021.07.12.448750v1"
 abstract: "It has long been anticipated that relating functional traits to species demography would be a cornerstone for achieving large-scale predictability of ecological systems. If such a relationship existed, species demography could be modeled only by measuring functional traits, transforming our ability to predict states and dynamics of species-rich communities with process-based community models. Here, we introduce a new method that links empirical functional traits with the demographic parameters of a process-based model by calibrating a transfer function through inverse modeling. As a case study, we parameterize a modified Lotka-Volterra model of a high-diversity mountain grassland with static plant community and functional trait data only. The calibrated trait-demography relationships are amenable to ecological interpretation, and lead to species abundances that fit well to the observed community structure. We conclude that our new method offers a general solution to bridge the divide between trait data and process-based models in species-rich ecosystems."
-significance: "Develops a way to connect species' functional traits to their demographic rates within a single model of a diverse community, aiming to make predictions for hyperdiverse ecosystems tractable without modelling every species individually."
-description: "Develops a way to connect species' functional traits to their demographic rates within a single model of a diverse community, aiming to make predictions…"
+significance: "Ecologists have long hoped that functional traits could stand in for hard-to-measure demographic parameters in process-based community models — if a trait-demography relationship existed, entire species-rich communities could be modelled from trait surveys alone. This paper builds and tests exactly that link, calibrating a Lotka-Volterra model of a high-diversity mountain grassland from trait data via inverse modelling, and getting species abundances that fit the observed community well. The trait-based framing has since spread widely through community ecology, from multi-scale plant-network segregation to trait-mediated shifts in species associations across microenvironments."
+description: "Ecologists have long hoped that functional traits could stand in for hard-to-measure demographic parameters in process-based community models — if a…"
 entry_type: "article"
 ---
 

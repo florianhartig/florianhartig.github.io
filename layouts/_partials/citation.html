@@ -18,6 +18,11 @@
   {{- with .Params.doi }}{{ $links = $links | append (printf `<a href="https://doi.org/%s" rel="noopener">doi:%s</a>` . .) }}{{ end }}
   {{- if and (not .Params.doi) .Params.publisher_url }}{{ $links = $links | append (printf `<a href="%s" rel="noopener">journal</a>` .Params.publisher_url) }}{{ end }}
   {{- with .Params.preprint }}{{ $links = $links | append (printf `<a href="%s" rel="noopener">preprint</a>` .) }}{{ end }}
+  {{- with (index hugo.Data.citations.papers .Params.slug) }}
+  {{- with (.scholar | default .openalex) }}
+  {{- $links = $links | append (printf "%s citations" (lang.FormatNumber 0 .)) }}
+  {{- end }}
+  {{- end }}
   {{- with $links }}
   <p class="citation-links">{{ delimit . `<span aria-hidden="true"> · </span>` | safeHTML }}</p>
   {{- end }}

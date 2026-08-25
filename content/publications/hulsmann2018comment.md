@@ -15,8 +15,8 @@ issue: "6391"
 pages: "eaar2435"
 doi: "10.1126/science.aar2435"
 abstract: "LaManna et al. (Reports, 30 June 2017, p. 1389) claim that subadult trees are proportionally less common at high conspecific adult density (CNDD) and that this effect increases toward the tropics and for rare species. We show that the CNDD-abundance correlation may have arisen from a methodological artifact and that a range of processes can explain the reported latitudinal pattern."
-significance: "A published comment challenging the statistical basis of a high-profile Science paper's claim about negative density dependence and global plant diversity, part of the normal scientific self-correction process on a contested finding."
-description: "A published comment challenging the statistical basis of a high-profile Science paper's claim about negative density dependence and global plant…"
+significance: "A high-profile Science paper claimed that negative density dependence among trees grows stronger toward the tropics — evidence for a mechanism maintaining tropical diversity. This comment shows the reported correlation may instead be a methodological artifact, with several other processes able to produce the same latitudinal pattern in the data. That challenge fed directly into a body of careful follow-up work, including the authors' own later large-scale tests of the same latitudinal question and a proposed statistical remedy for the specific pitfall identified here."
+description: "A high-profile Science paper claimed that negative density dependence among trees grows stronger toward the tropics — evidence for a mechanism maintaining…"
 entry_type: "article"
 ---
 

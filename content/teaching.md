@@ -9,17 +9,17 @@ evolution. The following is a list of regularly taught courses and lectures.
 
 ## Lectures for the BSc Biology (Grundvorlesungen)
 
-- **Vorlesung 54103: Allgemeine Biologie II – Ökologie**, 2. Semester
+- **Vorlesung 54103: <span lang="de">Allgemeine Biologie II – Ökologie</span>**, 2. Semester
   [[GRIPS](https://elearning.uni-regensburg.de/course/view.php?id=22308)]
-- **Vorlesung 54133: Statistik und Bioinformatik**, 5. Semester
+- **Vorlesung 54133: <span lang="de">Statistik und Bioinformatik</span>**, 5. Semester
   [[GRIPS](https://elearning.uni-regensburg.de/course/view.php?id=491) /
   [lecture notes](https://www.dropbox.com/s/nefr3bteve5lym7/GrundlagenDerStatistik.pdf?dl=0)]
-- **Praktikum 54128: Evolutionsbiologie und Molekulare Ökologie**, WPP 4. Semester
+- **Praktikum 54128: <span lang="de">Evolutionsbiologie und Molekulare Ökologie</span>**, WPP 4. Semester
   [[GRIPS](https://elearning.uni-regensburg.de/course/view.php?id=2053)]
 
 ## Specialised lectures for BSc / MSc / PhD level
 
-- **Seminar 54374: Theoretische Ökologie**
+- **Seminar 54374: <span lang="de">Theoretische Ökologie</span>**
   [[more details](https://www.uni-regensburg.de/biologie-vorklinische-medizin/forschen/arbeitsgruppen/ag-hartig/teaching/seminar-theoretical-ecology) /
   [GRIPS](https://elearning.uni-regensburg.de/course/view.php?id=31115)]
 - **Blockkurs 54371: Introduction to Statistics and Data Science with R**
@@ -52,7 +52,7 @@ so they are usable well beyond the courses themselves:
 - [Applied Regression Analysis for Empirical Research: Inference, Causality, and Model Choice with GLMMs in R](https://theoreticalecology.github.io/AdvancedRegressionModels/)
 - [Machine Learning and Deep Learning with R](https://theoreticalecology.github.io/machinelearning/index.html)
 - [Introduction to Bayesian Statistics with R](https://florianhartig.github.io/LearningBayes/)
-- [Grundlagen der Statistik](https://www.dropbox.com/s/nefr3bteve5lym7/GrundlagenDerStatistik.pdf?dl=0) — lecture notes for the BSc statistics course (PDF, German)
+- <span lang="de">[Grundlagen der Statistik](https://www.dropbox.com/s/nefr3bteve5lym7/GrundlagenDerStatistik.pdf?dl=0)</span> — lecture notes for the BSc statistics course (PDF, German)
 - [ResearchSkills](https://github.com/florianhartig/ResearchSkills) — lecture notes for the research skills course (LaTeX source)
 - [EGT](https://github.com/florianhartig/EGT) — evolutionary game theory models in NetLogo
 
