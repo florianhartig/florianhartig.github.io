@@ -1,5 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="FH">
-  <rect width="64" height="64" rx="12" fill="#2f6b4f"/>
-  <text x="32" y="43" font-family="Georgia, 'Times New Roman', serif" font-size="30"
-        font-weight="600" fill="#ffffff" text-anchor="middle">FH</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Florian Hartig">
+  <rect width="64" height="64" rx="14" fill="#2f6b4f"/>
+  <path d="M14 48 C 18 48, 20 16, 32 16 C 44 16, 46 48, 50 48 Z" fill="#c0dd97" opacity="0.35"/>
+  <path d="M14 48 C 18 48, 20 16, 32 16 C 44 16, 46 48, 50 48" stroke="#c0dd97" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <line x1="20" y1="22" x2="44" y2="22" stroke="#eaf3de" stroke-width="1.6"/>
+  <line x1="20" y1="22" x2="32" y2="38" stroke="#eaf3de" stroke-width="1.6"/>
+  <line x1="44" y1="22" x2="32" y2="38" stroke="#eaf3de" stroke-width="1.6"/>
+  <circle cx="20" cy="22" r="4" fill="#eaf3de"/>
+  <circle cx="44" cy="22" r="4" fill="#eaf3de"/>
+  <circle cx="32" cy="38" r="4.5" fill="#ffffff"/>
 </svg>
