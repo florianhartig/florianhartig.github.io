@@ -3,7 +3,7 @@
 title: "An extended empirical saddlepoint approximation for intractable likelihoods"
 date: 2018-01-01
 year: "2018"
-weight: 69
+weight: 80
 slug: "fasiolo2018extended"
 authors:
   - "Matteo Fasiolo"

@@ -3,7 +3,7 @@
 title: "Comment on “Plant diversity increases with the strength of negative density dependence at the global scale”"
 date: 2018-01-01
 year: "2018"
-weight: 65
+weight: 76
 slug: "hulsmann2018comment"
 authors:
   - "Lisa Hülsmann"

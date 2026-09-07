@@ -3,7 +3,7 @@
 title: "Prior hypotheses or regularization allow inference of diversification histories from extant timetrees"
 date: 2020-01-01
 year: "2020"
-weight: 41
+weight: 52
 slug: "morlon2020prior"
 authors:
   - "Hélène Morlon"
@@ -14,6 +14,7 @@ journal: "bioRxiv"
 doi: "10.1101/2020.07.03.185074"
 preprint: "https://www.biorxiv.org/content/10.1101/2020.07.03.185074v1.abstract"
 note: "Preprint. Comment on Louca & Pennell, Nature, 2020."
+is_preprint: true
 abstract: "Phylogenies of extant species are widely used to study past diversification dynamics, including how speciation and extinction rates have varied over time. Louca and Pennell recently argued that this is not possible: for any diversification history, there is an infinite number of \"congruent\" models with markedly different speciation and extinction dynamics that nevertheless have exactly the same likelihood for any tree of extant species. Here we discuss and clarify the implications of these results. We show that they neither undermine the hypothesis-driven model selection procedure widely used in the field, in which a finite set of diversification scenarios reflecting specific hypotheses are compared, nor do they show that speciation and extinction dynamics cannot be investigated from extant timetrees using a data-driven procedure, provided such an approach incorporates prior hypotheses or regularization to select among the congruent models."
 significance: "A high-profile 2020 critique argued that diversification dynamics are fundamentally unrecoverable from phylogenies of living species alone — a result that, taken at face value, would have undercut an entire subfield of macroevolutionary analysis. This response clarifies what the critique actually does and doesn't show: hypothesis-driven model comparison and prior-informed inference both remain valid, since neither relies on picking out one model from the full space of statistically indistinguishable alternatives. Diversification research continued largely undisturbed in the years after, from ant biogeography to orchid diversification slowdowns, consistent with the clarification landing as intended."
 description: "A high-profile 2020 critique argued that diversification dynamics are fundamentally unrecoverable from phylogenies of living species alone — a result…"

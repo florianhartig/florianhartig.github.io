@@ -40,7 +40,7 @@ evolution. The following is a list of regularly taught courses and lectures.
   [lecture notes](https://github.com/florianhartig/ResearchSkills)]
 
 Dates for the courses taught in a given semester are in our
-[course catalogue](https://spur.uni-regensburg.de/qisserver/a/cs.psv.frontend/person/view/266108&page%3D1).
+[course catalogue](https://spur.uni-regensburg.de/qisserver/a/cs.psv.frontend/person/view/266108).
 
 ## Open teaching materials
 

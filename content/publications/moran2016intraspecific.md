@@ -3,7 +3,7 @@
 title: "Intraspecific trait variation across scales: implications for understanding global change responses"
 date: 2016-01-01
 year: "2016"
-weight: 83
+weight: 94
 slug: "moran2016intraspecific"
 authors:
   - "Emily V. Moran"

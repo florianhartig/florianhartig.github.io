@@ -3,7 +3,7 @@
 title: "Inferring species interactions using Granger causality and convergent cross mapping"
 date: 2021-01-01
 year: "2021"
-weight: 34
+weight: 45
 slug: "barraquand2021inferring"
 authors:
   - "Frédéric Barraquand"

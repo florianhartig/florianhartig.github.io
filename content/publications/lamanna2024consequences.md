@@ -3,7 +3,7 @@
 title: "Consequences of local conspecific density effects for plant diversity and community dynamics"
 date: 2024-01-01
 year: "2024"
-weight: 11
+weight: 22
 slug: "lamanna2024consequences"
 authors:
   - "Joseph A. LaManna"

@@ -3,7 +3,7 @@
 title: "Defaunation of large-bodied frugivores reduces carbon storage in a tropical forest of Southeast Asia"
 date: 2019-01-01
 year: "2019"
-weight: 54
+weight: 65
 slug: "chanthorn2019defaunation"
 authors:
   - "Wirong Chanthorn"

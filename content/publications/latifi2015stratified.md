@@ -3,7 +3,7 @@
 title: "Stratified aboveground forest biomass estimation by remote sensing data"
 date: 2015-01-01
 year: "2015"
-weight: 86
+weight: 97
 slug: "latifi2015stratified"
 authors:
   - "Hooman Latifi"

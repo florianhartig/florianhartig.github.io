@@ -3,7 +3,7 @@
 title: "Linking functional traits and demography to model species-rich communities"
 date: 2021-01-01
 year: "2021"
-weight: 31
+weight: 42
 slug: "chalmandrier2021linking"
 authors:
   - "Loïc Chalmandrier"

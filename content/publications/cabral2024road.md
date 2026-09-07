@@ -3,7 +3,7 @@
 title: "The road to integrate climate change projections with regional land-use–biodiversity models"
 date: 2024-01-01
 year: "2024"
-weight: 16
+weight: 27
 slug: "cabral2024road"
 authors:
   - "Juliano Sarmento Cabral"

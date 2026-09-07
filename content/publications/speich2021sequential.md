@@ -3,7 +3,7 @@
 title: "Sequential Monte-Carlo algorithms for Bayesian model calibration — a review and method comparison"
 date: 2021-01-01
 year: "2021"
-weight: 30
+weight: 41
 slug: "speich2021sequential"
 authors:
   - "Matthias Speich"

@@ -3,7 +3,7 @@
 title: "Community dynamics under environmental change: how can next generation mechanistic models improve projections of species distributions?"
 date: 2016-01-01
 year: "2016"
-weight: 82
+weight: 93
 slug: "singer2016community"
 authors:
   - "Alexander Singer"

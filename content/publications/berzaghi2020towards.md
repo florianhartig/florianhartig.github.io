@@ -3,7 +3,7 @@
 title: "Towards a new generation of trait-flexible vegetation models"
 date: 2020-01-01
 year: "2020"
-weight: 46
+weight: 57
 slug: "berzaghi2020towards"
 authors:
   - "Fabio Berzaghi"

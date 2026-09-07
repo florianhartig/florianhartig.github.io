@@ -3,7 +3,7 @@
 title: "Employing plant functional groups to advance seed dispersal ecology and conservation"
 date: 2019-01-01
 year: "2019"
-weight: 58
+weight: 69
 slug: "aslan2019employing"
 authors:
   - "Clare Aslan"

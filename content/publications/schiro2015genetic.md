@@ -3,7 +3,7 @@
 title: "A genetic analysis reveals low prevalence of phytoplasma infection in Hyalesthes obsoletus Signoret, vector of bois noir, in SW-Germany"
 date: 2015-01-01
 year: "2015"
-weight: 85
+weight: 96
 slug: "schiro2015genetic"
 authors:
   - "Gabriele Schiro"
@@ -14,6 +14,7 @@ authors_display: "Gabriele Schiro, Johannes Fahrentrapp, Florian Hartig, Bernd P
 journal: "PeerJ Preprints"
 doi: "10.7287/peerj.preprints.732"
 preprint: "https://peerj.com/preprints/732/"
+is_preprint: true
 abstract: "Bois Noir is a grapevine disease responsible for severe economic losses in wine production. Bois Noir is caused by Candidatus Phytoplasma solani, cell wall-less bacteria belonging to the taxonomic group 16Sr-XII-A. In Germany, they are known to be vectored from plant to plant by the cixiid Hyalesthes obsoletus, but so far the prevalence of the disease in the vector population, as well as its spatio-temporal distribution is poorly understood. We therefore analyzed infections of H. obsoletus collected in different vineyards in Baden (South-Western Germany) with quantitative real-time PCR. From 125 analyzed individuals, only five were infected with Ca. Phytoplasma solani. All infected individuals were colonized by Ca. Phytoplasma solani type I which is associated with the host plant Urtica dioica (stinging nettle). More research is needed to understand the reasons of this surprisingly low prevalence of Bois Noir in the population of H. obsoletus in South-West Germany."
 significance: "Only five of 125 Hyalesthes obsoletus insects tested across southwestern German vineyards carried the bois noir pathogen — a surprisingly low infection rate given how much economic damage the disease causes downstream. That mismatch between vector prevalence and disease impact is the paper's real finding, even though — as a short preprint report rather than a full study — it has attracted little citation of its own; the puzzle it flags fed into the more comprehensive Bayesian analysis of bois noir drivers published the same year."
 description: "Only five of 125 Hyalesthes obsoletus insects tested across southwestern German vineyards carried the bois noir pathogen — a surprisingly low infection…"

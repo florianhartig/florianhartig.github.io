@@ -3,7 +3,7 @@
 title: "A new joint species distribution model for faster and more accurate inference of species associations from big community data"
 date: 2021-01-01
 year: "2021"
-weight: 28
+weight: 39
 slug: "pichler2021new"
 authors:
   - "Maximilian Pichler"

@@ -3,7 +3,7 @@
 title: "A comparison of methods for estimating plant population size"
 date: 2018-01-01
 year: "2018"
-weight: 70
+weight: 81
 slug: "reisch2018comparison"
 authors:
   - "Christoph Reisch"

@@ -3,7 +3,7 @@
 title: "Parameter and uncertainty estimation for process-oriented population and distribution models: data, statistics and the niche"
 date: 2012-01-01
 year: "2012"
-weight: 99
+weight: 110
 slug: "marion2012parameter"
 authors:
   - "Glenn Marion"

@@ -3,7 +3,7 @@
 title: "Human and apex predators shape lower trophic levels through top-down control"
 date: 2025-01-01
 year: "2025"
-weight: 4
+weight: 12
 slug: "lwin2025human"
 authors:
   - "Ye Htet Lwin"

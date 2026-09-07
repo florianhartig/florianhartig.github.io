@@ -4,21 +4,23 @@
 # them — a figure is never presented as current when it isn't. Update the
 # numbers and `as_of` together, or set `show: false` to hide the block.
 #
-# `*_approx: true` renders the number with a trailing "+" (e.g. "100+"),
-# matching the ">100 articles" / ">632 co-authors" phrasing of the source.
+# `*_approx: true` renders the number with a trailing "+" (e.g. "632+"),
+# matching the ">632 co-authors" phrasing of the source.
+#
+# Note: the Articles figure is NOT read from this file — it's counted live
+# from content/publications/ in layouts/_partials/metrics.html, so it can't
+# go stale as entries are added. Don't add an `articles` field back here.
 show: true
-as_of: "August 2026"
+as_of: "September 2026"
 
 # Google Scholar
 source: "Google Scholar"
 source_url: "https://scholar.google.de/citations?user=AdcDit0AAAAJ"
-citations: 28783
-h_index: 56
+citations: 29408
+h_index: 57
 i10_index: 107
 
 # Scopus
 scopus_url: "https://www.scopus.com/authid/detail.uri?authorId=24773326300"
-articles: 100
-articles_approx: true
 coauthors: 632
 coauthors_approx: true

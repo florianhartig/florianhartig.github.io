@@ -32,7 +32,7 @@ This site is the canonical homepage for {{ $a.name }} ({{ $a.rank }}, {{ $a.affi
 {{ if $m.show }}
 ## Publication metrics ({{ $m.as_of }})
 
-- Articles: {{ $m.articles }}+ ({{ $m.coauthors }}+ co-authors, per Scopus)
+- Articles: {{ len $pubs }} ({{ $m.coauthors }}{{ if $m.coauthors_approx }}+{{ end }} co-authors, per Scopus)
 - Citations: {{ $m.citations }} (Google Scholar)
 - h-index: {{ $m.h_index }} (Google Scholar)
 {{ end }}

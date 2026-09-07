@@ -3,7 +3,7 @@
 title: "Last-century forest productivity in a managed dry-edge Scots pine population: the two sides of climate warming"
 date: 2018-01-01
 year: "2018"
-weight: 71
+weight: 82
 slug: "marques2018last"
 authors:
   - "Laura Marqués"

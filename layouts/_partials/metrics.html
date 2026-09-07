@@ -1,12 +1,15 @@
 {{- /* Publication statistics. Shared by the homepage and the publications page
-       so the two can never disagree. Source: data/metrics.yaml. */ -}}
+       so the two can never disagree. Source: data/metrics.yaml, except
+       Articles, which is counted live from content/publications/ so it can
+       never drift from the actual bibliography as entries are added. */ -}}
 {{- $m := hugo.Data.metrics -}}
+{{- $articleCount := len (where site.RegularPages "Section" "publications") -}}
 {{- if $m.show -}}
 <section class="metrics" aria-label="Publication statistics">
   <dl>
     <div>
       <dt>Articles</dt>
-      <dd>{{ lang.FormatNumber 0 $m.articles }}{{ if $m.articles_approx }}+{{ end }}</dd>
+      <dd>{{ lang.FormatNumber 0 $articleCount }}</dd>
     </div>
     <div>
       <dt>Co-authors</dt>
@@ -30,7 +33,9 @@
   <p class="metrics-note">
     Citations, h-index{{ with $m.i10_index }} and i10-index{{ end }} per
     <a href="{{ $m.source_url }}" rel="noopener">{{ $m.source }}</a>,
-    {{ $m.as_of }}. Article and co-author counts per
+    {{ $m.as_of }}. Article count is the exact number of entries in the
+    <a href="{{ "/publications/" | relURL }}">publication list</a> on this
+    site. Co-author count per
     <a href="{{ $m.scopus_url }}" rel="noopener">Scopus</a>.
   </p>
 </section>

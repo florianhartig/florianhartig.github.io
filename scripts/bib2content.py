@@ -50,7 +50,7 @@ KEEP = {"_index.md"}
 LATEX = {
     r"{\"a}": "ä", r"{\"o}": "ö", r"{\"u}": "ü",
     r"{\"A}": "Ä", r"{\"O}": "Ö", r"{\"U}": "Ü",
-    r"{\"i}": "ï",
+    r"{\"i}": "ï", r"{\"e}": "ë", r"{\"E}": "Ë",
     r"{\'a}": "á", r"{\'e}": "é", r"{\'i}": "í", r"{\'o}": "ó", r"{\'u}": "ú",
     r"{\'c}": "ć", r"{\'n}": "ń", r"{\'s}": "ś", r"{\'z}": "ź",
     r"{\'A}": "Á", r"{\'E}": "É", r"{\'I}": "Í", r"{\'O}": "Ó", r"{\'U}": "Ú",
@@ -247,6 +247,17 @@ def main() -> int:
             value = fields.get(bib_field)
             if value and not any(l.startswith(f"{fm_field}:") for l in lines):
                 lines.append(f"{fm_field}: {yaml_quote(detex(value))}")
+
+        # A paper whose `journal`/`booktitle` IS a preprint server's own name
+        # (arXiv, bioRxiv, medRxiv, EcoEvoRxiv, "PeerJ Preprints", ...) has
+        # never been journal-published — computed from that one field so it
+        # can't drift out of sync: the moment an entry's journal is updated to
+        # the real venue (as happened for barth2026efficiency, once its
+        # bioRxiv preprint was accepted by New Phytologist), it stops being
+        # flagged automatically, with no second field to remember to update.
+        journal_value = fields.get("journal") or fields.get("booktitle") or ""
+        if re.search(r"rxiv|preprint", journal_value, re.IGNORECASE):
+            lines.append("is_preprint: true")
 
         # `abstract` renders as real body content ("## Abstract") — not just
         # SEO plumbing. It is kept in full there; the meta description below

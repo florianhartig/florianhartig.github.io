@@ -3,7 +3,7 @@
 title: "The Minimum Detectable Difference (MDD) concept for establishing trust in nonsignificant results — a critical review"
 date: 2020-01-01
 year: "2020"
-weight: 39
+weight: 50
 slug: "mair2020mdd"
 authors:
   - "Magdalena M. Mair"

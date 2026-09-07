@@ -3,7 +3,7 @@
 title: "Heavy and frequent thinning promotes drought adaptation in Pinus sylvestris forests"
 date: 2016-01-01
 year: "2016"
-weight: 81
+weight: 92
 slug: "sohn2016drought"
 authors:
   - "Julia A. Sohn"

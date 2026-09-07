@@ -3,7 +3,7 @@
 title: "A minimal model for the latitudinal diversity gradient suggests a dominant role for ecological limits"
 date: 2019-01-01
 year: "2019"
-weight: 50
+weight: 61
 slug: "etienne2019minimal"
 authors:
   - "Rampal S. Etienne"

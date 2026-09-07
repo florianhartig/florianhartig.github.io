@@ -3,7 +3,7 @@
 title: "Is variation in conspecific negative density dependence driving tree diversity patterns at large scales?"
 date: 2021-01-01
 year: "2021"
-weight: 27
+weight: 38
 slug: "hulsmann2021variation"
 featured: true
 authors:

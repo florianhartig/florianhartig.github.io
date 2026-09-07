@@ -3,7 +3,7 @@
 title: "An R package facilitating sensitivity analysis, calibration and forward simulations with the LPJ-GUESS dynamic vegetation model"
 date: 2019-01-01
 year: "2019"
-weight: 64
+weight: 75
 slug: "bagnara2019r"
 authors:
   - "Maurizio Bagnara"

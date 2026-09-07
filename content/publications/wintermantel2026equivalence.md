@@ -3,7 +3,7 @@
 title: "Equivalence testing in pesticide risk assessment — evaluation and practical guidance for design, analysis and interpretation"
 date: 2026-01-01
 year: "2026"
-weight: 3
+weight: 6
 slug: "wintermantel2026equivalence"
 authors:
   - "Dimitry Wintermantel"
@@ -13,6 +13,7 @@ authors:
 authors_display: "Dimitry Wintermantel, Julia Osterman, Magdalena M. Mair, Florian Hartig"
 journal: "arXiv"
 preprint: "https://arxiv.org/abs/2607.07543"
+is_preprint: true
 abstract: "Harmful pesticide effects exceeding specific protection goals (SPG) may go undetected in underpowered experimental designs. Regulatory honeybee field studies have consistently failed to reach the statistical power required under European Food Safety Authority (EFSA) guidance, which may have caused approval of high-risk substances. Therefore, EFSA advised a shift from testing the null hypothesis of 'no effect' to equivalence testing. Under this approach, a pesticide is classified as 'low risk' if the null hypothesis that its effect exceeds the SPG can be rejected. For honeybees, the recommended SPG is a colony size reduction below 10%. Critics have argued that this framework requires excessive site replication to demonstrate pesticide safety and proposed an alternative equivalence test defining treatment effects relative to the lower bound of the 90%-control-group confidence interval. Using simulations mimicking a regulatory honeybee field study, we show that although the two equivalence tests share the same trade-off between false 'low-risk' and false 'high-risk' classifications, only EFSA's original recommendation reliably identifies pesticides with effects greater than the SPG at alpha = 0.2. Our results show that increasing site replication beyond the current practice is unavoidable for a reliable regulatory assessment. However, for pesticides with effect sizes of 5% or less, site requirements remain lower than those implied by the power requirement of the former EFSA guidance. Moreover, covariate adjustment through a model term or balanced colony allocation using anticlustering randomisation can reduce site requirements without losing power and thus save costs. Finally, we provide guidance and R functions for anticlustering randomisation and equivalence testing for pesticide risk assessment."
 significance: "Regulatory honeybee field studies have consistently missed the statistical power that EFSA's own guidance requires — a gap that risks waving through pesticides with real colony-level harm. This paper compares two proposed fixes and finds only one, EFSA's original equivalence-test design, reliably catches high-risk substances; it also shows that smarter trial design (covariate adjustment, balanced randomisation via anticlustering) can close much of the remaining gap without simply demanding more field sites."
 description: "Regulatory honeybee field studies have consistently missed the statistical power that EFSA's own guidance requires — a gap that risks waving through…"

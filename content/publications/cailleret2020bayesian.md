@@ -3,7 +3,7 @@
 title: "Bayesian calibration of a growth-dependent tree mortality model to simulate the dynamics of European temperate forests"
 date: 2020-01-01
 year: "2020"
-weight: 49
+weight: 60
 slug: "cailleret2020bayesian"
 authors:
   - "Maxime Cailleret"

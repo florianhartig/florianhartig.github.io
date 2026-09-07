@@ -3,7 +3,7 @@
 title: "Assessing the response of forest productivity to climate extremes in Switzerland using model–data fusion"
 date: 2020-01-01
 year: "2020"
-weight: 44
+weight: 55
 slug: "trotsiuk2020assessing"
 authors:
   - "Volodymyr Trotsiuk"

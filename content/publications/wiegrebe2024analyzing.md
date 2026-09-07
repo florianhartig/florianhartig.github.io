@@ -3,7 +3,7 @@
 title: "Analyzing longitudinal trait trajectories using GWAS identifies genetic variants for kidney function decline"
 date: 2024-01-01
 year: "2024"
-weight: 15
+weight: 26
 slug: "wiegrebe2024analyzing"
 authors:
   - "Simon Wiegrebe"

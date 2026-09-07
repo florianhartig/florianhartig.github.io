@@ -3,7 +3,7 @@
 title: "Global warming likely to enhance black locust (Robinia pseudoacacia L.) growth in a Mediterranean riparian forest"
 date: 2019-01-01
 year: "2019"
-weight: 52
+weight: 63
 slug: "nadalsala2019global"
 authors:
   - "Daniel Nadal-Sala"

@@ -3,7 +3,7 @@
 title: "Conserving biodiversity with tradable permits under changing conservation costs and habitat restoration time lags"
 date: 2011-01-01
 year: "2011"
-weight: 104
+weight: 115
 slug: "drechsler2011conserving"
 authors:
   - "Martin Drechsler"

@@ -54,7 +54,7 @@ funded by the Deutsche Forschungsgemeinschaft (DFG, project no. 528747641),
 - **[sCOM](https://www.idiv.de/research/sdiv/working-groups/scom/)** — an
   iDiv/sDiv working group on advancing statistical inference for eDNA and
   other novel, high-throughput community data.
-- **[BayForDemo](https://www.bayklif.de/en/juniorgruppen-bayfordemo-en/)** —
+- **[BayForDemo](https://bayklif1.de/juniorgruppen-bayfordemo-en/index.html)** —
   a bayklif junior research group developing demographic forest-simulation
   models to formulate climate-adaptation strategies for Bavarian forestry,
   led by former group member Lisa Hülsmann (now at the University of

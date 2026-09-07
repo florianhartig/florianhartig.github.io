@@ -3,7 +3,7 @@
 title: "Rapid changes in seed dispersal traits may modify plant responses to global change"
 date: 2019-01-01
 year: "2019"
-weight: 56
+weight: 67
 slug: "johnson2019rapid"
 authors:
   - "Jeremy S. Johnson"

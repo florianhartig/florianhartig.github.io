@@ -3,7 +3,7 @@
 title: "Chilling and forcing temperatures interact to predict the onset of wood formation in Northern Hemisphere conifers"
 date: 2019-01-01
 year: "2019"
-weight: 60
+weight: 71
 slug: "delpierre2019chilling"
 authors:
   - "Nicolas Delpierre"

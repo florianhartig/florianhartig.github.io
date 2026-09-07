@@ -3,7 +3,7 @@
 title: "cito: an R package for training neural networks using torch"
 date: 2024-01-01
 year: "2024"
-weight: 13
+weight: 24
 slug: "amesoder2024cito"
 authors:
   - "Christian Amesöder"

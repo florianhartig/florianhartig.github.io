@@ -3,7 +3,7 @@
 title: "r3PG — an R package for simulating forest growth using the 3-PG process-based model"
 date: 2020-01-01
 year: "2020"
-weight: 40
+weight: 51
 slug: "trotsiuk2020r3pg"
 authors:
   - "Volodymyr Trotsiuk"

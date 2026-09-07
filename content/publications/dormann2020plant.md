@@ -3,7 +3,7 @@
 title: "Plant species richness increases with light availability, but not variability, in temperate forests understorey"
 date: 2020-01-01
 year: "2020"
-weight: 42
+weight: 53
 slug: "dormann2020plant"
 authors:
   - "Carsten F. Dormann"

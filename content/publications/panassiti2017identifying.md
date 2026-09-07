@@ -3,7 +3,7 @@
 title: "Identifying local drivers of a vector-pathogen-disease system using Bayesian modeling"
 date: 2017-01-01
 year: "2017"
-weight: 78
+weight: 89
 slug: "panassiti2017identifying"
 authors:
   - "Bernd Panassiti"

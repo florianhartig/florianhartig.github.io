@@ -3,7 +3,7 @@
 title: "On the challenge of fitting tree size distributions in ecology"
 date: 2013-01-01
 year: "2013"
-weight: 95
+weight: 106
 slug: "taubert2013challenge"
 authors:
   - "Franziska Taubert"

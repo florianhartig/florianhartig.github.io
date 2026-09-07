@@ -3,7 +3,7 @@
 title: "Learning from fungicide resistance: evolutionary insights to guide RNAi-based control of fungal crop pathogens"
 date: 2025-01-01
 year: "2025"
-weight: 5
+weight: 13
 slug: "alkemade2025learning"
 authors:
   - "Joris A. Alkemade"

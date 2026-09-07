@@ -3,7 +3,7 @@
 title: "Importance of sample size, data type and prediction method for remote sensing-based estimations of aboveground forest biomass"
 date: 2014-01-01
 year: "2014"
-weight: 89
+weight: 100
 slug: "fassnacht2014importance"
 authors:
   - "Fabian Fassnacht"

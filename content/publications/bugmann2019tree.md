@@ -3,7 +3,7 @@
 title: "Tree mortality submodels drive simulated long-term forest dynamics: assessing 15 models from the stand to global scale"
 date: 2019-01-01
 year: "2019"
-weight: 62
+weight: 73
 slug: "bugmann2019tree"
 authors:
   - "Harald Bugmann"

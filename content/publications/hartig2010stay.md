@@ -3,7 +3,7 @@
 title: "Stay by thy neighbor? Social organization determines the efficiency of biodiversity markets with spatial incentives"
 date: 2010-01-01
 year: "2010"
-weight: 108
+weight: 119
 slug: "hartig2010stay"
 authors:
   - "Florian Hartig"

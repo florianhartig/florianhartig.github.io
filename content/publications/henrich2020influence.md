@@ -3,7 +3,7 @@
 title: "The influence of camera trap flash type on the behavioural reactions and trapping rates of red deer and roe deer"
 date: 2020-01-01
 year: "2020"
-weight: 48
+weight: 59
 slug: "henrich2020influence"
 authors:
   - "Maik Henrich"

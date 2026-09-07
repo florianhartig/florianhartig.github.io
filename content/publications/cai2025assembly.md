@@ -3,7 +3,7 @@
 title: "Assembly processes inferred from eDNA surveys of a pond metacommunity are consistent with known species ecologies"
 date: 2025-01-01
 year: "2025"
-weight: 7
+weight: 15
 slug: "cai2025assembly"
 authors:
   - "Wang Cai"

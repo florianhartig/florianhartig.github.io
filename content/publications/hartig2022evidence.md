@@ -3,7 +3,7 @@
 title: "The evidence contained in the P-value is context dependent"
 date: 2022-01-01
 year: "2022"
-weight: 20
+weight: 31
 slug: "hartig2022evidence"
 authors:
   - "Florian Hartig"

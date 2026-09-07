@@ -3,7 +3,7 @@
 title: "Machine learning and deep learning — a review for ecologists"
 date: 2023-01-01
 year: "2023"
-weight: 17
+weight: 28
 slug: "pichler2023machine"
 featured: true
 authors:

@@ -3,7 +3,7 @@
 title: "Inferring the tree regeneration niche from inventory data using a dynamic forest model"
 date: 2024-01-01
 year: "2024"
-weight: 14
+weight: 25
 slug: "kaber2024inferring"
 authors:
   - "Yannek Käber"

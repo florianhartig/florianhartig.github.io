@@ -3,7 +3,7 @@
 title: "On the sympatric evolution and evolutionary stability of coexistence by relative nonlinearity of competition"
 date: 2014-01-01
 year: "2014"
-weight: 90
+weight: 101
 slug: "hartig2014sympatric"
 authors:
   - "Florian Hartig"

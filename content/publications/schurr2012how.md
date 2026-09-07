@@ -3,7 +3,7 @@
 title: "How to understand species' niches and range dynamics: a demographic research agenda for biogeography"
 date: 2012-01-01
 year: "2012"
-weight: 100
+weight: 111
 slug: "schurr2012how"
 authors:
   - "Frank M. Schurr"

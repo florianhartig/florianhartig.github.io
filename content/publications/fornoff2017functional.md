@@ -3,7 +3,7 @@
 title: "Functional flower traits and their diversity drive pollinator visitation"
 date: 2017-01-01
 year: "2017"
-weight: 79
+weight: 90
 slug: "fornoff2017functional"
 authors:
   - "Felix Fornoff"

@@ -3,7 +3,7 @@
 title: "The recruitment niche predicts plant community assembly across a hydrological gradient along plowed and undisturbed transects in a former agricultural wetland"
 date: 2019-01-01
 year: "2019"
-weight: 61
+weight: 72
 slug: "valdez2019recruitment"
 authors:
   - "Jose W. Valdez"

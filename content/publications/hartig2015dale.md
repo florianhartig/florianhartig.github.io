@@ -3,7 +3,7 @@
 title: "Dale & Fortin — the revised guide to spatial analysis"
 date: 2015-01-01
 year: "2015"
-weight: 88
+weight: 99
 slug: "hartig2015dale"
 authors:
   - "Florian Hartig"

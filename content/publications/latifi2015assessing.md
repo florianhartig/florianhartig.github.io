@@ -3,7 +3,7 @@
 title: "Estimating over- and understorey canopy density of temperate mixed stands by airborne LiDAR data"
 date: 2015-01-01
 year: "2015"
-weight: 84
+weight: 95
 slug: "latifi2015assessing"
 authors:
   - "Hooman Latifi"

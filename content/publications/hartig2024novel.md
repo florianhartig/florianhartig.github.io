@@ -3,7 +3,7 @@
 title: "Novel community data in ecology — properties and prospects"
 date: 2024-01-01
 year: "2024"
-weight: 10
+weight: 21
 slug: "hartig2024novel"
 featured: true
 authors:

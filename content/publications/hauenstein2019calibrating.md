@@ -3,7 +3,7 @@
 title: "Calibrating an individual-based movement model to predict functional connectivity for little owls"
 date: 2019-01-01
 year: "2019"
-weight: 57
+weight: 68
 slug: "hauenstein2019calibrating"
 authors:
   - "Severin Hauenstein"

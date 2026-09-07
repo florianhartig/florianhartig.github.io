@@ -3,7 +3,7 @@
 title: "gen3sis: a general engine for eco-evolutionary simulations of the processes that shape Earth's biodiversity"
 date: 2021-01-01
 year: "2021"
-weight: 32
+weight: 43
 slug: "hagen2021gen3sis"
 authors:
   - "Oskar Hagen"

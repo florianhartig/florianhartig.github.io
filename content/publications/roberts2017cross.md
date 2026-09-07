@@ -3,7 +3,7 @@
 title: "Cross-validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure"
 date: 2017-01-01
 year: "2017"
-weight: 77
+weight: 88
 slug: "roberts2017cross"
 authors:
   - "David R. Roberts"

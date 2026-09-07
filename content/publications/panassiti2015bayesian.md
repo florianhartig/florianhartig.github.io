@@ -3,7 +3,7 @@
 title: "Bayesian inference of environmental and biotic factors determining the occurrence of the grapevine disease bois noir"
 date: 2015-01-01
 year: "2015"
-weight: 87
+weight: 98
 slug: "panassiti2015bayesian"
 authors:
   - "Bernd Panassiti"

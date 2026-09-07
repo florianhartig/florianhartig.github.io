@@ -3,7 +3,7 @@
 title: "Biodiversity conservation in dynamic landscapes: trade-offs between number, connectivity and turnover of habitat patches"
 date: 2011-01-01
 year: "2011"
-weight: 105
+weight: 116
 slug: "johst2011biodiversity"
 authors:
   - "Karin Johst"

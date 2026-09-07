@@ -3,7 +3,7 @@
 title: "Ecological and economic conditions and associated institutional challenges for conservation banking in dynamic landscapes"
 date: 2014-01-01
 year: "2014"
-weight: 91
+weight: 102
 slug: "teeffelen2014ecological"
 authors:
   - "Astrid J. A. van Teeffelen"

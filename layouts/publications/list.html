@@ -13,7 +13,14 @@
            weight comes from each entry's position in the .bib, which preserves
            the ordering of the source list. */ -}}
     {{- $pubs := .RegularPages.ByWeight }}
-    {{- $groups := $pubs.GroupByParam "year" "desc" }}
+    {{- /* Preprints (is_preprint, set by bib2content.py whenever the entry's
+           own journal/booktitle IS a preprint server's name) get pulled into
+           one "Preprint" group ahead of every dated year, rather than being
+           sorted into the year they were posted — they aren't a published
+           year's output yet. */ -}}
+    {{- $preprints := where $pubs "Params.is_preprint" true }}
+    {{- $published := where $pubs "Params.is_preprint" "ne" true }}
+    {{- $groups := $published.GroupByParam "year" "desc" }}
 
     <div class="pub-search">
       <label for="pub-search-input" class="visually-hidden">Search publications by author or keyword</label>
@@ -22,10 +29,24 @@
     </div>
 
     <nav class="year-nav" aria-label="Jump to year">
+      {{- if $preprints }}
+      <a href="#ypreprint">Preprint</a>
+      {{- end }}
       {{- range $groups }}
       <a href="#y{{ .Key }}">{{ .Key }}</a>
       {{- end }}
     </nav>
+
+    {{- if $preprints }}
+    <section class="pub-year">
+      <h2 class="year-heading" id="ypreprint">Preprint</h2>
+      <div class="citation-list">
+        {{- range $preprints }}
+        {{ partial "citation.html" . }}
+        {{- end }}
+      </div>
+    </section>
+    {{- end }}
 
     {{- range $groups }}
     <section class="pub-year">

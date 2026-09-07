@@ -3,7 +3,7 @@
 title: "Technical note: approximate Bayesian parameterization of a process-based tropical forest model"
 date: 2014-01-01
 year: "2014"
-weight: 93
+weight: 104
 slug: "hartig2014technical"
 authors:
   - "Florian Hartig"

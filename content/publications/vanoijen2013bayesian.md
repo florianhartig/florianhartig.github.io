@@ -3,7 +3,7 @@
 title: "Bayesian calibration, comparison and averaging of six forest models, using data from Scots pine stands across Europe"
 date: 2013-01-01
 year: "2013"
-weight: 97
+weight: 108
 slug: "vanoijen2013bayesian"
 authors:
   - "Marcel van Oijen"

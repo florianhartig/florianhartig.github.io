@@ -3,7 +3,7 @@
 title: "Latitudinal patterns in stabilizing density dependence of forest communities"
 date: 2024-01-01
 year: "2024"
-weight: 9
+weight: 20
 slug: "hulsmann2024latitudinal"
 featured: true
 authors:

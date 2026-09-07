@@ -3,7 +3,7 @@
 title: "Do roe deer react to wildlife warning reflectors? A test combining a controlled experiment with field observations"
 date: 2017-01-01
 year: "2017"
-weight: 76
+weight: 87
 slug: "brieger2017roe"
 authors:
   - "Falko Brieger"

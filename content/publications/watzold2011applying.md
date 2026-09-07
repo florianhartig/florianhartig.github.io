@@ -3,7 +3,7 @@
 title: "Applying tradable permits to biodiversity conservation: design issues, modelling and policies"
 date: 2011-01-01
 year: "2011"
-weight: 106
+weight: 117
 slug: "watzold2011applying"
 authors:
   - "Frank Wätzold"

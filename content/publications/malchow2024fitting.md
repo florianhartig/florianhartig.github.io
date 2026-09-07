@@ -3,7 +3,7 @@
 title: "Fitting individual-based models of spatial population dynamics to long-term monitoring data"
 date: 2024-01-01
 year: "2024"
-weight: 12
+weight: 23
 slug: "malchow2024fitting"
 authors:
   - "Anne-Kathleen Malchow"

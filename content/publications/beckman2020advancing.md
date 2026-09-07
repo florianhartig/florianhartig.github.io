@@ -3,7 +3,7 @@
 title: "Advancing an interdisciplinary framework to study seed dispersal ecology"
 date: 2020-01-01
 year: "2020"
-weight: 45
+weight: 56
 slug: "beckman2020advancing"
 authors:
   - "Noelle G. Beckman"

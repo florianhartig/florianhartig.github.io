@@ -3,7 +3,7 @@
 title: "The NUCOMBog R package for simulating vegetation, water, carbon and nitrogen dynamics in peatlands"
 date: 2017-01-01
 year: "2017"
-weight: 74
+weight: 85
 slug: "pullens2017nucombog"
 authors:
   - "Johannes W. M. Pullens"

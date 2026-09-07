@@ -3,7 +3,7 @@
 title: "The multi-dimensional nature of information drives prioritization of private over social information in ants"
 date: 2019-01-01
 year: "2019"
-weight: 53
+weight: 64
 slug: "czaczkes2019multi"
 authors:
   - "Tomer J. Czaczkes"

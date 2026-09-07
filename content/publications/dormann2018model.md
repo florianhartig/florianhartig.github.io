@@ -3,7 +3,7 @@
 title: "Model averaging in ecology: a review of Bayesian, information-theoretic, and tactical approaches for predictive inference"
 date: 2018-01-01
 year: "2018"
-weight: 67
+weight: 78
 slug: "dormann2018model"
 authors:
   - "Carsten F. Dormann"

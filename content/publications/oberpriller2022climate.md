@@ -3,7 +3,7 @@
 title: "Climate and parameter sensitivity and induced uncertainties in carbon stock projections for European forests (using LPJ-GUESS 4.0)"
 date: 2022-01-01
 year: "2022"
-weight: 23
+weight: 34
 slug: "oberpriller2022climate"
 authors:
   - "Johannes Oberpriller"

@@ -3,7 +3,7 @@
 title: "The internal structure of metacommunities"
 date: 2022-01-01
 year: "2022"
-weight: 26
+weight: 37
 slug: "leibold2022internal"
 authors:
   - "Mathew A. Leibold"

@@ -3,7 +3,7 @@
 title: "Using the ODD protocol and NetLogo to replicate agent-based models"
 date: 2025-01-01
 year: "2025"
-weight: 8
+weight: 18
 slug: "grimm2025using"
 authors:
   - "Volker Grimm"

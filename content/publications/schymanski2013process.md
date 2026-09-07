@@ -3,7 +3,7 @@
 title: "Process, correlation and parameter fitting in species distribution models: a response to Kriticos et al."
 date: 2013-01-01
 year: "2013"
-weight: 96
+weight: 107
 slug: "schymanski2013process"
 authors:
   - "Stanislaus J. Schymanski"

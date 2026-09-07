@@ -3,7 +3,7 @@
 title: "Environmental heterogeneity predicts global species richness patterns better than area"
 date: 2021-01-01
 year: "2021"
-weight: 36
+weight: 47
 slug: "udy2021environmental"
 authors:
   - "Kristy Udy"

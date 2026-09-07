@@ -3,7 +3,7 @@
 title: "Smart spatial incentives for market-based conservation"
 date: 2009-01-01
 year: "2009"
-weight: 109
+weight: 120
 slug: "hartig2009smart"
 authors:
   - "Florian Hartig"

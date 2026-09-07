@@ -3,7 +3,7 @@
 title: "The total dispersal kernel: a review and future directions"
 date: 2019-01-01
 year: "2019"
-weight: 51
+weight: 62
 slug: "rogers2019total"
 authors:
   - "Haldre S. Rogers"

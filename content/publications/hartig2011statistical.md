@@ -3,7 +3,7 @@
 title: "Statistical inference for stochastic simulation models — theory and application"
 date: 2011-01-01
 year: "2011"
-weight: 103
+weight: 114
 slug: "hartig2011statistical"
 authors:
   - "Florian Hartig"

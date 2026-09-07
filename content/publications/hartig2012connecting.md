@@ -3,7 +3,7 @@
 title: "Connecting dynamic vegetation models to data — an inverse perspective"
 date: 2012-01-01
 year: "2012"
-weight: 98
+weight: 109
 slug: "hartig2012connecting"
 authors:
   - "Florian Hartig"
