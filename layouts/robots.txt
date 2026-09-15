@@ -40,4 +40,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: {{ "sitemap1.xml" | absURL }}
+Sitemap: {{ "sitemap.xml" | absURL }}
