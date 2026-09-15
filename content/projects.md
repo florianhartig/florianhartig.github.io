@@ -59,7 +59,7 @@ funded by the Deutsche Forschungsgemeinschaft (DFG, project no. 528747641),
   models to formulate climate-adaptation strategies for Bavarian forestry,
   led by former group member Lisa Hülsmann (now at the University of
   Bayreuth).
-- **[BLIZ](http://bayklif-bliz.de/)** — a bayklif research network studying
+- **[BLIZ](https://bayklif-bliz.de/)** — a bayklif research network studying
   interactions between society, land use, ecosystem services and
   biodiversity in Bavaria through to 2100, via integrated modelling across
   six coordinated subprojects.
