@@ -3,7 +3,7 @@
 title: "The latitudinal diversity gradient: novel understanding through mechanistic eco-evolutionary models"
 date: 2019-01-01
 year: "2019"
-weight: 70
+weight: 74
 slug: "pontarp2019latitudinal"
 featured: true
 authors:

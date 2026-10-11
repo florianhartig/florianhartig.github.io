@@ -3,7 +3,7 @@
 title: "A novel age-informative polygenic score improves predictive ability for kidney function and kidney function decline"
 date: 2026-01-01
 year: "2026"
-weight: 9
+weight: 10
 slug: "herold2026novel"
 authors:
   - "Janina M. Herold"

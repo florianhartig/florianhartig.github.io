@@ -3,7 +3,7 @@
 title: "Species richness gradients vary across phylogenetic scales"
 date: 2025-01-01
 year: "2025"
-weight: 10
+weight: 11
 slug: "machac2025species"
 authors:
   - "Antonin Machac"

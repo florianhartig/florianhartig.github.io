@@ -3,7 +3,7 @@
 title: "A genetic analysis reveals low prevalence of phytoplasma infection in Hyalesthes obsoletus Signoret, vector of bois noir, in SW-Germany"
 date: 2015-01-01
 year: "2015"
-weight: 96
+weight: 100
 slug: "schiro2015genetic"
 authors:
   - "Gabriele Schiro"

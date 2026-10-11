@@ -3,7 +3,7 @@
 title: "Graph neural networks for likelihood-free inference in diversification models"
 date: 2025-01-01
 year: "2025"
-weight: 14
+weight: 15
 slug: "leroy2025graph"
 authors:
   - "Amélie Leroy"

@@ -2,8 +2,10 @@
 title: "NUCOMBog"
 weight: 80
 category: "Contributions to other projects"
-summary: "A model of vegetation, carbon, nitrogen and water dynamics in undisturbed open bog ecosystems."
+summary: "An R package of the NUCOM-Bog model of vegetation, carbon, nitrogen and water dynamics in peatlands."
 paper: "pullens2017nucombog"
+scholar_match: "^NUCOMBog:"
+cran: "NUCOMBog"
 links:
   - name: "CRAN"
     url: "https://cran.r-project.org/web/packages/NUCOMBog/index.html"
@@ -11,15 +13,17 @@ links:
     url: "https://github.com/jeroenpullens/NUCOMBog"
 ---
 
-**NU**trient **C**ycling and c**OM**petition Model for undisturbed open **Bog**
-ecosystems in a temperate to sub-boreal climate.
+**NUCOMBog** makes the NUCOM-Bog model (**NU**trient **C**ycling and
+c**OM**petition model for undisturbed open **Bog** ecosystems in a temperate to
+sub-boreal climate) usable from R. The model simulates the vegetation, carbon,
+nitrogen and water dynamics of peatlands in monthly time steps. Peatlands
+store up to 30% of the world's soil organic carbon, which is why their
+response to climate change and management matters.
 
-The package simulates the coupled vegetation, carbon, nitrogen and water
-dynamics of peatlands, where the interaction between plant competition and
-water table position governs whether the system accumulates or releases
-carbon — which is what makes bogs disproportionately important to get right in
-carbon accounting.
+The package adds functions such as the calculation of net ecosystem exchange,
+runs simulations in parallel, and lets users apply R's own tools for
+plotting, sensitivity analysis and optimization. The model executable is
+downloaded separately from GitHub.
 
-Authored by J. W. M. Pullens, R. Silveyra González, M. Bagnara and Florian
-Hartig, and described in [Pullens et al. (2017)](/publications/pullens2017nucombog/)
-in *Ecological Informatics*.
+**Authors:** Johannes W. M. Pullens (maintainer), Ramiro Silveyra Gonzalez,
+Maurizio Bagnara, Florian Hartig.

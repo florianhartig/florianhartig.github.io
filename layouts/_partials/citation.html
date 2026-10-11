@@ -1,10 +1,10 @@
 {{- /* One publication, rendered as a citation. Used by the publications list and
        by the selected-publications block on the homepage. */ -}}
 <article class="citation">
-  <h3 class="citation-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <h3 class="citation-title"><a href="{{ .RelPermalink }}"{{ with .Params.content_lang }} lang="{{ . }}"{{ end }}>{{ .Title }}</a>{{ if .Params.is_preprint }} <span class="pub-badge">Preprint</span>{{ end }}</h3>
   <p class="citation-authors">{{ .Params.authors_display | default (delimit .Params.authors ", ") }}</p>
   <p class="citation-meta">
-    {{- with .Params.journal }}<em class="citation-journal">{{ . }}</em>{{ end }}
+    {{- with .Params.journal }}<em class="citation-journal">{{ . }}</em>{{ else }}{{ with .Params.school }}<em class="citation-journal">PhD thesis, {{ . }}</em>{{ end }}{{ end }}
     {{- with .Params.volume }}, {{ . }}{{ with $.Params.issue }}({{ . }}){{ end }}{{ else }}{{ with .Params.issue }}, ({{ . }}){{ end }}{{ end }}
     {{- with .Params.pages }}, {{ . }}{{ end }}
     {{- with .Params.year }} ({{ . }}){{ end }}
@@ -16,11 +16,17 @@
          for those rather than leaving an empty paragraph. */ -}}
   {{- $links := slice }}
   {{- with .Params.doi }}{{ $links = $links | append (printf `<a href="https://doi.org/%s" rel="noopener">doi:%s</a>` . .) }}{{ end }}
-  {{- if and (not .Params.doi) .Params.publisher_url }}{{ $links = $links | append (printf `<a href="%s" rel="noopener">journal</a>` .Params.publisher_url) }}{{ end }}
+  {{- if and (not .Params.doi) .Params.publisher_url }}{{ $links = $links | append (printf `<a href="%s" rel="noopener">%s</a>` .Params.publisher_url (cond (isset .Params "school") "full text" "journal")) }}{{ end }}
   {{- with .Params.preprint }}{{ $links = $links | append (printf `<a href="%s" rel="noopener">preprint</a>` .) }}{{ end }}
   {{- with (index hugo.Data.citations.papers .Params.slug) }}
-  {{- with (.scholar | default .openalex) }}
-  {{- $links = $links | append (printf "%s citations" (lang.FormatNumber 0 .)) }}
+  {{- $p := . }}
+  {{- with ($p.scholar | default $p.openalex) }}
+  {{- $txt := printf "%s citations" (lang.FormatNumber 0 .) }}
+  {{- if and $p.scholar $p.scholar_id }}
+  {{- $su := hugo.Data.citations.scholar_user }}
+  {{- $txt = printf `<a href="https://scholar.google.de/citations?view_op=view_citation&amp;hl=en&amp;user=%s&amp;citation_for_view=%s:%s" rel="noopener">%s</a>` $su $su $p.scholar_id $txt }}
+  {{- end }}
+  {{- $links = $links | append $txt }}
   {{- end }}
   {{- end }}
   {{- with $links }}

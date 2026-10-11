@@ -3,7 +3,7 @@
 title: "Efficiency of RNAi-based gene silencing in fungi: a meta-analysis"
 date: 2026-01-01
 year: "2026"
-weight: 8
+weight: 9
 slug: "barth2026efficiency"
 authors:
   - "Patrick Barth"

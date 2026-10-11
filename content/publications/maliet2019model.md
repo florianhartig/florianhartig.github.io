@@ -3,7 +3,7 @@
 title: "A model with many small shifts for estimating species-specific diversification rates"
 date: 2019-01-01
 year: "2019"
-weight: 66
+weight: 70
 slug: "maliet2019model"
 authors:
   - "Odile Maliet"

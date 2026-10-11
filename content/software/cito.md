@@ -2,8 +2,9 @@
 title: "cito"
 weight: 40
 category: "Further packages from the group"
-summary: "Deep neural networks in R with ordinary formula syntax, plus the explainable-AI tools needed to interpret them."
+summary: "Deep neural networks in R with ordinary formula syntax, plus the explainable-AI tools to interpret them."
 paper: "amesoder2024cito"
+cran: "cito"
 links:
   - name: "GitHub"
     url: "https://github.com/citoverse/cito"
@@ -11,18 +12,17 @@ links:
     url: "https://cran.r-project.org/web/packages/cito/index.html"
 ---
 
-An R package for building and training **deep neural networks** without
-leaving the modelling idiom ecologists already use. A network is specified
-with the same formula syntax as `lm` or `glm`, and hyperparameters can be
-tuned under cross-validation from the same call.
+**cito** fits and interprets deep neural networks in R. A network is
+specified with the same formula syntax as `lm` or `glm`, hyperparameters can
+be tuned by cross-validation in the same call, and the package helps to detect
+and handle convergence problems.
 
-Because a fitted network is only useful in ecology if you can say something
-about *why* it predicts what it does, cito ships the interpretation tools
-alongside: variable importance, partial dependence plots, accumulated local
-effect plots, and bootstrapped confidence intervals. Everything is built on
-`torch`, which is native to R — no Python installation required — and runs on
-CPU or GPU.
+Predictions alone are rarely enough in ecology, so cito also provides the
+tools to look inside a fitted network: variable importance, partial
+dependence and accumulated local effect plots, and effect estimates, each
+optionally with confidence intervals and p-values. It is built on the R
+package torch, needs no Python installation, and runs on CPUs, GPUs and Mac
+GPUs.
 
-Developed by Christian Amesöder, Maximilian Pichler, Florian Hartig and Armin
-Schenk, and described in
-[Amesöder et al. (2024)](/publications/amesoder2024cito/) in *Ecography*.
+**Authors:** Christian Amesöder, Maximilian Pichler (maintainer).
+**Contributors:** Florian Hartig, Armin Schenk.

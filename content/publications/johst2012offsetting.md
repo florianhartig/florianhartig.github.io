@@ -3,7 +3,7 @@
 title: "Offsetting policies for biodiversity conservation: the need for compensating habitat relocation"
 date: 2012-01-01
 year: "2012"
-weight: 113
+weight: 117
 slug: "johst2012offsetting"
 authors:
   - "Karin Johst"

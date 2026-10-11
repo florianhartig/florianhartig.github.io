@@ -3,7 +3,7 @@
 title: "Available and missing data to model impact of climate change on European forests"
 date: 2020-01-01
 year: "2020"
-weight: 58
+weight: 62
 slug: "ruizbenito2020available"
 authors:
   - "Paloma Ruiz-Benito"

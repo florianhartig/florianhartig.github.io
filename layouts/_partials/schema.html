@@ -131,16 +131,19 @@
   {{- end -}}
   {{- $article := dict
     "@context" "https://schema.org"
-    "@type" "ScholarlyArticle"
+    "@type" (cond (eq .Params.entry_type "phdthesis") "Thesis" "ScholarlyArticle")
     "@id" (printf "%s#article" .Permalink)
     "headline" .Title
     "name" .Title
     "url" .Permalink
     "author" $authors
     "datePublished" (.Params.year | default (.Date.Format "2006"))
-    "inLanguage" "en"
+    "inLanguage" (.Params.content_lang | default "en")
     "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
   -}}
+  {{- with .Params.school -}}
+    {{- $article = merge $article (dict "inSupportOf" "PhD" "sourceOrganization" (dict "@type" "CollegeOrUniversity" "name" .)) -}}
+  {{- end -}}
   {{- with .Params.journal -}}
     {{- $article = merge $article (dict "isPartOf" (dict "@type" "Periodical" "name" .)) -}}
   {{- end -}}

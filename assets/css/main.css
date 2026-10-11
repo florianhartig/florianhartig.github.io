@@ -320,6 +320,22 @@ p { margin: 0 0 1.1em; }
 }
 .citation-title a { text-decoration: none; color: var(--text); }
 .citation-title a:hover { color: var(--accent); }
+.pub-badge {
+  display: inline-block;
+  vertical-align: 0.15em;
+  margin-left: 0.35rem;
+  padding: 0.05rem 0.45rem;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+  color: var(--text-muted);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
 .citation-authors {
   font-size: 0.87rem;
   color: var(--text-muted);
@@ -524,6 +540,13 @@ p { margin: 0 0 1.1em; }
 /* On a package's own page the link row sits between the summary and the body
    text, so it needs breathing room the list-page version doesn't. */
 .page > .link-row { margin-bottom: 1.6rem; }
+.software-cites { font-size: 0.85rem; color: var(--text-faint); margin: -1.1rem 0 1.6rem; }
+.software-section { margin-top: 2.4rem; }
+.software-section h2 { font-size: 1.25rem; margin-bottom: 0.6rem; }
+.software-note { font-size: 0.85rem; color: var(--text-faint); margin: 0 0 0.9rem; }
+.cited-by-list { margin: 0; padding-left: 1.3rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.cited-by-list li { line-height: 1.4; }
+.cited-by-meta { display: block; font-size: 0.85rem; color: var(--text-muted); }
 
 /* ---------- CV timeline ---------- */
 

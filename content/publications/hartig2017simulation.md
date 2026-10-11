@@ -3,7 +3,7 @@
 title: "Simulation modeling"
 date: 2017-01-01
 year: "2017"
-weight: 86
+weight: 90
 slug: "hartig2017simulation"
 authors:
   - "Florian Hartig"

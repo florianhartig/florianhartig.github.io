@@ -3,7 +3,7 @@
 title: "Equivalence testing in pesticide risk assessment — evaluation and practical guidance for design, analysis and interpretation"
 date: 2026-01-01
 year: "2026"
-weight: 6
+weight: 7
 slug: "wintermantel2026equivalence"
 authors:
   - "Dimitry Wintermantel"

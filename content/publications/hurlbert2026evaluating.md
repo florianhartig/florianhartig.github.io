@@ -3,7 +3,7 @@
 title: "Evaluating the Robustness of Process-Pattern Links Using Phylogenies — Insights from a Comparison of Eight Simulation Models"
 date: 2026-01-01
 year: "2026"
-weight: 1
+weight: 2
 slug: "hurlbert2026evaluating"
 authors:
   - "Allen H. Hurlbert"

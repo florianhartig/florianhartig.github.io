@@ -2,8 +2,11 @@
 title: "r3PG"
 weight: 65
 category: "Contributions to other projects"
-summary: "An R/Fortran implementation of the 3-PG process-based forest growth model."
+summary: "A fast R interface to the 3-PG forest growth model, for pure and mixed stands."
 paper: "trotsiuk2020r3pg"
+scholar_match: "^Package.{1,3}r3PG"
+cran: "r3PG"
+aliases: ["/software/threepgn/"]
 links:
   - name: "GitHub"
     url: "https://github.com/trotsiuk/r3PG"
@@ -11,17 +14,20 @@ links:
     url: "https://cran.r-project.org/package=r3PG"
 ---
 
-An R package wrapping a **Fortran implementation of 3-PG** (Physiological
-Processes Predicting Growth), one of the most widely used process-based
-forest growth models worldwide. It can simulate monospecific stands as well
-as mixtures of evergreen and deciduous tree species, even-aged or uneven-aged.
+**r3PG** wraps a Fortran implementation of 3-PG (Physiological Processes
+Predicting Growth), one of the most widely used forest growth simulators
+worldwide, in an R package. It covers both model versions: 3-PGpjs for
+even-aged, monospecific, evergreen stands, and 3-PGmix for deciduous,
+uneven-aged or mixed-species stands.
 
-As with [rLPJGUESS](/software/rlpjguess/), the point of keeping the model fast
-in Fortran while driving it from R is inference: it makes the repeated
-evaluation needed for sensitivity analysis and Bayesian calibration practical.
-It's a separate codebase from [threePGN](/software/threepgn/) below — that one
-wraps the related but distinct 3PGN model variant.
+Compiled code makes the model fast enough for sensitivity analysis and full
+Bayesian calibration, which both require running it many times.
 
-Developed by Volodymyr Trotsiuk, with David I. Forrester and Florian Hartig,
-and described in [Trotsiuk et al. (2020)](/publications/trotsiuk2020r3pg/) in
-*Methods in Ecology and Evolution*.
+r3PG succeeds **threePGN**, an earlier R package by Francesco Minunno,
+Florian Hartig and Volodymyr Trotsiuk that wrapped a Fortran implementation
+of 3PGN, a variant of the 3-PG model. threePGN is no longer maintained; its
+code remains available on
+[GitHub](https://github.com/ForModLabUHel/threePGN-package).
+
+**Authors:** Volodymyr Trotsiuk (maintainer), Florian Hartig,
+David Forrester, Ramiro Silveyra Gonzalez.

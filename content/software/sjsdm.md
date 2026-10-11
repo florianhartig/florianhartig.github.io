@@ -2,8 +2,9 @@
 title: "sjSDM"
 weight: 30
 category: "Further packages from the group"
-summary: "Scalable joint species distribution modelling, estimating the full species covariance matrix rather than approximating it."
+summary: "Fast joint species distribution models for large community datasets, estimating the full species covariance matrix."
 paper: "pichler2021new"
+cran: "sjSDM"
 links:
   - name: "GitHub"
     url: "https://github.com/TheoreticalEcology/s-jSDM"
@@ -11,19 +12,22 @@ links:
     url: "https://cran.r-project.org/web/packages/sjSDM/index.html"
 ---
 
-An R package for fast and accurate **joint species distribution models**
-(jSDMs) — multivariate generalized linear mixed models that describe how a
-whole community of species responds to environmental predictors, to space, and
-to each other.
+**sjSDM** fits joint species distribution models (jSDMs): models of how a
+whole community of species responds to the environment, to space and to each
+other. The difficult part of a jSDM is the species–species covariance matrix,
+which most implementations approximate with a small number of latent
+variables. sjSDM estimates the full matrix instead. It remains fast enough for
+large community datasets, including eDNA data, because it approximates the
+joint likelihood by Monte Carlo integration, implemented in PyTorch and run
+on CPUs or GPUs.
 
-The difficult part of a jSDM is the species–species covariance. Most
-implementations approximate it with latent variables to keep the computation
-tractable. sjSDM instead estimates the **full covariance matrix**, using
-numerical simulation and a PyTorch backend so that it stays fast enough for
-large community datasets. Alongside the model fitting it provides the tools
-needed to interpret the result: ANOVA and variation partitioning,
-metacommunity-structure analysis, and plotting.
+Beyond fitting, the package partitions explained variation into
+environmental, spatial and biotic components and can break this down by
+species and site to reveal the
+[internal structure of a metacommunity](/publications/leibold2022internal/).
+It offers several response distributions, including the classical
+multivariate probit model, terms for spatial autocorrelation, and the option
+of replacing the linear predictor with a deep neural network.
 
-Developed by Maximilian Pichler, with Florian Hartig. The method is described
-in [Pichler & Hartig (2021)](/publications/pichler2021new/) in *Methods in
-Ecology and Evolution*.
+**Authors:** Maximilian Pichler (maintainer), Florian Hartig.
+**Contributors:** Wang Cai.

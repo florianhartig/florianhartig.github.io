@@ -1,4 +1,7 @@
 {{ define "main" }}
+{{- $sw := index (hugo.Data.software.software | default dict) .File.ContentBaseName }}
+{{- $paper := "" }}
+{{- with .Params.paper }}{{ $paper = site.GetPage (printf "/publications/%s" .) }}{{ end }}
 <div class="wrap wrap-narrow">
   <article class="page">
     <p class="breadcrumb"><a href="{{ "/software/" | relURL }}">← Software</a></p>
@@ -9,9 +12,47 @@
       {{- range $i, $l := . }}{{ if $i }}<span aria-hidden="true"> · </span>{{ end }}<a href="{{ $l.url }}" rel="noopener">{{ $l.name }}</a>{{ end }}
     </p>
     {{- end }}
+    {{- with $sw }}{{ with .scholar }}
+    <p class="software-cites">Cited
+      {{ with $sw.scholar_cites_url }}<a href="{{ . }}" rel="noopener">{{ lang.FormatNumber 0 $sw.scholar }} times</a>{{ else }}{{ lang.FormatNumber 0 $sw.scholar }} times{{ end }}
+      on Google Scholar{{ if gt $sw.scholar_entries 1 }}, summed over its {{ $sw.scholar_entries }} entries there{{ end }} (as of {{ hugo.Data.software.as_of }})</p>
+    {{- end }}{{ end }}
     <div class="prose">
       {{ .Content }}
     </div>
+
+    {{- if $paper }}
+    <section class="software-section">
+      <h2>Paper describing {{ .Title }}</h2>
+      <div class="citation-list">{{ partial "citation.html" $paper }}</div>
+    </section>
+    {{- else }}{{ with $sw }}{{ with .cran_ref }}
+    <section class="software-section">
+      <h2>How to cite {{ $.Title }}</h2>
+      <p>{{ .authors }}. <em>{{ .title }}</em>. R package.
+        <a href="https://doi.org/{{ .doi }}" rel="noopener">doi:{{ .doi }}</a>.
+        For the citation of a specific version, run <code>citation("{{ $.Title }}")</code> in R.</p>
+    </section>
+    {{- end }}{{ end }}{{ end }}
+
+    {{- with $sw }}{{ with .top_citing }}
+    <section class="software-section">
+      <h2>Widely cited work citing {{ $.Title }}</h2>
+      <p class="software-note">The most-cited articles that cite {{ $.Title }}{{ if $paper }} or its paper{{ end }},
+        ranked by their own citation count in OpenAlex; the group's own papers are left out.</p>
+      <ol class="cited-by-list">
+        {{- range . }}
+        <li>
+          {{ if .doi }}<a href="https://doi.org/{{ .doi }}" rel="noopener">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+          <span class="cited-by-meta">{{ .authors }} ({{ .year }}){{ with .venue }}, <em>{{ . }}</em>{{ end }} · {{ lang.FormatNumber 0 .cited_by }} citations</span>
+        </li>
+        {{- end }}
+      </ol>
+      {{- with $sw.scholar_cites_url }}
+      <p class="more"><a href="{{ . }}" rel="noopener">All {{ lang.FormatNumber 0 $sw.scholar }} citing works on Google Scholar →</a></p>
+      {{- end }}
+    </section>
+    {{- end }}{{ end }}
   </article>
 </div>
 {{ end }}

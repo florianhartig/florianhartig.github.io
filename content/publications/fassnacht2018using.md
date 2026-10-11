@@ -3,7 +3,7 @@
 title: "Using synthetic data to evaluate the benefits of large field plots for forest biomass estimation with LiDAR"
 date: 2018-01-01
 year: "2018"
-weight: 77
+weight: 81
 slug: "fassnacht2018using"
 authors:
   - "Fabian Fassnacht"

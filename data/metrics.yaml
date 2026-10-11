@@ -11,16 +11,16 @@
 # from content/publications/ in layouts/_partials/metrics.html, so it can't
 # go stale as entries are added. Don't add an `articles` field back here.
 show: true
-as_of: "September 2026"
+as_of: "October 2026"
 
 # Google Scholar
 source: "Google Scholar"
 source_url: "https://scholar.google.de/citations?user=AdcDit0AAAAJ"
-citations: 29408
-h_index: 57
-i10_index: 107
+citations: 30692
+h_index: 58
+i10_index: 108
 
 # Scopus
 scopus_url: "https://www.scopus.com/authid/detail.uri?authorId=24773326300"
-coauthors: 632
-coauthors_approx: true
+coauthors: 650
+coauthors_approx: false

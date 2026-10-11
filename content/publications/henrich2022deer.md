@@ -3,7 +3,7 @@
 title: "Deer behavior affects density estimates with camera traps, but is outweighed by spatial variability"
 date: 2022-01-01
 year: "2022"
-weight: 35
+weight: 38
 slug: "henrich2022deer"
 authors:
   - "Maik Henrich"

@@ -20,9 +20,11 @@
       <article class="software-item">
         <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         {{- with .Params.summary }}<p class="software-summary">{{ . }}</p>{{ end }}
+        {{- $sw := index (hugo.Data.software.software | default dict) .File.ContentBaseName }}
         {{- with .Params.links }}
         <p class="link-row">
           {{- range $i, $l := . }}{{ if $i }}<span aria-hidden="true"> · </span>{{ end }}<a href="{{ $l.url }}" rel="noopener">{{ $l.name }}</a>{{ end }}
+          {{- with $sw }}{{ with .scholar }}<span aria-hidden="true"> · </span>{{ with $sw.scholar_cites_url }}<a href="{{ . }}" rel="noopener">{{ lang.FormatNumber 0 $sw.scholar }} citations</a>{{ else }}{{ lang.FormatNumber 0 $sw.scholar }} citations{{ end }}{{ end }}{{ end }}
         </p>
         {{- end }}
       </article>

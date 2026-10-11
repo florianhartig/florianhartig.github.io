@@ -3,7 +3,7 @@
 title: "Dispersion tests in generalised linear mixed-effects models — a methods comparison and practical guide"
 date: 2025-01-01
 year: "2025"
-weight: 11
+weight: 12
 slug: "leite2025dispersion"
 authors:
   - "Melina de Souza Leite"

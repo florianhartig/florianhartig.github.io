@@ -3,7 +3,7 @@
 title: "Hydrological recruitment niches of wetland plants are associated with dormancy, alternating temperature, and oxygen requirements"
 date: 2026-01-01
 year: "2026"
-weight: 3
+weight: 4
 slug: "maskova2026hydrological"
 authors:
   - "Tereza Mašková"

@@ -3,7 +3,7 @@
 title: "Impacts of climate change on biodiversity and ecosystems in Bavaria: a sectoral analysis"
 date: 2026-01-01
 year: "2026"
-weight: 2
+weight: 3
 slug: "rubanschi2026impacts"
 authors:
   - "Sven Rubanschi"

@@ -79,7 +79,7 @@ funded by the Deutsche Forschungsgemeinschaft (DFG, project no. 528747641),
   (FORest MAnagement Scenarios for Adaptation and Mitigation) developing
   forest-management scenarios, consistent from stand to continental scale,
   for climate mitigation and adaptation across Europe.
-- **[CONECT](http://www.biodiversity-exploratories.de/)** — a DFG-funded
+- **[CONECT](https://www.biodiversity-exploratories.de/)** — a DFG-funded
   theory and modelling project within the
   [Biodiversity Exploratories](https://www.biodiversity-exploratories.de/en/),
   Germany's long-term land-use and biodiversity research platform.

@@ -243,6 +243,10 @@ def main() -> int:
             ("url", "publisher_url"),
             ("preprint", "preprint"),
             ("note", "note"),
+            ("school", "school"),
+            # ISO code for a non-English paper; templates mark title and
+            # abstract with lang="…" and JSON-LD gets the right inLanguage.
+            ("language", "content_lang"),
         ):
             value = fields.get(bib_field)
             if value and not any(l.startswith(f"{fm_field}:") for l in lines):
@@ -294,7 +298,9 @@ def main() -> int:
         lines.append(f"entry_type: {yaml_quote(entry_type)}")
         lines.append("---")
         if abstract:
-            lines += ["", "## Abstract", "", abstract]
+            lang = fields.get("language", "").strip()
+            body = f'<p lang="{lang}">{abstract}</p>' if lang else abstract
+            lines += ["", "## Abstract", "", body]
         lines.append("")
 
         (OUT / f"{key}.md").write_text("\n".join(lines), encoding="utf-8")

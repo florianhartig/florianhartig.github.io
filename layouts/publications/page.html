@@ -2,10 +2,10 @@
 <div class="wrap wrap-narrow">
   <article class="page publication">
     <p class="breadcrumb"><a href="{{ "/publications/" | relURL }}">← Publications</a></p>
-    <h1>{{ .Title }}</h1>
+    <h1>{{ with .Params.content_lang }}<span lang="{{ . }}">{{ $.Title }}</span>{{ else }}{{ .Title }}{{ end }}{{ if .Params.is_preprint }} <span class="pub-badge">Preprint</span>{{ end }}</h1>
     <p class="citation-authors pub-authors">{{ .Params.authors_display | default (delimit .Params.authors ", ") }}</p>
     <div class="citation-meta">
-      {{- with .Params.journal }}<em>{{ . }}</em>{{ end }}
+      {{- with .Params.journal }}<em>{{ . }}</em>{{ else }}{{ with .Params.school }}<em>PhD thesis, {{ . }}</em>{{ end }}{{ end }}
       {{- with .Params.volume }}, {{ . }}{{ with $.Params.issue }}({{ . }}){{ end }}{{ else }}{{ with .Params.issue }}, ({{ . }}){{ end }}{{ end }}
       {{- with .Params.pages }}, {{ . }}{{ end }}
       {{- with .Params.year }} ({{ . }}){{ end }}
@@ -18,6 +18,9 @@
   title = {{"{"}}{{ $.Title }}{{"}"}},
   {{- with $.Params.journal }}
   journal = {{"{"}}{{ . }}{{"}"}},
+  {{- end }}
+  {{- with $.Params.school }}
+  school = {{"{"}}{{ . }}{{"}"}},
   {{- end }}
   {{- with $.Params.volume }}
   volume = {{"{"}}{{ . }}{{"}"}},
@@ -39,11 +42,15 @@
       {{- end }}
       {{- with .Params.doi }}<br><span class="pub-doi">DOI: <a href="https://doi.org/{{ . }}" rel="noopener">{{ . }}</a></span>{{ end }}
       {{- with (index hugo.Data.citations.papers .Params.slug) }}
+      {{- if or .scholar .openalex }}
+      {{- $scholarLink := hugo.Data.citations.scholar_url }}
+      {{- with .scholar_id }}{{ $su := hugo.Data.citations.scholar_user }}{{ $scholarLink = printf "https://scholar.google.de/citations?view_op=view_citation&hl=en&user=%s&citation_for_view=%s:%s" $su $su . }}{{ end }}
       <br><span class="pub-doi pub-citations">Cited by
-        {{- if .scholar }} <a href="{{ hugo.Data.citations.scholar_url }}" rel="noopener">{{ lang.FormatNumber 0 .scholar }}</a> (Google Scholar){{ end -}}
+        {{- if .scholar }} <a href="{{ $scholarLink }}" rel="noopener">{{ lang.FormatNumber 0 .scholar }}</a> (Google Scholar){{ end -}}
         {{- if and .scholar .openalex }} ·{{ end -}}
         {{- if .openalex }} {{ lang.FormatNumber 0 .openalex }} (OpenAlex){{ end -}}
         , as of {{ hugo.Data.citations.as_of }}</span>
+      {{- end }}
       {{- end }}
     </div>
 
@@ -52,7 +59,7 @@
       <a class="button" href="https://doi.org/{{ . }}" rel="noopener">View article (DOI)</a>
       {{- end }}
       {{- with .Params.publisher_url }}
-      <a class="button{{ if $.Params.doi }} button-quiet{{ end }}" href="{{ . }}" rel="noopener">Publisher page</a>
+      <a class="button{{ if $.Params.doi }} button-quiet{{ end }}" href="{{ . }}" rel="noopener">{{ if $.Params.school }}Full text{{ else }}Publisher page{{ end }}</a>
       {{- end }}
       {{- with .Params.preprint }}
       <a class="button button-quiet" href="{{ . }}" rel="noopener">Preprint</a>

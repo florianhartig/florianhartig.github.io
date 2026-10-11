@@ -3,7 +3,7 @@
 title: "EcoTRADE — a multi-player network game of a tradable permit market for biodiversity credits"
 date: 2010-01-01
 year: "2010"
-weight: 118
+weight: 122
 slug: "hartig2010ecotrade"
 authors:
   - "Florian Hartig"

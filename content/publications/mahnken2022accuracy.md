@@ -3,7 +3,7 @@
 title: "Accuracy, realism and general applicability of European forest models"
 date: 2022-01-01
 year: "2022"
-weight: 32
+weight: 35
 slug: "mahnken2022accuracy"
 authors:
   - "Mats Mahnken"

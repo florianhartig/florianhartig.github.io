@@ -3,7 +3,7 @@
 title: "Analyzing animal movement using deep learning"
 date: 2026-01-01
 year: "2026"
-weight: 7
+weight: 8
 slug: "fronville2026analyzing"
 authors:
   - "Thibault Fronville"

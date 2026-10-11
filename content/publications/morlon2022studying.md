@@ -3,7 +3,7 @@
 title: "Studying speciation and extinction dynamics from phylogenies: addressing identifiability issues"
 date: 2022-01-01
 year: "2022"
-weight: 30
+weight: 33
 slug: "morlon2022studying"
 featured: true
 authors:
