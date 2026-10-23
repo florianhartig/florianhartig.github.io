@@ -10,6 +10,16 @@ links:
     url: "https://github.com/citoverse/cito"
   - name: "CRAN"
     url: "https://cran.r-project.org/web/packages/cito/index.html"
+# Entry in the publication list: title and first-release year
+# from the Crossref record of the CRAN DOI, authors from the credit line below.
+pub_entry:
+  title: "cito: Building and Training Neural Networks"
+  year: "2022"
+  doi: "10.32614/CRAN.package.cito"
+  authors:
+    - "Christian Amesöder"
+    - "Maximilian Pichler"
+  contributor: "Florian Hartig"
 ---
 
 **cito** fits and interprets deep neural networks in R. A network is

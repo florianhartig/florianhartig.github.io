@@ -1,0 +1,6 @@
+{{- /* {{< teaching-materials >}} — open teaching materials from data/courses.yaml. */ -}}
+<ul>
+  {{- range hugo.Data.courses.materials }}
+  <li>{{ if eq .lang "de" }}<span lang="de">{{ end }}<a href="{{ .url }}">{{ .name }}</a>{{ if eq .lang "de" }}</span>{{ end }}{{ with .note }} — {{ . }}{{ end }}</li>
+  {{- end }}
+</ul>

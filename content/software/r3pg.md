@@ -12,6 +12,17 @@ links:
     url: "https://github.com/trotsiuk/r3PG"
   - name: "CRAN"
     url: "https://cran.r-project.org/package=r3PG"
+# Entry in the publication list: title and first-release year
+# from the Crossref record of the CRAN DOI, authors from the credit line below.
+pub_entry:
+  title: "r3PG: Simulating Forest Growth using the 3-PG Model"
+  year: "2020"
+  doi: "10.32614/CRAN.package.r3PG"
+  authors:
+    - "Volodymyr Trotsiuk"
+    - "Florian Hartig"
+    - "David Forrester"
+    - "Ramiro Silveyra Gonzalez"
 ---
 
 **r3PG** wraps a Fortran implementation of 3-PG (Physiological Processes

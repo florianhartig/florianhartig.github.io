@@ -10,6 +10,15 @@ links:
     url: "https://github.com/TheoreticalEcology/s-jSDM"
   - name: "CRAN"
     url: "https://cran.r-project.org/web/packages/sjSDM/index.html"
+# Entry in the publication list: title and first-release year
+# from the Crossref record of the CRAN DOI, authors from the credit line below.
+pub_entry:
+  title: "sjSDM: Scalable Joint Species Distribution Modeling"
+  year: "2022"
+  doi: "10.32614/CRAN.package.sjSDM"
+  authors:
+    - "Maximilian Pichler"
+    - "Florian Hartig"
 ---
 
 **sjSDM** fits joint species distribution models (jSDMs): models of how a

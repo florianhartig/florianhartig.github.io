@@ -12,6 +12,21 @@ links:
     url: "https://github.com/project-Gen3sis/R-package"
   - name: "CRAN"
     url: "https://cran.r-project.org/package=gen3sis"
+# Entry in the publication list: title and first-release year
+# from the Crossref record of the CRAN DOI, authors from the credit line below.
+pub_entry:
+  title: "gen3sis: General Engine for Eco-Evolutionary Simulations"
+  year: "2020"
+  doi: "10.32614/CRAN.package.gen3sis"
+  authors:
+    - "Oskar Hagen"
+    - "Benjamin Flück"
+    - "Fabian Fopp"
+    - "Juliano S. Cabral"
+    - "Florian Hartig"
+    - "Mikael Pontarp"
+    - "Thiago F. Rangel"
+    - "Loïc Pellissier"
 ---
 
 **gen3sis** is a general engine for spatially explicit eco-evolutionary

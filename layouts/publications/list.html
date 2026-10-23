@@ -16,34 +16,65 @@
            badge in citation.html — a separate group at the top filled up
            with old preprints that were never published elsewhere. */ -}}
     {{- $pubs := .RegularPages.ByWeight }}
-    {{- $groups := $pubs.GroupByParam "year" "desc" }}
+    {{- /* Software packages are listed too, badged "Software", in the year of
+           their first release, after that year's papers. */ -}}
+    {{- $sws := where (where site.RegularPages "Section" "software") "Params.pub_entry" "!=" nil }}
+    {{- $years := slice }}
+    {{- range $pubs }}{{ $years = $years | append (string .Params.year) }}{{ end }}
+    {{- range $sws }}{{ $years = $years | append (string .Params.pub_entry.year) }}{{ end }}
+    {{- $years = sort (uniq $years) "value" "desc" }}
 
-    <div class="pub-search">
-      <label for="pub-search-input" class="visually-hidden">Search publications by author or keyword</label>
-      <input type="search" id="pub-search-input" placeholder="Search by author or keyword…" autocomplete="off">
+    {{- /* Search, selection and sorting need JS: hidden until the script runs
+          , so a page without JS shows no dead controls. */}}
+    <div class="pub-search" hidden>
+      <div class="pub-search-row">
+        <label for="pub-search-input" class="visually-hidden">Search publications by author or keyword</label>
+        <input type="search" id="pub-search-input" placeholder="Search by author or keyword…" autocomplete="off">
+        {{- /* Florian's own selection: entries with `featured = {true}` in the .bib. */ -}}
+        {{- if where $pubs "Params.featured" true }}
+        {{- $nSel := len (where .Pages "Params.featured" true) }}
+        <button type="button" id="selected" class="button button-quiet pub-selected-toggle" aria-pressed="false">{{ $nSel }} selected<br>publications</button>
+        {{- end }}
+        {{- /* optional order by citation count (the count each
+               entry shows: Scholar, else OpenAlex); year headings are hidden then. */}}
+        <button type="button" class="button button-quiet pub-sort-toggle" aria-pressed="false">Sort by<br>citations</button>
+      </div>
       <p class="pub-search-count" aria-live="polite"></p>
     </div>
 
-    <nav class="year-nav" aria-label="Jump to year">
-      {{- range $groups }}
-      <a href="#y{{ .Key }}">{{ .Key }}</a>
+    <nav class="year-nav" aria-label="Jump to year or show one type">
+      {{- range $years }}
+      <a href="#y{{ . }}">{{ . }}</a>
       {{- end }}
+      {{- /* Type filters next to the years, so it is clear that
+             preprints and software are part of the list; JS only. */}}
+      <span class="year-nav-types" hidden>
+        <button type="button" class="pub-type-toggle" data-type="preprint" aria-pressed="false">Preprints ({{ len (where $pubs "Params.is_preprint" true) }})</button>
+        <button type="button" class="pub-type-toggle" data-type="software" aria-pressed="false">Software ({{ len $sws }})</button>
+      </span>
     </nav>
 
-    {{- range $groups }}
+    {{- range $y := $years }}
     <section class="pub-year">
-      <h2 class="year-heading" id="y{{ .Key }}">{{ .Key }}</h2>
+      <h2 class="year-heading" id="y{{ $y }}">{{ $y }}</h2>
       <div class="citation-list">
-        {{- range .Pages }}
+        {{- range where $pubs "Params.year" $y }}
         {{ partial "citation.html" . }}
         {{- end }}
+        {{- range $sws }}{{ if eq (string .Params.pub_entry.year) $y }}
+        {{ partial "software-citation.html" . }}
+        {{- end }}{{ end }}
       </div>
     </section>
     {{- end }}
+    <section class="pub-sorted-section" hidden>
+      <h2 class="visually-hidden">Publications sorted by citations</h2>
+      <div class="citation-list pub-sorted"></div>
+    </section>
   </article>
 </div>
 
-{{- /* Client-side only: filters the 110 entries already in the page rather
+{{- /* Client-side only: filters the entries already in the page rather
        than fetching or duplicating data. Matches against each citation's own
        visible text (title, authors, journal), so search stays in sync with
        what's on the page with no separate index to maintain. */ -}}
@@ -51,37 +82,154 @@
 (function () {
   var input = document.getElementById('pub-search-input');
   if (!input) return;
+  document.querySelector('.pub-search').hidden = false;
   var countEl = document.querySelector('.pub-search-count');
   var yearNav = document.querySelector('.year-nav');
+  var yearLinks = yearNav ? Array.prototype.slice.call(yearNav.querySelectorAll('a')) : [];
+  var typeBtns = Array.prototype.slice.call(document.querySelectorAll('.pub-type-toggle'));
+  var typeFilter = null;
+  if (typeBtns.length) document.querySelector('.year-nav-types').hidden = false;
+  // The year links make sense only for the full list in year order; the type
+  // buttons stay so a type filter can always be switched off.
+  function setNav(filtered) { yearLinks.forEach(function (a) { a.hidden = filtered || byCites; }); }
   var sections = Array.prototype.slice.call(document.querySelectorAll('.pub-year'));
   var total = document.querySelectorAll('.citation').length;
+  var toggle = document.querySelector('.pub-selected-toggle');
+  var onlySelected = false;
+  var sortToggle = document.querySelector('.pub-sort-toggle');
+  var sortedBox = document.querySelector('.pub-sorted');
+  var sortedSection = document.querySelector('.pub-sorted-section');
+  var byCites = false;
+  var cites = Array.prototype.slice.call(document.querySelectorAll('.pub-year .citation'));
+  cites.forEach(function (c, i) { c._home = c.parentNode; c._pos = i; });
 
+  // Case- and accent-insensitive ("muller" finds "Müller").
+  function norm(s) { return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
+  // Section visibility: in the year view a year shows if any of its entries
+  // does; in the citation view all entries sit in one list, years hidden.
+  function showSections() {
+    sections.forEach(function (section) {
+      section.hidden = byCites || !section.querySelector('.citation:not([hidden])');
+    });
+    sortedSection.hidden = !byCites;
+  }
   function filter() {
-    var q = input.value.trim().toLowerCase();
-    if (!q) {
-      sections.forEach(function (section) {
-        section.hidden = false;
-        section.querySelectorAll('.citation').forEach(function (c) { c.hidden = false; });
-      });
-      if (yearNav) yearNav.hidden = false;
+    var q = norm(input.value.trim());
+    if (!q && !onlySelected && !typeFilter) {
+      cites.forEach(function (c) { c.hidden = false; });
+      showSections();
+      setNav(false);
       countEl.textContent = '';
       return;
     }
-    if (yearNav) yearNav.hidden = true;
+    setNav(true);
     var shown = 0;
-    sections.forEach(function (section) {
-      var anyVisible = false;
-      section.querySelectorAll('.citation').forEach(function (c) {
-        var match = c.textContent.toLowerCase().indexOf(q) !== -1;
-        c.hidden = !match;
-        if (match) { anyVisible = true; shown++; }
-      });
-      section.hidden = !anyVisible;
+    cites.forEach(function (c) {
+      var match = (!q || norm(c.getAttribute('data-search') || c.textContent).indexOf(q) !== -1) &&
+                  (!onlySelected || c.hasAttribute('data-featured')) &&
+                  (!typeFilter || c.getAttribute('data-type') === typeFilter);
+      c.hidden = !match;
+      if (match) shown++;
     });
-    countEl.textContent = shown + ' of ' + total + ' publications match “' + input.value.trim() + '”';
+    showSections();
+    var what = typeFilter === 'software' ? 'software packages' : typeFilter === 'preprint' ? 'preprints' : 'publications';
+    countEl.textContent = q
+      ? shown + ' of ' + total + ' publications match “' + input.value.trim() + '”' + (typeFilter ? ' among the ' + what : '') + (onlySelected ? ' among the selected ones' : '')
+      : shown + (onlySelected ? ' selected ' : ' ') + what;
+    if (q && shown === 0) {
+      var a = document.createElement('a');
+      a.href = '{{ "/software/" | relURL }}';
+      a.textContent = 'Looking for software? See the software page →';
+      countEl.appendChild(document.createTextNode(' — '));
+      countEl.appendChild(a);
+    }
+  }
+
+  function setSelected(on) {
+    onlySelected = on;
+    history.replaceState(null, '', on ? '#selected' : location.pathname + location.search);
+    toggle.setAttribute('aria-pressed', on ? 'true' : 'false');
+    // The label stays "Selected publications"; aria-pressed and the filled
+    // style carry the state (a changing label would contradict aria-pressed).
+    filter();
+  }
+
+  // Citation order: entries move into one list, most-cited first (ties keep
+  // the year order); switching back returns each to its year in .bib order.
+  function setSort(on) {
+    byCites = on;
+    sortToggle.setAttribute('aria-pressed', on ? 'true' : 'false');
+    var order = cites.slice();
+    if (on) {
+      order.sort(function (a, b) { return (+b.getAttribute('data-cites')) - (+a.getAttribute('data-cites')) || a._pos - b._pos; });
+      order.forEach(function (c) { sortedBox.appendChild(c); });
+    } else {
+      order.forEach(function (c) { c._home.appendChild(c); });
+    }
+    var u = new URL(location.href);
+    if (on) u.searchParams.set('sort', 'citations'); else u.searchParams.delete('sort');
+    history.replaceState(null, '', u);
+    filter();
   }
 
   input.addEventListener('input', filter);
+  // Keep the search term in the URL (?q=…), so a filtered view can be shared
+  // or bookmarked.
+  input.addEventListener('input', function () {
+    var u = new URL(location.href), q = input.value.trim();
+    if (q) u.searchParams.set('q', q); else u.searchParams.delete('q');
+    u.searchParams.delete('keys'); u.searchParams.delete('with'); u.searchParams.delete('at'); u.searchParams.delete('in');
+    history.replaceState(null, '', u);
+  });
+  if (sortToggle) {
+    sortToggle.addEventListener('click', function () { setSort(!byCites); });
+  }
+  function setType(t) {
+    typeFilter = t;
+    typeBtns.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-type') === t ? 'true' : 'false'); });
+    var u = new URL(location.href);
+    if (t) u.searchParams.set('type', t); else u.searchParams.delete('type');
+    history.replaceState(null, '', u);
+    filter();
+  }
+  typeBtns.forEach(function (b) {
+    b.addEventListener('click', function () { var t = b.getAttribute('data-type'); setType(typeFilter === t ? null : t); });
+  });
+  // /publications/?q=… pre-fills the search. /publications/?keys=a,b&with=Name
+  // (links from the co-authors page) shows exactly those papers and expands
+  // their author lists, so the co-author's name is visible.
+  var params = new URLSearchParams(location.search);
+  if (sortToggle && params.get('sort') === 'citations') setSort(true);
+  if (['preprint', 'software'].indexOf(params.get('type')) !== -1) setType(params.get('type'));
+  var preset = params.get('q');
+  if (preset) { input.value = preset; filter(); }
+  var keys = (params.get('keys') || '').split(',').filter(Boolean);
+  // Only a plausible name is echoed (no arbitrary text via the URL).
+  var withName = params.get('with') || '';
+  if (withName.length > 60 || !/^[\p{L}\p{M} .'’-]+$/u.test(withName)) withName = '';
+  // &at=Country or Institution (links from "Co-authors by country and
+  // institution"): the same kind of check, with the characters that
+  // institution names use.
+  var atPrep = params.get('in') ? 'in' : 'at';
+  var atPlace = params.get('in') || params.get('at') || '';
+  if (atPlace.length > 120 || !/^[\p{L}\p{M}\p{N} .,'’()&-]+$/u.test(atPlace)) atPlace = '';
+  if (keys.length) {
+    var shown = 0;
+    setNav(true);
+    cites.forEach(function (c) {
+      var on = keys.indexOf(c.getAttribute('data-key')) !== -1;
+      c.hidden = !on; if (on) shown++;
+    });
+    showSections();
+    countEl.textContent = shown + ' publication' + (shown === 1 ? '' : 's') + (withName ? ' with ' + withName : atPlace ? ' with co-authors ' + atPrep + ' ' + atPlace : '') + ' — ';
+    var all = document.createElement('a'); all.href = location.pathname; all.textContent = 'show all publications';
+    countEl.appendChild(all);
+    window.auOpenVisible = true;   // authors-script.html then starts these lists expanded
+  }
+  if (toggle) {
+    toggle.addEventListener('click', function () { setSelected(!onlySelected); });
+    if (location.hash === '#selected') setSelected(true);
+  }
 })();
 </script>
 {{ end }}

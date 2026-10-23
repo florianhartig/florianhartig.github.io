@@ -1,0 +1,25 @@
+{{- /* One figure from a CC-licensed paper (data/figures.yaml, image in
+       assets/images/publications/<key>.jpg). Shown unchanged apart from
+       resizing, with caption title and credit line; the image links to the
+       full-size version. Returns nothing for papers without a figure or
+       without a CC licence. */ -}}
+{{- $key := .File.ContentBaseName -}}
+{{- $fig := index hugo.Data.figures $key -}}
+{{- $lic := findRESubmatch `^CC ([A-Z-]+) ([0-9.]+)$` (.Params.license | default "") 1 -}}
+{{- $img := resources.Get (printf "images/publications/%s.jpg" $key) -}}
+{{- if and $fig $lic $img -}}
+  {{- $licURL := printf "https://creativecommons.org/licenses/%s/%s/" (lower (index (index $lic 0) 1)) (index (index $lic 0) 2) -}}
+  {{- $fam := slice -}}
+  {{- range first 2 .Params.authors }}{{ $fam = $fam | append (index (last 1 (split . " ")) 0) }}{{ end -}}
+  {{- $who := index $fam 0 -}}
+  {{- if gt (len .Params.authors) 2 }}{{ $who = printf "%s et al." $who }}{{ else if eq (len .Params.authors) 2 }}{{ $who = printf "%s & %s" (index $fam 0) (index $fam 1) }}{{ end -}}
+  {{- $small := $img.Resize "760x webp q82" -}}
+  {{- $large := $img.Resize "1520x webp q82" -}}
+<figure class="pub-figure">
+  <a href="{{ $img.RelPermalink }}" title="Open full-size figure" aria-label="{{ $fig.label }}, full size">
+    <img src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 760w, {{ $large.RelPermalink }} 1520w" sizes="(max-width: 48rem) 100vw, 46rem" width="{{ $small.Width }}" height="{{ $small.Height }}" alt="{{ $fig.caption }}" loading="lazy" decoding="async">
+  </a>
+  <figcaption><strong>{{ $fig.label }}.</strong> {{ $fig.caption }}
+    <span class="pub-figure-credit">From {{ with .Params.doi }}<a href="https://doi.org/{{ . }}" rel="noopener">{{ $who }} ({{ $.Params.year }})</a>{{ else }}{{ $who }} ({{ $.Params.year }}){{ end }}{{ with .Params.journal }}, <em>{{ . }}</em>{{ end }}, licensed under <a href="{{ $licURL }}" rel="license noopener">{{ .Params.license }}</a>. Click the image to enlarge.</span></figcaption>
+</figure>
+{{- end -}}

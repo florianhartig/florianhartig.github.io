@@ -1,0 +1,180 @@
+{{ define "main" }}
+{{- /* /publications/coauthors/: map of the co-authors' last
+       known institutions, the most frequent co-authors, and the full list in
+       small type. Data: data/coauthors.yaml (public part only; see
+       scripts/coauthor_data.py); map outline assets/maps/world-land.path and
+       the finer Europe layers (scripts/world_map.py, same projection as each
+       record's x/y). One dot per city (per-institution dots
+       stacked on top of each other); the tooltip lists institution → names.
+       Each name links to /publications/?keys=… (exactly the joint papers). */ -}}
+{{- $c := hugo.Data.coauthors }}
+{{- $pubs := "/publications/" | relURL }}
+{{- $cities := newScratch }}
+{{- $countries := newScratch }}
+{{- range $p := $c.people }}{{ if $p.lat }}
+  {{- $k := printf "c:%v|%v" $p.x $p.y }}
+  {{- $cities.SetInMap "meta" $k (dict "x" $p.x "y" $p.y "city" $p.city "country" $p.country) }}
+  {{- $cities.Add $k (slice (printf "%s|||%s|||%s" $p.institution $p.id $p.name)) }}
+  {{- with $p.country }}{{ $countries.Add . (slice $p.id) }}{{ end }}
+{{- end }}{{ end }}
+{{- $nCountries := len $countries.Values }}
+<div class="wrap wrap-narrow">
+  <article class="page">
+    <p class="breadcrumb"><a href="{{ $pubs }}">← Publications</a></p>
+    <h1>{{ .Title }}</h1>
+    {{- /* One intro sentence; caveats go into the methodology note. */}}
+    <p class="ca-summary">In my studies and publications, I have collaborated with {{ lang.FormatNumber 0 $c.count }} co-authors across {{ $nCountries }} countries and territories. <button type="button" class="au-toggle ca-method-toggle" aria-expanded="false" aria-controls="ca-method" hidden>Methodology <span class="au-cue" aria-hidden="true">▶</span></button></p>
+    {{- /* Visible without JS; the script collapses it behind the toggle. */}}
+    <div class="ca-method" id="ca-method">
+      <p>Co-authors are counted from the author lists of the {{ len (where site.RegularPages "Section" "publications") }} <a href="{{ $pubs }}">publications</a> on this site (including preprints and book chapters); different spellings of the same name are merged. The map shows each co-author's last known institution at city level, checked by hand where possible against staff pages, ORCID records and recent papers; where no newer evidence was found, the affiliation on the joint paper is used, and retired or deceased co-authors are shown at their last institution; co-authors who left research are shown at their current employer. {{ $c.located }} of {{ $c.count }} co-authors are mapped; the others are not, mostly because no reliable affiliation was found. Countries are those of the current institutions. As of {{ time.Format "2 January 2006" $c.locations_as_of }}. Larger dots: more co-authors in the same city.</p>
+      <p>Sources: OpenAlex, Crossref, ORCID, ROR and institutional pages; city coordinates from ROR/GeoNames and OpenStreetMap (© OpenStreetMap contributors); map: Natural Earth. If you are a co-author and would like your entry corrected or removed, please <a href="{{ "/contact/" | relURL }}">get in touch</a>.</p>
+    </div>
+
+    {{- with $cities.Get "meta" }}
+    <figure class="ca-map">
+      {{- $meta := . }}
+      {{- /* One map; the Europe button (or a click on the dashed frame) zooms in
+             by animating the viewBox (same aspect ratio, so nothing jumps);
+             the world view is cropped to the inhabited extent. Dots are not in
+             the tab order: the same information is in the "by country" list
+             below. */}}
+      <svg viewBox="140 0 850 440" role="group" aria-label="Map of the co-authors' last known institutions (the same information is listed by country below)">
+        <path class="ca-land" d="{{ (resources.Get "maps/world-land.path").Content }}"/>
+        <g class="ca-detail">
+          <path class="ca-land" d="{{ (resources.Get "maps/europe-land.path").Content }}"/>
+          <path class="ca-borders" d="{{ (resources.Get "maps/europe-borders.path").Content }}"/>
+        </g>
+        {{- range $k, $m := $meta }}
+        {{- $rows := sort ($cities.Get $k) }}
+        {{- $lines := slice }}{{ $cur := "" }}{{ $names := slice }}
+        {{- range $rows }}
+          {{- $f := split . "|||" }}
+          {{- if and (ne (index $f 0) $cur) (gt (len $names) 0) }}{{ $lines = $lines | append (printf "%s: %s" $cur (delimit $names ", ")) }}{{ $names = slice }}{{ end }}
+          {{- $cur = index $f 0 }}{{ $names = $names | append (index $f 2) }}
+        {{- end }}
+        {{- $lines = $lines | append (printf "%s: %s" $cur (delimit $names ", ")) }}
+        {{- $r := add 2.5 (mul 1.6 (math.Sqrt (len $rows))) }}
+        <circle class="ca-pt" cx="{{ $m.x }}" cy="{{ $m.y }}" r="{{ $r }}" data-r="{{ $r }}"
+          data-place="{{ $m.city }}{{ with $m.country }}, {{ . }}{{ end }}" data-lines="{{ delimit $lines "\n" }}"/>
+        {{- end }}
+        <rect class="ca-frame" x="448" y="33" width="164" height="85"/>
+      </svg>
+      <button type="button" class="ca-zoom au-toggle" hidden><span class="ca-zoom-label">Zoom to Europe</span> <span aria-hidden="true">⤢</span></button>
+      <div class="ca-tip" hidden></div>
+    </figure>
+    {{- end }}
+
+    {{- /* Top ten: data/coauthors.yaml is sorted by joint publications, then by
+           the year of the most recent joint publication (stated below, so a
+           cut inside a tie follows a stated rule). */}}
+    <h2>Most frequent co-authors</h2>
+    <ol class="ca-top">
+      {{- range first 10 $c.people }}
+      <li><a href="{{ $pubs }}?keys={{ delimit .papers "," }}&amp;with={{ .name | urlquery }}">{{ .name }}</a>
+        <span class="ca-n">{{ .n }} joint publications{{ with .institution }} · {{ . }}{{ end }}</span></li>
+      {{- end }}
+    </ol>
+    <p class="ca-note">By number of joint publications; ties are ordered by the most recent joint publication.</p>
+
+    <h2>All co-authors</h2>
+    <p class="ca-all">
+      {{- range $i, $p := sort $c.people "id" }}{{ if $i }}, {{ end }}<a href="{{ $pubs }}?keys={{ delimit $p.papers "," }}&amp;with={{ $p.name | urlquery }}">{{ $p.name }}</a>{{ end -}}
+    </p>
+    <p class="ca-note">Alphabetical by family name. Each name opens the list of joint publications.</p>
+
+    <details class="ca-bycountry">
+      <summary>Co-authors by country and institution</summary>
+      {{- /* Country, institution and name each link to the joint papers
+            : ?keys= with the union of the papers of the
+             co-authors there; &in= (country) / &at= (institution) names the
+             place in the count line. */}}
+      {{- range $country, $ids := $countries.Values }}
+      {{- $byInst := newScratch }}
+      {{- $cKeys := slice }}
+      {{- range $c.people }}{{ if and .lat (eq .country $country) }}
+        {{- $byInst.Add .institution (slice .) }}{{ $cKeys = $cKeys | append .papers }}
+      {{- end }}{{ end }}
+      <h3><a href="{{ $pubs }}?keys={{ delimit (sort (uniq $cKeys)) "," }}&amp;in={{ $country | urlquery }}">{{ $country }}</a> <span class="ca-n">({{ len $ids }})</span></h3>
+      <ul>
+        {{- range $inst, $people := $byInst.Values }}
+        {{- $iKeys := slice }}{{ range $people }}{{ $iKeys = $iKeys | append .papers }}{{ end }}
+        <li><a class="ca-inst" href="{{ $pubs }}?keys={{ delimit (sort (uniq $iKeys)) "," }}&amp;at={{ $inst | urlquery }}">{{ $inst }}</a>:
+          {{- range $i, $p := $people }}{{ if $i }},{{ end }} <a href="{{ $pubs }}?keys={{ delimit $p.papers "," }}&amp;with={{ $p.name | urlquery }}">{{ $p.name }}</a>{{ end }}</li>
+        {{- end }}
+      </ul>
+      {{- end }}
+    </details>
+  </article>
+</div>
+<script>
+(function () {
+  var mt = document.querySelector('.ca-method-toggle'), mb = document.getElementById('ca-method');
+  if (mt) { mt.hidden = false; mb.hidden = true; }
+  if (mt) mt.addEventListener('click', function () {
+    var open = mt.getAttribute('aria-expanded') !== 'true';
+    mt.setAttribute('aria-expanded', open ? 'true' : 'false'); mb.hidden = !open;
+  });
+  var fig = document.querySelector('.ca-map');
+  if (!fig) return;
+  var svg = fig.querySelector('svg'), zoomBtn = fig.querySelector('.ca-zoom'), frame = svg.querySelector('.ca-frame');
+  var tip = fig.querySelector('.ca-tip');
+  zoomBtn.hidden = false;   // the zoom needs JS
+  var WORLD = [140, 0, 850, 440], EUROPE = [448, 33, 164, 85], cur = WORLD.slice(), anim = 0, inEurope = false;
+  var dots = [].slice.call(svg.querySelectorAll('.ca-pt'));
+  function apply(v) {
+    svg.setAttribute('viewBox', v.join(' '));
+    var s = Math.pow(v[2] / 850, 0.75);
+    dots.forEach(function (d) { d.setAttribute('r', (d.getAttribute('data-r') * s).toFixed(3)); });
+  }
+  function show(pt) {
+    tip.innerHTML = '';
+    var b = document.createElement('strong'); b.textContent = pt.getAttribute('data-place'); tip.appendChild(b);
+    pt.getAttribute('data-lines').split('\n').forEach(function (l) {
+      var p = document.createElement('div'), i = l.indexOf(': ');
+      var inst = document.createElement('em'); inst.textContent = l.slice(0, i);
+      p.appendChild(inst); p.appendChild(document.createTextNode(': ' + l.slice(i + 2))); tip.appendChild(p);
+    });
+    tip.hidden = false;
+    var f = fig.getBoundingClientRect(), r = pt.getBoundingClientRect();
+    var x = r.left + r.width / 2 - f.left, y = r.top - f.top;
+    tip.style.left = Math.max(0, Math.min(x - tip.offsetWidth / 2, f.width - tip.offsetWidth)) + 'px';
+    var top = y - tip.offsetHeight - 8;
+    if (top < 0) top = r.bottom - f.top + 8;   // below the dot near the top edge
+    // Never over the zoom button: then below the dot.
+    var zb = zoomBtn.getBoundingClientRect(), left = parseFloat(tip.style.left);
+    if (left < zb.right - f.left && left + tip.offsetWidth > zb.left - f.left &&
+        top < zb.bottom - f.top && top + tip.offsetHeight > zb.top - f.top) top = r.bottom - f.top + 8;
+    tip.style.top = top + 'px';
+    dots.forEach(function (p) { p.classList.toggle('is-active', p === pt); });
+  }
+  function hide() { tip.hidden = true; dots.forEach(function (p) { p.classList.remove('is-active'); }); }
+  function zoom(toEurope) {
+    var from = cur.slice(), target = toEurope ? EUROPE : WORLD, t0 = null;
+    cancelAnimationFrame(anim); hide();
+    inEurope = toEurope;
+    if (!toEurope) svg.classList.remove('is-zoomed');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function step(ts) {
+      if (t0 === null) t0 = ts;
+      var k = reduce ? 1 : Math.min(1, (ts - t0) / 450), e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+      cur = from.map(function (a, i) { return a + (target[i] - a) * e; });
+      apply(cur);
+      if (k < 1) anim = requestAnimationFrame(step);
+      else if (toEurope) svg.classList.add('is-zoomed');
+    }
+    anim = requestAnimationFrame(step);
+    frame.style.display = toEurope ? 'none' : '';
+    zoomBtn.innerHTML = toEurope ? '<span aria-hidden="true">←</span> <span class="ca-zoom-label">World map</span>' : '<span class="ca-zoom-label">Zoom to Europe</span> <span aria-hidden="true">⤢</span>';
+  }
+  zoomBtn.addEventListener('click', function (e) { e.stopPropagation(); zoom(!inEurope); });
+  frame.addEventListener('click', function (e) { e.stopPropagation(); zoom(true); });
+  dots.forEach(function (pt) {
+    pt.addEventListener('mouseenter', function () { show(pt); });
+    pt.addEventListener('click', function (e) { e.stopPropagation(); show(pt); });
+    pt.addEventListener('mouseleave', hide);
+  });
+  document.addEventListener('click', hide);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
+})();
+</script>
+{{ end }}

@@ -10,5 +10,8 @@
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}
+{{- if in (slice "publications" "software") .Section }}
+{{ partial "authors-script.html" . }}
+{{- end }}
 </body>
 </html>

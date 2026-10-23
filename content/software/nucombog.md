@@ -7,10 +7,21 @@ paper: "pullens2017nucombog"
 scholar_match: "^NUCOMBog:"
 cran: "NUCOMBog"
 links:
-  - name: "CRAN"
-    url: "https://cran.r-project.org/web/packages/NUCOMBog/index.html"
   - name: "GitHub"
     url: "https://github.com/jeroenpullens/NUCOMBog"
+  - name: "CRAN"
+    url: "https://cran.r-project.org/web/packages/NUCOMBog/index.html"
+# Entry in the publication list: title and first-release year
+# from the Crossref record of the CRAN DOI, authors from the credit line below.
+pub_entry:
+  title: "NUCOMBog: NUtrient Cycling and COMpetition Model Undisturbed Open Bog Ecosystems in a Temperate to Sub-Boreal Climate"
+  year: "2016"
+  doi: "10.32614/CRAN.package.NUCOMBog"
+  authors:
+    - "Johannes W. M. Pullens"
+    - "Ramiro Silveyra Gonzalez"
+    - "Maurizio Bagnara"
+    - "Florian Hartig"
 ---
 
 **NUCOMBog** makes the NUCOM-Bog model (**NU**trient **C**ycling and
@@ -22,7 +33,7 @@ response to climate change and management matters.
 
 The package adds functions such as the calculation of net ecosystem exchange,
 runs simulations in parallel, and lets users apply R's own tools for
-plotting, sensitivity analysis and optimization. The model executable is
+plotting, sensitivity analysis and optimisation. The model executable is
 downloaded separately from GitHub.
 
 **Authors:** Johannes W. M. Pullens (maintainer), Ramiro Silveyra Gonzalez,

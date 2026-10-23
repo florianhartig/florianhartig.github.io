@@ -1,0 +1,113 @@
+# Projects and networks — single source for /projects/ (shortcode "projects"),
+# the counts in the Projects box and the homepage tile.
+# status: current | past (an entry with an `end` year before this year counts
+# as past automatically). start/end: years. role/funder/grant: fill in where
+# known (TODO Florian for past projects). summary: markdown.
+projects:
+  - name: "BaySenseAI"
+    status: current
+    start: 2026
+    end: 2030
+    role: ""
+    funder: ""
+    url: "https://www.uni-regensburg.de/biologie-vorklinische-medizin/forschen/arbeitsgruppen/ag-hartig/forschung/projects-and-networks/baysenseai"
+    summary: >-
+      A multi-modal AI platform integrating remote sensing and field data to predict biodiversity across Bavaria at high spatial and temporal resolution. Piloted around Berchtesgaden National Park, the platform is to generate biodiversity predictions on a digital map of Bavaria at large spatial extents and high resolution. Led by Florian Hartig, with Prof. Rupert Seidl (TUM and Berchtesgaden National Park) and Prof. Cornelius Senf (TUM), funded by the Bavarian State Ministry of Science and the Arts, 2026–2030.
+  - name: "bAImo"
+    status: current
+    start: 2026
+    end: 2030
+    role: ""
+    funder: ""
+    url: "https://www.uni-regensburg.de/biologie-vorklinische-medizin/forschen/arbeitsgruppen/ag-hartig/forschung/projects-and-networks/baimo"
+    summary: >-
+      Part of [bayklif2](https://bayklif2.de/en/), the second Bavarian Climate Research Network (2026–2030). Combines AI methods with ecological expertise and monitoring/citizen-science data to support and optimise Bavaria's existing insect-monitoring system. Subproject 1, based at Regensburg and led by Dr. Maximilian Pichler, combines AI with statistical modelling to better capture complex environmental effects and improve the modelling of rare species, using a Deep Joint Species Distribution Model as the methodological basis for the project's other subprojects.
+  - name: "DHARMa"
+    status: current
+    start: 2024
+    end: 2027
+    role: ""
+    funder: ""
+    url: "https://www.uni-regensburg.de/biologie-vorklinische-medizin/forschen/arbeitsgruppen/ag-hartig/forschung/projects-and-networks/dharma"
+    summary: >-
+      Increasing the validity of statistical analyses with the R package [DHARMa](/software/dharma/). DHARMa uses a simulation-based approach to generate easily interpretable residuals for complex regression models, particularly GLMMs, addressing a widespread difficulty in validating such models' statistical assumptions. This DFG-funded phase of the project extends the package's user accessibility and interoperability, adds further diagnostic procedures, and strengthens valid application through testing protocols, in partnership with the R developer community and other package authors. Led by Florian Hartig, with Dr. Melina de Souza Leite and Cosmina Werneke, funded by the Deutsche Forschungsgemeinschaft (DFG, project no. 528747641), 2024–2027.
+  - name: "sCOM"
+    status: past
+    start: 
+    end: 
+    role: ""
+    funder: ""
+    url: "https://www.idiv.de/research/sdiv/working-groups/scom/"
+    summary: >-
+      an iDiv/sDiv working group on advancing statistical inference for eDNA and other novel, high-throughput community data.
+  - name: "BayForDemo"
+    status: past
+    start: 
+    end: 
+    role: ""
+    funder: ""
+    url: "https://bayklif1.de/juniorgruppen-bayfordemo-en/index.html"
+    summary: >-
+      a bayklif junior research group developing demographic forest-simulation models to formulate climate-adaptation strategies for Bavarian forestry, led by former group member Lisa Hülsmann (now at the University of Bayreuth).
+  - name: "BLIZ"
+    status: past
+    start: 
+    end: 
+    role: ""
+    funder: ""
+    url: "https://bayklif-bliz.de/"
+    summary: >-
+      a bayklif research network studying interactions between society, land use, ecosystem services and biodiversity in Bavaria through to 2100, via integrated modelling across six coordinated subprojects.
+  - name: "sELDIG"
+    status: past
+    start: 
+    end: 
+    role: ""
+    funder: ""
+    url: "https://www.idiv.de/research/synthesis-centre/working-groups/seldig/"
+    summary: >-
+      an iDiv/sDiv working group synthesising explanations for the latitudinal diversity gradient through data-driven, mechanistic eco-evolutionary modelling; see [Pontarp et al. (2019)](/publications/pontarp2019latitudinal/).
+  - name: "REFORCE"
+    status: past
+    start: 
+    end: 
+    role: ""
+    funder: ""
+    url: "https://www.reforce-project.eu/"
+    summary: >-
+      an EU ERA-NET project (REsilience mechanisms for risk-adapted FORest management under Climate changE) on the mechanisms underlying forest resilience to climate change and on evaluating regionally adapted management strategies.
+  - name: "PROFOUND"
+    status: past
+    start: 
+    end: 
+    role: ""
+    funder: ""
+    url: "https://doi.org/10.5880/PIK.2020.006"
+    summary: >-
+      EU COST Action FP1304, which produced the PROFOUND database for benchmarking European forest models; see [ProfoundData](/software/profounddata/) and [Reyer et al. (2020)](/publications/reyer2020profound/).
+  - name: "FORMASAM"
+    status: past
+    start: 
+    end: 
+    role: ""
+    funder: ""
+    url: "https://efi.int/"
+    summary: >-
+      a European Forest Institute network (FORest MAnagement Scenarios for Adaptation and Mitigation) developing forest-management scenarios, consistent from stand to continental scale, for climate mitigation and adaptation across Europe.
+  - name: "DAAD"
+    status: past
+    start: 
+    end: 
+    role: ""
+    funder: ""
+    summary: >-
+      Connecting models of diversification to phylogenetic data, a DAAD-funded collaboration with [Hélène Morlon (ENS Paris)](https://www.phyloeco.biologie.ens.fr/).
+  - name: "CONECT"
+    status: past
+    start: 
+    end: 
+    role: ""
+    funder: ""
+    url: "https://www.biodiversity-exploratories.de/"
+    summary: >-
+      a DFG-funded theory and modelling project within the [Biodiversity Exploratories](https://www.biodiversity-exploratories.de/en/), Germany's long-term land-use and biodiversity research platform.

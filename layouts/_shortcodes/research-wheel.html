@@ -1,0 +1,145 @@
+{{- /* Research themes from the homepage front matter (`research_themes`,
+       `research_center`): a ring of equal segments with labels. Clicking a
+       segment (hover, focus or click) opens that theme's card next to its
+       label (optional `text`, then the `papers`, linked to their pages). Segments are deliberately equal —
+       the ring shows the themes, not shares of anything.
+       The panels are <details> elements: on phones the ring is hidden and
+       they work as a plain expandable list; on wider screens their summary
+       is hidden and the script below opens and positions them as cards. */ -}}
+{{- $themes := .Page.Params.research_themes -}}
+{{- $n := len $themes -}}
+{{- if gt $n 0 }}
+{{- $cx := 320.0 }}{{ $cy := 168.0 }}{{ $R := 104.0 }}{{ $r := 64.0 }}
+{{- $step := div 360.0 $n }}
+<figure class="research-wheel">
+  <svg viewBox="0 0 640 345" role="group" aria-label="Research themes — select one to learn more">
+    {{- range $i, $t := $themes }}
+    {{- $a0 := math.ToRadians (sub (mul $step $i) 90.0) }}
+    {{- $a1 := math.ToRadians (sub (mul $step (add $i 1)) 90.0) }}
+    {{- $am := math.ToRadians (sub (mul $step (add $i 0.5)) 90.0) }}
+    {{- $ox0 := add $cx (mul $R (math.Cos $a0)) }}{{ $oy0 := add $cy (mul $R (math.Sin $a0)) }}
+    {{- $ox1 := add $cx (mul $R (math.Cos $a1)) }}{{ $oy1 := add $cy (mul $R (math.Sin $a1)) }}
+    {{- $ix0 := add $cx (mul $r (math.Cos $a0)) }}{{ $iy0 := add $cy (mul $r (math.Sin $a0)) }}
+    {{- $ix1 := add $cx (mul $r (math.Cos $a1)) }}{{ $iy1 := add $cy (mul $r (math.Sin $a1)) }}
+    {{- $cos := math.Cos $am }}{{ $sin := math.Sin $am }}
+    {{- /* leader line from the ring edge outwards, then the label */ -}}
+    {{- $lx0 := add $cx (mul (add $R 6.0) $cos) }}{{ $ly0 := add $cy (mul (add $R 6.0) $sin) }}
+    {{- $lx1 := add $cx (mul (add $R 26.0) $cos) }}{{ $ly1 := add $cy (mul (add $R 26.0) $sin) }}
+    {{- $anchor := "middle" }}{{ $tx := $lx1 }}{{ $ty := add $ly1 18.0 }}
+    {{- if gt $cos 0.2 }}{{ $anchor = "start" }}{{ $tx = add $lx1 8.0 }}{{ $ty = sub $ly1 4.0 }}{{ end }}
+    {{- if lt $cos -0.2 }}{{ $anchor = "end" }}{{ $tx = sub $lx1 8.0 }}{{ $ty = sub $ly1 4.0 }}{{ end }}
+    <a class="rw-theme" href="#rw-theme-{{ $i }}" data-panel="rw-theme-{{ $i }}" role="button"
+       aria-expanded="false" aria-controls="rw-theme-{{ $i }}" aria-describedby="rw-text-{{ $i }}"
+       aria-label="{{ delimit $t.label " " }}">
+      <path class="rw-seg" d="M{{ printf "%.1f %.1f" $ox0 $oy0 }} A{{ $R }} {{ $R }} 0 0 1 {{ printf "%.1f %.1f" $ox1 $oy1 }} L{{ printf "%.1f %.1f" $ix1 $iy1 }} A{{ $r }} {{ $r }} 0 0 0 {{ printf "%.1f %.1f" $ix0 $iy0 }} Z"/>
+      <line class="rw-lead" x1="{{ printf "%.1f" $lx0 }}" y1="{{ printf "%.1f" $ly0 }}" x2="{{ printf "%.1f" $lx1 }}" y2="{{ printf "%.1f" $ly1 }}"/>
+      <text class="rw-label" x="{{ printf "%.1f" $tx }}" y="{{ printf "%.1f" $ty }}" text-anchor="{{ $anchor }}">
+        {{- range $j, $line := $t.label }}<tspan x="{{ printf "%.1f" $tx }}" dy="{{ if $j }}1.25em{{ else }}0{{ end }}">{{ $line }}</tspan>{{ end -}}
+      </text>
+    </a>
+    {{- end }}
+    {{- with $.Page.Params.research_center }}
+    <text class="rw-center" x="{{ $cx }}" y="{{ sub $cy (mul 8.0 (sub (len .) 1)) }}" text-anchor="middle" aria-hidden="true">
+      {{- range $j, $line := . }}<tspan x="{{ $cx }}" dy="{{ if $j }}1.35em{{ else }}0.35em{{ end }}"{{ if $j }} class="rw-center-sub"{{ end }}>{{ $line }}</tspan>{{ end -}}
+    </text>
+    {{- end }}
+  </svg>
+  <figcaption class="rw-hint">Hover over or click a theme to learn more.</figcaption>
+  <div class="rw-panels">
+    {{- range $i, $t := $themes }}
+    <details class="rw-panel" id="rw-theme-{{ $i }}">
+      <summary>{{ $t.title }}</summary>
+      <div class="rw-panel-body">
+        <p class="rw-panel-title">{{ $t.title }}</p>
+        {{- with $t.text }}
+        <p class="rw-panel-text" id="rw-text-{{ $i }}">{{ . | markdownify }}</p>
+        {{- end }}
+        {{- with $t.papers }}
+        <ul class="rw-papers">
+          {{- range . }}
+          {{- with site.GetPage (printf "/publications/%s" .) }}
+          {{- $first := index .Params.authors 0 }}
+          {{- $last := index (last 1 (split $first " ")) 0 }}
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <span class="rw-paper-meta">{{ $last }}{{ if gt (len .Params.authors) 2 }} et al.{{ else if eq (len .Params.authors) 2 }} &amp; {{ index (last 1 (split (index .Params.authors 1) " ")) 0 }}{{ end }} {{ .Params.year }}{{ with .Params.journal }}, <em>{{ . }}</em>{{ end }}</span>
+          </li>
+          {{- else }}
+          {{- warnf "research-wheel: no publication page for key %q" . }}
+          {{- end }}
+          {{- end }}
+        </ul>
+        {{- end }}
+      </div>
+    </details>
+    {{- end }}
+  </div>
+</figure>
+<script>
+(function () {
+  var fig = document.currentScript.previousElementSibling;
+  var links = fig.querySelectorAll('.rw-theme');
+  var panels = fig.querySelectorAll('.rw-panel');
+  var wide = window.matchMedia('(min-width: 40.01rem)');
+  var pinned = null, timer = null;
+
+  function place(a, p) {
+    var f = fig.getBoundingClientRect();
+    var l = a.querySelector('.rw-label').getBoundingClientRect();
+    var anchor = a.querySelector('.rw-label').getAttribute('text-anchor');
+    var w = Math.min(p.offsetWidth || 360, f.width);
+    var left = anchor === 'end' ? l.right - f.left - w
+             : anchor === 'middle' ? l.left + l.width / 2 - f.left - w / 2
+             : l.left - f.left;
+    p.style.left = Math.max(0, Math.min(left, f.width - w)) + 'px';
+    p.style.top = (l.bottom - f.top + 6) + 'px';
+  }
+  function show(a) {
+    clearTimeout(timer);
+    var id = a ? a.getAttribute('data-panel') : null;
+    links.forEach(function (x) {
+      var on = x === a;
+      x.classList.toggle('is-active', on);
+      x.setAttribute('aria-expanded', on ? 'true' : 'false');
+    });
+    panels.forEach(function (p) {
+      p.open = (p.id === id);
+      if (p.open && wide.matches) place(a, p);
+    });
+    fig.classList.toggle('has-selection', !!a);
+  }
+  function hideSoon() {
+    clearTimeout(timer);
+    timer = setTimeout(function () { show(pinned); }, 250);
+  }
+  // Close the card when keyboard focus leaves the ring (unless it was pinned).
+  fig.addEventListener('focusout', function (e) {
+    if (!fig.contains(e.relatedTarget) && !pinned) show(null);
+  });
+  links.forEach(function (a) {
+    a.addEventListener('keydown', function (e) {
+      // SVG <a> has no .click(): dispatch the event.
+      if (e.key === ' ') { e.preventDefault(); a.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true })); }
+    });
+    a.addEventListener('mouseenter', function () { show(a); });
+    a.addEventListener('mouseleave', hideSoon);
+    a.addEventListener('focus', function () { show(a); });
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      pinned = (pinned === a) ? null : a;
+      show(pinned);
+    });
+  });
+  panels.forEach(function (p) {
+    p.addEventListener('mouseenter', function () { clearTimeout(timer); });
+    p.addEventListener('mouseleave', hideSoon);
+  });
+  document.addEventListener('click', function (e) {
+    if (pinned && !fig.contains(e.target)) { pinned = null; show(null); }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { pinned = null; show(null); }
+  });
+})();
+</script>
+{{- end }}

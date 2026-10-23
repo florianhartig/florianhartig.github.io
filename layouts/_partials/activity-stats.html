@@ -1,0 +1,25 @@
+{{- /* Counts for the Projects and Teaching boxes and homepage tiles, computed
+       from data/projects.yaml and data/courses.yaml (the same data that
+       renders the lists on /projects/ and /teaching/). Context: "projects" or
+       "teaching". Returns dict: stats (label/value list), note, text (tile). */ -}}
+{{- $out := dict -}}
+{{- if eq . "projects" -}}
+  {{- $cur := slice }}{{ $past := slice -}}
+  {{- range hugo.Data.projects.projects -}}
+    {{- if or (eq .status "past") (and .end (lt (int .end) now.Year)) }}{{ $past = $past | append .name }}{{ else }}{{ $cur = $cur | append .name }}{{ end -}}
+  {{- end -}}
+  {{- $names := "" -}}
+  {{- range $i, $n := $cur }}{{ $names = printf "%s%s%s" $names (cond (eq $i 0) "" (cond (eq $i (sub (len $cur) 1)) " and " ", ")) $n }}{{ end -}}
+  {{- $out = dict
+      "stats" (slice (dict "label" "Current projects" "value" (len $cur)) (dict "label" "Completed" "value" (len $past)))
+      "note" "Counted from the project list on this page."
+      "text" (printf "Current projects: %s, plus past networks and working groups." $names) -}}
+{{- else if eq . "teaching" -}}
+  {{- $n := 0 }}{{ $off := 0 }}{{ $books := 0 -}}
+  {{- range hugo.Data.courses.groups }}{{ range .courses }}{{ $n = add $n 1 }}{{ if not .offered }}{{ $off = add $off 1 }}{{ end }}{{ end }}{{ end -}}
+  {{- range hugo.Data.courses.materials }}{{ if eq .kind "book" }}{{ $books = add $books 1 }}{{ end }}{{ end -}}
+  {{- $out = dict
+      "stats" (slice (dict "label" "Regular courses" "value" (sub $n $off)) (dict "label" "Open online books" "value" $books))
+      "note" "Counted from the course and materials lists on this page." -}}
+{{- end -}}
+{{- return $out -}}

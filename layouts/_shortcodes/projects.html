@@ -1,0 +1,31 @@
+{{- /* {{< projects >}} — current and past projects from data/projects.yaml.
+       An entry whose `end` year lies before this year counts as past. A
+       "years · role · funder" line appears once role or funder are filled in. */ -}}
+{{- $cur := slice }}{{ $past := slice -}}
+{{- range hugo.Data.projects.projects -}}
+  {{- if or (eq .status "past") (and .end (lt (int .end) now.Year)) }}{{ $past = $past | append . }}{{ else }}{{ $cur = $cur | append . }}{{ end -}}
+{{- end -}}
+{{- with $cur }}
+<h2 id="current">Current</h2>
+{{- range . }}
+<section class="project">
+<h3 id="{{ urlize .name }}">{{ .name }}</h3>
+{{- if or .role .funder }}
+<p class="project-meta">{{ with .start }}{{ . }}{{ end }}{{ with .end }}–{{ . }}{{ end }}{{ with .role }} · {{ . }}{{ end }}{{ with .funder }} · {{ . }}{{ end }}</p>
+{{- end }}
+<p>{{ .summary | markdownify }}</p>
+{{- with .url }}
+<p><a href="{{ . }}">Project page</a></p>
+{{- end }}
+</section>
+{{- end }}
+{{- end }}
+{{- with $past }}
+<h2 id="past">Past</h2>
+<ul>
+  {{- range . }}
+  <li><strong>{{ with .url }}<a href="{{ . }}">{{ end }}{{ .name }}{{ with .url }}</a>{{ end }}</strong> — {{ .summary | markdownify }}
+    {{- if or .start .role .funder }} ({{ with .start }}{{ . }}{{ end }}{{ with .end }}–{{ . }}{{ end }}{{ with .role }} · {{ . }}{{ end }}{{ with .funder }} · {{ . }}{{ end }}){{ end }}</li>
+  {{- end }}
+</ul>
+{{- end }}

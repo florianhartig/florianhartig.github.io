@@ -1,0 +1,122 @@
+{{- /* Career line: stages from data/cv.yaml `career_strip` as segments
+       proportional to their duration (start year to today), each labelled
+       below with start year, role (`short`) and `place`. Past stages are
+       light, the current one is accent-coloured. Hovering, focusing or
+       clicking a stage shows a card with the CV entries (positions and
+       education) that start within it — matched by year, so nothing is
+       entered twice. Args (dict): cvlink — "Full CV →" link in the hint row
+       (homepage). */ -}}
+{{- $cvEntries := slice -}}
+{{- range (hugo.Data.cv.positions | default slice) | append (hugo.Data.cv.education | default slice) -}}
+  {{- $cvEntries = $cvEntries | append (merge . (dict "start" (float (trim (index (split .period "–") 0) " ")))) -}}
+{{- end -}}
+{{- $entries := hugo.Data.cv.career_strip -}}
+{{- $nowF := add (float now.Year) (div (float now.YearDay) 366.0) -}}
+{{- $items := slice -}}
+{{- $min := 9999.0 -}}
+{{- range $entries -}}
+  {{- $parts := split .period "–" -}}
+  {{- $s := float (trim (index $parts 0) " ") -}}
+  {{- $eRaw := trim (index $parts 1) " " -}}
+  {{- $e := $nowF -}}
+  {{- if ne $eRaw "now" }}{{ $e = float $eRaw }}{{ end -}}
+  {{- if lt $s $min }}{{ $min = $s }}{{ end -}}
+  {{- $items = $items | append (dict "s" $s "e" $e "period" .period "short" .short "place" .place "current" (eq $eRaw "now")) -}}
+{{- end -}}
+{{- $span := sub $nowF $min -}}
+{{- with $items }}
+<ol class="career-line" aria-label="Career stages">
+  {{- $last := sub (len .) 1 }}
+  {{- range $i, $it := . }}
+  {{- with $it }}
+  {{- $stage := . }}
+  {{- $matched := slice }}
+  {{- range $cvEntries }}{{ if and (ge .start $stage.s) (lt .start $stage.e) }}{{ $matched = $matched | append . }}{{ end }}{{ end }}
+  {{- /* A real <button> per stage with the card as its sibling, so the list
+         keeps its list items and the button's name stays the stage label
+         (before, the <li> itself had role="button"). */}}
+  <li{{ if .current }} class="career-now"{{ end }} style="flex-basis: {{ printf "%.2f" (div (mul 100.0 (sub .e .s)) $span) }}%">
+    {{- if $matched }}
+    <button type="button" class="career-stage" aria-expanded="false" aria-controls="career-card-{{ $i }}">
+    {{- else }}
+    <div class="career-stage">
+    {{- end }}
+    <span class="career-bar"></span>
+    <span class="career-year">{{ int .s }}</span>
+    <span class="career-label">{{ .short }}</span>
+    {{- with .place }}
+    <span class="career-place">{{ . }}</span>
+    {{- end }}
+    {{- if $matched }}</button>{{ else }}</div>{{ end }}
+    {{- with $matched }}
+    <div class="career-card" id="career-card-{{ $i }}" hidden>
+      {{- range . }}
+      <div class="cc-entry">
+        <span class="cc-period">{{ .period }}</span>
+        <span class="cc-role">{{ .role }}</span>
+        {{- with .where }}<span class="cc-where">{{ . }}</span>{{ end }}
+        {{- with .note }}<span class="cc-note">{{ . }}</span>{{ end }}
+        {{- with .roles }}
+        <ul class="cc-roles">
+          {{- range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        {{- end }}
+      </div>
+      {{- end }}
+    </div>
+    {{- end }}
+  </li>
+  {{- end }}
+  {{- end }}
+</ol>
+{{- end }}
+<script>
+(function () {
+  var ol = document.currentScript.previousElementSibling;
+  if (!ol || !ol.classList.contains('career-line')) return;
+  var box = ol.parentElement;
+  var stages = Array.prototype.filter.call(ol.children, function (li) { return li.querySelector('button.career-stage'); });
+  var wide = window.matchMedia('(min-width: 40.01rem)');
+  var pinned = null, timer = null;
+  function place(li, card) {
+    if (!wide.matches) { card.style.left = card.style.top = ''; return; }
+    var b = box.getBoundingClientRect(), r = li.getBoundingClientRect();
+    var w = card.offsetWidth;
+    var left = Math.max(0, Math.min(r.left - b.left - 12, b.width - w));
+    card.style.left = left + 'px';
+    card.style.top = (r.bottom - b.top + 6) + 'px';
+  }
+  function show(li) {
+    clearTimeout(timer);
+    stages.forEach(function (x) {
+      var card = x.querySelector('.career-card');
+      var on = x === li;
+      x.classList.toggle('is-active', on);
+      x.querySelector('button.career-stage').setAttribute('aria-expanded', on ? 'true' : 'false');
+      card.hidden = !on;
+      if (on) place(x, card);
+    });
+    box.classList.toggle('has-selection', !!li);
+  }
+  function hideSoon() { clearTimeout(timer); timer = setTimeout(function () { show(pinned); }, 250); }
+  stages.forEach(function (li) {
+    var btn = li.querySelector('button.career-stage');
+    li.addEventListener('mouseenter', function () { show(li); });
+    li.addEventListener('mouseleave', hideSoon);
+    btn.addEventListener('focus', function () { show(li); });
+    btn.addEventListener('blur', function () { if (pinned !== li) hideSoon(); });
+    // A button: Enter and Space arrive as clicks.
+    btn.addEventListener('click', function () { pinned = (pinned === li) ? null : li; show(pinned); });
+  });
+  document.addEventListener('click', function (e) {
+    if (pinned && !box.contains(e.target)) { pinned = null; show(null); }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { pinned = null; show(null); }
+  });
+})();
+</script>
+{{- if $cvEntries }}
+<p class="career-hint"><span class="career-hint-wide">Hover over or click a stage for details.</span><span class="career-hint-narrow">Tap a stage for details.</span>
+  {{- if $.cvlink }} <a href="{{ "/cv/" | relURL }}">Full CV →</a>{{ end }}</p>
+{{- end }}

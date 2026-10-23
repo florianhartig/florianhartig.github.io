@@ -7,6 +7,15 @@ paper: "bagnara2019r"
 links:
   - name: "GitHub"
     url: "https://github.com/biometry/rLPJGUESS"
+# Entry in the publication list: title and first-release year
+# from the Crossref record of the CRAN DOI ; rLPJGUESS from its DESCRIPTION on GitHub (v1.1.1, 2018-07-03), authors from the credit line below.
+pub_entry:
+  title: "rLPJGUESS: A R package that wraps the LPJ-GUESS 3.1 model"
+  year: "2018"
+  authors:
+    - "Maurizio Bagnara"
+    - "Florian Hartig"
+    - "Ramiro Silveyra Gonzalez"
 ---
 
 **rLPJGUESS** runs LPJ-GUESS, a dynamic global vegetation model, from within

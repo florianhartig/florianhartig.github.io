@@ -1,8 +1,9 @@
 <footer class="site-footer">
-  <div class="wrap">
+  <div class="wrap wrap-narrow">
     <div class="footer-links">
+      <span class="footer-links-label">Links to other web profiles:</span>
       {{- range hugo.Data.social }}
-      <a href="{{ .url }}" rel="me noopener">{{ .name }}</a>
+      <a href="{{ .url }}" rel="{{ if ne .person false }}me {{ end }}noopener">{{ .name }}</a>
       {{- end }}
     </div>
     <p class="footer-meta">

@@ -1,10 +1,10 @@
 ---
 title: "Publications"
-description: "Full list of peer-reviewed publications by Florian Hartig on theoretical ecology, biodiversity, statistics and machine learning in ecology."
+description: "Full list of publications by Florian Hartig, including preprints and book chapters, on theoretical ecology, biodiversity, statistics and machine learning."
 ---
 
-The full list is below, newest first. It is also available — with citation
-counts and further statistics — on
+Below, you can find a full list of my publications, including preprints and
+software, with citation counts and further statistics. Citation lists are also available on
 [Google Scholar](https://scholar.google.de/citations?user=AdcDit0AAAAJ),
 [ORCID](https://orcid.org/0000-0002-6255-9059),
 [Scopus](https://www.scopus.com/authid/detail.uri?authorId=24773326300),

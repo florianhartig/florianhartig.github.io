@@ -1,0 +1,67 @@
+{{- /* Collapses long author lists (.au-list, from authors.html) to about 1.5
+       lines of text: first authors, the last two and Florian always stay, the
+       hidden runs show as ", …", and the caret button toggles the full list.
+       Only lists longer than 2.5 lines that would hide at least three names
+       are collapsed. Widths are measured with the list's own font, and the
+       layout is redone when the list's width changes (resize, filters that
+       show hidden entries). */ -}}
+<script>
+(function () {
+  var ctx = document.createElement('canvas').getContext('2d');
+  function widthOf(s) { return ctx.measureText(s).width; }
+  function setup(p) {
+    var names = [].slice.call(p.querySelectorAll('.au')), n = names.length;
+    var btn = p.querySelector('.au-toggle'), label = btn.querySelector('.au-label');
+    // Expanded from the start when a page asks for it (publication list filtered
+    // to one co-author's papers: the co-author's name must be visible).
+    var open = !!(window.auOpenVisible && !p.closest('[hidden]')), lastW = 0;
+    function apply(hide) {
+      var prevHidden = false;
+      names.forEach(function (s, i) {
+        var h = !!hide[i];
+        s.classList.toggle('au-x', h);
+        s.classList.toggle('au-after-gap', !h && prevHidden);
+        prevHidden = h;
+      });
+    }
+    function show() {
+      p.classList.toggle('is-collapsed', !open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      label.textContent = open ? 'show fewer' : 'all ' + n + ' authors';
+    }
+    function layout() {
+      var W = p.clientWidth;
+      if (!W || W === lastW) return;
+      lastW = W;
+      var cs = getComputedStyle(p);
+      ctx.font = cs.fontWeight + ' ' + cs.fontSize + ' ' + cs.fontFamily;
+      var w = names.map(function (s) { return widthOf(s.textContent); });
+      var gap = widthOf(', …'), full = w.reduce(function (a, b) { return a + b; }, 0);
+      btn.hidden = false;
+      var bw = btn.getBoundingClientRect().width + 8;
+      var keep = names.map(function (s, i) { return i === 0 || i >= n - 2 || s.hasAttribute('data-me'); });
+      function cost(k) {
+        var t = bw, prevHidden = false;
+        for (var i = 0; i < n; i++) {
+          var vis = keep[i] || i <= k;
+          if (vis) t += w[i]; else if (!prevHidden) t += gap;
+          prevHidden = !vis;
+        }
+        return t;
+      }
+      var k = 0;
+      while (k + 1 < n - 2 && cost(k + 1) <= 1.5 * W) k++;
+      var hide = names.map(function (s, i) { return !(keep[i] || i <= k); });
+      var hidden = hide.filter(Boolean).length;
+      if (full <= 2.5 * W || hidden < 3) {
+        btn.hidden = true; p.classList.remove('is-collapsed'); apply([]); return;
+      }
+      apply(hide); show();
+    }
+    btn.addEventListener('click', function () { open = !open; show(); });
+    new ResizeObserver(layout).observe(p);
+    layout();
+  }
+  if (window.ResizeObserver) [].forEach.call(document.querySelectorAll('.au-list'), setup);
+})();
+</script>

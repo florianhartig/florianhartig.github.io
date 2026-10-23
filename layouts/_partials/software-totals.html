@@ -1,0 +1,34 @@
+{{- /* Software totals summed from data/stats.yaml, shared by the software
+       box (software-metrics.html) and the homepage tile (overview.html) so
+       both always show the same figures. Returns a dict. */ -}}
+{{- $sw := hugo.Data.stats.software | default dict -}}
+{{- $downloads := 0 -}}
+{{- $cites := 0 -}}
+{{- $nCran := 0 -}}
+{{- $through := "" -}}
+{{- $byYear := newScratch -}}
+{{- range $slug, $v := $sw -}}
+  {{- with $v.scholar }}{{ $cites = add $cites . }}{{ end -}}
+  {{- with $v.downloads -}}
+    {{- $nCran = add $nCran 1 -}}
+    {{- $downloads = add $downloads .total -}}
+    {{- if gt .through $through }}{{ $through = .through }}{{ end -}}
+    {{- $counts := .counts -}}
+    {{- range $i, $y := .years -}}
+      {{- $key := printf "%d" $y -}}
+      {{- $prev := index ($byYear.Get "y" | default dict) $key | default 0 -}}
+      {{- $byYear.SetInMap "y" $key (add $prev (index $counts $i)) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $years := slice -}}
+{{- $values := slice -}}
+{{- range $k, $n := ($byYear.Get "y" | default dict) -}}
+  {{- $years = $years | append (int $k) -}}
+  {{- $values = $values | append $n -}}
+{{- end -}}
+{{- return (dict
+      "any" (gt (len $sw) 0)
+      "packages" (len (where site.RegularPages "Section" "software"))
+      "downloads" $downloads "cites" $cites "ncran" $nCran "through" $through
+      "years" $years "values" $values) -}}

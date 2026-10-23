@@ -9,17 +9,19 @@ authors:
   - "Frank Wätzold"
   - "Martin Drechsler"
   - "Florian Hartig"
-  - "Silke Wissel"
-authors_display: "Frank Wätzold, Martin Drechsler, Florian Hartig, Silke Wissel"
+  - "Silvia Wissel"
+authors_display: "Frank Wätzold, Martin Drechsler, Florian Hartig, Silvia Wissel"
 journal: "Permit Trading in Different Applications"
+pages: "157–173"
 publisher: "Routledge"
 note: "Book chapter, edited by B. Hansjürgens, R. Antes and M. Strunz."
 abstract: "Habitat loss and fragmentation caused by economic development are major threats to the conservation of biodiversity (Millennium Ecosystem Assessment 2005). Policy responses aimed at addressing this threat have so far been inadequate. The main policy response – the designation of areas as reserves where economic development is not allowed – has generated some protection. However, the selection of reserves may not have led to a cost-effective allocation of land between areas for conservation and areas for economic development (see Ando et al. 1998 for the general idea of cost-effective land allocation, and Polasky et al. 2008 for an empirical analysis where land allocation is not cost-effective)."
-significance: "Tradable-permit markets for biodiversity conservation raise design questions — how to set trading ratios, how to handle spatial heterogeneity in habitat value, how to structure the policy around them — that this chapter consolidates from the authors' own preceding body of work into one reference. Unlike the journal articles it draws on, a book chapter without a DOI leaves little trace in citation databases, but the underlying design questions it organised remain live in the tradable-permit literature that followed."
-description: "Tradable-permit markets for biodiversity conservation raise design questions — how to set trading ratios, how to handle spatial heterogeneity in habitat…"
+abstract_kind: opening
+significance: "In this book chapter, led by Frank Wätzold, the authors consider how tradable permits could be applied to biodiversity conservation, addressing questions of design, modelling and policy. The authors start from the observation that habitat loss and fragmentation driven by economic development threaten biodiversity, and that the main policy response, designating reserves closed to development, may not have allocated land cost-effectively between conservation and economic use."
+description: "In this book chapter, led by Frank Wätzold, the authors consider how tradable permits could be applied to biodiversity conservation, addressing questions…"
 entry_type: "incollection"
 ---
 
-## Abstract
+## Opening paragraph
 
-Habitat loss and fragmentation caused by economic development are major threats to the conservation of biodiversity (Millennium Ecosystem Assessment 2005). Policy responses aimed at addressing this threat have so far been inadequate. The main policy response – the designation of areas as reserves where economic development is not allowed – has generated some protection. However, the selection of reserves may not have led to a cost-effective allocation of land between areas for conservation and areas for economic development (see Ando et al. 1998 for the general idea of cost-effective land allocation, and Polasky et al. 2008 for an empirical analysis where land allocation is not cost-effective).
+<p>Habitat loss and fragmentation caused by economic development are major threats to the conservation of biodiversity (Millennium Ecosystem Assessment 2005). Policy responses aimed at addressing this threat have so far been inadequate. The main policy response – the designation of areas as reserves where economic development is not allowed – has generated some protection. However, the selection of reserves may not have led to a cost-effective allocation of land between areas for conservation and areas for economic development (see Ando et al. 1998 for the general idea of cost-effective land allocation, and Polasky et al. 2008 for an empirical analysis where land allocation is not cost-effective).</p>

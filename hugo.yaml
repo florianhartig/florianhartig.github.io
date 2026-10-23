@@ -45,13 +45,14 @@ params:
     # `rank` is the exact German title and is what the site displays.
     # `jobTitle` feeds schema.org, where the plain word is more legible
     # internationally and matches better for entity resolution.
-    rank: "W3 Professor"
+    rank: "Full Professor (W3)"
     jobTitle: "Professor"
     affiliation: "University of Regensburg"
     affiliationURL: "https://www.uni-regensburg.de/"
     profileURL: "https://www.uni-regensburg.de/biologie-vorklinische-medizin/forschen/arbeitsgruppen/ag-hartig/team/prof-dr-florian-hartig"
     groupURL: "https://www.uni-regensburg.de/biologie-vorklinische-medizin/forschen/arbeitsgruppen/ag-hartig"
     teamURL: "https://www.uni-regensburg.de/biologie-vorklinische-medizin/forschen/arbeitsgruppen/ag-hartig/team"
+    newsURL: "https://www.uni-regensburg.de/biologie-vorklinische-medizin/forschen/arbeitsgruppen/ag-hartig/news"
     # There is deliberately no `email` key here. No e-mail address is to be
     # displayed on this site, in the contact block or in the JSON-LD. The
     # contact block links the university profile and group pages instead,
@@ -78,9 +79,6 @@ markup:
 
 menus:
   main:
-    - name: "About"
-      pageRef: "/"
-      weight: 10
     - name: "Publications"
       pageRef: "/publications"
       weight: 20
@@ -96,3 +94,6 @@ menus:
     - name: "CV"
       pageRef: "/cv"
       weight: 60
+    - name: "Contact"
+      pageRef: "/contact"
+      weight: 70

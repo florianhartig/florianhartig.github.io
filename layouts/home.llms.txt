@@ -24,20 +24,30 @@ This site is the canonical homepage for {{ $a.name }} ({{ $a.rank }}, {{ $a.affi
 
 ## Pages
 
-- [About]({{ site.BaseURL }}): biography, research interests, selected publications, contact
+- [About]({{ site.BaseURL }}): biography, research interests, publication and software statistics
 - [Publications]({{ "publications/" | absURL }}): complete list of {{ len $pubs }} publications, newest first
 - [Software]({{ "software/" | absURL }}): DHARMa, BayesianTools and contributed packages
+- [Projects]({{ "projects/" | absURL }}): research projects and networks
 - [Teaching]({{ "teaching/" | absURL }}): courses, open lecture notes, thesis opportunities
 - [CV]({{ "cv/" | absURL }}): positions and education
-{{ if $m.show }}
-## Publication metrics ({{ $m.as_of }})
+- [Contact]({{ "contact/" | absURL }}): postal address, links to the team page, Bluesky and LinkedIn
+{{- $s := hugo.Data.stats }}
+{{ if and $m.show $s.profile }}
+## Publication metrics ({{ time.Format "2 January 2006" $s.as_of }})
 
-- Articles: {{ len $pubs }} ({{ $m.coauthors }}{{ if $m.coauthors_approx }}+{{ end }} co-authors, per Scopus)
-- Citations: {{ $m.citations }} (Google Scholar)
-- h-index: {{ $m.h_index }} (Google Scholar)
+- Publications: {{ len $pubs }} ({{ hugo.Data.coauthors.count }} co-authors, counted from the publication list; map and list: {{ "/publications/coauthors/" | absURL }})
+- Citations: {{ $s.profile.citations }} (Google Scholar)
+- h-index: {{ $s.profile.h_index }} (Google Scholar)
+{{ end }}
+## Software
+
+{{ range (where site.RegularPages "Section" "software").ByTitle -}}
+- [{{ .Title }}]({{ .Permalink }}){{ with .Params.summary }}: {{ . | plainify | chomp }}{{ end }}
 {{ end }}
 ## Publications
 
+Each title links to the publication's page on this site (abstract, a short summary and citation figures); the DOI follows.
+
 {{ range $pubs.ByWeight -}}
-- {{ .Params.authors_display | default (delimit .Params.authors ", ") }} ({{ .Params.year }}). {{ .Title }}.{{ with .Params.journal }} {{ . }}.{{ end }}{{ with .Params.doi }} https://doi.org/{{ . }}{{ end }}
+- {{ .Params.authors_display | default (delimit .Params.authors ", ") }} ({{ .Params.year }}). [{{ .Title }}]({{ .Permalink }}){{ if not (findRE `[.?!]$` .Title) }}.{{ end }}{{ with .Params.journal }} {{ . }}.{{ end }}{{ with .Params.doi }} https://doi.org/{{ . }}{{ else }}{{ with .Params.preprint }} {{ . }}{{ else }}{{ with .Params.publisher_url }} {{ . }}{{ end }}{{ end }}{{ end }}
 {{ end }}

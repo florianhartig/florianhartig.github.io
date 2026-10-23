@@ -1,4 +1,11 @@
 {{ define "main" }}
+{{- /* Build-time reminder, emitted once per build: refresh the figures. */ -}}
+{{- with hugo.Data.stats }}
+{{- $age := div (now.Sub (time.AsTime .as_of)).Hours 24 }}
+{{- if gt $age 45 }}{{ warnf "data/stats.yaml is %.0f days old (as of %s) — re-run scripts/citation_stats.R" $age .as_of }}{{ end }}
+{{- else }}
+{{- warnf "data/stats.yaml is missing — run scripts/citation_stats.R" }}
+{{- end }}
 <section class="hero">
   <div class="wrap wrap-narrow hero-inner">
     {{- $img := partial "portrait.html" . }}
@@ -23,45 +30,8 @@
     {{ .Content }}
   </div>
 
-  {{ partial "metrics.html" . }}
-
-  {{- /* Only entries flagged `featured = {true}` in the .bib, in .bib order.
-         Not simply the most recent papers — this is a curated set. */ -}}
-  {{- $pubs := where site.RegularPages "Section" "publications" }}
-  {{- $selected := where $pubs "Params.featured" true }}
-  {{- with $selected.ByWeight }}
-  <section class="home-section">
-    <h2>Selected publications</h2>
-    <div class="citation-list">
-      {{- range . }}
-      {{ partial "citation.html" . }}
-      {{- end }}
-    </div>
-    <p class="more">
-      <a href="{{ "/publications/" | relURL }}">All {{ len $pubs }} publications →</a>
-    </p>
-  </section>
-  {{- end }}
-
-  {{- $software := where site.RegularPages "Section" "software" }}
-  {{- with $software.ByWeight }}
-  <section class="home-section">
-    <h2>Software</h2>
-    <div class="card-grid">
-      {{- range first 2 . }}
-      <article class="card">
-        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        <p>{{ .Params.summary }}</p>
-      </article>
-      {{- end }}
-    </div>
-    <p class="more"><a href="{{ "/software/" | relURL }}">All software →</a></p>
-  </section>
-  {{- end }}
-
-  <section class="home-section" id="contact">
-    <h2>Contact</h2>
-    {{ partial "contact.html" . }}
-  </section>
+  <div class="home-overview">
+    {{ partial "overview.html" . }}
+  </div>
 </div>
 {{ end }}

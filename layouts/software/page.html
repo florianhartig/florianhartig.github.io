@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{- $sw := index (hugo.Data.software.software | default dict) .File.ContentBaseName }}
+{{- $sw := index (hugo.Data.stats.software | default dict) .File.ContentBaseName }}
 {{- $paper := "" }}
 {{- with .Params.paper }}{{ $paper = site.GetPage (printf "/publications/%s" .) }}{{ end }}
 <div class="wrap wrap-narrow">
@@ -12,11 +12,20 @@
       {{- range $i, $l := . }}{{ if $i }}<span aria-hidden="true"> · </span>{{ end }}<a href="{{ $l.url }}" rel="noopener">{{ $l.name }}</a>{{ end }}
     </p>
     {{- end }}
-    {{- with $sw }}{{ with .scholar }}
-    <p class="software-cites">Cited
-      {{ with $sw.scholar_cites_url }}<a href="{{ . }}" rel="noopener">{{ lang.FormatNumber 0 $sw.scholar }} times</a>{{ else }}{{ lang.FormatNumber 0 $sw.scholar }} times{{ end }}
-      on Google Scholar{{ if gt $sw.scholar_entries 1 }}, summed over its {{ $sw.scholar_entries }} entries there{{ end }} (as of {{ hugo.Data.software.as_of }})</p>
-    {{- end }}{{ end }}
+    {{- if and $sw (or $sw.downloads $sw.scholar) }}
+    <div class="software-stats">
+      {{- with $sw.downloads }}
+      <p class="chart-label">Downloads per year</p>
+      {{ partial "bars.html" (dict "years" .years "values" .counts "label" "downloads" "class" "bars-small" "axis" true "labelmax" true "asof" hugo.Data.stats.as_of) }}
+      <p>{{ lang.FormatNumber 0 .total }} downloads from the Posit (RStudio) CRAN mirror since {{ index .years 0 }}, through {{ time.Format "2 January 2006" .through }}</p>
+      {{- end }}
+      {{- with $sw.scholar }}
+      <p>Cited
+        {{ with $sw.scholar_cites_url }}<a href="{{ . }}" rel="noopener">{{ lang.FormatNumber 0 $sw.scholar }} times</a>{{ else }}{{ lang.FormatNumber 0 $sw.scholar }} times{{ end }}
+        on Google Scholar{{ if gt $sw.scholar_entries 1 }}, summed over its {{ $sw.scholar_entries }} entries there{{ end }} (as of {{ time.Format "2 January 2006" hugo.Data.stats.as_of }})</p>
+      {{- end }}
+    </div>
+    {{- end }}
     <div class="prose">
       {{ .Content }}
     </div>
@@ -35,24 +44,44 @@
     </section>
     {{- end }}{{ end }}{{ end }}
 
-    {{- with $sw }}{{ with .top_citing }}
-    <section class="software-section">
-      <h2>Widely cited work citing {{ $.Title }}</h2>
+    {{- /* Citations in more detail: how the total is made up, the yearly chart, examples. */ -}}
+    {{- if and $sw (or $sw.scholar $sw.top_citing) }}
+    <section class="software-section" id="citations">
+      <h2>Citations</h2>
+      {{- $hist := $sw.scholar_history }}
+      {{- $showChart := and $hist $hist.years (ge (len $hist.years) 3) }}
+      {{- with $sw.scholar }}
+      <p>{{ $.Title }} has been cited {{ lang.FormatNumber 0 . }} times on Google Scholar as of {{ time.Format "2 January 2006" hugo.Data.stats.as_of }}.
+        {{- if gt $sw.scholar_entries 1 }}
+        {{- if $paper }} The total adds up the citations of the paper describing it and of the package itself, which Scholar lists separately.
+        {{- else }} Scholar lists the package under {{ $sw.scholar_entries }} separate entries, for example for different versions; the total adds them up.{{ end }}
+        {{- else if $paper }} These are the citations of the paper describing it.{{ end }}
+        {{- if $showChart }}{{ $last := index $hist.years (sub (len $hist.years) 1) }} {{ $hAsof := $hist.as_of | default hugo.Data.stats.as_of }} The chart shows how they are distributed over the years, as of {{ time.Format "2 January 2006" $hAsof }}{{ if eq $last (time.AsTime $hAsof).Year }}; the {{ $last }} figure covers the year up to that date{{ end }}.{{ end }}</p>
+      {{- end }}
+      {{- if $showChart }}
+      <p class="chart-label">Citations per year</p>
+      {{ partial "bars.html" (dict "years" $hist.years "values" $hist.cites "label" "citations" "class" "bars-small" "axis" true "labelmax" true "asof" ($hist.as_of | default hugo.Data.stats.as_of)) }}
+      {{- end }}
+      {{- /* Only works that are cited themselves: "widely cited" would be
+             wrong for a list topped by uncited work. */}}
+      {{- with where ($sw.top_citing | default slice) "cited_by" "gt" 0 }}
+      <h3>Widely cited work citing {{ $.Title }}</h3>
       <p class="software-note">The most-cited articles that cite {{ $.Title }}{{ if $paper }} or its paper{{ end }},
         ranked by their own citation count in OpenAlex; the group's own papers are left out.</p>
       <ol class="cited-by-list">
         {{- range . }}
         <li>
           {{ if .doi }}<a href="https://doi.org/{{ .doi }}" rel="noopener">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
-          <span class="cited-by-meta">{{ .authors }} ({{ .year }}){{ with .venue }}, <em>{{ . }}</em>{{ end }} · {{ lang.FormatNumber 0 .cited_by }} citations</span>
+          <span class="cited-by-meta">{{ .authors }} ({{ .year }}){{ with .venue }}, <em>{{ . }}</em>{{ end }} · {{ lang.FormatNumber 0 .cited_by }} {{ cond (eq .cited_by 1) "citation" "citations" }}</span>
         </li>
         {{- end }}
       </ol>
       {{- with $sw.scholar_cites_url }}
-      <p class="more"><a href="{{ . }}" rel="noopener">All {{ lang.FormatNumber 0 $sw.scholar }} citing works on Google Scholar →</a></p>
+      <p class="more"><a href="{{ . }}" rel="noopener">All citing works on Google Scholar →</a></p>
+      {{- end }}
       {{- end }}
     </section>
-    {{- end }}{{ end }}
+    {{- end }}
   </article>
 </div>
 {{ end }}

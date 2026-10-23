@@ -1,0 +1,23 @@
+{{- /* Miniature of the co-author map (/publications/coauthors/) in the
+       metrics panel of the publications page, next to the citation chart
+      : world outline and
+       one dot per city, same projection and data as the full map; the map is a
+       link, labelled for screen readers and on hover. Dots are larger in map units than on the
+       full map so they stay visible at this size. Outline: world-land-mini.path,
+       world-land.path snapped to a 3-unit grid without islands too small to see
+       (25 KB instead of 60 KB). */ -}}
+{{- $c := hugo.Data.coauthors -}}
+{{- $cities := newScratch -}}
+{{- range $c.people }}{{ if .lat }}{{ $cities.Add (printf "%v|%v" .x .y) (slice 1) }}{{ end }}{{ end -}}
+<div class="metrics-map">
+<p class="chart-label">Co-authors</p>
+<a class="metrics-map-link" href="{{ "/publications/coauthors/" | relURL }}" title="Map of my co-authors’ institutions ({{ lang.FormatNumber 0 $c.located }} of {{ lang.FormatNumber 0 $c.count }} co-authors located)" aria-label="Map of my co-authors’ institutions">
+  <svg viewBox="140 0 850 440" aria-hidden="true" focusable="false">
+    <path class="ca-land" d="{{ (resources.Get "maps/world-land-mini.path").Content }}"/>
+    {{- range $k, $v := $cities.Values }}
+    {{- $xy := split $k "|" }}
+    <circle cx="{{ index $xy 0 }}" cy="{{ index $xy 1 }}" r="{{ add 9 (mul 3.5 (math.Sqrt (len $v))) }}"/>
+    {{- end }}
+  </svg>
+</a>
+</div>

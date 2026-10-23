@@ -18,20 +18,28 @@
 #      are reported side by side rather than picked as "the" number.
 #
 # Usage:
-#   Rscript scripts/citation_stats.R
+#   Rscript scripts/citation_stats.R                 # weekly: 5 history requests
+#   Rscript scripts/citation_stats.R --histories=20  # while the histories are first filled (once a day)
+#   (--citing also writes citing_papers.csv; --force overrides the one-run-per-20-h guard)
 #
 # Requires (install once):
-#   install.packages(c("scholar", "httr2", "jsonlite", "dplyr", "purrr", "stringr", "tibble"))
+#   install.packages(c("scholar", "httr2", "jsonlite", "yaml", "dplyr", "purrr", "stringr", "tibble"))
 #
-# Output, written to citation_reports/ (gitignored, not part of the site):
+# Output for the site:
+#   - data/stats.yaml      every citation and download figure the site shows
+#                          (profile totals and citations per year, per-paper
+#                          counts and histories, software data), from one run,
+#                          written only if the consistency checks in section 7
+#                          pass.
+# Output for research, in citation_reports/ (gitignored, not part of the site):
 #   - papers_summary.csv   one row per paper: key, title, year, doi,
-#                          scholar_citations, scholar_pubid, openalex_citations
+#                          scholar_citations, scholar_pubid, openalex_citations, openalex_id
 #   - citing_papers.csv    one row per (paper, citing paper) pair, from
 #                          OpenAlex: cited_key, cited_title, citing_title,
 #                          citing_year, citing_doi, citing_authors
 #
-# Runtime: a few minutes for ~110 papers, most of it deliberate pauses to
-# stay within both services' rate limits.
+# Runtime: about 15–20 minutes, most of it deliberate pauses to stay within
+# Google Scholar's rate limits.
 
 suppressPackageStartupMessages({
   library(dplyr)
@@ -58,11 +66,36 @@ OUT_DIR <- "citation_reports"
 # Optional: OpenAlex's "polite pool" gives faster, more reliable responses to
 # requests that identify a contact e-mail. Purely a courtesy to OpenAlex, not
 # required — leave blank to use the (slower, shared) anonymous pool.
-OPENALEX_MAILTO <- ""
+OPENALEX_MAILTO <- ""  # keep empty: no personal data in requests unless explicitly agreed
 
 dir.create(OUT_DIR, showWarnings = FALSE)
 
-for (pkg in c("scholar", "httr2", "jsonlite")) {
+# Rolling Scholar histories (section 6). Scholar is used despite its robots.txt, gently — 5 history requests per run, 20 while the
+# file is first filled, at most one run per 20 hours.
+ARGS <- commandArgs(trailingOnly = TRUE)
+N_HIST <- if (any(grepl("^--histories=", ARGS))) as.integer(sub("^--histories=", "", grep("^--histories=", ARGS, value = TRUE)[1])) else 5L
+PAUSE <- c(20, 40)  # seconds between history requests, drawn uniformly
+LOG_PATH <- ".claude/maintenance/scholar_log.tsv"
+QUEUE_PATH <- ".claude/maintenance/scholar_queue.json"
+log_run <- function(what) {
+  dir.create(dirname(LOG_PATH), recursive = TRUE, showWarnings = FALSE)
+  cat(format(Sys.time(), "%Y-%m-%d %H:%M"), "\t", what, "\n", sep = "", file = LOG_PATH, append = TRUE)
+}
+if (file.exists(LOG_PATH) && !("--force" %in% ARGS)) {
+  starts <- grep("\tstart\t", readLines(LOG_PATH), value = TRUE)
+  if (length(starts)) {
+    last <- as.POSIXct(substr(tail(starts, 1), 1, 16), format = "%Y-%m-%d %H:%M")
+    hrs <- as.numeric(difftime(Sys.time(), last, units = "hours"))
+    if (!is.na(hrs) && hrs < 20) {
+      stop(sprintf("last Scholar run started %.1f h ago (%s) — at most one run per 20 h; use --force only if that run made no requests.",
+                   hrs, LOG_PATH), call. = FALSE)
+    }
+  }
+}
+if (is.na(N_HIST) || N_HIST < 0 || N_HIST > 25) stop("--histories must be between 0 and 25", call. = FALSE)
+log_run(sprintf("start\thistories=%d", N_HIST))
+
+for (pkg in c("scholar", "httr2", "jsonlite", "yaml")) {
   if (!requireNamespace(pkg, quietly = TRUE)) {
     stop(sprintf(
       "Package '%s' is not installed. Run:\n  install.packages(\"%s\")",
@@ -118,7 +151,11 @@ parse_bib <- function(path) {
       key   = key,
       title = read_bib_field(body, "title"),
       year  = read_bib_field(body, "year"),
-      doi   = read_bib_field(body, "doi")
+      doi   = read_bib_field(body, "doi"),
+      # Optional pinned Scholar entry (`scholar_id = {pubid}` in the .bib) for
+      # papers whose Scholar title differs too much for the title match
+      # (e.g. truncated title, missing subtitle).
+      scholar_id = read_bib_field(body, "scholar_id")
     )
   })
   bind_rows(entries)
@@ -145,14 +182,20 @@ scholar_pubs <- tryCatch(
       "Could not read the Google Scholar profile (", conditionMessage(e), "). ",
       "Scholar occasionally rate-limits or CAPTCHA-blocks automated requests; ",
       "if this keeps happening, wait a while and retry, or run this section by ",
-      "hand later. Continuing with OpenAlex only.",
+      "hand later.",
       call. = FALSE
     )
     NULL
   }
 )
 
-scholar_raw <- if (!is.null(scholar_pubs)) as_tibble(scholar_pubs) else NULL
+# get_publications() returns NA instead of throwing when Scholar refuses
+# (HTTP 429). Without the Scholar list nothing can be written anyway (section 7
+# requires it), so stop here instead of spending the OpenAlex budget.
+if (!is.data.frame(scholar_pubs) || !all(c("title", "cites", "pubid") %in% names(scholar_pubs))) {
+  stop("Google Scholar profile list unavailable — nothing written; data/stats.yaml unchanged.", call. = FALSE)
+}
+scholar_raw <- as_tibble(scholar_pubs)
 
 if (!is.null(scholar_pubs)) {
   scholar_pubs <- scholar_pubs |>
@@ -165,6 +208,22 @@ if (!is.null(scholar_pubs)) {
     )
   bib <- bib |> mutate(norm_title = normalize_title(title))
 
+  # Pinned entries first: matched by Scholar pubid, not by title.
+  pinned <- bib |>
+    filter(!is.na(scholar_id)) |>
+    left_join(scholar_pubs |> select(scholar_pubid, scholar_title, scholar_citations),
+              by = c("scholar_id" = "scholar_pubid")) |>
+    mutate(scholar_pubid = scholar_id)
+  if (nrow(pinned) > 0) {
+    message(sprintf("  %d paper(s) pinned to a Scholar entry via scholar_id: %s", nrow(pinned),
+                    paste(pinned$key, collapse = ", ")))
+    if (any(is.na(pinned$scholar_citations)))
+      warning("scholar_id not found in the Scholar profile: ",
+              paste(pinned$key[is.na(pinned$scholar_citations)], collapse = ", "), call. = FALSE)
+  }
+  pinned <- pinned |> select(-norm_title)
+  bib <- bib |> filter(is.na(scholar_id))
+
   matched <- bib |> inner_join(scholar_pubs, by = "norm_title")
   unmatched_bib <- bib |> anti_join(scholar_pubs, by = "norm_title")
 
@@ -176,15 +235,19 @@ if (!is.null(scholar_pubs)) {
       row <- unmatched_bib[i, ]
       hit <- agrepl(row$norm_title, scholar_pubs$norm_title, max.distance = 0.1)
       if (any(hit)) {
+        # Approximate matches can pick the wrong Scholar entry — log them for a check.
+        message(sprintf("  fuzzy match %s: \"%s\" <-> Scholar \"%s\"", row$key,
+                        substr(row$title, 1, 70), substr(scholar_pubs$scholar_title[which(hit)[1]], 1, 70)))
         bind_cols(row, scholar_pubs[which(hit)[1], c("scholar_title", "scholar_citations", "scholar_pubid")])
       } else {
         bind_cols(row, tibble(scholar_title = NA_character_, scholar_citations = NA_integer_, scholar_pubid = NA_character_))
       }
     })
-    bib <- bind_rows(matched, fuzzy) |> select(-norm_title)
+    bib <- bind_rows(pinned, matched |> select(-norm_title), fuzzy |> select(-norm_title))
   } else {
-    bib <- matched |> select(-norm_title)
+    bib <- bind_rows(pinned, matched |> select(-norm_title))
   }
+  bib <- bib |> select(-scholar_id)
 
   still_unmatched <- sum(is.na(bib$scholar_citations))
   if (still_unmatched > 0) {
@@ -254,6 +317,10 @@ openalex_citing_papers <- function(work_id, cited_key, cited_title) {
   bind_rows(out)
 }
 
+# The citing-paper lists (citation_reports/citing_papers.csv) are research data,
+# not used by the site, capped at 200 per paper without an API key and costly
+# for the shared keyless OpenAlex budget: only with --citing.
+CITING <- "--citing" %in% commandArgs(trailingOnly = TRUE)
 dois <- bib |> filter(!is.na(doi))
 message(sprintf("Fetching OpenAlex data for %d papers with a DOI ...", nrow(dois)))
 
@@ -267,9 +334,10 @@ for (i in seq_len(nrow(dois))) {
     message(sprintf("  [%d/%d] %s: not found in OpenAlex, skipping", i, nrow(dois), row$key))
     next
   }
-  openalex_results[[i]] <- tibble(key = row$key, openalex_citations = work$cited_by_count %||% NA_integer_)
+  openalex_results[[i]] <- tibble(key = row$key, openalex_citations = work$cited_by_count %||% NA_integer_,
+                                  openalex_id = sub("^https://openalex.org/", "", work$id %||% NA_character_))
 
-  if (!is.null(work$cited_by_count) && work$cited_by_count > 0 && !is.null(work$id)) {
+  if (CITING && !is.null(work$cited_by_count) && work$cited_by_count > 0 && !is.null(work$id)) {
     work_id <- sub("^https://openalex.org/", "", work$id)
     citing_all[[i]] <- openalex_citing_papers(work_id, row$key, row$title)
   }
@@ -281,6 +349,11 @@ for (i in seq_len(nrow(dois))) {
 }
 
 openalex_summary <- bind_rows(openalex_results)
+# All lookups failed → bind_rows() gives a 0x0 tibble and the join below would
+# crash. Keep the columns; the coverage check in section 7 decides.
+if (!nrow(openalex_summary)) {
+  openalex_summary <- tibble(key = character(), openalex_citations = integer(), openalex_id = character())
+}
 citing_papers <- bind_rows(citing_all)
 
 # ---------------------------------------------------------------------------
@@ -300,53 +373,18 @@ readr_write <- function(df, path) {
   }
 }
 
-readr_write(papers_summary, file.path(OUT_DIR, "papers_summary.csv"))
-readr_write(citing_papers, file.path(OUT_DIR, "citing_papers.csv"))
+# (The CSVs are written at the end, only when the checks in section 7 pass.)
 
 # ---------------------------------------------------------------------------
-# 5. data/citations.yaml — feeds the per-paper citation count shown on each
-#    publication page (layouts/publications/page.html) and in the
-#    publications list (layouts/_partials/citation.html), via
-#    hugo.Data.citations, the same pattern data/metrics.yaml already uses for
-#    the homepage aggregate figures. Written by hand (not the `yaml` package)
-#    for predictable, minimal-diff formatting since this file is re-generated
-#    on every run.
-# ---------------------------------------------------------------------------
-
-citations_yaml_path <- "data/citations.yaml"
-if (dir.exists("data")) {
-  lines <- c(
-    "# Per-paper citation counts, shown on each publication page and in the",
-    "# publications list. Generated by scripts/citation_stats.R from Google",
-    "# Scholar + OpenAlex — do not hand-edit, re-run the script to refresh.",
-    sprintf('as_of: "%s"', format(Sys.Date(), "%d %B %Y")),
-    sprintf('scholar_url: "https://scholar.google.de/citations?user=%s"', SCHOLAR_ID),
-    sprintf('scholar_user: "%s"', SCHOLAR_ID),
-    "papers:"
-  )
-  paper_lines <- papers_summary |>
-    filter(!is.na(scholar_citations) | !is.na(openalex_citations)) |>
-    pmap_chr(function(key, scholar_citations, scholar_pubid, openalex_citations, ...) {
-      fields <- c(
-        if (!is.na(scholar_citations)) sprintf("scholar: %d", as.integer(scholar_citations)),
-        if (!is.na(scholar_pubid)) sprintf('scholar_id: "%s"', scholar_pubid),
-        if (!is.na(openalex_citations)) sprintf("openalex: %d", as.integer(openalex_citations))
-      )
-      sprintf("  %s: { %s }", key, paste(fields, collapse = ", "))
-    })
-  writeLines(c(lines, paper_lines), citations_yaml_path)
-  message(sprintf("  %s: %d papers", citations_yaml_path, length(paper_lines)))
-}
-
-# ---------------------------------------------------------------------------
-# 6. data/software.yaml — citation data for the /software/ pages. Which
+# 5. Software: per-package citation data for the /software/ pages. Which
 #    sources belong to a package is set in each content/software/*.md front
 #    matter: `scholar_match` (regex over Scholar profile titles, for the
 #    package's own entries — DHARMa's citations are split over many version
 #    entries), `paper` (companion paper's .bib key) and `cran` (package name,
-#    for the CRAN DOI 10.32614/CRAN.package.<name>, which OpenAlex indexes).
-#    `top_citing` = the most-cited articles/reviews citing the package or its
-#    paper, by their own OpenAlex citation count, Hartig's own excluded.
+#    for the CRAN DOI 10.32614/CRAN.package.<name>, which OpenAlex indexes,
+#    and for download counts). `top_citing` = the most-cited articles/reviews
+#    citing the package or its paper, by their own OpenAlex citation count,
+#    Hartig's own excluded.
 # ---------------------------------------------------------------------------
 
 read_front_matter <- function(path) {
@@ -365,11 +403,12 @@ is_own_work <- function(w) {
   }))
 }
 
-if (dir.exists("content/software") && requireNamespace("yaml", quietly = TRUE)) {
+software_entries <- list()
+software_pubids <- list()  # Scholar entries behind each package's total, for its yearly history (section 6)
+if (dir.exists("content/software")) {
   message("Collecting software citation data ...")
   software_files <- list.files("content/software", pattern = "\\.md$", full.names = TRUE)
   software_files <- software_files[basename(software_files) != "_index.md"]
-  software_entries <- list()
 
   for (f in software_files) {
     fm <- read_front_matter(f)
@@ -388,7 +427,10 @@ if (dir.exists("content/software") && requireNamespace("yaml", quietly = TRUE)) 
       rows <- distinct(rows, pubid, .keep_all = TRUE)
       cids <- unique(unlist(strsplit(as.character(na.omit(rows$cid)), ",")))
       entry$scholar <- as.integer(sum(rows$cites, na.rm = TRUE))
-      entry$scholar_entries <- nrow(rows)
+      # Entries that contribute citations: a package entry with 0 citations
+      # beside its paper made "summed over 2 entries" misleading.
+      entry$scholar_entries <- sum(rows$cites > 0, na.rm = TRUE)
+      software_pubids[[slug]] <- rows$pubid
       if (length(cids)) {
         entry$scholar_cites_url <- paste0("https://scholar.google.com/scholar?cites=", paste(cids, collapse = ","))
       }
@@ -438,23 +480,308 @@ if (dir.exists("content/software") && requireNamespace("yaml", quietly = TRUE)) 
         }
       }
     }
-    if (length(entry)) software_entries[[slug]] <- entry
-    message(sprintf("  %s: Scholar %s, top citing %d", slug, entry$scholar %||% "-", length(entry$top_citing)))
-  }
 
+    # Yearly downloads from the Posit (RStudio) CRAN mirror via cranlogs, the
+    # only CRAN mirror that publishes download logs.
+    if (!is.null(fm$cran)) {
+      dl <- tryCatch(
+        httr2::request(paste0("https://cranlogs.r-pkg.org/downloads/daily/2012-10-01:last-day/", fm$cran)) |>
+          httr2::req_retry(max_tries = 3) |> httr2::req_perform() |> httr2::resp_body_json(),
+        error = function(e) NULL
+      )
+      days <- dl[[1]]$downloads
+      if (length(days)) {
+        yrs <- substr(map_chr(days, "day"), 1, 4)
+        n <- map_int(days, \(d) as.integer(d$downloads %||% 0L))
+        by_year <- tapply(n, yrs, sum)
+        by_year <- by_year[cumsum(by_year) > 0]
+        if (length(by_year)) {
+          entry$downloads <- list(
+            total = as.integer(sum(by_year)),
+            years = as.list(as.integer(names(by_year))),
+            counts = as.list(as.integer(by_year)),
+            through = days[[length(days)]]$day
+          )
+        }
+      }
+    }
+
+    if (length(entry)) software_entries[[slug]] <- entry
+    message(sprintf("  %s: Scholar %s, downloads %s", slug, entry$scholar %||% "-", entry$downloads$total %||% "-"))
+  }
+}
+
+# ---------------------------------------------------------------------------
+# 6. Google Scholar profile totals and citations per year. Totals (citations,
+#    h, i10) and the profile's yearly histogram are fetched back to back so
+#    they describe the same moment, on every run.
+#    Per-paper and per-package yearly histories need one request per Scholar
+#    entry. They are fetched in a slow rolling queue —
+#    at most N_HIST history requests per run (`--histories=N`, default 5;
+#    20 a day while the file is first filled), 20–40 s apart, never fetched
+#    first, then the oldest. get_article_cite_history() does not throw when
+#    Scholar refuses — it returns an empty table — so 2 empty answers in a
+#    row stop the queue. Every history keeps its own date; whatever was not
+#    fetched in this run is carried over from the previous data/stats.yaml.
+#    State (last attempt per item) and a run log are kept privately in
+#    .claude/maintenance/.
+# ---------------------------------------------------------------------------
+
+STATS_PATH <- "data/stats.yaml"
+TODAY <- format(Sys.Date(), "%Y-%m-%d")
+
+previous <- if (file.exists(STATS_PATH)) yaml::read_yaml(STATS_PATH, fileEncoding = "UTF-8") else list()
+# Under a non-UTF-8 locale read_yaml() can return NULL with only warnings; then
+# every carried-over history and every drop check would silently vanish.
+if (file.exists(STATS_PATH) && length(previous$papers) == 0) {
+  stop("could not read the previous ", STATS_PATH, " (locale/encoding?) — nothing written.", call. = FALSE)
+}
+
+fill_years <- function(h) {
+  if (is.null(h) || nrow(h) == 0) return(NULL)
+  yrs <- seq(min(h$year), max(h$year))
+  # as.list(): yaml::as.yaml writes a length-1 vector as a scalar, not a list.
+  list(years = as.list(as.integer(yrs)), cites = as.list(as.integer(vapply(yrs, \(y) sum(h$cites[h$year == y]), numeric(1)))))
+}
+
+message("Fetching Scholar profile totals and yearly citations ...")
+prof <- tryCatch(scholar::get_profile(SCHOLAR_ID), error = function(e) NULL)
+prof_hist <- tryCatch(suppressWarnings(scholar::get_citation_history(SCHOLAR_ID)), error = function(e) NULL)
+
+paper_history <- list()
+history_date <- list()
+software_history <- list()
+pub_to_key <- setNames(bib$key, bib$scholar_pubid)
+targets <- bib |> filter(!is.na(scholar_pubid), coalesce(scholar_citations, 0L) > 0) |>
+  select(key, scholar_pubid, scholar_citations)
+
+# The queue: every paper with citations, and every package (all Scholar entries
+# behind its total, fetched together so its chart sums one moment).
+queue_state <- if (file.exists(QUEUE_PATH)) jsonlite::fromJSON(QUEUE_PATH, simplifyVector = FALSE) else list()
+last_paper <- function(k) {
+  o <- previous$papers[[k]]
+  if (is.null(o$years)) NA_character_ else (o$history_as_of %||% previous$as_of)
+}
+last_software <- function(slug) previous$software[[slug]]$scholar_history$as_of %||% NA_character_
+sw_pids <- lapply(software_pubids, function(pids) {
+  pids[vapply(pids, function(pid) isTRUE(scholar_raw$cites[scholar_raw$pubid == pid][1] > 0), logical(1))]
+})
+sw_pids <- sw_pids[lengths(sw_pids) > 0]
+items <- bind_rows(
+  tibble(kind = "paper", id = targets$key, cost = 1L, cites = as.integer(targets$scholar_citations),
+         fetched = vapply(targets$key, last_paper, character(1))),
+  tibble(kind = "software", id = names(sw_pids), cost = as.integer(lengths(sw_pids)),
+         cites = vapply(names(sw_pids), function(x) as.integer(software_entries[[x]]$scholar %||% 0L), integer(1)),
+         fetched = vapply(names(sw_pids), last_software, character(1)))
+)
+items$qid <- paste(items$kind, items$id, sep = ":")
+items$tried <- vapply(items$qid, function(q) queue_state[[q]] %||% NA_character_, character(1))
+# An item tried but answered empty counts as attempted on that day, so one
+# entry Scholar cannot serve does not block the head of the queue forever.
+items$last <- pmax(items$fetched, items$tried, na.rm = TRUE)
+items <- items[order(!is.na(items$fetched), items$last, -items$cites, na.last = FALSE), ]
+message(sprintf("History queue: %d items (%d never fetched); this run: up to %d requests, %d–%d s apart",
+                nrow(items), sum(is.na(items$fetched)), N_HIST, PAUSE[1], PAUSE[2]))
+
+used <- 0L
+empties <- 0L
+blocked <- FALSE
+get_hist <- function(pid) {
+  if (used > 0) Sys.sleep(runif(1, PAUSE[1], PAUSE[2]))
+  used <<- used + 1L
+  h <- tryCatch(suppressWarnings(scholar::get_article_cite_history(SCHOLAR_ID, pid)), error = function(e) NULL)
+  if (is.null(h) || nrow(h) == 0) {
+    empties <<- empties + 1L
+    if (empties >= 2) blocked <<- TRUE
+    return(NULL)
+  }
+  empties <<- 0L
+  h
+}
+for (j in seq_len(nrow(items))) {
+  it <- items[j, ]
+  if (used >= N_HIST || blocked) break
+  if (used > 0 && used + it$cost > N_HIST) next  # a big package only as the first item of a run
+  queue_state[[it$qid]] <- TODAY
+  if (it$kind == "paper") {
+    h <- get_hist(targets$scholar_pubid[targets$key == it$id])
+    if (!is.null(h)) {
+      paper_history[[it$id]] <- fill_years(h)
+      history_date[[it$id]] <- TODAY
+      message(sprintf("  %s: history fetched", it$id))
+    } else message(sprintf("  %s: empty answer", it$id))
+  } else {
+    parts <- list()
+    for (pid in sw_pids[[it$id]]) {
+      k <- unname(pub_to_key[pid])
+      if (!is.na(k) && identical(history_date[[k]], TODAY)) {
+        h <- paper_history[[k]]
+        parts[[pid]] <- data.frame(year = unlist(h$years), cites = unlist(h$cites))
+        next
+      }
+      h <- get_hist(pid)
+      if (is.null(h)) { parts <- NULL; break }
+      parts[[pid]] <- h[, c("year", "cites")]
+      if (!is.na(k) && k %in% targets$key) {
+        paper_history[[k]] <- fill_years(h)
+        history_date[[k]] <- TODAY
+      }
+    }
+    if (length(parts)) {
+      software_history[[it$id]] <- c(fill_years(do.call(rbind, parts)), list(as_of = TODAY))
+      message(sprintf("  software %s: history fetched (%d entries)", it$id, length(parts)))
+    } else message(sprintf("  software %s: incomplete, previous history kept", it$id))
+  }
+}
+if (blocked) message("  2 empty answers in a row — Scholar is probably refusing; queue stopped")
+
+# Carry over everything not fetched in this run, with its own date.
+for (k in setdiff(targets$key, names(paper_history))) {
+  old <- previous$papers[[k]]
+  if (!is.null(old$years)) {
+    paper_history[[k]] <- list(years = as.list(as.integer(unlist(old$years))), cites = as.list(as.integer(unlist(old$cites))))
+    history_date[[k]] <- old$history_as_of %||% previous$as_of
+  }
+}
+for (slug in setdiff(names(software_pubids), names(software_history))) {
+  old <- previous$software[[slug]]$scholar_history
+  if (!is.null(old)) {
+    software_history[[slug]] <- list(years = as.list(as.integer(unlist(old$years))),
+                                     cites = as.list(as.integer(unlist(old$cites))),
+                                     as_of = old$as_of %||% previous$as_of)
+  }
+}
+message(sprintf("  histories: %d paper(s) fetched now, %d carried over; %d history requests used",
+                sum(unlist(history_date) == TODAY), sum(unlist(history_date) != TODAY), used))
+done_now <- c(paste0("paper:", names(history_date)[unlist(history_date) == TODAY]),
+              paste0("software:", names(software_history)[vapply(software_history, function(h) identical(h$as_of, TODAY), logical(1))]))
+log_run(sprintf("histories\trequests=%d\tfetched=%d\tblocked=%s\tnever_fetched_left=%d",
+                used, length(done_now), blocked, sum(is.na(items$fetched) & !(items$qid %in% done_now))))
+dir.create(dirname(QUEUE_PATH), recursive = TRUE, showWarnings = FALSE)
+writeLines(jsonlite::toJSON(queue_state, auto_unbox = TRUE, pretty = TRUE), QUEUE_PATH)
+message(sprintf("  software histories: %d packages", length(software_history)))
+
+# ---------------------------------------------------------------------------
+# 7. Assemble data/stats.yaml — the single data source for every citation and
+#    download figure on the site — check it, and write it only if it passes.
+# ---------------------------------------------------------------------------
+
+stats <- list(
+  as_of = TODAY,
+  scholar = list(
+    user = SCHOLAR_ID,
+    profile_url = paste0("https://scholar.google.de/citations?user=", SCHOLAR_ID)
+  ),
+  profile = NULL,
+  papers = list(),
+  software = software_entries
+)
+if (!is.null(prof)) {
+  stats$profile <- c(
+    list(citations = as.integer(prof$total_cites), h_index = as.integer(prof$h_index),
+         i10_index = as.integer(prof$i10_index)),
+    fill_years(prof_hist)
+  )
+}
+for (r in seq_len(nrow(papers_summary))) {
+  row <- papers_summary[r, ]
+  p <- list()
+  if (!is.na(row$scholar_citations)) p$scholar <- as.integer(row$scholar_citations)
+  if (!is.na(row$scholar_pubid)) p$scholar_id <- row$scholar_pubid
+  if (!is.na(row$openalex_citations)) p$openalex <- as.integer(row$openalex_citations)
+  if (!is.na(row$openalex_id %||% NA)) p$openalex_id <- row$openalex_id
+  if (!is.null(paper_history[[row$key]])) {
+    p <- c(p, paper_history[[row$key]], list(history_as_of = history_date[[row$key]]))
+  }
+  if (length(p)) stats$papers[[row$key]] <- p
+}
+for (slug in intersect(names(software_history), names(stats$software))) {
+  stats$software[[slug]]$scholar_history <- software_history[[slug]]
+}
+
+errors <- character()
+warnings_ <- character()
+pr <- stats$profile
+if (is.null(pr) || is.null(pr$citations) || is.na(pr$citations)) {
+  errors <- c(errors, "Scholar profile totals missing")
+} else {
+  if (is.null(pr$years)) errors <- c(errors, "Scholar yearly citations missing")
+  else {
+    s <- sum(unlist(pr$cites))
+    # Scholar's yearly histogram leaves out some citations (it never exceeds the
+    # total, but runs a little below it), so allow a gap but never an excess.
+    if (s > pr$citations * 1.005) errors <- c(errors, sprintf("yearly citations sum to %d, more than the total %d", s, pr$citations))
+    if (pr$citations - s > 0.03 * pr$citations) warnings_ <- c(warnings_, sprintf("yearly citations (%d) are more than 3%% below the total (%d)", s, pr$citations))
+  }
+  old_total <- previous$profile$citations
+  if (!is.null(old_total) && pr$citations < old_total * 0.99) {
+    errors <- c(errors, sprintf("total citations fell from %d to %d", old_total, pr$citations))
+  }
+}
+matched <- mean(!is.na(papers_summary$scholar_citations))
+if (matched < 0.9) errors <- c(errors, sprintf("only %.0f%% of papers matched to Scholar", 100 * matched))
+for (k in names(stats$papers)) {
+  p <- stats$papers[[k]]
+  if (!is.null(p$cites) && !is.null(p$scholar) && sum(unlist(p$cites)) > p$scholar + 2) {
+    warnings_ <- c(warnings_, sprintf("%s: yearly citations (%d) exceed its total (%d) — history dropped", k, sum(unlist(p$cites)), p$scholar))
+    stats$papers[[k]][c("years", "cites", "history_as_of")] <- NULL
+  }
+  old_n <- previous$papers[[k]]$scholar
+  if (!is.null(old_n) && !is.null(p$scholar) && p$scholar < old_n * 0.9) {
+    warnings_ <- c(warnings_, sprintf("%s: Scholar count fell from %d to %d", k, old_n, p$scholar))
+  }
+}
+
+for (slug in names(stats$software)) {
+  sw <- stats$software[[slug]]
+  h <- sw$scholar_history
+  if (!is.null(h) && !is.null(sw$scholar) && sum(unlist(h$cites)) > sw$scholar + 2 * (sw$scholar_entries %||% 1)) {
+    warnings_ <- c(warnings_, sprintf("software %s: yearly citations (%d) exceed its total (%d) — history dropped", slug, sum(unlist(h$cites)), sw$scholar))
+    stats$software[[slug]]$scholar_history <- NULL
+  }
+}
+
+# Partial failures of OpenAlex or cranlogs must not silently remove figures
+# from the site (counts, links, "How to cite", downloads): fail instead, so the
+# previous file stays. Carry-over per source is the next step.
+n_oa <- function(x) sum(vapply(x, function(p) !is.null(p$openalex), logical(1)))
+if (length(previous$papers) && n_oa(stats$papers) < n_oa(previous$papers) - 2) {
+  errors <- c(errors, sprintf("OpenAlex counts for %d papers, previously %d — OpenAlex unavailable?",
+                              n_oa(stats$papers), n_oa(previous$papers)))
+}
+for (slug in names(previous$software)) {
+  for (field in c("downloads", "cran_ref", "top_citing")) {
+    if (!is.null(previous$software[[slug]][[field]]) && is.null(stats$software[[slug]][[field]])) {
+      errors <- c(errors, sprintf("software %s: %s missing in this run (was present before)", slug, field))
+    }
+  }
+}
+
+for (w in warnings_) message("  WARNING: ", w)
+if (length(errors)) {
+  for (e in errors) message("  ERROR: ", e)
+  message("  ", STATS_PATH, " NOT written — the previous version stays in place.")
+} else {
+  # Atomic write: temp file in the gitignored .claude/maintenance/tmp/ (same
+  # volume), then rename — a crash never leaves a half-written file.
+  tmp_dir <- ".claude/maintenance/tmp"
+  dir.create(tmp_dir, recursive = TRUE, showWarnings = FALSE)
+  tmp <- tempfile("stats-", tmpdir = tmp_dir, fileext = ".yaml")
   writeLines(c(
-    "# Citation data for the /software/ pages. Generated by scripts/citation_stats.R",
-    "# from Google Scholar + OpenAlex — do not hand-edit, re-run the script to refresh.",
-    yaml::as.yaml(list(as_of = format(Sys.Date(), "%d %B %Y"), software = software_entries))
-  ), "data/software.yaml")
-  message(sprintf("  data/software.yaml: %d packages", length(software_entries)))
+    "# All citation and download figures on the site. Generated by",
+    "# scripts/citation_stats.R from Google Scholar, OpenAlex and cranlogs in one",
+    "# run, checked for consistency before writing — do not hand-edit. Figures for",
+    "# the current year are partial.",
+    yaml::as.yaml(stats)
+  ), tmp, useBytes = TRUE)
+  if (!file.rename(tmp, STATS_PATH)) stop("could not move ", tmp, " to ", STATS_PATH)
+  readr_write(papers_summary, file.path(OUT_DIR, "papers_summary.csv"))
+  if (CITING) readr_write(citing_papers, file.path(OUT_DIR, "citing_papers.csv"))
+  message(sprintf("  %s written: %d papers, %d packages, profile %d citations (h=%d, i10=%d)",
+                  STATS_PATH, length(stats$papers), length(stats$software),
+                  pr$citations, pr$h_index, pr$i10_index))
 }
 
 message("\nDone.")
 message(sprintf("  %s: %d papers", file.path(OUT_DIR, "papers_summary.csv"), nrow(papers_summary)))
 message(sprintf("  %s: %d citing-paper records", file.path(OUT_DIR, "citing_papers.csv"), nrow(citing_papers)))
-message(sprintf(
-  "  Total citations — Scholar: %s | OpenAlex: %s",
-  sum(papers_summary$scholar_citations, na.rm = TRUE),
-  sum(papers_summary$openalex_citations, na.rm = TRUE)
-))

@@ -1,0 +1,23 @@
+{{- /* Author list of one publication (paper pages, publications list, software
+       pages). Every name is in the HTML; Florian's name is bold; the last author is
+       joined with "&". Lists of six
+       or more plain names are marked up name by name, and the script in
+       authors-script.html collapses them to about 1.5 lines (first authors,
+       the last two, always Florian) with a caret button to show all. Without
+       JavaScript the full list shows. Lists whose authors_display differs from
+       the plain list (e.g. "…" for "and others") are printed as they are.
+       Input: dict "page" (the publication) and "class" (extra CSS classes),
+       or "authors" (a list, e.g. a software entry's) instead of "page". */ -}}
+{{- $p := .page }}{{ $cls := .class | default "" }}
+{{- $list := .authors }}{{ if not $list }}{{ with $p }}{{ $list = .Params.authors }}{{ end }}{{ end }}{{ $list = $list | default slice }}{{ $n := len $list }}
+{{- $authors := delimit $list ", " }}{{ with $p }}{{ $authors = .Params.authors_display | default $authors }}{{ end }}
+{{- $me := `^(Florian Hartig|F\. Hartig)$` }}
+{{- if and (ge $n 6) (eq $authors (delimit $list ", ")) -}}
+<p class="citation-authors au-list {{ $cls }}">
+  {{- range $i, $a := $list -}}
+  <span class="au"{{ if findRE $me $a }} data-me{{ end }}>{{ if eq $i (sub $n 1) }} &amp; {{ else if $i }}, {{ end }}{{ replaceRE $me "<strong>$1</strong>" (htmlEscape $a) | safeHTML }}</span>
+  {{- end }} <button type="button" class="au-toggle" aria-expanded="true" hidden><span class="au-cue" aria-hidden="true">▶</span> <span class="au-label">all {{ $n }} authors</span></button></p>
+{{- else -}}
+{{- if and (ge $n 2) (eq $authors (delimit $list ", ")) }}{{ $authors = delimit $list ", " " & " }}{{ end -}}
+<p class="citation-authors {{ $cls }}">{{ replaceRE `(Florian Hartig|F\. Hartig)\b` "<strong>$1</strong>" (htmlEscape $authors) | safeHTML }}</p>
+{{- end -}}

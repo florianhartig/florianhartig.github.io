@@ -1,0 +1,24 @@
+{{- /* One software package as an entry of the publication list (clearly badged "Software", linked to its software page. Data
+       from the page's `pub_entry` front matter. The citation count is that of
+       the package's own Scholar entries only — a companion paper's citations
+       are already counted at the paper's entry. Input: the software page. */ -}}
+{{- $e := .Params.pub_entry }}
+{{- $slug := .File.ContentBaseName }}
+{{- $s := hugo.Data.stats }}
+{{- $sw := index ($s.software | default dict) $slug }}
+{{- $own := 0 }}
+{{- with $sw }}{{ $own = .scholar | default 0 }}{{ end }}
+{{- with .Params.paper }}{{ with index ($s.papers | default dict) . }}{{ $own = sub $own (.scholar | default 0) }}{{ end }}{{ end }}
+{{- if lt $own 0 }}{{ $own = 0 }}{{ end }}
+{{- $search := delimit (slice $e.title (delimit $e.authors " ") ($e.contributor | default "") "software R package" $e.year (.Params.summary | default "")) " " }}
+<article class="citation citation-software" data-type="software" data-key="software-{{ $slug }}" data-cites="{{ $own }}" data-search="{{ $search }}">
+  <h3 class="citation-title"><span class="pub-badge pub-badge-software">Software</span> <a href="{{ .RelPermalink }}">{{ $e.title }}</a></h3>
+  {{ partial "authors.html" (dict "authors" $e.authors) }}
+  <p class="citation-meta">R package{{ if $e.doi }}, CRAN{{ else }}, GitHub{{ end }} ({{ $e.year }})
+    {{- with $e.contributor }}. Contributor: {{ if eq . site.Params.author.name }}<strong class="citation-me">{{ . }}</strong>{{ else }}{{ . }}{{ end }}{{ end }}</p>
+  {{- $links := slice }}
+  {{- with $e.doi }}{{ $links = $links | append (printf `<a href="https://doi.org/%s" rel="noopener">doi:%s</a>` . .) }}{{ end }}
+  {{- $links = $links | append (printf `<a href="%s">software page</a>` .RelPermalink) }}
+  {{- if gt $own 0 }}{{ $links = $links | append (printf "%s %s" (lang.FormatNumber 0 $own) (cond (eq $own 1) "citation" "citations")) }}{{ end }}
+  <p class="citation-links">{{ delimit $links `<span aria-hidden="true"> · </span>` | safeHTML }}</p>
+</article>

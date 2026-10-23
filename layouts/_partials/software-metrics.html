@@ -1,0 +1,44 @@
+{{- /* Software statistics box on /software/, same look as the
+       publication metrics block. Totals come from software-totals.html
+       (summed from data/stats.yaml), so they match the package pages. */ -}}
+{{- $st := hugo.Data.stats -}}
+{{- $t := partial "software-totals.html" . -}}
+{{- $nPackages := $t.packages -}}
+{{- $downloads := $t.downloads -}}
+{{- $cites := $t.cites -}}
+{{- $nCran := $t.ncran -}}
+{{- $through := $t.through -}}
+{{- $years := $t.years -}}
+{{- $values := $t.values -}}
+{{- if $t.any -}}
+<section class="metrics" aria-label="Software statistics">
+  <dl>
+    <div>
+      <dt>R packages</dt>
+      <dd>{{ $nPackages }}</dd>
+    </div>
+    <div>
+      <dt>CRAN downloads</dt>
+      <dd>{{ lang.FormatNumber 0 $downloads }}</dd>
+    </div>
+    <div>
+      <dt>Citations</dt>
+      <dd>{{ lang.FormatNumber 0 $cites }}</dd>
+    </div>
+  </dl>
+  {{- if ge (len $years) 3 }}
+  <div class="metrics-chart">
+    <p class="chart-label">CRAN downloads per year, all packages</p>
+    {{ partial "bars.html" (dict "years" $years "values" $values "label" "downloads" "axis" true "labelmax" true "asof" $st.as_of) }}
+  </div>
+  {{- end }}
+  <p class="metrics-note">
+    {{- $archived := where (where site.RegularPages "Section" "software") "Params.cran_archived" "!=" nil }}
+    Downloads of the {{ $nCran }} packages released on CRAN{{ with $archived }} ({{ range $i, $p := . }}{{ if $i }}, {{ end }}{{ $p.Title }}{{ end }} since archived){{ end }}, from the Posit (RStudio) CRAN
+    mirror, through {{ time.Format "2 January 2006" $through }}. Citations of the
+    packages and their companion papers per Google Scholar, as of
+    {{ time.Format "2 January 2006" $st.as_of }}.
+    {{- if not $.IsSection }} <a href="{{ "/software/" | relURL }}">All software →</a>{{ end }}
+  </p>
+</section>
+{{- end -}}

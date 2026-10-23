@@ -1,0 +1,187 @@
+# One figure per publication page, only for CC-licensed papers (since 18 Oct 2026).
+# Written by scripts/add_figure.py — use it rather than editing by hand.
+# Key = .bib key; image = assets/images/publications/<key>.jpg (≤ 1600 px,
+# metadata stripped, otherwise unchanged). `caption` is the figure title copied
+# verbatim from the publisher page (also the alt text); `source` is the page the
+# figure was taken from. Credit line and licence link are built from the
+# publication's own front matter (authors, year, journal, license).
+amesoder2024cito:
+  label: "Figure 3"
+  caption: "Predictions and standard errors of prediction for the African elephant from a DNN trained by ‘cito'."
+  source: "https://nsojournals.onlinelibrary.wiley.com/doi/full/10.1111/ecog.07143"
+aslan2019employing:
+  label: "Figure 1"
+  caption: "Seed dispersal exemplifies ecological complexity."
+  source: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6420810/"
+barth2026efficiency:
+  label: "Fig. 1"
+  caption: "Difference in resistance between RNAi methods overall and grouped by fungal lifestyle, unadjusted for other explanatory variables."
+  source: "https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.71552"
+beckman2020advancing:
+  label: "Figure 1"
+  caption: "To advance current knowledge gaps in seed dispersal ecology requires interdisciplinary collaboration in which researchers simultaneously and iteratively collect empirical data and develop mechanistic models that are integrated with statistics."
+  source: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7179845/"
+bugmann2019tree:
+  label: "Figure 2"
+  caption: "Simulation of basal area (m²/ha) by the eight stand-scale models at the respective sites (cf. Table 3) for 200 yr into the future (with the exception of 4C, for which the simulation was ended in the year 2100 in all cases)."
+  source: "https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.2616"
+cabral2024road:
+  label: "Figure 2"
+  caption: "Properties of land-use and biodiversity models."
+  source: "https://besjournals.onlinelibrary.wiley.com/doi/full/10.1002/pan3.10472"
+cai2025assembly:
+  label: "Figure 2"
+  caption: "The internal structure of a pond metacommunity."
+  source: "https://nsojournals.onlinelibrary.wiley.com/doi/full/10.1111/ecog.07461"
+cameron2022issues:
+  label: "Figure 1"
+  caption: "Ridge plots of model posterior parameter distributions for each of the experiments in Table 3."
+  source: "https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14002"
+chalmandrier2021linking:
+  label: "Fig. 3"
+  caption: "Calibrated trait–demography relationships."
+  source: "https://www.nature.com/articles/s41467-021-22630-1"
+chanthorn2019defaunation:
+  label: "Figure 3"
+  caption: "Maximum size and wood specific gravity: compared between trees species dispersed by all large-bodied frugivores (All large) versus the other agents (Others; left panels), and compared between primate-dispersed species (Primates) versus species dispersed by terrestrial mammals, birds and other large dispersers (TBO; right panels)."
+  source: "https://www.nature.com/articles/s41598-019-46399-y"
+dormann2020plant:
+  label: "Fig. 1"
+  caption: "Effect of light availability on the number of vascular plant species (per 400 m²) in the forest understorey."
+  source: "https://link.springer.com/article/10.1186/s12898-020-00311-9"
+grimm2025using:
+  label: "Figure 1"
+  caption: "Output of replicated models that matched the output of four of the original models."
+  source: "https://www.sciencedirect.com/science/article/pii/S0304380024003557"
+hagen2021gen3sis:
+  label: "Figure 2"
+  caption: "Schematic example of the gen3sis engine simulation cycle of one species’ populations over a landscape evolution example containing highlands (yellow), lowlands (green), and a river acting as a barrier (blue)."
+  source: "https://journals.plos.org/plosbiology/article/figure/image?size=large&id=10.1371/journal.pbio.3001340.g002"
+hannappel2026local:
+  label: "Figure 1"
+  caption: "Map of the study countries (Estonia, Germany, Spain), study regions (Pärnu/Saaremaa, Göttingen/Northeim, Lleida Plains) and location of the respective 32 study sites with a 1 km landscape radius."
+  source: "https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2664.70580"
+hartig2014sympatric:
+  label: "Figure 3"
+  caption: "Evolutionary and dynamic stability in the individual-based Maynard Smith and Slatkin model."
+  source: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0094454"
+hartig2014technical:
+  label: "Figure 3"
+  caption: "Summaries of the estimated parameter values (shown as probability distributions) after fitting the model to the virtual inventory data (case V1 in Table 2)."
+  source: "https://bg.copernicus.org/articles/11/1261/2014/"
+henrich2020influence:
+  label: "Figure 2"
+  caption: "Proportions of events during which animals looked at the camera trap and exhibited flight responses."
+  source: "https://zslpublications.onlinelibrary.wiley.com/doi/full/10.1002/rse2.150"
+henrich2022deer:
+  label: "Figure 2"
+  caption: "Locations of the camera trap positions within the study area grid, located at the border of Germany (DE) and Czechia (CZ)."
+  source: "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2022.881502/full"
+hulsmann2024latitudinal:
+  label: "Figure 1"
+  caption: "Estimated stabilizing CNDD in tree mortality plotted against species abundance at the 23 forest plots, along with plot locations."
+  source: "https://www.nature.com/articles/s41586-024-07118-4/figures/1"
+johnson2019rapid:
+  label: "Figure 2"
+  caption: "Rapid trait changes in response to environmental change (A) in relation to the eco-evolutionary timescale (B), exemplified for potential epigenetic heritability of changes in dispersal traits (C)."
+  source: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6548345/"
+kaber2024inferring:
+  label: "Figure 2"
+  caption: "Mean posterior estimate, including the 80 % CI, of the species-specific parameters for the complex model (red) and the simple model (blue)."
+  source: "https://gmd.copernicus.org/articles/17/2727/2024/"
+lwin2025human:
+  label: "Figure 3"
+  caption: "The multigroup piecewise structural equation model of trophic association in Htamanthi wildlife sanctuary (Fisher’s C = 4.561, df = 2, p = 0.102, AIC = 98.561)."
+  source: "https://www.sciencedirect.com/science/article/pii/S0006320725003891"
+machac2025species:
+  label: "Figure 3"
+  caption: "Gradient strength increases with phylogenetic scale in mammals."
+  source: "https://onlinelibrary.wiley.com/doi/full/10.1111/geb.70067"
+mahnken2022accuracy:
+  label: "Figure 4"
+  caption: "Model performance along accuracy of local predictions, realism of environmental responses and general applicability."
+  source: "https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.16384"
+mair2020mdd:
+  label: "Figure 3"
+  caption: "An illustration of the statistical concepts discussed, using the t test as an example."
+  source: "https://onlinelibrary.wiley.com/doi/full/10.1002/etc.4847"
+malchow2024fitting:
+  label: "Figure 5"
+  caption: "Mean posterior predicted population densities for years 1999 and 2019, and after 20 additional years under constant conditions (left column) as well as the differences between those years (right column)."
+  source: "https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/eap.2966"
+malchow2026calibration:
+  label: "Figure 3"
+  caption: "Sensitivity analysis methods summarize the shape of the full model response surface (middle)."
+  source: "https://onlinelibrary.wiley.com/doi/full/10.1111/ele.70375"
+morlon2020prior:
+  label: "Figure 1"
+  caption: "Diversification of the Madagascan vangas as inferred from congruent models."
+  source: "https://www.biorxiv.org/content/10.1101/2020.07.03.185074v1.full"
+oberpriller2021towards:
+  label: "Figure 1"
+  caption: "A visualisation of differences between complex computer simulations and statistical models."
+  source: "https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13728"
+oberpriller2022climate:
+  label: "Figure 3"
+  caption: "The aggregated relative uncertainties of total standing biomass per environmental zone (with more than five sites) show a higher importance of drivers in the south than in the north."
+  source: "https://gmd.copernicus.org/articles/15/6495/2022/"
+panassiti2015bayesian:
+  label: "Figure 4"
+  caption: "Posterior predictions of ‘bois noir’ (BN) disease and H. obsoletus in SW Germany: (a) BN average predictions; (b) standard deviations of BN predictions; (c) H. obsoletus average predictions; and (d) standard deviations of H. obsoletus average predictions."
+  source: "https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/ES14-00439.1"
+pichler2020machine:
+  label: "Figure 3"
+  caption: "Predictive performance of different ML methods (naive Bayes, SVM, BRT, kNN, DNN, CNN, RF) and GLM in a global database of plant–pollinator interactions."
+  source: "https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13329"
+pichler2021new:
+  label: "Figure 5"
+  caption: "Inferred operational taxonomic unit (OTU) associations and environmental preferences for the eDNA community data."
+  source: "https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13687"
+pichler2023machine:
+  label: "Figure 3"
+  caption: "Development usage of ML algorithms (RF, DL, kNN, BRT, Ridge/Lasso, SVM) in literature from the E&E field (see Appendix S1.1 for more details about the trend analysis)."
+  source: "https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14061"
+reisch2021species:
+  label: "Figure 2"
+  caption: "Species richness of the studied dry grasslands and hay meadows."
+  source: "https://onlinelibrary.wiley.com/doi/full/10.1111/ddi.13199"
+reyer2020profound:
+  label: "Figure 6"
+  caption: "Time series of tree diameter at breast height (DBH) versus age of the forest stands in the PROFOUND DB."
+  source: "https://essd.copernicus.org/articles/12/1295/2020/"
+rosbakh2021siberian:
+  label: "Figure 5"
+  caption: "Phenological shifts in four growth forms from 1976 to 2018."
+  source: "https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.15744"
+rubanschi2026impacts:
+  label: "Fig. 3"
+  caption: "Maps of Bavaria illustrating changes across the individual sectors: A biodiversity, B carbon storage, C land use, and D the sector with the most pronounced changes, highlighting change hotspots."
+  source: "https://link.springer.com/article/10.1007/s10113-026-02586-y"
+ruizbenito2020available:
+  label: "Figure 2"
+  caption: "Relationships between (a) the data that can be used to detect and inform on (b) the biological levels at which forests may respond as a result of climate change."
+  source: "https://www.sciencedirect.com/science/article/pii/S0304380019303783"
+schiro2015genetic:
+  label: "Figure 1"
+  caption: "Collection sites in the Baden region."
+  source: "https://peerj.com/preprints/732v2/"
+taubert2013challenge:
+  label: "Figure 1"
+  caption: "Outline of tree size measurements in forests."
+  source: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0058036"
+trotsiuk2020assessing:
+  label: "Figure 5"
+  caption: "Spatial variation of simulated net primary productivity (NPP) anomalies (percent deviation) in selected extreme years relative to the 1961–1990 reference period for Picea abies (left) and Fagus sylvatica (right)."
+  source: "https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.15011"
+udy2021environmental:
+  label: "Figure 1"
+  caption: "Maxima of elevation (in metres), precipitation (in millimetres) and number of mammalian species per grid cell across the globe."
+  source: "https://onlinelibrary.wiley.com/doi/full/10.1111/geb.13261"
+valdez2019recruitment:
+  label: "Figure 2"
+  caption: "Non-metric multidimensional scaling ordination for the seed bank experiment with different water levels represented as a categorical variable (convex hulls) and fitted as an environmental vector (arrow)."
+  source: "https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2019.00088/full"
+wiegrebe2024analyzing:
+  label: "Fig. 4"
+  caption: "LongGWAS is viable with GMMAT/MAGEE and identifies five loci with genome-wide significance for eGFR-decline."
+  source: "https://www.nature.com/articles/s41467-024-54483-9"

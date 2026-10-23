@@ -1,42 +1,57 @@
-{{- /* Publication statistics. Shared by the homepage and the publications page
-       so the two can never disagree. Source: data/metrics.yaml, except
-       Articles, which is counted live from content/publications/ so it can
-       never drift from the actual bibliography as entries are added. */ -}}
+{{- /* Publication statistics, shared by the homepage and the publications page.
+       Citations, h, i10 and the yearly chart come from data/stats.yaml (one
+       script run, one date); co-authors counted from the publication list (data/coauthors.yaml,
+       written by bib2content.py; linked to /publications/coauthors/); Publications is counted live from content/publications/. */ -}}
 {{- $m := hugo.Data.metrics -}}
+{{- $s := hugo.Data.stats -}}
+{{- $c := hugo.Data.coauthors -}}
+{{- $p := $s.profile -}}
 {{- $articleCount := len (where site.RegularPages "Section" "publications") -}}
-{{- if $m.show -}}
+{{- if and $m.show $p -}}
 <section class="metrics" aria-label="Publication statistics">
   <dl>
     <div>
-      <dt>Articles</dt>
+      <dt>Publications</dt>
       <dd>{{ lang.FormatNumber 0 $articleCount }}</dd>
     </div>
     <div>
       <dt>Co-authors</dt>
-      <dd>{{ lang.FormatNumber 0 $m.coauthors }}{{ if $m.coauthors_approx }}+{{ end }}</dd>
+      <dd><a class="metrics-link" href="{{ "/publications/coauthors/" | relURL }}">{{ lang.FormatNumber 0 $c.count }}</a></dd>
     </div>
     <div>
       <dt>Citations</dt>
-      <dd>{{ lang.FormatNumber 0 $m.citations }}</dd>
+      <dd>{{ lang.FormatNumber 0 $p.citations }}</dd>
     </div>
     <div>
       <dt>h-index</dt>
-      <dd>{{ $m.h_index }}</dd>
+      <dd>{{ $p.h_index }}</dd>
     </div>
-    {{- with $m.i10_index }}
     <div>
       <dt>i10-index</dt>
-      <dd>{{ . }}</dd>
+      <dd>{{ $p.i10_index }}</dd>
     </div>
-    {{- end }}
   </dl>
+  {{- /* Citation chart and the co-author mini map side by side. */}}
+  <div class="metrics-visuals">
+  {{- with $p.years }}
+  <div class="metrics-chart">
+    <p class="chart-label">Citations per year</p>
+    {{ partial "bars.html" (dict "years" $p.years "values" $p.cites "label" "citations" "axis" true "labelmax" true "asof" $s.as_of) }}
+  </div>
+  {{- end }}
+  {{- partial "coauthor-minimap.html" . }}
+  </div>
   <p class="metrics-note">
-    Citations, h-index{{ with $m.i10_index }} and i10-index{{ end }} per
-    <a href="{{ $m.source_url }}" rel="noopener">{{ $m.source }}</a>,
-    {{ $m.as_of }}. Article count is the exact number of entries in the
+    Citations, h-index, i10-index and citations per year per
+    <a href="{{ $s.scholar.profile_url }}" rel="noopener">Google Scholar</a>,
+    as of {{ time.Format "2 January 2006" $s.as_of }}, for all
+    publications, including preprints and software.
+    {{- /* Software is part of the list, so no separate note on
+           its citations. */}} The publication count
+    covers the papers and preprints in the
     <a href="{{ "/publications/" | relURL }}">publication list</a> on this
-    site. Co-author count per
-    <a href="{{ $m.scopus_url }}" rel="noopener">Scopus</a>.
+    site; co-authors are counted from it (see the
+    <a href="{{ "/publications/coauthors/" | relURL }}">co-authors page</a>).
   </p>
 </section>
 {{- end -}}

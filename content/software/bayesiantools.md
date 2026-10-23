@@ -12,6 +12,16 @@ links:
     url: "https://cran.r-project.org/web/packages/BayesianTools/index.html"
   - name: "r-universe"
     url: "https://florianhartig.r-universe.dev/BayesianTools"
+# Entry in the publication list: title and first-release year
+# from the Crossref record of the CRAN DOI, authors from the credit line below.
+pub_entry:
+  title: "BayesianTools: General-Purpose MCMC and SMC Samplers and Tools for Bayesian Statistics"
+  year: "2017"
+  doi: "10.32614/CRAN.package.BayesianTools"
+  authors:
+    - "Florian Hartig"
+    - "Francesco Minunno"
+    - "Stefan Paul"
 ---
 
 **BayesianTools** provides general-purpose samplers, plots and diagnostics

@@ -1,0 +1,20 @@
+{{- /* Statistics box for /projects/ and /teaching/, same look as the
+       publication and software boxes. Context: "projects" or "teaching";
+       counts come from activity-stats.html (data/projects.yaml,
+       data/courses.yaml), as do the homepage tiles. */ -}}
+{{- $m := partial "activity-stats.html" . -}}
+{{- with $m.stats -}}
+<section class="metrics" aria-label="{{ strings.FirstUpper $ }} statistics">
+  <dl>
+    {{- range . }}
+    <div>
+      <dt>{{ .label }}</dt>
+      <dd>{{ .value }}</dd>
+    </div>
+    {{- end }}
+  </dl>
+  {{- with $m.note }}
+  <p class="metrics-note">{{ . }}</p>
+  {{- end }}
+</section>
+{{- end -}}

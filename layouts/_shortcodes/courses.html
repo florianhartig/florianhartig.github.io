@@ -1,0 +1,12 @@
+{{- /* {{< courses >}} — course lists from data/courses.yaml (groups). */ -}}
+{{- range hugo.Data.courses.groups }}
+<h2 id="{{ urlize .heading }}">{{ .heading }}</h2>
+<ul>
+  {{- range .courses }}
+  <li><strong>{{ .type }} {{ .number }}: {{ if eq .lang "de" }}<span lang="de">{{ .title }}</span>{{ else }}{{ .title }}{{ end }}</strong>
+    {{- with .semester }}, {{ . }}{{ end }}
+    {{- if not .offered }} (currently not regularly offered){{ end }}
+    {{- with .links }} [{{ range $i, $l := . }}{{ if $i }} / {{ end }}<a href="{{ $l.url }}">{{ $l.name }}</a>{{ end }}]{{ end }}</li>
+  {{- end }}
+</ul>
+{{- end }}

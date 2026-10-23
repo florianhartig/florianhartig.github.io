@@ -3,6 +3,9 @@
    Everything ships from this origin so the site builds and renders offline. */
 
 :root {
+  /* Native controls (scrollbars, the search field's clear button) follow the
+     scheme too. */
+  color-scheme: light dark;
   --bg: #fdfdfb;
   --bg-soft: #f4f3ef;
   --bg-card: #ffffff;
@@ -15,6 +18,8 @@
      becomes light and white text would fall to ~1.9:1 contrast. */
   --on-accent: #ffffff;
   --border: #e2e0d8;
+  --map-land: #e9e7df;
+  --map-coast: #d3d0c5;
   --border-strong: #95938b;
 
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -38,6 +43,8 @@
     --accent-hover: #9ad4b3;
     --on-accent: #12241b;
     --border: #2c3036;
+    --map-land: #2a2e34;
+    --map-coast: #3a3f46;
     --border-strong: #636c76;
   }
 }
@@ -48,6 +55,10 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
+  /* Footer at the bottom of short pages such as the 404. */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: var(--bg);
   color: var(--text);
   font-family: var(--sans);
@@ -56,6 +67,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
+main { flex: 1 0 auto; }
 
 .wrap {
   width: 100%;
@@ -75,7 +87,9 @@ h1, h2, h3, h4 {
   color: var(--text);
   margin: 0 0 0.5em;
 }
-h1 { font-size: 2.1rem; letter-spacing: -0.01em; }
+h1 { font-size: clamp(1.55rem, 1.1rem + 2.4vw, 2.1rem); letter-spacing: -0.01em; overflow-wrap: break-word; }
+/* Long words (e.g. German compounds) may hyphenate on phones only. */
+@media (max-width: 40rem) { h1 { hyphens: auto; } }
 h2 { font-size: 1.5rem; margin-top: 2.2em; }
 h3 { font-size: 1.15rem; }
 
@@ -119,28 +133,37 @@ p { margin: 0 0 1.1em; }
   top: 0;
   z-index: 20;
 }
-
-.header-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.5rem 1.5rem;
-  padding-block: 0.9rem;
+/* On phones the two-line header takes ~18% of the screen and hid anchor targets. */
+@media (max-width: 40rem) {
+  .site-header { position: static; }
 }
 
-.brand { text-decoration: none; color: inherit; display: block; }
+.header-inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "name nav";
+  align-items: baseline;
+  column-gap: 1.5rem;
+  padding-block: 0.9rem;
+}
+.brand { text-decoration: none; color: inherit; }
 .brand-name {
-  display: block;
+  grid-area: name;
   font-family: var(--serif);
   font-size: 1.15rem;
   font-weight: 600;
 }
 .brand-tagline {
-  display: block;
+  grid-area: tagline;
+  margin: 0;
   font-size: 0.78rem;
   color: var(--text-faint);
   letter-spacing: 0.02em;
+}
+.site-nav { grid-area: nav; justify-self: end; }
+@media (max-width: 40rem) {
+  .header-inner { grid-template-columns: 1fr; grid-template-areas: "name" "nav"; row-gap: 0.4rem; }
+  .site-nav { justify-self: start; }
 }
 
 .site-nav ul {
@@ -241,7 +264,8 @@ p { margin: 0 0 1.1em; }
   color: var(--text-muted);
   font-style: italic;
 }
-.prose code {
+.prose code,
+.software-section code {
   font-family: var(--mono);
   font-size: 0.88em;
   background: var(--bg-soft);
@@ -266,6 +290,7 @@ p { margin: 0 0 1.1em; }
 .page { padding-bottom: 3rem; }
 .page > h1 { margin-top: 2.5rem; }
 .home-section { margin-top: 3rem; }
+.home-section > .metrics { margin-top: 0.9rem; }
 .more { font-size: 0.92rem; margin-top: 1.25rem; }
 .breadcrumb {
   margin-top: 2rem;
@@ -301,6 +326,70 @@ p { margin: 0 0 1.1em; }
   font-size: 1.5rem;
   font-weight: 600;
 }
+.metrics-chart { margin: 0.4rem 0 1rem; }
+/* Publications page: citation chart and co-author mini map side by side
+  ; the map wraps below on narrow screens. The map is a link. */
+.metrics-visuals { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 2.5rem; }
+.metrics-map { margin: 0.4rem 0 1rem; }
+.metrics-map-link { display: block; margin-top: 0.4rem; border-radius: 3px; }
+.metrics-map svg { display: block; width: 9rem; height: auto; }
+.metrics-map .ca-land { fill: var(--map-coast); stroke: none; }
+.metrics-map circle { fill: var(--accent); fill-opacity: 0.75; }
+.metrics-map-link:hover circle, .metrics-map-link:focus-visible circle { fill-opacity: 1; }
+/* Small uppercase label above every chart (homepage, publications, software). */
+.chart-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  margin: 0;
+}
+
+/* ---------- Column charts (layouts/_partials/bars.html) ---------- */
+.bars-figure { margin: 0; width: max-content; max-width: 100%; }
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: var(--bars-h, 72px);
+  margin-top: 1.1rem;
+  border-bottom: 1px solid var(--border-strong);
+}
+.bar {
+  /* An explicit width (not just flex-basis) so the max-content figure gets wide. */
+  width: var(--bar-w, 24px);
+  flex: 0 1 auto;
+  min-width: 3px;
+  min-height: 1px;
+  position: relative;
+  background: var(--accent);
+  border-radius: 4px 4px 0 0;
+}
+.bar:hover { background: var(--accent-hover); }
+/* Current (incomplete) year: lighter fill only — the value label on top keeps
+   full text contrast (an opacity on the bar would fade the label too). */
+.bar-partial { background: color-mix(in srgb, var(--accent) 62%, var(--bg-soft)); }
+.bar-partial:hover { background: color-mix(in srgb, var(--accent-hover) 55%, var(--bg-soft)); }
+.bar-value {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 2px;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.bars-axis {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.2rem;
+  font-size: 0.7rem;
+  color: var(--text-faint);
+}
+.bars-small { --bars-h: 56px; --bar-w: 22px; }
+
 .metrics-note {
   font-size: 0.78rem;
   color: var(--text-faint);
@@ -310,6 +399,7 @@ p { margin: 0 0 1.1em; }
 /* ---------- Citations ---------- */
 
 .citation-list { display: flex; flex-direction: column; gap: 1.4rem; }
+.pub-sorted-section { margin-top: 2rem; }
 
 .citation { padding-left: 0.9rem; border-left: 2px solid var(--border); }
 .citation-title {
@@ -336,6 +426,20 @@ p { margin: 0 0 1.1em; }
   white-space: nowrap;
 }
 h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
+/* Software entries in the publication list: a filled badge before the title,
+   so they stand out from papers. */
+.pub-badge-software { margin: 0 0.35rem 0 0; color: var(--on-accent); background: var(--accent); border-color: var(--accent); }
+.citation-journal { color: var(--text); }
+/* Florian's name in author lists: a soft highlighter in the accent colour
+   with medium weight (bold and colour-only were tried;
+   underline rejected: links are underlined). */
+.citation-authors strong, .citation-me {
+  font-weight: 500; color: var(--text);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  padding: 0.05em 0.15em; border-radius: 3px;
+  white-space: nowrap;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
 .citation-authors {
   font-size: 0.87rem;
   color: var(--text-muted);
@@ -358,6 +462,10 @@ h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
 }
 
 .pub-search { margin: 1.6rem 0 0; }
+.pub-search-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.pub-search-row input[type="search"] { flex: 1 1 16rem; width: auto; }
+.pub-selected-toggle, .pub-sort-toggle { font: inherit; font-size: 0.85rem; line-height: 1.2; cursor: pointer; white-space: nowrap; text-align: center; padding-block: 0.3rem; }
+.pub-selected-toggle[aria-pressed="true"], .pub-sort-toggle[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
 .pub-search input[type="search"] {
   width: 100%;
   font: inherit;
@@ -404,9 +512,62 @@ h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
    UA default — so the JS search filter's `hidden` attribute needs this
    explicit override to actually hide the bar while filtering. */
 .year-nav[hidden] { display: none; }
+.year-nav-types { display: inline-flex; gap: 0.5rem; padding-left: 0.6rem; border-left: 1px solid var(--border); }
+.year-nav-types[hidden] { display: none; }
+/* Same look as the year chips; pressed = filled (tidy). */
+.pub-type-toggle {
+  font: inherit; font-size: 0.78rem; line-height: inherit; cursor: pointer;
+  color: var(--text-muted); background: none;
+  padding: 0.15rem 0.45rem; border: 1px solid var(--border); border-radius: 4px;
+}
+.pub-type-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.pub-type-toggle[aria-pressed="true"] { color: var(--on-accent); background: var(--accent); border-color: var(--accent); }
 
 .pub-year { margin-top: 2.5rem; scroll-margin-top: 5rem; }
+/* /publications/coauthors/ */
+.metrics-link { color: inherit; text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 4px; }
+.metrics-link:hover { color: var(--accent); text-decoration-color: currentColor; }
+.ca-summary { margin-bottom: 0.5rem; }
+.ca-detail { display: none; }
+.is-zoomed .ca-detail { display: inline; }
+.is-zoomed > .ca-land { display: none; }
+.ca-borders { fill: none; stroke: var(--text-faint); stroke-width: 0.6; stroke-dasharray: 2 1.5; vector-effect: non-scaling-stroke; }
+.ca-method-toggle { margin-left: 0.2em; font-size: 0.95em; }
+.ca-method { font-size: 0.8rem; color: var(--text-muted); margin-top: -0.4rem; }
+.ca-method p { margin: 0 0 0.5rem; }
+.ca-map { position: relative; margin: 1.5rem 0 2rem; }
+.ca-map svg { display: block; width: 100%; height: auto; }
+.ca-land { fill: var(--map-land); stroke: var(--map-coast); stroke-width: 0.8; vector-effect: non-scaling-stroke; }
+.ca-frame { fill: transparent; stroke: var(--text-muted); stroke-width: 0.8; stroke-dasharray: 3 2; vector-effect: non-scaling-stroke; cursor: pointer; }
+.ca-frame:hover { stroke: var(--accent); stroke-width: 1.5; }
+.ca-zoom { position: absolute; top: 0.3rem; left: 0.3rem; background: var(--bg); border: 1px solid var(--border); }
+.ca-tip div { margin-top: 0.2rem; }
+.ca-tip em { font-style: normal; color: var(--text-muted); }
+.ca-bycountry { margin-top: 1.5rem; font-size: 0.85rem; }
+.ca-bycountry summary { cursor: pointer; font-weight: 600; }
+.ca-bycountry h3 { font-size: 0.95rem; margin: 1rem 0 0.3rem; }
+.ca-bycountry ul { margin: 0; padding-left: 1.2rem; color: var(--text-muted); }
+/* The transparent wide stroke enlarges the tap/hover target. */
+.ca-pt { fill: var(--accent); fill-opacity: 0.75; stroke: transparent; stroke-width: 10; vector-effect: non-scaling-stroke; cursor: pointer; }
+.ca-pt:hover, .ca-pt.is-active { fill-opacity: 1; }
+.ca-tip {
+  position: absolute; z-index: 5; max-width: 22rem; padding: 0.45rem 0.65rem;
+  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12); font-size: 0.8rem; line-height: 1.4; pointer-events: none;
+}
+.ca-map figcaption { margin-top: 0.5rem; font-size: 0.8rem; color: var(--text-muted); }
+.ca-top { margin: 0.5rem 0 2rem; padding-left: 1.4rem; }
+.ca-top li { margin: 0.3rem 0; }
+.ca-n { color: var(--text-muted); font-size: 0.85rem; }
+.ca-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem; }
+.ca-all { font-size: 0.8rem; line-height: 1.75; color: var(--text-muted); }
+.ca-all a { color: var(--text-muted); text-decoration: none; }
+.ca-all a:hover { color: var(--accent); text-decoration: underline; }
 .year-heading { scroll-margin-top: 5rem; }
+/* Between phone and desktop the nav wraps and the sticky header is ~117 px. */
+@media (min-width: 40.01rem) and (max-width: 56rem) {
+  .pub-year, .year-heading { scroll-margin-top: 8.5rem; }
+}
 .year-heading {
   font-size: 0.8rem;
   font-family: var(--sans);
@@ -420,6 +581,23 @@ h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
 }
 
 .pub-authors { font-size: 0.95rem; margin-top: 1rem; }
+/* Long author lists (authors.html + authors-script.html): collapsed by
+   script to about 1.5 lines; hidden runs show as ", …" before the next shown
+   name; the caret button (styled like the sparkline's) shows all names. */
+.au-list.is-collapsed .au-x { display: none; }
+.au-list.is-collapsed .au-after-gap::before { content: ", …"; }
+.au-toggle {
+  margin-left: 0.4em; padding: 0 0.3em; border: 0; border-radius: 3px;
+  background: none; color: var(--text-muted); font: inherit; font-size: 0.85em; cursor: pointer; white-space: nowrap;
+}
+.au-cue { display: inline-block; font-size: 0.8em; transition: transform 0.15s; }
+.au-toggle:hover, .au-toggle:focus-visible { background: var(--bg-soft); color: var(--accent); }
+.au-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+/* The map's zoom button shares .au-toggle but needs its own background over
+   the map (.au-toggle's background:none won before). */
+.au-toggle.ca-zoom { background: var(--bg); border: 1px solid var(--border); padding: 0.1rem 0.4rem; }
+.au-toggle.ca-zoom:hover, .au-toggle.ca-zoom:focus-visible { background: var(--bg-soft); }
+.au-toggle[aria-expanded="true"] .au-cue { transform: rotate(90deg); }
 .pub-actions { margin: 1.75rem 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .pub-doi {
   display: inline-block;
@@ -429,12 +607,71 @@ h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
 }
 .pub-doi a { color: var(--text-faint); }
 .pub-doi a:hover { color: var(--accent); }
+.pub-citations { display: block; position: relative; }
+/* The sparkline is a quiet button: a faint caret and a hover highlight show
+   that it opens the full per-year chart inline below (click only, so the
+   page does not jump while the pointer merely passes over it). */
+.spark-hover {
+  display: inline-flex; align-items: flex-end; gap: 0.15em;
+  margin: 0 0.15em; padding: 0 0.1em; border: 0; border-radius: 3px;
+  background: none; color: inherit; font: inherit; line-height: 1; cursor: pointer;
+}
+.spark-hover .spark { margin: 0 0.1em 0 0.2em; }
+.spark-cue { font-size: 0.8em; line-height: 1; margin-left: 0.15em; align-self: center; color: var(--text-muted); transition: transform 0.15s, color 0.15s; }
+.spark-hover:hover, .spark-hover:focus-visible { background: var(--bg-soft); }
+.spark-hover:hover .spark-cue, .spark-hover:focus-visible .spark-cue { color: var(--accent); }
+.spark-hover:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.pub-citations.is-open .spark-cue { transform: rotate(90deg); color: var(--accent); }
+.spark-pop { display: none; padding-top: 0.5rem; max-width: 100%; overflow-x: auto; }
+.pub-citations.is-open .spark-pop { display: block; }
+.spark-pop .chart-label { margin: 0; }
+.bars-pop { --bars-h: 90px; --bar-w: 26px; }
+.bars-pop .bars { margin-top: 1.2rem; }
+.bars-pop .bar-value { font-size: 0.62rem; }
+/* The label of the last bar would overhang the panel edge on phones. */
+.bar:last-child .bar-value { left: auto; right: 0; transform: none; }
+.bars-years { display: flex; gap: 2px; margin-top: 0.2rem; }
+.bars-years span {
+  width: var(--bar-w, 24px);
+  flex: 0 1 auto;
+  min-width: 3px;
+  font-size: 0.62rem;
+  color: var(--text-faint);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.spark {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 1px;
+  height: 0.95em;
+  margin: 0 0.4em 0 0.35em;
+  vertical-align: -0.12em;
+}
+.spark-bar { width: 4px; min-height: 1px; background: var(--accent); border-radius: 1px 1px 0 0; }
+.spark-bar:hover { background: var(--accent-hover); }
+.spark-partial { opacity: 0.6; }
 .pub-significance {
   margin-top: 2rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border);
 }
 .pub-significance h2 { margin-top: 0; }
+/* Works cited in the note: small, quiet, hanging indent. */
+.pub-significance-refs-label { margin: 1.2rem 0 0; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-faint); }
+.prose .pub-significance-refs { list-style: none; margin: 0.3rem 0 0; padding: 0; font-size: 0.8rem; line-height: 1.45; color: var(--text-muted); }
+.prose .pub-significance-refs li { padding-left: 1.2em; text-indent: -1.2em; margin: 0.2rem 0; overflow-wrap: anywhere; }
+.pub-figure { margin: 2rem 0 0; }
+/* Inside a paragraphed note, between "what the paper shows" and the significance paragraph. */
+.pub-significance .pub-figure { margin: 1.6rem 0 1.6rem; }
+.pub-figure > a { display: block; }
+/* Tall figures fit the screen. */
+.pub-figure img { display: block; width: auto; max-width: 100%; max-height: 85vh; height: auto; margin-inline: auto; background: #fff; border: 1px solid var(--border); border-radius: 4px; }
+.pub-figure figcaption { margin-top: 0.6rem; font-size: 0.85rem; line-height: 1.45; color: var(--text-muted); }
+.pub-figure-credit { display: block; margin-top: 0.3rem; }
+/* Funding: collapsed line under the citation statistics. */
+.pub-cite.pub-funding { margin-top: 0.1rem; font-size: 0.8rem; }
+.pub-cite.pub-funding p { margin: 0.35rem 0 0.2rem; font-size: 0.85rem; line-height: 1.5; color: var(--text-muted); }
 .pub-ai-label {
   font-size: 0.95rem;
   font-weight: normal;
@@ -453,7 +690,12 @@ h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
 .pub-cite summary {
   cursor: pointer;
   color: var(--text-faint);
+  list-style: none;
 }
+/* Same ▶ caret as the author and citation toggles. */
+.pub-cite summary::-webkit-details-marker { display: none; }
+.pub-cite summary::before { content: "▶"; display: inline-block; font-size: 0.8em; margin-right: 0.3em; transition: transform 0.15s; }
+.pub-cite[open] > summary::before { transform: rotate(90deg); }
 .pub-cite summary:hover { color: var(--accent); }
 .pub-cite pre {
   margin-top: 0.6rem;
@@ -476,8 +718,16 @@ h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
 }
 .pub-cite-inline pre {
   display: block;
-  white-space: pre;
+  /* Long author lines wrap instead of scrolling sideways;
+     copied text keeps the BibTeX line breaks. */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  overflow-x: auto;
 }
+/* Open: the box becomes a block within the column, so the BibTeX scrolls
+   inside it instead of widening the page. */
+.pub-cite-inline[open] { display: block; margin-left: 0; max-width: 100%; }
 
 .button {
   display: inline-block;
@@ -540,9 +790,14 @@ h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
 /* On a package's own page the link row sits between the summary and the body
    text, so it needs breathing room the list-page version doesn't. */
 .page > .link-row { margin-bottom: 1.6rem; }
-.software-cites { font-size: 0.85rem; color: var(--text-faint); margin: -1.1rem 0 1.6rem; }
+/* flow-root stops the first child's top margin from collapsing into this one. */
+.software-stats { display: flow-root; font-size: 0.85rem; color: var(--text-faint); margin: -1.1rem 0 1.8rem; }
+.software-stats p { margin: 0 0 0.2rem; }
+.software-stats .chart-label { margin-top: 1.3rem; }
+.software-stats .bars-small + p { margin-top: 0.3rem; }
 .software-section { margin-top: 2.4rem; }
 .software-section h2 { font-size: 1.25rem; margin-bottom: 0.6rem; }
+.software-section h3 { font-size: 1.05rem; margin: 1.8rem 0 0.4rem; }
 .software-note { font-size: 0.85rem; color: var(--text-faint); margin: 0 0 0.9rem; }
 .cited-by-list { margin: 0; padding-left: 1.3rem; display: flex; flex-direction: column; gap: 0.75rem; }
 .cited-by-list li { line-height: 1.4; }
@@ -610,11 +865,13 @@ h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
   margin-bottom: 0.9rem;
 }
 .footer-links a {
+  display: inline-flex; align-items: center; min-height: 24px; min-width: 24px;
   font-size: 0.85rem;
   color: var(--text-muted);
   text-decoration: none;
 }
 .footer-links a:hover { color: var(--accent); }
+.footer-links-label { font-size: 0.85rem; color: var(--text-faint); }
 .footer-meta { font-size: 0.8rem; color: var(--text-faint); margin: 0; }
 
 /* ---------- Responsive ---------- */
@@ -635,3 +892,239 @@ h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
   a { color: #000; text-decoration: none; }
   .hero { background: none; border: none; padding-block: 0 1rem; }
 }
+
+/* ---------- Homepage overview tiles ---------- */
+
+.overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1rem;
+}
+.tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem 1.25rem 1rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.15s;
+}
+.tile:hover { border-color: var(--accent); }
+.tile h3 { margin: 0 0 0.35rem; font-size: 1.2rem; }
+.tile h3 a { color: var(--text); text-decoration: none; }
+.tile h3 a::after { content: " →"; color: var(--accent); }
+/* The whole tile is the link target; the text inside carries no links. */
+.tile h3 a::before { content: ""; position: absolute; inset: 0; }
+.tile p { margin: 0 0 0.9rem; font-size: 0.92rem; color: var(--text-muted); line-height: 1.5; }
+.tile-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.6rem;
+  margin: auto 0 0;
+}
+.tile-stats dt {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+}
+.tile-stats dd { margin: 0; font-family: var(--serif); font-size: 1.3rem; font-weight: 600; }
+.tile-spark {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.7rem;
+  font-size: 0.72rem;
+  color: var(--text-faint);
+}
+.tile-spark .spark { height: 1.6rem; margin: 0; gap: 2px; }
+.tile-spark .spark-bar { width: 6px; }
+.overview-note { margin-top: 0.6rem; font-size: 0.8rem; color: var(--text-faint); }
+.overview-lead { grid-column: 1 / -1; margin: 0; }
+/* Follows the Research interests text directly; the lead sentence above the
+   tiles continues it, so no section gap. */
+.home-overview { margin-top: 1rem; }
+/* News line inside the research text (homepage). */
+/* News line: same grey panel as the career box and tiles. */
+.prose .home-news { margin: 0.6rem 0 1.2rem; padding: 0.6rem 1.2rem; background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius); font-size: 0.9rem; color: var(--text-muted); }
+
+/* ---------- Career line (homepage About me, top of the CV page) ---------- */
+
+/* Same grey panel as the overview tiles, without a heading (the filled
+   tile with "CV →" heading, border only, no frame and a dark panel were
+   tried). */
+.career-home {
+  margin: 1.2rem 0 2.2rem;
+  padding: 1rem 1.2rem 0.85rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.career-home { position: relative; }
+.career-stage {
+  display: flex; flex-direction: column; width: 100%; min-width: 0;
+  margin: 0; padding: 0; border: 0; border-radius: 3px; background: none;
+  font: inherit; color: inherit; text-align: left;
+}
+button.career-stage { cursor: pointer; outline: none; }
+button.career-stage:hover .career-label,
+button.career-stage:focus-visible .career-label,
+.career-line li.is-active .career-label { color: var(--accent); }
+button.career-stage:focus-visible { box-shadow: 0 0 0 2px var(--accent); }
+.has-selection .career-line li:not(.is-active) .career-bar { opacity: 0.25; }
+.career-line li.is-active .career-bar { opacity: 1; background: var(--accent); }
+.career-hint { margin: 0.45rem 0 0; font-size: 0.75rem; color: var(--text-faint); text-align: right; }
+.career-hint a { margin-left: 0.6rem; white-space: nowrap; }
+.career-hint-narrow { display: none; }
+.career-card {
+  position: absolute;
+  z-index: 5;
+  width: min(22rem, 100%);
+  padding: 0.75rem 0.95rem 0.3rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  cursor: auto;
+  white-space: normal;
+}
+.cc-entry { margin-bottom: 0.6rem; font-size: 0.85rem; line-height: 1.4; }
+.cc-entry > span { display: block; }
+.cc-period { font-size: 0.75rem; color: var(--text-faint); font-variant-numeric: tabular-nums; }
+.cc-role { font-weight: 600; color: var(--text); }
+.cc-where { color: var(--text-muted); }
+.cc-note { font-size: 0.78rem; color: var(--text-faint); }
+.prose .cc-roles, .cc-roles { margin: 0.25rem 0 0; padding-left: 1.1em; font-size: 0.8rem; color: var(--text-muted); }
+.prose .cc-roles li, .cc-roles li { margin: 0 0 0.15rem; display: list-item; }
+
+.prose .career-line, .career-line {
+  display: flex;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.career-line li { min-width: 0; margin: 0; }
+.career-bar { height: 8px; background: var(--border-strong); opacity: 0.45; }
+.career-now .career-bar { background: var(--accent); opacity: 1; }
+.career-line li:first-child .career-bar { border-radius: 4px 0 0 4px; }
+.career-line li:last-child .career-bar { border-radius: 0 4px 4px 0; }
+.career-year {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+}
+.career-year a { white-space: nowrap; }
+.career-label, .career-place {
+  font-size: 0.8rem;
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 0.4rem;
+}
+.career-label { color: var(--text); font-weight: 600; }
+.career-place { color: var(--text-muted); }
+
+@media (max-width: 40rem) {
+  .career-line { flex-direction: column; gap: 0.5rem; }
+  .career-line li { flex-basis: auto !important; }
+  .career-stage {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    column-gap: 0.5rem;
+  }
+  .career-bar { display: none; }
+  .career-year { grid-row: 1 / span 2; margin: 0; display: block; }
+  .career-label, .career-place { grid-column: 2; white-space: normal; }
+  .career-card { position: static; width: auto; margin: 0.3rem 0 0 3.5rem; box-shadow: none; }
+  .career-hint { text-align: left; }
+  .career-hint-wide { display: none; }
+  .career-hint-narrow { display: inline; }
+}
+
+/* ---------- Research themes ring (homepage) ---------- */
+
+.research-wheel { margin: 1.5rem 0 2rem; }
+.research-wheel svg { display: block; width: 100%; height: auto; overflow: visible; }
+.rw-theme { cursor: pointer; outline: none; }
+.rw-seg { fill: var(--accent); opacity: 0.8; stroke: var(--bg); stroke-width: 3; transition: opacity 0.15s; }
+.rw-theme:hover .rw-seg, .rw-theme:focus-visible .rw-seg { opacity: 1; }
+.has-selection .rw-seg { opacity: 0.35; }
+.has-selection .rw-theme.is-active .rw-seg { opacity: 1; }
+.rw-theme:focus-visible .rw-label { text-decoration: underline; }
+.rw-theme:focus-visible .rw-seg { stroke: var(--text); stroke-width: 3; }
+.rw-lead { stroke: var(--border-strong); stroke-width: 1; }
+.rw-label { font-family: var(--sans); font-size: 15px; fill: var(--text); }
+.rw-theme:hover .rw-label, .rw-theme.is-active .rw-label { fill: var(--accent); }
+.rw-center { font-family: var(--serif); font-size: 19px; font-weight: 600; fill: var(--text); }
+.rw-center .rw-center-sub { font-family: var(--sans); font-size: 11.5px; font-weight: 400; fill: var(--text-muted); }
+.rw-hint { margin: 0.3rem 0 0; text-align: center; font-size: 0.82rem; color: var(--text-muted); }
+
+/* Panels: floating cards next to the hovered or clicked label on wider
+   screens (summary hidden, positioned by the script); a plain expandable
+   list on phones, where the ring is hidden. */
+.research-wheel { position: relative; }
+.rw-panel summary { display: none; }
+@media (min-width: 40.01rem) {
+  .rw-panel { position: absolute; z-index: 5; width: min(21rem, 100%); }
+}
+.rw-panel-body {
+  padding: 0.85rem 1rem 0.4rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+.rw-panel-title { margin: 0 0 0.45rem; font-family: var(--serif); font-weight: 600; font-size: 1.02rem; line-height: 1.3; }
+.rw-panel-text { margin: 0 0 0.5rem; font-size: 0.88rem; line-height: 1.5; color: var(--text-muted); }
+.prose .rw-papers, .rw-papers { list-style: none; margin: 0; padding: 0; }
+.rw-papers li { margin: 0 0 0.55rem; line-height: 1.35; }
+.rw-papers a { font-size: 0.88rem; }
+.rw-paper-meta { display: block; font-size: 0.76rem; color: var(--text-muted); }
+
+@media (max-width: 40rem) {
+  .research-wheel svg, .rw-hint { display: none; }
+  .rw-panel { border-top: 1px solid var(--border); }
+  .rw-panel:last-child { border-bottom: 1px solid var(--border); }
+  .rw-panel summary { display: list-item; padding: 0.55rem 0; cursor: pointer; font-weight: 600; }
+  .rw-panel-title { display: none; }
+  .rw-panel-body { margin: 0 0 0.8rem; padding: 0; background: none; border: 0; box-shadow: none; }
+}
+
+/* Placeholder text with enough contrast in both themes. */
+::placeholder { color: var(--text-faint); opacity: 1; }
+
+/* Text that names the research ring on wide screens and the list on phones,
+   where the ring is replaced by expandable panels. */
+.only-narrow { display: none; }
+@media (max-width: 40rem) { .only-wide { display: none; } .only-narrow { display: inline; } }
+
+/* Keep keyboard focus and anchor targets clear of the sticky header (WCAG 2.4.11). */
+@media (min-width: 40.01rem) { html { scroll-padding-top: 4.5rem; } }
+
+/* Phones: the six menu items do not fit one row at 375 px (~390 px needed),
+   so they form two even rows of three instead of 5 + 1; larger tap targets
+   for the small inline toggles. */
+@media (max-width: 40rem) {
+  .site-nav ul { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 0.35rem 1.4rem; }
+  .spark-hover, .au-toggle, .pub-cite summary { min-height: 24px; display: inline-flex; align-items: center; }
+}
+
+/* Current projects: a divider between entries. */
+.project + .project { margin-top: 2rem; padding-top: 1.4rem; border-top: 1px solid var(--border); }
+.project > h3 { margin-top: 0.8rem; }
+.project + .project > h3 { margin-top: 0; }
+
+/* Text below the overview box on /software/. */
+.software-outro { margin-top: 1.6rem; }
+/* Country and institution names link to the joint papers; quiet until hovered. */
+.ca-bycountry h3 a, .ca-bycountry a.ca-inst { color: var(--text); text-decoration: none; font-weight: 600; }
+.ca-bycountry ul a { color: inherit; text-decoration: none; }
+.ca-bycountry h3 a:hover, .ca-bycountry ul a:hover { color: var(--accent); text-decoration: underline; }

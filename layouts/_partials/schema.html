@@ -123,15 +123,17 @@
          author entity. Co-authors stay plain Person nodes. */ -}}
   {{- $authors := slice -}}
   {{- range .Params.authors -}}
-    {{- if eq . $author.name -}}
-      {{- $authors = $authors | append (dict "@id" $personID "@type" "Person" "name" .) -}}
+    {{- if findRE `^(Florian Hartig|F\. Hartig)$` . -}}
+      {{- /* One name for the one Person @id, also where the byline prints
+             initials. */ -}}
+      {{- $authors = $authors | append (dict "@id" $personID "@type" "Person" "name" site.Params.author.name) -}}
     {{- else -}}
       {{- $authors = $authors | append (dict "@type" "Person" "name" .) -}}
     {{- end -}}
   {{- end -}}
   {{- $article := dict
     "@context" "https://schema.org"
-    "@type" (cond (eq .Params.entry_type "phdthesis") "Thesis" "ScholarlyArticle")
+    "@type" (cond (eq .Params.entry_type "phdthesis") "Thesis" (cond (eq .Params.entry_type "incollection") "Chapter" "ScholarlyArticle"))
     "@id" (printf "%s#article" .Permalink)
     "headline" .Title
     "name" .Title
@@ -145,15 +147,52 @@
     {{- $article = merge $article (dict "inSupportOf" "PhD" "sourceOrganization" (dict "@type" "CollegeOrUniversity" "name" .)) -}}
   {{- end -}}
   {{- with .Params.journal -}}
-    {{- $article = merge $article (dict "isPartOf" (dict "@type" "Periodical" "name" .)) -}}
+    {{- if eq $.Params.entry_type "incollection" -}}
+      {{- /* Book chapters: part of a Book, with its publisher. */ -}}
+      {{- $book := dict "@type" "Book" "name" . -}}
+      {{- with $.Params.publisher }}{{ $book = merge $book (dict "publisher" (dict "@type" "Organization" "name" .)) }}{{ end -}}
+      {{- $article = merge $article (dict "isPartOf" $book) -}}
+    {{- else -}}
+      {{- $article = merge $article (dict "isPartOf" (dict "@type" "Periodical" "name" .)) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- /* The significance note as on the page; for a note in paragraphs
+         (rules v3) only "what the paper shows" and the significance, so the
+         description starts with this paper, not with earlier work. */ -}}
+  {{- with .Params.significance -}}
+    {{- $d := . -}}
+    {{- with $.Params.significance_paras }}{{ if gt (len .) 1 }}{{ $d = delimit (after 1 .) " " }}{{ end }}{{ end -}}
+    {{- $article = merge $article (dict "description" ($d | plainify | htmlUnescape)) -}}
   {{- end -}}
   {{- with .Params.doi -}}
     {{- $article = merge $article (dict
       "identifier" (dict "@type" "PropertyValue" "propertyID" "DOI" "value" .)
       "sameAs" (printf "https://doi.org/%s" .)) -}}
+  {{- else -}}
+    {{- /* Preprint-only entries: the preprint DOI (from a doi.org-resolvable
+           server URL) or at least its URL. */ -}}
+    {{- with .Params.preprint -}}
+      {{- with findRESubmatch `(10\.\d{4,9}/[^\s?#]+?)(v\d+)?$` . 1 -}}
+        {{- $article = merge $article (dict "identifier" (dict "@type" "PropertyValue" "propertyID" "DOI" "value" (index (index . 0) 1))) -}}
+      {{- end -}}
+      {{- with findRESubmatch `arxiv\.org/abs/([0-9.]+)` . 1 -}}
+        {{- $article = merge $article (dict "identifier" (dict "@type" "PropertyValue" "propertyID" "arXiv" "value" (index (index . 0) 1))) -}}
+      {{- end -}}
+      {{- $article = merge $article (dict "sameAs" .) -}}
+    {{- end -}}
   {{- end -}}
-  {{- with .Params.abstract -}}
-    {{- $article = merge $article (dict "abstract" .) -}}
+  {{- with index hugo.Data.figures .File.ContentBaseName -}}
+    {{- with resources.Get (printf "images/publications/%s.jpg" $.File.ContentBaseName) -}}
+      {{- $article = merge $article (dict "image" (.Resize "1520x webp q82").Permalink) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with .Params.license -}}
+    {{- with findRESubmatch `^CC ([A-Z-]+) ([0-9.]+)$` . 1 -}}
+      {{- $article = merge $article (dict "license" (printf "https://creativecommons.org/licenses/%s/%s/" (lower (index (index . 0) 1)) (index (index . 0) 2))) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if and .Params.abstract (ne .Params.abstract_kind "opening") -}}
+    {{- $article = merge $article (dict "abstract" .Params.abstract) -}}
   {{- end -}}
   {{- with .Lastmod -}}
     {{- $article = merge $article (dict "dateModified" (.Format "2006-01-02")) -}}
@@ -163,12 +202,36 @@
 
 {{- else if and (eq .Section "software") .IsPage -}}
   {{- /* A companion `paper = "<publication-slug>"` front-matter field (only
-         on the 5 packages that genuinely have one in the .bib) links to that
+         on the packages that genuinely have one in the .bib) links to that
          page rather than inventing a citation — see the standing decision on
          not fabricating facts. */ -}}
   {{- $github := "" -}}
   {{- range .Params.links -}}
     {{- if eq .name "GitHub" -}}{{ $github = .url }}{{ end -}}
+  {{- end -}}
+  {{- /* Authors, maintainer and contributors come from the page's own credit
+         line ("**Authors:** A (maintainer), B. **Contributors:** C."), so the
+         structured data says exactly what the page says. A name ends at the
+         first period not preceded by a capital (initials like "W. M." are
+         kept). Florian is referenced by @id, everyone else by name. */ -}}
+  {{- $credit := "" -}}
+  {{- range split .RawContent "\n\n" -}}
+    {{- if in . "**Authors:**" }}{{ $credit = replace . "\n" " " }}{{ end -}}
+  {{- end -}}
+  {{- $people := dict "author" slice "contributor" slice "maintainer" slice -}}
+  {{- with $credit -}}
+    {{- $parts := split (index (split . "**Authors:**") 1) "**Contributors:**" -}}
+    {{- range $role, $txt := dict "author" (index $parts 0) "contributor" (cond (gt (len $parts) 1) (index $parts (sub (len $parts) 1)) "") -}}
+      {{- with findRESubmatch `^\s*(.+?[^A-Z\s])\.(?:\s|$)` $txt 1 -}}
+        {{- range split (index (index . 0) 1) ", " -}}
+          {{- $name := trim (replace . "(maintainer)" "") " " -}}
+          {{- $p := dict "@type" "Person" "name" $name -}}
+          {{- if eq $name site.Params.author.name }}{{ $p = dict "@id" $personID "@type" "Person" "name" $name "url" site.BaseURL }}{{ end -}}
+          {{- $people = merge $people (dict $role ((index $people $role) | append $p)) -}}
+          {{- if in . "(maintainer)" }}{{ $people = merge $people (dict "maintainer" ((index $people "maintainer") | append $p)) }}{{ end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
   {{- end -}}
   {{- $software := dict
     "@context" "https://schema.org"
@@ -177,8 +240,10 @@
     "name" .Title
     "url" .Permalink
     "programmingLanguage" "R"
-    "author" (dict "@id" $personID)
+    "author" (cond (gt (len $people.author) 0) $people.author (slice (dict "@id" $personID "@type" "Person" "name" site.Params.author.name "url" site.BaseURL)))
   -}}
+  {{- with $people.maintainer }}{{ $software = merge $software (dict "maintainer" .) }}{{ end -}}
+  {{- with $people.contributor }}{{ $software = merge $software (dict "contributor" .) }}{{ end -}}
   {{- with .Params.summary -}}
     {{- $software = merge $software (dict "description" .) -}}
   {{- end -}}
@@ -188,6 +253,16 @@
   {{- with .Params.paper -}}
     {{- with site.GetPage (printf "/publications/%s" .) -}}
       {{- $software = merge $software (dict "citation" .Permalink) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with index (hugo.Data.stats.software | default dict) .File.ContentBaseName -}}
+    {{- with .downloads -}}
+      {{- $software = merge $software (dict "interactionStatistic" (dict
+        "@type" "InteractionCounter"
+        "interactionType" (dict "@type" "DownloadAction")
+        "userInteractionCount" .total
+        "endTime" .through
+        "description" (printf "Downloads from the Posit (RStudio) CRAN mirror since %d (cranlogs)" (index .years 0)))) -}}
     {{- end -}}
   {{- end -}}
   {{- with .Lastmod -}}
@@ -209,4 +284,8 @@
     {{- $page = merge $page (dict "dateModified" (.Format "2006-01-02")) -}}
   {{- end -}}
 <script type="application/ld+json">{{ $page | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- /* The co-authors page sits under /publications/. */ -}}
+{{- if eq .RelPermalink "/publications/coauthors/" -}}
+{{- partial "breadcrumb-schema.html" (dict "page" . "name" "Publications" "url" ("/publications/" | absURL)) -}}
+{{- end -}}
 {{- end -}}

@@ -8,14 +8,13 @@
   {{- $title = printf "%s — %s" .Title site.Title -}}
 {{- end -}}
 
-{{- /* Some publication titles run well past what search engines display
-       (~60 chars) — truncate just the <title> element for those; the full
-       title still stands as the on-page H1 and in og:title/twitter:title. */ -}}
+{{- /* Long page titles (mostly publications) keep all their words and drop
+       the " — Florian Hartig" suffix instead; cutting them to a few words
+       threw away the keywords. Search engines shorten the
+       display themselves. */ -}}
 {{- $titleTag := $title -}}
-{{- if not .IsHome -}}
-  {{- if gt (len .Title) 43 -}}
-    {{- $titleTag = printf "%s — %s" (.Title | truncate 38 "…") site.Title -}}
-  {{- end -}}
+{{- if and (not .IsHome) (gt (len .Title) 43) -}}
+  {{- $titleTag = .Title -}}
 {{- end -}}
 <title>{{ $titleTag }}</title>
 
@@ -28,7 +27,7 @@
 <meta name="google-site-verification" content="{{ . }}">
 {{- end }}
 
-<meta property="og:type" content="{{ if .IsHome }}profile{{ else }}article{{ end }}">
+<meta property="og:type" content="{{ if .IsHome }}profile{{ else if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $desc }}">
 <meta property="og:url" content="{{ .Permalink }}">
@@ -40,6 +39,24 @@
 
 {{- /* Padded to a real 1200x630 card — see _partials/portrait.html — so
        summary_large_image is honest rather than an invitation to crop. */ -}}
+{{- /* Publication pages with a CC figure (data/figures.yaml) use that figure
+       as the social card, fitted inside 1200x630 (not cropped). */ -}}
+{{- $fig := "" }}{{ $figAlt := "" }}
+{{- if and (eq .Section "publications") .IsPage }}
+  {{- with index hugo.Data.figures .File.ContentBaseName }}
+    {{- $figAlt = .caption }}
+    {{- with resources.Get (printf "images/publications/%s.jpg" $.File.ContentBaseName) }}{{ $fig = .Fit "1200x630 jpg q85" }}{{ end }}
+  {{- end }}
+{{- end }}
+{{- with $fig }}
+<meta property="og:image" content="{{ .Permalink }}">
+<meta property="og:image:width" content="{{ .Width }}">
+<meta property="og:image:height" content="{{ .Height }}">
+<meta property="og:image:alt" content="{{ $figAlt }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ .Permalink }}">
+<meta name="twitter:image:alt" content="{{ $figAlt }}">
+{{- else }}
 {{- $img := partial "portrait.html" . }}
 {{- with $img.card }}
 <meta property="og:image" content="{{ .Permalink }}">
@@ -51,6 +68,7 @@
 <meta name="twitter:image:alt" content="Portrait of {{ site.Params.author.name }}">
 {{- else }}
 <meta name="twitter:card" content="summary">
+{{- end }}
 {{- end }}
 
 {{- with .OutputFormats.Get "rss" }}

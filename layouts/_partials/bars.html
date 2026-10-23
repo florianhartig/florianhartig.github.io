@@ -1,0 +1,41 @@
+{{- /* Single-series column chart in plain HTML/CSS (no SVG, no JS), so it stays
+       crisp at any width and follows the light/dark colour tokens.
+       Args (dict): years, values (parallel lists of ints), label (what is
+       counted, e.g. "citations"), class (size variant), axis (show first/last
+       year), labelmax (print the largest value above its bar), labelall
+       (print every value above its bar), yearsall (two-digit year under
+       every bar; replaces the first/last-year axis), asof (date the data were
+       fetched, "2006-01-02"; default: build date). The year of asof is drawn
+       lighter and marked "to date": it is incomplete. */ -}}
+{{- $years := .years }}
+{{- $vals := .values }}
+{{- $n := len $years }}
+{{- if gt $n 0 }}
+{{- $max := 0 }}
+{{- range $vals }}{{ if gt . $max }}{{ $max = . }}{{ end }}{{ end }}
+{{- $now := cond (isset . "asof") (time.AsTime (.asof | default now)).Year now.Year }}
+{{- $first := index $years 0 }}
+{{- $last := index $years (sub $n 1) }}
+{{- $parts := slice }}
+{{- range $i, $y := $years }}{{ $parts = $parts | append (printf "%d: %s" $y (lang.FormatNumber 0 (index $vals $i))) }}{{ end }}
+{{- $maxShown := false }}
+<figure class="bars-figure {{ .class }}">
+  <div class="bars" role="img" aria-label="{{ .label }} per year, {{ $first }} to {{ $last }}{{ if eq $last $now }} ({{ $now }} to date){{ end }}: {{ delimit $parts "; " }}">
+    {{- range $i, $y := $years }}
+    {{- $v := index $vals $i }}
+    {{- $h := 0.0 }}{{ if gt $max 0 }}{{ $h = div (mul 100.0 $v) $max }}{{ end }}
+    <span class="bar{{ if eq $y $now }} bar-partial{{ end }}" style="height: {{ printf "%.1f" $h }}%" title="{{ $y }}{{ if eq $y $now }} (to date){{ end }}: {{ lang.FormatNumber 0 $v }} {{ cond (eq $v 1) (strings.TrimSuffix "s" $.label) $.label }}">
+      {{- if $.labelall }}<span class="bar-value">{{ lang.FormatNumber 0 $v }}</span>
+      {{- else if and $.labelmax (eq $v $max) (not $maxShown) }}{{ $maxShown = true }}<span class="bar-value">{{ lang.FormatNumber 0 $v }} ({{ $y }})</span>{{ end -}}
+    </span>
+    {{- end }}
+  </div>
+  {{- if .yearsall }}
+  <div class="bars-years" aria-hidden="true">
+    {{- range $years }}<span>’{{ printf "%02d" (mod . 100) }}</span>{{ end -}}
+  </div>
+  {{- else if .axis }}
+  <div class="bars-axis" aria-hidden="true"><span>{{ $first }}</span><span>{{ $last }}{{ if eq $last $now }} (to date){{ end }}</span></div>
+  {{- end }}
+</figure>
+{{- end }}

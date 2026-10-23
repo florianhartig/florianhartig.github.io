@@ -1,0 +1,68 @@
+{{- /* Homepage overview: four tiles linking the main sections. Texts are in
+       the `overview` front matter of content/_index.md. Figures come from the
+       same sources as the boxes on the section pages: data/stats.yaml for
+       Publications and Software, data/projects.yaml and data/courses.yaml
+       (via activity-stats.html) for Projects and Teaching. */ -}}
+{{- $o := .Params.overview -}}
+{{- $s := hugo.Data.stats -}}
+{{- $p := $s.profile -}}
+{{- $sw := partial "software-totals.html" . -}}
+{{- $nPubs := len (where site.RegularPages "Section" "publications") -}}
+<section class="overview" aria-labelledby="overview-heading">
+  <h2 id="overview-heading" class="visually-hidden">Overview</h2>
+  {{- with $o.lead }}
+  <p class="overview-lead">{{ . }}</p>
+  {{- end }}
+
+  <article class="tile">
+    <h3><a href="{{ "/publications/" | relURL }}">Publications</a></h3>
+    <p>{{ $o.publications.text }}</p>
+    <dl class="tile-stats">
+      <div><dt>Publications</dt><dd>{{ $nPubs }}</dd></div>
+      {{- with $p }}
+      <div><dt>Citations</dt><dd>{{ lang.FormatNumber 0 .citations }}</dd></div>
+      <div><dt>h-index</dt><dd>{{ .h_index }}</dd></div>
+      {{- end }}
+    </dl>
+    {{- with $p.years }}
+    <div class="tile-spark">{{ partial "spark.html" (dict "years" $p.years "values" $p.cites "label" "citations" "asof" $s.as_of) }}<span>Citations per year</span></div>
+    {{- end }}
+  </article>
+
+  <article class="tile">
+    <h3><a href="{{ "/software/" | relURL }}">Software</a></h3>
+    <p>{{ $o.software.text }}</p>
+    <dl class="tile-stats">
+      <div><dt>R packages</dt><dd>{{ $sw.packages }}</dd></div>
+      {{- if $sw.any }}
+      <div><dt>CRAN downloads</dt><dd>{{ lang.FormatNumber 0 $sw.downloads }}</dd></div>
+      {{- end }}
+    </dl>
+    {{- if ge (len $sw.years) 3 }}
+    <div class="tile-spark">{{ partial "spark.html" (dict "years" $sw.years "values" $sw.values "label" "downloads" "asof" $s.as_of) }}<span>Downloads per year</span></div>
+    {{- end }}
+  </article>
+
+  {{- range slice "projects" "teaching" }}
+  {{- $t := index $o . }}
+  {{- $a := partial "activity-stats.html" . }}
+  <article class="tile">
+    <h3><a href="{{ printf "/%s/" . | relURL }}">{{ strings.FirstUpper . }}</a></h3>
+    <p>{{ $a.text | default $t.text }}</p>
+    {{- with $a.stats }}
+    <dl class="tile-stats">
+      {{- range . }}
+      <div><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>
+      {{- end }}
+    </dl>
+    {{- end }}
+  </article>
+  {{- end }}
+
+</section>
+{{- with $s }}
+<p class="overview-note">
+  Citations and h-index per Google Scholar, as of {{ time.Format "2 January 2006" .as_of }};
+  downloads from the Posit (RStudio) CRAN mirror, through {{ time.Format "2 January 2006" $sw.through }}.
+</p>
+{{- end }}

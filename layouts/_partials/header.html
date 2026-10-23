@@ -1,14 +1,16 @@
 <header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="{{ "/" | relURL }}">
-      <span class="brand-name">{{ site.Params.author.name }}</span>
-      <span class="brand-tagline">{{ site.Params.author.tagline }}</span>
-    </a>
+  {{- /* Text width like the content: name and menu on one
+         line. The tagline is not repeated here (it is in the hero and the
+         page title); a separate tagline row looked orphaned. On phones the
+         menu moves to its own row. */}}
+  <div class="wrap wrap-narrow header-inner">
+    <a class="brand brand-name" href="{{ "/" | relURL }}">{{ site.Params.author.name }}</a>
     <nav class="site-nav" aria-label="Main">
       <ul>
         {{- range site.Menus.main }}
-        {{- $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
-        <li><a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+        {{- $current := $.IsMenuCurrent "main" . }}
+        {{- $ancestor := or ($.HasMenuCurrent "main" .) (and (ne .URL "/") (hasPrefix $.RelPermalink .URL) (ne $.RelPermalink .URL)) }}
+        <li><a href="{{ .URL }}"{{ if $current }} aria-current="page"{{ else if $ancestor }} aria-current="true"{{ end }}>{{ .Name }}</a></li>
         {{- end }}
       </ul>
     </nav>

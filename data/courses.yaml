@@ -1,0 +1,123 @@
+# Courses and open teaching materials — single source for /teaching/
+# (shortcodes "courses" and "teaching-materials"), the counts in the Teaching
+# box and the homepage tile. offered: false = listed but not regularly taught.
+# materials kind: book (full online book) | notes | code.
+groups:
+  - heading: "Lectures for the BSc Biology (Grundvorlesungen)"
+    courses:
+      - type: "Vorlesung"
+        number: "54103"
+        title: "Allgemeine Biologie II – Ökologie"
+        lang: de
+        semester: "2. Semester"
+        offered: true
+        links:
+          - name: "GRIPS"
+            url: "https://elearning.uni-regensburg.de/course/view.php?id=22308"
+      - type: "Vorlesung"
+        number: "54133"
+        title: "Statistik und Bioinformatik"
+        lang: de
+        semester: "5. Semester"
+        offered: true
+        links:
+          - name: "GRIPS"
+            url: "https://elearning.uni-regensburg.de/course/view.php?id=491"
+          - name: "lecture notes"
+            url: "https://www.dropbox.com/s/nefr3bteve5lym7/GrundlagenDerStatistik.pdf?dl=0"
+      - type: "Praktikum"
+        number: "54128"
+        title: "Evolutionsbiologie und Molekulare Ökologie"
+        lang: de
+        semester: "WPP 4. Semester"
+        offered: true
+        links:
+          - name: "GRIPS"
+            url: "https://elearning.uni-regensburg.de/course/view.php?id=2053"
+  - heading: "Specialised lectures for BSc / MSc / PhD level"
+    courses:
+      - type: "Seminar"
+        number: "54374"
+        title: "Theoretische Ökologie"
+        lang: de
+        offered: true
+        links:
+          - name: "more details"
+            url: "https://www.uni-regensburg.de/biologie-vorklinische-medizin/forschen/arbeitsgruppen/ag-hartig/teaching/seminar-theoretical-ecology"
+          - name: "GRIPS"
+            url: "https://elearning.uni-regensburg.de/course/view.php?id=31115"
+      - type: "Blockkurs"
+        number: "54371"
+        title: "Introduction to Statistics and Data Science with R"
+        offered: true
+        links:
+          - name: "GRIPS"
+            url: "https://elearning.uni-regensburg.de/course/view.php?id=54766"
+          - name: "lecture notes"
+            url: "https://theoreticalecology.github.io/DataScienceInR/"
+      - type: "Blockkurs"
+        number: "54375"
+        title: "Advanced Regression Models in R"
+        offered: true
+        links:
+          - name: "GRIPS"
+            url: "https://elearning.uni-regensburg.de/course/view.php?id=30941"
+          - name: "lecture notes"
+            url: "https://theoreticalecology.github.io/AdvancedRegressionModels/"
+      - type: "Blockkurs"
+        number: "54379"
+        title: "Machine Learning and Deep Learning with R"
+        offered: true
+        links:
+          - name: "GRIPS"
+            url: "https://elearning.uni-regensburg.de/course/view.php?id=37685"
+          - name: "lecture notes"
+            url: "https://theoreticalecology.github.io/machinelearning/index.html"
+      - type: "Blockkurs"
+        number: "54378"
+        title: "Introduction to Bayesian Statistics"
+        offered: true
+        links:
+          - name: "GRIPS"
+            url: "https://elearning.uni-regensburg.de/course/view.php?id=64957"
+          - name: "lecture notes"
+            url: "https://florianhartig.github.io/LearningBayes/"
+      - type: "Blockkurs"
+        number: "54376"
+        title: "Evolutionary Game Theory"
+        offered: false
+      - type: "Blockkurs"
+        number: "54370"
+        title: "Research Skills"
+        offered: true
+        links:
+          - name: "GRIPS"
+            url: "https://elearning.uni-regensburg.de/course/view.php?id=30939"
+          - name: "lecture notes"
+            url: "https://github.com/florianhartig/ResearchSkills"
+materials:
+  - name: "Introduction to Data Science with R"
+    url: "https://theoreticalecology.github.io/DataScienceInR/"
+    kind: book
+  - name: "Applied Regression Analysis for Empirical Research: Inference, Causality, and Model Choice with GLMMs in R"
+    url: "https://theoreticalecology.github.io/AdvancedRegressionModels/"
+    kind: book
+  - name: "Machine Learning and Deep Learning with R"
+    url: "https://theoreticalecology.github.io/machinelearning/index.html"
+    kind: book
+  - name: "Introduction to Bayesian Statistics with R"
+    url: "https://florianhartig.github.io/LearningBayes/"
+    kind: book
+  - name: "Grundlagen der Statistik"
+    url: "https://www.dropbox.com/s/nefr3bteve5lym7/GrundlagenDerStatistik.pdf?dl=0"
+    kind: notes
+    lang: de
+    note: "lecture notes for the BSc statistics course (PDF, German)"
+  - name: "ResearchSkills"
+    url: "https://github.com/florianhartig/ResearchSkills"
+    kind: notes
+    note: "lecture notes for the research skills course (LaTeX source)"
+  - name: "EGT"
+    url: "https://github.com/florianhartig/EGT"
+    kind: code
+    note: "evolutionary game theory models in NetLogo"

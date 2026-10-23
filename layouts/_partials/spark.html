@@ -1,0 +1,21 @@
+{{- /* Word-sized inline bar chart ("sparkline") for use inside a sentence.
+       Args (dict): years, values (parallel lists of ints), label (what is
+       counted), asof (fetch date, default build date). The year of asof is
+       drawn lighter (incomplete).
+       Values are in per-bar tooltips and in the aria-label. */ -}}
+{{- $years := .years }}
+{{- $vals := .values }}
+{{- if gt (len $years) 0 }}
+{{- $max := 0 }}
+{{- range $vals }}{{ if gt . $max }}{{ $max = . }}{{ end }}{{ end }}
+{{- $now := cond (isset . "asof") (time.AsTime (.asof | default now)).Year now.Year }}
+{{- $parts := slice }}
+{{- range $i, $y := $years }}{{ $parts = $parts | append (printf "%d%s: %s" $y (cond (eq $y $now) " (to date)" "") (lang.FormatNumber 0 (index $vals $i))) }}{{ end -}}
+<span class="spark" role="img" aria-label="{{ .label }} per year, {{ delimit $parts "; " }}" title="{{ .label | strings.FirstUpper }} per year — {{ delimit $parts " · " }}">
+{{- range $i, $y := $years }}
+{{- $v := index $vals $i }}
+{{- $h := 0.0 }}{{ if gt $max 0 }}{{ $h = div (mul 100.0 $v) $max }}{{ end -}}
+<span class="spark-bar{{ if eq $y $now }} spark-partial{{ end }}" style="height: {{ printf "%.1f" $h }}%" title="{{ $y }}{{ if eq $y $now }} (to date){{ end }}: {{ lang.FormatNumber 0 $v }} {{ cond (eq $v 1) (strings.TrimSuffix "s" $.label) $.label }}"></span>
+{{- end -}}
+</span>
+{{- end -}}

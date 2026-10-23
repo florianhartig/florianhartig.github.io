@@ -1,0 +1,8080 @@
+# Co-authors of Florian Hartig, one record per person (see scripts/coauthor_data.py).
+# id/name/aliases/n/papers: written by scripts/bib2content.py from the .bib.
+# institution … y: last known institution (mapped people only). Sources, notes and
+# ORCIDs are kept privately in .claude/maintenance/coauthors.json (not in the repo).
+# Values in JSON notation; hand edits must keep it.
+count: 683
+located: 665
+locations_as_of: "2026-10-18"
+merge: {"minnuno-f": "minunno-f", "efiom-e": "effiom-e", "schupp-g": "schupp-e", "lasch-p": "lasch-born-p", "strickland-w": "strickland-c"}
+people:
+  - id: "dormann-c"
+    name: "Carsten F. Dormann"
+    aliases: []
+    n: 13
+    papers: ["dormann2026full", "dormann2025predicting", "henrich2022deer", "speich2021sequential", "henrich2020influence", "dormann2020plant", "bagnara2019r", "dormann2018model", "dormann2018biotic", "roberts2017cross", "schymanski2013process", "hartig2013does", "dormann2012correlation"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "pichler-m"
+    name: "Maximilian Pichler"
+    aliases: []
+    n: 12
+    papers: ["fronville2026analyzing", "leroy2025graph", "dormann2025predicting", "cai2025assembly", "pichler2024mainland", "hartig2024novel", "amesoder2024cito", "pichler2023machine", "pichler2023can", "pichler2021new", "chalmandrier2021linking", "pichler2020machine"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "cabral-j"
+    name: "Juliano Sarmento Cabral"
+    aliases: ["Juliano Cabral", "Juliano S. Cabral"]
+    n: 11
+    papers: ["rubanschi2026impacts", "hurlbert2026evaluating", "machac2025species", "cabral2024road", "hagen2021gen3sis", "pontarp2019latitudinal", "etienne2019minimal", "cabral2017mechanistic", "schymanski2013process", "schurr2012how", "dormann2012correlation"]
+    institution: "University of Bonn"
+    city: "Bonn"
+    country: "Germany"
+    lat: 50.7344
+    lon: 7.0955
+    x: 516.2
+    y: 67.3
+  - id: "drechsler-m"
+    name: "Martin Drechsler"
+    aliases: []
+    n: 9
+    papers: ["teeffelen2014ecological", "johst2012offsetting", "watzold2011applying", "johst2011biodiversity", "drechsler2011conserving", "hartig2010stay", "hartig2010ecotrade", "hartig2009smart", "hartig2008time"]
+    institution: "Helmholtz Centre for Environmental Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "zurell-d"
+    name: "Damaris Zurell"
+    aliases: ["D. Zurell"]
+    n: 8
+    papers: ["malchow2024fitting", "hartig2024novel", "cabral2024road", "malchow2023demography", "beckman2020advancing", "rogers2019total", "johnson2019rapid", "aslan2019employing"]
+    institution: "University of Potsdam"
+    city: "Potsdam"
+    country: "Germany"
+    lat: 52.3989
+    lon: 13.0657
+    x: 529.3
+    y: 62.5
+  - id: "hulsmann-l"
+    name: "Lisa Hülsmann"
+    aliases: []
+    n: 7
+    papers: ["lamanna2024consequences", "hulsmann2024latitudinal", "schultz2022climate", "hulsmann2021variation", "cailleret2020bayesian", "bugmann2019tree", "hulsmann2018comment"]
+    institution: "University of Bayreuth"
+    city: "Bayreuth"
+    country: "Germany"
+    lat: 49.9478
+    lon: 11.5789
+    x: 526.5
+    y: 69.6
+  - id: "reyer-c"
+    name: "Christopher P. O. Reyer"
+    aliases: ["Christopher Reyer"]
+    n: 6
+    papers: ["mahnken2022accuracy", "ruizbenito2020available", "reyer2020profound", "berzaghi2020towards", "bugmann2019tree", "vanoijen2013bayesian"]
+    institution: "Potsdam Institute for Climate Impact Research"
+    city: "Potsdam"
+    country: "Germany"
+    lat: 52.3989
+    lon: 13.0657
+    x: 529.3
+    y: 62.5
+  - id: "huth-a"
+    name: "Andreas Huth"
+    aliases: ["A. Huth"]
+    n: 6
+    papers: ["bugmann2019tree", "hartig2014technical", "vanoijen2013bayesian", "taubert2013challenge", "hartig2012connecting", "hartig2011statistical"]
+    institution: "Helmholtz Centre for Environmental Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "hagen-o"
+    name: "Oskar Hagen"
+    aliases: []
+    n: 5
+    papers: ["hurlbert2026evaluating", "machac2025species", "hagen2021gen3sis", "pontarp2019latitudinal", "etienne2019minimal"]
+    institution: "Goethe University Frankfurt"
+    city: "Frankfurt am Main"
+    country: "Germany"
+    lat: 50.1155
+    lon: 8.6842
+    x: 519.9
+    y: 69.1
+  - id: "pontarp-m"
+    name: "Mikael Pontarp"
+    aliases: []
+    n: 5
+    papers: ["hurlbert2026evaluating", "machac2025species", "hagen2021gen3sis", "pontarp2019latitudinal", "etienne2019minimal"]
+    institution: "Lund University"
+    city: "Lund"
+    country: "Sweden"
+    lat: 55.7058
+    lon: 13.1932
+    x: 528.8
+    y: 53.4
+  - id: "rammig-a"
+    name: "Anja Rammig"
+    aliases: []
+    n: 5
+    papers: ["rubanschi2026impacts", "cabral2024road", "oberpriller2022climate", "oberpriller2021modellunsicherheiten", "bugmann2019tree"]
+    institution: "Technical University of Munich"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4008
+    lon: 11.744
+    x: 527.3
+    y: 74.1
+  - id: "morlon-h"
+    name: "Hélène Morlon"
+    aliases: []
+    n: 5
+    papers: ["leroy2025graph", "lajaaiti2023comparison", "morlon2022studying", "morlon2020prior", "maliet2019model"]
+    institution: "Institut de Biologie de l'École Normale Supérieure"
+    city: "Paris"
+    country: "France"
+    lat: 48.8534
+    lon: 2.3488
+    x: 505.4
+    y: 72.8
+  - id: "bugmann-h"
+    name: "Harald Bugmann"
+    aliases: []
+    n: 5
+    papers: ["kaber2024inferring", "mahnken2022accuracy", "trotsiuk2020assessing", "cailleret2020bayesian", "bugmann2019tree"]
+    institution: "ETH Zurich"
+    city: "Zurich"
+    country: "Switzerland"
+    lat: 47.3667
+    lon: 8.55
+    x: 520.0
+    y: 77.2
+  - id: "oberpriller-j"
+    name: "Johannes Oberpriller"
+    aliases: []
+    n: 5
+    papers: ["cabral2024road", "oberpriller2022climate", "cameron2022issues", "oberpriller2021towards", "oberpriller2021modellunsicherheiten"]
+    institution: "ams-OSRAM International GmbH"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0195
+    lon: 12.0975
+    x: 527.9
+    y: 72.3
+  - id: "pellissier-l"
+    name: "Loïc Pellissier"
+    aliases: []
+    n: 5
+    papers: ["hartig2024novel", "hagen2021gen3sis", "chalmandrier2021linking", "pontarp2019latitudinal", "etienne2019minimal"]
+    institution: "ETH Zurich"
+    city: "Zurich"
+    country: "Switzerland"
+    lat: 47.3667
+    lon: 8.55
+    x: 520.0
+    y: 77.2
+  - id: "bohn-f"
+    name: "Friedrich J. Bohn"
+    aliases: ["Friedrich Bohn"]
+    n: 5
+    papers: ["mahnken2022accuracy", "reyer2020profound", "berzaghi2020towards", "bugmann2019tree", "vanoijen2013bayesian"]
+    institution: "Helmholtz Centre for Environmental Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "cameron-d"
+    name: "David R. Cameron"
+    aliases: ["David Cameron"]
+    n: 5
+    papers: ["mahnken2022accuracy", "cameron2022issues", "oberpriller2021towards", "reyer2020profound", "vanoijen2013bayesian"]
+    institution: "UK Centre for Ecology & Hydrology"
+    city: "Edinburgh"
+    country: "United Kingdom"
+    lat: 55.9533
+    lon: -3.1884
+    x: 493.1
+    y: 52.8
+  - id: "minunno-f"
+    name: "Francesco Minunno"
+    aliases: ["Francesco Minnuno"]
+    n: 5
+    papers: ["mahnken2022accuracy", "cameron2022issues", "trotsiuk2020assessing", "augustynczik2017productivity", "vanoijen2013bayesian"]
+    institution: "University of Helsinki"
+    city: "Helsinki"
+    country: "Finland"
+    lat: 60.1695
+    lon: 24.9354
+    x: 552.1
+    y: 41.9
+  - id: "schroder-b"
+    name: "Boris Schröder"
+    aliases: []
+    n: 5
+    papers: ["dormann2018model", "roberts2017cross", "schymanski2013process", "schurr2012how", "dormann2012correlation"]
+    institution: "Technische Universität Berlin"
+    city: "Berlin"
+    country: "Germany"
+    lat: 52.5244
+    lon: 13.4105
+    x: 530.1
+    y: 62.2
+  - id: "johst-k"
+    name: "Karin Johst"
+    aliases: []
+    n: 5
+    papers: ["singer2016community", "teeffelen2014ecological", "hartig2014sympatric", "johst2012offsetting", "johst2011biodiversity"]
+    institution: "Helmholtz Centre for Environmental Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "hurlbert-a"
+    name: "Allen H. Hurlbert"
+    aliases: ["Allen Hurlbert"]
+    n: 4
+    papers: ["hurlbert2026evaluating", "machac2025species", "pontarp2019latitudinal", "etienne2019minimal"]
+    institution: "University of North Carolina at Chapel Hill"
+    city: "Chapel Hill"
+    country: "United States"
+    lat: 35.9132
+    lon: -79.0558
+    x: 300.6
+    y: 113.7
+  - id: "storch-d"
+    name: "David Storch"
+    aliases: []
+    n: 4
+    papers: ["hurlbert2026evaluating", "machac2025species", "pontarp2019latitudinal", "etienne2019minimal"]
+    institution: "Charles University"
+    city: "Prague"
+    country: "Czechia"
+    lat: 50.088
+    lon: 14.4208
+    x: 533.0
+    y: 69.2
+  - id: "graham-c"
+    name: "Catherine H. Graham"
+    aliases: ["Catherine Graham"]
+    n: 4
+    papers: ["machac2025species", "pontarp2019latitudinal", "schymanski2013process", "dormann2012correlation"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "heurich-m"
+    name: "Marco Heurich"
+    aliases: []
+    n: 4
+    papers: ["lwin2025human", "henrich2022deer", "henrich2020influence", "latifi2015assessing"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "cailleret-m"
+    name: "Maxime Cailleret"
+    aliases: []
+    n: 4
+    papers: ["mahnken2022accuracy", "trotsiuk2020assessing", "cailleret2020bayesian", "bugmann2019tree"]
+    institution: "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement"
+    city: "Aix-en-Provence"
+    country: "France"
+    lat: 43.5298
+    lon: 5.4475
+    x: 513.1
+    y: 89.0
+  - id: "lasch-born-p"
+    name: "Petra Lasch-Born"
+    aliases: ["Petra Lasch"]
+    n: 4
+    papers: ["mahnken2022accuracy", "reyer2020profound", "bugmann2019tree", "vanoijen2013bayesian"]
+    institution: "Potsdam Institute for Climate Impact Research"
+    city: "Potsdam"
+    country: "Germany"
+    lat: 52.3989
+    lon: 13.0657
+    x: 529.3
+    y: 62.5
+  - id: "makela-a"
+    name: "Annikki Mäkelä"
+    aliases: []
+    n: 4
+    papers: ["mahnken2022accuracy", "ruizbenito2020available", "reyer2020profound", "vanoijen2013bayesian"]
+    institution: "University of Helsinki"
+    city: "Helsinki"
+    country: "Finland"
+    lat: 60.1695
+    lon: 24.9354
+    x: 552.1
+    y: 41.9
+  - id: "reineking-b"
+    name: "Björn Reineking"
+    aliases: []
+    n: 4
+    papers: ["cameron2022issues", "bugmann2019tree", "dormann2018model", "hartig2011statistical"]
+    institution: "Laboratoire des écosystèmes et sociétés en montagne"
+    city: "Saint-Martin-d'Hères"
+    country: "France"
+    lat: 45.1787
+    lon: 5.7628
+    x: 513.7
+    y: 83.9
+  - id: "sabate-s"
+    name: "Santiago Sabaté"
+    aliases: ["Santi Sabaté"]
+    n: 4
+    papers: ["mahnken2022accuracy", "berzaghi2020towards", "nadalsala2019global", "bugmann2019tree"]
+    institution: "Universitat de Barcelona"
+    city: "Barcelona"
+    country: "Spain"
+    lat: 41.3888
+    lon: 2.159
+    x: 505.3
+    y: 95.8
+  - id: "pe-er-g"
+    name: "Guy Pe'er"
+    aliases: ["G. Pe'er"]
+    n: 4
+    papers: ["udy2021environmental", "hauenstein2019calibrating", "singer2016community", "peer2014eu"]
+    institution: "Helmholtz Centre for Environmental Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "cantrell-r"
+    name: "Robert Stephen Cantrell"
+    aliases: []
+    n: 4
+    papers: ["beckman2020advancing", "rogers2019total", "johnson2019rapid", "aslan2019employing"]
+    institution: "University of Miami"
+    city: "Coral Gables"
+    country: "United States"
+    lat: 25.7215
+    lon: -80.2684
+    x: 287.7
+    y: 148.8
+  - id: "johnson-j"
+    name: "Jeremy S Johnson"
+    aliases: ["Jeremy Johnson"]
+    n: 4
+    papers: ["beckman2020advancing", "rogers2019total", "johnson2019rapid", "aslan2019employing"]
+    institution: "Michigan State University"
+    city: "East Lansing"
+    country: "United States"
+    lat: 42.737
+    lon: -84.4839
+    x: 295.7
+    y: 91.5
+  - id: "pufal-g"
+    name: "Gesine Pufal"
+    aliases: []
+    n: 4
+    papers: ["beckman2020advancing", "rogers2019total", "johnson2019rapid", "aslan2019employing"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "rogers-h"
+    name: "Haldre S Rogers"
+    aliases: []
+    n: 4
+    papers: ["beckman2020advancing", "rogers2019total", "johnson2019rapid", "aslan2019employing"]
+    institution: "Virginia Tech"
+    city: "Blacksburg"
+    country: "United States"
+    lat: 37.2296
+    lon: -80.4139
+    x: 298.7
+    y: 109.3
+  - id: "schupp-e"
+    name: "Eugene W Schupp"
+    aliases: ["Geno Schupp"]
+    n: 4
+    papers: ["beckman2020advancing", "rogers2019total", "johnson2019rapid", "aslan2019employing"]
+    institution: "Utah State University"
+    city: "Logan"
+    country: "United States"
+    lat: 41.7313
+    lon: -111.8349
+    x: 227.7
+    y: 94.7
+  - id: "shea-k"
+    name: "Katriona Shea"
+    aliases: []
+    n: 4
+    papers: ["beckman2020advancing", "rogers2019total", "johnson2019rapid", "aslan2019employing"]
+    institution: "Pennsylvania State University"
+    city: "University Park (State College)"
+    country: "United States"
+    lat: 40.7934
+    lon: -77.86
+    x: 309.3
+    y: 97.7
+  - id: "panassiti-b"
+    name: "Bernd Panassiti"
+    aliases: []
+    n: 4
+    papers: ["panassiti2019temperature", "panassiti2017identifying", "schiro2015genetic", "panassiti2015bayesian"]
+    institution: "Weihenstephan-Triesdorf University of Applied Sciences"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4035
+    lon: 11.7488
+    x: 527.3
+    y: 74.1
+  - id: "latifi-h"
+    name: "Hooman Latifi"
+    aliases: []
+    n: 4
+    papers: ["fassnacht2018using", "latifi2015stratified", "latifi2015assessing", "fassnacht2014importance"]
+    institution: "K. N. Toosi University of Technology"
+    city: "Tehran"
+    country: "Iran"
+    lat: 35.6944
+    lon: 51.4215
+    x: 629.8
+    y: 114.4
+  - id: "singer-a"
+    name: "Alexander Singer"
+    aliases: []
+    n: 4
+    papers: ["singer2016community", "schymanski2013process", "schurr2012how", "dormann2012correlation"]
+    institution: "RIFCON GmbH (Germany)"
+    city: "Hirschberg an der Bergstraße"
+    country: "Germany"
+    lat: 49.506
+    lon: 8.6595
+    x: 519.9
+    y: 70.9
+  - id: "etienne-r"
+    name: "Rampal S. Etienne"
+    aliases: []
+    n: 3
+    papers: ["hurlbert2026evaluating", "pontarp2019latitudinal", "etienne2019minimal"]
+    institution: "University of Groningen"
+    city: "Groningen"
+    country: "The Netherlands"
+    lat: 53.2192
+    lon: 6.5667
+    x: 514.6
+    y: 60.2
+  - id: "huang-s"
+    name: "Shan Huang"
+    aliases: []
+    n: 3
+    papers: ["hurlbert2026evaluating", "machac2025species", "pontarp2019latitudinal"]
+    institution: "University of Birmingham"
+    city: "Birmingham"
+    country: "United Kingdom"
+    lat: 52.4814
+    lon: -1.8998
+    x: 495.7
+    y: 62.3
+  - id: "krause-a"
+    name: "Andreas Krause"
+    aliases: []
+    n: 3
+    papers: ["rubanschi2026impacts", "cabral2024road", "oberpriller2022climate"]
+    institution: "Technical University of Munich"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4008
+    lon: 11.744
+    x: 527.3
+    y: 74.1
+  - id: "malchow-a"
+    name: "A.-K. Malchow"
+    aliases: ["Anne-Kathleen Malchow"]
+    n: 3
+    papers: ["malchow2026calibration", "malchow2024fitting", "malchow2023demography"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "calabrese-j"
+    name: "Justin M. Calabrese"
+    aliases: []
+    n: 3
+    papers: ["grimm2025using", "dormann2018model", "hartig2011statistical"]
+    institution: "Center for Advanced Systems Understanding"
+    city: "Görlitz"
+    country: "Germany"
+    lat: 51.1552
+    lon: 14.9885
+    x: 534.0
+    y: 66.1
+  - id: "groeneveld-j"
+    name: "Jürgen Groeneveld"
+    aliases: []
+    n: 3
+    papers: ["grimm2025using", "singer2016community", "schurr2012how"]
+    institution: "Julius Kühn-Institut"
+    city: "Quedlinburg"
+    country: "Germany"
+    lat: 51.7884
+    lon: 11.1501
+    x: 525.2
+    y: 64.3
+  - id: "leibold-m"
+    name: "Mathew A. Leibold"
+    aliases: []
+    n: 3
+    papers: ["cai2025assembly", "hartig2024novel", "leibold2022internal"]
+    institution: "University of Florida"
+    city: "Gainesville"
+    country: "United States"
+    lat: 29.6516
+    lon: -82.3248
+    x: 285.8
+    y: 135.0
+  - id: "munkemuller-t"
+    name: "Tamara Münkemüller"
+    aliases: []
+    n: 3
+    papers: ["grimm2025using", "pontarp2019latitudinal", "hartig2014sympatric"]
+    institution: "Laboratoire d'Écologie Alpine"
+    city: "Grenoble"
+    country: "France"
+    lat: 45.1787
+    lon: 5.7148
+    x: 513.6
+    y: 83.9
+  - id: "brockelman-w"
+    name: "Warren Y. Brockelman"
+    aliases: []
+    n: 3
+    papers: ["hulsmann2024latitudinal", "chanthorn2019defaunation", "chanthorn2017structure"]
+    institution: "National Science and Technology Development Agency"
+    city: "Pathum Thani"
+    country: "Thailand"
+    lat: 14.0135
+    lon: 100.5305
+    x: 775.3
+    y: 191.2
+  - id: "guillera-arroita-g"
+    name: "Gurutzeta Guillera-Arroita"
+    aliases: []
+    n: 3
+    papers: ["hartig2024novel", "dormann2018model", "roberts2017cross"]
+    institution: "Instituto Pirenaico de Ecología"
+    city: "Jaca"
+    country: "Spain"
+    lat: 42.5693
+    lon: -0.5494
+    x: 498.7
+    y: 92.0
+  - id: "thuiller-w"
+    name: "Wilfried Thuiller"
+    aliases: []
+    n: 3
+    papers: ["hartig2024novel", "dormann2018model", "roberts2017cross"]
+    institution: "Laboratoire d'Écologie Alpine"
+    city: "Grenoble"
+    country: "France"
+    lat: 45.1787
+    lon: 5.7148
+    x: 513.6
+    y: 83.9
+  - id: "warton-d"
+    name: "David I. Warton"
+    aliases: []
+    n: 3
+    papers: ["hartig2024novel", "dormann2018model", "roberts2017cross"]
+    institution: "UNSW Sydney"
+    city: "Sydney"
+    country: "Australia"
+    lat: -33.8678
+    lon: 151.2073
+    x: 885.6
+    y: 366.1
+  - id: "dietze-m"
+    name: "Michael C. Dietze"
+    aliases: ["Michael Dietze"]
+    n: 3
+    papers: ["cameron2022issues", "oberpriller2021towards", "reyer2020profound"]
+    institution: "Boston University"
+    city: "Boston"
+    country: "United States"
+    lat: 42.3584
+    lon: -71.0598
+    x: 327.7
+    y: 92.7
+  - id: "ibrom-a"
+    name: "Andreas Ibrom"
+    aliases: []
+    n: 3
+    papers: ["mahnken2022accuracy", "ruizbenito2020available", "reyer2020profound"]
+    institution: "Technical University of Denmark"
+    city: "Kongens Lyngby"
+    country: "Denmark"
+    lat: 55.7704
+    lon: 12.5038
+    x: 527.3
+    y: 53.3
+  - id: "nadal-sala-d"
+    name: "Daniel Nadal-Sala"
+    aliases: []
+    n: 3
+    papers: ["mahnken2022accuracy", "nadalsala2019global", "bugmann2019tree"]
+    institution: "Universitat de Barcelona"
+    city: "Barcelona"
+    country: "Spain"
+    lat: 41.3888
+    lon: 2.159
+    x: 505.3
+    y: 95.8
+  - id: "trotsiuk-v"
+    name: "Volodymyr Trotsiuk"
+    aliases: []
+    n: 3
+    papers: ["mahnken2022accuracy", "trotsiuk2020r3pg", "trotsiuk2020assessing"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "yousefpour-r"
+    name: "Rasoul Yousefpour"
+    aliases: []
+    n: 3
+    papers: ["mahnken2022accuracy", "ruizbenito2020available", "augustynczik2017productivity"]
+    institution: "University of Toronto"
+    city: "Toronto"
+    country: "Canada"
+    lat: 43.7064
+    lon: -79.3986
+    x: 309.2
+    y: 88.5
+  - id: "bagnara-m"
+    name: "Maurizio Bagnara"
+    aliases: []
+    n: 3
+    papers: ["dormann2020plant", "bagnara2019r", "pullens2017nucombog"]
+    institution: "Justus-Liebig-Universität Gießen"
+    city: "Giessen"
+    country: "Germany"
+    lat: 50.5873
+    lon: 8.6755
+    x: 519.8
+    y: 67.7
+  - id: "beckman-n"
+    name: "Noelle G Beckman"
+    aliases: []
+    n: 3
+    papers: ["beckman2020advancing", "rogers2019total", "aslan2019employing"]
+    institution: "Utah State University"
+    city: "Logan"
+    country: "United States"
+    lat: 41.7355
+    lon: -111.8344
+    x: 227.7
+    y: 94.7
+  - id: "bullock-j"
+    name: "James M Bullock"
+    aliases: []
+    n: 3
+    papers: ["beckman2020advancing", "rogers2019total", "aslan2019employing"]
+    institution: "UK Centre for Ecology & Hydrology"
+    city: "Wallingford"
+    country: "United Kingdom"
+    lat: 51.5998
+    lon: -1.1248
+    x: 497.5
+    y: 64.8
+  - id: "camarero-j"
+    name: "Jesús Julio Camarero"
+    aliases: ["J. Julio Camarero", "Jesus Julio Camarero"]
+    n: 3
+    papers: ["ruizbenito2020available", "delpierre2019chilling", "marques2018last"]
+    institution: "Instituto Pirenaico de Ecología"
+    city: "Zaragoza"
+    country: "Spain"
+    lat: 41.6561
+    lon: -0.8773
+    x: 497.9
+    y: 94.9
+  - id: "hastings-a"
+    name: "Alan Hastings"
+    aliases: []
+    n: 3
+    papers: ["beckman2020advancing", "johnson2019rapid", "aslan2019employing"]
+    institution: "University of California, Davis"
+    city: "Davis"
+    country: "United States"
+    lat: 38.5449
+    lon: -121.7405
+    x: 197.6
+    y: 105.0
+  - id: "loiselle-b"
+    name: "Bette A Loiselle"
+    aliases: ["Bette Loiselle"]
+    n: 3
+    papers: ["beckman2020advancing", "rogers2019total", "aslan2019employing"]
+    institution: "University of Florida"
+    city: "Gainesville"
+    country: "United States"
+    lat: 29.6516
+    lon: -82.3248
+    x: 285.8
+    y: 135.0
+  - id: "morin-x"
+    name: "Xavier Morin"
+    aliases: []
+    n: 3
+    papers: ["ruizbenito2020available", "schymanski2013process", "dormann2012correlation"]
+    institution: "Centre d'Écologie Fonctionnelle et Évolutive"
+    city: "Montpellier"
+    country: "France"
+    lat: 43.6109
+    lon: 3.8763
+    x: 509.3
+    y: 88.8
+  - id: "pejchar-l"
+    name: "Liba Pejchar"
+    aliases: []
+    n: 3
+    papers: ["beckman2020advancing", "rogers2019total", "aslan2019employing"]
+    institution: "Colorado State University"
+    city: "Fort Collins"
+    country: "United States"
+    lat: 40.5853
+    lon: -105.0844
+    x: 242.2
+    y: 98.4
+  - id: "razafindratsima-o"
+    name: "Onja H Razafindratsima"
+    aliases: ["Onja Razafindratsima"]
+    n: 3
+    papers: ["beckman2020advancing", "rogers2019total", "aslan2019employing"]
+    institution: "University of California, Berkeley"
+    city: "Berkeley"
+    country: "United States"
+    lat: 37.8716
+    lon: -122.2728
+    x: 195.1
+    y: 107.2
+  - id: "sandor-m"
+    name: "Manette E Sandor"
+    aliases: ["Manette Sandor"]
+    n: 3
+    papers: ["beckman2020advancing", "rogers2019total", "aslan2019employing"]
+    institution: "Cary Institute of Ecosystem Studies"
+    city: "Millbrook"
+    country: "United States"
+    lat: 41.7851
+    lon: -73.694
+    x: 320.6
+    y: 94.5
+  - id: "silveyra-gonzalez-r"
+    name: "Ramiro Silveyra Gonzalez"
+    aliases: ["Ramiro Silveyra González"]
+    n: 3
+    papers: ["reyer2020profound", "bagnara2019r", "pullens2017nucombog"]
+    institution: "Karlsruhe Institute of Technology"
+    city: "Karlsruhe"
+    country: "Germany"
+    lat: 49.0094
+    lon: 8.4044
+    x: 519.4
+    y: 72.3
+  - id: "steinkamp-j"
+    name: "Jörg Steinkamp"
+    aliases: []
+    n: 3
+    papers: ["reyer2020profound", "bugmann2019tree", "bagnara2019r"]
+    institution: "Johannes Gutenberg University Mainz"
+    city: "Mainz"
+    country: "Germany"
+    lat: 49.9819
+    lon: 8.2801
+    x: 519.0
+    y: 69.5
+  - id: "strickland-c"
+    name: "W Christopher Strickland"
+    aliases: ["Christopher Strickland"]
+    n: 3
+    papers: ["beckman2020advancing", "rogers2019total", "aslan2019employing"]
+    institution: "University of Tennessee at Knoxville"
+    city: "Knoxville"
+    country: "United States"
+    lat: 35.9606
+    lon: -83.9207
+    x: 288.4
+    y: 113.5
+  - id: "zambrano-j"
+    name: "Jenny Zambrano"
+    aliases: []
+    n: 3
+    papers: ["beckman2020advancing", "rogers2019total", "aslan2019employing"]
+    institution: "Washington State University"
+    city: "Pullman"
+    country: "United States"
+    lat: 46.7313
+    lon: -117.1796
+    x: 224.6
+    y: 79.1
+  - id: "hickler-t"
+    name: "Thomas Hickler"
+    aliases: []
+    n: 3
+    papers: ["bugmann2019tree", "bagnara2019r", "hartig2012connecting"]
+    institution: "Senckenberg Biodiversity and Climate Research Centre"
+    city: "Frankfurt am Main"
+    country: "Germany"
+    lat: 50.1155
+    lon: 8.6842
+    x: 519.9
+    y: 69.1
+  - id: "wiegand-t"
+    name: "Thorsten Wiegand"
+    aliases: ["T. Wiegand"]
+    n: 3
+    papers: ["pontarp2019latitudinal", "hartig2014technical", "hartig2011statistical"]
+    institution: "Helmholtz Centre for Environmental Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "fassnacht-f"
+    name: "Fabian Ewald Fassnacht"
+    aliases: ["Fabian E. Fassnacht", "Fabian Fassnacht"]
+    n: 3
+    papers: ["fassnacht2018using", "latifi2015stratified", "fassnacht2014importance"]
+    institution: "Freie Universität Berlin"
+    city: "Berlin"
+    country: "Germany"
+    lat: 52.5244
+    lon: 13.4105
+    x: 530.1
+    y: 62.2
+  - id: "pagel-j"
+    name: "Jörn Pagel"
+    aliases: []
+    n: 3
+    papers: ["dormann2018biotic", "schurr2012how", "marion2012parameter"]
+    institution: "University of Hohenheim"
+    city: "Stuttgart"
+    country: "Germany"
+    lat: 48.7823
+    lon: 9.177
+    x: 521.2
+    y: 73.0
+  - id: "watzold-f"
+    name: "Frank Wätzold"
+    aliases: []
+    n: 3
+    papers: ["teeffelen2014ecological", "watzold2011applying", "johst2011biodiversity"]
+    institution: "Brandenburg University of Technology Cottbus-Senftenberg"
+    city: "Cottbus"
+    country: "Germany"
+    lat: 51.7567
+    lon: 14.3357
+    x: 532.4
+    y: 64.4
+  - id: "wissel-s"
+    name: "Silvia Wissel"
+    aliases: []
+    n: 3
+    papers: ["teeffelen2014ecological", "watzold2011applying", "johst2011biodiversity"]
+    institution: "University of Amsterdam"
+    city: "Amsterdam"
+    country: "The Netherlands"
+    lat: 52.374
+    lon: 4.8897
+    x: 511.0
+    y: 62.6
+  - id: "o-hara-r"
+    name: "Robert B. O'Hara"
+    aliases: []
+    n: 3
+    papers: ["schurr2012how", "marion2012parameter", "hartig2012connecting"]
+    institution: "Norwegian University of Science and Technology"
+    city: "Trondheim"
+    country: "Norway"
+    lat: 63.4305
+    lon: 10.3951
+    x: 521.0
+    y: 34.1
+  - id: "blechschmidt-j"
+    name: "Jana Blechschmidt"
+    aliases: []
+    n: 2
+    papers: ["rubanschi2026impacts", "cabral2024road"]
+    institution: "University of Würzburg"
+    city: "Würzburg"
+    country: "Germany"
+    lat: 49.7939
+    lon: 9.9512
+    x: 522.8
+    y: 70.0
+  - id: "bronner-m"
+    name: "Maximilian Brönner"
+    aliases: []
+    n: 2
+    papers: ["rubanschi2026impacts", "cabral2024road"]
+    institution: "Friedrich-Alexander-Universität Erlangen-Nürnberg"
+    city: "Erlangen"
+    country: "Germany"
+    lat: 49.591
+    lon: 11.0078
+    x: 525.3
+    y: 70.6
+  - id: "fallert-s"
+    name: "Stefan Fallert"
+    aliases: []
+    n: 2
+    papers: ["rubanschi2026impacts", "cabral2024road"]
+    institution: "University of Bonn"
+    city: "Bonn"
+    country: "Germany"
+    lat: 50.7344
+    lon: 7.0955
+    x: 516.2
+    y: 67.3
+  - id: "gieger-c"
+    name: "Christian Gieger"
+    aliases: []
+    n: 2
+    papers: ["herold2026novel", "wiegrebe2024analyzing"]
+    institution: "Helmholtz Munich"
+    city: "Munich"
+    country: "Germany"
+    lat: 48.1374
+    lon: 11.5755
+    x: 526.9
+    y: 74.9
+  - id: "heid-i"
+    name: "Iris M. Heid"
+    aliases: []
+    n: 2
+    papers: ["herold2026novel", "wiegrebe2024analyzing"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "herold-j"
+    name: "Janina M. Herold"
+    aliases: []
+    n: 2
+    papers: ["herold2026novel", "wiegrebe2024analyzing"]
+    institution: "NYU Langone Health"
+    city: "New York"
+    country: "United States"
+    lat: 40.7143
+    lon: -74.006
+    x: 318.6
+    y: 98.0
+  - id: "hoffmann-m"
+    name: "Markus Hoffmann"
+    aliases: []
+    n: 2
+    papers: ["rubanschi2026impacts", "cabral2024road"]
+    institution: "Technical University of Munich"
+    city: "Iffeldorf"
+    country: "Germany"
+    lat: 47.7727
+    lon: 11.32
+    x: 526.4
+    y: 76.0
+  - id: "kaber-y"
+    name: "Yannek Käber"
+    aliases: []
+    n: 2
+    papers: ["dormann2026full", "kaber2024inferring"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "kieslinger-j"
+    name: "Julia Kieslinger"
+    aliases: []
+    n: 2
+    papers: ["rubanschi2026impacts", "cabral2024road"]
+    institution: "Friedrich-Alexander-Universität Erlangen-Nürnberg"
+    city: "Erlangen"
+    country: "Germany"
+    lat: 49.591
+    lon: 11.0078
+    x: 525.3
+    y: 70.6
+  - id: "kleijn-d"
+    name: "David Kleijn"
+    aliases: ["D. Kleijn"]
+    n: 2
+    papers: ["hannappel2026local", "peer2014eu"]
+    institution: "Wageningen University & Research"
+    city: "Wageningen"
+    country: "The Netherlands"
+    lat: 51.97
+    lon: 5.6667
+    x: 512.8
+    y: 63.8
+  - id: "knoke-t"
+    name: "Thomas Knoke"
+    aliases: []
+    n: 2
+    papers: ["rubanschi2026impacts", "cabral2024road"]
+    institution: "Technical University of Munich"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4008
+    lon: 11.744
+    x: 527.3
+    y: 74.1
+  - id: "koch-a"
+    name: "Aline Koch"
+    aliases: []
+    n: 2
+    papers: ["barth2026efficiency", "alkemade2025learning"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "kramer-schadt-s"
+    name: "Stephanie Kramer-Schadt"
+    aliases: []
+    n: 2
+    papers: ["fronville2026analyzing", "grimm2025using"]
+    institution: "Leibniz Institute for Zoo and Wildlife Research"
+    city: "Berlin"
+    country: "Germany"
+    lat: 52.5244
+    lon: 13.4105
+    x: 530.1
+    y: 62.2
+  - id: "kuchenhoff-h"
+    name: "Helmut Küchenhoff"
+    aliases: []
+    n: 2
+    papers: ["herold2026novel", "wiegrebe2024analyzing"]
+    institution: "Ludwig-Maximilians-Universität München"
+    city: "Munich"
+    country: "Germany"
+    lat: 48.1374
+    lon: 11.5755
+    x: 526.9
+    y: 74.9
+  - id: "lewerentz-a"
+    name: "Anne Lewerentz"
+    aliases: []
+    n: 2
+    papers: ["rubanschi2026impacts", "cabral2024road"]
+    institution: "Karlsruhe Institute of Technology"
+    city: "Karlsruhe"
+    country: "Germany"
+    lat: 49.0094
+    lon: 8.4044
+    x: 519.4
+    y: 72.3
+  - id: "machac-a"
+    name: "Antonin Machac"
+    aliases: []
+    n: 2
+    papers: ["hurlbert2026evaluating", "machac2025species"]
+    institution: "Czech Academy of Sciences, Institute of Microbiology"
+    city: "Prague"
+    country: "Czechia"
+    lat: 50.088
+    lon: 14.4208
+    x: 533.0
+    y: 69.2
+  - id: "mair-m"
+    name: "Magdalena M. Mair"
+    aliases: []
+    n: 2
+    papers: ["wintermantel2026equivalence", "mair2020mdd"]
+    institution: "University of Bayreuth"
+    city: "Bayreuth"
+    country: "Germany"
+    lat: 49.9478
+    lon: 11.5789
+    x: 526.5
+    y: 69.6
+  - id: "pohle-p"
+    name: "Perdita Pohle"
+    aliases: []
+    n: 2
+    papers: ["rubanschi2026impacts", "cabral2024road"]
+    institution: "Friedrich-Alexander-Universität Erlangen-Nürnberg"
+    city: "Erlangen"
+    country: "Germany"
+    lat: 49.591
+    lon: 11.0078
+    x: 525.3
+    y: 70.6
+  - id: "poschlod-p"
+    name: "Peter Poschlod"
+    aliases: []
+    n: 2
+    papers: ["maskova2026hydrological", "valdez2019recruitment"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "radchuk-v"
+    name: "Viktoriia Radchuk"
+    aliases: []
+    n: 2
+    papers: ["fronville2026analyzing", "singer2016community"]
+    institution: "Leibniz Institute for Zoo and Wildlife Research"
+    city: "Berlin"
+    country: "Germany"
+    lat: 52.5244
+    lon: 13.4105
+    x: 530.1
+    y: 62.2
+  - id: "raeder-u"
+    name: "Uta Raeder"
+    aliases: []
+    n: 2
+    papers: ["rubanschi2026impacts", "cabral2024road"]
+    institution: "Technical University of Munich"
+    city: "Iffeldorf"
+    country: "Germany"
+    lat: 47.7727
+    lon: 11.32
+    x: 526.4
+    y: 76.0
+  - id: "rubanschi-s"
+    name: "Sven Rubanschi"
+    aliases: []
+    n: 2
+    papers: ["rubanschi2026impacts", "cabral2024road"]
+    institution: "Technical University of Munich"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4008
+    lon: 11.744
+    x: 527.3
+    y: 74.1
+  - id: "stetter-c"
+    name: "Christian Stetter"
+    aliases: []
+    n: 2
+    papers: ["rubanschi2026impacts", "cabral2024road"]
+    institution: "ETH Zurich"
+    city: "Zurich"
+    country: "Switzerland"
+    lat: 47.3667
+    lon: 8.55
+    x: 520.0
+    y: 77.2
+  - id: "thorand-b"
+    name: "Barbara Thorand"
+    aliases: []
+    n: 2
+    papers: ["herold2026novel", "wiegrebe2024analyzing"]
+    institution: "Helmholtz Munich"
+    city: "Munich"
+    country: "Germany"
+    lat: 48.1374
+    lon: 11.5755
+    x: 526.9
+    y: 74.9
+  - id: "weisser-w"
+    name: "Wolfgang W. Weisser"
+    aliases: ["Wolfgang Weisser"]
+    n: 2
+    papers: ["rubanschi2026impacts", "cabral2024road"]
+    institution: "Technical University of Munich"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4008
+    lon: 11.744
+    x: 527.3
+    y: 74.1
+  - id: "wiegrebe-s"
+    name: "Simon Wiegrebe"
+    aliases: []
+    n: 2
+    papers: ["herold2026novel", "wiegrebe2024analyzing"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "winkler-t"
+    name: "Thomas W. Winkler"
+    aliases: []
+    n: 2
+    papers: ["herold2026novel", "wiegrebe2024analyzing"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "benadi-g"
+    name: "Gita Benadi"
+    aliases: []
+    n: 2
+    papers: ["dormann2025predicting", "fornoff2017functional"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "bush-a"
+    name: "Alex Bush"
+    aliases: []
+    n: 2
+    papers: ["cai2025assembly", "hartig2024novel"]
+    institution: "Lancaster University"
+    city: "Lancaster"
+    country: "United Kingdom"
+    lat: 54.0465
+    lon: -2.7999
+    x: 493.8
+    y: 57.9
+  - id: "de-souza-leite-m"
+    name: "Melina de Souza Leite"
+    aliases: []
+    n: 2
+    papers: ["leite2025dispersion", "hulsmann2024latitudinal"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "fritz-s"
+    name: "Susanne A. Fritz"
+    aliases: ["Susanne Fritz"]
+    n: 2
+    papers: ["machac2025species", "pontarp2019latitudinal"]
+    institution: "Friedrich Schiller University Jena"
+    city: "Jena"
+    country: "Germany"
+    lat: 50.9288
+    lon: 11.5899
+    x: 526.4
+    y: 66.7
+  - id: "jakoby-o"
+    name: "Oliver Jakoby"
+    aliases: []
+    n: 2
+    papers: ["grimm2025using", "mair2020mdd"]
+    institution: "RIFCON GmbH (Germany)"
+    city: "Hirschberg an der Bergstraße"
+    country: "Germany"
+    lat: 49.506
+    lon: 8.6595
+    x: 519.9
+    y: 70.9
+  - id: "kuhl-h"
+    name: "Hjalmar S. Kühl"
+    aliases: []
+    n: 2
+    papers: ["lwin2025human", "henrich2022deer"]
+    institution: "Senckenberg Museum für Naturkunde Görlitz"
+    city: "Görlitz"
+    country: "Germany"
+    lat: 51.1552
+    lon: 14.9885
+    x: 534.0
+    y: 66.1
+  - id: "lajaaiti-i"
+    name: "Ismaël Lajaaiti"
+    aliases: []
+    n: 2
+    papers: ["leroy2025graph", "lajaaiti2023comparison"]
+    institution: "Dynamique et durabilité des écosystèmes : de la source à l'océan"
+    city: "Rennes"
+    country: "France"
+    lat: 48.1111
+    lon: -1.6743
+    x: 496.1
+    y: 75.0
+  - id: "lambert-s"
+    name: "Sophia Lambert"
+    aliases: []
+    n: 2
+    papers: ["leroy2025graph", "lajaaiti2023comparison"]
+    institution: "Institut de Biologie de l'École Normale Supérieure"
+    city: "Paris"
+    country: "France"
+    lat: 48.8534
+    lon: 2.3488
+    x: 505.4
+    y: 72.8
+  - id: "voznica-j"
+    name: "Jakub Voznica"
+    aliases: []
+    n: 2
+    papers: ["leroy2025graph", "lajaaiti2023comparison"]
+    institution: "Institut de Biologie de l'École Normale Supérieure"
+    city: "Paris"
+    country: "France"
+    lat: 48.8534
+    lon: 2.3488
+    x: 505.4
+    y: 72.8
+  - id: "yu-d"
+    name: "Douglas W. Yu"
+    aliases: []
+    n: 2
+    papers: ["cai2025assembly", "hartig2024novel"]
+    institution: "University of East Anglia"
+    city: "Norwich"
+    country: "United Kingdom"
+    lat: 52.6278
+    lon: 1.2983
+    x: 502.9
+    y: 61.9
+  - id: "chase-j"
+    name: "Jonathan M. Chase"
+    aliases: []
+    n: 2
+    papers: ["hartig2024novel", "leibold2022internal"]
+    institution: "German Centre for Integrative Biodiversity Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "chisholm-r"
+    name: "Ryan A. Chisholm"
+    aliases: []
+    n: 2
+    papers: ["hulsmann2024latitudinal", "hulsmann2021variation"]
+    institution: "National University of Singapore"
+    city: "Singapore"
+    country: "Singapore"
+    lat: 1.2897
+    lon: 103.8501
+    x: 788.4
+    y: 238.5
+  - id: "comita-l"
+    name: "Liza S. Comita"
+    aliases: ["Liza Comita"]
+    n: 2
+    papers: ["lamanna2024consequences", "hulsmann2024latitudinal"]
+    institution: "Yale University"
+    city: "New Haven"
+    country: "United States"
+    lat: 41.3081
+    lon: -72.9282
+    x: 321.9
+    y: 96.1
+  - id: "detto-m"
+    name: "Matteo Detto"
+    aliases: []
+    n: 2
+    papers: ["lamanna2024consequences", "barraquand2021inferring"]
+    institution: "Princeton University"
+    city: "Princeton"
+    country: "United States"
+    lat: 40.3487
+    lon: -74.659
+    x: 316.6
+    y: 99.1
+  - id: "gruebler-m"
+    name: "Martin U. Grüebler"
+    aliases: []
+    n: 2
+    papers: ["malchow2024fitting", "hauenstein2019calibrating"]
+    institution: "Swiss Ornithological Institute"
+    city: "Sempach"
+    country: "Switzerland"
+    lat: 47.1358
+    lon: 8.1915
+    x: 519.2
+    y: 77.9
+  - id: "johnson-d"
+    name: "Daniel J. Johnson"
+    aliases: []
+    n: 2
+    papers: ["lamanna2024consequences", "hulsmann2024latitudinal"]
+    institution: "University of Florida"
+    city: "Gainesville"
+    country: "United States"
+    lat: 29.6516
+    lon: -82.3248
+    x: 285.8
+    y: 135.0
+  - id: "kery-m"
+    name: "Marc Kéry"
+    aliases: ["M. Kéry"]
+    n: 2
+    papers: ["malchow2024fitting", "malchow2023demography"]
+    institution: "Swiss Ornithological Institute"
+    city: "Sempach"
+    country: "Switzerland"
+    lat: 47.1358
+    lon: 8.1915
+    x: 519.2
+    y: 77.9
+  - id: "nathalang-a"
+    name: "Anuttara Nathalang"
+    aliases: []
+    n: 2
+    papers: ["hulsmann2024latitudinal", "chanthorn2019defaunation"]
+    institution: "National Science and Technology Development Agency"
+    city: "Pathum Thani"
+    country: "Thailand"
+    lat: 14.0135
+    lon: 100.5305
+    x: 775.3
+    y: 191.2
+  - id: "pollock-l"
+    name: "Laura J. Pollock"
+    aliases: ["Laura Pollock"]
+    n: 2
+    papers: ["hartig2024novel", "dormann2018model"]
+    institution: "McGill University"
+    city: "Montreal"
+    country: "Canada"
+    lat: 45.5088
+    lon: -73.5878
+    x: 325.5
+    y: 82.9
+  - id: "arneth-a"
+    name: "Almut Arneth"
+    aliases: []
+    n: 2
+    papers: ["oberpriller2022climate", "oberpriller2021modellunsicherheiten"]
+    institution: "Karlsruhe Institute of Technology"
+    city: "Karlsruhe"
+    country: "Germany"
+    lat: 49.0094
+    lon: 8.4044
+    x: 519.4
+    y: 72.3
+  - id: "augustynczik-a"
+    name: "Andrey L.D. Augustynczik"
+    aliases: ["Andrey L. D. Augustynczik"]
+    n: 2
+    papers: ["mahnken2022accuracy", "augustynczik2017productivity"]
+    institution: "International Institute for Applied Systems Analysis"
+    city: "Laxenburg"
+    country: "Austria"
+    lat: 48.0683
+    lon: 16.3561
+    x: 538.1
+    y: 75.1
+  - id: "barraquand-f"
+    name: "Frédéric Barraquand"
+    aliases: []
+    n: 2
+    papers: ["hartig2022evidence", "barraquand2021inferring"]
+    institution: "Institut de Mathématiques de Bordeaux"
+    city: "Talence"
+    country: "France"
+    lat: 44.8085
+    lon: -0.5891
+    x: 498.6
+    y: 85.0
+  - id: "collalti-a"
+    name: "Alessio Collalti"
+    aliases: []
+    n: 2
+    papers: ["mahnken2022accuracy", "reyer2020profound"]
+    institution: "Institute for Agricultural and Forest Systems in the Mediterranean"
+    city: "Perugia"
+    country: "Italy"
+    lat: 43.107
+    lon: 12.403
+    x: 529.9
+    y: 90.3
+  - id: "d-andrea-e"
+    name: "Ettore D'Andrea"
+    aliases: []
+    n: 2
+    papers: ["mahnken2022accuracy", "reyer2020profound"]
+    institution: "Consiglio Nazionale delle Ricerche - Istituto di Ricerca sugli Ecosistemi Terrestri"
+    city: "Porano"
+    country: "Italy"
+    lat: 42.681
+    lon: 12.1033
+    x: 529.3
+    y: 91.7
+  - id: "gutsch-m"
+    name: "Martin Gutsch"
+    aliases: []
+    n: 2
+    papers: ["mahnken2022accuracy", "reyer2020profound"]
+    institution: "Potsdam Institute for Climate Impact Research"
+    city: "Potsdam"
+    country: "Germany"
+    lat: 52.3989
+    lon: 13.0657
+    x: 529.3
+    y: 62.5
+  - id: "henrich-m"
+    name: "Maik Henrich"
+    aliases: []
+    n: 2
+    papers: ["henrich2022deer", "henrich2020influence"]
+    institution: "Bavarian Forest National Park"
+    city: "Grafenau"
+    country: "Germany"
+    lat: 48.8577
+    lon: 13.3974
+    x: 531.0
+    y: 72.8
+  - id: "herschlein-c"
+    name: "Christine Herschlein"
+    aliases: []
+    n: 2
+    papers: ["oberpriller2022climate", "oberpriller2021modellunsicherheiten"]
+    institution: "Karlsruhe Institute of Technology"
+    city: "Garmisch-Partenkirchen"
+    country: "Germany"
+    lat: 47.4924
+    lon: 11.0963
+    x: 525.9
+    y: 76.9
+  - id: "krejza-j"
+    name: "Jan Krejza"
+    aliases: []
+    n: 2
+    papers: ["mahnken2022accuracy", "reyer2020profound"]
+    institution: "Mendel University in Brno"
+    city: "Brno"
+    country: "Czechia"
+    lat: 49.1952
+    lon: 16.608
+    x: 538.3
+    y: 71.8
+  - id: "mahnken-m"
+    name: "Mats Mahnken"
+    aliases: []
+    n: 2
+    papers: ["mahnken2022accuracy", "reyer2020profound"]
+    institution: "Potsdam Institute for Climate Impact Research"
+    city: "Potsdam"
+    country: "Germany"
+    lat: 52.3989
+    lon: 13.0657
+    x: 529.3
+    y: 62.5
+  - id: "matteucci-g"
+    name: "Giorgio Matteucci"
+    aliases: []
+    n: 2
+    papers: ["mahnken2022accuracy", "reyer2020profound"]
+    institution: "Istituto per la BioEconomia"
+    city: "Rome"
+    country: "Italy"
+    lat: 41.8933
+    lon: 12.4829
+    x: 530.4
+    y: 94.2
+  - id: "meesenburg-h"
+    name: "Henning Meesenburg"
+    aliases: []
+    n: 2
+    papers: ["mahnken2022accuracy", "reyer2020profound"]
+    institution: "Nordwestdeutsche Forstliche Versuchsanstalt"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "merganic-j"
+    name: "Ján Merganič"
+    aliases: ["Jan Merganic"]
+    n: 2
+    papers: ["mahnken2022accuracy", "bugmann2019tree"]
+    institution: "Technická univerzita vo Zvolene"
+    city: "Zvolen"
+    country: "Slovakia"
+    lat: 48.5744
+    lon: 19.1532
+    x: 544.4
+    y: 73.6
+  - id: "merganicova-k"
+    name: "Katarína Merganičová"
+    aliases: ["Katarina Merganičová"]
+    n: 2
+    papers: ["mahnken2022accuracy", "bugmann2019tree"]
+    institution: "Czech University of Life Sciences Prague"
+    city: "Prague"
+    country: "Czechia"
+    lat: 50.088
+    lon: 14.4208
+    x: 533.0
+    y: 69.2
+  - id: "robin-s"
+    name: "Stéphane Robin"
+    aliases: []
+    n: 2
+    papers: ["morlon2022studying", "morlon2020prior"]
+    institution: "Sorbonne Université"
+    city: "Paris"
+    country: "France"
+    lat: 48.8534
+    lon: 2.3488
+    x: 505.4
+    y: 72.8
+  - id: "rotzer-t"
+    name: "Thomas Rötzer"
+    aliases: []
+    n: 2
+    papers: ["mahnken2022accuracy", "reyer2020profound"]
+    institution: "Technical University of Munich"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4008
+    lon: 11.744
+    x: 527.3
+    y: 74.1
+  - id: "trotta-c"
+    name: "Carlo Trotta"
+    aliases: []
+    n: 2
+    papers: ["mahnken2022accuracy", "reyer2020profound"]
+    institution: "CMCC Foundation - Euro-Mediterranean Center on Climate Change"
+    city: "Viterbo"
+    country: "Italy"
+    lat: 42.493
+    lon: 11.9488
+    x: 528.9
+    y: 92.3
+  - id: "van-oijen-m"
+    name: "Marcel van Oijen"
+    aliases: ["Marcel Van Oijen"]
+    n: 2
+    papers: ["cameron2022issues", "vanoijen2013bayesian"]
+    institution: "Biomathematics and Statistics Scotland"
+    city: "Edinburgh"
+    country: "United Kingdom"
+    lat: 55.9521
+    lon: -3.1965
+    x: 493.0
+    y: 52.8
+  - id: "vega-del-valle-i"
+    name: "Iliusi D. Vega del Valle"
+    aliases: ["Iliusi Vega del Valle"]
+    n: 2
+    papers: ["mahnken2022accuracy", "reyer2020profound"]
+    institution: "Centro Nacional de Derechos Humanos Rosario Ibarra de Piedra (CENADEH), Comision Nacional de los Derechos Humanos"
+    city: "Mexico City"
+    country: "Mexico"
+    lat: 19.3208
+    lon: -99.1515
+    x: 232.0
+    y: 171.8
+  - id: "volkholz-j"
+    name: "Jan Volkholz"
+    aliases: []
+    n: 2
+    papers: ["mahnken2022accuracy", "reyer2020profound"]
+    institution: "Potsdam Institute for Climate Impact Research"
+    city: "Potsdam"
+    country: "Germany"
+    lat: 52.3989
+    lon: 13.0657
+    x: 529.3
+    y: 62.5
+  - id: "lischke-h"
+    name: "Heike Lischke"
+    aliases: []
+    n: 2
+    papers: ["chalmandrier2021linking", "dormann2018biotic"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "meyer-k"
+    name: "Katrin M. Meyer"
+    aliases: []
+    n: 2
+    papers: ["udy2021environmental", "singer2016community"]
+    institution: "University of Göttingen"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "rangel-t"
+    name: "Thiago F. Rangel"
+    aliases: []
+    n: 2
+    papers: ["hagen2021gen3sis", "pontarp2019latitudinal"]
+    institution: "Universidade Federal de Goiás"
+    city: "Goiânia"
+    country: "Brazil"
+    lat: -16.6786
+    lon: -49.2539
+    x: 365.9
+    y: 305.3
+  - id: "reisch-c"
+    name: "Christoph Reisch"
+    aliases: []
+    n: 2
+    papers: ["reisch2021species", "reisch2018comparison"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "aslan-c"
+    name: "Clare E Aslan"
+    aliases: ["Clare Aslan"]
+    n: 2
+    papers: ["beckman2020advancing", "aslan2019employing"]
+    institution: "Northern Arizona University"
+    city: "Flagstaff"
+    country: "United States"
+    lat: 35.1981
+    lon: -111.6513
+    x: 217.3
+    y: 116.1
+  - id: "babst-f"
+    name: "Flurin Babst"
+    aliases: []
+    n: 2
+    papers: ["trotsiuk2020assessing", "reyer2020profound"]
+    institution: "University of Arizona"
+    city: "Tucson"
+    country: "United States"
+    lat: 32.2217
+    lon: -110.9265
+    x: 214.8
+    y: 126.2
+  - id: "brodie-j"
+    name: "Jedediah F Brodie"
+    aliases: ["Jedediah Brodie"]
+    n: 2
+    papers: ["beckman2020advancing", "aslan2019employing"]
+    institution: "University of Montana"
+    city: "Missoula"
+    country: "United States"
+    lat: 46.8721
+    lon: -113.994
+    x: 232.3
+    y: 78.7
+  - id: "bronstein-j"
+    name: "Judith L Bronstein"
+    aliases: ["Judie Bronstein"]
+    n: 2
+    papers: ["beckman2020advancing", "aslan2019employing"]
+    institution: "University of Arizona"
+    city: "Tucson"
+    country: "United States"
+    lat: 32.2217
+    lon: -110.9265
+    x: 214.8
+    y: 126.2
+  - id: "bruna-e"
+    name: "Emilio M Bruna"
+    aliases: ["Emilio Bruna"]
+    n: 2
+    papers: ["beckman2020advancing", "aslan2019employing"]
+    institution: "University of Florida"
+    city: "Gainesville"
+    country: "United States"
+    lat: 29.6516
+    lon: -82.3248
+    x: 285.8
+    y: 135.0
+  - id: "decker-r"
+    name: "Robin R Decker"
+    aliases: ["Robin Decker"]
+    n: 2
+    papers: ["beckman2020advancing", "aslan2019employing"]
+    institution: "University of California, Davis"
+    city: "Davis"
+    country: "United States"
+    lat: 38.5449
+    lon: -121.7405
+    x: 197.6
+    y: 105.0
+  - id: "effiom-e"
+    name: "Edu Effiom"
+    aliases: ["Edu Efiom"]
+    n: 2
+    papers: ["beckman2020advancing", "aslan2019employing"]
+    institution: "Cross River State Forestry Commission"
+    city: "Calabar"
+    country: "Nigeria"
+    lat: 4.9796
+    lon: 8.3374
+    x: 523.1
+    y: 224.7
+  - id: "forrester-d"
+    name: "David I. Forrester"
+    aliases: []
+    n: 2
+    papers: ["trotsiuk2020r3pg", "trotsiuk2020assessing"]
+    institution: "Commonwealth Scientific and Industrial Research Organisation"
+    city: "Canberra"
+    country: "Australia"
+    lat: -35.2835
+    lon: 149.1281
+    x: 877.4
+    y: 370.9
+  - id: "fricke-e"
+    name: "Evan C Fricke"
+    aliases: ["Evan Fricke"]
+    n: 2
+    papers: ["beckman2020advancing", "aslan2019employing"]
+    institution: "Massachusetts Institute of Technology"
+    city: "Cambridge"
+    country: "United States"
+    lat: 42.3751
+    lon: -71.1056
+    x: 327.6
+    y: 92.7
+  - id: "gurski-k"
+    name: "Katie Gurski"
+    aliases: ["Katherine Gurski"]
+    n: 2
+    papers: ["beckman2020advancing", "aslan2019employing"]
+    institution: "Howard University"
+    city: "Washington"
+    country: "United States"
+    lat: 38.8951
+    lon: -77.0364
+    x: 309.0
+    y: 103.9
+  - id: "hillerislambers-j"
+    name: "Janneke HilleRisLambers"
+    aliases: []
+    n: 2
+    papers: ["beckman2020advancing", "aslan2019employing"]
+    institution: "ETH Zurich"
+    city: "Zurich"
+    country: "Switzerland"
+    lat: 47.3667
+    lon: 8.55
+    x: 520.0
+    y: 77.2
+  - id: "klein-a"
+    name: "Alexandra-Maria Klein"
+    aliases: []
+    n: 2
+    papers: ["pichler2020machine", "fornoff2017functional"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "kogan-o"
+    name: "Oleg Kogan"
+    aliases: []
+    n: 2
+    papers: ["beckman2020advancing", "aslan2019employing"]
+    institution: "Queens College, CUNY"
+    city: "New York"
+    country: "United States"
+    lat: 40.7143
+    lon: -74.006
+    x: 318.6
+    y: 98.0
+  - id: "kroschel-m"
+    name: "Max Kröschel"
+    aliases: []
+    n: 2
+    papers: ["henrich2020influence", "brieger2017roe"]
+    institution: "Forstliche Versuchs- und Forschungsanstalt Baden-Württemberg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "miriti-m"
+    name: "Maria N Miriti"
+    aliases: ["Maria Miriti"]
+    n: 2
+    papers: ["beckman2020advancing", "aslan2019employing"]
+    institution: "The Ohio State University"
+    city: "Columbus"
+    country: "United States"
+    lat: 39.9612
+    lon: -82.9988
+    x: 295.6
+    y: 100.4
+  - id: "neubert-m"
+    name: "Michael G Neubert"
+    aliases: ["Mike Neubert"]
+    n: 2
+    papers: ["beckman2020advancing", "aslan2019employing"]
+    institution: "Woods Hole Oceanographic Institution"
+    city: "Falmouth"
+    country: "United States"
+    lat: 41.5515
+    lon: -70.6148
+    x: 327.9
+    y: 95.3
+  - id: "palacios-orueta-a"
+    name: "Alicia Palacios-Orueta"
+    aliases: []
+    n: 2
+    papers: ["ruizbenito2020available", "reyer2020profound"]
+    institution: "Universidad Politécnica de Madrid"
+    city: "Madrid"
+    country: "Spain"
+    lat: 40.4165
+    lon: -3.7026
+    x: 490.9
+    y: 98.9
+  - id: "poulsen-j"
+    name: "John R Poulsen"
+    aliases: ["John Poulsen"]
+    n: 2
+    papers: ["beckman2020advancing", "aslan2019employing"]
+    institution: "The Nature Conservancy"
+    city: "Boulder"
+    country: "United States"
+    lat: 40.015
+    lon: -105.2705
+    x: 240.9
+    y: 100.2
+  - id: "sanders-t"
+    name: "Tanja G. M. Sanders"
+    aliases: []
+    n: 2
+    papers: ["reyer2020profound", "berzaghi2020towards"]
+    institution: "Johann Heinrich von Thünen-Institut"
+    city: "Eberswalde"
+    country: "Germany"
+    lat: 52.8351
+    lon: 13.7997
+    x: 530.9
+    y: 61.3
+  - id: "schleuning-m"
+    name: "Matthias Schleuning"
+    aliases: []
+    n: 2
+    papers: ["pichler2020machine", "dormann2018biotic"]
+    institution: "Senckenberg Biodiversity and Climate Research Centre"
+    city: "Frankfurt am Main"
+    country: "Germany"
+    lat: 50.1155
+    lon: 8.6842
+    x: 519.9
+    y: 69.1
+  - id: "schreiber-s"
+    name: "Sebastian Schreiber"
+    aliases: []
+    n: 2
+    papers: ["beckman2020advancing", "aslan2019employing"]
+    institution: "University of California, Davis"
+    city: "Davis"
+    country: "United States"
+    lat: 38.5449
+    lon: -121.7405
+    x: 197.6
+    y: 105.0
+  - id: "snell-r"
+    name: "Rebecca S Snell"
+    aliases: ["Rebecca Snell"]
+    n: 2
+    papers: ["beckman2020advancing", "aslan2019employing"]
+    institution: "Ohio University"
+    city: "Athens"
+    country: "United States"
+    lat: 39.3292
+    lon: -82.1013
+    x: 297.0
+    y: 102.4
+  - id: "suckow-f"
+    name: "Felicitas Suckow"
+    aliases: []
+    n: 2
+    papers: ["reyer2020profound", "bugmann2019tree"]
+    institution: "Potsdam Institute for Climate Impact Research"
+    city: "Potsdam"
+    country: "Germany"
+    lat: 52.3989
+    lon: 13.0657
+    x: 529.3
+    y: 62.5
+  - id: "vacchiano-g"
+    name: "Giorgio Vacchiano"
+    aliases: []
+    n: 2
+    papers: ["ruizbenito2020available", "bugmann2019tree"]
+    institution: "University of Milan"
+    city: "Milan"
+    country: "Italy"
+    lat: 45.4643
+    lon: 9.1895
+    x: 521.8
+    y: 83.0
+  - id: "zavala-m"
+    name: "Miguel A. Zavala"
+    aliases: []
+    n: 2
+    papers: ["ruizbenito2020available", "marques2018last"]
+    institution: "Universidad de Alcalá"
+    city: "Alcalá de Henares"
+    country: "Spain"
+    lat: 40.4821
+    lon: -3.36
+    x: 491.8
+    y: 98.7
+  - id: "zhou-y"
+    name: "Ying Zhou"
+    aliases: []
+    n: 2
+    papers: ["beckman2020advancing", "aslan2019employing"]
+    institution: "Lafayette College"
+    city: "Easton"
+    country: "United States"
+    lat: 40.6884
+    lon: -75.2207
+    x: 315.6
+    y: 98.0
+  - id: "chanthorn-w"
+    name: "Wirong Chanthorn"
+    aliases: []
+    n: 2
+    papers: ["chanthorn2019defaunation", "chanthorn2017structure"]
+    institution: "Kasetsart University"
+    city: "Bangkok"
+    country: "Thailand"
+    lat: 13.754
+    lon: 100.5014
+    x: 775.3
+    y: 192.1
+  - id: "hauenstein-s"
+    name: "Severin Hauenstein"
+    aliases: []
+    n: 2
+    papers: ["hauenstein2019calibrating", "roberts2017cross"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "maliet-o"
+    name: "Odile Maliet"
+    aliases: []
+    n: 2
+    papers: ["pontarp2019latitudinal", "maliet2019model"]
+    institution: "Institut de Biologie de l'École Normale Supérieure"
+    city: "Paris"
+    country: "France"
+    lat: 48.8534
+    lon: 2.3488
+    x: 505.4
+    y: 72.8
+  - id: "mette-t"
+    name: "Tobias Mette"
+    aliases: []
+    n: 2
+    papers: ["bugmann2019tree", "vanoijen2013bayesian"]
+    institution: "Bayerische Landesanstalt für Wald und Forstwirtschaft"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4035
+    lon: 11.7488
+    x: 527.3
+    y: 74.1
+  - id: "rammer-w"
+    name: "Werner Rammer"
+    aliases: []
+    n: 2
+    papers: ["bugmann2019tree", "vanoijen2013bayesian"]
+    institution: "Technical University of Munich"
+    city: "Munich"
+    country: "Germany"
+    lat: 48.1374
+    lon: 11.5755
+    x: 526.9
+    y: 74.9
+  - id: "bahn-v"
+    name: "Volker Bahn"
+    aliases: []
+    n: 2
+    papers: ["dormann2018model", "roberts2017cross"]
+    institution: "Wright State University"
+    city: "Dayton"
+    country: "United States"
+    lat: 39.7589
+    lon: -84.1916
+    x: 292.4
+    y: 101.0
+  - id: "ciuti-s"
+    name: "Simone Ciuti"
+    aliases: []
+    n: 2
+    papers: ["dormann2018model", "roberts2017cross"]
+    institution: "University College Dublin"
+    city: "Dublin"
+    country: "Ireland"
+    lat: 53.3331
+    lon: -6.2489
+    x: 486.1
+    y: 59.9
+  - id: "elith-j"
+    name: "Jane Elith"
+    aliases: []
+    n: 2
+    papers: ["dormann2018model", "roberts2017cross"]
+    institution: "The University of Melbourne"
+    city: "Melbourne"
+    country: "Australia"
+    lat: -37.814
+    lon: 144.9633
+    x: 861.7
+    y: 379.3
+  - id: "lahoz-monfort-j"
+    name: "José J. Lahoz-Monfort"
+    aliases: []
+    n: 2
+    papers: ["dormann2018model", "roberts2017cross"]
+    institution: "Instituto Pirenaico de Ecología"
+    city: "Jaca"
+    country: "Spain"
+    lat: 42.5693
+    lon: -0.5494
+    x: 498.7
+    y: 92.0
+  - id: "roberts-d"
+    name: "David R. Roberts"
+    aliases: []
+    n: 2
+    papers: ["dormann2018model", "roberts2017cross"]
+    institution: "Alberta Biodiversity Monitoring Institute"
+    city: "Calgary"
+    country: "Canada"
+    lat: 51.0456
+    lon: -114.0575
+    x: 240.9
+    y: 66.4
+  - id: "wintle-b"
+    name: "Brendan A. Wintle"
+    aliases: []
+    n: 2
+    papers: ["dormann2018model", "roberts2017cross"]
+    institution: "The University of Melbourne"
+    city: "Melbourne"
+    country: "Australia"
+    lat: -37.814
+    lon: 144.9633
+    x: 861.7
+    y: 379.3
+  - id: "wood-s"
+    name: "Simon N. Wood"
+    aliases: []
+    n: 2
+    papers: ["fasiolo2018extended", "dormann2018model"]
+    institution: "University of Edinburgh"
+    city: "Edinburgh"
+    country: "United Kingdom"
+    lat: 55.9521
+    lon: -3.1965
+    x: 493.0
+    y: 52.8
+  - id: "biedermann-r"
+    name: "Robert Biedermann"
+    aliases: []
+    n: 2
+    papers: ["panassiti2017identifying", "panassiti2015bayesian"]
+  - id: "breuer-m"
+    name: "Michael Breuer"
+    aliases: []
+    n: 2
+    papers: ["panassiti2017identifying", "panassiti2015bayesian"]
+    institution: "Staatliches Weinbauinstitut Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "fahrentrapp-j"
+    name: "Johannes Fahrentrapp"
+    aliases: []
+    n: 2
+    papers: ["panassiti2017identifying", "schiro2015genetic"]
+    institution: "Verein für Krebsforschung"
+    city: "Arlesheim"
+    country: "Switzerland"
+    lat: 47.4941
+    lon: 7.6198
+    x: 517.8
+    y: 76.8
+  - id: "berger-c"
+    name: "Christian Berger"
+    aliases: []
+    n: 2
+    papers: ["latifi2015stratified", "fassnacht2014importance"]
+    institution: "City of Jena, Dept. for Urban Development and Environment (Team Geoinformation)"
+    city: "Jena"
+    country: "Germany"
+    lat: 50.9282
+    lon: 11.5879
+    x: 526.3
+    y: 66.7
+  - id: "corvalan-p"
+    name: "Patricio Corvalán"
+    aliases: []
+    n: 2
+    papers: ["latifi2015stratified", "fassnacht2014importance"]
+    institution: "University of Chile"
+    city: "Santiago"
+    country: "Chile"
+    lat: -33.4569
+    lon: -70.6483
+    x: 319.5
+    y: 364.8
+  - id: "hernandez-j"
+    name: "Jaime Hernández"
+    aliases: []
+    n: 2
+    papers: ["latifi2015stratified", "fassnacht2014importance"]
+    institution: "University of Chile"
+    city: "Santiago"
+    country: "Chile"
+    lat: -33.4569
+    lon: -70.6483
+    x: 319.5
+    y: 364.8
+  - id: "koch-b"
+    name: "Barbara Koch"
+    aliases: []
+    n: 2
+    papers: ["latifi2015stratified", "fassnacht2014importance"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "opdam-p"
+    name: "Paul Opdam"
+    aliases: []
+    n: 2
+    papers: ["teeffelen2014ecological", "johst2011biodiversity"]
+    institution: "Wageningen University & Research"
+    city: "Wageningen"
+    country: "The Netherlands"
+    lat: 51.97
+    lon: 5.6667
+    x: 512.8
+    y: 63.8
+  - id: "van-teeffelen-a"
+    name: "Astrid J. A. van Teeffelen"
+    aliases: []
+    n: 2
+    papers: ["teeffelen2014ecological", "johst2011biodiversity"]
+    institution: "Vrije Universiteit Amsterdam"
+    city: "Amsterdam"
+    country: "The Netherlands"
+    lat: 52.374
+    lon: 4.8897
+    x: 511.0
+    y: 62.6
+  - id: "vos-c"
+    name: "Claire C. Vos"
+    aliases: []
+    n: 2
+    papers: ["teeffelen2014ecological", "johst2011biodiversity"]
+    institution: "Wageningen University & Research"
+    city: "Wageningen"
+    country: "The Netherlands"
+    lat: 51.97
+    lon: 5.6667
+    x: 512.8
+    y: 63.8
+  - id: "chuine-i"
+    name: "Isabelle Chuine"
+    aliases: []
+    n: 2
+    papers: ["schymanski2013process", "dormann2012correlation"]
+    institution: "Centre d'Écologie Fonctionnelle et Évolutive"
+    city: "Montpellier"
+    country: "France"
+    lat: 43.6109
+    lon: 3.8763
+    x: 509.3
+    y: 88.8
+  - id: "kearney-m"
+    name: "Michael Kearney"
+    aliases: []
+    n: 2
+    papers: ["schymanski2013process", "dormann2012correlation"]
+    institution: "The University of Melbourne"
+    city: "Melbourne"
+    country: "Australia"
+    lat: -37.814
+    lon: 144.9633
+    x: 861.7
+    y: 379.3
+  - id: "romermann-c"
+    name: "Christine Römermann"
+    aliases: []
+    n: 2
+    papers: ["schymanski2013process", "dormann2012correlation"]
+    institution: "Friedrich Schiller University Jena"
+    city: "Jena"
+    country: "Germany"
+    lat: 50.9288
+    lon: 11.5899
+    x: 526.4
+    y: 66.7
+  - id: "schymanski-s"
+    name: "Stanislaus J. Schymanski"
+    aliases: []
+    n: 2
+    papers: ["schymanski2013process", "dormann2012correlation"]
+    institution: "Luxembourg Institute of Science and Technology"
+    city: "Belvaux"
+    country: "Luxembourg"
+    lat: 49.5101
+    lon: 5.9241
+    x: 513.6
+    y: 70.9
+  - id: "artola-j"
+    name: "Jordi Artola"
+    aliases: []
+    n: 1
+    papers: ["hannappel2026local"]
+    institution: "DORCUS, Observatori dels Invertebrats"
+    city: "Olot"
+    country: "Spain"
+    lat: 42.1822
+    lon: 2.489
+    x: 506.0
+    y: 93.3
+  - id: "barth-p"
+    name: "Patrick Barth"
+    aliases: []
+    n: 1
+    papers: ["barth2026efficiency"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "behr-m"
+    name: "Merle Behr"
+    aliases: []
+    n: 1
+    papers: ["herold2026novel"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "cabodevilla-x"
+    name: "Xabier Cabodevilla"
+    aliases: []
+    n: 1
+    papers: ["hannappel2026local"]
+    institution: "University of the Basque Country"
+    city: "Vitoria-Gasteiz"
+    country: "Spain"
+    lat: 42.8506
+    lon: -2.6614
+    x: 493.6
+    y: 91.2
+  - id: "devalez-j"
+    name: "Jelle Devalez"
+    aliases: []
+    n: 1
+    papers: ["hannappel2026local"]
+    institution: "University of Tartu"
+    city: "Tartu"
+    country: "Estonia"
+    lat: 58.3806
+    lon: 26.7251
+    x: 556.8
+    y: 46.4
+  - id: "drumm-j"
+    name: "Jakob Drumm"
+    aliases: []
+    n: 1
+    papers: ["barth2026efficiency"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "fronville-t"
+    name: "Thibault Fronville"
+    aliases: []
+    n: 1
+    papers: ["fronville2026analyzing"]
+    institution: "Leibniz Institute for Zoo and Wildlife Research"
+    city: "Berlin"
+    country: "Germany"
+    lat: 52.5244
+    lon: 13.4105
+    x: 530.1
+    y: 62.2
+  - id: "giralt-d"
+    name: "David Giralt"
+    aliases: []
+    n: 1
+    papers: ["hannappel2026local"]
+    institution: "Forest Science and Technology Centre of Catalonia"
+    city: "Solsona"
+    country: "Spain"
+    lat: 41.9939
+    lon: 1.5171
+    x: 503.7
+    y: 93.9
+  - id: "gosling-e"
+    name: "Elizabeth Gosling"
+    aliases: []
+    n: 1
+    papers: ["rubanschi2026impacts"]
+    institution: "Technical University of Munich"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4008
+    lon: 11.744
+    x: 527.3
+    y: 74.1
+  - id: "grabow-m"
+    name: "Marius Grabow"
+    aliases: []
+    n: 1
+    papers: ["fronville2026analyzing"]
+    institution: "Leibniz Institute for Zoo and Wildlife Research"
+    city: "Berlin"
+    country: "Germany"
+    lat: 52.5244
+    lon: 13.4105
+    x: 530.1
+    y: 62.2
+  - id: "gregor-k"
+    name: "Konstantin Gregor"
+    aliases: []
+    n: 1
+    papers: ["rubanschi2026impacts"]
+    institution: "Technical University of Munich"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4008
+    lon: 11.744
+    x: 527.3
+    y: 74.1
+  - id: "hannappel-i"
+    name: "Ira Hannappel"
+    aliases: []
+    n: 1
+    papers: ["hannappel2026local"]
+    institution: "University of Göttingen"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "hass-a"
+    name: "Annika L. Hass"
+    aliases: []
+    n: 1
+    papers: ["hannappel2026local"]
+    institution: "University of Göttingen"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "helm-a"
+    name: "Aveliina Helm"
+    aliases: []
+    n: 1
+    papers: ["hannappel2026local"]
+    institution: "University of Tartu"
+    city: "Tartu"
+    country: "Estonia"
+    lat: 58.3806
+    lon: 26.7251
+    x: 556.8
+    y: 46.4
+  - id: "jacquemyn-h"
+    name: "Hans Jacquemyn"
+    aliases: []
+    n: 1
+    papers: ["hannappel2026local"]
+    institution: "KU Leuven"
+    city: "Leuven"
+    country: "Belgium"
+    lat: 50.8796
+    lon: 4.7009
+    x: 510.7
+    y: 66.9
+  - id: "jang-y"
+    name: "Yun-Ting Jang"
+    aliases: []
+    n: 1
+    papers: ["hurlbert2026evaluating"]
+    institution: "Lund University"
+    city: "Lund"
+    country: "Sweden"
+    lat: 55.7058
+    lon: 13.1932
+    x: 528.8
+    y: 53.4
+  - id: "janzen-t"
+    name: "Thijs Janzen"
+    aliases: []
+    n: 1
+    papers: ["hurlbert2026evaluating"]
+    institution: "University of Groningen"
+    city: "Groningen"
+    country: "The Netherlands"
+    lat: 53.2192
+    lon: 6.5667
+    x: 514.6
+    y: 60.2
+  - id: "jarisch-i"
+    name: "Isabelle Jarisch"
+    aliases: []
+    n: 1
+    papers: ["rubanschi2026impacts"]
+    institution: "Technical University of Munich"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4008
+    lon: 11.744
+    x: 527.3
+    y: 74.1
+  - id: "keller-a"
+    name: "Alexander Keller"
+    aliases: []
+    n: 1
+    papers: ["hannappel2026local"]
+    institution: "Ludwig-Maximilians-Universität München"
+    city: "Munich"
+    country: "Germany"
+    lat: 48.1374
+    lon: 11.5755
+    x: 526.9
+    y: 74.9
+  - id: "libran-embid-f"
+    name: "Felipe Librán-Embid"
+    aliases: []
+    n: 1
+    papers: ["hannappel2026local"]
+    institution: "Justus-Liebig-Universität Gießen"
+    city: "Giessen"
+    country: "Germany"
+    lat: 50.5873
+    lon: 8.6755
+    x: 519.8
+    y: 67.7
+  - id: "maskova-t"
+    name: "Tereza Mašková"
+    aliases: []
+    n: 1
+    papers: ["maskova2026hydrological"]
+    institution: "Friedrich Schiller University Jena"
+    city: "Jena"
+    country: "Germany"
+    lat: 50.9288
+    lon: 11.5899
+    x: 526.4
+    y: 66.7
+  - id: "meyer-s"
+    name: "Sebastian T. Meyer"
+    aliases: []
+    n: 1
+    papers: ["rubanschi2026impacts"]
+    institution: "Technische Universität Braunschweig"
+    city: "Braunschweig"
+    country: "Germany"
+    lat: 52.2659
+    lon: 10.5267
+    x: 523.7
+    y: 62.9
+  - id: "naagel-l"
+    name: "Laura Naagel"
+    aliases: []
+    n: 1
+    papers: ["hannappel2026local"]
+    institution: "University of Tartu"
+    city: "Tartu"
+    country: "Estonia"
+    lat: 58.3806
+    lon: 26.7251
+    x: 556.8
+    y: 46.4
+  - id: "osterman-j"
+    name: "Julia Osterman"
+    aliases: []
+    n: 1
+    papers: ["wintermantel2026equivalence"]
+    institution: "University of Gothenburg"
+    city: "Gothenburg"
+    country: "Sweden"
+    lat: 57.7072
+    lon: 11.9668
+    x: 525.6
+    y: 48.1
+  - id: "peters-a"
+    name: "Annette Peters"
+    aliases: []
+    n: 1
+    papers: ["herold2026novel"]
+    institution: "Helmholtz Munich"
+    city: "Munich"
+    country: "Germany"
+    lat: 48.1374
+    lon: 11.5755
+    x: 526.9
+    y: 74.9
+  - id: "reiss-m"
+    name: "Mona Reiss"
+    aliases: []
+    n: 1
+    papers: ["rubanschi2026impacts"]
+    institution: "Technical University of Munich"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4008
+    lon: 11.744
+    x: 527.3
+    y: 74.1
+  - id: "reitalu-t"
+    name: "Triin Reitalu"
+    aliases: []
+    n: 1
+    papers: ["hannappel2026local"]
+    institution: "University of Tartu"
+    city: "Tartu"
+    country: "Estonia"
+    lat: 58.3806
+    lon: 26.7251
+    x: 556.8
+    y: 46.4
+  - id: "santos-neves-p"
+    name: "Pedro Santos Neves"
+    aliases: []
+    n: 1
+    papers: ["hurlbert2026evaluating"]
+    institution: "University of Groningen"
+    city: "Groningen"
+    country: "The Netherlands"
+    lat: 53.2192
+    lon: 6.5667
+    x: 514.6
+    y: 60.2
+  - id: "sauer-j"
+    name: "Johannes Sauer"
+    aliases: []
+    n: 1
+    papers: ["rubanschi2026impacts"]
+    institution: "Technical University of Munich"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4008
+    lon: 11.744
+    x: 527.3
+    y: 74.1
+  - id: "schmidt-a"
+    name: "Alexandra Erika Schmidt"
+    aliases: []
+    n: 1
+    papers: ["barth2026efficiency"]
+    institution: "University of Hohenheim"
+    city: "Stuttgart"
+    country: "Germany"
+    lat: 48.7823
+    lon: 9.177
+    x: 521.2
+    y: 73.0
+  - id: "signer-j"
+    name: "Johannes Signer"
+    aliases: []
+    n: 1
+    papers: ["fronville2026analyzing"]
+    institution: "University of Göttingen"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "traba-j"
+    name: "Juan Traba"
+    aliases: []
+    n: 1
+    papers: ["hannappel2026local"]
+    institution: "Universidad Autónoma de Madrid"
+    city: "Madrid"
+    country: "Spain"
+    lat: 40.4165
+    lon: -3.7026
+    x: 490.9
+    y: 98.9
+  - id: "velado-alonso-e"
+    name: "Elena Velado-Alonso"
+    aliases: []
+    n: 1
+    papers: ["hannappel2026local"]
+    institution: "University of Göttingen"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "westphal-c"
+    name: "Catrin Westphal"
+    aliases: []
+    n: 1
+    papers: ["hannappel2026local"]
+    institution: "University of Göttingen"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "wintermantel-d"
+    name: "Dimitry Wintermantel"
+    aliases: []
+    n: 1
+    papers: ["wintermantel2026equivalence"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "xu-l"
+    name: "Liang Xu"
+    aliases: []
+    n: 1
+    papers: ["hurlbert2026evaluating"]
+    institution: "Carnegie Institution for Science"
+    city: "Stanford"
+    country: "United States"
+    lat: 37.4265
+    lon: -122.1703
+    x: 194.5
+    y: 108.7
+  - id: "alkemade-j"
+    name: "Joris A. Alkemade"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "University of Oxford"
+    city: "Oxford"
+    country: "United Kingdom"
+    lat: 51.7522
+    lon: -1.256
+    x: 497.2
+    y: 64.4
+  - id: "baerum-k"
+    name: "Kim Magnus Bærum"
+    aliases: []
+    n: 1
+    papers: ["topper2025advancing"]
+    institution: "Norwegian Institute for Nature Research (NINA)"
+    city: "Lillehammer"
+    country: "Norway"
+    lat: 61.1333
+    lon: 10.4266
+    x: 521.6
+    y: 39.5
+  - id: "baraldi-e"
+    name: "Elena Baraldi"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "University of Bologna"
+    city: "Bologna"
+    country: "Italy"
+    lat: 44.4938
+    lon: 11.3387
+    x: 527.1
+    y: 86.0
+  - id: "barraclough-t"
+    name: "Timothy G. Barraclough"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "University of Oxford"
+    city: "Oxford"
+    country: "United Kingdom"
+    lat: 51.7522
+    lon: -1.256
+    x: 497.2
+    y: 64.4
+  - id: "bartlett-j"
+    name: "Jesamine Bartlett"
+    aliases: []
+    n: 1
+    papers: ["topper2025advancing"]
+    institution: "Equinor (Norway)"
+    city: "Trondheim"
+    country: "Norway"
+    lat: 63.4304
+    lon: 10.3952
+    x: 521.0
+    y: 34.1
+  - id: "berger-u"
+    name: "Uta Berger"
+    aliases: []
+    n: 1
+    papers: ["grimm2025using"]
+    institution: "Technische Universität Dresden"
+    city: "Dresden"
+    country: "Germany"
+    lat: 51.0509
+    lon: 13.7383
+    x: 531.2
+    y: 66.4
+  - id: "biggs-j"
+    name: "Jeremy Biggs"
+    aliases: []
+    n: 1
+    papers: ["cai2025assembly"]
+    institution: "Freshwater Habitats Trust"
+    city: "Oxford"
+    country: "United Kingdom"
+    lat: 51.7522
+    lon: -1.256
+    x: 497.2
+    y: 64.4
+  - id: "buddie-a"
+    name: "Alan G. Buddie"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "CAB International"
+    city: "Ascot"
+    country: "United Kingdom"
+    lat: 51.4101
+    lon: -0.668
+    x: 498.5
+    y: 65.4
+  - id: "burkle-l"
+    name: "Laura Burkle"
+    aliases: []
+    n: 1
+    papers: ["dormann2025predicting"]
+    institution: "Montana State University"
+    city: "Bozeman"
+    country: "United States"
+    lat: 45.6797
+    lon: -111.0386
+    x: 236.9
+    y: 82.4
+  - id: "cai-w"
+    name: "Wang Cai"
+    aliases: []
+    n: 1
+    papers: ["cai2025assembly"]
+    institution: "Kunming Institute of Zoology"
+    city: "Kunming"
+    country: "China"
+    lat: 25.0389
+    lon: 102.7183
+    x: 772.4
+    y: 151.2
+  - id: "caradonna-p"
+    name: "Paul CaraDonna"
+    aliases: []
+    n: 1
+    papers: ["dormann2025predicting"]
+    institution: "Chicago Botanic Garden"
+    city: "Glencoe"
+    country: "United States"
+    lat: 42.135
+    lon: -87.7581
+    x: 286.9
+    y: 93.4
+  - id: "castillo-w"
+    name: "William Castillo"
+    aliases: []
+    n: 1
+    papers: ["dormann2025predicting"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "cerezer-f"
+    name: "Felipe O. Cerezer"
+    aliases: []
+    n: 1
+    papers: ["machac2025species"]
+    institution: "Czech Academy of Sciences"
+    city: "Prague"
+    country: "Czechia"
+    lat: 50.088
+    lon: 14.4208
+    x: 533.0
+    y: 69.2
+  - id: "chipperfield-j"
+    name: "Joseph Chipperfield"
+    aliases: []
+    n: 1
+    papers: ["topper2025advancing"]
+    institution: "Norwegian Institute for Nature Research"
+    city: "Bergen"
+    country: "Norway"
+    lat: 60.3943
+    lon: 5.3259
+    x: 511.1
+    y: 41.3
+  - id: "cockerton-h"
+    name: "Helen M. Cockerton"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "University of Kent"
+    city: "Canterbury"
+    country: "United Kingdom"
+    lat: 51.279
+    lon: 1.0799
+    x: 502.4
+    y: 65.7
+  - id: "corkley-i"
+    name: "Isabel Corkley"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "Agricultural Development Advisory Service (United Kingdom)"
+    city: "Wolverhampton"
+    country: "United Kingdom"
+    lat: 52.5848
+    lon: -2.1276
+    x: 495.2
+    y: 62.0
+  - id: "cortes-avizanda-a"
+    name: "Ainara Cortés-Avizanda"
+    aliases: []
+    n: 1
+    papers: ["grimm2025using"]
+    institution: "Universidad de Sevilla"
+    city: "Seville"
+    country: "Spain"
+    lat: 37.3828
+    lon: -5.9732
+    x: 485.1
+    y: 108.8
+  - id: "dambros-c"
+    name: "Cristian S. Dambros"
+    aliases: []
+    n: 1
+    papers: ["machac2025species"]
+    institution: "Universidade Federal de Santa Maria"
+    city: "Santa Maria"
+    country: "Brazil"
+    lat: -29.6842
+    lon: -53.8069
+    x: 360.0
+    y: 351.8
+  - id: "ewald-n"
+    name: "Naomi Ewald"
+    aliases: []
+    n: 1
+    papers: ["cai2025assembly"]
+    institution: "Freshwater Habitats Trust"
+    city: "Oxford"
+    country: "United Kingdom"
+    lat: 51.7522
+    lon: -1.256
+    x: 497.2
+    y: 64.4
+  - id: "ferrer-j"
+    name: "Jordi Ferrer"
+    aliases: []
+    n: 1
+    papers: ["grimm2025using"]
+    institution: "Lycée International de Barcelona Bon Soleil"
+    city: "Barcelona"
+    country: "Spain"
+    lat: 41.3826
+    lon: 2.1771
+    x: 505.3
+    y: 95.8
+  - id: "fraaije-b"
+    name: "Bart A. Fraaije"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "Wageningen University & Research"
+    city: "Wageningen"
+    country: "The Netherlands"
+    lat: 51.97
+    lon: 5.6667
+    x: 512.8
+    y: 63.8
+  - id: "franz-m"
+    name: "Mathias Franz"
+    aliases: []
+    n: 1
+    papers: ["grimm2025using"]
+    institution: "Freie Universität Berlin"
+    city: "Berlin"
+    country: "Germany"
+    lat: 52.5244
+    lon: 13.4105
+    x: 530.1
+    y: 62.2
+  - id: "frund-j"
+    name: "Jochen Fründ"
+    aliases: []
+    n: 1
+    papers: ["dormann2025predicting"]
+    institution: "Universität Hamburg"
+    city: "Hamburg"
+    country: "Germany"
+    lat: 53.5507
+    lon: 9.993
+    x: 522.2
+    y: 59.3
+  - id: "gaya-e"
+    name: "Ester Gaya"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "Royal Botanic Gardens, Kew"
+    city: "London"
+    country: "United Kingdom"
+    lat: 51.5085
+    lon: -0.1257
+    x: 499.7
+    y: 65.1
+  - id: "gifford-d"
+    name: "Danna R. Gifford"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "University of Manchester"
+    city: "Manchester"
+    country: "United Kingdom"
+    lat: 53.4809
+    lon: -2.2374
+    x: 495.0
+    y: 59.5
+  - id: "griffiths-r"
+    name: "Richard A. Griffiths"
+    aliases: []
+    n: 1
+    papers: ["cai2025assembly"]
+    institution: "University of Kent"
+    city: "Canterbury"
+    country: "United Kingdom"
+    lat: 51.279
+    lon: 1.0799
+    x: 502.4
+    y: 65.7
+  - id: "grimm-v"
+    name: "Volker Grimm"
+    aliases: []
+    n: 1
+    papers: ["grimm2025using"]
+    institution: "Helmholtz Centre for Environmental Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "harfoot-m"
+    name: "Michael Harfoot"
+    aliases: []
+    n: 1
+    papers: ["topper2025advancing"]
+    institution: "Vizzuality (Spain)"
+    city: "Madrid"
+    country: "Spain"
+    lat: 40.4168
+    lon: -3.7035
+    x: 490.9
+    y: 98.9
+  - id: "hawkins-n"
+    name: "Nichola J. Hawkins"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "National Institute of Agricultural Botany"
+    city: "Cambridge"
+    country: "United Kingdom"
+    lat: 52.2
+    lon: 0.1167
+    x: 500.3
+    y: 63.1
+  - id: "hoeks-s"
+    name: "Selwyn Hoeks"
+    aliases: []
+    n: 1
+    papers: ["topper2025advancing"]
+    institution: "Radboud University Nijmegen"
+    city: "Nijmegen"
+    country: "The Netherlands"
+    lat: 51.8425
+    lon: 5.8528
+    x: 513.2
+    y: 64.1
+  - id: "huijbregts-m"
+    name: "Mark Antonius Jan Huijbregts"
+    aliases: []
+    n: 1
+    papers: ["topper2025advancing"]
+    institution: "Radboud University Nijmegen"
+    city: "Nijmegen"
+    country: "The Netherlands"
+    lat: 51.8425
+    lon: 5.8528
+    x: 513.2
+    y: 64.1
+  - id: "jacob-l"
+    name: "Laurent Jacob"
+    aliases: []
+    n: 1
+    papers: ["leroy2025graph"]
+    institution: "Biologie Computationnelle, Quantitative et Synthétique"
+    city: "Paris"
+    country: "France"
+    lat: 48.8534
+    lon: 2.3488
+    x: 505.4
+    y: 72.8
+  - id: "jovani-r"
+    name: "Roger Jovani"
+    aliases: []
+    n: 1
+    papers: ["grimm2025using"]
+    institution: "Estación Biológica de Doñana"
+    city: "Seville"
+    country: "Spain"
+    lat: 37.3828
+    lon: -5.9732
+    x: 485.1
+    y: 108.8
+  - id: "kaiser-bunbury-c"
+    name: "Christopher Kaiser-Bunbury"
+    aliases: []
+    n: 1
+    papers: ["dormann2025predicting"]
+    institution: "University of Exeter"
+    city: "Penryn (Cornwall)"
+    country: "United Kingdom"
+    lat: 50.1685
+    lon: -5.1034
+    x: 488.3
+    y: 68.9
+  - id: "kanyuka-k"
+    name: "Kostya Kanyuka"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "National Institute of Agricultural Botany"
+    city: "Cambridge"
+    country: "United Kingdom"
+    lat: 52.2
+    lon: 0.1167
+    x: 500.3
+    y: 63.1
+  - id: "knight-t"
+    name: "Tiffany Knight"
+    aliases: []
+    n: 1
+    papers: ["dormann2025predicting"]
+    institution: "Helmholtz Centre for Environmental Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "kolstad-a"
+    name: "Anders Kolstad"
+    aliases: []
+    n: 1
+    papers: ["topper2025advancing"]
+    institution: "Norwegian Institute for Nature Research"
+    city: "Trondheim"
+    country: "Norway"
+    lat: 63.4305
+    lon: 10.3951
+    x: 521.0
+    y: 34.1
+  - id: "leroy-a"
+    name: "Amélie Leroy"
+    aliases: []
+    n: 1
+    papers: ["leroy2025graph"]
+    institution: "Biologie Computationnelle, Quantitative et Synthétique"
+    city: "Paris"
+    country: "France"
+    lat: 48.8534
+    lon: 2.3488
+    x: 505.4
+    y: 72.8
+  - id: "lwin-y"
+    name: "Ye Htet Lwin"
+    aliases: []
+    n: 1
+    papers: ["lwin2025human"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "lyu-j"
+    name: "Joy Lyu"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "University of Oxford"
+    city: "Oxford"
+    country: "United Kingdom"
+    lat: 51.7522
+    lon: -1.256
+    x: 497.2
+    y: 64.4
+  - id: "minachilis-k"
+    name: "Konstantinos Minachilis"
+    aliases: []
+    n: 1
+    papers: ["dormann2025predicting"]
+    institution: "University of the Aegean"
+    city: "Mytilene"
+    country: "Greece"
+    lat: 39.1077
+    lon: 26.5553
+    x: 565.7
+    y: 103.2
+  - id: "nicolet-p"
+    name: "Pascale Nicolet"
+    aliases: []
+    n: 1
+    papers: ["cai2025assembly"]
+    institution: "Freshwater Habitats Trust"
+    city: "Oxford"
+    country: "United Kingdom"
+    lat: 51.7522
+    lon: -1.256
+    x: 497.2
+    y: 64.4
+  - id: "pascual-tudanca-m"
+    name: "María Pascual Tudanca"
+    aliases: []
+    n: 1
+    papers: ["dormann2025predicting"]
+    institution: "Instituto Argentino de Investigaciones de las Zonas Aridas"
+    city: "Mendoza"
+    country: "Argentina"
+    lat: -32.8908
+    lon: -68.8272
+    x: 323.6
+    y: 362.8
+  - id: "peralta-g"
+    name: "Guadalupe Peralta"
+    aliases: []
+    n: 1
+    papers: ["dormann2025predicting"]
+    institution: "Instituto Multidisciplinario de Biología Vegetal"
+    city: "Córdoba"
+    country: "Argentina"
+    lat: -31.4135
+    lon: -64.181
+    x: 334.3
+    y: 357.8
+  - id: "petanidou-t"
+    name: "Theodora Petanidou"
+    aliases: []
+    n: 1
+    papers: ["dormann2025predicting"]
+    institution: "University of the Aegean"
+    city: "Mytilene"
+    country: "Greece"
+    lat: 39.1077
+    lon: 26.5553
+    x: 565.7
+    y: 103.2
+  - id: "piou-c"
+    name: "Cyril Piou"
+    aliases: []
+    n: 1
+    papers: ["grimm2025using"]
+    institution: "Centre de Coopération Internationale en Recherche Agronomique pour le Développement"
+    city: "Montpellier"
+    country: "France"
+    lat: 43.6112
+    lon: 3.8767
+    x: 509.3
+    y: 88.8
+  - id: "premo-l"
+    name: "L. S. Premo"
+    aliases: []
+    n: 1
+    papers: ["grimm2025using"]
+    institution: "Washington State University"
+    city: "Pullman"
+    country: "United States"
+    lat: 46.7313
+    lon: -117.1796
+    x: 224.6
+    y: 79.1
+  - id: "preston-g"
+    name: "Gail M. Preston"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "University of Oxford"
+    city: "Oxford"
+    country: "United Kingdom"
+    lat: 51.7522
+    lon: -1.256
+    x: 497.2
+    y: 64.4
+  - id: "putz-s"
+    name: "Sandro Pütz"
+    aliases: []
+    n: 1
+    papers: ["grimm2025using"]
+    institution: "Federal Agency for Nature Conservation"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3406
+    lon: 12.3747
+    x: 528.0
+    y: 65.6
+  - id: "quan-r"
+    name: "Rui-Chang Quan"
+    aliases: []
+    n: 1
+    papers: ["lwin2025human"]
+    institution: "Xishuangbanna Tropical Botanical Garden"
+    city: "Mengla"
+    country: "China"
+    lat: 21.4623
+    lon: 101.5637
+    x: 772.7
+    y: 164.0
+  - id: "quintaine-t"
+    name: "Thomas Quintaine"
+    aliases: []
+    n: 1
+    papers: ["grimm2025using"]
+    institution: "Université de Reims Champagne-Ardenne"
+    city: "Boult-aux-Bois"
+    country: "France"
+    lat: 49.4311
+    lon: 4.8407
+    x: 511.1
+    y: 71.1
+  - id: "rademacher-c"
+    name: "Christine Rademacher"
+    aliases: []
+    n: 1
+    papers: ["grimm2025using"]
+    institution: "Georg Simon Ohm University of Applied Sciences Nuremberg"
+    city: "Nuremberg"
+    country: "Germany"
+    lat: 49.4542
+    lon: 11.0775
+    x: 525.5
+    y: 71.0
+  - id: "railsback-s"
+    name: "Steven F. Railsback"
+    aliases: []
+    n: 1
+    papers: ["grimm2025using"]
+    institution: "Lang, Railsback & Associates"
+    city: "Arcata"
+    country: "United States"
+    lat: 40.8665
+    lon: -124.0828
+    x: 196.2
+    y: 97.5
+  - id: "rakosy-d"
+    name: "Demetra Rakosy"
+    aliases: []
+    n: 1
+    papers: ["dormann2025predicting"]
+    institution: "Johann Heinrich von Thünen-Institut"
+    city: "Braunschweig"
+    country: "Germany"
+    lat: 52.2659
+    lon: 10.5267
+    x: 523.7
+    y: 62.9
+  - id: "resasco-j"
+    name: "Julian Resasco"
+    aliases: []
+    n: 1
+    papers: ["dormann2025predicting"]
+    institution: "University of Colorado Boulder"
+    city: "Boulder"
+    country: "United States"
+    lat: 40.015
+    lon: -105.2706
+    x: 240.9
+    y: 100.2
+  - id: "rettelbach-d"
+    name: "Daniel Rettelbach"
+    aliases: []
+    n: 1
+    papers: ["leite2025dispersion"]
+    institution: "University Hospital Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "ruger-n"
+    name: "Nadja Rüger"
+    aliases: []
+    n: 1
+    papers: ["grimm2025using"]
+    institution: "German Centre for Integrative Biodiversity Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "sanchez-j"
+    name: "Jonatan Niño Sánchez"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "Universidad de Valladolid"
+    city: "Palencia"
+    country: "Spain"
+    lat: 42.4096
+    lon: -4.6161
+    x: 488.8
+    y: 92.5
+  - id: "schmolke-a"
+    name: "Amelie Schmolke"
+    aliases: []
+    n: 1
+    papers: ["grimm2025using"]
+    institution: "RIFCON GmbH (Germany)"
+    city: "Hirschberg an der Bergstraße"
+    country: "Germany"
+    lat: 49.506
+    lon: 8.6595
+    x: 519.9
+    y: 70.9
+  - id: "seidl-m"
+    name: "Michael F. Seidl"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "Utrecht University"
+    city: "Utrecht"
+    country: "The Netherlands"
+    lat: 52.0908
+    lon: 5.1222
+    x: 511.5
+    y: 63.4
+  - id: "spanu-p"
+    name: "Pietro D. Spanu"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "Imperial College London"
+    city: "London"
+    country: "United Kingdom"
+    lat: 51.5085
+    lon: -0.1257
+    x: 499.7
+    y: 65.1
+  - id: "svenning-j"
+    name: "Jens-Christian Svenning"
+    aliases: []
+    n: 1
+    papers: ["topper2025advancing"]
+    institution: "Aarhus University"
+    city: "Aarhus"
+    country: "Denmark"
+    lat: 56.1567
+    lon: 10.2108
+    x: 522.2
+    y: 52.2
+  - id: "thiele-j"
+    name: "Jan C. Thiele"
+    aliases: []
+    n: 1
+    papers: ["grimm2025using"]
+    institution: "Bremische Bürgerschaft"
+    city: "Bremen"
+    country: "Germany"
+    lat: 53.0758
+    lon: 8.8072
+    x: 519.7
+    y: 60.6
+  - id: "topper-j"
+    name: "Joachim Paul Töpper"
+    aliases: []
+    n: 1
+    papers: ["topper2025advancing"]
+    institution: "Norwegian Institute for Nature Research"
+    city: "Bergen"
+    country: "Norway"
+    lat: 60.3943
+    lon: 5.3259
+    x: 511.1
+    y: 41.3
+  - id: "touza-j"
+    name: "Julia Touza"
+    aliases: []
+    n: 1
+    papers: ["grimm2025using"]
+    institution: "University of York"
+    city: "York"
+    country: "United Kingdom"
+    lat: 53.9576
+    lon: -1.0827
+    x: 497.6
+    y: 58.2
+  - id: "tucker-m"
+    name: "Marlee A. Tucker"
+    aliases: []
+    n: 1
+    papers: ["topper2025advancing"]
+    institution: "Radboud University Nijmegen"
+    city: "Nijmegen"
+    country: "The Netherlands"
+    lat: 51.8425
+    lon: 5.8528
+    x: 513.2
+    y: 64.1
+  - id: "vazquez-d"
+    name: "Diego Vázquez"
+    aliases: []
+    n: 1
+    papers: ["dormann2025predicting"]
+    institution: "Instituto Argentino de Investigaciones de las Zonas Aridas"
+    city: "Mendoza"
+    country: "Argentina"
+    lat: -32.8908
+    lon: -68.8272
+    x: 323.6
+    y: 362.8
+  - id: "werner-b"
+    name: "Bernhard T. Werner"
+    aliases: []
+    n: 1
+    papers: ["alkemade2025learning"]
+    institution: "Justus-Liebig-Universität Gießen"
+    city: "Giessen"
+    country: "Germany"
+    lat: 50.5873
+    lon: 8.6755
+    x: 519.8
+    y: 67.7
+  - id: "winfree-r"
+    name: "Rachael Winfree"
+    aliases: []
+    n: 1
+    papers: ["dormann2025predicting"]
+    institution: "Rutgers, The State University of New Jersey"
+    city: "New Brunswick"
+    country: "United States"
+    lat: 40.4862
+    lon: -74.4518
+    x: 317.3
+    y: 98.7
+  - id: "zoller-l"
+    name: "Leana Zoller"
+    aliases: []
+    n: 1
+    papers: ["dormann2025predicting"]
+    institution: "Cornell University"
+    city: "Ithaca"
+    country: "United States"
+    lat: 42.4406
+    lon: -76.4966
+    x: 314.6
+    y: 92.5
+  - id: "abrego-n"
+    name: "Nerea Abrego"
+    aliases: []
+    n: 1
+    papers: ["hartig2024novel"]
+    institution: "University of Jyväskylä"
+    city: "Jyväskylä"
+    country: "Finland"
+    lat: 62.2415
+    lon: 25.7209
+    x: 552.6
+    y: 36.9
+  - id: "aguilar-s"
+    name: "Salomon Aguilar"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Smithsonian Tropical Research Institute"
+    city: "Panama City"
+    country: "Panama"
+    lat: 8.9936
+    lon: -79.5197
+    x: 280.4
+    y: 209.8
+  - id: "amesoder-c"
+    name: "Christian Amesöder"
+    aliases: []
+    n: 1
+    papers: ["amesoder2024cito"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "anderson-teixeira-k"
+    name: "Kristina J. Anderson-Teixeira"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Smithsonian Conservation Biology Institute"
+    city: "Front Royal"
+    country: "United States"
+    lat: 38.9182
+    lon: -78.1944
+    x: 306.2
+    y: 103.8
+  - id: "bachelot-b"
+    name: "Bénédicte Bachelot"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "Oklahoma State University"
+    city: "Stillwater"
+    country: "United States"
+    lat: 36.1156
+    lon: -97.0584
+    x: 255.5
+    y: 113.0
+  - id: "bagchi-r"
+    name: "Robert Bagchi"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "University of Connecticut"
+    city: "Storrs"
+    country: "United States"
+    lat: 41.8084
+    lon: -72.2495
+    x: 324.2
+    y: 94.5
+  - id: "berger-t"
+    name: "Thomas Berger"
+    aliases: []
+    n: 1
+    papers: ["cabral2024road"]
+    institution: "University of Hohenheim"
+    city: "Stuttgart"
+    country: "Germany"
+    lat: 48.7823
+    lon: 9.177
+    x: 521.2
+    y: 73.0
+  - id: "boger-c"
+    name: "Carsten A. Böger"
+    aliases: []
+    n: 1
+    papers: ["wiegrebe2024analyzing"]
+    institution: "Kliniken Südostbayern AG, Klinikum Traunstein"
+    city: "Traunstein"
+    country: "Germany"
+    lat: 47.8695
+    lon: 12.6485
+    x: 529.5
+    y: 75.7
+  - id: "bourg-n"
+    name: "Norman A. Bourg"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Smithsonian Conservation Biology Institute"
+    city: "Front Royal"
+    country: "United States"
+    lat: 38.9182
+    lon: -78.1944
+    x: 306.2
+    y: 103.8
+  - id: "bunyavejchewin-s"
+    name: "Sarayudh Bunyavejchewin"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Kasetsart University"
+    city: "Bangkok"
+    country: "Thailand"
+    lat: 13.754
+    lon: 100.5014
+    x: 775.3
+    y: 192.1
+  - id: "castano-n"
+    name: "Nicolas Castaño"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Instituto Sinchi"
+    city: "Bogotá"
+    country: "Colombia"
+    lat: 4.6534
+    lon: -74.0836
+    x: 294.5
+    y: 226.0
+  - id: "chang-yang-c"
+    name: "Chia-Hao Chang-Yang"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "National Sun Yat-sen University"
+    city: "Kaohsiung"
+    country: "Taiwan"
+    lat: 22.6163
+    lon: 120.3133
+    x: 821.9
+    y: 159.9
+  - id: "chen-h"
+    name: "Han Chen"
+    aliases: []
+    n: 1
+    papers: ["wiegrebe2024analyzing"]
+    institution: "New York University"
+    city: "New York"
+    country: "United States"
+    lat: 40.7143
+    lon: -74.006
+    x: 318.6
+    y: 98.0
+  - id: "chuyong-g"
+    name: "George B. Chuyong"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "University of Buea"
+    city: "Buea"
+    country: "Cameroon"
+    lat: 4.1534
+    lon: 9.2423
+    x: 525.6
+    y: 227.8
+  - id: "classen-a"
+    name: "Alice Classen"
+    aliases: []
+    n: 1
+    papers: ["cabral2024road"]
+    institution: "University of Bremen"
+    city: "Bremen"
+    country: "Germany"
+    lat: 53.0758
+    lon: 8.8072
+    x: 519.7
+    y: 60.6
+  - id: "clay-k"
+    name: "Keith Clay"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Tulane University"
+    city: "New Orleans"
+    country: "United States"
+    lat: 29.9547
+    lon: -90.0751
+    x: 265.9
+    y: 134.0
+  - id: "da-silva-a"
+    name: "André Pinto da Silva"
+    aliases: []
+    n: 1
+    papers: ["cabral2024road"]
+    institution: "Stockholm Resilience Centre"
+    city: "Stockholm"
+    country: "Sweden"
+    lat: 59.3294
+    lon: 18.0687
+    x: 538.1
+    y: 44.0
+  - id: "davies-s"
+    name: "Stuart J. Davies"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Smithsonian Tropical Research Institute"
+    city: "Panama City"
+    country: "Panama"
+    lat: 8.9936
+    lon: -79.5197
+    x: 280.4
+    y: 209.8
+  - id: "defilippis-d"
+    name: "David M. DeFilippis"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "Marquette University"
+    city: "Milwaukee"
+    country: "United States"
+    lat: 43.0389
+    lon: -87.9065
+    x: 287.8
+    y: 90.6
+  - id: "delavaux-c"
+    name: "Camille S. Delavaux"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "Netherlands Institute of Ecology"
+    city: "Wageningen"
+    country: "The Netherlands"
+    lat: 51.97
+    lon: 5.6667
+    x: 512.8
+    y: 63.8
+  - id: "doolittle-c"
+    name: "Cole J. Doolittle"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "Marquette University"
+    city: "Milwaukee"
+    country: "United States"
+    lat: 43.0389
+    lon: -87.9065
+    x: 287.8
+    y: 90.6
+  - id: "duque-a"
+    name: "Alvaro Duque"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Universidad Nacional de Colombia"
+    city: "Medellín"
+    country: "Colombia"
+    lat: 6.2697
+    lon: -75.6026
+    x: 290.6
+    y: 219.9
+  - id: "ediriweera-s"
+    name: "Sisira Ediriweera"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Uva Wellassa University"
+    city: "Badulla"
+    country: "Sri Lanka"
+    lat: 6.9802
+    lon: 81.0577
+    x: 724.4
+    y: 217.3
+  - id: "ewango-c"
+    name: "Corneille Ewango"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Université de Kisangani"
+    city: "Kisangani"
+    country: "DR Congo"
+    lat: 0.5153
+    lon: 25.191
+    x: 570.0
+    y: 241.4
+  - id: "fandos-g"
+    name: "Guillermo Fandos"
+    aliases: []
+    n: 1
+    papers: ["malchow2024fitting"]
+    institution: "Universidad Complutense de Madrid"
+    city: "Madrid"
+    country: "Spain"
+    lat: 40.4165
+    lon: -3.7026
+    x: 490.9
+    y: 98.9
+  - id: "freckleton-r"
+    name: "Robert P. Freckleton"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "University of Sheffield"
+    city: "Sheffield"
+    country: "United Kingdom"
+    lat: 53.383
+    lon: -1.4659
+    x: 496.7
+    y: 59.8
+  - id: "gilbert-g"
+    name: "Gregory S. Gilbert"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "University of California, Santa Cruz"
+    city: "Santa Cruz"
+    country: "United States"
+    lat: 36.9741
+    lon: -122.0308
+    x: 194.1
+    y: 110.2
+  - id: "gorski-m"
+    name: "Mathias Gorski"
+    aliases: []
+    n: 1
+    papers: ["wiegrebe2024analyzing"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "hof-c"
+    name: "Christian Hof"
+    aliases: []
+    n: 1
+    papers: ["cabral2024road"]
+    institution: "University of Würzburg"
+    city: "Würzburg"
+    country: "Germany"
+    lat: 49.7939
+    lon: 9.9512
+    x: 522.8
+    y: 70.0
+  - id: "holik-j"
+    name: "Jan Holík"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Landscape Research Institute"
+    city: "Brno"
+    country: "Czechia"
+    lat: 49.1922
+    lon: 16.6113
+    x: 538.3
+    y: 71.8
+  - id: "howe-r"
+    name: "Robert W. Howe"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "University of Wisconsin–Green Bay"
+    city: "Green Bay"
+    country: "United States"
+    lat: 44.5192
+    lon: -88.0198
+    x: 289.7
+    y: 85.9
+  - id: "huanca-nunez-n"
+    name: "Nohemi Huanca-Nunez"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "Yale University"
+    city: "New Haven"
+    country: "United States"
+    lat: 41.3081
+    lon: -72.9282
+    x: 321.9
+    y: 96.1
+  - id: "hubbell-s"
+    name: "Stephen P. Hubbell"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "University of California, Los Angeles"
+    city: "Los Angeles"
+    country: "United States"
+    lat: 34.0522
+    lon: -118.2437
+    x: 198.8
+    y: 119.9
+  - id: "itoh-a"
+    name: "Akira Itoh"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Osaka Metropolitan University"
+    city: "Osaka"
+    country: "Japan"
+    lat: 34.6938
+    lon: 135.5011
+    x: 844.0
+    y: 117.8
+  - id: "jevon-f"
+    name: "Fiona V. Jevon"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "Babson College"
+    city: "Wellesley"
+    country: "United States"
+    lat: 42.2965
+    lon: -71.2926
+    x: 327.1
+    y: 92.9
+  - id: "kenfack-d"
+    name: "David Kenfack"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Smithsonian Tropical Research Institute"
+    city: "Washington, DC"
+    country: "United States"
+    lat: 38.8951
+    lon: -77.0364
+    x: 309.0
+    y: 103.9
+  - id: "kormann-u"
+    name: "Urs G. Kormann"
+    aliases: []
+    n: 1
+    papers: ["malchow2024fitting"]
+    institution: "Swiss Ornithological Institute"
+    city: "Sempach"
+    country: "Switzerland"
+    lat: 47.1358
+    lon: 8.1915
+    x: 519.2
+    y: 77.9
+  - id: "kral-k"
+    name: "Kamil Král"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Landscape Research Institute"
+    city: "Brno"
+    country: "Czechia"
+    lat: 49.1922
+    lon: 16.6113
+    x: 538.3
+    y: 71.8
+  - id: "krishnadas-m"
+    name: "Meghna Krishnadas"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "Centre for Cellular and Molecular Biology"
+    city: "Hyderabad"
+    country: "India"
+    lat: 17.384
+    lon: 78.4564
+    x: 713.2
+    y: 178.8
+  - id: "lamanna-j"
+    name: "Joseph A. LaManna"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "Marquette University"
+    city: "Milwaukee"
+    country: "United States"
+    lat: 43.0389
+    lon: -87.9065
+    x: 287.8
+    y: 90.6
+  - id: "larson-a"
+    name: "Andrew J. Larson"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "University of Montana"
+    city: "Missoula"
+    country: "United States"
+    lat: 46.8721
+    lon: -113.994
+    x: 232.3
+    y: 78.7
+  - id: "lutz-j"
+    name: "James A. Lutz"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Utah State University"
+    city: "Logan"
+    country: "United States"
+    lat: 41.7355
+    lon: -111.8344
+    x: 227.7
+    y: 94.7
+  - id: "magee-l"
+    name: "Lukas J. Magee"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "University of Florida"
+    city: "Gainesville"
+    country: "United States"
+    lat: 29.6516
+    lon: -82.3248
+    x: 285.8
+    y: 135.0
+  - id: "makana-j"
+    name: "Jean-Remy Makana"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Université de Kisangani"
+    city: "Kisangani"
+    country: "DR Congo"
+    lat: 0.5153
+    lon: 25.191
+    x: 570.0
+    y: 241.4
+  - id: "malhi-y"
+    name: "Yadvinder Malhi"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "University of Oxford"
+    city: "Oxford"
+    country: "United Kingdom"
+    lat: 51.7522
+    lon: -1.256
+    x: 497.2
+    y: 64.4
+  - id: "mangan-s"
+    name: "Scott A. Mangan"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "Arkansas State University"
+    city: "Jonesboro"
+    country: "United States"
+    lat: 35.8423
+    lon: -90.7043
+    x: 271.2
+    y: 113.9
+  - id: "mcmahon-s"
+    name: "Sean M. McMahon"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "UMR Botanique et Modélisation de l’Architecture des Plantes et des végétations"
+    city: "Montpellier"
+    country: "France"
+    lat: 43.6109
+    lon: 3.8763
+    x: 509.3
+    y: 88.8
+  - id: "mcshea-w"
+    name: "William J. McShea"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Smithsonian Conservation Biology Institute"
+    city: "Front Royal"
+    country: "United States"
+    lat: 38.9182
+    lon: -78.1944
+    x: 306.2
+    y: 103.8
+  - id: "mendoza-ponce-a"
+    name: "Alma Mendoza-Ponce"
+    aliases: []
+    n: 1
+    papers: ["cabral2024road"]
+  - id: "milici-v"
+    name: "Valerie R. Milici"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "University of Bridgeport"
+    city: "Bridgeport"
+    country: "United States"
+    lat: 41.1792
+    lon: -73.1894
+    x: 321.2
+    y: 96.5
+  - id: "mimet-a"
+    name: "Anne Mimet"
+    aliases: []
+    n: 1
+    papers: ["cabral2024road"]
+    institution: "Université d'Angers"
+    city: "Angers"
+    country: "France"
+    lat: 47.4716
+    lon: -0.552
+    x: 498.7
+    y: 76.9
+  - id: "mohamad-m"
+    name: "Mohizah Mohamad"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Forest Department Sarawak"
+    city: "Kuching"
+    country: "Malaysia"
+    lat: 1.55
+    lon: 110.3333
+    x: 806.4
+    y: 237.6
+  - id: "murengera-a"
+    name: "Aimé Lucky Barahebuza Murengera"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "University of Connecticut"
+    city: "Storrs"
+    country: "United States"
+    lat: 41.8084
+    lon: -72.2495
+    x: 324.2
+    y: 94.5
+  - id: "myers-j"
+    name: "Jonathan A. Myers"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "Washington University in St. Louis"
+    city: "St Louis"
+    country: "United States"
+    lat: 38.6273
+    lon: -90.1979
+    x: 276.1
+    y: 104.7
+  - id: "nasardin-m"
+    name: "Musalmah Nasardin"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Forest Research Institute Malaysia"
+    city: "Kuala Lumpur"
+    country: "Malaysia"
+    lat: 3.1412
+    lon: 101.6865
+    x: 782.3
+    y: 231.6
+  - id: "norden-n"
+    name: "Natalia Norden"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Alexander von Humboldt Biological Resources Research Institute"
+    city: "Bogotá"
+    country: "Colombia"
+    lat: 4.6097
+    lon: -74.0817
+    x: 294.5
+    y: 226.1
+  - id: "oliveira-a"
+    name: "Alexandre A. Oliveira"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Universidade de São Paulo"
+    city: "São Paulo"
+    country: "Brazil"
+    lat: -23.5475
+    lon: -46.6361
+    x: 375.6
+    y: 330.2
+  - id: "ovaskainen-o"
+    name: "Otso Ovaskainen"
+    aliases: []
+    n: 1
+    papers: ["hartig2024novel"]
+    institution: "University of Jyväskylä"
+    city: "Jyväskylä"
+    country: "Finland"
+    lat: 62.2415
+    lon: 25.7209
+    x: 552.6
+    y: 36.9
+  - id: "parmigiani-r"
+    name: "Renan Parmigiani"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Universidade de São Paulo"
+    city: "São Paulo"
+    country: "Brazil"
+    lat: -23.5475
+    lon: -46.6361
+    x: 375.6
+    y: 330.2
+  - id: "perez-r"
+    name: "Rolando Perez"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Smithsonian Tropical Research Institute"
+    city: "Panama City"
+    country: "Panama"
+    lat: 8.9936
+    lon: -79.5197
+    x: 280.4
+    y: 209.8
+  - id: "phillips-r"
+    name: "Richard P. Phillips"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Indiana University Bloomington"
+    city: "Bloomington"
+    country: "United States"
+    lat: 39.1653
+    lon: -86.5264
+    x: 285.9
+    y: 103.0
+  - id: "poggiato-g"
+    name: "Giovanni Poggiato"
+    aliases: []
+    n: 1
+    papers: ["hartig2024novel"]
+    institution: "Laboratoire d'Écologie Alpine"
+    city: "Grenoble"
+    country: "France"
+    lat: 45.1787
+    lon: 5.7148
+    x: 513.6
+    y: 83.9
+  - id: "pongpattananurak-n"
+    name: "Nantachai Pongpattananurak"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Kasetsart University"
+    city: "Bangkok"
+    country: "Thailand"
+    lat: 13.754
+    lon: 100.5014
+    x: 775.3
+    y: 192.1
+  - id: "redlich-s"
+    name: "Sarah Redlich"
+    aliases: []
+    n: 1
+    papers: ["cabral2024road"]
+    institution: "University of Würzburg"
+    city: "Würzburg"
+    country: "Germany"
+    lat: 49.7939
+    lon: 9.9512
+    x: 522.8
+    y: 70.0
+  - id: "schnitzer-s"
+    name: "Stefan A. Schnitzer"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "Marquette University"
+    city: "Milwaukee"
+    country: "United States"
+    lat: 43.0389
+    lon: -87.9065
+    x: 287.8
+    y: 90.6
+  - id: "schodel-j"
+    name: "Johannes Schödel"
+    aliases: []
+    n: 1
+    papers: ["wiegrebe2024analyzing"]
+    institution: "Universitätsklinikum Erlangen"
+    city: "Erlangen"
+    country: "Germany"
+    lat: 49.591
+    lon: 11.0078
+    x: 525.3
+    y: 70.6
+  - id: "si-moussi-s"
+    name: "Sara Si-Moussi"
+    aliases: []
+    n: 1
+    papers: ["hartig2024novel"]
+    institution: "Laboratoire d'Écologie Alpine"
+    city: "Grenoble"
+    country: "France"
+    lat: 45.1787
+    lon: 5.7148
+    x: 513.6
+    y: 83.9
+  - id: "smith-d"
+    name: "Daniel J. B. Smith"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "The University of Texas at Austin"
+    city: "Austin"
+    country: "United States"
+    lat: 30.2672
+    lon: -97.7431
+    x: 246.3
+    y: 132.9
+  - id: "stark-k"
+    name: "Klaus J. Stark"
+    aliases: []
+    n: 1
+    papers: ["wiegrebe2024analyzing"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "stein-c"
+    name: "Claudia Stein"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "Auburn University at Montgomery"
+    city: "Montgomery"
+    country: "United States"
+    lat: 32.3668
+    lon: -86.3
+    x: 278.3
+    y: 125.7
+  - id: "sullivan-m"
+    name: "Megan K. Sullivan"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "Princeton University"
+    city: "Princeton"
+    country: "United States"
+    lat: 40.3487
+    lon: -74.659
+    x: 316.6
+    y: 99.1
+  - id: "sun-i"
+    name: "I-Fang Sun"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "National Dong Hwa University"
+    city: "Hualien City"
+    country: "Taiwan"
+    lat: 23.9769
+    lon: 121.6044
+    x: 823.8
+    y: 155.0
+  - id: "surendra-a"
+    name: "Akshay Surendra"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "Ashoka University"
+    city: "Sonipat"
+    country: "India"
+    lat: 28.9954
+    lon: 77.0234
+    x: 701.0
+    y: 137.3
+  - id: "swanson-m"
+    name: "Mark E. Swanson"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Oregon State University"
+    city: "Corvallis"
+    country: "United States"
+    lat: 44.5646
+    lon: -123.262
+    x: 205.6
+    y: 85.8
+  - id: "tan-s"
+    name: "Sylvester Tan"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Forest Department Sarawak"
+    city: "Kuching"
+    country: "Malaysia"
+    lat: 1.55
+    lon: 110.3333
+    x: 806.4
+    y: 237.6
+  - id: "thomas-d"
+    name: "Duncan Thomas"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Oregon State University"
+    city: "Corvallis"
+    country: "United States"
+    lat: 44.5646
+    lon: -123.262
+    x: 205.6
+    y: 85.8
+  - id: "thompson-j"
+    name: "Jill Thompson"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "UK Centre for Ecology & Hydrology"
+    city: "Edinburgh"
+    country: "United Kingdom"
+    lat: 55.9533
+    lon: -3.1884
+    x: 493.1
+    y: 52.8
+  - id: "torres-e"
+    name: "Ethan Torres"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "Utah State University"
+    city: "Logan"
+    country: "United States"
+    lat: 41.7355
+    lon: -111.8344
+    x: 227.7
+    y: 94.7
+  - id: "umana-m"
+    name: "María Natalia Umaña"
+    aliases: []
+    n: 1
+    papers: ["lamanna2024consequences"]
+    institution: "University of Michigan"
+    city: "Ann Arbor"
+    country: "United States"
+    lat: 42.2776
+    lon: -83.7409
+    x: 296.8
+    y: 93.0
+  - id: "uriarte-m"
+    name: "Maria Uriarte"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Columbia University"
+    city: "New York"
+    country: "United States"
+    lat: 40.7143
+    lon: -74.006
+    x: 318.6
+    y: 98.0
+  - id: "vedder-d"
+    name: "Daniel Vedder"
+    aliases: []
+    n: 1
+    papers: ["cabral2024road"]
+    institution: "University of Bonn"
+    city: "Bonn"
+    country: "Germany"
+    lat: 50.7344
+    lon: 7.0955
+    x: 516.2
+    y: 67.3
+  - id: "verburg-p"
+    name: "Peter H. Verburg"
+    aliases: []
+    n: 1
+    papers: ["cabral2024road"]
+    institution: "Vrije Universiteit Amsterdam"
+    city: "Amsterdam"
+    country: "The Netherlands"
+    lat: 52.374
+    lon: 4.8897
+    x: 511.0
+    y: 62.6
+  - id: "viana-d"
+    name: "Duarte S. Viana"
+    aliases: []
+    n: 1
+    papers: ["hartig2024novel"]
+    institution: "Estación Biológica de Doñana"
+    city: "Seville"
+    country: "Spain"
+    lat: 37.3828
+    lon: -5.9732
+    x: 485.1
+    y: 108.8
+  - id: "visser-m"
+    name: "Marco D. Visser"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Leiden University"
+    city: "Leiden"
+    country: "The Netherlands"
+    lat: 52.1583
+    lon: 4.4931
+    x: 510.1
+    y: 63.2
+  - id: "wolf-a"
+    name: "Amy T. Wolf"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "University of Wisconsin–Green Bay"
+    city: "Green Bay"
+    country: "United States"
+    lat: 44.5192
+    lon: -88.0198
+    x: 289.7
+    y: 85.9
+  - id: "yao-t"
+    name: "Tze Leong Yao"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "Forest Research Institute Malaysia"
+    city: "Kuala Lumpur"
+    country: "Malaysia"
+    lat: 3.1412
+    lon: 101.6865
+    x: 782.3
+    y: 231.6
+  - id: "zimmerman-j"
+    name: "Jess K. Zimmerman"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "University of Puerto Rico at Río Piedras"
+    city: "San Juan"
+    country: "Puerto Rico"
+    lat: 18.4663
+    lon: -66.1057
+    x: 320.9
+    y: 174.9
+  - id: "zuleta-d"
+    name: "Daniel Zuleta"
+    aliases: []
+    n: 1
+    papers: ["hulsmann2024latitudinal"]
+    institution: "University of Gothenburg"
+    city: "Gothenburg"
+    country: "Sweden"
+    lat: 57.7072
+    lon: 11.9668
+    x: 525.6
+    y: 48.1
+  - id: "reeg-j"
+    name: "J. Reeg"
+    aliases: []
+    n: 1
+    papers: ["malchow2023demography"]
+    institution: "University of Potsdam"
+    city: "Potsdam"
+    country: "Germany"
+    lat: 52.3989
+    lon: 13.0657
+    x: 529.3
+    y: 62.5
+  - id: "anthoni-p"
+    name: "Peter Anthoni"
+    aliases: []
+    n: 1
+    papers: ["oberpriller2022climate"]
+    institution: "Karlsruhe Institute of Technology"
+    city: "Garmisch-Partenkirchen"
+    country: "Germany"
+    lat: 47.4924
+    lon: 11.0963
+    x: 525.9
+    y: 76.9
+  - id: "aussenac-r"
+    name: "Raphaël Aussenac"
+    aliases: []
+    n: 1
+    papers: ["mahnken2022accuracy"]
+    institution: "Centre de Coopération Internationale en Recherche Agronomique pour le Développement"
+    city: "Montpellier"
+    country: "France"
+    lat: 43.6112
+    lon: 3.8767
+    x: 509.3
+    y: 88.8
+  - id: "biondo-c"
+    name: "Corrado Biondo"
+    aliases: []
+    n: 1
+    papers: ["mahnken2022accuracy"]
+    institution: "Università degli Studi della Tuscia"
+    city: "Viterbo"
+    country: "Italy"
+    lat: 42.4194
+    lon: 12.1056
+    x: 529.3
+    y: 92.5
+  - id: "blanchet-f"
+    name: "F. Guillaume Blanchet"
+    aliases: []
+    n: 1
+    papers: ["leibold2022internal"]
+    institution: "Université de Sherbrooke"
+    city: "Sherbrooke"
+    country: "Canada"
+    lat: 45.4001
+    lon: -71.8991
+    x: 329.3
+    y: 83.2
+  - id: "breshears-d"
+    name: "David D. Breshears"
+    aliases: []
+    n: 1
+    papers: ["schultz2022climate"]
+    institution: "University of Arizona"
+    city: "Tucson"
+    country: "United States"
+    lat: 32.2217
+    lon: -110.9265
+    x: 214.8
+    y: 126.2
+  - id: "dalmonech-d"
+    name: "Daniela Dalmonech"
+    aliases: []
+    n: 1
+    papers: ["mahnken2022accuracy"]
+    institution: "Institute for Agricultural and Forest Systems in the Mediterranean"
+    city: "Perugia"
+    country: "Italy"
+    lat: 43.107
+    lon: 12.403
+    x: 529.9
+    y: 90.3
+  - id: "de-meester-l"
+    name: "Luc De Meester"
+    aliases: []
+    n: 1
+    papers: ["leibold2022internal"]
+    institution: "KU Leuven"
+    city: "Leuven"
+    country: "Belgium"
+    lat: 50.8796
+    lon: 4.7009
+    x: 510.7
+    y: 66.9
+  - id: "derose-r"
+    name: "R. Justin DeRose"
+    aliases: []
+    n: 1
+    papers: ["schultz2022climate"]
+    institution: "Utah State University"
+    city: "Logan"
+    country: "United States"
+    lat: 41.7355
+    lon: -111.8344
+    x: 227.7
+    y: 94.7
+  - id: "evans-m"
+    name: "Margaret E. K. Evans"
+    aliases: []
+    n: 1
+    papers: ["schultz2022climate"]
+    institution: "University of Arizona"
+    city: "Tucson"
+    country: "United States"
+    lat: 32.2217
+    lon: -110.9265
+    x: 214.8
+    y: 126.2
+  - id: "franke-f"
+    name: "Frederik Franke"
+    aliases: []
+    n: 1
+    papers: ["henrich2022deer"]
+    institution: "Bayerische Landesanstalt für Wald und Forstwirtschaft"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4035
+    lon: 11.7488
+    x: 527.3
+    y: 74.1
+  - id: "gravel-d"
+    name: "Dominique Gravel"
+    aliases: []
+    n: 1
+    papers: ["leibold2022internal"]
+    institution: "Université de Sherbrooke"
+    city: "Sherbrooke"
+    country: "Canada"
+    lat: 45.4001
+    lon: -71.8991
+    x: 329.3
+    y: 83.2
+  - id: "grote-r"
+    name: "Rüdiger Grote"
+    aliases: []
+    n: 1
+    papers: ["mahnken2022accuracy"]
+    institution: "Karlsruhe Institute of Technology"
+    city: "Garmisch-Partenkirchen"
+    country: "Germany"
+    lat: 47.4924
+    lon: 11.0963
+    x: 525.9
+    y: 76.9
+  - id: "huber-n"
+    name: "Nica Huber"
+    aliases: []
+    n: 1
+    papers: ["mahnken2022accuracy"]
+    institution: "Swiss Ornithological Institute"
+    city: "Sempach"
+    country: "Switzerland"
+    lat: 47.1358
+    lon: 8.1915
+    x: 519.2
+    y: 77.9
+  - id: "lindeskog-m"
+    name: "Mats Lindeskog"
+    aliases: []
+    n: 1
+    papers: ["oberpriller2022climate"]
+    institution: "Lund University"
+    city: "Lund"
+    country: "Sweden"
+    lat: 55.7058
+    lon: 13.1932
+    x: 528.8
+    y: 53.4
+  - id: "marano-g"
+    name: "Gina Marano"
+    aliases: []
+    n: 1
+    papers: ["mahnken2022accuracy"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "olin-s"
+    name: "Stefan Olin"
+    aliases: []
+    n: 1
+    papers: ["oberpriller2022climate"]
+    institution: "Lund University"
+    city: "Lund"
+    country: "Sweden"
+    lat: 55.7058
+    lon: 13.1932
+    x: 528.8
+    y: 53.4
+  - id: "peltoniemi-m"
+    name: "Mikko Peltoniemi"
+    aliases: []
+    n: 1
+    papers: ["mahnken2022accuracy"]
+    institution: "Natural Resources Institute Finland"
+    city: "Helsinki"
+    country: "Finland"
+    lat: 60.1695
+    lon: 24.9354
+    x: 552.1
+    y: 41.9
+  - id: "peres-neto-p"
+    name: "Pedro Peres-Neto"
+    aliases: []
+    n: 1
+    papers: ["leibold2022internal"]
+    institution: "Concordia University"
+    city: "Montreal"
+    country: "Canada"
+    lat: 45.5088
+    lon: -73.5878
+    x: 325.5
+    y: 82.9
+  - id: "peterka-t"
+    name: "Tomáš Peterka"
+    aliases: []
+    n: 1
+    papers: ["henrich2022deer"]
+    institution: "Czech University of Life Sciences Prague"
+    city: "Prague"
+    country: "Czechia"
+    lat: 50.088
+    lon: 14.4208
+    x: 533.0
+    y: 69.2
+  - id: "peters-w"
+    name: "Wibke Peters"
+    aliases: []
+    n: 1
+    papers: ["henrich2022deer"]
+    institution: "Bayerische Landesanstalt für Wald und Forstwirtschaft"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4035
+    lon: 11.7488
+    x: 527.3
+    y: 74.1
+  - id: "pillet-m"
+    name: "Michiel D. Pillet"
+    aliases: []
+    n: 1
+    papers: ["schultz2022climate"]
+    institution: "University of Arizona"
+    city: "Tucson"
+    country: "United States"
+    lat: 32.2217
+    lon: -110.9265
+    x: 214.8
+    y: 126.2
+  - id: "record-s"
+    name: "Sydne Record"
+    aliases: []
+    n: 1
+    papers: ["schultz2022climate"]
+    institution: "University of Maine"
+    city: "Orono"
+    country: "United States"
+    lat: 44.8831
+    lon: -68.672
+    x: 336.4
+    y: 84.8
+  - id: "rudolph-f"
+    name: "F. Javiera Rudolph"
+    aliases: []
+    n: 1
+    papers: ["leibold2022internal"]
+    institution: "University of Florida"
+    city: "Gainesville"
+    country: "United States"
+    lat: 29.6516
+    lon: -82.3248
+    x: 285.8
+    y: 135.0
+  - id: "schultz-e"
+    name: "Emily L. Schultz"
+    aliases: []
+    n: 1
+    papers: ["schultz2022climate"]
+    institution: "Colorado Mountain College"
+    city: "Breckenridge"
+    country: "United States"
+    lat: 39.4829
+    lon: -106.0465
+    x: 238.1
+    y: 101.9
+  - id: "shaw-j"
+    name: "John D. Shaw"
+    aliases: []
+    n: 1
+    papers: ["schultz2022climate"]
+    institution: "Rocky Mountain Research Station"
+    city: "Ogden"
+    country: "United States"
+    lat: 41.223
+    lon: -111.9738
+    x: 226.5
+    y: 96.3
+  - id: "shoemaker-l"
+    name: "Lauren Shoemaker"
+    aliases: []
+    n: 1
+    papers: ["leibold2022internal"]
+    institution: "University of Wyoming"
+    city: "Laramie"
+    country: "United States"
+    lat: 41.3114
+    lon: -105.5911
+    x: 242.2
+    y: 96.0
+  - id: "sustr-p"
+    name: "Pavel Šustr"
+    aliases: []
+    n: 1
+    papers: ["henrich2022deer"]
+    institution: "Šumava National Park"
+    city: "Kašperské Hory"
+    country: "Czechia"
+    lat: 49.1435
+    lon: 13.5561
+    x: 531.3
+    y: 71.9
+  - id: "valent-p"
+    name: "Peter Valent"
+    aliases: []
+    n: 1
+    papers: ["mahnken2022accuracy"]
+    institution: "Technická univerzita vo Zvolene"
+    city: "Zvolen"
+    country: "Slovakia"
+    lat: 48.5744
+    lon: 19.1532
+    x: 544.4
+    y: 73.6
+  - id: "vallet-p"
+    name: "Patrick Vallet"
+    aliases: []
+    n: 1
+    papers: ["mahnken2022accuracy"]
+    institution: "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement"
+    city: "Saint-Martin-d'Hères"
+    country: "France"
+    lat: 45.1837
+    lon: 5.7545
+    x: 513.7
+    y: 83.9
+  - id: "van-der-maaten-e"
+    name: "Ernst van der Maaten"
+    aliases: []
+    n: 1
+    papers: ["mahnken2022accuracy"]
+    institution: "Technische Universität Dresden"
+    city: "Dresden"
+    country: "Germany"
+    lat: 51.0509
+    lon: 13.7383
+    x: 531.2
+    y: 66.4
+  - id: "van-der-maaten-theunissen-m"
+    name: "Marieke van der Maaten-Theunissen"
+    aliases: []
+    n: 1
+    papers: ["mahnken2022accuracy"]
+    institution: "Technische Universität Dresden"
+    city: "Dresden"
+    country: "Germany"
+    lat: 51.0509
+    lon: 13.7383
+    x: 531.2
+    y: 66.4
+  - id: "zuidema-p"
+    name: "Pieter A. Zuidema"
+    aliases: []
+    n: 1
+    papers: ["schultz2022climate"]
+    institution: "Wageningen University & Research"
+    city: "Wageningen"
+    country: "The Netherlands"
+    lat: 51.97
+    lon: 5.6667
+    x: 512.8
+    y: 63.8
+  - id: "angelov-b"
+    name: "Boyan Angelov"
+    aliases: []
+    n: 1
+    papers: ["ryo2021explainable"]
+  - id: "benito-b"
+    name: "Blas M. Benito"
+    aliases: []
+    n: 1
+    papers: ["ryo2021explainable"]
+    institution: "University of Alicante"
+    city: "Alicante"
+    country: "Spain"
+    lat: 38.3452
+    lon: -0.4815
+    x: 498.8
+    y: 105.7
+  - id: "bukharova-e"
+    name: "Evgenya V. Bukharova"
+    aliases: []
+    n: 1
+    papers: ["rosbakh2021siberian"]
+    institution: "FSE 'Zapovednoe Podlemorye' (Federal State Establishment)"
+    city: "Ulan-Ude"
+    country: "Russia"
+    lat: 51.8358
+    lon: 107.5839
+    x: 742.8
+    y: 64.1
+  - id: "chalmandrier-l"
+    name: "Loïc Chalmandrier"
+    aliases: []
+    n: 1
+    papers: ["chalmandrier2021linking"]
+    institution: "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement"
+    city: "Aix-en-Provence"
+    country: "France"
+    lat: 43.5298
+    lon: 5.4475
+    x: 513.1
+    y: 89.0
+  - id: "fluck-b"
+    name: "Benjamin Flück"
+    aliases: []
+    n: 1
+    papers: ["hagen2021gen3sis"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "fopp-f"
+    name: "Fabian Fopp"
+    aliases: []
+    n: 1
+    papers: ["hagen2021gen3sis"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "fritsch-m"
+    name: "Matthias Fritsch"
+    aliases: []
+    n: 1
+    papers: ["udy2021environmental"]
+    institution: "University of Göttingen"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "grass-i"
+    name: "Ingo Grass"
+    aliases: []
+    n: 1
+    papers: ["udy2021environmental"]
+    institution: "University of Hohenheim"
+    city: "Stuttgart"
+    country: "Germany"
+    lat: 48.7823
+    lon: 9.177
+    x: 521.2
+    y: 73.0
+  - id: "hanss-s"
+    name: "Sebastian Hanß"
+    aliases: []
+    n: 1
+    papers: ["udy2021environmental"]
+    institution: "University of Göttingen"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "kass-j"
+    name: "Jamie M. Kass"
+    aliases: []
+    n: 1
+    papers: ["ryo2021explainable"]
+    institution: "Tohoku University"
+    city: "Sendai"
+    country: "Japan"
+    lat: 38.2667
+    lon: 140.8667
+    x: 850.5
+    y: 105.9
+  - id: "kneib-t"
+    name: "Thomas Kneib"
+    aliases: []
+    n: 1
+    papers: ["udy2021environmental"]
+    institution: "University of Göttingen"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "kreft-h"
+    name: "Holger Kreft"
+    aliases: []
+    n: 1
+    papers: ["udy2021environmental"]
+    institution: "University of Göttingen"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "kukunda-c"
+    name: "Collins B. Kukunda"
+    aliases: []
+    n: 1
+    papers: ["udy2021environmental"]
+    institution: "Norwegian Institute of Bioeconomy Research"
+    city: "Ås"
+    country: "Norway"
+    lat: 59.6793
+    lon: 10.7742
+    x: 522.6
+    y: 43.1
+  - id: "laughlin-d"
+    name: "Daniel C. Laughlin"
+    aliases: []
+    n: 1
+    papers: ["chalmandrier2021linking"]
+    institution: "University of Wyoming"
+    city: "Laramie"
+    country: "United States"
+    lat: 41.3114
+    lon: -105.5911
+    x: 242.2
+    y: 96.0
+  - id: "mammola-s"
+    name: "Stefano Mammola"
+    aliases: []
+    n: 1
+    papers: ["ryo2021explainable"]
+    institution: "National Research Council"
+    city: "Verbania Pallanza"
+    country: "Italy"
+    lat: 45.9438
+    lon: 8.4723
+    x: 520.0
+    y: 81.5
+  - id: "miller-t"
+    name: "Tara K. Miller"
+    aliases: []
+    n: 1
+    papers: ["rosbakh2021siberian"]
+    institution: "University of Virginia"
+    city: "Charlottesville"
+    country: "United States"
+    lat: 38.0293
+    lon: -78.4767
+    x: 304.5
+    y: 106.7
+  - id: "picoche-c"
+    name: "Coralie Picoche"
+    aliases: []
+    n: 1
+    papers: ["barraquand2021inferring"]
+    institution: "Université de Bordeaux"
+    city: "Bordeaux"
+    country: "France"
+    lat: 44.8412
+    lon: -0.5805
+    x: 498.6
+    y: 84.9
+  - id: "primack-r"
+    name: "Richard B. Primack"
+    aliases: []
+    n: 1
+    papers: ["rosbakh2021siberian"]
+    institution: "Boston University"
+    city: "Boston"
+    country: "United States"
+    lat: 42.3584
+    lon: -71.0598
+    x: 327.7
+    y: 92.7
+  - id: "reininghaus-h"
+    name: "Hannah Reininghaus"
+    aliases: []
+    n: 1
+    papers: ["udy2021environmental"]
+    institution: "Leibniz Institute for the Analysis of Biodiversity Change"
+    city: "Bonn"
+    country: "Germany"
+    lat: 50.7344
+    lon: 7.0955
+    x: 516.2
+    y: 67.3
+  - id: "rosbakh-s"
+    name: "Sergey Rosbakh"
+    aliases: []
+    n: 1
+    papers: ["rosbakh2021siberian"]
+    institution: "Leibniz University Hannover"
+    city: "Hanover"
+    country: "Germany"
+    lat: 52.3705
+    lon: 9.7332
+    x: 521.9
+    y: 62.6
+  - id: "ryo-m"
+    name: "Masahiro Ryo"
+    aliases: []
+    n: 1
+    papers: ["ryo2021explainable"]
+    institution: "Leibniz Centre for Agricultural Landscape Research"
+    city: "Müncheberg"
+    country: "Germany"
+    lat: 52.507
+    lon: 14.1372
+    x: 531.7
+    y: 62.2
+  - id: "sandanov-d"
+    name: "Denis V. Sandanov"
+    aliases: []
+    n: 1
+    papers: ["rosbakh2021siberian"]
+    institution: "Institute of General and Experimental Biology"
+    city: "Ulan-Ude"
+    country: "Russia"
+    lat: 51.8272
+    lon: 107.6063
+    x: 742.8
+    y: 64.2
+  - id: "speich-m"
+    name: "Matthias Speich"
+    aliases: []
+    n: 1
+    papers: ["speich2021sequential"]
+    institution: "ZHAW Zurich University of Applied Sciences"
+    city: "Winterthur"
+    country: "Switzerland"
+    lat: 47.5056
+    lon: 8.7241
+    x: 520.4
+    y: 76.8
+  - id: "stouffer-d"
+    name: "Daniel B. Stouffer"
+    aliases: []
+    n: 1
+    papers: ["chalmandrier2021linking"]
+    institution: "Leibniz Institute of Freshwater Ecology and Inland Fisheries"
+    city: "Berlin"
+    country: "Germany"
+    lat: 52.5244
+    lon: 13.4105
+    x: 530.1
+    y: 62.2
+  - id: "tietjen-b"
+    name: "Britta Tietjen"
+    aliases: []
+    n: 1
+    papers: ["udy2021environmental"]
+    institution: "Freie Universität Berlin"
+    city: "Berlin"
+    country: "Germany"
+    lat: 52.5244
+    lon: 13.4105
+    x: 530.1
+    y: 62.2
+  - id: "tscharntke-t"
+    name: "Teja Tscharntke"
+    aliases: []
+    n: 1
+    papers: ["udy2021environmental"]
+    institution: "University of Göttingen"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "udy-k"
+    name: "Kristy Udy"
+    aliases: []
+    n: 1
+    papers: ["udy2021environmental"]
+    institution: "University of Göttingen"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "van-waveren-c"
+    name: "Clara-Sophie van Waveren"
+    aliases: []
+    n: 1
+    papers: ["udy2021environmental"]
+    institution: "Johann Heinrich von Thünen-Institut"
+    city: "Braunschweig"
+    country: "Germany"
+    lat: 52.2659
+    lon: 10.5267
+    x: 523.7
+    y: 62.9
+  - id: "wiegand-k"
+    name: "Kerstin Wiegand"
+    aliases: []
+    n: 1
+    papers: ["udy2021environmental"]
+    institution: "University of Göttingen"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "baltensweiler-a"
+    name: "Andri Baltensweiler"
+    aliases: []
+    n: 1
+    papers: ["trotsiuk2020assessing"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "benito-garzon-m"
+    name: "Marta Benito-Garzón"
+    aliases: []
+    n: 1
+    papers: ["ruizbenito2020available"]
+    institution: "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement"
+    city: "Bordeaux"
+    country: "France"
+    lat: 44.8412
+    lon: -0.58
+    x: 498.6
+    y: 84.9
+  - id: "berbigier-p"
+    name: "Paul Berbigier"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement"
+    city: "Bordeaux"
+    country: "France"
+    lat: 44.8412
+    lon: -0.58
+    x: 498.6
+    y: 84.9
+  - id: "berzaghi-f"
+    name: "Fabio Berzaghi"
+    aliases: []
+    n: 1
+    papers: ["berzaghi2020towards"]
+    institution: "World Maritime University"
+    city: "Malmo"
+    country: "Sweden"
+    lat: 55.6059
+    lon: 13.0007
+    x: 528.4
+    y: 53.7
+  - id: "bircher-n"
+    name: "Nicolas Bircher"
+    aliases: []
+    n: 1
+    papers: ["cailleret2020bayesian"]
+    institution: "ETH Zurich"
+    city: "Zurich"
+    country: "Switzerland"
+    lat: 47.3667
+    lon: 8.55
+    x: 520.0
+    y: 77.2
+  - id: "boch-s"
+    name: "Steffen Boch"
+    aliases: []
+    n: 1
+    papers: ["dormann2020plant"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "bolte-a"
+    name: "Andreas Bolte"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Johann Heinrich von Thünen-Institut"
+    city: "Eberswalde"
+    country: "Germany"
+    lat: 52.8351
+    lon: 13.7997
+    x: 530.9
+    y: 61.3
+  - id: "bonnefond-j"
+    name: "Jean-Marc Bonnefond"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement"
+    city: "Bordeaux"
+    country: "France"
+    lat: 44.8412
+    lon: -0.58
+    x: 498.6
+    y: 84.9
+  - id: "boreux-v"
+    name: "Virginie Boreux"
+    aliases: []
+    n: 1
+    papers: ["pichler2020machine"]
+    institution: "ETH Zurich"
+    city: "Zurich"
+    country: "Switzerland"
+    lat: 47.3667
+    lon: 8.55
+    x: 520.0
+    y: 77.2
+  - id: "buchmann-n"
+    name: "Nina Buchmann"
+    aliases: []
+    n: 1
+    papers: ["trotsiuk2020assessing"]
+    institution: "ETH Zurich"
+    city: "Zurich"
+    country: "Switzerland"
+    lat: 47.3667
+    lon: 8.55
+    x: 520.0
+    y: 77.2
+  - id: "buchner-m"
+    name: "Matthias Büchner"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Potsdam Institute for Climate Impact Research"
+    city: "Potsdam"
+    country: "Germany"
+    lat: 52.3989
+    lon: 13.0657
+    x: 529.3
+    y: 62.5
+  - id: "chaves-j"
+    name: "Jimena E. Chaves"
+    aliases: []
+    n: 1
+    papers: ["ruizbenito2020available"]
+    institution: "Consejo Nacional de Investigaciones Científicas y Técnicas"
+    city: "Ushuaia"
+    country: "Argentina"
+    lat: -54.8073
+    lon: -68.3084
+    x: 349.8
+    y: 430.9
+  - id: "chikalanov-a"
+    name: "Alexander Chikalanov"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "University of Library Studies and Information Technologies"
+    city: "Sofia"
+    country: "Bulgaria"
+    lat: 42.6975
+    lon: 23.3241
+    x: 556.4
+    y: 91.6
+  - id: "cicuendez-v"
+    name: "Victor Cicuendez"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Universidad Politécnica de Madrid"
+    city: "Madrid"
+    country: "Spain"
+    lat: 40.4165
+    lon: -3.7026
+    x: 490.9
+    y: 98.9
+  - id: "dolos-k"
+    name: "Klara Dolos"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Karlsruhe Institute of Technology"
+    city: "Karlsruhe"
+    country: "Germany"
+    lat: 49.0094
+    lon: 8.4044
+    x: 519.4
+    y: 72.3
+  - id: "eugster-w"
+    name: "Werner Eugster"
+    aliases: []
+    n: 1
+    papers: ["trotsiuk2020assessing"]
+    institution: "ETH Zurich"
+    city: "Zurich"
+    country: "Switzerland"
+    lat: 47.3667
+    lon: 8.55
+    x: 520.0
+    y: 77.2
+  - id: "ferretti-m"
+    name: "Marco Ferretti"
+    aliases: []
+    n: 1
+    papers: ["trotsiuk2020assessing"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "fleck-s"
+    name: "Stefan Fleck"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Nordwestdeutsche Forstliche Versuchsanstalt"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "foltynova-l"
+    name: "Lenka Foltýnová"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Czech Academy of Sciences, Global Change Research Institute"
+    city: "Brno"
+    country: "Czechia"
+    lat: 49.1952
+    lon: 16.608
+    x: 538.3
+    y: 71.8
+  - id: "frieler-k"
+    name: "Katja Frieler"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Potsdam Institute for Climate Impact Research"
+    city: "Potsdam"
+    country: "Germany"
+    lat: 52.3989
+    lon: 13.0657
+    x: 529.3
+    y: 62.5
+  - id: "gessler-a"
+    name: "Arthur Gessler"
+    aliases: []
+    n: 1
+    papers: ["trotsiuk2020assessing"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "gharun-m"
+    name: "Mana Gharun"
+    aliases: []
+    n: 1
+    papers: ["trotsiuk2020assessing"]
+    institution: "University of Münster"
+    city: "Münster"
+    country: "Germany"
+    lat: 51.9624
+    lon: 7.6257
+    x: 517.2
+    y: 63.8
+  - id: "hauf-y"
+    name: "Ylva Hauf"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Potsdam Institute for Climate Impact Research"
+    city: "Potsdam"
+    country: "Germany"
+    lat: 52.3989
+    lon: 13.0657
+    x: 529.3
+    y: 62.5
+  - id: "hinderling-j"
+    name: "Judith Hinderling"
+    aliases: []
+    n: 1
+    papers: ["dormann2020plant"]
+    institution: "University of Bern"
+    city: "Bern"
+    country: "Switzerland"
+    lat: 46.9481
+    lon: 7.4474
+    x: 517.5
+    y: 78.5
+  - id: "horemans-j"
+    name: "Joanna A. Horemans"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "University of Antwerp"
+    city: "Antwerp"
+    country: "Belgium"
+    lat: 51.2205
+    lon: 4.4003
+    x: 510.0
+    y: 65.9
+  - id: "janeiro-otero-a"
+    name: "Andrea Janeiro-Otero"
+    aliases: []
+    n: 1
+    papers: ["dormann2020plant"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "jump-a"
+    name: "Alistair S. Jump"
+    aliases: []
+    n: 1
+    papers: ["ruizbenito2020available"]
+    institution: "University of Stirling"
+    city: "Stirling"
+    country: "United Kingdom"
+    lat: 56.119
+    lon: -3.9368
+    x: 491.4
+    y: 52.3
+  - id: "kattge-j"
+    name: "Jens Kattge"
+    aliases: []
+    n: 1
+    papers: ["ruizbenito2020available"]
+    institution: "Max Planck Institute for Biogeochemistry"
+    city: "Jena"
+    country: "Germany"
+    lat: 50.9288
+    lon: 11.5899
+    x: 526.4
+    y: 66.7
+  - id: "kattwinkel-m"
+    name: "Mira Kattwinkel"
+    aliases: []
+    n: 1
+    papers: ["mair2020mdd"]
+    institution: "Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau"
+    city: "Landau"
+    country: "Germany"
+    lat: 49.1984
+    lon: 8.1169
+    x: 518.7
+    y: 71.8
+  - id: "kim-h"
+    name: "Hyungjun Kim"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Korea Advanced Institute of Science and Technology"
+    city: "Daejeon"
+    country: "South Korea"
+    lat: 36.3491
+    lon: 127.3849
+    x: 820.5
+    y: 112.2
+  - id: "kolari-p"
+    name: "Pasi Kolari"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "University of Helsinki"
+    city: "Helsinki"
+    country: "Finland"
+    lat: 60.1695
+    lon: 24.9354
+    x: 552.1
+    y: 41.9
+  - id: "kramer-k"
+    name: "Koen Kramer"
+    aliases: []
+    n: 1
+    papers: ["berzaghi2020towards"]
+    institution: "Wageningen University & Research"
+    city: "Wageningen"
+    country: "The Netherlands"
+    lat: 51.97
+    lon: 5.6667
+    x: 512.8
+    y: 63.8
+  - id: "lafont-s"
+    name: "Sébastien Lafont"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement"
+    city: "Bordeaux"
+    country: "France"
+    lat: 44.8412
+    lon: -0.58
+    x: 498.6
+    y: 84.9
+  - id: "lange-s"
+    name: "Stefan Lange"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "MSCI ESG Research"
+    city: "Potsdam"
+    country: "Germany"
+    lat: 52.4009
+    lon: 13.0591
+    x: 529.3
+    y: 62.5
+  - id: "lehtonen-a"
+    name: "Aleksi Lehtonen"
+    aliases: []
+    n: 1
+    papers: ["ruizbenito2020available"]
+    institution: "Natural Resources Institute Finland"
+    city: "Helsinki"
+    country: "Finland"
+    lat: 60.1695
+    lon: 24.9354
+    x: 552.1
+    y: 41.9
+  - id: "lines-e"
+    name: "Emily R. Lines"
+    aliases: []
+    n: 1
+    papers: ["ruizbenito2020available"]
+    institution: "University of Cambridge"
+    city: "Cambridge"
+    country: "United Kingdom"
+    lat: 52.2
+    lon: 0.1167
+    x: 500.3
+    y: 63.1
+  - id: "loustau-d"
+    name: "Denis Loustau"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement"
+    city: "Bordeaux"
+    country: "France"
+    lat: 44.8412
+    lon: -0.58
+    x: 498.6
+    y: 84.9
+  - id: "mammarella-i"
+    name: "Ivan Mammarella"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "University of Helsinki"
+    city: "Helsinki"
+    country: "Finland"
+    lat: 60.1695
+    lon: 24.9354
+    x: 552.1
+    y: 41.9
+  - id: "martel-s"
+    name: "Simon Martel"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "I4CE – Institute for Climate Economics"
+    city: "Paris"
+    country: "France"
+    lat: 48.8534
+    lon: 2.3488
+    x: 505.4
+    y: 72.8
+  - id: "morales-molino-c"
+    name: "Cesar Morales-Molino"
+    aliases: []
+    n: 1
+    papers: ["ruizbenito2020available"]
+    institution: "University of Bern"
+    city: "Bern"
+    country: "Switzerland"
+    lat: 46.9481
+    lon: 7.4474
+    x: 517.5
+    y: 78.5
+  - id: "niederlechner-s"
+    name: "Sandra Niederlechner"
+    aliases: []
+    n: 1
+    papers: ["henrich2020influence"]
+    institution: "Rottenburg University of Applied Forest Sciences"
+    city: "Rottenburg"
+    country: "Germany"
+    lat: 48.4763
+    lon: 8.9353
+    x: 520.7
+    y: 73.9
+  - id: "noack-m"
+    name: "Matthias Noack"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Fachagentur Nachwachsende Rohstoffe"
+    city: "Gülzow"
+    country: "Germany"
+    lat: 53.8202
+    lon: 12.0669
+    x: 526.8
+    y: 58.6
+  - id: "oddou-muratorio-s"
+    name: "Sylvie Oddou-Muratorio"
+    aliases: []
+    n: 1
+    papers: ["berzaghi2020towards"]
+    institution: "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement"
+    city: "Bordeaux"
+    country: "France"
+    lat: 44.8412
+    lon: -0.58
+    x: 498.6
+    y: 84.9
+  - id: "owen-h"
+    name: "Harry J. F. Owen"
+    aliases: []
+    n: 1
+    papers: ["ruizbenito2020available"]
+    institution: "University of Cambridge"
+    city: "Cambridge"
+    country: "United Kingdom"
+    lat: 52.2
+    lon: 0.1167
+    x: 500.3
+    y: 63.1
+  - id: "picart-d"
+    name: "Delphine Picart"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement"
+    city: "Bordeaux"
+    country: "France"
+    lat: 44.8412
+    lon: -0.58
+    x: 498.6
+    y: 84.9
+  - id: "pilegaard-k"
+    name: "Kim Pilegaard"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Technical University of Denmark"
+    city: "Kongens Lyngby"
+    country: "Denmark"
+    lat: 55.7704
+    lon: 12.5038
+    x: 527.3
+    y: 53.3
+  - id: "pretzsch-h"
+    name: "Hans Pretzsch"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Technical University of Munich"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4008
+    lon: 11.744
+    x: 527.3
+    y: 74.1
+  - id: "pumpanen-j"
+    name: "Jukka Pumpanen"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "University of Eastern Finland"
+    city: "Kuopio"
+    country: "Finland"
+    lat: 62.8925
+    lon: 27.6784
+    x: 556.2
+    y: 35.3
+  - id: "ratcliffe-s"
+    name: "Sophia Ratcliffe"
+    aliases: []
+    n: 1
+    papers: ["ruizbenito2020available"]
+    institution: "Universidad Rey Juan Carlos"
+    city: "Madrid"
+    country: "Spain"
+    lat: 40.4165
+    lon: -3.7026
+    x: 490.9
+    y: 98.9
+  - id: "recuero-l"
+    name: "Laura Recuero"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Universidad Politécnica de Madrid"
+    city: "Madrid"
+    country: "Spain"
+    lat: 40.4165
+    lon: -3.7026
+    x: 490.9
+    y: 98.9
+  - id: "rigling-a"
+    name: "Andreas Rigling"
+    aliases: []
+    n: 1
+    papers: ["trotsiuk2020assessing"]
+    institution: "ETH Zurich"
+    city: "Zurich"
+    country: "Switzerland"
+    lat: 47.3667
+    lon: 8.55
+    x: 520.0
+    y: 77.2
+  - id: "rohner-b"
+    name: "Brigitte Rohner"
+    aliases: []
+    n: 1
+    papers: ["trotsiuk2020assessing"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "ruiz-benito-p"
+    name: "Paloma Ruiz-Benito"
+    aliases: []
+    n: 1
+    papers: ["ruizbenito2020available"]
+    institution: "Universidad de Alcalá"
+    city: "Alcalá de Henares"
+    country: "Spain"
+    lat: 40.4821
+    lon: -3.36
+    x: 491.8
+    y: 98.7
+  - id: "schafer-d"
+    name: "Deborah Schäfer"
+    aliases: []
+    n: 1
+    papers: ["dormann2020plant"]
+    institution: "University of Bern"
+    city: "Bern"
+    country: "Switzerland"
+    lat: 46.9481
+    lon: 7.4474
+    x: 517.5
+    y: 78.5
+  - id: "schall-p"
+    name: "Peter Schall"
+    aliases: []
+    n: 1
+    papers: ["dormann2020plant"]
+    institution: "University of Göttingen"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "schaub-m"
+    name: "Marcus Schaub"
+    aliases: []
+    n: 1
+    papers: ["trotsiuk2020assessing"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "sheffield-j"
+    name: "Justin Sheffield"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "University of Southampton"
+    city: "Southampton"
+    country: "United Kingdom"
+    lat: 50.904
+    lon: -1.4043
+    x: 496.8
+    y: 66.8
+  - id: "stillhard-j"
+    name: "Jonas Stillhard"
+    aliases: []
+    n: 1
+    papers: ["trotsiuk2020assessing"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "thoma-s"
+    name: "Stefanie Thoma"
+    aliases: []
+    n: 1
+    papers: ["henrich2020influence"]
+    institution: "Forstliche Versuchs- und Forschungsanstalt Baden-Württemberg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "thurig-e"
+    name: "Esther Thürig"
+    aliases: []
+    n: 1
+    papers: ["trotsiuk2020assessing"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "tian-h"
+    name: "Hanqin Tian"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Boston College"
+    city: "Boston"
+    country: "United States"
+    lat: 42.3584
+    lon: -71.0598
+    x: 327.7
+    y: 92.7
+  - id: "vesala-t"
+    name: "Timo Vesala"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "University of Helsinki"
+    city: "Helsinki"
+    country: "Finland"
+    lat: 60.1695
+    lon: 24.9354
+    x: 552.1
+    y: 41.9
+  - id: "vieno-m"
+    name: "Massimo Vieno"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "UK Centre for Ecology & Hydrology"
+    city: "Edinburgh"
+    country: "United Kingdom"
+    lat: 55.9533
+    lon: -3.1884
+    x: 493.1
+    y: 52.8
+  - id: "wagner-m"
+    name: "Markus Wagner"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Nordwestdeutsche Forstliche Versuchsanstalt"
+    city: "Göttingen"
+    country: "Germany"
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
+  - id: "waldner-p"
+    name: "Peter Waldner"
+    aliases: []
+    n: 1
+    papers: ["trotsiuk2020assessing"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "weedon-g"
+    name: "Graham P. Weedon"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Met Office"
+    city: "Wallingford"
+    country: "United Kingdom"
+    lat: 51.5983
+    lon: -1.1251
+    x: 497.5
+    y: 64.8
+  - id: "wiese-k"
+    name: "Klaus Wiese"
+    aliases: []
+    n: 1
+    papers: ["reyer2020profound"]
+    institution: "Universidad Politécnica de Madrid"
+    city: "Madrid"
+    country: "Spain"
+    lat: 40.4165
+    lon: -3.7026
+    x: 490.9
+    y: 98.9
+  - id: "wright-i"
+    name: "Ian J. Wright"
+    aliases: []
+    n: 1
+    papers: ["berzaghi2020towards"]
+    institution: "Western Sydney University"
+    city: "Richmond"
+    country: "Australia"
+    lat: -33.5996
+    lon: 150.7514
+    x: 884.9
+    y: 365.2
+  - id: "beckwith-j"
+    name: "John J. Beckwith"
+    aliases: []
+    n: 1
+    papers: ["czaczkes2019multi"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "bruna-j"
+    name: "Josef Brůna"
+    aliases: []
+    n: 1
+    papers: ["bugmann2019tree"]
+    institution: "Czech Academy of Sciences, Institute of Botany"
+    city: "Průhonice"
+    country: "Czechia"
+    lat: 49.9996
+    lon: 14.5502
+    x: 533.3
+    y: 69.4
+  - id: "bunnefeld-l"
+    name: "Lynsey Bunnefeld"
+    aliases: []
+    n: 1
+    papers: ["pontarp2019latitudinal"]
+    institution: "University of Stirling"
+    city: "Stirling"
+    country: "United Kingdom"
+    lat: 56.119
+    lon: -3.9368
+    x: 491.4
+    y: 52.3
+  - id: "cheaib-a"
+    name: "Alissar Cheaib"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Aix-Marseille Université"
+    city: "Marseille"
+    country: "France"
+    lat: 43.297
+    lon: 5.3811
+    x: 513.0
+    y: 89.8
+  - id: "cosner-c"
+    name: "Chris Cosner"
+    aliases: []
+    n: 1
+    papers: ["johnson2019rapid"]
+    institution: "University of Miami"
+    city: "Coral Gables"
+    country: "United States"
+    lat: 25.7215
+    lon: -80.2684
+    x: 287.7
+    y: 148.8
+  - id: "cufar-k"
+    name: "Katarina Čufar"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "University of Ljubljana"
+    city: "Ljubljana"
+    country: "Slovenia"
+    lat: 46.0511
+    lon: 14.5051
+    x: 534.3
+    y: 81.2
+  - id: "cuny-h"
+    name: "Henri Cuny"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Institut national de l’information géographique et forestière"
+    city: "Champigneulles"
+    country: "France"
+    lat: 48.7342
+    lon: 6.1651
+    x: 514.3
+    y: 73.1
+  - id: "czaczkes-t"
+    name: "Tomer J. Czaczkes"
+    aliases: []
+    n: 1
+    papers: ["czaczkes2019multi"]
+    institution: "Freie Universität Berlin"
+    city: "Berlin"
+    country: "Germany"
+    lat: 52.5244
+    lon: 13.4105
+    x: 530.1
+    y: 62.2
+  - id: "de-luis-m"
+    name: "Martin de Luis"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Universidad de Zaragoza"
+    city: "Zaragoza"
+    country: "Spain"
+    lat: 41.6561
+    lon: -0.8773
+    x: 497.9
+    y: 94.9
+  - id: "del-castillo-e"
+    name: "Edurne Martinez del Castillo"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Johannes Gutenberg University Mainz"
+    city: "Mainz"
+    country: "Germany"
+    lat: 49.9819
+    lon: 8.2801
+    x: 519.0
+    y: 69.5
+  - id: "delpierre-n"
+    name: "Nicolas Delpierre"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Université Paris-Saclay"
+    city: "Gif-sur-Yvette"
+    country: "France"
+    lat: 48.6833
+    lon: 2.1333
+    x: 504.9
+    y: 73.3
+  - id: "deslauriers-a"
+    name: "Annie Deslauriers"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Université du Québec à Chicoutimi"
+    city: "Saguenay"
+    country: "Canada"
+    lat: 48.4168
+    lon: -71.0657
+    x: 335.1
+    y: 74.1
+  - id: "fattebert-j"
+    name: "Julien Fattebert"
+    aliases: []
+    n: 1
+    papers: ["hauenstein2019calibrating"]
+    institution: "Vilnius University"
+    city: "Vilnius"
+    country: "Lithuania"
+    lat: 54.6892
+    lon: 25.2798
+    x: 555.6
+    y: 56.2
+  - id: "fennel-s"
+    name: "Sabine Fennel"
+    aliases: []
+    n: 1
+    papers: ["valdez2019recruitment"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "fischnaller-s"
+    name: "Stefanie Fischnaller"
+    aliases: []
+    n: 1
+    papers: ["panassiti2019temperature"]
+    institution: "Laimburg Research Centre"
+    city: "Vadena"
+    country: "Italy"
+    lat: 46.4136
+    lon: 11.305
+    x: 526.6
+    y: 80.1
+  - id: "fonti-p"
+    name: "Patrick Fonti"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "francois-l"
+    name: "Louis François"
+    aliases: []
+    n: 1
+    papers: ["bugmann2019tree"]
+    institution: "University of Liège"
+    city: "Liège"
+    country: "Belgium"
+    lat: 50.6337
+    lon: 5.5675
+    x: 512.7
+    y: 67.6
+  - id: "gillespie-r"
+    name: "Rosemary Gillespie"
+    aliases: []
+    n: 1
+    papers: ["pontarp2019latitudinal"]
+    institution: "University of California, Berkeley"
+    city: "Berkeley"
+    country: "United States"
+    lat: 37.8716
+    lon: -122.2728
+    x: 195.1
+    y: 107.2
+  - id: "gracia-c"
+    name: "Carlos A. Gracia"
+    aliases: []
+    n: 1
+    papers: ["nadalsala2019global"]
+    institution: "Universitat de Barcelona"
+    city: "Barcelona"
+    country: "Spain"
+    lat: 41.3888
+    lon: 2.159
+    x: 505.3
+    y: 95.8
+  - id: "gricar-j"
+    name: "Jožica Gričar"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Slovenian Forestry Institute"
+    city: "Ljubljana"
+    country: "Slovenia"
+    lat: 46.0511
+    lon: 14.5051
+    x: 534.3
+    y: 81.2
+  - id: "heinke-j"
+    name: "Jens Heinke"
+    aliases: []
+    n: 1
+    papers: ["bugmann2019tree"]
+    institution: "Potsdam Institute for Climate Impact Research"
+    city: "Potsdam"
+    country: "Germany"
+    lat: 52.3989
+    lon: 13.0657
+    x: 529.3
+    y: 62.5
+  - id: "henrot-a"
+    name: "Alexandra-Jane Henrot"
+    aliases: []
+    n: 1
+    papers: ["bugmann2019tree"]
+    institution: "University of Liège"
+    city: "Liège"
+    country: "Belgium"
+    lat: 50.6337
+    lon: 5.5675
+    x: 512.7
+    y: 67.6
+  - id: "horsch-a"
+    name: "Anna-Lena Horsch"
+    aliases: []
+    n: 1
+    papers: ["czaczkes2019multi"]
+    institution: "University of Regensburg"
+    city: "Regensburg"
+    country: "Germany"
+    lat: 49.0151
+    lon: 12.1016
+    x: 527.9
+    y: 72.3
+  - id: "huang-j"
+    name: "Jian-Guo Huang"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Zhejiang University"
+    city: "Hangzhou"
+    country: "China"
+    lat: 30.2936
+    lon: 120.1614
+    x: 811.8
+    y: 132.8
+  - id: "jacquemin-i"
+    name: "Ingrid Jacquemin"
+    aliases: []
+    n: 1
+    papers: ["bugmann2019tree"]
+    institution: "University of Liège"
+    city: "Liège"
+    country: "Belgium"
+    lat: 50.6337
+    lon: 5.5675
+    x: 512.7
+    y: 67.6
+  - id: "janik-k"
+    name: "Katrin Janik"
+    aliases: []
+    n: 1
+    papers: ["panassiti2019temperature"]
+    institution: "Laimburg Research Centre"
+    city: "Vadena"
+    country: "Italy"
+    lat: 46.4136
+    lon: 11.305
+    x: 526.6
+    y: 80.1
+  - id: "jansson-r"
+    name: "Roland Jansson"
+    aliases: []
+    n: 1
+    papers: ["pontarp2019latitudinal"]
+    institution: "Umeå University"
+    city: "Umeå"
+    country: "Sweden"
+    lat: 63.8284
+    lon: 20.2597
+    x: 540.8
+    y: 33.2
+  - id: "kollas-c"
+    name: "Chris Kollas"
+    aliases: []
+    n: 1
+    papers: ["bugmann2019tree"]
+    institution: "Federal Institute for Risk Assessment"
+    city: "Berlin"
+    country: "Germany"
+    lat: 52.5244
+    lon: 13.4105
+    x: 530.1
+    y: 62.2
+  - id: "krause-c"
+    name: "Cornelia Krause"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Université du Québec à Chicoutimi"
+    city: "Saguenay"
+    country: "Canada"
+    lat: 48.4168
+    lon: -71.0657
+    x: 335.1
+    y: 74.1
+  - id: "lexer-m"
+    name: "Manfred J. Lexer"
+    aliases: []
+    n: 1
+    papers: ["bugmann2019tree"]
+    institution: "BOKU University"
+    city: "Vienna"
+    country: "Austria"
+    lat: 48.2085
+    lon: 16.3721
+    x: 538.1
+    y: 74.7
+  - id: "lireux-s"
+    name: "Ségolène Lireux"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Université Marie et Louis Pasteur"
+    city: "Besançon"
+    country: "France"
+    lat: 47.2488
+    lon: 6.0182
+    x: 514.1
+    y: 77.6
+  - id: "liu-g"
+    name: "Guohua Liu"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Max Planck Institute for Biogeochemistry"
+    city: "Jena"
+    country: "Germany"
+    lat: 50.9288
+    lon: 11.5899
+    x: 526.4
+    y: 66.7
+  - id: "makinen-h"
+    name: "Harri Mäkinen"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Natural Resources Institute Finland"
+    city: "Helsinki"
+    country: "Finland"
+    lat: 60.1695
+    lon: 24.9354
+    x: 552.1
+    y: 41.9
+  - id: "mazzoni-v"
+    name: "Valerio Mazzoni"
+    aliases: []
+    n: 1
+    papers: ["panassiti2019temperature"]
+    institution: "Fondazione Edmund Mach"
+    city: "San Michele all'Adige"
+    country: "Italy"
+    lat: 46.1897
+    lon: 11.1321
+    x: 526.3
+    y: 80.8
+  - id: "messner-m"
+    name: "Manuel Messner"
+    aliases: []
+    n: 1
+    papers: ["panassiti2019temperature"]
+    institution: "Laimburg Research Centre"
+    city: "Vadena"
+    country: "Italy"
+    lat: 46.4136
+    lon: 11.305
+    x: 526.6
+    y: 80.1
+  - id: "miranda-b"
+    name: "Brian R. Miranda"
+    aliases: []
+    n: 1
+    papers: ["bugmann2019tree"]
+    institution: "US Forest Service"
+    city: "Rhinelander, WI"
+    country: "United States"
+    lat: 45.6366
+    lon: -89.4121
+    x: 288.1
+    y: 82.5
+  - id: "morin-h"
+    name: "Hubert Morin"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Université du Québec à Chicoutimi"
+    city: "Saguenay"
+    country: "Canada"
+    lat: 48.4168
+    lon: -71.0657
+    x: 335.1
+    y: 74.1
+  - id: "naef-daenzer-b"
+    name: "Beat Naef-Daenzer"
+    aliases: []
+    n: 1
+    papers: ["hauenstein2019calibrating"]
+    institution: "Swiss Ornithological Institute"
+    city: "Sempach"
+    country: "Switzerland"
+    lat: 47.1358
+    lon: 8.1915
+    x: 519.2
+    y: 77.9
+  - id: "nojd-p"
+    name: "Pekka Nöjd"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Natural Resources Institute Finland"
+    city: "Helsinki"
+    country: "Finland"
+    lat: 60.1695
+    lon: 24.9354
+    x: 552.1
+    y: 41.9
+  - id: "oberhuber-w"
+    name: "Walter Oberhuber"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Universität Innsbruck"
+    city: "Innsbruck"
+    country: "Austria"
+    lat: 47.2627
+    lon: 11.3945
+    x: 526.7
+    y: 77.5
+  - id: "parth-m"
+    name: "Martin Parth"
+    aliases: []
+    n: 1
+    papers: ["panassiti2019temperature"]
+    institution: "Laimburg Research Centre"
+    city: "Vadena"
+    country: "Italy"
+    lat: 46.4136
+    lon: 11.305
+    x: 526.6
+    y: 80.1
+  - id: "prislan-p"
+    name: "Peter Prislan"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Slovenian Forestry Institute"
+    city: "Ljubljana"
+    country: "Slovenia"
+    lat: 46.0511
+    lon: 14.5051
+    x: 534.3
+    y: 81.2
+  - id: "rathgeber-c"
+    name: "Cyrille B. K. Rathgeber"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement"
+    city: "Nancy"
+    country: "France"
+    lat: 48.6937
+    lon: 6.1834
+    x: 514.3
+    y: 73.3
+  - id: "reifenberg-s"
+    name: "Stefan Reifenberg"
+    aliases: []
+    n: 1
+    papers: ["bagnara2019r"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "roedig-e"
+    name: "Edna Roedig"
+    aliases: []
+    n: 1
+    papers: ["bugmann2019tree"]
+    institution: "Helmholtz Centre for Environmental Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "rossi-s"
+    name: "Sergio Rossi"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Université du Québec à Chicoutimi"
+    city: "Saguenay"
+    country: "Canada"
+    lat: 48.4168
+    lon: -71.0657
+    x: 335.1
+    y: 74.1
+  - id: "saderi-s"
+    name: "Seyedeh Masoumeh Saderi"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Université de Lorraine"
+    city: "Nancy"
+    country: "France"
+    lat: 48.6844
+    lon: 6.185
+    x: 514.3
+    y: 73.3
+  - id: "sander-n"
+    name: "Nicolas Sander"
+    aliases: []
+    n: 1
+    papers: ["panassiti2019temperature"]
+  - id: "santon-j"
+    name: "Jantima Santon"
+    aliases: []
+    n: 1
+    papers: ["chanthorn2019defaunation"]
+  - id: "seidl-r"
+    name: "Rupert Seidl"
+    aliases: []
+    n: 1
+    papers: ["bugmann2019tree"]
+    institution: "Technical University of Munich"
+    city: "Freising"
+    country: "Germany"
+    lat: 48.4008
+    lon: 11.744
+    x: 527.3
+    y: 74.1
+  - id: "srisang-w"
+    name: "Wacharapong Srisang"
+    aliases: []
+    n: 1
+    papers: ["chanthorn2019defaunation"]
+    institution: "Rajamangala University of Technology Lanna"
+    city: "Lampang"
+    country: "Thailand"
+    lat: 18.68
+    lon: 99.7333
+    x: 770.0
+    y: 174.1
+  - id: "teller-b"
+    name: "Brittany J Teller"
+    aliases: []
+    n: 1
+    papers: ["johnson2019rapid"]
+    institution: "Pennsylvania State University"
+    city: "State College"
+    country: "United States"
+    lat: 40.7934
+    lon: -77.86
+    x: 309.3
+    y: 97.7
+  - id: "treml-v"
+    name: "Vaclav Treml"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Charles University"
+    city: "Prague"
+    country: "Czechia"
+    lat: 50.088
+    lon: 14.4208
+    x: 533.0
+    y: 69.2
+  - id: "valdez-j"
+    name: "Jose W. Valdez"
+    aliases: []
+    n: 1
+    papers: ["valdez2019recruitment"]
+    institution: "German Centre for Integrative Biodiversity Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "vavrick-h"
+    name: "Hanus Vavrick"
+    aliases: []
+    n: 1
+    papers: ["delpierre2019chilling"]
+    institution: "Mendel University in Brno"
+    city: "Brno"
+    country: "Czechia"
+    lat: 49.1952
+    lon: 16.608
+    x: 538.3
+    y: 71.8
+  - id: "werner-c"
+    name: "Christian Werner"
+    aliases: []
+    n: 1
+    papers: ["bagnara2019r"]
+    institution: "Planet Labs Germany"
+    city: "Berlin"
+    country: "Germany"
+    lat: 52.5174
+    lon: 13.3951
+    x: 530.1
+    y: 62.2
+  - id: "wild-j"
+    name: "Jan Wild"
+    aliases: []
+    n: 1
+    papers: ["bugmann2019tree"]
+    institution: "Czech Academy of Sciences, Institute of Botany"
+    city: "Průhonice"
+    country: "Czechia"
+    lat: 49.9996
+    lon: 14.5502
+    x: 533.3
+    y: 69.4
+  - id: "xu-c"
+    name: "Chonggang Xu"
+    aliases: []
+    n: 1
+    papers: ["bugmann2019tree"]
+    institution: "Los Alamos National Laboratory"
+    city: "Los Alamos"
+    country: "United States"
+    lat: 35.8881
+    lon: -106.307
+    x: 231.9
+    y: 113.8
+  - id: "yu-x"
+    name: "Xiao Yu"
+    aliases: []
+    n: 1
+    papers: ["johnson2019rapid"]
+    institution: "South China Normal University"
+    city: "Guangzhou"
+    country: "China"
+    lat: 23.1167
+    lon: 113.25
+    x: 802.4
+    y: 158.1
+  - id: "barton-k"
+    name: "Kamil Bartoń"
+    aliases: []
+    n: 1
+    papers: ["dormann2018model"]
+    institution: "Institute of Nature Conservation"
+    city: "Krakow"
+    country: "Poland"
+    lat: 50.0614
+    lon: 19.9366
+    x: 545.7
+    y: 69.2
+  - id: "beale-c"
+    name: "Colin M. Beale"
+    aliases: []
+    n: 1
+    papers: ["dormann2018model"]
+    institution: "University of York"
+    city: "York"
+    country: "United Kingdom"
+    lat: 53.9576
+    lon: -1.0827
+    x: 497.6
+    y: 58.2
+  - id: "bobrowski-m"
+    name: "Maria Bobrowski"
+    aliases: []
+    n: 1
+    papers: ["dormann2018biotic"]
+    institution: "Universität Hamburg"
+    city: "Hamburg"
+    country: "Germany"
+    lat: 53.5507
+    lon: 9.993
+    x: 522.2
+    y: 59.3
+  - id: "bravington-m"
+    name: "Mark V. Bravington"
+    aliases: []
+    n: 1
+    papers: ["fasiolo2018extended"]
+    institution: "University of Auckland"
+    city: "Auckland"
+    country: "New Zealand"
+    lat: -36.8485
+    lon: 174.7635
+    x: 938.4
+    y: 376.1
+  - id: "dehling-d"
+    name: "D. Matthias Dehling"
+    aliases: []
+    n: 1
+    papers: ["dormann2018biotic"]
+    institution: "Monash University"
+    city: "Melbourne"
+    country: "Australia"
+    lat: -37.814
+    lon: 144.9633
+    x: 861.7
+    y: 379.3
+  - id: "fasiolo-m"
+    name: "Matteo Fasiolo"
+    aliases: []
+    n: 1
+    papers: ["fasiolo2018extended"]
+    institution: "University of Bristol"
+    city: "Bristol"
+    country: "United Kingdom"
+    lat: 51.4552
+    lon: -2.5966
+    x: 494.1
+    y: 65.2
+  - id: "gerstner-k"
+    name: "Katharina Gerstner"
+    aliases: []
+    n: 1
+    papers: ["dormann2018model"]
+    institution: "German Centre for Integrative Biodiversity Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "guelat-j"
+    name: "Jérôme Guelat"
+    aliases: []
+    n: 1
+    papers: ["dormann2018model"]
+    institution: "Swiss Ornithological Institute"
+    city: "Sempach"
+    country: "Switzerland"
+    lat: 47.1358
+    lon: 8.1915
+    x: 519.2
+    y: 77.9
+  - id: "harris-d"
+    name: "David J. Harris"
+    aliases: []
+    n: 1
+    papers: ["dormann2018biotic"]
+  - id: "keil-p"
+    name: "Petr Keil"
+    aliases: []
+    n: 1
+    papers: ["dormann2018model"]
+    institution: "Czech University of Life Sciences Prague"
+    city: "Prague"
+    country: "Czechia"
+    lat: 50.088
+    lon: 14.4208
+    x: 533.0
+    y: 69.2
+  - id: "kraan-c"
+    name: "Casper Kraan"
+    aliases: []
+    n: 1
+    papers: ["dormann2018biotic"]
+    institution: "Johann Heinrich von Thünen-Institut"
+    city: "Bremerhaven"
+    country: "Germany"
+    lat: 53.5505
+    lon: 8.5852
+    x: 519.1
+    y: 59.3
+  - id: "madrigal-gonzalez-j"
+    name: "Jaime Madrigal-González"
+    aliases: []
+    n: 1
+    papers: ["marques2018last"]
+    institution: "Universidad de Valladolid"
+    city: "Valladolid"
+    country: "Spain"
+    lat: 41.6554
+    lon: -4.7235
+    x: 488.5
+    y: 94.9
+  - id: "marques-l"
+    name: "Laura Marqués"
+    aliases: []
+    n: 1
+    papers: ["marques2018last"]
+    institution: "University of Bern"
+    city: "Bern"
+    country: "Switzerland"
+    lat: 46.9481
+    lon: 7.4474
+    x: 517.5
+    y: 78.5
+  - id: "matechou-e"
+    name: "Eleni Matechou"
+    aliases: []
+    n: 1
+    papers: ["dormann2018model"]
+    institution: "Queen Mary University of London"
+    city: "London"
+    country: "United Kingdom"
+    lat: 51.5085
+    lon: -0.1257
+    x: 499.7
+    y: 65.1
+  - id: "moretti-m"
+    name: "Marco D. Moretti"
+    aliases: []
+    n: 1
+    papers: ["dormann2018biotic"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "pinkert-s"
+    name: "Stefan Pinkert"
+    aliases: []
+    n: 1
+    papers: ["dormann2018biotic"]
+    institution: "Philipps University of Marburg"
+    city: "Marburg"
+    country: "Germany"
+    lat: 50.809
+    lon: 8.7707
+    x: 520.0
+    y: 67.1
+  - id: "schmid-c"
+    name: "Christoph Schmid"
+    aliases: []
+    n: 1
+    papers: ["reisch2018comparison"]
+  - id: "schmidt-s"
+    name: "Susanne I. Schmidt"
+    aliases: []
+    n: 1
+    papers: ["dormann2018biotic"]
+    institution: "Helmholtz Centre for Environmental Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "sheppard-c"
+    name: "Christine S. Sheppard"
+    aliases: []
+    n: 1
+    papers: ["dormann2018biotic"]
+    institution: "BOKU University"
+    city: "Vienna"
+    country: "Austria"
+    lat: 48.2085
+    lon: 16.3721
+    x: 538.1
+    y: 74.7
+  - id: "steinbauer-m"
+    name: "Manuel J. Steinbauer"
+    aliases: []
+    n: 1
+    papers: ["dormann2018biotic"]
+    institution: "University of Bayreuth"
+    city: "Bayreuth"
+    country: "Germany"
+    lat: 49.9478
+    lon: 11.5789
+    x: 526.5
+    y: 69.6
+  - id: "wuest-r"
+    name: "Rafael O. Wüest"
+    aliases: []
+    n: 1
+    papers: ["dormann2018model"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "zeuss-d"
+    name: "Dirk Zeuss"
+    aliases: []
+    n: 1
+    papers: ["dormann2018biotic"]
+    institution: "Philipps University of Marburg"
+    city: "Marburg"
+    country: "Germany"
+    lat: 50.809
+    lon: 8.7707
+    x: 520.0
+    y: 67.1
+  - id: "boyce-m"
+    name: "Mark S. Boyce"
+    aliases: []
+    n: 1
+    papers: ["roberts2017cross"]
+    institution: "University of Alberta"
+    city: "Edmonton"
+    country: "Canada"
+    lat: 53.5501
+    lon: -113.4687
+    x: 247.7
+    y: 59.3
+  - id: "brieger-f"
+    name: "Falko Brieger"
+    aliases: []
+    n: 1
+    papers: ["brieger2017roe"]
+    institution: "Forstliche Versuchs- und Forschungsanstalt Baden-Württemberg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "diaconu-d"
+    name: "Daniela Diaconu"
+    aliases: []
+    n: 1
+    papers: ["augustynczik2017productivity"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "ebeling-a"
+    name: "Anne Ebeling"
+    aliases: []
+    n: 1
+    papers: ["fornoff2017functional"]
+    institution: "Friedrich Schiller University Jena"
+    city: "Jena"
+    country: "Germany"
+    lat: 50.9288
+    lon: 11.5899
+    x: 526.4
+    y: 66.7
+  - id: "fornoff-f"
+    name: "Felix Fornoff"
+    aliases: []
+    n: 1
+    papers: ["fornoff2017functional"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "gianelle-d"
+    name: "Damiano Gianelle"
+    aliases: []
+    n: 1
+    papers: ["pullens2017nucombog"]
+    institution: "Fondazione Edmund Mach"
+    city: "San Michele all'Adige"
+    country: "Italy"
+    lat: 46.1897
+    lon: 11.1321
+    x: 526.3
+    y: 80.8
+  - id: "hagen-r"
+    name: "Robert Hagen"
+    aliases: []
+    n: 1
+    papers: ["brieger2017roe"]
+    institution: "Landwirtschaftliches Zentrum Baden-Württemberg"
+    city: "Aulendorf"
+    country: "Germany"
+    lat: 47.9528
+    lon: 9.6409
+    x: 522.5
+    y: 75.5
+  - id: "hanewinkel-m"
+    name: "Marc Hanewinkel"
+    aliases: []
+    n: 1
+    papers: ["augustynczik2017productivity"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "heijmans-m"
+    name: "Monique M. P. D. Heijmans"
+    aliases: []
+    n: 1
+    papers: ["pullens2017nucombog"]
+    institution: "Wageningen University & Research"
+    city: "Wageningen"
+    country: "The Netherlands"
+    lat: 51.97
+    lon: 5.6667
+    x: 512.8
+    y: 63.8
+  - id: "kahle-h"
+    name: "Hans-Peter Kahle"
+    aliases: []
+    n: 1
+    papers: ["augustynczik2017productivity"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "kiely-g"
+    name: "Gerard Kiely"
+    aliases: []
+    n: 1
+    papers: ["pullens2017nucombog"]
+    institution: "University College Cork"
+    city: "Cork"
+    country: "Ireland"
+    lat: 51.898
+    lon: -8.4706
+    x: 480.9
+    y: 64.0
+  - id: "ortmann-s"
+    name: "Sylvia Ortmann"
+    aliases: []
+    n: 1
+    papers: ["brieger2017roe"]
+    institution: "Leibniz Institute for Zoo and Wildlife Research"
+    city: "Berlin"
+    country: "Germany"
+    lat: 52.5244
+    lon: 13.4105
+    x: 530.1
+    y: 62.2
+  - id: "petersen-i"
+    name: "Imke Petersen"
+    aliases: []
+    n: 1
+    papers: ["brieger2017roe"]
+    institution: "Universität Hamburg"
+    city: "Hamburg"
+    country: "Germany"
+    lat: 53.5507
+    lon: 9.993
+    x: 522.2
+    y: 59.3
+  - id: "pullens-j"
+    name: "Johannes W. M. Pullens"
+    aliases: []
+    n: 1
+    papers: ["pullens2017nucombog"]
+    institution: "Aarhus University"
+    city: "Aarhus"
+    country: "Denmark"
+    lat: 56.1567
+    lon: 10.2108
+    x: 522.2
+    y: 52.2
+  - id: "schaefer-h"
+    name: "H. Martin Schaefer"
+    aliases: []
+    n: 1
+    papers: ["fornoff2017functional"]
+    institution: "Fundación de Conservación Jocotoco"
+    city: "Quito"
+    country: "Ecuador"
+    lat: -0.2298
+    lon: -78.525
+    x: 281.9
+    y: 244.2
+  - id: "sottocornola-m"
+    name: "Matteo Sottocornola"
+    aliases: []
+    n: 1
+    papers: ["pullens2017nucombog"]
+  - id: "suchant-r"
+    name: "Rudi Suchant"
+    aliases: []
+    n: 1
+    papers: ["brieger2017roe"]
+    institution: "Forstliche Versuchs- und Forschungsanstalt Baden-Württemberg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "valente-l"
+    name: "Luis Valente"
+    aliases: []
+    n: 1
+    papers: ["cabral2017mechanistic"]
+    institution: "Naturalis Biodiversity Center"
+    city: "Leiden"
+    country: "The Netherlands"
+    lat: 52.1583
+    lon: 4.4931
+    x: 510.1
+    y: 63.2
+  - id: "venjakob-c"
+    name: "Christine Venjakob"
+    aliases: []
+    n: 1
+    papers: ["fornoff2017functional"]
+    institution: "Leuphana University of Lüneburg"
+    city: "Lüneburg"
+    country: "Germany"
+    lat: 53.2509
+    lon: 10.4141
+    x: 523.2
+    y: 60.1
+  - id: "banitz-t"
+    name: "Thomas Banitz"
+    aliases: []
+    n: 1
+    papers: ["singer2016community"]
+    institution: "Helmholtz Centre for Environmental Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "bauhus-j"
+    name: "Jürgen Bauhus"
+    aliases: []
+    n: 1
+    papers: ["sohn2016drought"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "bell-d"
+    name: "David M. Bell"
+    aliases: []
+    n: 1
+    papers: ["moran2016intraspecific"]
+    institution: "Pacific Northwest Research Station"
+    city: "Corvallis"
+    country: "United States"
+    lat: 44.5646
+    lon: -123.262
+    x: 205.6
+    y: 85.8
+  - id: "fowler-m"
+    name: "Mike S. Fowler"
+    aliases: []
+    n: 1
+    papers: ["singer2016community"]
+    institution: "Swansea University"
+    city: "Swansea"
+    country: "United Kingdom"
+    lat: 51.6208
+    lon: -3.9432
+    x: 491.1
+    y: 64.7
+  - id: "gutierrez-a"
+    name: "Alvaro G. Gutiérrez"
+    aliases: []
+    n: 1
+    papers: ["singer2016community"]
+    institution: "University of Chile"
+    city: "Santiago"
+    country: "Chile"
+    lat: -33.4569
+    lon: -70.6483
+    x: 319.5
+    y: 364.8
+  - id: "huss-j"
+    name: "Jürgen Huss"
+    aliases: []
+    n: 1
+    papers: ["sohn2016drought"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "kohler-m"
+    name: "Martin Kohler"
+    aliases: []
+    n: 1
+    papers: ["sohn2016drought"]
+    institution: "University of Freiburg"
+    city: "Freiburg im Breisgau"
+    country: "Germany"
+    lat: 47.9959
+    lon: 7.8522
+    x: 518.3
+    y: 75.3
+  - id: "krug-r"
+    name: "Rainer M. Krug"
+    aliases: []
+    n: 1
+    papers: ["singer2016community"]
+    institution: "SIB Swiss Institute of Bioinformatics"
+    city: "Lausanne"
+    country: "Switzerland"
+    lat: 46.516
+    lon: 6.6328
+    x: 515.6
+    y: 79.8
+  - id: "liess-m"
+    name: "Matthias Liess"
+    aliases: []
+    n: 1
+    papers: ["singer2016community"]
+    institution: "Helmholtz Centre for Environmental Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "matlack-g"
+    name: "Glenn Matlack"
+    aliases: []
+    n: 1
+    papers: ["singer2016community"]
+    institution: "Ohio University"
+    city: "Athens"
+    country: "United States"
+    lat: 39.3292
+    lon: -82.1013
+    x: 297.0
+    y: 102.4
+  - id: "moran-e"
+    name: "Emily V. Moran"
+    aliases: []
+    n: 1
+    papers: ["moran2016intraspecific"]
+    institution: "University of California, Merced"
+    city: "Merced"
+    country: "United States"
+    lat: 37.3022
+    lon: -120.483
+    x: 198.5
+    y: 109.1
+  - id: "sohn-j"
+    name: "Julia A. Sohn"
+    aliases: []
+    n: 1
+    papers: ["sohn2016drought"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "travis-j"
+    name: "Justin M. J. Travis"
+    aliases: []
+    n: 1
+    papers: ["singer2016community"]
+    institution: "University of Aberdeen"
+    city: "Aberdeen"
+    country: "United Kingdom"
+    lat: 57.1437
+    lon: -2.0981
+    x: 495.5
+    y: 49.6
+  - id: "voinopol-sassu-a"
+    name: "Ana-Johanna Voinopol-Sassu"
+    aliases: []
+    n: 1
+    papers: ["singer2016community"]
+  - id: "dech-s"
+    name: "Stefan Dech"
+    aliases: []
+    n: 1
+    papers: ["latifi2015assessing"]
+    institution: "University of Würzburg"
+    city: "Würzburg"
+    country: "Germany"
+    lat: 49.7939
+    lon: 9.9512
+    x: 522.8
+    y: 70.0
+  - id: "jehl-h"
+    name: "Hans Jehl"
+    aliases: []
+    n: 1
+    papers: ["latifi2015assessing"]
+  - id: "krzystek-p"
+    name: "Peter Krzystek"
+    aliases: []
+    n: 1
+    papers: ["latifi2015assessing"]
+    institution: "Munich University of Applied Sciences"
+    city: "Munich"
+    country: "Germany"
+    lat: 48.1374
+    lon: 11.5755
+    x: 526.9
+    y: 74.9
+  - id: "muller-j"
+    name: "Jörg Müller"
+    aliases: []
+    n: 1
+    papers: ["latifi2015assessing"]
+    institution: "University of Würzburg"
+    city: "Würzburg"
+    country: "Germany"
+    lat: 49.7939
+    lon: 9.9512
+    x: 522.8
+    y: 70.0
+  - id: "schiro-g"
+    name: "Gabriele Schiro"
+    aliases: []
+    n: 1
+    papers: ["schiro2015genetic"]
+    institution: "University of Arizona"
+    city: "Tucson"
+    country: "United States"
+    lat: 32.2217
+    lon: -110.9265
+    x: 214.8
+    y: 126.2
+  - id: "arlettaz-r"
+    name: "R. Arlettaz"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+    institution: "University of Bern"
+    city: "Bern"
+    country: "Switzerland"
+    lat: 46.9481
+    lon: 7.4474
+    x: 517.5
+    y: 78.5
+  - id: "baldi-a"
+    name: "A. Báldi"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+    institution: "HUN-REN Centre for Ecological Research"
+    city: "Budapest"
+    country: "Hungary"
+    lat: 47.4984
+    lon: 19.0404
+    x: 544.5
+    y: 76.8
+  - id: "benton-t"
+    name: "T. G. Benton"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+    institution: "Chatham House"
+    city: "London"
+    country: "United Kingdom"
+    lat: 51.5085
+    lon: -0.1257
+    x: 499.7
+    y: 65.1
+  - id: "collins-s"
+    name: "S. Collins"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+  - id: "dicks-l"
+    name: "L. V. Dicks"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+    institution: "University of Cambridge"
+    city: "Cambridge"
+    country: "United Kingdom"
+    lat: 52.2
+    lon: 0.1167
+    x: 500.3
+    y: 63.1
+  - id: "dieckmann-u"
+    name: "Ulf Dieckmann"
+    aliases: []
+    n: 1
+    papers: ["hartig2014sympatric"]
+    institution: "International Institute for Applied Systems Analysis"
+    city: "Laxenburg"
+    country: "Austria"
+    lat: 48.0683
+    lon: 16.3561
+    x: 538.1
+    y: 75.1
+  - id: "dieterich-m"
+    name: "M. Dieterich"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+  - id: "dislich-c"
+    name: "C. Dislich"
+    aliases: []
+    n: 1
+    papers: ["hartig2014technical"]
+  - id: "gregory-r"
+    name: "R. D. Gregory"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+    institution: "Royal Society for the Protection of Birds"
+    city: "Sandy"
+    country: "United Kingdom"
+    lat: 52.1293
+    lon: -0.2893
+    x: 499.3
+    y: 63.3
+  - id: "henle-k"
+    name: "K. Henle"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+    institution: "Helmholtz Centre for Environmental Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "hobson-p"
+    name: "P. R. Hobson"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+  - id: "neumann-r"
+    name: "R. K. Neumann"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+    institution: "Helmholtz Centre for Environmental Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "quetier-f"
+    name: "Fabien Quétier"
+    aliases: []
+    n: 1
+    papers: ["teeffelen2014ecological"]
+    institution: "Rewilding Europe"
+    city: "Nijmegen"
+    country: "Netherlands"
+    lat: 51.8426
+    lon: 5.839
+    x: 513.2
+    y: 64.1
+  - id: "robijns-t"
+    name: "T. Robijns"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+    institution: "European Climate Foundation"
+    city: "Berlin"
+    country: "Germany"
+    lat: 52.5244
+    lon: 13.4105
+    x: 530.1
+    y: 62.2
+  - id: "schmidt-j"
+    name: "J. Schmidt"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+    institution: "CoKnow Consulting"
+    city: "Jesewitz"
+    country: "Germany"
+    lat: 51.4224
+    lon: 12.5646
+    x: 528.5
+    y: 65.3
+  - id: "scott-a"
+    name: "A. V. Scott"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+  - id: "shwartz-a"
+    name: "A. Shwartz"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+    institution: "Technion – Israel Institute of Technology"
+    city: "Haifa"
+    country: "Israel"
+    lat: 32.813
+    lon: 34.9993
+    x: 589.7
+    y: 124.2
+  - id: "sutherland-w"
+    name: "W. J. Sutherland"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+    institution: "University of Cambridge"
+    city: "Cambridge"
+    country: "United Kingdom"
+    lat: 52.2
+    lon: 0.1167
+    x: 500.3
+    y: 63.1
+  - id: "turbe-a"
+    name: "A. Turbé"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+    institution: "Ecoscope"
+    city: "Haifa"
+    country: "Israel"
+    lat: 32.8191
+    lon: 34.9984
+    x: 589.7
+    y: 124.1
+  - id: "visconti-p"
+    name: "P. Visconti"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+    institution: "International Institute for Applied Systems Analysis"
+    city: "Laxenburg"
+    country: "Austria"
+    lat: 48.0683
+    lon: 16.3561
+    x: 538.1
+    y: 75.1
+  - id: "wulf-f"
+    name: "F. Wulf"
+    aliases: []
+    n: 1
+    papers: ["peer2014eu"]
+    institution: "Pro Natura - Friends of the Earth Switzerland"
+    city: "Basel"
+    country: "Switzerland"
+    lat: 47.5581
+    lon: 7.5878
+    x: 517.7
+    y: 76.7
+  - id: "deckmyn-g"
+    name: "Gaby Deckmyn"
+    aliases: []
+    n: 1
+    papers: ["vanoijen2013bayesian"]
+    institution: "University of Antwerp"
+    city: "Antwerp"
+    country: "Belgium"
+    lat: 51.2205
+    lon: 4.4003
+    x: 510.0
+    y: 65.9
+  - id: "dobner-h"
+    name: "Hans-Jürgen Dobner"
+    aliases: []
+    n: 1
+    papers: ["taubert2013challenge"]
+  - id: "flechsig-m"
+    name: "Michael Flechsig"
+    aliases: []
+    n: 1
+    papers: ["vanoijen2013bayesian"]
+    institution: "Potsdam Institute for Climate Impact Research"
+    city: "Potsdam"
+    country: "Germany"
+    lat: 52.3989
+    lon: 13.0657
+    x: 529.3
+    y: 62.5
+  - id: "harkonen-s"
+    name: "Sanna Härkönen"
+    aliases: []
+    n: 1
+    papers: ["vanoijen2013bayesian"]
+  - id: "kiviste-a"
+    name: "Andres Kiviste"
+    aliases: []
+    n: 1
+    papers: ["vanoijen2013bayesian"]
+    institution: "Estonian University of Life Sciences"
+    city: "Tartu"
+    country: "Estonia"
+    lat: 58.3806
+    lon: 26.7251
+    x: 556.8
+    y: 46.4
+  - id: "taubert-f"
+    name: "Franziska Taubert"
+    aliases: []
+    n: 1
+    papers: ["taubert2013challenge"]
+    institution: "Helmholtz Centre for Environmental Research"
+    city: "Leipzig"
+    country: "Germany"
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
+  - id: "bykova-o"
+    name: "Olga Bykova"
+    aliases: []
+    n: 1
+    papers: ["schurr2012how"]
+  - id: "catterall-s"
+    name: "Stephen Catterall"
+    aliases: []
+    n: 1
+    papers: ["marion2012parameter"]
+    institution: "Biomathematics and Statistics Scotland"
+    city: "Edinburgh"
+    country: "United Kingdom"
+    lat: 55.9521
+    lon: -3.1965
+    x: 493.0
+    y: 52.8
+  - id: "cook-a"
+    name: "Alex R. Cook"
+    aliases: []
+    n: 1
+    papers: ["marion2012parameter"]
+    institution: "National University of Singapore"
+    city: "Singapore"
+    country: "Singapore"
+    lat: 1.2897
+    lon: 103.8501
+    x: 788.4
+    y: 238.5
+  - id: "dyke-j"
+    name: "James Dyke"
+    aliases: []
+    n: 1
+    papers: ["hartig2012connecting"]
+    institution: "University of Exeter"
+    city: "Exeter"
+    country: "United Kingdom"
+    lat: 50.7236
+    lon: -3.5275
+    x: 492.0
+    y: 67.3
+  - id: "higgins-s"
+    name: "Steven I. Higgins"
+    aliases: []
+    n: 1
+    papers: ["hartig2012connecting"]
+    institution: "University of Bayreuth"
+    city: "Bayreuth"
+    country: "Germany"
+    lat: 49.9478
+    lon: 11.5789
+    x: 526.5
+    y: 69.6
+  - id: "kissling-w"
+    name: "W. Daniel Kissling"
+    aliases: []
+    n: 1
+    papers: ["schurr2012how"]
+    institution: "University of Amsterdam"
+    city: "Amsterdam"
+    country: "The Netherlands"
+    lat: 52.374
+    lon: 4.8897
+    x: 511.0
+    y: 62.6
+  - id: "linder-h"
+    name: "H. Peter Linder"
+    aliases: []
+    n: 1
+    papers: ["schurr2012how"]
+    institution: "University of Zurich"
+    city: "Zurich"
+    country: "Switzerland"
+    lat: 47.3667
+    lon: 8.55
+    x: 520.0
+    y: 77.2
+  - id: "marion-g"
+    name: "Glenn Marion"
+    aliases: []
+    n: 1
+    papers: ["marion2012parameter"]
+    institution: "Biomathematics and Statistics Scotland"
+    city: "Edinburgh"
+    country: "United Kingdom"
+    lat: 55.9521
+    lon: -3.1965
+    x: 493.0
+    y: 52.8
+  - id: "mcinerny-g"
+    name: "Greg J. McInerny"
+    aliases: []
+    n: 1
+    papers: ["marion2012parameter"]
+    institution: "University of Warwick"
+    city: "Coventry"
+    country: "United Kingdom"
+    lat: 52.4066
+    lon: -1.5122
+    x: 496.6
+    y: 62.5
+  - id: "midgley-g"
+    name: "Guy F. Midgley"
+    aliases: []
+    n: 1
+    papers: ["schurr2012how"]
+    institution: "Stellenbosch University"
+    city: "Stellenbosch"
+    country: "South Africa"
+    lat: -33.9346
+    lon: 18.8668
+    x: 548.1
+    y: 366.4
+  - id: "scheiter-s"
+    name: "Simon Scheiter"
+    aliases: []
+    n: 1
+    papers: ["hartig2012connecting"]
+    institution: "Senckenberg Biodiversity and Climate Research Centre"
+    city: "Frankfurt am Main"
+    country: "Germany"
+    lat: 50.1155
+    lon: 8.6842
+    x: 519.9
+    y: 69.1
+  - id: "schurr-f"
+    name: "Frank M. Schurr"
+    aliases: []
+    n: 1
+    papers: ["schurr2012how"]
+    institution: "University of Hohenheim"
+    city: "Stuttgart"
+    country: "Germany"
+    lat: 48.7823
+    lon: 9.177
+    x: 521.2
+    y: 73.0
+  - id: "zimmermann-n"
+    name: "Niklaus E. Zimmermann"
+    aliases: []
+    n: 1
+    papers: ["schurr2012how"]
+    institution: "Swiss Federal Institute for Forest, Snow and Landscape Research"
+    city: "Birmensdorf"
+    country: "Switzerland"
+    lat: 47.3552
+    lon: 8.4426
+    x: 519.8
+    y: 77.3
+  - id: "horn-m"
+    name: "Martin Horn"
+    aliases: []
+    n: 1
+    papers: ["hartig2010ecotrade"]
+    institution: "Graz University of Technology"
+    city: "Graz"
+    country: "Austria"
+    lat: 47.0673
+    lon: 15.442
+    x: 536.2
+    y: 78.1

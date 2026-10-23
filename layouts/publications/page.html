@@ -3,9 +3,9 @@
   <article class="page publication">
     <p class="breadcrumb"><a href="{{ "/publications/" | relURL }}">← Publications</a></p>
     <h1>{{ with .Params.content_lang }}<span lang="{{ . }}">{{ $.Title }}</span>{{ else }}{{ .Title }}{{ end }}{{ if .Params.is_preprint }} <span class="pub-badge">Preprint</span>{{ end }}</h1>
-    <p class="citation-authors pub-authors">{{ .Params.authors_display | default (delimit .Params.authors ", ") }}</p>
+    {{ partial "authors.html" (dict "page" . "class" "pub-authors") }}
     <div class="citation-meta">
-      {{- with .Params.journal }}<em>{{ . }}</em>{{ else }}{{ with .Params.school }}<em>PhD thesis, {{ . }}</em>{{ end }}{{ end }}
+      {{- with .Params.journal }}<em class="citation-journal">{{ . }}</em>{{ else }}{{ with .Params.school }}<em class="citation-journal">PhD thesis, {{ . }}</em>{{ end }}{{ end }}
       {{- with .Params.volume }}, {{ . }}{{ with $.Params.issue }}({{ . }}){{ end }}{{ else }}{{ with .Params.issue }}, ({{ . }}){{ end }}{{ end }}
       {{- with .Params.pages }}, {{ . }}{{ end }}
       {{- with .Params.year }} ({{ . }}){{ end }}
@@ -17,7 +17,10 @@
   author = {{"{"}}{{ delimit . " and " }}{{"}"}},
   title = {{"{"}}{{ $.Title }}{{"}"}},
   {{- with $.Params.journal }}
-  journal = {{"{"}}{{ . }}{{"}"}},
+  {{ if in (slice "incollection" "inbook" "inproceedings") $type }}booktitle{{ else }}journal{{ end }} = {{"{"}}{{ . }}{{"}"}},
+  {{- end }}
+  {{- with $.Params.publisher }}
+  publisher = {{"{"}}{{ . }}{{"}"}},
   {{- end }}
   {{- with $.Params.school }}
   school = {{"{"}}{{ . }}{{"}"}},
@@ -29,7 +32,7 @@
   number = {{"{"}}{{ . }}{{"}"}},
   {{- end }}
   {{- with $.Params.pages }}
-  pages = {{"{"}}{{ . }}{{"}"}},
+  pages = {{"{"}}{{ replace . "–" "--" }}{{"}"}},
   {{- end }}
   {{- with $.Params.year }}
   year = {{"{"}}{{ . }}{{"}"}},
@@ -41,16 +44,65 @@
       </details>
       {{- end }}
       {{- with .Params.doi }}<br><span class="pub-doi">DOI: <a href="https://doi.org/{{ . }}" rel="noopener">{{ . }}</a></span>{{ end }}
-      {{- with (index hugo.Data.citations.papers .Params.slug) }}
-      {{- if or .scholar .openalex }}
-      {{- $scholarLink := hugo.Data.citations.scholar_url }}
-      {{- with .scholar_id }}{{ $su := hugo.Data.citations.scholar_user }}{{ $scholarLink = printf "https://scholar.google.de/citations?view_op=view_citation&hl=en&user=%s&citation_for_view=%s:%s" $su $su . }}{{ end }}
-      <br><span class="pub-doi pub-citations">Cited by
-        {{- if .scholar }} <a href="{{ $scholarLink }}" rel="noopener">{{ lang.FormatNumber 0 .scholar }}</a> (Google Scholar){{ end -}}
-        {{- if and .scholar .openalex }} ·{{ end -}}
-        {{- if .openalex }} {{ lang.FormatNumber 0 .openalex }} (OpenAlex){{ end -}}
-        , as of {{ hugo.Data.citations.as_of }}</span>
+      {{- $s := hugo.Data.stats }}
+      {{- with (index ($s.papers | default dict) .Params.slug) }}
+      {{- $rec := . }}
+      {{- $scholarLink := $s.scholar.profile_url }}
+      {{- with .scholar_id }}{{ $su := $s.scholar.user }}{{ $scholarLink = printf "https://scholar.google.de/citations?view_op=view_citation&hl=en&user=%s&citation_for_view=%s:%s" $su $su . }}{{ end }}
+      {{- /* The chart is always shown, also without citations: one bar per
+             year from the publication year (or the first Scholar year, if
+             earlier — e.g. a preprint merged into the entry) to the year of
+             the history; years Scholar does not list count as 0, because
+             Scholar's histogram starts with the first year that has a
+             citation. */}}
+      {{- $asof := .history_as_of | default $s.as_of }}
+      {{- $endY := (time.AsTime $asof).Year }}
+      {{- $startY := int ($.Params.year | default $endY) }}
+      {{- with .years }}{{ if lt (int (index . 0)) $startY }}{{ $startY = int (index . 0) }}{{ end }}{{ end }}
+      {{- $byYear := dict }}
+      {{- range $k, $y := .years }}{{ $byYear = merge $byYear (dict (string $y) (index $rec.cites $k)) }}{{ end }}
+      {{- $years := slice }}{{ $vals := slice }}
+      {{- range seq $startY $endY }}{{ $years = $years | append . }}{{ $vals = $vals | append (index $byYear (string .) | default 0) }}{{ end }}
+      {{- $spark := gt (len $years) 0 }}
+      {{- /* "Citation statistics: ▁▃▆█ ▶ 125 (Google Scholar) · …" the word-sized chart with its caret comes first, as a
+             button that expands the full chart with years and values inline
+             below the line; then the counts with their sources. */}}
+      <div class="pub-doi pub-citations">Citation statistics:
+        {{- if $spark }} <button type="button" class="spark-hover" aria-expanded="false" aria-controls="spark-pop" title="Show citations per year (as of {{ time.Format "2 January 2006" (.history_as_of | default $s.as_of) }})"><span aria-hidden="true">{{ partial "spark.html" (dict "years" $years "values" $vals "label" "citations" "asof" $asof) }}</span><span class="spark-cue" aria-hidden="true">▶</span><span class="visually-hidden">Show citations per year</span></button>{{ end }}
+        {{- /* Counts always shown, also 0. */}} {{ lang.FormatNumber 0 (.scholar | default 0) }} (<a href="{{ $scholarLink }}" rel="noopener">Google Scholar</a>)
+        {{- if or .openalex .openalex_id }} ·{{ end -}}
+        {{- if or .openalex .openalex_id }} {{ lang.FormatNumber 0 .openalex }} ({{ with .openalex_id }}<a href="https://openalex.org/{{ . }}" rel="noopener">OpenAlex</a>{{ else }}OpenAlex{{ end }}){{ end -}}
+        , as of {{ time.Format "2 January 2006" $s.as_of }}
+        {{- if $spark }}
+        <div class="spark-pop" id="spark-pop">
+          <p class="chart-label">Google Scholar citations per year, as of {{ time.Format "2 January 2006" (.history_as_of | default $s.as_of) }}</p>
+          {{ partial "bars.html" (dict "years" $years "values" $vals "label" "citations" "class" "bars-pop" "labelall" true "yearsall" true "asof" $asof) }}
+        </div>
+        <script>
+        (function () {
+          var box = document.currentScript.parentElement, t = box.querySelector('.spark-hover');
+          function toggle() { var on = box.classList.toggle('is-open'); t.setAttribute('aria-expanded', on ? 'true' : 'false'); }
+          t.addEventListener('click', toggle);
+        })();
+        </script>
+        {{- end }}
+      </div>
       {{- end }}
+      {{- /* Funders as acknowledged in the paper (all authors' funding, not only
+             the site owner's), from the `funding` field of the .bib; collapsed under
+             the statistics (at the page bottom it was lost).
+             Open-access fees (e.g. Projekt DEAL) did not fund the study itself:
+             named separately. */}}
+      {{- with .Params.funding }}
+      {{- $study := slice }}{{ $oa := slice }}
+      {{- range split . "; " }}{{ if findRE `(?i)open access` . }}{{ $oa = $oa | append (replaceRE `\s*\((?i:open access funding)\)` "" .) }}{{ else }}{{ $study = $study | append . }}{{ end }}{{ end }}
+      <details class="pub-cite pub-funding">
+        <summary>Funding</summary>
+        <p>
+          {{- with $study }}This study was supported through funding by {{ delimit . "; " }}.{{ end }}
+          {{- with $oa }}{{ if $study }} {{ end }}Open access funding: {{ delimit . "; " }}.{{ end -}}
+        </p>
+      </details>
       {{- end }}
     </div>
 
@@ -64,22 +116,60 @@
       {{- with .Params.preprint }}
       <a class="button button-quiet" href="{{ . }}" rel="noopener">Preprint</a>
       {{- end }}
+      {{- /* Companion papers link to their software page. */}}
+      {{- $key := .File.ContentBaseName }}
+      {{- range where (where site.RegularPages "Section" "software") "Params.paper" $key }}
+      <a class="button button-quiet" href="{{ .RelPermalink }}">Software: {{ .Title }}</a>
+      {{- end }}
     </p>
 
     {{- with .Content }}
     <div class="prose">{{ . }}</div>
     {{- end }}
 
+
+    {{- /* A note in paragraphs (rules v3: background / what the paper shows /
+           significance) carries the figure after its second paragraph
+          ; otherwise the figure follows the note. */}}
+    {{- $paras := .Params.significance_paras }}
     {{- with .Params.significance }}
     <div class="prose pub-significance">
       <h2>What the paper shows and why it matters <span class="pub-ai-label">(AI-generated)</span></h2>
+      {{- with $paras }}
+      {{- range $i, $p := . }}
+      <p>{{ $p }}</p>
+      {{- if eq $i 1 }}{{ partial "pub-figure.html" $ }}{{ end }}
+      {{- end }}
+      {{- else }}
       <p>{{ . }}</p>
+      {{- end }}
+      {{- /* Works cited in the note, from data/note_refs.yaml (Crossref
+             metadata, scripts/note_refs.py); "DOI|a" adds a year suffix. */}}
+      {{- with $.Params.significance_refs }}
+      <p class="pub-significance-refs-label" id="note-refs">References</p>
+      <ul class="pub-significance-refs" aria-labelledby="note-refs">
+        {{- range . }}
+        {{- $parts := split . "|" }}{{ $doi := index $parts 0 }}
+        {{- with index hugo.Data.note_refs $doi }}
+        {{- $n := len .authors }}
+        <li>{{ index .authors 0 }}{{ if eq $n 2 }} &amp; {{ index .authors 1 }}{{ else if gt $n 2 }} et al.{{ end }} ({{ .year }}{{ if gt (len $parts) 1 }}{{ index $parts 1 }}{{ end }}). {{ .title }}{{ if not (findRE `[.?!]$` .title) }}.{{ end }} <i>{{ .container }}</i>{{ with .volume }} {{ . }}{{ end }}{{ with .pages }}, {{ . }}{{ end }}. <a href="https://doi.org/{{ $doi }}">doi:{{ $doi }}</a></li>
+        {{- else }}
+        {{- /* A cited work without metadata would silently vanish from the
+               list: stop the build instead. */}}
+        {{- errorf "%s: significance_refs DOI %q is not in data/note_refs.yaml — run scripts/note_refs.py and commit data/note_refs.yaml" $.File.Path $doi }}
+        {{- end }}
+        {{- end }}
+      </ul>
+      {{- end }}
     </div>
     {{- end }}
+
+    {{- if not $paras }}{{ partial "pub-figure.html" . }}{{ end }}
 
     {{- with .Params.note }}
     <p class="pub-note">{{ . }}</p>
     {{- end }}
+
   </article>
 </div>
 {{ end }}
