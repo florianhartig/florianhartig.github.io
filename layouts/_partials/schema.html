@@ -18,6 +18,8 @@
 {{- $addr := site.Params.address -}}
 {{- $personID := printf "%s#person" site.BaseURL -}}
 
+{{- /* `memberOf` points at the Organization node of the group site, which
+       lists this Person as `member`; the shared @id links the two pages. */ -}}
 {{- /* Stable institution identifiers (ROR + Wikidata), verified against
        ROR's own API rather than assumed — distinct from the OTH Regensburg
        record. Defined once and reused for both `affiliation` and `worksFor`
@@ -72,6 +74,11 @@
     "Deep learning")
   "affiliation" $university
   "worksFor" $university
+  "memberOf" (dict
+    "@type" "Organization"
+    "@id" "https://theoreticalecology.github.io/#organization"
+    "name" "Theoretical Ecology Group, University of Regensburg"
+    "url" "https://theoreticalecology.github.io/")
   "alumniOf" $alumni
   "workLocation" (dict
     "@type" "Place"
