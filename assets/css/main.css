@@ -64,6 +64,8 @@ body {
   font-family: var(--sans);
   font-size: 17px;
   line-height: 1.65;
+  /* Long DOIs and URLs wrap instead of widening the page on phones. */
+  overflow-wrap: break-word;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -330,6 +332,8 @@ p { margin: 0 0 1.1em; }
 /* Publications page: citation chart and co-author mini map side by side
   ; the map wraps below on narrow screens. The map is a link. */
 .metrics-visuals { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 2.5rem; }
+/* min-width: 0 lets the chart shrink below its natural width on phones. */
+.metrics-visuals .metrics-chart { min-width: 0; max-width: 100%; }
 .metrics-map { margin: 0.4rem 0 1rem; }
 .metrics-map-link { display: block; margin-top: 0.4rem; border-radius: 3px; }
 .metrics-map svg { display: block; width: 9rem; height: auto; }
