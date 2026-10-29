@@ -18,8 +18,16 @@ This site is the canonical homepage for {{ $a.name }} ({{ $a.rank }}, {{ $a.affi
 - Full name: {{ $a.name }}
 - Title: {{ $a.rank }}, {{ $a.affiliation }}
 - Field: theoretical ecology, ecological data science, biodiversity, statistics and machine learning in ecology
-{{- range hugo.Data.social }}
+{{- range hugo.Data.social }}{{ if ne .person false }}
 - {{ .name }}: {{ .url }}
+{{- end }}{{ end }}
+{{- $group := where hugo.Data.social "person" false }}
+{{- with $group }}
+
+Group profiles (the Theoretical Ecology Group, not Florian Hartig personally):
+{{- range . }}
+- {{ .name }}: {{ .url }}
+{{- end }}
 {{- end }}
 
 ## Pages

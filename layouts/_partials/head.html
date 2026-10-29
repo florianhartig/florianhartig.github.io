@@ -84,3 +84,12 @@
 <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
 
 {{ partial "schema.html" . }}
+
+{{- /* Without JavaScript the research ring cannot open its cards, so show the
+       themes as a plain expandable list instead (as on phones). */}}
+<noscript><style>
+.research-wheel svg, .rw-hint { display: none; }
+.rw-panel { position: static; width: auto; border-top: 1px solid var(--border); }
+.rw-panel summary { display: list-item; padding: 0.55rem 0; cursor: pointer; font-weight: 600; }
+.rw-panel-title { display: none; }
+</style></noscript>

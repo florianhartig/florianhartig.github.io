@@ -8,10 +8,13 @@
   data/social.yaml, which is what links this entity to the Scholar / ORCID /
   OpenAlex / Wikidata records that already exist.
 
-  Deliberately NOT here: Highwire `citation_*` meta tags. Those are for pages
-  that host the article full text; Google Scholar treats metadata-only landing
-  pages carrying them as duplicate copies, which would hurt rather than help.
-  See README.md.
+  Deliberately NOT here: Highwire `citation_*` meta tags. Scholar's inclusion
+  guidelines would accept pages with the complete
+  abstract, but every paper is already indexed from its publisher, so a page
+  here could only become one more version, and the notes' "References" lists
+  would be parsed as the paper's own reference list ("Mark the
+  section … with a standard heading, such as References"). Small gain, risk to
+  the Scholar record.
 */ -}}
 
 {{- $author := site.Params.author -}}
@@ -186,6 +189,12 @@
         {{- $article = merge $article (dict "identifier" (dict "@type" "PropertyValue" "propertyID" "arXiv" "value" (index (index . 0) 1))) -}}
       {{- end -}}
       {{- $article = merge $article (dict "sameAs" .) -}}
+    {{- else -}}
+      {{- /* No DOI and no preprint (thesis, regional journal): the full text
+             at the publisher or repository. */ -}}
+      {{- with $.Params.publisher_url -}}
+        {{- $article = merge $article (dict "sameAs" .) -}}
+      {{- end -}}
     {{- end -}}
   {{- end -}}
   {{- with index hugo.Data.figures .File.ContentBaseName -}}

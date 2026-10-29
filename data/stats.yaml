@@ -2,12 +2,12 @@
 # scripts/citation_stats.R from Google Scholar, OpenAlex and cranlogs in one
 # run, checked for consistency before writing — do not hand-edit. Figures for
 # the current year are partial.
-as_of: '2026-10-23'
+as_of: '2026-10-29'
 scholar:
   user: AdcDit0AAAAJ
   profile_url: https://scholar.google.de/citations?user=AdcDit0AAAAJ
 profile:
-  citations: 31384
+  citations: 31641
   h_index: 58
   i10_index: 109
   years:
@@ -32,21 +32,21 @@ profile:
   - 218
   - 300
   - 364
-  - 470
-  - 629
-  - 984
+  - 469
+  - 630
+  - 982
   - 1448
-  - 2235
-  - 2896
+  - 2237
+  - 2898
   - 3335
   - 4231
-  - 5690
-  - 7977
+  - 5689
+  - 8218
 papers:
   roberts2017cross:
-    scholar: 4516
+    scholar: 4657
     scholar_id: VjBpw8Hezy4C
-    openalex: 3548
+    openalex: 3664
     openalex_id: W2560136348
     years:
     - 2017
@@ -74,7 +74,7 @@ papers:
   peer2014eu:
     scholar: 926
     scholar_id: Nnq8S6OXqDYC
-    openalex: 625
+    openalex: 626
     openalex_id: W1999205818
     years:
     - 2014
@@ -106,7 +106,7 @@ papers:
     - 49
     history_as_of: '2026-10-19'
   dormann2012correlation:
-    scholar: 915
+    scholar: 916
     scholar_id: 9yKSN-GCB0IC
     openalex: 749
     openalex_id: W1960914988
@@ -144,9 +144,9 @@ papers:
     - 75
     history_as_of: '2026-10-19'
   pichler2023machine:
-    scholar: 633
+    scholar: 638
     scholar_id: puFLaqDw8dcC
-    openalex: 463
+    openalex: 469
     openalex_id: W4320733708
     years:
     - 2022
@@ -196,7 +196,7 @@ papers:
     - 52
     history_as_of: '2026-10-19'
   hartig2011statistical:
-    scholar: 495
+    scholar: 497
     scholar_id: u-x6o8ySG0sC
     openalex: 384
     openalex_id: W2136133754
@@ -236,7 +236,7 @@ papers:
     - 27
     history_as_of: '2026-10-19'
   dormann2018model:
-    scholar: 493
+    scholar: 495
     scholar_id: pxXbYLTb8EgC
     openalex: 403
     openalex_id: W2808363984
@@ -262,7 +262,7 @@ papers:
     - 61
     history_as_of: '2026-10-19'
   moran2016intraspecific:
-    scholar: 430
+    scholar: 431
     scholar_id: iKswqCX-FLkC
     openalex: 347
     openalex_id: W2171922452
@@ -360,9 +360,9 @@ papers:
     - 40
     history_as_of: '2026-10-19'
   pontarp2019latitudinal:
-    scholar: 286
+    scholar: 287
     scholar_id: oH8HCDhqVGsC
-    openalex: 243
+    openalex: 244
     openalex_id: W2906409355
     years:
     - 2019
@@ -384,9 +384,9 @@ papers:
     - 30
     history_as_of: '2026-10-19'
   ryo2021explainable:
-    scholar: 250
+    scholar: 251
     scholar_id: JqN3CTdJtl0C
-    openalex: 185
+    openalex: 187
     openalex_id: W3105821597
     years:
     - 2020
@@ -408,7 +408,7 @@ papers:
   dormann2020plant:
     scholar: 250
     scholar_id: ZqLB7dQ1iF4C
-    openalex: 175
+    openalex: 176
     openalex_id: W3045536146
     years:
     - 2020
@@ -466,7 +466,7 @@ papers:
     - 11
     history_as_of: '2026-10-19'
   pichler2020machine:
-    scholar: 224
+    scholar: 227
     scholar_id: KqW5X_olkfQC
     openalex: 149
     openalex_id: W2970584612
@@ -488,7 +488,7 @@ papers:
     - 33
     history_as_of: '2026-10-22'
   maliet2019model:
-    scholar: 215
+    scholar: 216
     scholar_id: 5F1dSjz1ScoC
     openalex: 175
     openalex_id: W2947175105
@@ -540,7 +540,7 @@ papers:
     - 14
     history_as_of: '2026-10-20'
   fornoff2017functional:
-    scholar: 180
+    scholar: 181
     scholar_id: cF7EPgIk0B4C
     openalex: 135
     openalex_id: W2558901066
@@ -646,7 +646,7 @@ papers:
     - 25
     history_as_of: '2026-10-20'
   pichler2021new:
-    scholar: 139
+    scholar: 140
     scholar_id: bkKuixW_xMkC
     openalex: 99
     openalex_id: W3183965237
@@ -705,6 +705,26 @@ papers:
     - 9
     - 2
     history_as_of: '2026-10-20'
+  hagen2021gen3sis:
+    scholar: 127
+    scholar_id: aNch6Af-aFkC
+    openalex: 100
+    openalex_id: W3182635651
+    years:
+    - 2021
+    - 2022
+    - 2023
+    - 2024
+    - 2025
+    - 2026
+    cites:
+    - 6
+    - 22
+    - 32
+    - 24
+    - 24
+    - 15
+    history_as_of: '2026-10-20'
   rogers2019total:
     scholar: 126
     scholar_id: DUFsPKDdMi0C
@@ -729,26 +749,6 @@ papers:
     - 17
     - 28
     history_as_of: '2026-10-22'
-  hagen2021gen3sis:
-    scholar: 125
-    scholar_id: aNch6Af-aFkC
-    openalex: 100
-    openalex_id: W3182635651
-    years:
-    - 2021
-    - 2022
-    - 2023
-    - 2024
-    - 2025
-    - 2026
-    cites:
-    - 6
-    - 22
-    - 32
-    - 24
-    - 24
-    - 15
-    history_as_of: '2026-10-20'
   rosbakh2021siberian:
     scholar: 123
     scholar_id: R6EwkKsDylYC
@@ -822,7 +822,7 @@ papers:
     - 26
     history_as_of: '2026-10-22'
   hartig2024novel:
-    scholar: 115
+    scholar: 116
     scholar_id: yaBp1wUtcLsC
     openalex: 86
     openalex_id: W4388484568
@@ -860,7 +860,7 @@ papers:
   berzaghi2020towards:
     scholar: 113
     scholar_id: RgznTc0nqo4C
-    openalex: 120
+    openalex: 121
     openalex_id: W2998097417
     years:
     - 2019
@@ -912,7 +912,7 @@ papers:
     - 5
     history_as_of: '2026-10-20'
   ruizbenito2020available:
-    scholar: 109
+    scholar: 110
     scholar_id: ovGv7akYl-cC
     openalex: 89
     openalex_id: W2989663407
@@ -954,9 +954,9 @@ papers:
     - 15
     history_as_of: '2026-10-22'
   hulsmann2021variation:
-    scholar: 99
+    scholar: 100
     scholar_id: fF_gHTpLxhAC
-    openalex: 78
+    openalex: 79
     openalex_id: W3094319799
     years:
     - 2021
@@ -976,7 +976,7 @@ papers:
   johst2011biodiversity:
     scholar: 98
     scholar_id: Tyk-4Ss8FVUC
-    openalex: 93
+    openalex: 94
     openalex_id: W1674916454
     years:
     - 2012
@@ -1061,6 +1061,20 @@ papers:
     - 27
     - 20
     history_as_of: '2026-10-23'
+  hulsmann2024latitudinal:
+    scholar: 82
+    scholar_id: xm1hsP5ya-EC
+    openalex: 57
+    openalex_id: W4392242653
+    years:
+    - 2024
+    - 2025
+    - 2026
+    cites:
+    - 14
+    - 34
+    - 32
+    history_as_of: '2026-10-23'
   hartig2009smart:
     scholar: 82
     scholar_id: u5HHmVD_uO8C
@@ -1101,22 +1115,8 @@ papers:
     - 5
     - 1
     history_as_of: '2026-10-20'
-  hulsmann2024latitudinal:
-    scholar: 81
-    scholar_id: xm1hsP5ya-EC
-    openalex: 56
-    openalex_id: W4392242653
-    years:
-    - 2024
-    - 2025
-    - 2026
-    cites:
-    - 14
-    - 34
-    - 32
-    history_as_of: '2026-10-23'
   mahnken2022accuracy:
-    scholar: 79
+    scholar: 80
     scholar_id: HoDPlbN_d1QC
     openalex: 63
     openalex_id: W4295180709
@@ -1218,7 +1218,7 @@ papers:
     - 7
     history_as_of: '2026-10-20'
   barraquand2021inferring:
-    scholar: 74
+    scholar: 75
     scholar_id: nroGzMJTTpEC
     openalex: 56
     openalex_id: W2972201545
@@ -1235,10 +1235,10 @@ papers:
     - 4
     - 8
     - 17
-    - 20
+    - 19
     - 11
-    - 12
-    history_as_of: '2026-10-17'
+    - 14
+    history_as_of: '2026-10-29'
   beckman2020advancing:
     scholar: 74
     scholar_id: 9tXw7Op4-u0C
@@ -1262,7 +1262,7 @@ papers:
     - 9
     - 10
     - 13
-    history_as_of: '2026-10-17'
+    history_as_of: '2026-10-29'
   hartig2014technical:
     scholar: 64
     scholar_id: GJVTs2krol4C
@@ -1326,7 +1326,7 @@ papers:
   chanthorn2019defaunation:
     scholar: 60
     scholar_id: oFn-K-OQSCAC
-    openalex: 49
+    openalex: 50
     openalex_id: W2961380020
     years:
     - 2019
@@ -1346,11 +1346,11 @@ papers:
     - 4
     - 15
     - 6
-    history_as_of: '2026-10-17'
+    history_as_of: '2026-10-29'
   trotsiuk2020r3pg:
     scholar: 59
     scholar_id: bbjcffOLshcC
-    openalex: 47
+    openalex: 48
     openalex_id: W3082770116
     years:
     - 2021
@@ -1440,7 +1440,7 @@ papers:
     - 7
     - 5
     - 4
-    history_as_of: '2026-10-17'
+    history_as_of: '2026-10-29'
   johnson2019rapid:
     scholar: 55
     scholar_id: QtA78RmWg5MC
@@ -1544,7 +1544,7 @@ papers:
     - 10
     - 14
     - 8
-    history_as_of: '2026-10-17'
+    history_as_of: '2026-10-29'
   chanthorn2017structure:
     scholar: 53
     scholar_id: Ul_CLA4dPeMC
@@ -1616,7 +1616,7 @@ papers:
   fasiolo2018extended:
     scholar: 48
     scholar_id: XtJa11BXPS4C
-    openalex: 6
+    openalex: 7
     openalex_id: W2227981903
     years:
     - 2017
@@ -1706,7 +1706,7 @@ papers:
   mair2020mdd:
     scholar: 45
     scholar_id: SgM-ki2adj0C
-    openalex: 33
+    openalex: 34
     openalex_id: W3048833663
     years:
     - 2020
@@ -1786,7 +1786,7 @@ papers:
   cabral2024road:
     scholar: 40
     scholar_id: eJD0kABLposC
-    openalex: 27
+    openalex: 28
     openalex_id: W4378232966
     years:
     - 2022
@@ -2075,6 +2075,8 @@ papers:
   leroy2025graph:
     scholar: 24
     scholar_id: mo9XK3BEATIC
+    openalex: 2
+    openalex_id: W4413318073
     years:
     - 2023
     - 2024
@@ -2085,6 +2087,20 @@ papers:
     - 4
     - 7
     - 11
+    history_as_of: '2026-10-17'
+  lamanna2024consequences:
+    scholar: 24
+    scholar_id: Weau3kkTRIMC
+    openalex: 18
+    openalex_id: W4403055657
+    years:
+    - 2024
+    - 2025
+    - 2026
+    cites:
+    - 1
+    - 9
+    - 12
     history_as_of: '2026-10-17'
   hulsmann2018comment:
     scholar: 24
@@ -2156,19 +2172,23 @@ papers:
     - 0
     - 1
     history_as_of: '2026-10-21'
-  lamanna2024consequences:
+  hartig2022evidence:
     scholar: 22
-    scholar_id: Weau3kkTRIMC
+    scholar_id: iWL_APfBKHwC
     openalex: 17
-    openalex_id: W4403055657
+    openalex_id: W4220936859
     years:
+    - 2022
+    - 2023
     - 2024
     - 2025
     - 2026
     cites:
-    - 1
-    - 9
-    - 12
+    - 7
+    - 2
+    - 2
+    - 5
+    - 5
     history_as_of: '2026-10-17'
   malchow2023demography:
     scholar: 21
@@ -2187,24 +2207,6 @@ papers:
     - 3
     - 6
     - 8
-    history_as_of: '2026-10-17'
-  hartig2022evidence:
-    scholar: 21
-    scholar_id: iWL_APfBKHwC
-    openalex: 16
-    openalex_id: W4220936859
-    years:
-    - 2022
-    - 2023
-    - 2024
-    - 2025
-    - 2026
-    cites:
-    - 7
-    - 2
-    - 2
-    - 5
-    - 5
     history_as_of: '2026-10-17'
   panassiti2015bayesian:
     scholar: 20
@@ -2520,6 +2522,16 @@ papers:
     - 0
     - 3
     history_as_of: '2026-10-17'
+  malchow2026calibration:
+    scholar: 7
+    scholar_id: OqYjx1B7R3oC
+    openalex: 4
+    openalex_id: W7155698550
+    years:
+    - 2026
+    cites:
+    - 5
+    history_as_of: '2026-10-17'
   johst2012offsetting:
     scholar: 6
     scholar_id: ufrVoPGSRksC
@@ -2554,16 +2566,6 @@ papers:
     - 0
     - 2
     history_as_of: '2026-10-22'
-  malchow2026calibration:
-    scholar: 5
-    scholar_id: OqYjx1B7R3oC
-    openalex: 4
-    openalex_id: W7155698550
-    years:
-    - 2026
-    cites:
-    - 5
-    history_as_of: '2026-10-17'
   lwin2025human:
     scholar: 5
     scholar_id: Sf6vrWCRp3YC
@@ -2643,6 +2645,8 @@ papers:
   dormann2025predicting:
     scholar: 2
     scholar_id: 1YatL4jblGcC
+    openalex: 1
+    openalex_id: W4408509057
     years:
     - 2025
     - 2026
@@ -2703,6 +2707,8 @@ papers:
   leite2025dispersion:
     scholar: 1
     scholar_id: rCzfLUpcSPoC
+    openalex: 1
+    openalex_id: W4416222757
     years:
     - 2026
     cites:
@@ -2755,6 +2761,8 @@ papers:
   herold2026novel:
     scholar: 0
     scholar_id: 7nQzp1YiEc4C
+    openalex: 0
+    openalex_id: W7125637573
   schiro2015genetic:
     scholar: 0
     scholar_id: ufKn5pxu7C0C
@@ -2802,7 +2810,7 @@ software:
       year: 2019
       venue: Forest Ecology and Management
       doi: 10.1016/j.foreco.2019.02.041
-      cited_by: 66
+      cited_by: 67
     - title: Warming may extend tree growing seasons and compensate for reduced carbon
         uptake during dry periods
       authors: Charlotte Grossiord et al.
@@ -2811,7 +2819,7 @@ software:
       doi: 10.1111/1365-2745.13892
       cited_by: 62
     downloads:
-      total: 112479
+      total: 115264
       years:
       - 2017
       - 2018
@@ -2832,9 +2840,9 @@ software:
       - 8058
       - 8195
       - 9383
-      - 20526
-      - 14548
-      through: '2026-10-22'
+      - 23087
+      - 14772
+      through: '2026-10-28'
     scholar_history:
       years:
       - 2018
@@ -2873,19 +2881,19 @@ software:
       venue: Integrative and Comparative Biology
       doi: 10.1093/icb/icae127
       cited_by: 19
-    - title: Prediction of the volume of shallow landslides due to rainfall using
-        data-driven models
-      authors: Jérémie Tuganishuri et al.
-      year: 2025
-      venue: Natural hazards and earth system sciences
-      doi: 10.5194/nhess-25-1481-2025
-      cited_by: 12
     - title: Inferring the extinction risk of marine fish to inform global conservation
         priorities
       authors: Nicolas Loiseau et al.
       year: 2024
       venue: PLoS Biology
       doi: 10.1371/journal.pbio.3002773
+      cited_by: 13
+    - title: Prediction of the volume of shallow landslides due to rainfall using
+        data-driven models
+      authors: Jérémie Tuganishuri et al.
+      year: 2025
+      venue: Natural hazards and earth system sciences
+      doi: 10.5194/nhess-25-1481-2025
       cited_by: 12
     - title: Neural Network in Aircraft Customer Satisfaction Prediction
       authors: Wangbin Du
@@ -2894,7 +2902,7 @@ software:
       doi: 10.54254/2754-1169/38/20231879
       cited_by: 2
     downloads:
-      total: 42732
+      total: 43197
       years:
       - 2022
       - 2023
@@ -2905,9 +2913,9 @@ software:
       - 1186
       - 3910
       - 4074
-      - 4500
-      - 29062
-      through: '2026-10-22'
+      - 4611
+      - 29416
+      through: '2026-10-28'
     scholar_history:
       years:
       - 2024
@@ -2919,7 +2927,7 @@ software:
       - 4
       as_of: '2026-10-21'
   dharma:
-    scholar: 14609
+    scholar: 14692
     scholar_entries: 9
     scholar_cites_url: https://scholar.google.com/scholar?cites=8215736615087129185,14848163357545660895,12959044664978358039,15452276934462432902,4569553696270332711,9086523624036610483,11290900028529183341,10658861746690851390,18143674280824572744,285970941187753064,10719509620722236951,7850767428029134253,13499330822724612273,16161486347014654432,2211680867744965602,10460263425021759778,13426927147401312656,2662040477883961354,11764306295592764547,16906287194141666434,16984049869852319568,2748019739190455341,8264605584777647235,9103761439173581417,10091832547678073819,6574101760933924056,17112359824642585772,3590944651039557964,13757737811005542974,7059561218184812983,5264352846308168105,330076552988395435,5076913709302688553,11897513368536680115,795418685397406077,429269760298301904
     cran_ref:
@@ -2941,14 +2949,14 @@ software:
       year: 2018
       venue: Nature Climate Change
       doi: 10.1038/s41558-018-0351-2
-      cited_by: 411
+      cited_by: 412
     - title: 'sdmTMB : An R Package for Fast, Flexible, and User-Friendly Generalized
         Linear Mixed Effects Models with Spatial and Spatiotemporal Random Fields'
       authors: Sean C. Anderson et al.
       year: 2025
       venue: Journal of Statistical Software
       doi: 10.18637/jss.v115.i02
-      cited_by: 213
+      cited_by: 214
     - title: Measuring biodiversity from DNA in the air
       authors: Elizabeth L. Clare et al.
       year: 2022
@@ -2961,9 +2969,9 @@ software:
       year: 2021
       venue: Journal of Hazardous Materials
       doi: 10.1016/j.jhazmat.2021.128136
-      cited_by: 184
+      cited_by: 185
     downloads:
-      total: 982828
+      total: 1054263
       years:
       - 2016
       - 2017
@@ -2986,9 +2994,9 @@ software:
       - 80585
       - 82390
       - 121736
-      - 230101
-      - 259694
-      through: '2026-10-22'
+      - 295746
+      - 265484
+      through: '2026-10-28'
     scholar_history:
       years:
       - 2018
@@ -3012,7 +3020,7 @@ software:
       - 3967
       as_of: '2026-10-19'
   gen3sis:
-    scholar: 125
+    scholar: 127
     scholar_entries: 1
     scholar_cites_url: https://scholar.google.com/scholar?cites=6839008587235619391,6962424506333646879
     cran_ref:
@@ -3027,13 +3035,13 @@ software:
       year: 2021
       venue: Proceedings of the National Academy of Sciences
       doi: 10.1073/pnas.2026347118
-      cited_by: 130
+      cited_by: 131
     - title: Understanding the relationship between dispersal and range size
       authors: Adriana Alzate & Renske E. Onstein
       year: 2022
       venue: Ecology Letters
       doi: 10.1111/ele.14089
-      cited_by: 111
+      cited_by: 112
     - title: 'Geodiversity: a significant, multi-faceted and evolving, geoscientific
         paradigm rather than a redundant term'
       authors: Murray Gray
@@ -3055,7 +3063,7 @@ software:
       doi: 10.1130/ges02416.1
       cited_by: 79
     downloads:
-      total: 52715
+      total: 53263
       years:
       - 2020
       - 2021
@@ -3070,9 +3078,9 @@ software:
       - 8543
       - 6706
       - 9983
-      - 9643
-      - 7179
-      through: '2026-10-22'
+      - 10102
+      - 7268
+      through: '2026-10-28'
     scholar_history:
       years:
       - 2021
@@ -3115,7 +3123,7 @@ software:
       doi: 10.21124/tes.2026.50.68
       cited_by: 0
     downloads:
-      total: 35504
+      total: 35564
       years:
       - 2016
       - 2017
@@ -3138,9 +3146,9 @@ software:
       - 3243
       - 2250
       - 2452
-      - 2323
-      - 1971
-      through: '2026-10-22'
+      - 2355
+      - 1999
+      through: '2026-10-28'
     scholar_history:
       years:
       - 2019
@@ -3166,7 +3174,7 @@ software:
       year: 2024
       venue: Geoscientific model development
       doi: 10.5194/gmd-17-1-2024
-      cited_by: 154
+      cited_by: 155
     - title: 'Plant respiration: Controlled by photosynthesis or biomass?'
       authors: Alessio Collalti et al.
       year: 2019
@@ -3179,14 +3187,14 @@ software:
       year: 2023
       venue: Earth system science data
       doi: 10.5194/essd-15-2445-2023
-      cited_by: 113
+      cited_by: 114
     - title: 'Tackling unresolved questions in forest ecology: The past and future
         role of simulation models'
       authors: Isabelle Maréchaux et al.
       year: 2021
       venue: Ecology and Evolution
       doi: 10.1002/ece3.7391
-      cited_by: 101
+      cited_by: 102
     - title: 'Beyond ecosystem modeling: A roadmap to community cyberinfrastructure
         for ecological data‐model integration'
       authors: Istem Fer et al.
@@ -3195,7 +3203,7 @@ software:
       doi: 10.1111/gcb.15409
       cited_by: 90
     downloads:
-      total: 13214
+      total: 13227
       years:
       - 2020
       - 2021
@@ -3210,9 +3218,9 @@ software:
       - 2029
       - 1604
       - 1768
-      - 990
-      - 235
-      through: '2026-10-22'
+      - 997
+      - 241
+      through: '2026-10-27'
     scholar_history:
       years:
       - 2019
@@ -3249,7 +3257,7 @@ software:
       year: 2024
       venue: Nature Food
       doi: 10.1038/s43016-024-01039-1
-      cited_by: 68
+      cited_by: 69
     - title: Calibration of the process-based model 3-PG for major central European
         tree species
       authors: David  Ian Forrester et al.
@@ -3263,7 +3271,7 @@ software:
       year: 2021
       venue: Journal of Ecology
       doi: 10.1111/1365-2745.13712
-      cited_by: 51
+      cited_by: 52
     - title: Sharp decline in future productivity of tropical reforestation above
         29°C mean annual temperature
       authors: Anja Nölte et al.
@@ -3279,7 +3287,7 @@ software:
       doi: 10.1016/j.foreco.2021.119271
       cited_by: 25
     downloads:
-      total: 23554
+      total: 23655
       years:
       - 2020
       - 2021
@@ -3294,9 +3302,9 @@ software:
       - 3487
       - 3426
       - 3150
-      - 2896
-      - 2760
-      through: '2026-10-22'
+      - 2938
+      - 2819
+      through: '2026-10-28'
     scholar_history:
       years:
       - 2021
@@ -3374,7 +3382,7 @@ software:
       - 1
       as_of: '2026-10-21'
   sjsdm:
-    scholar: 139
+    scholar: 140
     scholar_entries: 1
     scholar_cites_url: https://scholar.google.com/scholar?cites=11219092587794030031
     cran_ref:
@@ -3417,7 +3425,7 @@ software:
       doi: 10.1073/pnas.2307214121
       cited_by: 39
     downloads:
-      total: 16601
+      total: 17284
       years:
       - 2022
       - 2023
@@ -3428,9 +3436,9 @@ software:
       - 3860
       - 2978
       - 3495
-      - 3351
-      - 2917
-      through: '2026-10-22'
+      - 3938
+      - 3013
+      through: '2026-10-28'
     scholar_history:
       years:
       - 2020

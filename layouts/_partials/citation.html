@@ -1,12 +1,13 @@
 {{- /* One publication, rendered as a citation (publications list, software
        pages). `data-featured` drives the "Selected publications" filter. */ -}}
-{{- /* `data-search`: title, authors, venue, year and abstract, so the list
-       search also finds topics and package names that appear only in abstracts. */ -}}
+{{- /* `data-search`: title, authors, venue and year. The abstracts, so the
+       list search also finds topics and package names that appear only there,
+       are loaded separately on first use (publications/list.html). */ -}}
 {{- /* `data-cites`: the count shown in the entry (Scholar, else OpenAlex), for
        "Sort by citations" on /publications/. */ -}}
 {{- $sp := index (hugo.Data.stats.papers | default dict) .Params.slug }}
 {{- $cites := 0 }}{{ with $sp }}{{ $cites = .scholar | default .openalex | default 0 }}{{ end }}
-{{- $search := delimit (slice .Title (delimit (.Params.authors | default slice) " ") (.Params.journal | default "") (.Params.year | default "") (.Params.abstract | default "")) " " }}
+{{- $search := delimit (slice .Title (delimit (.Params.authors | default slice) " ") (.Params.journal | default "") (.Params.year | default "")) " " }}
 <article class="citation" data-key="{{ .File.ContentBaseName }}" data-cites="{{ $cites }}"{{ if .Params.is_preprint }} data-type="preprint"{{ end }}{{ if .Params.featured }} data-featured{{ end }} data-search="{{ $search }}">
   <h3 class="citation-title"><a href="{{ .RelPermalink }}"{{ with .Params.content_lang }} lang="{{ . }}"{{ end }}>{{ .Title }}</a>{{ if .Params.is_preprint }} <span class="pub-badge">Preprint</span>{{ end }}</h3>
   {{ partial "authors.html" (dict "page" .) }}
@@ -30,6 +31,8 @@
   {{- $p := . }}
   {{- with ($p.scholar | default $p.openalex) }}
   {{- $txt := printf "%s %s" (lang.FormatNumber 0 .) (cond (eq . 1) "citation" "citations") }}
+  {{- /* Every other count in the list is Google Scholar's: name the fallback. */}}
+  {{- if not $p.scholar }}{{ $txt = printf "%s (OpenAlex)" $txt }}{{ end }}
   {{- if and $p.scholar $p.scholar_id }}
   {{- $su := $s.scholar.user }}
   {{- $txt = printf `<a href="https://scholar.google.de/citations?view_op=view_citation&amp;hl=en&amp;user=%s&amp;citation_for_view=%s:%s" rel="noopener">%s</a>` $su $su $p.scholar_id $txt }}

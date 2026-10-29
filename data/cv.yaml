@@ -4,7 +4,7 @@ positions:
     where: "University of Regensburg"
     note: ""
     roles:
-      - "Head of the Professorship for Theoretical Ecology"
+      - "Head of the Professorship for Theoretical Ecology (Theoretical Ecology Group)"
       - "Interim head of the Chair for Plant Ecology"
       - "Deputy Dean of Research, Faculty of Biology and Preclinical Medicine"
       - "Coordinator and head of the examination committee, MSc Ecology, Evolution & Conservation (EEC)"
@@ -24,7 +24,7 @@ positions:
 education:
   - period: "2006 – 2009"
     role: "Dr. rer. nat., Applied System Science"
-    where: "University of Osnabrück (2009); research at UFZ Leipzig"
+    where: "Osnabrück University (2009); research at UFZ Leipzig"
     note: "Thesis: Metapopulations, Markets and the Individual"
   - period: "2004 – 2005"
     role: "MSc in Physics (Theoretical Particle Physics)"
@@ -32,7 +32,7 @@ education:
     note: ""
   - period: "2001 – 2006"
     role: "Studies in Physics"
-    where: "Free University Berlin, Germany"
+    where: "Freie Universität Berlin, Germany"
     note: ""
   - period: "2000 – 2001"
     role: "Civilian service"
@@ -69,9 +69,9 @@ career_strip:
 # University" that read well on the page but are wrong as an institution name
 # in structured data.
 alma_mater:
-  - name: "University of Osnabrück"
+  - name: "Osnabrück University"
     url: "https://www.uni-osnabrueck.de/"
   - name: "Uppsala University"
     url: "https://www.uu.se/"
-  - name: "Free University of Berlin"
+  - name: "Freie Universität Berlin"
     url: "https://www.fu-berlin.de/"

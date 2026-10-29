@@ -1,6 +1,6 @@
 ---
 title: "Impressum"
-description: "Impressum and privacy notice for florianhartig.github.io, per § 5 DDG (German Digital Services Act)."
+description: "Impressum and privacy notice for florianhartig.github.io, per § 5 Digitale-Dienste-Gesetz (DDG)."
 ---
 
 <div lang="de">

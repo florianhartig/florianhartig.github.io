@@ -5,7 +5,7 @@
 # Values in JSON notation; hand edits must keep it.
 count: 683
 located: 665
-locations_as_of: "2026-10-18"
+locations_as_of: "2026-10-23"
 merge: {"minnuno-f": "minunno-f", "efiom-e": "effiom-e", "schupp-g": "schupp-e", "lasch-p": "lasch-born-p", "strickland-w": "strickland-c"}
 people:
   - id: "dormann-c"
@@ -169,11 +169,11 @@ people:
     aliases: []
     n: 5
     papers: ["cabral2024road", "oberpriller2022climate", "cameron2022issues", "oberpriller2021towards", "oberpriller2021modellunsicherheiten"]
-    institution: "ams-OSRAM International GmbH"
+    institution: "University of Regensburg"
     city: "Regensburg"
     country: "Germany"
-    lat: 49.0195
-    lon: 12.0975
+    lat: 49.0151
+    lon: 12.1016
     x: 527.9
     y: 72.3
   - id: "pellissier-l"
@@ -456,7 +456,7 @@ people:
     name: "Hooman Latifi"
     aliases: []
     n: 4
-    papers: ["fassnacht2018using", "latifi2015stratified", "latifi2015assessing", "fassnacht2014importance"]
+    papers: ["fassnacht2018using", "latifi2015assessing", "latifi2015stratified", "fassnacht2014importance"]
     institution: "K. N. Toosi University of Technology"
     city: "Tehran"
     country: "Iran"
@@ -1705,13 +1705,13 @@ people:
     aliases: ["Iliusi Vega del Valle"]
     n: 2
     papers: ["mahnken2022accuracy", "reyer2020profound"]
-    institution: "Centro Nacional de Derechos Humanos Rosario Ibarra de Piedra (CENADEH), Comision Nacional de los Derechos Humanos"
-    city: "Mexico City"
-    country: "Mexico"
-    lat: 19.3208
-    lon: -99.1515
-    x: 232.0
-    y: 171.8
+    institution: "Potsdam Institute for Climate Impact Research"
+    city: "Potsdam"
+    country: "Germany"
+    lat: 52.3989
+    lon: 13.0657
+    x: 529.3
+    y: 62.5
   - id: "volkholz-j"
     name: "Jan Volkholz"
     aliases: []
@@ -2838,7 +2838,7 @@ people:
     aliases: []
     n: 1
     papers: ["topper2025advancing"]
-    institution: "Norwegian Institute for Nature Research (NINA)"
+    institution: "Norwegian Institute for Nature Research"
     city: "Lillehammer"
     country: "Norway"
     lat: 61.1333
@@ -2874,11 +2874,11 @@ people:
     aliases: []
     n: 1
     papers: ["topper2025advancing"]
-    institution: "Equinor (Norway)"
+    institution: "Norwegian Institute for Nature Research"
     city: "Trondheim"
     country: "Norway"
-    lat: 63.4304
-    lon: 10.3952
+    lat: 63.4305
+    lon: 10.3951
     x: 521.0
     y: 34.1
   - id: "berger-u"
@@ -3150,13 +3150,13 @@ people:
     aliases: []
     n: 1
     papers: ["topper2025advancing"]
-    institution: "Vizzuality (Spain)"
-    city: "Madrid"
-    country: "Spain"
-    lat: 40.4168
-    lon: -3.7035
-    x: 490.9
-    y: 98.9
+    institution: "UN Environment Programme World Conservation Monitoring Centre"
+    city: "Cambridge"
+    country: "United Kingdom"
+    lat: 52.2
+    lon: 0.1167
+    x: 500.3
+    y: 63.1
   - id: "hawkins-n"
     name: "Nichola J. Hawkins"
     aliases: []
@@ -3570,13 +3570,13 @@ people:
     aliases: []
     n: 1
     papers: ["grimm2025using"]
-    institution: "Bremische Bürgerschaft"
-    city: "Bremen"
+    institution: "University of Göttingen"
+    city: "Göttingen"
     country: "Germany"
-    lat: 53.0758
-    lon: 8.8072
-    x: 519.7
-    y: 60.6
+    lat: 51.5344
+    lon: 9.9323
+    x: 522.5
+    y: 65.0
   - id: "topper-j"
     name: "Joachim Paul Töpper"
     aliases: []
@@ -6914,13 +6914,13 @@ people:
     aliases: []
     n: 1
     papers: ["bagnara2019r"]
-    institution: "Planet Labs Germany"
-    city: "Berlin"
+    institution: "Karlsruhe Institute of Technology"
+    city: "Garmisch-Partenkirchen"
     country: "Germany"
-    lat: 52.5174
-    lon: 13.3951
-    x: 530.1
-    y: 62.2
+    lat: 47.4763
+    lon: 11.0633
+    x: 525.9
+    y: 76.9
   - id: "wild-j"
     name: "Jan Wild"
     aliases: []
@@ -7464,6 +7464,18 @@ people:
     lon: -123.262
     x: 205.6
     y: 85.8
+  - id: "dech-s"
+    name: "Stefan Dech"
+    aliases: []
+    n: 1
+    papers: ["latifi2015assessing"]
+    institution: "University of Würzburg"
+    city: "Würzburg"
+    country: "Germany"
+    lat: 49.7939
+    lon: 9.9512
+    x: 522.8
+    y: 70.0
   - id: "fowler-m"
     name: "Mike S. Fowler"
     aliases: []
@@ -7500,6 +7512,11 @@ people:
     lon: 7.8522
     x: 518.3
     y: 75.3
+  - id: "jehl-h"
+    name: "Hans Jehl"
+    aliases: []
+    n: 1
+    papers: ["latifi2015assessing"]
   - id: "kohler-m"
     name: "Martin Kohler"
     aliases: []
@@ -7524,6 +7541,18 @@ people:
     lon: 6.6328
     x: 515.6
     y: 79.8
+  - id: "krzystek-p"
+    name: "Peter Krzystek"
+    aliases: []
+    n: 1
+    papers: ["latifi2015assessing"]
+    institution: "Munich University of Applied Sciences"
+    city: "Munich"
+    country: "Germany"
+    lat: 48.1374
+    lon: 11.5755
+    x: 526.9
+    y: 74.9
   - id: "liess-m"
     name: "Matthias Liess"
     aliases: []
@@ -7560,6 +7589,18 @@ people:
     lon: -120.483
     x: 198.5
     y: 109.1
+  - id: "muller-j"
+    name: "Jörg Müller"
+    aliases: []
+    n: 1
+    papers: ["latifi2015assessing"]
+    institution: "University of Würzburg"
+    city: "Würzburg"
+    country: "Germany"
+    lat: 49.7939
+    lon: 9.9512
+    x: 522.8
+    y: 70.0
   - id: "sohn-j"
     name: "Julia A. Sohn"
     aliases: []
@@ -7589,47 +7630,6 @@ people:
     aliases: []
     n: 1
     papers: ["singer2016community"]
-  - id: "dech-s"
-    name: "Stefan Dech"
-    aliases: []
-    n: 1
-    papers: ["latifi2015assessing"]
-    institution: "University of Würzburg"
-    city: "Würzburg"
-    country: "Germany"
-    lat: 49.7939
-    lon: 9.9512
-    x: 522.8
-    y: 70.0
-  - id: "jehl-h"
-    name: "Hans Jehl"
-    aliases: []
-    n: 1
-    papers: ["latifi2015assessing"]
-  - id: "krzystek-p"
-    name: "Peter Krzystek"
-    aliases: []
-    n: 1
-    papers: ["latifi2015assessing"]
-    institution: "Munich University of Applied Sciences"
-    city: "Munich"
-    country: "Germany"
-    lat: 48.1374
-    lon: 11.5755
-    x: 526.9
-    y: 74.9
-  - id: "muller-j"
-    name: "Jörg Müller"
-    aliases: []
-    n: 1
-    papers: ["latifi2015assessing"]
-    institution: "University of Würzburg"
-    city: "Würzburg"
-    country: "Germany"
-    lat: 49.7939
-    lon: 9.9512
-    x: 522.8
-    y: 70.0
   - id: "schiro-g"
     name: "Gabriele Schiro"
     aliases: []
@@ -7765,7 +7765,7 @@ people:
     papers: ["teeffelen2014ecological"]
     institution: "Rewilding Europe"
     city: "Nijmegen"
-    country: "Netherlands"
+    country: "The Netherlands"
     lat: 51.8426
     lon: 5.839
     x: 513.2
@@ -7787,13 +7787,13 @@ people:
     aliases: []
     n: 1
     papers: ["peer2014eu"]
-    institution: "CoKnow Consulting"
-    city: "Jesewitz"
+    institution: "Helmholtz Centre for Environmental Research"
+    city: "Leipzig"
     country: "Germany"
-    lat: 51.4224
-    lon: 12.5646
-    x: 528.5
-    y: 65.3
+    lat: 51.3396
+    lon: 12.3713
+    x: 528.0
+    y: 65.6
   - id: "scott-a"
     name: "A. V. Scott"
     aliases: []
@@ -7828,13 +7828,13 @@ people:
     aliases: []
     n: 1
     papers: ["peer2014eu"]
-    institution: "Ecoscope"
-    city: "Haifa"
+    institution: "Hebrew University of Jerusalem"
+    city: "Jerusalem"
     country: "Israel"
-    lat: 32.8191
-    lon: 34.9984
-    x: 589.7
-    y: 124.1
+    lat: 31.769
+    lon: 35.2163
+    x: 590.7
+    y: 127.7
   - id: "visconti-p"
     name: "P. Visconti"
     aliases: []

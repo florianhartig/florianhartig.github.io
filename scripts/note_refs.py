@@ -59,7 +59,9 @@ CORPORATE = {"European Food Safety Authority": "EFSA"}
 
 
 def clean(s: str) -> str:
-    return re.sub(r"\s+", " ", html.unescape(TAG.sub("", s or ""))).strip()
+    # Some deposits glue a word to a following italic name ("on<i>Pinus").
+    s = re.sub(r"(?<=\w)<(i|em|b|scp)>", r" <\1>", s or "")
+    return re.sub(r"\s+", " ", html.unescape(TAG.sub("", s))).strip()
 
 
 def crossref(doi: str) -> dict | None:
@@ -97,6 +99,9 @@ def crossref(doi: str) -> dict | None:
             authors = [abbr.group(1) if abbr else CORPORATE[name]]
     year = ((m.get("published-print") or m.get("issued") or {}).get("date-parts") or [[None]])[0][0]
     title = clean((m.get("title") or [""])[0])
+    sub = clean((m.get("subtitle") or [""])[0])
+    if sub and sub.lower() not in title.lower():
+        title = f"{title}: {sub}"
     if title.isupper():
         title = title.capitalize()
     rec = {

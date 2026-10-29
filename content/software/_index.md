@@ -1,6 +1,8 @@
 ---
 title: "Software"
-description: "Open-source R packages from the Theoretical Ecology group: DHARMa, BayesianTools, sjSDM, cito and more."
+# No RSS feed: the package pages have no date.
+outputs: ["html"]
+description: "Open-source R packages from the Theoretical Ecology Group: DHARMa, BayesianTools, sjSDM, cito and more."
 # Shown below the overview box.
 outro: "Below are the R packages we develop or contribute to. Code and data that accompany individual papers are on the [group software page](https://www.uni-regensburg.de/biologie-vorklinische-medizin/forschen/arbeitsgruppen/ag-hartig/software), in the [Theoretical Ecology GitHub organisation](https://github.com/TheoreticalEcology), on [my personal GitHub account](https://github.com/florianhartig), as well as on the [pages of individual group members](https://www.uni-regensburg.de/biologie-vorklinische-medizin/forschen/arbeitsgruppen/ag-hartig/team)."
 ---

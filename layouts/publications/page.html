@@ -15,12 +15,12 @@
         <summary>Cite this</summary>
 <pre>@{{ $type }}{{"{"}}{{ $.Params.slug }},
   author = {{"{"}}{{ delimit . " and " }}{{"}"}},
-  title = {{"{"}}{{ $.Title }}{{"}"}},
+  title = {{"{"}}{{ replace $.Title "&" "\\&" }}{{"}"}},
   {{- with $.Params.journal }}
-  {{ if in (slice "incollection" "inbook" "inproceedings") $type }}booktitle{{ else }}journal{{ end }} = {{"{"}}{{ . }}{{"}"}},
+  {{ if in (slice "incollection" "inbook" "inproceedings") $type }}booktitle{{ else }}journal{{ end }} = {{"{"}}{{ replace . "&" "\\&" }}{{"}"}},
   {{- end }}
   {{- with $.Params.publisher }}
-  publisher = {{"{"}}{{ . }}{{"}"}},
+  publisher = {{"{"}}{{ replace . "&" "\\&" }}{{"}"}},
   {{- end }}
   {{- with $.Params.school }}
   school = {{"{"}}{{ . }}{{"}"}},
@@ -39,6 +39,18 @@
   {{- end }}
   {{- with $.Params.doi }}
   doi = {{"{"}}{{ . }}{{"}"}},
+  {{- else }}
+  {{- /* Preprints without a journal DOI: cite the preprint's own identifier. */}}
+  {{- with $.Params.preprint }}
+  {{- if hasPrefix . "https://doi.org/" }}
+  doi = {{"{"}}{{ strings.TrimPrefix "https://doi.org/" . }}{{"}"}},
+  {{- else if hasPrefix . "https://arxiv.org/abs/" }}
+  eprint = {{"{"}}{{ strings.TrimPrefix "https://arxiv.org/abs/" . }}{{"}"}},
+  archivePrefix = {arXiv},
+  {{- else }}
+  url = {{"{"}}{{ . }}{{"}"}},
+  {{- end }}
+  {{- end }}
   {{- end }}
 }</pre>
       </details>
@@ -63,19 +75,22 @@
       {{- range $k, $y := .years }}{{ $byYear = merge $byYear (dict (string $y) (index $rec.cites $k)) }}{{ end }}
       {{- $years := slice }}{{ $vals := slice }}
       {{- range seq $startY $endY }}{{ $years = $years | append . }}{{ $vals = $vals | append (index $byYear (string .) | default 0) }}{{ end }}
-      {{- $spark := gt (len $years) 0 }}
+      {{- /* No Scholar record at all (not a count of 0): no chart, and the
+             count line says so instead of showing 0. */}}
+      {{- $onScholar := or .scholar .scholar_id }}
+      {{- $spark := and $onScholar (gt (len $years) 0) }}
       {{- /* "Citation statistics: ▁▃▆█ ▶ 125 (Google Scholar) · …" the word-sized chart with its caret comes first, as a
              button that expands the full chart with years and values inline
              below the line; then the counts with their sources. */}}
       <div class="pub-doi pub-citations">Citation statistics:
         {{- if $spark }} <button type="button" class="spark-hover" aria-expanded="false" aria-controls="spark-pop" title="Show citations per year (as of {{ time.Format "2 January 2006" (.history_as_of | default $s.as_of) }})"><span aria-hidden="true">{{ partial "spark.html" (dict "years" $years "values" $vals "label" "citations" "asof" $asof) }}</span><span class="spark-cue" aria-hidden="true">▶</span><span class="visually-hidden">Show citations per year</span></button>{{ end }}
-        {{- /* Counts always shown, also 0. */}} {{ lang.FormatNumber 0 (.scholar | default 0) }} (<a href="{{ $scholarLink }}" rel="noopener">Google Scholar</a>)
+        {{- /* Counts always shown, also 0. */}} {{ if $onScholar }}{{ lang.FormatNumber 0 (.scholar | default 0) }} (<a href="{{ $scholarLink }}" rel="noopener">Google Scholar</a>){{ else }}not listed on Google Scholar{{ end }}
         {{- if or .openalex .openalex_id }} ·{{ end -}}
         {{- if or .openalex .openalex_id }} {{ lang.FormatNumber 0 .openalex }} ({{ with .openalex_id }}<a href="https://openalex.org/{{ . }}" rel="noopener">OpenAlex</a>{{ else }}OpenAlex{{ end }}){{ end -}}
         , as of {{ time.Format "2 January 2006" $s.as_of }}
         {{- if $spark }}
         <div class="spark-pop" id="spark-pop">
-          <p class="chart-label">Google Scholar citations per year, as of {{ time.Format "2 January 2006" (.history_as_of | default $s.as_of) }}</p>
+          <p class="chart-label">Google Scholar citations per year, as of {{ time.Format "2 January 2006" (.history_as_of | default $s.as_of) }} (Scholar’s yearly counts are fetched separately and can add up to less than the total)</p>
           {{ partial "bars.html" (dict "years" $years "values" $vals "label" "citations" "class" "bars-pop" "labelall" true "yearsall" true "asof" $asof) }}
         </div>
         <script>
@@ -152,7 +167,7 @@
         {{- $parts := split . "|" }}{{ $doi := index $parts 0 }}
         {{- with index hugo.Data.note_refs $doi }}
         {{- $n := len .authors }}
-        <li>{{ index .authors 0 }}{{ if eq $n 2 }} &amp; {{ index .authors 1 }}{{ else if gt $n 2 }} et al.{{ end }} ({{ .year }}{{ if gt (len $parts) 1 }}{{ index $parts 1 }}{{ end }}). {{ .title }}{{ if not (findRE `[.?!]$` .title) }}.{{ end }} <i>{{ .container }}</i>{{ with .volume }} {{ . }}{{ end }}{{ with .pages }}, {{ . }}{{ end }}. <a href="https://doi.org/{{ $doi }}">doi:{{ $doi }}</a></li>
+        <li>{{ index .authors 0 }}{{ if eq $n 2 }} &amp; {{ index .authors 1 }}{{ else if gt $n 2 }} et al.{{ end }} ({{ .year }}{{ if gt (len $parts) 1 }}{{ index $parts 1 }}{{ end }}). {{ .title }}{{ if not (findRE `[.?!]$` .title) }}.{{ end }}{{ $venue := .container }}{{ if not $venue }}{{ if hasPrefix $doi "10.1101/" }}{{ $venue = "bioRxiv" }}{{ else if hasPrefix (lower $doi) "10.48550/arxiv" }}{{ $venue = "arXiv" }}{{ end }}{{ end }}{{ with $venue }} <i>{{ . }}</i>{{ end }}{{ with .volume }} {{ . }}{{ end }}{{ with .pages }}, {{ . }}{{ end }}{{ if or $venue .volume .pages }}.{{ end }} <a href="https://doi.org/{{ $doi }}">doi:{{ $doi }}</a></li>
         {{- else }}
         {{- /* A cited work without metadata would silently vanish from the
                list: stop the build instead. */}}

@@ -1,0 +1,29 @@
+{{- /* RSS feed of dated pages only (the publications): pages without a date
+       (software, CV, contact, …) would otherwise appear with 1 January 0001. */ -}}
+{{- $pages := slice }}
+{{- range site.RegularPages }}{{ if not .Date.IsZero }}{{ $pages = $pages | append . }}{{ end }}{{ end }}
+{{- $pages = sort $pages "Date" "desc" }}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ site.Params.description | plainify | strings.TrimSpace }}</description>
+    <language>{{ site.Language.Locale }}</language>
+    {{- with (index $pages 0) }}
+    <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{- end }}
+    {{- with .OutputFormats.Get "rss" }}
+    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{- end }}
+    {{- range $pages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <guid>{{ .Permalink }}</guid>
+      <description>{{ .Description | plainify }}</description>
+    </item>
+    {{- end }}
+  </channel>
+</rss>

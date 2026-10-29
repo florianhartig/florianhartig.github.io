@@ -6,10 +6,7 @@ description: "Florian Hartig is a theoretical ecologist and ecological data scie
 # and as an expandable list on phones. `label` is the two-line text next to
 # the ring, `title` the full wording, `text` the short description shown when
 # a segment is hovered or clicked. (An optional `papers` list of publication
-# keys would add linked papers — tried and dropped 17 Oct.) Themes chosen
-# by Florian on 22 Oct (same positions as before: segments 2 and 3 replace
-# "patterns across scales" and "species distributions"); texts are Claude's
-# draft of 22 Oct.
+# keys adds linked papers.)
 research_themes:
   - title: "Understanding the assembly of communities and biotic interaction networks"
     label: ["Community assembly &", "biotic interaction networks"]
@@ -64,8 +61,8 @@ Freiburg, as you can see below.
 
 ## Research interests {.visually-hidden}
 
-With my research group, I study the **mechanisms and principles underlying the
-patterns of biodiversity in ecology, evolution and conservation**, using computer
+With my research group, I study the **mechanisms and principles underlying
+biodiversity patterns**, using computer
 simulations, statistical methods and, more recently, algorithms from machine
 learning and artificial intelligence.
 

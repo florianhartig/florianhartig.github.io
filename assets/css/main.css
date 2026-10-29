@@ -372,8 +372,9 @@ p { margin: 0 0 1.1em; }
 .bar:hover { background: var(--accent-hover); }
 /* Current (incomplete) year: lighter fill only — the value label on top keeps
    full text contrast (an opacity on the bar would fade the label too). */
-.bar-partial { background: color-mix(in srgb, var(--accent) 62%, var(--bg-soft)); }
-.bar-partial:hover { background: color-mix(in srgb, var(--accent-hover) 55%, var(--bg-soft)); }
+/* 72 %: at least 3:1 against the panel and page background (WCAG 1.4.11). */
+.bar-partial { background: color-mix(in srgb, var(--accent) 72%, var(--bg-soft)); }
+.bar-partial:hover { background: color-mix(in srgb, var(--accent-hover) 72%, var(--bg-soft)); }
 .bar-value {
   position: absolute;
   bottom: 100%;
@@ -435,8 +436,7 @@ h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
 .pub-badge-software { margin: 0 0.35rem 0 0; color: var(--on-accent); background: var(--accent); border-color: var(--accent); }
 .citation-journal { color: var(--text); }
 /* Florian's name in author lists: a soft highlighter in the accent colour
-   with medium weight (bold and colour-only were tried;
-   underline rejected: links are underlined). */
+   with medium weight (no underline: links are underlined). */
 .citation-authors strong, .citation-me {
   font-weight: 500; color: var(--text);
   background: color-mix(in srgb, var(--accent) 14%, transparent);
@@ -489,6 +489,12 @@ h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
   color: var(--text-faint);
   margin: 0.5rem 0 0;
 }
+/* "Clear search" after a search without results: styled like a link. */
+.pub-search-clear {
+  padding: 0; border: 0; background: none; font: inherit; cursor: pointer;
+  color: var(--accent); text-decoration: underline; text-underline-offset: 3px;
+}
+.pub-search-clear:hover { color: var(--accent-hover); }
 
 /* Year jump links — the full list runs to >100 entries, so it needs a way in
    other than scrolling. */
@@ -527,7 +533,7 @@ h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
 .pub-type-toggle:hover { color: var(--accent); border-color: var(--accent); }
 .pub-type-toggle[aria-pressed="true"] { color: var(--on-accent); background: var(--accent); border-color: var(--accent); }
 
-.pub-year { margin-top: 2.5rem; scroll-margin-top: 5rem; }
+.pub-year { margin-top: 2.5rem; }
 /* /publications/coauthors/ */
 .metrics-link { color: inherit; text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 4px; }
 .metrics-link:hover { color: var(--accent); text-decoration-color: currentColor; }
@@ -545,6 +551,8 @@ h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
 .ca-frame { fill: transparent; stroke: var(--text-muted); stroke-width: 0.8; stroke-dasharray: 3 2; vector-effect: non-scaling-stroke; cursor: pointer; }
 .ca-frame:hover { stroke: var(--accent); stroke-width: 1.5; }
 .ca-zoom { position: absolute; top: 0.3rem; left: 0.3rem; background: var(--bg); border: 1px solid var(--border); }
+/* On phones the button would cover the dots under it (most of Europe at 320 px): below the map instead. */
+@media (max-width: 40rem) { .ca-zoom { position: static; margin-bottom: 0.4rem; } }
 .ca-tip div { margin-top: 0.2rem; }
 .ca-tip em { font-style: normal; color: var(--text-muted); }
 .ca-bycountry { margin-top: 1.5rem; font-size: 0.85rem; }
@@ -567,11 +575,6 @@ h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
 .ca-all { font-size: 0.8rem; line-height: 1.75; color: var(--text-muted); }
 .ca-all a { color: var(--text-muted); text-decoration: none; }
 .ca-all a:hover { color: var(--accent); text-decoration: underline; }
-.year-heading { scroll-margin-top: 5rem; }
-/* Between phone and desktop the nav wraps and the sticky header is ~117 px. */
-@media (min-width: 40.01rem) and (max-width: 56rem) {
-  .pub-year, .year-heading { scroll-margin-top: 8.5rem; }
-}
 .year-heading {
   font-size: 0.8rem;
   font-family: var(--sans);
@@ -670,7 +673,10 @@ h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
 .pub-significance .pub-figure { margin: 1.6rem 0 1.6rem; }
 .pub-figure > a { display: block; }
 /* Tall figures fit the screen. */
-.pub-figure img { display: block; width: auto; max-width: 100%; max-height: 85vh; height: auto; margin-inline: auto; background: #fff; border: 1px solid var(--border); border-radius: 4px; }
+.pub-figure img { display: block; width: 100%; max-width: 100%; height: auto; margin-inline: auto; background: #fff; border: 1px solid var(--border); border-radius: 4px; }
+/* Dark mode: the figures keep their white background (transparent PNGs need
+   it) but are dimmed slightly, so they do not glare against the dark page. */
+@media (prefers-color-scheme: dark) { .pub-figure img { filter: brightness(0.88); } }
 .pub-figure figcaption { margin-top: 0.6rem; font-size: 0.85rem; line-height: 1.45; color: var(--text-muted); }
 .pub-figure-credit { display: block; margin-top: 0.3rem; }
 /* Funding: collapsed line under the citation statistics. */
@@ -697,6 +703,8 @@ h1 .pub-badge { font-size: 0.8rem; vertical-align: 0.35em; }
   list-style: none;
 }
 /* Same ▶ caret as the author and citation toggles. */
+/* At least 24 px high at every width (WCAG 2.2 target size, 2.5.8). */
+.pub-cite summary { min-height: 24px; }
 .pub-cite summary::-webkit-details-marker { display: none; }
 .pub-cite summary::before { content: "▶"; display: inline-block; font-size: 0.8em; margin-right: 0.3em; transition: transform 0.15s; }
 .pub-cite[open] > summary::before { transform: rotate(90deg); }
@@ -1112,6 +1120,9 @@ button.career-stage:focus-visible { box-shadow: 0 0 0 2px var(--accent); }
 
 /* Keep keyboard focus and anchor targets clear of the sticky header (WCAG 2.4.11). */
 @media (min-width: 40.01rem) { html { scroll-padding-top: 4.5rem; } }
+/* Just above the phone layout the header can still wrap (91 px at 645 px
+   wide, 60 px from ~700 px), so the offset is larger there. */
+@media (min-width: 40.01rem) and (max-width: 56rem) { html { scroll-padding-top: 6rem; } }
 
 /* Phones: the six menu items do not fit one row at 375 px (~390 px needed),
    so they form two even rows of three instead of 5 + 1; larger tap targets
@@ -1119,6 +1130,8 @@ button.career-stage:focus-visible { box-shadow: 0 0 0 2px var(--accent); }
 @media (max-width: 40rem) {
   .site-nav ul { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 0.35rem 1.4rem; }
   .spark-hover, .au-toggle, .pub-cite summary { min-height: 24px; display: inline-flex; align-items: center; }
+  .au-toggle { gap: 0.3em; }
+  .spark-hover { min-width: 24px; justify-content: center; }
 }
 
 /* Current projects: a divider between entries. */

@@ -11,7 +11,7 @@ cran_archived: "2025-06-13"
 links:
   - name: "GitHub"
     url: "https://github.com/COST-FP1304-PROFOUND/ProfoundData"
-  - name: "Database (PIK)"
+  - name: "Database (DOI)"
     url: "https://doi.org/10.5880/PIK.2020.006"
 # Entry in the publication list: title and first-release year
 # from the Crossref record of the CRAN DOI, authors from the credit line below.
@@ -36,7 +36,7 @@ package downloads the database and provides functions to query and plot it.
 A shared dataset lets different forest models be benchmarked against the same
 observations, rather than against whatever data each modelling team happened
 to have. The database was produced by COST Action FP1304 PROFOUND and is
-archived at the Potsdam Institute for Climate Impact Research
+openly available
 ([doi:10.5880/PIK.2020.006](https://doi.org/10.5880/PIK.2020.006)).
 
 The package was archived from CRAN in June 2025 and remains available from

@@ -193,7 +193,7 @@ def main(argv: list[str]) -> int:
         if key not in entries or "significance" not in entries[key]:
             sys.exit(f"{key}: no such entry or no significance note")
         if not model:
-            sys.exit("--model is required (e.g. claude-opus-5-5)")
+            sys.exit("--model is required (a model ID)")
         ft = FULLTEXTS / f"{key}.md"
         dossier = PIPE / "dossiers" / f"{key}.md"
         core = PIPE / "cores" / f"{key}.md"
@@ -202,7 +202,10 @@ def main(argv: list[str]) -> int:
         reports = {r: sorted((PIPE / "reports" / key).glob(f"{r}*.json")) for r in ("facts", "field", "reader")}
         # Reduced procedure: an abstract-only source needs no dossier and no reader check.
         abstract_only = ft.exists() and re.search(r"^version: abstract", ft.read_text(encoding="utf-8"), re.M)
-        need = (ft, core) if abstract_only else (ft, dossier, core)
+        # Reduced procedure: no dossier for papers from this or last year (too
+        # recent for documented uptake; background comes from the paper itself).
+        recent = int(entries[key].get("year", "0")[:4] or 0) >= date.today().year - 1
+        need = (ft, core) if abstract_only or recent else (ft, dossier, core)
         missing = [str(p.relative_to(ROOT)) for p in need if not p.exists()] + \
                   [f"reports/{key}/{r}*.json" for r, found in reports.items()
                    if not found and r != "field" and not (abstract_only and r == "reader")]

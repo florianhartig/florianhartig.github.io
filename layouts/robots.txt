@@ -5,39 +5,55 @@
        academic sites lose AI visibility is a default rule that blocks these
        without anyone noticing. */ -}}
 User-agent: *
+# Filtered views of the publication list (?keys=…, ?q=…, ?type=…, ?sort=…;
+# ~1,000 distinct links from the co-authors page) show the same page in a
+# different order; crawl time goes to the paper pages instead. Google:
+# "Managing crawling of faceted navigation URLs" recommends this. A crawler
+# obeys only its own group (RFC 9309), so every group repeats the rule.
+Disallow: /publications/*?
 Allow: /
 
 # Search-time AI crawlers (these produce citations and links back)
 User-agent: OAI-SearchBot
+Disallow: /publications/*?
 Allow: /
 
 User-agent: ChatGPT-User
+Disallow: /publications/*?
 Allow: /
 
 User-agent: PerplexityBot
+Disallow: /publications/*?
 Allow: /
 
 User-agent: Claude-User
+Disallow: /publications/*?
 Allow: /
 
 User-agent: Claude-SearchBot
+Disallow: /publications/*?
 Allow: /
 
 User-agent: Google-Extended
+Disallow: /publications/*?
 Allow: /
 
 User-agent: Applebot-Extended
+Disallow: /publications/*?
 Allow: /
 
 # Training crawlers — also allowed. The aim here is for models to know who
 # Florian Hartig is and what he has published.
 User-agent: GPTBot
+Disallow: /publications/*?
 Allow: /
 
 User-agent: ClaudeBot
+Disallow: /publications/*?
 Allow: /
 
 User-agent: CCBot
+Disallow: /publications/*?
 Allow: /
 
 Sitemap: {{ "sitemap.xml" | absURL }}

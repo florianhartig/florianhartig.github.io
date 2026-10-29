@@ -2,7 +2,7 @@
 title: "DHARMa"
 weight: 10
 category: "Main packages"
-summary: "Simulation-based residual diagnostics for generalized linear mixed models and other hierarchical regression models."
+summary: "Simulation-based residual diagnostics for generalised linear mixed models and other hierarchical regression models."
 scholar_match: "dharma|residual diagnostics for hierarchi"
 cran: "DHARMa"
 links:
@@ -26,7 +26,7 @@ pub_entry:
 
 **DHARMa** (**D**iagnostics for **H**ier**A**rchical **R**egression **M**odels)
 checks whether a fitted regression model is consistent with the data it was
-fitted to. For generalized linear and mixed models, raw residuals are hard to
+fitted to. For generalised linear and mixed models, raw residuals are hard to
 interpret. DHARMa instead simulates new data from the fitted model and uses
 them to compute scaled (quantile) residuals. These are standardised to values
 between 0 and 1 and can be read as intuitively as residuals from a linear

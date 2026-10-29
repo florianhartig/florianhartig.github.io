@@ -14,10 +14,14 @@
   {{- $who := index $fam 0 -}}
   {{- if gt (len .Params.authors) 2 }}{{ $who = printf "%s et al." $who }}{{ else if eq (len .Params.authors) 2 }}{{ $who = printf "%s & %s" (index $fam 0) (index $fam 1) }}{{ end -}}
   {{- $small := $img.Resize "760x webp q82" -}}
-  {{- $large := $img.Resize "1520x webp q82" -}}
+  {{- /* Second candidate at 2× only if the source is that wide (no upscaling). */ -}}
+  {{- $large := $img.Resize (printf "%dx webp q82" (cond (ge $img.Width 1520) 1520 $img.Width)) -}}
+{{- /* The caption below describes the image, so the img itself has an empty
+       alt (a screen reader would otherwise read the caption twice); the link
+       is named by its aria-label. */ -}}
 <figure class="pub-figure">
   <a href="{{ $img.RelPermalink }}" title="Open full-size figure" aria-label="{{ $fig.label }}, full size">
-    <img src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 760w, {{ $large.RelPermalink }} 1520w" sizes="(max-width: 48rem) 100vw, 46rem" width="{{ $small.Width }}" height="{{ $small.Height }}" alt="{{ $fig.caption }}" loading="lazy" decoding="async">
+    <img src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 760w, {{ $large.RelPermalink }} {{ $large.Width }}w" sizes="(max-width: 48rem) 100vw, 46rem" width="{{ $small.Width }}" height="{{ $small.Height }}" style="max-width: min(100%, calc(85vh * {{ $small.Width }} / {{ $small.Height }}))" alt="" loading="lazy" decoding="async">
   </a>
   <figcaption><strong>{{ $fig.label }}.</strong> {{ $fig.caption }}
     <span class="pub-figure-credit">From {{ with .Params.doi }}<a href="https://doi.org/{{ . }}" rel="noopener">{{ $who }} ({{ $.Params.year }})</a>{{ else }}{{ $who }} ({{ $.Params.year }}){{ end }}{{ with .Params.journal }}, <em>{{ . }}</em>{{ end }}, licensed under <a href="{{ $licURL }}" rel="license noopener">{{ .Params.license }}</a>. Click the image to enlarge.</span></figcaption>
