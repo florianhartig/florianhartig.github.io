@@ -51,11 +51,11 @@ overview:
 
 ## About me {.visually-hidden}
 
-I am a theoretical ecologist and ecological data scientist. I am
-head of the [Theoretical Ecology Group](https://www.uni-regensburg.de/biologie-vorklinische-medizin/forschen/arbeitsgruppen/ag-hartig)
-and Deputy Dean of Research of the Faculty of Biology and Preclinical Medicine.
-I arrived here in Regensburg via stops in Berlin, Uppsala, Leipzig and
-Freiburg, as you can see below.
+As a theoretical ecologist and ecological data scientist, I currently head the
+[Theoretical Ecology Group](https://www.uni-regensburg.de/biologie-vorklinische-medizin/forschen/arbeitsgruppen/ag-hartig)
+and serve as Deputy Dean of Research of the Faculty of Biology and Preclinical Medicine.
+My path to Regensburg led through Berlin, Uppsala, Leipzig and Freiburg, as
+shown below.
 
 {{< career-tile >}}
 
